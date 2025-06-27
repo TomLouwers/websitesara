@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* General Styles */
+        :root {
+            /* Google Material Design Inspired Color Palette */
+            --primary-color: #6200EE; /* Deep Purple 500 */
+            --primary-light: #BB86FC; /* Deep Purple 200 (for accents, e.g., hover) */
+            --primary-dark: #3700B3; /* Deep Purple 700 */
+
+            --secondary-color: #03DAC6; /* Teal A400 (for accents like progress bar, score) */
+            --secondary-dark: #018786; /* Teal 700 */
+
+            --background-gradient-start: #6200EE; /* Use primary color for background start */
+            --background-gradient-end: #BB86FC;   /* Use primary light for background end */
+
+            --surface-color: #FFFFFF; /* White for cards, quiz containers */
+            --on-surface-color: #212121; /* Dark text on white/light surfaces (e.g., #212121 - Grey 900) */
+            --on-background-color: #FFFFFF; /* White text on dark backgrounds */
+
+            --text-color-dark: var(--on-surface-color); /* General dark text */
+            --text-color-medium: #616161; /* Medium grey text (e.g., Grey 700) */
+            --text-color-light: #B0B0B0; /* Light grey text */
+
+            /* Semantic Colors (for feedback) */
+            --color-correct: #4CAF50; /* Green 500 */
+            --color-incorrect: #F44336; /* Red 500 */
+            --color-info: #2196F3; /* Blue 500 */
+
+            /* Shadow Elevations */
+            --shadow-elevation-1: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            --shadow-elevation-2: 0 4px 8px rgba(0, 0, 0, 0.15), 0 2px 5px rgba(0, 0, 0, 0.1);
+            --shadow-elevation-3: 0 6px 12px rgba(0, 0, 0, 0.2), 0 3px 8px rgba(0, 0, 0, 0.15);
+
+            /* Border Radii */
+            --border-radius-card: 12px;
+            --border-radius-button: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, var(--background-gradient-start) 0%, var(--background-gradient-end) 100%);
+            min-height: 100vh;
+            color: var(--on-background-color); /* Changed to on-background-color for body text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius-card);
+            backdrop-filter: blur(5px);
+            box-shadow: var(--shadow-elevation-2);
+        }
+
+        .header h1 {
+            color: var(--on-background-color); /* Ensure header text is white */
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+            font-weight: 700;
+        }
+
+        .header p {
+            color: rgba(255,255,255,0.9); /* Slightly transparent white */
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+
+        /* Subject Grid Styles */
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .subject-card {
+            background-color: var(--surface-color);
+            border-radius: var(--border-radius-card);
+            box-shadow: var(--shadow-elevation-1);
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+            color: var(--text-color-dark); /* Default text color for card */
+        }
+
+        .subject-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-elevation-2);
+        }
+
+        .subject-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .subject-card h3 {
+            font-size: 1.6em;
+            margin-bottom: 12px;
+            color: var(--text-color-dark);
+            font-weight: 500;
+        }
+
+        .subject-card p {
+            font-size: 1em;
+            color: var(--text-color-medium);
+            line-height: 1.5;
+            font-weight: 300;
+        }
+
+        /* Quiz Container Styles */
+        .quiz-container, .results-container {
+            background-color: var(--surface-color);
+            border-radius: var(--border-radius-card);
+            box-shadow: var(--shadow-elevation-2);
+            padding: 40px;
+            margin-top: 20px;
+            color: var(--text-color-dark); /* Default text color for quiz container */
+        }
+
+        .quiz-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .quiz-header h2 {
+            font-size: 2.2em;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .quiz-progress {
+            background-color: #e0e0e0; /* Light grey for empty part of progress bar */
+            border-radius: 10px;
+            height: 12px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .quiz-progress-bar {
+            height: 100%;
+            width: 0%;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            transition: width 0.4s ease-in-out;
+        }
+
+        #questionCounter {
+            font-size: 1em;
+            color: var(--text-color-medium);
+            font-weight: 400;
+        }
+
+        .question-container {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .reading-content {
+            background-color: #f5f5f5; /* Very light grey */
+            border: 1px solid #eeeeee; /* Lighter border */
+            border-radius: var(--border-radius-card);
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: left;
+            line-height: 1.7;
+            font-size: 1.05em;
+            color: var(--text-color-dark);
+            max-height: 350px;
+            overflow-y: auto;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .question-text {
+            font-size: 1.5em;
+            color: var(--text-color-dark);
+            margin-bottom: 30px;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        .options-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .option {
+            background-color: #f8f8f8; /* Off-white for options */
+            border: 2px solid #e0e0e0;
+            border-radius: var(--border-radius-button);
+            padding: 18px 25px;
+            cursor: pointer;
+            text-align: left;
+            transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+            font-size: 1.15em;
+            color: var(--text-color-dark);
+            box-shadow: var(--shadow-elevation-1);
+        }
+
+        .option:hover {
+            background-color: #eff0f0;
+            border-color: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-elevation-1);
+        }
+
+        .option.selected {
+            background-color: #e3f2fd; /* Light blue (Blue 50) for selection */
+            border-color: var(--primary-color);
+            color: var(--text-color-dark);
+            box-shadow: var(--shadow-elevation-1);
+            transform: translateY(0);
+        }
+
+        .option.correct {
+            background-color: #e8f5e9; /* Light green (Green 50) */
+            border-color: var(--color-correct);
+            color: var(--color-correct);
+            font-weight: bold;
+            box-shadow: var(--shadow-elevation-1);
+        }
+
+        .option.incorrect {
+            background-color: #ffebee; /* Light red (Red 50) */
+            border-color: var(--color-incorrect);
+            color: var(--color-incorrect);
+            font-weight: bold;
+            box-shadow: var(--shadow-elevation-1);
+        }
+
+        .textarea-answer {
+            width: 100%;
+            min-height: 150px;
+            padding: 18px;
+            border: 2px solid #e0e0e0;
+            border-radius: var(--border-radius-button);
+            font-size: 1.15em;
+            font-family: 'Roboto', sans-serif;
+            resize: vertical;
+            margin-top: 15px;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+            color: var(--text-color-dark); /* Ensure text in textarea is dark */
+        }
+        .textarea-answer:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(98, 0, 238, 0.2);
+        }
+
+        .quiz-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: var(--border-radius-button);
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            box-shadow: var(--shadow-elevation-1);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-elevation-2);
+        }
+
+        .btn-secondary {
+            background-color: #e0e0e0;
+            color: var(--text-color-medium);
+            box-shadow: var(--shadow-elevation-1);
+        }
+
+        .btn-secondary:hover {
+            background-color: #c0c0c0;
+            color: var(--text-color-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-elevation-2);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Results Page Styles */
+        .results-container {
+            padding: 50px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .results-score {
+            font-size: 3.5em;
+            color: var(--secondary-color);
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .results-message {
+            font-size: 1.6em;
+            color: var(--text-color-dark);
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        /* Specific text color for highscore in theme cards */
+        .subject-card p[style*="color: var(--primary-color)"] {
+            color: var(--primary-color) !important; /* Ensure primary color for highscore text */
+        }
+
+        /* NEW: Styles for the feedback and tooltip section */
+        #feedbackSection {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: var(--border-radius-card);
+            text-align: left;
+            box-shadow: var(--shadow-elevation-1);
+        }
+
+        #feedbackSection.correct {
+            background-color: #e8f5e9; /* Light green */
+            border-left: 5px solid var(--color-correct);
+            color: var(--text-color-dark);
+        }
+
+        #feedbackSection.incorrect {
+            background-color: #ffebee; /* Light red */
+            border-left: 5px solid var(--color-incorrect);
+            color: var(--text-color-dark);
+        }
+
+        #feedbackSection h4 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+
+        #feedbackSection p {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        #feedbackSection ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        #feedbackSection ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2em;
+            }
+
+            .subject-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .subject-card {
+                padding: 25px;
+                min-height: 180px;
+            }
+
+            .quiz-container, .results-container {
+                padding: 25px;
+            }
+
+            .question-text {
+                font-size: 1.3em;
+            }
+
+            .option {
+                padding: 15px 20px;
+                font-size: 1.05em;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+            .quiz-controls {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Sara's Quiz Website</h1>
+            <p>Kies een onderwerp en test je kennis!</p>
+        </div>
+
+        <div id="landingPage">
+            <div class="subject-grid">
+                <div class="subject-card" onclick="loadSubject('begrijpendlezen')">
+                    <div class="subject-icon">📖</div>
+                    <h3>Begrijpend Lezen</h3>
+                    <p>Test je begrip van teksten en verhalen</p>
+                </div>
+                <div class="subject-card" onclick="loadSubject('brandaan')">
+                    <div class="subject-icon">🏛️</div>
+                    <h3>Geschiedenis</h3>
+                    <p>Ontdek de Nederlandse geschiedenis</p>
+                </div>
+                <div class="subject-card" onclick="loadSubject('samenvatten')">
+                    <div class="subject-icon">✍️</div>
+                    <h3>Samenvatten</h3>
+                    <p>Leer teksten kort en bondig samen te vatten</p>
+                </div>
+                <div class="subject-card" onclick="loadSubject('wereldorientatie')">
+                    <div class="subject-icon">🌍</div>
+                    <h3>Wereldoriëntatie</h3>
+                    <p>Algemene kennis over de wereld</p>
+                </div>
+                <div class="subject-card" onclick="loadSubject('woordenschat')">
+                    <div class="subject-icon">📚</div>
+                    <h3>Woordenschat</h3>
+                    <p>Vergroot je vocabulaire</p>
+                </div>
+               <a href="modules/leesstrategieën/leesstrategieën.html" class="subject-card module-card">
+                    <div class="subject-icon">🎯</div>
+                    <h3>Leesstrategieën</h3>
+                    <p>Oefen en versterk je leesstrategieën</p>
+                </a>
+            </div>
+        </div>
+
+        <div id="themePage" style="display: none;">
+            <div class="quiz-container">
+                <h2 id="subjectTitle">Kies een thema</h2>
+                <div id="themeGrid" class="subject-grid"></div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="btn btn-secondary" onclick="goToLanding()">
+                        <i class="material-icons">arrow_back</i> Terug naar onderwerpen
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="quizPage" class="quiz-container" style="display: none;">
+            <div class="quiz-header">
+                <h2 id="quizTitle">Quiz</h2>
+                <div class="quiz-progress">
+                    <div class="quiz-progress-bar" id="progressBar"></div>
+                </div>
+                <div id="questionCounter">Vraag 1 van 1</div>
+            </div>
+
+            <div class="question-container">
+                <div id="readingContent" class="reading-content hidden"></div>
+                <div class="question-text" id="questionText"></div>
+                <div id="optionsContainer" class="options-container"></div>
+                <textarea id="textareaAnswer" class="textarea-answer hidden" placeholder="Typ hier je antwoord..."></textarea>
+            </div>
+
+            <div id="feedbackSection" class="hidden">
+                <h4 id="feedbackTitle"></h4>
+                <p id="feedbackMessage"></p>
+                <p id="correctAnswerDisplay" class="hidden"></p>
+                <p id="extraInfoDisplay" class="hidden"></p> <div id="strategyAndTips" class="hidden">
+                    <h4>Strategie</h4>
+                    <p id="strategyText"></p>
+                    <h4>Tips</h4>
+                    <ul id="tipsList"></ul>
+                </div>
+            </div>
+
+            <div class="quiz-controls">
+                <button class="btn btn-secondary" onclick="goToLanding()">
+                    <i class="material-icons">arrow_back</i> Terug
+                </button>
+                <div>
+                    <button class="btn" id="submitBtn" onclick="submitAnswer()">
+                        <i class="material-icons">check_circle_outline</i> Controleer Antwoord
+                    </button>
+                    <button class="btn hidden" id="nextBtn" onclick="nextQuestion()">
+                        Volgende Vraag <i class="material-icons">arrow_forward</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="resultsPage" class="results-container" style="display: none;">
+            <div class="results-score" id="finalScore">0/0</div>
+            <div class="results-message" id="resultsMessage">Goed gedaan!</div>
+            <button class="btn" onclick="goToLanding()">
+                <i class="material-icons">refresh</i> Nieuwe Quiz
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Quiz data will be loaded from JSON files
+        let quizData = {};
+        const jsonPath = './'; // Assuming JSON files are in the same directory
+
+        // Quiz state
+        let currentQuiz = null;
+        let randomizedQuestions = []; // Array to hold randomized questions
+        let currentSubject = null;
+        let currentTheme = null; // Track current theme for highscore
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let totalQuestions = 0;
+        let selectedAnswer = null;
+        let hasAnswered = false;
+
+        // Highscore management
+        function getHighscoreKey(subject, theme) {
+            return `highscore_${subject}_${theme || 'all'}`;
+        }
+
+        function getHighscore(subject, theme) {
+            const key = getHighscoreKey(subject, theme);
+            const stored = localStorage.getItem(key);
+            return stored ? parseInt(stored) : 0;
+        }
+
+        function saveHighscore(subject, theme, score) {
+            const key = getHighscoreKey(subject, theme);
+            const currentHighscore = getHighscore(subject, theme);
+            if (score > currentHighscore) {
+                localStorage.setItem(key, score.toString());
+                return true; // New highscore achieved
+            }
+            return false; // No new highscore
+        }
+
+        // Get user name (you can modify this to get from a form or prompt)
+        function getUserName() {
+            let name = localStorage.getItem('userName');
+            if (!name) {
+                name = prompt('Wat is je naam?') || 'Speler';
+                localStorage.setItem('userName', name);
+            }
+            return name;
+        }
+
+        // Shuffle array function (Fisher-Yates algorithm)
+        function shuffleArray(array) {
+            const shuffled = [...array]; // Create a copy to avoid modifying original
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        // Create flattened and randomized question list
+        function createRandomizedQuestions(data) {
+            const flatQuestions = [];
+            
+            data.forEach(item => {
+                if (item.questions && Array.isArray(item.questions)) {
+                    // For items with multiple sub-questions
+                    item.questions.forEach(question => {
+                        flatQuestions.push({
+                            content: item.content,
+                            question: question.question,
+                            options: question.options,
+                            correct: question.correct,
+                            originalId: item.id,
+                            theme: item.theme,
+                            title: item.title,
+                            // Add strategy and tips here if they are directly on the sub-question object
+                            strategy: question.strategy,
+                            tips: question.tips,
+                            possible_answer: question.possible_answer, // Add possible_answer for open questions
+                            extra_info: question.extra_info // NIEUW: extra_info toevoegen
+                        });
+                    });
+                } else if (item.question) {
+                    // For items with single question (like samenvatten)
+                    flatQuestions.push({
+                        content: item.content,
+                        question: item.question,
+                        options: item.options,
+                        correct: item.correct, // For multiple choice, this is the index. For open, this might be the answer text.
+                        originalId: item.id,
+                        theme: item.theme,
+                        title: item.title,
+                        // Add strategy and tips here if they are directly on the main item object
+                        strategy: item.strategy,
+                        tips: item.tips,
+                        possible_answer: item.possible_answer, // Add possible_answer for open questions
+                        extra_info: item.extra_info // NIEUW: extra_info toevoegen
+                    });
+                }
+            });
+            
+            return shuffleArray(flatQuestions);
+        }
+
+        // Load JSON file
+        async function loadJsonFile(filename) {
+            try {
+                const response = await fetch(jsonPath + filename);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return await response.json();
+            } catch (error) {
+                console.error('Error loading JSON file:', error);
+                alert('Fout bij het laden van het bestand. Controleer of de bestanden beschikbaar zijn.');
+                return null;
+            }
+        }
+
+        // Load subject and show themes
+        async function loadSubject(subject) {
+            const filename = subject + ' - Template.json';
+            const data = await loadJsonFile(filename);
+        
+            if (!data) return;
+        
+            quizData[subject] = data; // Store the full data for the subject
+            currentSubject = subject;
+        
+            // Extract themes. Ensure 'theme' property exists for all items if you expect them to be categorized.
+            const themes = [...new Set(data.map(item => item.theme).filter(theme => theme))];
+			console.log("Loaded themes for subject:", subject, themes);
+			
+            // Transition to theme selection page
+            showThemeSelection(subject, themes, data);
+        }
+
+		// Show theme selection page
+		function showThemeSelection(subject, themes, data) {
+			document.getElementById('landingPage').style.display = 'none';
+			document.getElementById('themePage').style.display = 'block';
+		
+			const titles = {
+				begrijpendlezen: 'Begrijpend Lezen',
+				brandaan: 'Geschiedenis',
+				samenvatten: 'Samenvatten',
+				wereldorientatie: 'Wereldoriëntatie',
+				woordenschat: 'Woordenschat'
+			};
+		
+			document.getElementById('subjectTitle').textContent = titles[subject] + ' - Kies een thema';
+		
+			const themeGrid = document.getElementById('themeGrid');
+			themeGrid.innerHTML = '';
+			
+			const userName = getUserName();
+		
+			// Calculate total questions for "all themes"
+			let totalAllQuestions = 0;
+			data.forEach(item => {
+				if (Array.isArray(item.questions)) {
+					totalAllQuestions += item.questions.length;
+				} else if (item.question) {
+					totalAllQuestions += 1;
+				}
+			});
+		
+			// Option to select all themes
+			const allThemeCard = document.createElement('div');
+			allThemeCard.className = 'subject-card';
+			allThemeCard.onclick = () => startQuizWithTheme(subject, null); // Pass null for all themes
+			const allHighscore = getHighscore(subject, null);
+			allThemeCard.innerHTML = `
+				<div class="subject-icon">🎯</div>
+				<h3>Alle thema's</h3>
+				<p>${totalAllQuestions} vragen beschikbaar</p>
+				<p style="color: var(--primary-color); font-weight: bold; margin-top: 5px;">${userName}, je huidige highscore: ${allHighscore}</p>
+			`;
+			themeGrid.appendChild(allThemeCard);
+		
+			themes.forEach(theme => {
+				const filteredItems = data.filter(item => item.theme === theme);
+				let questionCount = 0;
+		
+				filteredItems.forEach(item => {
+					if (Array.isArray(item.questions)) {
+						questionCount += item.questions.length;
+					} else if (item.question) { // Check for single question items
+						questionCount += 1;
+					}
+				});
+		
+				const themeCard = document.createElement('div');
+				themeCard.className = 'subject-card';
+				themeCard.onclick = () => startQuizWithTheme(subject, theme);
+				const themeHighscore = getHighscore(subject, theme);
+				themeCard.innerHTML = `
+					<div class="subject-icon">📝</div>
+					<h3>${theme}</h3>
+					<p>${questionCount} vragen beschikbaar</p>
+					<p style="color: var(--primary-color); font-weight: bold; margin-top: 5px;">${userName}, je huidige highscore: ${themeHighscore}</p>
+				`;
+				themeGrid.appendChild(themeCard);
+			});
+		}
+
+        // Start quiz with specific theme
+        function startQuizWithTheme(subject, theme) {
+            // Store current theme for highscore tracking
+            currentTheme = theme;
+            
+            // currentQuiz should be set from the globally available quizData[subject]
+            let dataToUse = quizData[subject]; 
+            
+            if (theme) {
+                // Filter data by theme
+                currentQuiz = dataToUse.filter(item => item.theme === theme);
+            } else {
+                // Use all data for the subject if no theme is selected
+                currentQuiz = dataToUse;
+            }
+            
+            startQuizWithData(subject); // Proceed to start the quiz with the filtered/full data
+        }
+
+        function startQuizWithData(subject) {
+            currentQuestionIndex = 0;
+            score = 0;
+            hasAnswered = false;
+            
+            // Create randomized questions from the current quiz data
+            randomizedQuestions = createRandomizedQuestions(currentQuiz);
+            totalQuestions = randomizedQuestions.length;
+
+            document.getElementById('landingPage').style.display = 'none';
+            document.getElementById('themePage').style.display = 'none';
+            document.getElementById('quizPage').style.display = 'block';
+            document.getElementById('resultsPage').style.display = 'none';
+            
+            // Set quiz title
+            const titles = {
+                begrijpendlezen: 'Begrijpend Lezen',
+                brandaan: 'Geschiedenis',
+                samenvatten: 'Samenvatten',
+                wereldorientatie: 'Wereldoriëntatie',
+                woordenschat: 'Woordenschat'
+            };
+            document.getElementById('quizTitle').textContent = titles[subject] || 'Quiz';
+            
+            loadCurrentQuestion();
+        }
+
+        function loadCurrentQuestion() {
+            if (currentQuestionIndex >= randomizedQuestions.length) {
+                showResults();
+                return;
+            }
+
+            const currentQuestion = randomizedQuestions[currentQuestionIndex];
+            
+            // Update progress
+            const progress = (currentQuestionIndex / totalQuestions) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            document.getElementById('questionCounter').textContent = `Vraag ${currentQuestionIndex + 1} van ${totalQuestions}`;
+
+            // Show reading content if available
+            const readingContent = document.getElementById('readingContent');
+            if (currentQuestion.content) {
+                readingContent.innerHTML = currentQuestion.content; // Use innerHTML if content might have HTML tags
+                readingContent.classList.remove('hidden');
+            } else {
+                readingContent.classList.add('hidden');
+            }
+
+            // Load question
+            document.getElementById('questionText').textContent = currentQuestion.question;
+
+            // Handle different question types
+            const optionsContainer = document.getElementById('optionsContainer');
+            const textareaAnswer = document.getElementById('textareaAnswer');
+            const feedbackSection = document.getElementById('feedbackSection');
+
+            // Hide feedback section and reset classes for new question
+            feedbackSection.classList.add('hidden');
+            feedbackSection.classList.remove('correct', 'incorrect');
+            document.getElementById('correctAnswerDisplay').classList.add('hidden');
+            document.getElementById('extraInfoDisplay').classList.add('hidden'); // NIEUW: Extra info verbergen
+            document.getElementById('strategyAndTips').classList.add('hidden');
+
+
+            if (currentQuestion.options) {
+                // Multiple choice question
+                optionsContainer.classList.remove('hidden');
+                textareaAnswer.classList.add('hidden');
+                
+                optionsContainer.innerHTML = '';
+                currentQuestion.options.forEach((option, index) => {
+                    const optionElement = document.createElement('div');
+                    optionElement.className = 'option';
+                    optionElement.textContent = option;
+                    optionElement.onclick = () => selectOption(index);
+                    optionsContainer.appendChild(optionElement);
+                });
+            } else {
+                // Open question
+                optionsContainer.classList.add('hidden');
+                textareaAnswer.classList.remove('hidden');
+                textareaAnswer.value = '';
+            }
+
+            // Reset UI state
+            selectedAnswer = null;
+            hasAnswered = false;
+            document.getElementById('submitBtn').classList.remove('hidden');
+            document.getElementById('nextBtn').classList.add('hidden');
+        }
+
+        function selectOption(index) {
+            if (hasAnswered) return;
+
+            // Remove previous selection
+            document.querySelectorAll('.option').forEach(opt => {
+                opt.classList.remove('selected', 'correct', 'incorrect'); // Also remove feedback classes
+            });
+
+            // Select new option
+            document.querySelectorAll('.option')[index].classList.add('selected');
+            selectedAnswer = index;
+        }
+
+        function submitAnswer() {
+            if (hasAnswered) return;
+
+            const currentQuestion = randomizedQuestions[currentQuestionIndex];
+            const feedbackSection = document.getElementById('feedbackSection');
+            const feedbackTitle = document.getElementById('feedbackTitle');
+            const feedbackMessage = document.getElementById('feedbackMessage');
+            const correctAnswerDisplay = document.getElementById('correctAnswerDisplay');
+            const extraInfoDisplay = document.getElementById('extraInfoDisplay'); // NIEUW: extraInfoDisplay element
+            const strategyAndTips = document.getElementById('strategyAndTips');
+            const strategyText = document.getElementById('strategyText');
+            const tipsList = document.getElementById('tipsList');
+
+            feedbackSection.classList.remove('hidden'); // Show feedback section
+
+            if (currentQuestion.options) {
+                // Multiple choice
+                if (selectedAnswer === null) {
+                    alert('Selecteer eerst een antwoord!');
+                    feedbackSection.classList.add('hidden'); // Hide if no answer selected
+                    return;
+                }
+
+                const options = document.querySelectorAll('.option');
+                const correctIndex = currentQuestion.correct; // Assuming `correct` stores the index for MC
+
+                if (selectedAnswer === correctIndex) {
+                    options[selectedAnswer].classList.add('correct');
+                    score++;
+                    feedbackSection.classList.add('correct');
+                    feedbackTitle.textContent = 'Correct!';
+                    feedbackMessage.textContent = 'Dat is helemaal juist!';
+                    correctAnswerDisplay.classList.add('hidden');
+                    extraInfoDisplay.classList.add('hidden'); // NIEUW: extraInfo verbergen bij correct
+                    strategyAndTips.classList.add('hidden');
+                } else {
+                    options[selectedAnswer].classList.add('incorrect');
+                    // Highlight correct answer if an incorrect one was selected
+                    if (options[correctIndex]) {
+                        options[correctIndex].classList.add('correct');
+                    }
+                    feedbackSection.classList.add('incorrect');
+                    feedbackTitle.textContent = 'Niet correct!';
+                    feedbackMessage.textContent = 'Helaas, dat is niet helemaal correct.';
+                    correctAnswerDisplay.textContent = `Het juiste antwoord was: "${currentQuestion.options[correctIndex]}"`;
+                    correctAnswerDisplay.classList.remove('hidden');
+                    strategyAndTips.classList.add('hidden'); // No strategy/tips for MC by default
+                    
+                    // NIEUW: Toon extra_info bij incorrect antwoord (meerkeuze)
+                    if (currentQuestion.extra_info) {
+                        if (typeof currentQuestion.extra_info === 'string') {
+                            // Simple string format (like brandaan)
+                            extraInfoDisplay.innerHTML = `<h4>Achtergrondinfo:</h4><p>${currentQuestion.extra_info}</p>`;
+                            extraInfoDisplay.classList.remove('hidden');
+                        } else if (currentQuestion.extra_info.tips) {
+                            // Object with tips array format (like begrijpendlezen)
+                            let tipsHtml = '<h4>Extra Tips:</h4><ul>';
+                            currentQuestion.extra_info.tips.forEach(tip => {
+                                tipsHtml += `<li>${tip}</li>`;
+                            });
+                            tipsHtml += '</ul>';
+                            extraInfoDisplay.innerHTML = tipsHtml;
+                            extraInfoDisplay.classList.remove('hidden');
+                        } else {
+                            extraInfoDisplay.classList.add('hidden');
+                        }
+                    } else {
+                        extraInfoDisplay.classList.add('hidden');
+                    }
+                }
+            } else {
+                // Open question (e.g., Samenvatten)
+                const userAnswer = document.getElementById('textareaAnswer').value.trim();
+                if (!userAnswer) {
+                    alert('Vul eerst een antwoord in!');
+                    feedbackSection.classList.add('hidden'); // Hide if no answer entered
+                    return;
+                }
+                
+                // Compare user answer with possible_answer from JSON (case-insensitive, trimmed)
+                const possibleAnswer = currentQuestion.possible_answer ? currentQuestion.possible_answer.toLowerCase().trim() : '';
+                const isCorrect = (userAnswer.toLowerCase() === possibleAnswer);
+
+                if (isCorrect) {
+                    score++;
+                    feedbackSection.classList.add('correct');
+                    feedbackTitle.textContent = 'Correct!';
+                    feedbackMessage.textContent = 'Je antwoord is helemaal juist!';
+                    correctAnswerDisplay.classList.add('hidden');
+                    extraInfoDisplay.classList.add('hidden'); // NIEUW: extraInfo verbergen bij correct
+                    strategyAndTips.classList.add('hidden');
+                } else {
+                    feedbackSection.classList.add('incorrect');
+                    feedbackTitle.textContent = 'Niet correct!';
+                    feedbackMessage.textContent = 'Helaas, dat is niet helemaal correct. Hier is een voorbeeld van een goed antwoord en wat tips:';
+                    
+                    correctAnswerDisplay.textContent = `Voorbeeld antwoord: "${currentQuestion.possible_answer}"`;
+                    correctAnswerDisplay.classList.remove('hidden');
+                    
+                    // Display strategy and tips if available
+                    if (currentQuestion.strategy || (currentQuestion.tips && currentQuestion.tips.length > 0)) {
+                        strategyAndTips.classList.remove('hidden');
+                        strategyText.textContent = currentQuestion.strategy || 'Geen specifieke strategie beschikbaar.';
+                        tipsList.innerHTML = '';
+                        if (currentQuestion.tips && currentQuestion.tips.length > 0) {
+                            currentQuestion.tips.forEach(tip => {
+                                const li = document.createElement('li');
+                                li.textContent = tip;
+                                tipsList.appendChild(li);
+                            });
+                        } else {
+                            tipsList.innerHTML = '<li>Geen specifieke tips beschikbaar.</li>';
+                        }
+                    } else {
+                        strategyAndTips.classList.add('hidden');
+                    }
+
+                    // NIEUW: Toon extra_info bij incorrect antwoord (open vraag)
+                    if (currentQuestion.extra_info) {
+                        extraInfoDisplay.textContent = `Achtergrondinfo: ${currentQuestion.extra_info}`;
+                        extraInfoDisplay.classList.remove('hidden');
+                    } else {
+                        extraInfoDisplay.classList.add('hidden');
+                    }
+                }
+            }
+
+            hasAnswered = true;
+            document.getElementById('submitBtn').classList.add('hidden');
+            document.getElementById('nextBtn').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            
+            if (currentQuestionIndex >= randomizedQuestions.length) {
+                showResults();
+            } else {
+                loadCurrentQuestion();
+            }
+        }
+
+        function showResults() {
+            document.getElementById('quizPage').style.display = 'none';
+            document.getElementById('resultsPage').style.display = 'block';
+            
+            // Check for new highscore
+            const isNewHighscore = saveHighscore(currentSubject, currentTheme, score);
+            
+            // Ensure totalQuestions is not zero to avoid division by zero
+            const percentage = totalQuestions > 0 ? Math.round((score / totalQuestions) * 100) : 0;
+            document.getElementById('finalScore').textContent = `${score}/${totalQuestions}`;
+            
+            let message = '';
+            if (isNewHighscore) {
+                message = '🎉 NIEUWE HIGHSCORE! ';
+            }
+            
+            if (percentage >= 90) {
+                message += '🏆 Uitstekend! Je bent een echte expert!';
+            } else if (percentage >= 70) {
+                message += '👏 Goed gedaan! Je hebt het goed onder de knie!';
+            } else if (percentage >= 50) {
+                message += '👍 Niet slecht! Met wat oefening wordt het nog beter!';
+            } else {
+                message += '💪 Blijf oefenen, je kunt het!';
+            }
+            
+            document.getElementById('resultsMessage').textContent = message;
+        }
+
+        function goToLanding() {
+            document.getElementById('landingPage').style.display = 'block';
+            document.getElementById('themePage').style.display = 'none';
+            document.getElementById('quizPage').style.display = 'none';
+            document.getElementById('resultsPage').style.display = 'none';
+            // Reset quiz state when returning to landing page
+            currentQuiz = null;
+            randomizedQuestions = [];
+            currentSubject = null;
+            currentTheme = null;
+            currentQuestionIndex = 0;
+            score = 0;
+            totalQuestions = 0;
+            selectedAnswer = null;
+            hasAnswered = false;
+        }
+    </script>
+</body>
+</html>
