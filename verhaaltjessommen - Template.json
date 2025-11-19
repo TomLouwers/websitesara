@@ -1485,5 +1485,542 @@
         }
       }
     ]
+  },
+  {
+    "id": 31,
+    "title": "Klassenverkiezing",
+    "theme": "gegevensverwerking",
+    "content": "Bij de verkiezing voor klassenvertegenwoordiger stemden 28 leerlingen. De resultaten waren: Mira: 12 stemmen, David: 9 stemmen, Lisa: 5 stemmen, Ongeldig: 2 stemmen.",
+    "questions": [
+      {
+        "question": "Wie heeft de verkiezing gewonnen?",
+        "options": [
+          "Mira",
+          "David",
+          "Lisa",
+          "Niemand (gelijkspel)"
+        ],
+        "correct": 0,
+        "extra_info": {
+          "tips": [
+            "Kijk wie de meeste stemmen heeft gekregen",
+            "Mira: 12 stemmen, David: 9 stemmen, Lisa: 5 stemmen",
+            "Mira heeft de meeste stemmen, dus Mira heeft gewonnen"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel procent van de geldige stemmen kreeg David?",
+        "options": [
+          "32%",
+          "35%",
+          "38%",
+          "41%"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Geldige stemmen: 28 - 2 = 26 stemmen",
+            "David kreeg 9 stemmen",
+            "Percentage: (9 ÷ 26) × 100% = 34,6% ≈ 35%"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel meer stemmen kreeg de winnaar dan de nummer twee?",
+        "options": [
+          "2 stemmen",
+          "3 stemmen",
+          "4 stemmen",
+          "7 stemmen"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Winnaar: Mira met 12 stemmen",
+            "Nummer twee: David met 9 stemmen",
+            "Verschil: 12 - 9 = 3 stemmen meer"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "title": "Kermis schiettent",
+    "theme": "gegevensverwerking",
+    "content": "Op de kermis houdt de schiettent de scores bij van kinderen die op blikjes schieten. De scores van vandaag: 8, 6, 10, 7, 9, 6, 8, 10, 7, 8, 9, 6 punten.",
+    "questions": [
+      {
+        "question": "Wat is de hoogste score van vandaag?",
+        "options": [
+          "8 punten",
+          "9 punten",
+          "10 punten",
+          "11 punten"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Zoek de hoogste waarde in de lijst",
+            "De scores zijn: 8, 6, 10, 7, 9, 6, 8, 10, 7, 8, 9, 6",
+            "De hoogste score is 10 punten (komt 2 keer voor)"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel kinderen schoten vandaag?",
+        "options": [
+          "10 kinderen",
+          "11 kinderen",
+          "12 kinderen",
+          "14 kinderen"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Tel het aantal scores",
+            "Er zijn 12 scores genoemd",
+            "Dus 12 kinderen hebben geschoten"
+          ]
+        }
+      },
+      {
+        "question": "Welke score kwam het vaakst voor?",
+        "options": [
+          "6 punten",
+          "7 punten",
+          "8 punten",
+          "9 punten"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Tel hoe vaak elke score voorkomt:",
+            "6 punten: 3×, 7 punten: 2×, 8 punten: 3×, 9 punten: 2×, 10 punten: 2×",
+            "Zowel 6 als 8 punten komen 3 keer voor",
+            "8 punten is het meest logische antwoord als modus"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "title": "Fietsenrek telling",
+    "theme": "gegevensverwerking",
+    "content": "De conciërge telt elke dag om 9:00 uur hoeveel fietsen er in het rek staan. Deze week: Maandag: 18 fietsen, Dinsdag: 22 fietsen, Woensdag: 20 fietsen, Donderdag: 23 fietsen, Vrijdag: 17 fietsen.",
+    "questions": [
+      {
+        "question": "Op welke dag stonden er de meeste fietsen?",
+        "options": [
+          "Maandag",
+          "Dinsdag",
+          "Woensdag",
+          "Donderdag"
+        ],
+        "correct": 3,
+        "extra_info": {
+          "tips": [
+            "Vergelijk alle aantallen",
+            "Maandag: 18, Dinsdag: 22, Woensdag: 20, Donderdag: 23, Vrijdag: 17",
+            "Donderdag had met 23 fietsen het hoogste aantal"
+          ]
+        }
+      },
+      {
+        "question": "Wat is het gemiddeld aantal fietsen per dag?",
+        "options": [
+          "18 fietsen",
+          "20 fietsen",
+          "22 fietsen",
+          "23 fietsen"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Tel alle fietsen bij elkaar: 18 + 22 + 20 + 23 + 17 = 100 fietsen",
+            "Deel door het aantal dagen: 100 ÷ 5 = 20 fietsen per dag"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "title": "Huiswerk minuten",
+    "theme": "gegevensverwerking",
+    "content": "De juf vroeg leerlingen hoeveel minuten ze aan huiswerk deden. De antwoorden: 30, 45, 20, 50, 35, 40, 25, 45 minuten.",
+    "questions": [
+      {
+        "question": "Wat is de mediaan (middelste waarde) van de huiswerktijden?",
+        "options": [
+          "35 minuten",
+          "37,5 minuten",
+          "40 minuten",
+          "45 minuten"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Zet de tijden op volgorde: 20, 25, 30, 35, 40, 45, 45, 50",
+            "Er zijn 8 waarden (even aantal), dus de mediaan ligt tussen de 4e en 5e waarde",
+            "4e waarde: 35 minuten, 5e waarde: 40 minuten",
+            "Mediaan: (35 + 40) ÷ 2 = 37,5 minuten"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel leerlingen deden minder dan 40 minuten aan huiswerk?",
+        "options": [
+          "3 leerlingen",
+          "4 leerlingen",
+          "5 leerlingen",
+          "6 leerlingen"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Zoek alle tijden onder 40 minuten",
+            "Minder dan 40: 20, 25, 30, 35 minuten",
+            "Dat zijn 4 leerlingen (let op: 40 zelf telt niet mee bij 'minder dan 40')"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "title": "Lunchpakket onderzoek",
+    "theme": "gegevensverwerking",
+    "content": "De school deed onderzoek naar wat leerlingen in hun lunchpakket hadden. Van de 100 leerlingen hadden er: 45 een boterham, 28 een wrap, 18 een broodje, 9 crackers of rijstwafels.",
+    "questions": [
+      {
+        "question": "Wat aten de meeste leerlingen als lunch?",
+        "options": [
+          "Boterham",
+          "Wrap",
+          "Broodje",
+          "Crackers"
+        ],
+        "correct": 0,
+        "extra_info": {
+          "tips": [
+            "Vergelijk de aantallen",
+            "Boterham: 45, Wrap: 28, Broodje: 18, Crackers: 9",
+            "De boterham komt het vaakst voor"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel procent van de leerlingen at een wrap?",
+        "options": [
+          "18%",
+          "25%",
+          "28%",
+          "30%"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "28 leerlingen aten een wrap",
+            "Er waren 100 leerlingen in totaal",
+            "Percentage: (28 ÷ 100) × 100% = 28%"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel leerlingen meer kozen voor een boterham dan voor een broodje?",
+        "options": [
+          "17 leerlingen",
+          "23 leerlingen",
+          "27 leerlingen",
+          "36 leerlingen"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Boterham: 45 leerlingen",
+            "Broodje: 18 leerlingen",
+            "Verschil: 45 - 18 = 27 leerlingen meer"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "title": "Basketbal vrije worpen",
+    "theme": "gegevensverwerking",
+    "content": "Bij de basketbaltraining oefenden 6 spelers vrije worpen. Elk speler deed 10 worpen. Het aantal raak: Jasper: 7, Nadia: 9, Tim: 6, Sarah: 8, Kevin: 7, Emma: 9.",
+    "questions": [
+      {
+        "question": "Wat is het totaal aantal rake worpen van alle spelers samen?",
+        "options": [
+          "42 worpen",
+          "44 worpen",
+          "46 worpen",
+          "48 worpen"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Tel alle rake worpen bij elkaar op",
+            "7 + 9 + 6 + 8 + 7 + 9 = 46 rake worpen"
+          ]
+        }
+      },
+      {
+        "question": "Wat is het gemiddeld aantal rake worpen per speler?",
+        "options": [
+          "7 worpen",
+          "7,5 worpen",
+          "7,7 worpen",
+          "8 worpen"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Totaal rake worpen: 46",
+            "Aantal spelers: 6",
+            "Gemiddelde: 46 ÷ 6 = 7,67 ≈ 7,7 rake worpen per speler"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel spelers gooiden 8 of meer rake worpen?",
+        "options": [
+          "1 speler",
+          "2 spelers",
+          "3 spelers",
+          "4 spelers"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Zoek alle scores van 8 of hoger",
+            "Nadia: 9 (ja), Sarah: 8 (ja), Emma: 9 (ja)",
+            "Dat zijn 3 spelers"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "title": "Dierentuin bezoek",
+    "theme": "gegevensverwerking",
+    "content": "De dierentuin telde het aantal bezoekers per dag deze week. Maandag: 234 bezoekers, Dinsdag: 198 bezoekers, Woensdag: 267 bezoekers, Donderdag: 223 bezoekers, Vrijdag: 278 bezoekers.",
+    "questions": [
+      {
+        "question": "Hoeveel bezoekers waren er in totaal deze week?",
+        "options": [
+          "1.100 bezoekers",
+          "1.150 bezoekers",
+          "1.200 bezoekers",
+          "1.250 bezoekers"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Tel alle bezoekers bij elkaar",
+            "234 + 198 + 267 + 223 + 278 = 1.200 bezoekers"
+          ]
+        }
+      },
+      {
+        "question": "Op welke dag waren er het minst bezoekers?",
+        "options": [
+          "Maandag",
+          "Dinsdag",
+          "Woensdag",
+          "Donderdag"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Vergelijk alle aantallen",
+            "Maandag: 234, Dinsdag: 198, Woensdag: 267, Donderdag: 223, Vrijdag: 278",
+            "Dinsdag had het laagste aantal met 198 bezoekers"
+          ]
+        }
+      },
+      {
+        "question": "Wat is het gemiddeld aantal bezoekers per dag?",
+        "options": [
+          "220 bezoekers",
+          "240 bezoekers",
+          "260 bezoekers",
+          "280 bezoekers"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Totaal bezoekers: 1.200",
+            "Aantal dagen: 5",
+            "Gemiddelde: 1.200 ÷ 5 = 240 bezoekers per dag"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "title": "Schooltuin oogst",
+    "theme": "gegevensverwerking",
+    "content": "De schooltuin oogstte groenten deze maand. Ze wogen alles: Tomaten: 12 kg, Komkommers: 8 kg, Paprika's: 5 kg, Courgettes: 9 kg, Sla: 3 kg.",
+    "questions": [
+      {
+        "question": "Hoeveel kilogram groenten werd er in totaal geoogst?",
+        "options": [
+          "35 kg",
+          "37 kg",
+          "39 kg",
+          "41 kg"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Tel alle gewichten bij elkaar op",
+            "12 + 8 + 5 + 9 + 3 = 37 kg"
+          ]
+        }
+      },
+      {
+        "question": "Welke groente werd het meest geoogst?",
+        "options": [
+          "Tomaten",
+          "Komkommers",
+          "Courgettes",
+          "Paprika's"
+        ],
+        "correct": 0,
+        "extra_info": {
+          "tips": [
+            "Vergelijk alle gewichten",
+            "Tomaten: 12 kg is het hoogste gewicht",
+            "Dus tomaten werden het meest geoogst"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel procent van de totale oogst waren komkommers?",
+        "options": [
+          "18%",
+          "22%",
+          "25%",
+          "28%"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Komkommers: 8 kg",
+            "Totale oogst: 37 kg",
+            "Percentage: (8 ÷ 37) × 100% = 21,6% ≈ 22%"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "title": "Hardloopwedstrijd tijden",
+    "theme": "gegevensverwerking",
+    "content": "Bij de hardloopwedstrijd over 1 kilometer werden deze tijden gelopen: 4:32, 5:18, 4:45, 5:02, 4:28, 5:15, 4:50 minuten.",
+    "questions": [
+      {
+        "question": "Wie liep het snelst (laagste tijd)?",
+        "options": [
+          "4:28 minuten",
+          "4:32 minuten",
+          "4:45 minuten",
+          "4:50 minuten"
+        ],
+        "correct": 0,
+        "extra_info": {
+          "tips": [
+            "Bij hardlopen is een lagere tijd sneller",
+            "Zoek de laagste tijd",
+            "4:28 minuten is de laagste tijd, dus dat is de snelste loper"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel lopers finishten in minder dan 5 minuten?",
+        "options": [
+          "2 lopers",
+          "3 lopers",
+          "4 lopers",
+          "5 lopers"
+        ],
+        "correct": 3,
+        "extra_info": {
+          "tips": [
+            "Tijden onder 5:00 minuten: 4:32, 4:45, 4:28, 4:50",
+            "Tel deze tijden: dat zijn 4 lopers",
+            "Let op: 5:02 en 5:15 en 5:18 zijn boven de 5 minuten"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "title": "Favoriete huisdier",
+    "theme": "gegevensverwerking",
+    "content": "In groep 8 werd gevraagd naar het favoriete huisdier. Van de 24 leerlingen kozen: 9 voor een hond, 7 voor een kat, 5 voor een konijn, 3 voor een vis.",
+    "questions": [
+      {
+        "question": "Welk huisdier is het populairst in de klas?",
+        "options": [
+          "Hond",
+          "Kat",
+          "Konijn",
+          "Vis"
+        ],
+        "correct": 0,
+        "extra_info": {
+          "tips": [
+            "Vergelijk de aantallen",
+            "Hond: 9, Kat: 7, Konijn: 5, Vis: 3",
+            "De hond werd het vaakst gekozen"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel procent van de leerlingen koos voor een kat?",
+        "options": [
+          "25%",
+          "29%",
+          "33%",
+          "37%"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "7 leerlingen kozen voor een kat",
+            "Er zijn 24 leerlingen in totaal",
+            "Percentage: (7 ÷ 24) × 100% = 29,2% ≈ 29%"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel leerlingen meer kozen voor een hond dan voor een konijn?",
+        "options": [
+          "2 leerlingen",
+          "3 leerlingen",
+          "4 leerlingen",
+          "5 leerlingen"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Hond: 9 leerlingen",
+            "Konijn: 5 leerlingen",
+            "Verschil: 9 - 5 = 4 leerlingen meer"
+          ]
+        }
+      }
+    ]
   }
 ]
