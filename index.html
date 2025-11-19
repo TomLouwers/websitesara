@@ -614,6 +614,7 @@
                     item.questions.forEach(question => {
                         flatQuestions.push({
                             content: item.content,
+                            visual: item.visual, // Add visual data
                             question: question.question,
                             options: question.options,
                             correct: question.correct,
@@ -631,6 +632,7 @@
                     // For items with single question (like samenvatten)
                     flatQuestions.push({
                         content: item.content,
+                        visual: item.visual, // Add visual data
                         question: item.question,
                         options: item.options,
                         correct: item.correct, // For multiple choice, this is the index. For open, this might be the answer text.
@@ -801,6 +803,36 @@
             loadCurrentQuestion();
         }
 
+        // Render visual data (tables) as HTML
+        function renderVisualData(visualData) {
+            if (!visualData || visualData.type !== 'table') {
+                return '';
+            }
+
+            let html = '<table style="width: 100%; border-collapse: collapse; margin: 15px 0; background-color: white;">';
+
+            // Add headers
+            html += '<thead><tr>';
+            visualData.headers.forEach(header => {
+                html += `<th style="border: 2px solid #6200EE; padding: 12px; background-color: #6200EE; color: white; font-weight: 500; text-align: left;">${header}</th>`;
+            });
+            html += '</tr></thead>';
+
+            // Add rows
+            html += '<tbody>';
+            visualData.rows.forEach((row, rowIndex) => {
+                const bgColor = rowIndex % 2 === 0 ? '#f8f8f8' : '#ffffff';
+                html += `<tr style="background-color: ${bgColor};">`;
+                row.forEach(cell => {
+                    html += `<td style="border: 1px solid #e0e0e0; padding: 10px; color: #212121;">${cell}</td>`;
+                });
+                html += '</tr>';
+            });
+            html += '</tbody></table>';
+
+            return html;
+        }
+
         function loadCurrentQuestion() {
             if (currentQuestionIndex >= randomizedQuestions.length) {
                 showResults();
@@ -808,7 +840,7 @@
             }
 
             const currentQuestion = randomizedQuestions[currentQuestionIndex];
-            
+
             // Update progress
             const progress = (currentQuestionIndex / totalQuestions) * 100;
             document.getElementById('progressBar').style.width = progress + '%';
@@ -816,8 +848,20 @@
 
             // Show reading content if available
             const readingContent = document.getElementById('readingContent');
-            if (currentQuestion.content) {
-                readingContent.innerHTML = currentQuestion.content; // Use innerHTML if content might have HTML tags
+            if (currentQuestion.content || currentQuestion.visual) {
+                let contentHtml = '';
+
+                // Add text content if available
+                if (currentQuestion.content) {
+                    contentHtml += currentQuestion.content;
+                }
+
+                // Add visual table if available
+                if (currentQuestion.visual) {
+                    contentHtml += renderVisualData(currentQuestion.visual);
+                }
+
+                readingContent.innerHTML = contentHtml;
                 readingContent.classList.remove('hidden');
             } else {
                 readingContent.classList.add('hidden');
