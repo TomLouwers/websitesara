@@ -470,6 +470,11 @@
                     <h3>Woordenschat</h3>
                     <p>Vergroot je vocabulaire</p>
                 </div>
+                <div class="subject-card" onclick="loadSubject('verhaaltjessommen')">
+                    <div class="subject-icon">🔢</div>
+                    <h3>Verhaaltjessommen</h3>
+                    <p>Reken mee met CITO-niveau verhaaltjes</p>
+                </div>
                <a href="modules/leesstrategieën/leesstrategieën.html" class="subject-card module-card">
                     <div class="subject-icon">🎯</div>
                     <h3>Leesstrategieën</h3>
@@ -687,7 +692,8 @@
 				brandaan: 'Geschiedenis',
 				samenvatten: 'Samenvatten',
 				wereldorientatie: 'Wereldoriëntatie',
-				woordenschat: 'Woordenschat'
+				woordenschat: 'Woordenschat',
+				verhaaltjessommen: 'Verhaaltjessommen'
 			};
 		
 			document.getElementById('subjectTitle').textContent = titles[subject] + ' - Kies een thema';
@@ -785,7 +791,8 @@
                 brandaan: 'Geschiedenis',
                 samenvatten: 'Samenvatten',
                 wereldorientatie: 'Wereldoriëntatie',
-                woordenschat: 'Woordenschat'
+                woordenschat: 'Woordenschat',
+                verhaaltjessommen: 'Verhaaltjessommen'
             };
             document.getElementById('quizTitle').textContent = titles[subject] || 'Quiz';
             
