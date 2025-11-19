@@ -668,7 +668,18 @@
     "id": 16,
     "title": "Schoolbibliotheek",
     "theme": "gegevensverwerking",
-    "content": "In de schoolbibliotheek worden deze boeken uitgeleend in één week: Maandag: 18 boeken, Dinsdag: 24 boeken, Woensdag: 15 boeken, Donderdag: 21 boeken, Vrijdag: 27 boeken.",
+    "content": "In de schoolbibliotheek worden boeken uitgeleend. Bekijk de tabel met het aantal uitgeleende boeken per dag:",
+    "visual": {
+      "type": "table",
+      "headers": ["Dag", "Aantal boeken"],
+      "rows": [
+        ["Maandag", 18],
+        ["Dinsdag", 24],
+        ["Woensdag", 15],
+        ["Donderdag", 21],
+        ["Vrijdag", 27]
+      ]
+    },
     "questions": [
       {
         "question": "Hoeveel boeken werden er in totaal deze week uitgeleend?",
@@ -949,7 +960,18 @@
     "id": 21,
     "title": "Voetbalcompetitie",
     "theme": "gegevensverwerking",
-    "content": "De voetbalclub houdt de doelpunten bij van vijf spelers tijdens de competitie. Kevin: 12 doelpunten, Rashid: 8 doelpunten, Lisa: 15 doelpunten, Mohamed: 11 doelpunten, Emma: 9 doelpunten.",
+    "content": "De voetbalclub houdt de doelpunten bij van vijf spelers. Bekijk de tabel:",
+    "visual": {
+      "type": "table",
+      "headers": ["Speler", "Doelpunten"],
+      "rows": [
+        ["Kevin", 12],
+        ["Rashid", 8],
+        ["Lisa", 15],
+        ["Mohamed", 11],
+        ["Emma", 9]
+      ]
+    },
     "questions": [
       {
         "question": "Wat is het totaal aantal gescoorde doelpunten?",
@@ -1007,7 +1029,18 @@
     "id": 22,
     "title": "Weerstation groep 8",
     "theme": "gegevensverwerking",
-    "content": "Groep 8 meet elke dag de temperatuur om 12:00 uur. Deze week waren de temperaturen: Maandag: 18°C, Dinsdag: 22°C, Woensdag: 19°C, Donderdag: 21°C, Vrijdag: 20°C.",
+    "content": "Groep 8 meet elke dag de temperatuur om 12:00 uur. Bekijk de tabel met de temperaturen van deze week:",
+    "visual": {
+      "type": "table",
+      "headers": ["Dag", "Temperatuur"],
+      "rows": [
+        ["Maandag", "18°C"],
+        ["Dinsdag", "22°C"],
+        ["Woensdag", "19°C"],
+        ["Donderdag", "21°C"],
+        ["Vrijdag", "20°C"]
+      ]
+    },
     "questions": [
       {
         "question": "Wat is de gemiddelde temperatuur deze week?",
@@ -1049,7 +1082,19 @@
     "id": 23,
     "title": "Toetsresultaten rekenen",
     "theme": "gegevensverwerking",
-    "content": "De juf heeft de toetsresultaten bijgehouden. De cijfers zijn: 6, 7, 8, 5, 9, 7, 6, 8, 7, 10, 6, 7, 8, 5, 7, 9, 8, 7, 6, 8. Er zitten 20 leerlingen in de klas.",
+    "content": "De juf heeft de toetsresultaten van 20 leerlingen bijgehouden. Bekijk de tabel met de frequentieverdeling:",
+    "visual": {
+      "type": "table",
+      "headers": ["Cijfer", "Aantal leerlingen"],
+      "rows": [
+        ["5", 2],
+        ["6", 4],
+        ["7", 6],
+        ["8", 5],
+        ["9", 2],
+        ["10", 1]
+      ]
+    },
     "questions": [
       {
         "question": "Welk cijfer komt het vaakst voor (de modus)?",
@@ -1091,7 +1136,18 @@
     "id": 24,
     "title": "YouTubekanaal van de klas",
     "theme": "gegevensverwerking",
-    "content": "De klas heeft een YouTubekanaal met filmpjes over hun projecten. Het aantal views per video deze maand: Video 1: 240 views, Video 2: 180 views, Video 3: 320 views, Video 4: 200 views, Video 5: 260 views.",
+    "content": "De klas heeft een YouTubekanaal met filmpjes over hun projecten. Bekijk de tabel met het aantal views per video deze maand:",
+    "visual": {
+      "type": "table",
+      "headers": ["Video", "Views"],
+      "rows": [
+        ["Video 1", 240],
+        ["Video 2", 180],
+        ["Video 3", 320],
+        ["Video 4", 200],
+        ["Video 5", 260]
+      ]
+    },
     "questions": [
       {
         "question": "Hoeveel views hebben ze in totaal deze maand?",
@@ -1149,7 +1205,17 @@
     "id": 25,
     "title": "Snoepwinkel enquête",
     "theme": "gegevensverwerking",
-    "content": "De snoepwinkel vroeg 80 kinderen naar hun favoriete snoep. De resultaten: Drop: 24 kinderen, Chocolade: 28 kinderen, Winegums: 16 kinderen, Zuurtjes: 12 kinderen.",
+    "content": "De snoepwinkel vroeg 80 kinderen naar hun favoriete snoep. Bekijk de tabel met de resultaten:",
+    "visual": {
+      "type": "table",
+      "headers": ["Snoepsoort", "Aantal kinderen"],
+      "rows": [
+        ["Drop", 24],
+        ["Chocolade", 28],
+        ["Winegums", 16],
+        ["Zuurtjes", 12]
+      ]
+    },
     "questions": [
       {
         "question": "Welk snoep is het populairst?",
@@ -1207,7 +1273,19 @@
     "id": 26,
     "title": "Schoolbibliotheek leeslijst",
     "theme": "gegevensverwerking",
-    "content": "De bibliothecaresse houdt bij hoeveel boeken leerlingen lezen per maand. Deze maand: Lars: 4 boeken, Fatima: 7 boeken, Dennis: 3 boeken, Sophie: 8 boeken, Karim: 5 boeken, Nora: 6 boeken.",
+    "content": "De bibliothecaresse houdt bij hoeveel boeken leerlingen lezen per maand. Bekijk de tabel:",
+    "visual": {
+      "type": "table",
+      "headers": ["Leerling", "Aantal boeken"],
+      "rows": [
+        ["Lars", 4],
+        ["Fatima", 7],
+        ["Dennis", 3],
+        ["Sophie", 8],
+        ["Karim", 5],
+        ["Nora", 6]
+      ]
+    },
     "questions": [
       {
         "question": "Wat is de mediaan (het middelste getal als je ze op volgorde zet)?",
@@ -1249,7 +1327,17 @@
     "id": 27,
     "title": "Spelletjesavond scores",
     "theme": "gegevensverwerking",
-    "content": "Bij de spelletjesavond speelden vier teams een quiz. De scores waren: Team Rood: 85 punten, Team Blauw: 92 punten, Team Groen: 78 punten, Team Geel: 89 punten.",
+    "content": "Bij de spelletjesavond speelden vier teams een quiz. Bekijk de tabel met de scores:",
+    "visual": {
+      "type": "table",
+      "headers": ["Team", "Score (punten)"],
+      "rows": [
+        ["Team Rood", 85],
+        ["Team Blauw", 92],
+        ["Team Groen", 78],
+        ["Team Geel", 89]
+      ]
+    },
     "questions": [
       {
         "question": "Welk team eindigde op de tweede plaats?",
@@ -1293,7 +1381,18 @@
     "id": 28,
     "title": "Verkeerstelling bij school",
     "theme": "gegevensverwerking",
-    "content": "De leerlingen telden een week lang hoeveel voertuigen er langs de school reden tussen 8:00 en 9:00 uur. Maandag: 156 voertuigen, Dinsdag: 142 voertuigen, Woensdag: 138 voertuigen, Donderdag: 148 voertuigen, Vrijdag: 166 voertuigen.",
+    "content": "De leerlingen telden een week lang hoeveel voertuigen er langs de school reden tussen 8:00 en 9:00 uur. Bekijk de tabel:",
+    "visual": {
+      "type": "table",
+      "headers": ["Dag", "Aantal voertuigen"],
+      "rows": [
+        ["Maandag", 156],
+        ["Dinsdag", 142],
+        ["Woensdag", 138],
+        ["Donderdag", 148],
+        ["Vrijdag", 166]
+      ]
+    },
     "questions": [
       {
         "question": "Wat is het gemiddeld aantal voertuigen per dag?",
@@ -1350,7 +1449,17 @@
     "id": 29,
     "title": "App gebruik in de klas",
     "theme": "gegevensverwerking",
-    "content": "De leerlingen vulden een vragenlijst in over hoeveel uur per week ze hun favoriete game-app gebruiken. De resultaten: 3 leerlingen: 2 uur, 8 leerlingen: 4 uur, 5 leerlingen: 3 uur, 4 leerlingen: 5 uur.",
+    "content": "De leerlingen vulden een vragenlijst in over hoeveel uur per week ze hun favoriete game-app gebruiken. Bekijk de tabel:",
+    "visual": {
+      "type": "table",
+      "headers": ["Aantal uur per week", "Aantal leerlingen"],
+      "rows": [
+        ["2 uur", 3],
+        ["3 uur", 5],
+        ["4 uur", 8],
+        ["5 uur", 4]
+      ]
+    },
     "questions": [
       {
         "question": "Hoeveel leerlingen deden mee aan de vragenlijst?",
@@ -1411,7 +1520,19 @@
     "id": 30,
     "title": "Zwemwedstrijd tijden",
     "theme": "gegevensverwerking",
-    "content": "Bij de zwemwedstrijd werden de tijden van de 50 meter vrije slag gemeten. De tijden van de finalisten waren: 34,2 sec, 35,8 sec, 33,9 sec, 36,1 sec, 34,5 sec, 35,2 sec.",
+    "content": "Bij de zwemwedstrijd werden de tijden van de 50 meter vrije slag gemeten. Bekijk de tabel met de tijden van de finalisten:",
+    "visual": {
+      "type": "table",
+      "headers": ["Zwemmer", "Tijd (seconden)"],
+      "rows": [
+        ["Zwemmer 1", 34.2],
+        ["Zwemmer 2", 35.8],
+        ["Zwemmer 3", 33.9],
+        ["Zwemmer 4", 36.1],
+        ["Zwemmer 5", 34.5],
+        ["Zwemmer 6", 35.2]
+      ]
+    },
     "questions": [
       {
         "question": "Welke tijd was het snelst (laagste tijd)?",
@@ -1471,7 +1592,17 @@
     "id": 31,
     "title": "Klassenverkiezing",
     "theme": "gegevensverwerking",
-    "content": "Bij de verkiezing voor klassenvertegenwoordiger stemden 28 leerlingen. De resultaten waren: Mira: 12 stemmen, David: 9 stemmen, Lisa: 5 stemmen, Ongeldig: 2 stemmen.",
+    "content": "Bij de verkiezing voor klassenvertegenwoordiger stemden 28 leerlingen. Bekijk de tabel met de resultaten:",
+    "visual": {
+      "type": "table",
+      "headers": ["Kandidaat", "Aantal stemmen"],
+      "rows": [
+        ["Mira", 12],
+        ["David", 9],
+        ["Lisa", 5],
+        ["Ongeldig", 2]
+      ]
+    },
     "questions": [
       {
         "question": "Wie heeft de verkiezing gewonnen?",
@@ -1530,7 +1661,18 @@
     "id": 32,
     "title": "Kermis schiettent",
     "theme": "gegevensverwerking",
-    "content": "Op de kermis houdt de schiettent de scores bij van kinderen die op blikjes schieten. De scores van vandaag: 8, 6, 10, 7, 9, 6, 8, 10, 7, 8, 9, 6 punten.",
+    "content": "Op de kermis houdt de schiettent de scores bij van kinderen die op blikjes schieten. Bekijk de tabel met de scores van vandaag:",
+    "visual": {
+      "type": "table",
+      "headers": ["Score", "Aantal keer"],
+      "rows": [
+        ["6 punten", 3],
+        ["7 punten", 2],
+        ["8 punten", 3],
+        ["9 punten", 2],
+        ["10 punten", 2]
+      ]
+    },
     "questions": [
       {
         "question": "Wat is de hoogste score van vandaag?",
@@ -1590,7 +1732,18 @@
     "id": 33,
     "title": "Fietsenrek telling",
     "theme": "gegevensverwerking",
-    "content": "De conciërge telt elke dag om 9:00 uur hoeveel fietsen er in het rek staan. Deze week: Maandag: 18 fietsen, Dinsdag: 22 fietsen, Woensdag: 20 fietsen, Donderdag: 23 fietsen, Vrijdag: 17 fietsen.",
+    "content": "De conciërge telt elke dag om 9:00 uur hoeveel fietsen er in het rek staan. Bekijk de tabel:",
+    "visual": {
+      "type": "table",
+      "headers": ["Dag", "Aantal fietsen"],
+      "rows": [
+        ["Maandag", 18],
+        ["Dinsdag", 22],
+        ["Woensdag", 20],
+        ["Donderdag", 23],
+        ["Vrijdag", 17]
+      ]
+    },
     "questions": [
       {
         "question": "Op welke dag stonden er de meeste fietsen?",
@@ -1631,7 +1784,21 @@
     "id": 34,
     "title": "Huiswerk minuten",
     "theme": "gegevensverwerking",
-    "content": "De juf vroeg leerlingen hoeveel minuten ze aan huiswerk deden. De antwoorden: 30, 45, 20, 50, 35, 40, 25, 45 minuten.",
+    "content": "De juf vroeg leerlingen hoeveel minuten ze aan huiswerk deden. Bekijk de tabel met de antwoorden:",
+    "visual": {
+      "type": "table",
+      "headers": ["Leerling", "Minuten"],
+      "rows": [
+        ["Leerling 1", 30],
+        ["Leerling 2", 45],
+        ["Leerling 3", 20],
+        ["Leerling 4", 50],
+        ["Leerling 5", 35],
+        ["Leerling 6", 40],
+        ["Leerling 7", 25],
+        ["Leerling 8", 45]
+      ]
+    },
     "questions": [
       {
         "question": "Wat is de mediaan (middelste waarde) van de huiswerktijden?",
@@ -1674,7 +1841,17 @@
     "id": 35,
     "title": "Lunchpakket onderzoek",
     "theme": "gegevensverwerking",
-    "content": "De school deed onderzoek naar wat leerlingen in hun lunchpakket hadden. Van de 100 leerlingen hadden er: 45 een boterham, 28 een wrap, 18 een broodje, 9 crackers of rijstwafels.",
+    "content": "De school deed onderzoek naar wat leerlingen in hun lunchpakket hadden. Bekijk de tabel met de resultaten van 100 leerlingen:",
+    "visual": {
+      "type": "table",
+      "headers": ["Lunchtype", "Aantal leerlingen"],
+      "rows": [
+        ["Boterham", 45],
+        ["Wrap", 28],
+        ["Broodje", 18],
+        ["Crackers/rijstwafels", 9]
+      ]
+    },
     "questions": [
       {
         "question": "Wat aten de meeste leerlingen als lunch?",
@@ -1733,7 +1910,19 @@
     "id": 36,
     "title": "Basketbal vrije worpen",
     "theme": "gegevensverwerking",
-    "content": "Bij de basketbaltraining oefenden 6 spelers vrije worpen. Elk speler deed 10 worpen. Het aantal raak: Jasper: 7, Nadia: 9, Tim: 6, Sarah: 8, Kevin: 7, Emma: 9.",
+    "content": "Bij de basketbaltraining oefenden 6 spelers vrije worpen. Elk speler deed 10 worpen. Bekijk de tabel met het aantal rake worpen:",
+    "visual": {
+      "type": "table",
+      "headers": ["Speler", "Aantal raak"],
+      "rows": [
+        ["Jasper", 7],
+        ["Nadia", 9],
+        ["Tim", 6],
+        ["Sarah", 8],
+        ["Kevin", 7],
+        ["Emma", 9]
+      ]
+    },
     "questions": [
       {
         "question": "Wat is het totaal aantal rake worpen van alle spelers samen?",
@@ -1791,7 +1980,18 @@
     "id": 37,
     "title": "Dierentuin bezoek",
     "theme": "gegevensverwerking",
-    "content": "De dierentuin telde het aantal bezoekers per dag deze week. Maandag: 234 bezoekers, Dinsdag: 198 bezoekers, Woensdag: 267 bezoekers, Donderdag: 223 bezoekers, Vrijdag: 278 bezoekers.",
+    "content": "De dierentuin telde het aantal bezoekers per dag deze week. Bekijk de tabel:",
+    "visual": {
+      "type": "table",
+      "headers": ["Dag", "Aantal bezoekers"],
+      "rows": [
+        ["Maandag", 234],
+        ["Dinsdag", 198],
+        ["Woensdag", 267],
+        ["Donderdag", 223],
+        ["Vrijdag", 278]
+      ]
+    },
     "questions": [
       {
         "question": "Hoeveel bezoekers waren er in totaal deze week?",
@@ -1849,7 +2049,18 @@
     "id": 38,
     "title": "Schooltuin oogst",
     "theme": "gegevensverwerking",
-    "content": "De schooltuin oogstte groenten deze maand. Ze wogen alles: Tomaten: 12 kg, Komkommers: 8 kg, Paprika's: 5 kg, Courgettes: 9 kg, Sla: 3 kg.",
+    "content": "De schooltuin oogstte groenten deze maand. Bekijk de tabel met de gewichten:",
+    "visual": {
+      "type": "table",
+      "headers": ["Groente", "Gewicht (kg)"],
+      "rows": [
+        ["Tomaten", 12],
+        ["Komkommers", 8],
+        ["Paprika's", 5],
+        ["Courgettes", 9],
+        ["Sla", 3]
+      ]
+    },
     "questions": [
       {
         "question": "Hoeveel kilogram groenten werd er in totaal geoogst?",
@@ -1907,7 +2118,20 @@
     "id": 39,
     "title": "Hardloopwedstrijd tijden",
     "theme": "gegevensverwerking",
-    "content": "Bij de hardloopwedstrijd over 1 kilometer werden deze tijden gelopen: 4:32, 5:18, 4:45, 5:02, 4:28, 5:15, 4:50 minuten.",
+    "content": "Bij de hardloopwedstrijd over 1 kilometer werden deze tijden gelopen. Bekijk de tabel:",
+    "visual": {
+      "type": "table",
+      "headers": ["Loper", "Tijd (min:sec)"],
+      "rows": [
+        ["Loper 1", "4:32"],
+        ["Loper 2", "5:18"],
+        ["Loper 3", "4:45"],
+        ["Loper 4", "5:02"],
+        ["Loper 5", "4:28"],
+        ["Loper 6", "5:15"],
+        ["Loper 7", "4:50"]
+      ]
+    },
     "questions": [
       {
         "question": "Wie liep het snelst (laagste tijd)?",
@@ -1949,7 +2173,17 @@
     "id": 40,
     "title": "Favoriete huisdier",
     "theme": "gegevensverwerking",
-    "content": "In groep 8 werd gevraagd naar het favoriete huisdier. Van de 24 leerlingen kozen: 9 voor een hond, 7 voor een kat, 5 voor een konijn, 3 voor een vis.",
+    "content": "In groep 8 werd gevraagd naar het favoriete huisdier. Bekijk de tabel met de resultaten van 24 leerlingen:",
+    "visual": {
+      "type": "table",
+      "headers": ["Huisdier", "Aantal leerlingen"],
+      "rows": [
+        ["Hond", 9],
+        ["Kat", 7],
+        ["Konijn", 5],
+        ["Vis", 3]
+      ]
+    },
     "questions": [
       {
         "question": "Welk huisdier is het populairst in de klas?",
