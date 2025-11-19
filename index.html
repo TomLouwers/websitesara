@@ -475,6 +475,11 @@
                     <h3>Verhaaltjessommen</h3>
                     <p>Reken mee met CITO-niveau verhaaltjes</p>
                 </div>
+                <div class="subject-card" onclick="loadSubject('basisvaardigheden')">
+                    <div class="subject-icon">🧮</div>
+                    <h3>Basisvaardigheden</h3>
+                    <p>Oefen de rekenkundige basisvaardigheden</p>
+                </div>
                <a href="modules/leesstrategieën/leesstrategieën.html" class="subject-card module-card">
                     <div class="subject-icon">🎯</div>
                     <h3>Leesstrategieën</h3>
@@ -697,7 +702,8 @@
 				samenvatten: 'Samenvatten',
 				wereldorientatie: 'Wereldoriëntatie',
 				woordenschat: 'Woordenschat',
-				verhaaltjessommen: 'Verhaaltjessommen'
+				verhaaltjessommen: 'Verhaaltjessommen',
+				basisvaardigheden: 'Basisvaardigheden'
 			};
 		
 			document.getElementById('subjectTitle').textContent = titles[subject] + ' - Kies een thema';
@@ -796,7 +802,8 @@
                 samenvatten: 'Samenvatten',
                 wereldorientatie: 'Wereldoriëntatie',
                 woordenschat: 'Woordenschat',
-                verhaaltjessommen: 'Verhaaltjessommen'
+                verhaaltjessommen: 'Verhaaltjessommen',
+                basisvaardigheden: 'Basisvaardigheden'
             };
             document.getElementById('quizTitle').textContent = titles[subject] || 'Quiz';
             
