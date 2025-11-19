@@ -652,7 +652,9 @@
         // Load JSON file
         async function loadJsonFile(filename) {
             try {
-                const response = await fetch(jsonPath + filename);
+                // Add cache-busting parameter to prevent browser from using cached version
+                const cacheBuster = new Date().getTime();
+                const response = await fetch(jsonPath + filename + '?v=' + cacheBuster);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
