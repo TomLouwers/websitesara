@@ -805,9 +805,14 @@
 
         // Render visual data (tables) as HTML
         function renderVisualData(visualData) {
+            console.log('renderVisualData called with:', visualData);
+
             if (!visualData || visualData.type !== 'table') {
+                console.log('No visual data or not a table, returning empty string');
                 return '';
             }
+
+            console.log('Rendering table with headers:', visualData.headers, 'and', visualData.rows.length, 'rows');
 
             let html = '<table style="width: 100%; border-collapse: collapse; margin: 15px 0; background-color: white;">';
 
@@ -830,6 +835,7 @@
             });
             html += '</tbody></table>';
 
+            console.log('Generated HTML table:', html.substring(0, 100) + '...');
             return html;
         }
 
@@ -840,6 +846,12 @@
             }
 
             const currentQuestion = randomizedQuestions[currentQuestionIndex];
+            console.log('Loading question:', currentQuestion.question);
+            console.log('Has content:', !!currentQuestion.content);
+            console.log('Has visual:', !!currentQuestion.visual);
+            if (currentQuestion.visual) {
+                console.log('Visual data:', currentQuestion.visual);
+            }
 
             // Update progress
             const progress = (currentQuestionIndex / totalQuestions) * 100;
@@ -858,9 +870,11 @@
 
                 // Add visual table if available
                 if (currentQuestion.visual) {
+                    console.log('Calling renderVisualData...');
                     contentHtml += renderVisualData(currentQuestion.visual);
                 }
 
+                console.log('Final content HTML length:', contentHtml.length);
                 readingContent.innerHTML = contentHtml;
                 readingContent.classList.remove('hidden');
             } else {
