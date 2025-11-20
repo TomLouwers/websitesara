@@ -1477,12 +1477,7 @@
             const lovaHelpButton = document.getElementById('lovaHelpButton');
             const lovaHelpPanel = document.getElementById('lovaHelpPanel');
 
-            console.log('Current question:', currentQuestion);
-            console.log('Has L.O.V.A. data:', hasLovaData);
-            console.log('L.O.V.A. button element:', lovaHelpButton);
-
             if (hasLovaData) {
-                console.log('Showing L.O.V.A. help button');
                 // Show L.O.V.A. help button and load data into panel
                 lovaHelpButton.classList.remove('hidden');
                 loadLovaHelpData(currentQuestion);
