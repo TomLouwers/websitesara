@@ -1,0 +1,975 @@
+// Quiz data will be loaded from JSON files
+let quizData = {};
+const jsonPath = CONFIG.jsonPath;
+
+// Quiz state
+let currentQuiz = null;
+let randomizedQuestions = []; // Array to hold randomized questions
+let currentSubject = null;
+let currentTheme = null; // Track current theme for highscore
+let currentQuestionIndex = 0;
+let score = 0;
+let totalQuestions = 0;
+let selectedAnswer = null;
+let hasAnswered = false;
+let wrongAnswers = []; // Track wrong answers for review
+
+// Progress tracker by category
+let categoryProgress = {};
+let isProgressTrackerCollapsed = false;
+let lovaClickCount = 0; // Track L.O.V.A. button clicks
+
+// Toggle progress tracker visibility
+function toggleProgressTracker() {
+    const tracker = document.getElementById('progressTracker');
+    isProgressTrackerCollapsed = !isProgressTrackerCollapsed;
+
+    if (isProgressTrackerCollapsed) {
+        tracker.classList.add('collapsed');
+    } else {
+        tracker.classList.remove('collapsed');
+    }
+}
+
+// Check if mobile device
+function isMobileDevice() {
+    return window.innerWidth <= CONFIG.mobileBreakpoint;
+}
+
+// Highscore management
+function getHighscoreKey(subject, theme) {
+    return `${CONFIG.storageKeys.highscorePrefix}${subject}_${theme || 'all'}`;
+}
+
+function getHighscore(subject, theme) {
+    const key = getHighscoreKey(subject, theme);
+    const stored = localStorage.getItem(key);
+    return stored ? parseInt(stored) : 0;
+}
+
+function saveHighscore(subject, theme, score) {
+    const key = getHighscoreKey(subject, theme);
+    const currentHighscore = getHighscore(subject, theme);
+    if (score > currentHighscore) {
+        localStorage.setItem(key, score.toString());
+        return true; // New highscore achieved
+    }
+    return false; // No new highscore
+}
+
+// Get user name
+function getUserName() {
+    let name = localStorage.getItem(CONFIG.storageKeys.userName);
+    if (!name) {
+        name = prompt(CONFIG.defaults.userPrompt) || CONFIG.defaults.userName;
+        localStorage.setItem(CONFIG.storageKeys.userName, name);
+    }
+    return name;
+}
+
+// Initialize category progress tracker
+function initializeCategoryProgress(questions) {
+    categoryProgress = {};
+
+    // Extract all unique categories from the questions
+    const categories = [...new Set(questions.map(q => q.theme).filter(theme => theme))];
+
+    // Initialize counters for each category
+    categories.forEach(category => {
+        categoryProgress[category] = {
+            correct: 0,
+            incorrect: 0
+        };
+    });
+
+    // Update the display
+    updateProgressTrackerDisplay();
+}
+
+// Update category progress after answering
+function updateCategoryProgress(theme, isCorrect) {
+    if (!theme || !categoryProgress[theme]) return;
+
+    if (isCorrect) {
+        categoryProgress[theme].correct++;
+    } else {
+        categoryProgress[theme].incorrect++;
+    }
+
+    // Update the display
+    updateProgressTrackerDisplay();
+}
+
+// Display the progress tracker
+function updateProgressTrackerDisplay() {
+    const container = document.getElementById('categoryProgress');
+    container.innerHTML = '';
+
+    // Calculate totals
+    let totalCorrect = 0;
+    let totalIncorrect = 0;
+
+    // Sort categories alphabetically for consistent display
+    const sortedCategories = Object.keys(categoryProgress).sort();
+
+    sortedCategories.forEach(category => {
+        const stats = categoryProgress[category];
+        totalCorrect += stats.correct;
+        totalIncorrect += stats.incorrect;
+
+        const categoryElement = document.createElement('div');
+        categoryElement.className = 'category-item';
+
+        categoryElement.innerHTML = `
+            <div class="category-name">${category}</div>
+            <div class="category-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Goed</span>
+                    <span class="stat-value correct">${stats.correct}</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Fout</span>
+                    <span class="stat-value incorrect">${stats.incorrect}</span>
+                </div>
+            </div>
+        `;
+
+        container.appendChild(categoryElement);
+    });
+
+    // Update summary totals
+    document.getElementById('totalCorrect').textContent = totalCorrect;
+    document.getElementById('totalIncorrect').textContent = totalIncorrect;
+    document.getElementById('lovaClicks').textContent = lovaClickCount;
+}
+
+// Shuffle array function (Fisher-Yates algorithm)
+function shuffleArray(array) {
+    const shuffled = [...array]; // Create a copy to avoid modifying original
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
+// Create flattened and randomized question list
+function createRandomizedQuestions(data) {
+    const flatQuestions = [];
+
+    data.forEach(item => {
+        if (item.questions && Array.isArray(item.questions)) {
+            // For items with multiple sub-questions
+            item.questions.forEach(question => {
+                flatQuestions.push({
+                    content: item.content,
+                    visual: item.visual, // Add visual data
+                    question: question.question,
+                    options: question.options,
+                    correct: question.correct,
+                    originalId: item.id,
+                    theme: item.theme,
+                    title: item.title,
+                    // Add strategy and tips here if they are directly on the sub-question object
+                    strategy: question.strategy,
+                    tips: question.tips,
+                    possible_answer: question.possible_answer, // Add possible_answer for open questions
+                    extra_info: question.extra_info, // NIEUW: extra_info toevoegen
+                    lova: question.lova // L.O.V.A. data
+                });
+            });
+        } else if (item.question) {
+            // For items with single question (like samenvatten)
+            flatQuestions.push({
+                content: item.content,
+                visual: item.visual, // Add visual data
+                question: item.question,
+                options: item.options,
+                correct: item.correct, // For multiple choice, this is the index. For open, this might be the answer text.
+                originalId: item.id,
+                theme: item.theme,
+                title: item.title,
+                // Add strategy and tips here if they are directly on the main item object
+                strategy: item.strategy,
+                tips: item.tips,
+                possible_answer: item.possible_answer, // Add possible_answer for open questions
+                extra_info: item.extra_info, // NIEUW: extra_info toevoegen
+                lova: item.lova // L.O.V.A. data
+            });
+        }
+    });
+
+    return shuffleArray(flatQuestions);
+}
+
+// Load JSON file
+async function loadJsonFile(filename) {
+    try {
+        // Add cache-busting parameter to prevent browser from using cached version
+        const cacheBuster = new Date().getTime();
+        const response = await fetch(jsonPath + filename + '?v=' + cacheBuster);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Error loading JSON file:', error);
+        alert('Fout bij het laden van het bestand. Controleer of de bestanden beschikbaar zijn.');
+        return null;
+    }
+}
+
+// Load subject and show themes
+async function loadSubject(subject) {
+    const filename = subject + CONFIG.templateFileSuffix;
+    const data = await loadJsonFile(filename);
+
+    if (!data) return;
+
+    quizData[subject] = data; // Store the full data for the subject
+    currentSubject = subject;
+
+    // Extract themes. Ensure 'theme' property exists for all items if you expect them to be categorized.
+    const themes = [...new Set(data.map(item => item.theme).filter(theme => theme))];
+    console.log("Loaded themes for subject:", subject, themes);
+
+    // Transition to theme selection page
+    showThemeSelection(subject, themes, data);
+}
+
+// Show theme selection page
+function showThemeSelection(subject, themes, data) {
+    document.getElementById('landingPage').style.display = 'none';
+    document.getElementById('themePage').style.display = 'block';
+
+    document.getElementById('subjectTitle').textContent = CONFIG.subjectTitles[subject] + ' - Kies een thema';
+
+    const themeGrid = document.getElementById('themeGrid');
+    themeGrid.innerHTML = '';
+
+    const userName = getUserName();
+
+    // Calculate total questions for "all themes"
+    let totalAllQuestions = 0;
+    data.forEach(item => {
+        if (Array.isArray(item.questions)) {
+            totalAllQuestions += item.questions.length;
+        } else if (item.question) {
+            totalAllQuestions += 1;
+        }
+    });
+
+    // Option to select all themes
+    const allThemeCard = document.createElement('div');
+    allThemeCard.className = 'subject-card';
+    allThemeCard.onclick = () => startQuizWithTheme(subject, null); // Pass null for all themes
+    const allHighscore = getHighscore(subject, null);
+    allThemeCard.innerHTML = `
+        <div class="subject-icon">🎯</div>
+        <h3>Alle thema's</h3>
+        <p>${totalAllQuestions} vragen beschikbaar</p>
+        <p style="color: var(--primary-color); font-weight: bold; margin-top: 5px;">${userName}, je huidige highscore: ${allHighscore}</p>
+    `;
+    themeGrid.appendChild(allThemeCard);
+
+    themes.forEach(theme => {
+        const filteredItems = data.filter(item => item.theme === theme);
+        let questionCount = 0;
+
+        filteredItems.forEach(item => {
+            if (Array.isArray(item.questions)) {
+                questionCount += item.questions.length;
+            } else if (item.question) { // Check for single question items
+                questionCount += 1;
+            }
+        });
+
+        const themeCard = document.createElement('div');
+        themeCard.className = 'subject-card';
+        themeCard.onclick = () => startQuizWithTheme(subject, theme);
+        const themeHighscore = getHighscore(subject, theme);
+        themeCard.innerHTML = `
+            <div class="subject-icon">📝</div>
+            <h3>${theme}</h3>
+            <p>${questionCount} vragen beschikbaar</p>
+            <p style="color: var(--primary-color); font-weight: bold; margin-top: 5px;">${userName}, je huidige highscore: ${themeHighscore}</p>
+        `;
+        themeGrid.appendChild(themeCard);
+    });
+}
+
+// Start quiz with specific theme
+function startQuizWithTheme(subject, theme) {
+    // Store current theme for highscore tracking
+    currentTheme = theme;
+
+    // currentQuiz should be set from the globally available quizData[subject]
+    let dataToUse = quizData[subject];
+
+    if (theme) {
+        // Filter data by theme
+        currentQuiz = dataToUse.filter(item => item.theme === theme);
+    } else {
+        // Use all data for the subject if no theme is selected
+        currentQuiz = dataToUse;
+    }
+
+    startQuizWithData(subject); // Proceed to start the quiz with the filtered/full data
+}
+
+function startQuizWithData(subject) {
+    currentQuestionIndex = 0;
+    score = 0;
+    hasAnswered = false;
+    wrongAnswers = []; // Reset wrong answers for new quiz
+    lovaClickCount = 0; // Reset L.O.V.A. click counter
+
+    // Create randomized questions from the current quiz data
+    randomizedQuestions = createRandomizedQuestions(currentQuiz);
+    totalQuestions = randomizedQuestions.length;
+
+    // Initialize category progress tracker (reset to 0)
+    initializeCategoryProgress(randomizedQuestions);
+
+    document.getElementById('landingPage').style.display = 'none';
+    document.getElementById('themePage').style.display = 'none';
+    document.getElementById('quizPage').style.display = 'block';
+    document.getElementById('resultsPage').style.display = 'none';
+
+    // Set quiz title
+    document.getElementById('quizTitle').textContent = CONFIG.subjectTitles[subject] || 'Quiz';
+
+    // L.O.V.A. help button will be shown/hidden automatically per question based on lova data
+
+    // Start collapsed on mobile for better UX
+    const tracker = document.getElementById('progressTracker');
+    if (isMobileDevice()) {
+        isProgressTrackerCollapsed = true;
+        tracker.classList.add('collapsed');
+    } else {
+        isProgressTrackerCollapsed = false;
+        tracker.classList.remove('collapsed');
+    }
+
+    loadCurrentQuestion();
+}
+
+// Render visual data (tables) as HTML with mobile-responsive wrapper
+function renderVisualData(visualData) {
+    if (!visualData || visualData.type !== 'table') {
+        return '';
+    }
+
+    // Wrap table in responsive container for mobile scrolling
+    let html = '<div class="table-container">';
+    html += '<table style="width: 100%; border-collapse: collapse; background-color: white;">';
+
+    // Add headers
+    html += '<thead><tr>';
+    visualData.headers.forEach(header => {
+        html += `<th style="border: 2px solid #4A7BA7; padding: 12px; background-color: #4A7BA7; color: white; font-weight: 500; text-align: left; white-space: nowrap;">${header}</th>`;
+    });
+    html += '</tr></thead>';
+
+    // Add rows
+    html += '<tbody>';
+    visualData.rows.forEach((row, rowIndex) => {
+        const bgColor = rowIndex % 2 === 0 ? '#f8f8f8' : '#ffffff';
+        html += `<tr style="background-color: ${bgColor};">`;
+        row.forEach(cell => {
+            html += `<td style="border: 1px solid #e0e0e0; padding: 10px; color: #2C3E50; word-wrap: break-word;">${cell}</td>`;
+        });
+        html += '</tr>';
+    });
+    html += '</tbody></table>';
+    html += '</div>'; // Close responsive container
+
+    return html;
+}
+
+function loadCurrentQuestion() {
+    if (currentQuestionIndex >= randomizedQuestions.length) {
+        showResults();
+        return;
+    }
+
+    const currentQuestion = randomizedQuestions[currentQuestionIndex];
+
+    // Update progress
+    const progress = (currentQuestionIndex / totalQuestions) * 100;
+    document.getElementById('progressBar').style.width = progress + '%';
+    document.getElementById('questionCounter').textContent = `Vraag ${currentQuestionIndex + 1} van ${totalQuestions}`;
+
+    // Show reading content if available
+    const readingContent = document.getElementById('readingContent');
+    if (currentQuestion.content || currentQuestion.visual) {
+        let contentHtml = '';
+
+        // Add text content if available
+        if (currentQuestion.content) {
+            contentHtml += currentQuestion.content;
+        }
+
+        // Add visual table if available
+        if (currentQuestion.visual) {
+            contentHtml += renderVisualData(currentQuestion.visual);
+        }
+
+        readingContent.innerHTML = contentHtml;
+        readingContent.classList.remove('hidden');
+    } else {
+        readingContent.classList.add('hidden');
+    }
+
+    // Load question
+    document.getElementById('questionText').textContent = currentQuestion.question;
+
+    // Check if question has L.O.V.A. data
+    const hasLovaData = currentQuestion.lova && currentQuestion.lova.stap1_lezen;
+    const lovaHelpButton = document.getElementById('lovaHelpButton');
+    const lovaHelpPanel = document.getElementById('lovaHelpPanel');
+
+    if (hasLovaData) {
+        // Show L.O.V.A. help button and load data into panel
+        lovaHelpButton.classList.remove('hidden');
+        loadLovaHelpData(currentQuestion);
+
+        // Reset panel to collapsed state for new question
+        lovaHelpPanelExpanded = false;
+        lovaHelpPanel.classList.remove('expanded');
+        lovaHelpPanel.classList.add('hidden');
+        document.getElementById('lovaToggleIcon').textContent = '▼';
+    } else {
+        // Hide L.O.V.A. help button
+        lovaHelpButton.classList.add('hidden');
+        lovaHelpPanel.classList.add('hidden');
+    }
+
+    // Handle different question types (always show regular quiz)
+    const optionsContainer = document.getElementById('optionsContainer');
+    const textareaAnswer = document.getElementById('textareaAnswer');
+    const feedbackSection = document.getElementById('feedbackSection');
+
+    // Hide feedback section and reset classes for new question
+    feedbackSection.classList.add('hidden');
+    feedbackSection.classList.remove('correct', 'incorrect');
+    document.getElementById('correctAnswerDisplay').classList.add('hidden');
+    document.getElementById('extraInfoDisplay').classList.add('hidden');
+    document.getElementById('strategyAndTips').classList.add('hidden');
+
+    if (currentQuestion.options) {
+        // Multiple choice question
+        optionsContainer.classList.remove('hidden');
+        textareaAnswer.classList.add('hidden');
+
+        optionsContainer.innerHTML = '';
+        currentQuestion.options.forEach((option, index) => {
+            const optionElement = document.createElement('div');
+            optionElement.className = 'option';
+            optionElement.textContent = typeof option === 'string' ? option : option.text;
+            optionElement.onclick = () => selectOption(index);
+            optionsContainer.appendChild(optionElement);
+        });
+    } else {
+        // Open question
+        optionsContainer.classList.add('hidden');
+        textareaAnswer.classList.remove('hidden');
+        textareaAnswer.value = '';
+    }
+
+    // Reset UI state
+    selectedAnswer = null;
+    hasAnswered = false;
+    document.getElementById('submitBtn').classList.remove('hidden');
+    document.getElementById('nextBtn').classList.add('hidden');
+}
+
+function selectOption(index) {
+    if (hasAnswered) return;
+
+    // Remove previous selection
+    document.querySelectorAll('.option').forEach(opt => {
+        opt.classList.remove('selected', 'correct', 'incorrect'); // Also remove feedback classes
+    });
+
+    // Select new option
+    document.querySelectorAll('.option')[index].classList.add('selected');
+    selectedAnswer = index;
+}
+
+function submitAnswer() {
+    if (hasAnswered) return;
+
+    const currentQuestion = randomizedQuestions[currentQuestionIndex];
+    const feedbackSection = document.getElementById('feedbackSection');
+    const feedbackTitle = document.getElementById('feedbackTitle');
+    const feedbackMessage = document.getElementById('feedbackMessage');
+    const correctAnswerDisplay = document.getElementById('correctAnswerDisplay');
+    const extraInfoDisplay = document.getElementById('extraInfoDisplay'); // NIEUW: extraInfoDisplay element
+    const strategyAndTips = document.getElementById('strategyAndTips');
+    const strategyText = document.getElementById('strategyText');
+    const tipsList = document.getElementById('tipsList');
+
+    feedbackSection.classList.remove('hidden'); // Show feedback section
+
+    if (currentQuestion.options) {
+        // Multiple choice
+        if (selectedAnswer === null) {
+            alert(CONFIG.feedback.noAnswer.multipleChoice);
+            feedbackSection.classList.add('hidden'); // Hide if no answer selected
+            return;
+        }
+
+        const options = document.querySelectorAll('.option');
+        const correctIndex = currentQuestion.correct; // Assuming `correct` stores the index for MC
+
+        if (selectedAnswer === correctIndex) {
+            options[selectedAnswer].classList.add('correct');
+            score++;
+            feedbackSection.classList.add('correct');
+            feedbackTitle.textContent = CONFIG.feedback.correct.title;
+            feedbackMessage.textContent = CONFIG.feedback.correct.message;
+            correctAnswerDisplay.classList.add('hidden');
+            extraInfoDisplay.classList.add('hidden'); // NIEUW: extraInfo verbergen bij correct
+            strategyAndTips.classList.add('hidden');
+
+            // Update category progress tracker
+            updateCategoryProgress(currentQuestion.theme, true);
+        } else {
+            options[selectedAnswer].classList.add('incorrect');
+            // Highlight correct answer if an incorrect one was selected
+            if (options[correctIndex]) {
+                options[correctIndex].classList.add('correct');
+            }
+            feedbackSection.classList.add('incorrect');
+            feedbackTitle.textContent = CONFIG.feedback.incorrect.title;
+
+            // Update category progress tracker
+            updateCategoryProgress(currentQuestion.theme, false);
+
+            // Show error analysis if available for the selected wrong answer
+            const selectedOption = currentQuestion.options[selectedAnswer];
+            const errorAnalysis = (typeof selectedOption === 'object' && selectedOption.foutanalyse) ? selectedOption.foutanalyse : '';
+
+            if (errorAnalysis) {
+                feedbackMessage.textContent = errorAnalysis;
+            } else {
+                feedbackMessage.textContent = CONFIG.feedback.incorrect.messageDefault;
+            }
+
+            // Show correct answer - handle both string and object format
+            const correctAnswerText = typeof currentQuestion.options[correctIndex] === 'string'
+                ? currentQuestion.options[correctIndex]
+                : currentQuestion.options[correctIndex].text;
+            correctAnswerDisplay.textContent = `Het juiste antwoord was: "${correctAnswerText}"`;
+            correctAnswerDisplay.classList.remove('hidden');
+            strategyAndTips.classList.add('hidden'); // No strategy/tips for MC by default
+
+            // Track wrong answer for review
+            const userAnswerText = typeof selectedOption === 'string'
+                ? selectedOption
+                : selectedOption.text;
+            wrongAnswers.push({
+                question: currentQuestion,
+                userAnswer: userAnswerText,
+                correctAnswer: correctAnswerText,
+                explanation: errorAnalysis || feedbackMessage.textContent,
+                questionType: 'multiple-choice'
+            });
+
+            // NIEUW: Toon extra_info bij incorrect antwoord (meerkeuze)
+            if (currentQuestion.extra_info) {
+                if (typeof currentQuestion.extra_info === 'string') {
+                    // Simple string format (like brandaan)
+                    extraInfoDisplay.innerHTML = `<h4>Achtergrondinfo:</h4><p>${currentQuestion.extra_info}</p>`;
+                    extraInfoDisplay.classList.remove('hidden');
+                } else if (currentQuestion.extra_info.concept || currentQuestion.extra_info.berekening) {
+                    // New format with concept and berekening
+                    let infoHtml = '';
+                    if (currentQuestion.extra_info.concept) {
+                        infoHtml += `<h4>Concept:</h4><p>${currentQuestion.extra_info.concept}</p>`;
+                    }
+                    if (currentQuestion.extra_info.berekening && currentQuestion.extra_info.berekening.length > 0) {
+                        infoHtml += '<h4>Berekening:</h4><ul>';
+                        currentQuestion.extra_info.berekening.forEach(step => {
+                            infoHtml += `<li>${step}</li>`;
+                        });
+                        infoHtml += '</ul>';
+                    }
+                    extraInfoDisplay.innerHTML = infoHtml;
+                    extraInfoDisplay.classList.remove('hidden');
+                } else if (currentQuestion.extra_info.tips) {
+                    // Old format with tips array (like begrijpendlezen)
+                    let tipsHtml = '<h4>Extra Tips:</h4><ul>';
+                    currentQuestion.extra_info.tips.forEach(tip => {
+                        tipsHtml += `<li>${tip}</li>`;
+                    });
+                    tipsHtml += '</ul>';
+                    extraInfoDisplay.innerHTML = tipsHtml;
+                    extraInfoDisplay.classList.remove('hidden');
+                } else {
+                    extraInfoDisplay.classList.add('hidden');
+                }
+            } else {
+                extraInfoDisplay.classList.add('hidden');
+            }
+        }
+    } else {
+        // Open question (e.g., Samenvatten)
+        const userAnswer = document.getElementById('textareaAnswer').value.trim();
+        if (!userAnswer) {
+            alert(CONFIG.feedback.noAnswer.openEnded);
+            feedbackSection.classList.add('hidden'); // Hide if no answer entered
+            return;
+        }
+
+        // Compare user answer with possible_answer from JSON (case-insensitive, trimmed)
+        const possibleAnswer = currentQuestion.possible_answer ? currentQuestion.possible_answer.toLowerCase().trim() : '';
+        const isCorrect = (userAnswer.toLowerCase() === possibleAnswer);
+
+        if (isCorrect) {
+            score++;
+            feedbackSection.classList.add('correct');
+            feedbackTitle.textContent = CONFIG.feedback.correct.title;
+            feedbackMessage.textContent = CONFIG.feedback.correct.message;
+            correctAnswerDisplay.classList.add('hidden');
+            extraInfoDisplay.classList.add('hidden'); // NIEUW: extraInfo verbergen bij correct
+            strategyAndTips.classList.add('hidden');
+
+            // Update category progress tracker
+            updateCategoryProgress(currentQuestion.theme, true);
+        } else {
+            feedbackSection.classList.add('incorrect');
+            feedbackTitle.textContent = CONFIG.feedback.incorrect.title;
+            feedbackMessage.textContent = CONFIG.feedback.incorrect.messageWithTips;
+
+            // Update category progress tracker
+            updateCategoryProgress(currentQuestion.theme, false);
+
+            correctAnswerDisplay.textContent = `Voorbeeld antwoord: "${currentQuestion.possible_answer}"`;
+            correctAnswerDisplay.classList.remove('hidden');
+
+            // Track wrong answer for review
+            wrongAnswers.push({
+                question: currentQuestion,
+                userAnswer: userAnswer,
+                correctAnswer: currentQuestion.possible_answer,
+                explanation: feedbackMessage.textContent,
+                questionType: 'open-ended'
+            });
+
+            // Display strategy and tips if available
+            if (currentQuestion.strategy || (currentQuestion.tips && currentQuestion.tips.length > 0)) {
+                strategyAndTips.classList.remove('hidden');
+                strategyText.textContent = currentQuestion.strategy || 'Geen specifieke strategie beschikbaar.';
+                tipsList.innerHTML = '';
+                if (currentQuestion.tips && currentQuestion.tips.length > 0) {
+                    currentQuestion.tips.forEach(tip => {
+                        const li = document.createElement('li');
+                        li.textContent = tip;
+                        tipsList.appendChild(li);
+                    });
+                } else {
+                    tipsList.innerHTML = '<li>Geen specifieke tips beschikbaar.</li>';
+                }
+            } else {
+                strategyAndTips.classList.add('hidden');
+            }
+
+            // NIEUW: Toon extra_info bij incorrect antwoord (open vraag)
+            if (currentQuestion.extra_info) {
+                extraInfoDisplay.textContent = `Achtergrondinfo: ${currentQuestion.extra_info}`;
+                extraInfoDisplay.classList.remove('hidden');
+            } else {
+                extraInfoDisplay.classList.add('hidden');
+            }
+        }
+    }
+
+    hasAnswered = true;
+    document.getElementById('submitBtn').classList.add('hidden');
+    document.getElementById('nextBtn').classList.remove('hidden');
+}
+
+function nextQuestion() {
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex >= randomizedQuestions.length) {
+        showResults();
+    } else {
+        loadCurrentQuestion();
+    }
+}
+
+function showResults() {
+    document.getElementById('quizPage').style.display = 'none';
+    document.getElementById('resultsPage').style.display = 'block';
+
+    // Check for new highscore
+    const isNewHighscore = saveHighscore(currentSubject, currentTheme, score);
+
+    // Ensure totalQuestions is not zero to avoid division by zero
+    const percentage = totalQuestions > 0 ? Math.round((score / totalQuestions) * 100) : 0;
+    document.getElementById('finalScore').textContent = `${score}/${totalQuestions}`;
+
+    let message = '';
+    if (isNewHighscore) {
+        message = CONFIG.scoreMessages.newHighscore;
+    }
+
+    if (percentage >= CONFIG.scoreThresholds.excellent) {
+        message += CONFIG.scoreMessages.excellent;
+    } else if (percentage >= CONFIG.scoreThresholds.good) {
+        message += CONFIG.scoreMessages.good;
+    } else if (percentage >= CONFIG.scoreThresholds.fair) {
+        message += CONFIG.scoreMessages.fair;
+    } else {
+        message += CONFIG.scoreMessages.needsPractice;
+    }
+
+    document.getElementById('resultsMessage').textContent = message;
+}
+
+function goToLanding() {
+    document.getElementById('landingPage').style.display = 'block';
+    document.getElementById('themePage').style.display = 'none';
+    document.getElementById('quizPage').style.display = 'none';
+    document.getElementById('resultsPage').style.display = 'none';
+    document.getElementById('reviewPage').style.display = 'none';
+    // Reset quiz state when returning to landing page
+    currentQuiz = null;
+    randomizedQuestions = [];
+    currentSubject = null;
+    currentTheme = null;
+    currentQuestionIndex = 0;
+    score = 0;
+    totalQuestions = 0;
+    selectedAnswer = null;
+    hasAnswered = false;
+    wrongAnswers = [];
+    lovaClickCount = 0; // Reset L.O.V.A. click counter
+    // Reset L.O.V.A. panel state
+    lovaHelpPanelExpanded = false;
+}
+
+// Stop quiz early and show review of wrong answers
+function stopQuiz() {
+    if (wrongAnswers.length === 0) {
+        alert(CONFIG.feedback.noWrongAnswers);
+        return;
+    }
+
+    // Calculate the number of questions answered
+    const questionsAnswered = currentQuestionIndex + (hasAnswered ? 1 : 0);
+
+    // Show review page
+    showReviewPage(questionsAnswered);
+}
+
+// Display review page with wrong answers
+function showReviewPage(questionsAnswered) {
+    document.getElementById('quizPage').style.display = 'none';
+    document.getElementById('reviewPage').style.display = 'block';
+
+    // Update score
+    const correctAnswers = questionsAnswered - wrongAnswers.length;
+    document.getElementById('reviewScore').textContent = `${correctAnswers}/${questionsAnswered}`;
+
+    // Update message
+    if (wrongAnswers.length === 1) {
+        document.getElementById('reviewMessage').textContent = CONFIG.reviewMessages.single;
+    } else {
+        document.getElementById('reviewMessage').textContent = CONFIG.reviewMessages.multiple(wrongAnswers.length);
+    }
+
+    // Display wrong answers
+    const container = document.getElementById('wrongAnswersContainer');
+    container.innerHTML = '';
+
+    wrongAnswers.forEach((item, index) => {
+        const reviewItem = document.createElement('div');
+        reviewItem.className = 'review-item';
+
+        let contentHtml = '';
+
+        // Add reading content if available
+        if (item.question.content) {
+            contentHtml += `<div class="review-content">${item.question.content}</div>`;
+        }
+
+        // Add visual table if available
+        if (item.question.visual) {
+            contentHtml += `<div class="review-content">${renderVisualData(item.question.visual)}</div>`;
+        }
+
+        reviewItem.innerHTML = `
+            <div class="review-item-header">Vraag ${index + 1}</div>
+            ${contentHtml}
+            <div class="review-question">${item.question.question}</div>
+
+            <div class="review-answer-section">
+                <span class="review-label">Jouw antwoord:</span>
+                <span class="review-your-answer">${item.userAnswer}</span>
+            </div>
+
+            <div class="review-answer-section">
+                <span class="review-label">Juiste antwoord:</span>
+                <span class="review-correct-answer">${item.correctAnswer}</span>
+            </div>
+
+            ${item.explanation ? `<div class="review-explanation"><strong>Uitleg:</strong> ${item.explanation}</div>` : ''}
+
+            ${item.question.extra_info ? generateExtraInfoHtml(item.question.extra_info) : ''}
+
+            ${item.questionType === 'open-ended' && (item.question.strategy || item.question.tips) ? generateStrategyTipsHtml(item.question) : ''}
+        `;
+
+        container.appendChild(reviewItem);
+    });
+}
+
+// Helper function to generate extra_info HTML
+function generateExtraInfoHtml(extra_info) {
+    let html = '<div class="review-explanation">';
+
+    if (typeof extra_info === 'string') {
+        html += `<strong>Achtergrondinfo:</strong> ${extra_info}`;
+    } else if (extra_info.concept || extra_info.berekening) {
+        if (extra_info.concept) {
+            html += `<strong>Concept:</strong> ${extra_info.concept}<br><br>`;
+        }
+        if (extra_info.berekening && extra_info.berekening.length > 0) {
+            html += '<strong>Berekening:</strong><ul>';
+            extra_info.berekening.forEach(step => {
+                html += `<li>${step}</li>`;
+            });
+            html += '</ul>';
+        }
+    } else if (extra_info.tips) {
+        html += '<strong>Extra Tips:</strong><ul>';
+        extra_info.tips.forEach(tip => {
+            html += `<li>${tip}</li>`;
+        });
+        html += '</ul>';
+    }
+
+    html += '</div>';
+    return html;
+}
+
+// Helper function to generate strategy and tips HTML
+function generateStrategyTipsHtml(question) {
+    let html = '<div class="review-explanation">';
+
+    if (question.strategy) {
+        html += `<strong>Strategie:</strong> ${question.strategy}<br><br>`;
+    }
+
+    if (question.tips && question.tips.length > 0) {
+        html += '<strong>Tips:</strong><ul>';
+        question.tips.forEach(tip => {
+            html += `<li>${tip}</li>`;
+        });
+        html += '</ul>';
+    }
+
+    html += '</div>';
+    return html;
+}
+
+// ========================================
+// L.O.V.A. Help Panel (Simplified)
+// ========================================
+
+let lovaHelpPanelExpanded = false;
+
+// Toggle L.O.V.A. help panel
+function toggleLovaPanel() {
+    lovaHelpPanelExpanded = !lovaHelpPanelExpanded;
+    const panel = document.getElementById('lovaHelpPanel');
+    const icon = document.getElementById('lovaToggleIcon');
+
+    if (lovaHelpPanelExpanded) {
+        panel.classList.add('expanded');
+        panel.classList.remove('hidden');
+        icon.textContent = '▲';
+
+        // Increment L.O.V.A. click counter
+        lovaClickCount++;
+        document.getElementById('lovaClicks').textContent = lovaClickCount;
+    } else {
+        panel.classList.remove('expanded');
+        setTimeout(() => {
+            if (!lovaHelpPanelExpanded) {
+                panel.classList.add('hidden');
+            }
+        }, CONFIG.lova.panelTransitionDuration);
+        icon.textContent = '▼';
+    }
+}
+
+// Load L.O.V.A. help data into the panel
+function loadLovaHelpData(question) {
+    if (!question || !question.lova) return;
+
+    const lova = question.lova;
+
+    // Stap 1: Lezen
+    if (lova.stap1_lezen) {
+        document.getElementById('lovaHelpHoofdvraag').textContent = lova.stap1_lezen.hoofdvraag;
+
+        const ruisList = document.getElementById('lovaHelpRuis');
+        ruisList.innerHTML = '';
+        lova.stap1_lezen.ruis.forEach(r => {
+            const li = document.createElement('li');
+            li.textContent = r;
+            ruisList.appendChild(li);
+        });
+
+        const tussenstappenList = document.getElementById('lovaHelpTussenstappen');
+        tussenstappenList.innerHTML = '';
+        lova.stap1_lezen.tussenstappen.forEach(t => {
+            const li = document.createElement('li');
+            li.textContent = t;
+            tussenstappenList.appendChild(li);
+        });
+    }
+
+    // Stap 2: Ordenen
+    if (lova.stap2_ordenen) {
+        const getallenList = document.getElementById('lovaHelpGetallen');
+        getallenList.innerHTML = '';
+        Object.entries(lova.stap2_ordenen.relevante_getallen).forEach(([label, value]) => {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${label}:</strong> ${value}`;
+            getallenList.appendChild(li);
+        });
+
+        document.getElementById('lovaHelpTool').textContent = lova.stap2_ordenen.tool;
+    }
+
+    // Stap 3: Vormen
+    if (lova.stap3_vormen && lova.stap3_vormen.bewerkingen) {
+        const bewerkingenContainer = document.getElementById('lovaHelpBewerkingen');
+        bewerkingenContainer.innerHTML = '';
+
+        lova.stap3_vormen.bewerkingen.forEach((bew, index) => {
+            const bewDiv = document.createElement('div');
+            bewDiv.className = 'lova-help-bewerking';
+            bewDiv.innerHTML = `
+                <div class="lova-help-bewerking-stap">${index + 1}. ${bew.stap}</div>
+                <div class="lova-help-bewerking-uitleg">${bew.uitleg}</div>
+                <div class="lova-help-bewerking-calc">${bew.berekening} = ${bew.resultaat}</div>
+            `;
+            bewerkingenContainer.appendChild(bewDiv);
+        });
+    }
+
+    // Stap 4: Antwoorden
+    if (lova.stap4_antwoorden) {
+        document.getElementById('lovaHelpEenheid').textContent = lova.stap4_antwoorden.verwachte_eenheid;
+        document.getElementById('lovaHelpLogica').textContent = lova.stap4_antwoorden.logica_check;
+    }
+}
+
+// (All old L.O.V.A. step-by-step functions removed - now using simpler help panel)
