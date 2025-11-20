@@ -17432,5 +17432,826 @@
       }
     ],
     "sub_theme": "volume en eenheden"
+  },
+  {
+    "id": 277,
+    "title": "Filmavond kaartverkoop",
+    "theme": "breuken",
+    "content": "Voor de filmavond zijn er 360 kaartjes beschikbaar. In de voorverkoop is ⅗ van de kaartjes verkocht. Van de voorverkoopkaarten is 45% voor kinderen. Van de kinderkaarten is ⅔ met korting gekocht.",
+    "questions": [
+      {
+        "question": "Hoeveel kinderkaarten zijn er in de voorverkoop verkocht?",
+        "options": [
+          {
+            "text": "97 kaartjes",
+            "foutanalyse": ""
+          },
+          {
+            "text": "108 kaartjes",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Dit is het aantal kinderen met korting, niet het totaal aantal kinderkaarten."
+          },
+          {
+            "text": "162 kaartjes",
+            "foutanalyse": "Dit is het totaal aantal kinderen (zonder voorverkoop filter). Bereken eerst de voorverkoop."
+          },
+          {
+            "text": "216 kaartjes",
+            "foutanalyse": "Dit is het totaal aantal voorverkoopkaarten, niet alleen de kinderkaarten."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een percentage van een breuk berekening: werk stap voor stap.",
+          "berekening": [
+            "Voorverkoop: ⅗ van 360 = 360 × 3 ÷ 5 = 216 kaartjes",
+            "Kinderen: 45% van 216 = 0,45 × 216 = 97,2 ≈ 97 kaartjes"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel kinderkaarten zijn er met korting gekocht?",
+        "options": [
+          {
+            "text": "32 kaartjes",
+            "foutanalyse": "Dit is te weinig. Bereken eerst het aantal kinderkaarten, dan ⅔ daarvan."
+          },
+          {
+            "text": "65 kaartjes",
+            "foutanalyse": ""
+          },
+          {
+            "text": "97 kaartjes",
+            "foutanalyse": "Dit is het totaal aantal kinderkaarten, maar niet allemaal zijn met korting. Bereken ⅔ hiervan."
+          },
+          {
+            "text": "144 kaartjes",
+            "foutanalyse": "Dit is te veel. Controleer je berekening stap voor stap."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een breuk van een percentage van een breuk: complexe combinatie.",
+          "berekening": [
+            "Kinderkaarten: 97",
+            "Met korting: ⅔ van 97 = 97 × 2 ÷ 3 ≈ 65 kaartjes"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "breuk van percentage van breuk"
+  },
+  {
+    "id": 278,
+    "title": "Boekenverkoop drie dagen",
+    "theme": "breuken",
+    "content": "Een boekwinkel heeft 800 exemplaren van een boek. Op dag 1 wordt 0,3 verkocht. Op dag 2 wordt ⅖ van het restant verkocht. Op dag 3 wordt 55% van wat er dan nog over is verkocht.",
+    "questions": [
+      {
+        "question": "Hoeveel boeken zijn er na dag 2 nog over?",
+        "options": [
+          {
+            "text": "240 boeken",
+            "foutanalyse": "Dit is het aantal verkocht op dag 1, niet wat er na dag 2 over is."
+          },
+          {
+            "text": "320 boeken",
+            "foutanalyse": "Dit is het restant na dag 1, niet na dag 2."
+          },
+          {
+            "text": "336 boeken",
+            "foutanalyse": ""
+          },
+          {
+            "text": "560 boeken",
+            "foutanalyse": "Dit is te veel. Bereken beide dagen: eerst 0,3 eraf, dan ⅖ van restant."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een combinatie van decimaal en breuk aftrekkingen: werk stap voor stap.",
+          "berekening": [
+            "Na dag 1: 800 - (0,3 × 800) = 800 - 240 = 560 boeken",
+            "Dag 2 verkocht: ⅖ van 560 = 224 boeken",
+            "Na dag 2: 560 - 224 = 336 boeken"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel boeken zijn er na alle drie de dagen nog over?",
+        "options": [
+          {
+            "text": "151 boeken",
+            "foutanalyse": ""
+          },
+          {
+            "text": "185 boeken",
+            "foutanalyse": "Dit is het aantal verkocht op dag 3, niet wat er overblijft."
+          },
+          {
+            "text": "240 boeken",
+            "foutanalyse": "Dit is niet het juiste antwoord. Werk de drie dagen stap voor stap af."
+          },
+          {
+            "text": "336 boeken",
+            "foutanalyse": "Dit is het restant na dag 2. Vergeet dag 3 niet."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een combinatie van decimaal, breuk en percentage: drie stappen na elkaar.",
+          "berekening": [
+            "Na dag 2: 336 boeken",
+            "Dag 3 verkocht: 55% van 336 = 0,55 × 336 = 184,8 ≈ 185 boeken",
+            "Na dag 3: 336 - 185 = 151 boeken"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "decimaal breuk percentage combinatie"
+  },
+  {
+    "id": 279,
+    "title": "Abonnementsprijs verhogingen",
+    "theme": "procenten",
+    "content": "Een streamingdienst kost €10,00 per maand. In januari komt er 12% verhoging. In juli komt er nog 8% verhoging op de nieuwe prijs. In oktober krijgen trouwe klanten 0,15 korting op de prijs van dat moment.",
+    "questions": [
+      {
+        "question": "Wat is de prijs na de twee verhogingen (januari en juli)?",
+        "options": [
+          {
+            "text": "€11,20",
+            "foutanalyse": "Je hebt alleen de eerste verhoging berekend. Vergeet de verhoging van juli niet."
+          },
+          {
+            "text": "€12,00",
+            "foutanalyse": "Je hebt de percentages bij elkaar opgeteld (20%). Dit is fout omdat de tweede verhoging op de al verhoogde prijs wordt toegepast."
+          },
+          {
+            "text": "€12,10",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€12,80",
+            "foutanalyse": "Dit is te veel. Bereken de verhogingen stap voor stap: eerst 12%, dan 8% op de nieuwe prijs."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een percentage van een percentage: bereken verhogingen achter elkaar, niet bij elkaar optellen.",
+          "berekening": [
+            "Na januari: €10,00 × 1,12 = €11,20",
+            "Na juli: €11,20 × 1,08 = €12,096 ≈ €12,10"
+          ]
+        }
+      },
+      {
+        "question": "Wat is de eindprijs voor trouwe klanten na de korting van 0,15 (15%)?",
+        "options": [
+          {
+            "text": "€10,29",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€11,20",
+            "foutanalyse": "Dit is de prijs na alleen januari. Vergeet juli en de korting niet."
+          },
+          {
+            "text": "€11,95",
+            "foutanalyse": "Je hebt de korting verkeerd berekend. 0,15 = 15%."
+          },
+          {
+            "text": "€12,10",
+            "foutanalyse": "Dit is de prijs voor de korting. Trek nog 15% af."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een decimale korting (0,15 = 15%) na verhogingen.",
+          "berekening": [
+            "Prijs voor korting: €12,10",
+            "Korting: 15% van €12,10 = 0,15 × €12,10 = €1,815",
+            "Eindprijs: €12,10 - €1,815 = €10,285 ≈ €10,29"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "percentage verhogingen en kortingen"
+  },
+  {
+    "id": 280,
+    "title": "Erfenis verdelen",
+    "theme": "breuken",
+    "content": "Een erfenis van €96.000,00 wordt verdeeld. Kind A krijgt ⅜ van het totaal. Kind B krijgt 40% van het restant. Kind C krijgt de helft van wat Kind B krijgt. De rest gaat naar liefdadigheid.",
+    "questions": [
+      {
+        "question": "Hoeveel euro krijgt Kind B?",
+        "options": [
+          {
+            "text": "€14.400,00",
+            "foutanalyse": "Dit is hoeveel Kind C krijgt, niet Kind B."
+          },
+          {
+            "text": "€23.040,00",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€36.000,00",
+            "foutanalyse": "Dit is hoeveel Kind A krijgt, niet Kind B."
+          },
+          {
+            "text": "€38.400,00",
+            "foutanalyse": "Je hebt 40% van het totaal berekend, niet 40% van het restant na Kind A."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een percentage van een restant na breuk aftrek.",
+          "berekening": [
+            "Kind A: ⅜ van €96.000 = €36.000",
+            "Restant: €96.000 - €36.000 = €60.000",
+            "Kind B: 40% van €60.000 = €23.040"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel euro gaat er naar liefdadigheid?",
+        "options": [
+          {
+            "text": "€22.560,00",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€36.960,00",
+            "foutanalyse": "Je hebt Kind C vergeten. Trek ook het deel van Kind C af."
+          },
+          {
+            "text": "€60.000,00",
+            "foutanalyse": "Dit is het restant na Kind A, maar er gaan nog twee kinderen van af."
+          },
+          {
+            "text": "€73.440,00",
+            "foutanalyse": "Dit is te veel. Bereken eerst alle kinderen, dan het restant."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een complexe verdeling: bereken alle delen en trek ze af van het totaal.",
+          "berekening": [
+            "Kind A: €36.000",
+            "Kind B: €23.040",
+            "Kind C: ½ van €23.040 = €11.520",
+            "Liefdadigheid: €96.000 - €36.000 - €23.040 - €11.520 = €22.560"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "complexe verdelingen"
+  },
+  {
+    "id": 281,
+    "title": "Groente en fruit winkel",
+    "theme": "breuken",
+    "content": "Een winkel heeft 150 kg groente. Daarvan is 0,4 tomaten, ⅓ is komkommers en de rest zijn paprika's. Van de tomaten is 70% biologisch. Van de biologische tomaten wordt ⅘ verkocht.",
+    "questions": [
+      {
+        "question": "Hoeveel kilogram biologische tomaten zijn er?",
+        "options": [
+          {
+            "text": "35 kg",
+            "foutanalyse": "Dit is hoeveel biologische tomaten verkocht worden, niet het totaal aan biologische tomaten."
+          },
+          {
+            "text": "42 kg",
+            "foutanalyse": ""
+          },
+          {
+            "text": "50 kg",
+            "foutanalyse": "Dit is het totaal aantal komkommers, niet biologische tomaten."
+          },
+          {
+            "text": "60 kg",
+            "foutanalyse": "Dit is het totaal aantal tomaten. Bereken hoeveel daarvan biologisch is (70%)."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een percentage van een decimaal deel.",
+          "berekening": [
+            "Tomaten: 0,4 van 150 = 60 kg",
+            "Biologisch: 70% van 60 = 0,70 × 60 = 42 kg"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel kilogram biologische tomaten worden er verkocht?",
+        "options": [
+          {
+            "text": "33,6 kg",
+            "foutanalyse": ""
+          },
+          {
+            "text": "35 kg",
+            "foutanalyse": "Je zit dichtbij! Bereken precies ⅘ van 42 kg."
+          },
+          {
+            "text": "42 kg",
+            "foutanalyse": "Dit is het totaal aan biologische tomaten, maar niet alles wordt verkocht. Bereken ⅘ hiervan."
+          },
+          {
+            "text": "48 kg",
+            "foutanalyse": "Dit is te veel. Controleer je berekening: ⅘ van 42 kg."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een breuk van een percentage van een decimaal: drie stappen.",
+          "berekening": [
+            "Biologische tomaten: 42 kg",
+            "Verkocht: ⅘ van 42 = 42 × 4 ÷ 5 = 33,6 kg"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "breuk van percentage van decimaal"
+  },
+  {
+    "id": 282,
+    "title": "Smartphone Black Friday",
+    "theme": "procenten",
+    "content": "Een smartphone kost €800,00. Op Black Friday is er 35% korting. Werknemers krijgen op de Black Friday prijs nog eens ⅕ extra korting. Studenten krijgen in plaats van werknemerskorting 18% extra korting op de Black Friday prijs.",
+    "questions": [
+      {
+        "question": "Wat is de prijs voor werknemers (35% + ⅕ extra)?",
+        "options": [
+          {
+            "text": "€400,00",
+            "foutanalyse": "Dit is de helft van de oorspronkelijke prijs. Bereken de kortingen stap voor stap."
+          },
+          {
+            "text": "€416,00",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€440,00",
+            "foutanalyse": "Je hebt alleen de Black Friday korting berekend. Vergeet de werknemerskorting niet."
+          },
+          {
+            "text": "€520,00",
+            "foutanalyse": "Dit is na alleen de Black Friday korting. Bereken ook de ⅕ extra korting."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een combinatie van percentage en breuk kortingen achter elkaar.",
+          "berekening": [
+            "Na Black Friday: €800 × 0,65 = €520,00",
+            "⅕ extra korting op €520: €520 ÷ 5 = €104,00",
+            "Werknemersprijs: €520 - €104 = €416,00"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel euro verschil is er tussen de werknemers- en studentenprijs?",
+        "options": [
+          {
+            "text": "€10,40",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€20,80",
+            "foutanalyse": "Dit is te veel. Bereken beide prijzen en neem het verschil."
+          },
+          {
+            "text": "€93,60",
+            "foutanalyse": "Dit is de studentenkorting op de Black Friday prijs, niet het prijsverschil."
+          },
+          {
+            "text": "€104,00",
+            "foutanalyse": "Dit is de werknemerskorting op de Black Friday prijs, niet het prijsverschil."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een vergelijking van twee verschillende kortingsreeksen.",
+          "berekening": [
+            "Werknemersprijs: €416,00",
+            "Studentenkorting: 18% van €520 = €93,60",
+            "Studentenprijs: €520 - €93,60 = €426,40",
+            "Verschil: €426,40 - €416,00 = €10,40"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "complexe kortingen vergelijken"
+  },
+  {
+    "id": 283,
+    "title": "Marathon sponsorgeld",
+    "theme": "breuken",
+    "content": "Een marathonloper heeft €4.500,00 sponsorgeld opgehaald. Hiervan gaat ⅖ naar onderzoek, 0,35 naar patiëntenzorg en de rest naar voorlichting. Van het geld voor onderzoek wordt 65% besteed aan nieuwe apparatuur.",
+    "questions": [
+      {
+        "question": "Hoeveel euro gaat er naar voorlichting?",
+        "options": [
+          {
+            "text": "€1.125,00",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€1.575,00",
+            "foutanalyse": "Dit is het bedrag voor patiëntenzorg, niet voor voorlichting."
+          },
+          {
+            "text": "€1.800,00",
+            "foutanalyse": "Dit is het bedrag voor onderzoek, niet voor voorlichting."
+          },
+          {
+            "text": "€3.375,00",
+            "foutanalyse": "Dit is te veel. Trek eerst onderzoek en patiëntenzorg af."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een restberekening na breuk en decimaal aftrek.",
+          "berekening": [
+            "Onderzoek: ⅖ van €4.500 = €1.800",
+            "Patiëntenzorg: 0,35 van €4.500 = €1.575",
+            "Voorlichting: €4.500 - €1.800 - €1.575 = €1.125"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel euro wordt er aan nieuwe apparatuur besteed?",
+        "options": [
+          {
+            "text": "€630,00",
+            "foutanalyse": "Dit is het bedrag voor onderzoek dat NIET aan apparatuur wordt besteed."
+          },
+          {
+            "text": "€1.023,75",
+            "foutanalyse": "Dit is te veel. Bereken 65% van het onderzoeksbudget."
+          },
+          {
+            "text": "€1.170,00",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€2.925,00",
+            "foutanalyse": "Dit is te veel. 65% van €1.800 is niet €2.925."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een percentage van een breuk van het totaal.",
+          "berekening": [
+            "Onderzoeksbudget: €1.800",
+            "Apparatuur: 65% van €1.800 = 0,65 × €1.800 = €1.170"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "percentage van breuk"
+  },
+  {
+    "id": 284,
+    "title": "Concertkaarten verdeling",
+    "theme": "breuken",
+    "content": "Voor een concert zijn 2.400 kaarten. In week 1 wordt 0,25 verkocht. In week 2 wordt ⅓ van het restant verkocht. In week 3 wordt 48% van wat er dan nog over is verkocht. De laatste kaarten worden verloot.",
+    "questions": [
+      {
+        "question": "Hoeveel kaarten worden er verloot (na week 3)?",
+        "options": [
+          {
+            "text": "624 kaarten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "832 kaarten",
+            "foutanalyse": "Dit is het restant na week 2, niet na week 3."
+          },
+          {
+            "text": "1.200 kaarten",
+            "foutanalyse": "Dit is het restant na week 1, niet na week 3."
+          },
+          {
+            "text": "1.800 kaarten",
+            "foutanalyse": "Dit is te veel. Bereken alle drie de weken stap voor stap."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een combinatie van decimaal, breuk en percentage: drie stappen na elkaar.",
+          "berekening": [
+            "Na week 1: 2.400 - (0,25 × 2.400) = 2.400 - 600 = 1.800 kaarten",
+            "Na week 2: 1.800 - (⅓ × 1.800) = 1.800 - 600 = 1.200 kaarten",
+            "Na week 3: 1.200 - (48% × 1.200) = 1.200 - 576 = 624 kaarten"
+          ]
+        }
+      },
+      {
+        "question": "Welk deel van het oorspronkelijke aantal kaarten wordt er verloot?",
+        "options": [
+          {
+            "text": "13/50 van het totaal",
+            "foutanalyse": ""
+          },
+          {
+            "text": "¼ van het totaal",
+            "foutanalyse": "Dit is wat er in week 1 verkocht werd, niet wat er verloot wordt."
+          },
+          {
+            "text": "⅓ van het totaal",
+            "foutanalyse": "Dit is niet het juiste antwoord. Bereken 624 ÷ 2.400."
+          },
+          {
+            "text": "½ van het totaal",
+            "foutanalyse": "Dit is te veel. Vereenvoudig 624/2.400."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een breuk vereenvoudigen: deel door grootste gemene deler.",
+          "berekening": [
+            "Verloot: 624 van de 2.400",
+            "Als breuk: 624/2.400",
+            "Vereenvoudigen: 624 ÷ 48 = 13 en 2.400 ÷ 48 = 50",
+            "Dus: 13/50 van het totaal"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "decimaal breuk percentage naar breuk"
+  },
+  {
+    "id": 285,
+    "title": "Drankjes festival",
+    "theme": "breuken",
+    "content": "Op een festival zijn 8.000 bezoekers. Hiervan drinkt 0,55 frisdrank, ⅜ drinkt water en de rest drinkt bier. Van de frisdrankdrinkers kiest 60% voor cola. Van de coladrinkers kiest ⅔ voor light-variant.",
+    "questions": [
+      {
+        "question": "Hoeveel bezoekers drinken cola (normaal + light)?",
+        "options": [
+          {
+            "text": "1.760 bezoekers",
+            "foutanalyse": "Dit is het aantal dat cola light drinkt, niet het totaal aan cola."
+          },
+          {
+            "text": "2.640 bezoekers",
+            "foutanalyse": ""
+          },
+          {
+            "text": "3.000 bezoekers",
+            "foutanalyse": "Dit is het aantal dat water drinkt, niet cola."
+          },
+          {
+            "text": "4.400 bezoekers",
+            "foutanalyse": "Dit is het totaal aantal frisdrankdrinkers, niet alleen cola."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een percentage van een decimaal deel.",
+          "berekening": [
+            "Frisdrank: 0,55 van 8.000 = 4.400 bezoekers",
+            "Cola: 60% van 4.400 = 0,60 × 4.400 = 2.640 bezoekers"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel bezoekers drinken cola light?",
+        "options": [
+          {
+            "text": "880 bezoekers",
+            "foutanalyse": "Dit is het aantal dat normale cola drinkt, niet light."
+          },
+          {
+            "text": "1.584 bezoekers",
+            "foutanalyse": "Dit is te weinig. Bereken ⅔ van 2.640."
+          },
+          {
+            "text": "1.760 bezoekers",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2.640 bezoekers",
+            "foutanalyse": "Dit is het totaal aantal coladrinkers, maar niet allemaal kiezen voor light."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een breuk van een percentage van een decimaal: drie stappen.",
+          "berekening": [
+            "Coladrinkers: 2.640",
+            "Light: ⅔ van 2.640 = 2.640 × 2 ÷ 3 = 1.760 bezoekers"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "breuk van percentage van decimaal"
+  },
+  {
+    "id": 286,
+    "title": "Spaarrekening rente",
+    "theme": "procenten",
+    "content": "Op een spaarrekening staat €5.000,00. In jaar 1 komt er 2,5% rente bij. In jaar 2 komt er 3,2% rente bij op het nieuwe bedrag. In jaar 3 komt er 0,028 rente bij (2,8%).",
+    "questions": [
+      {
+        "question": "Hoeveel geld staat er na jaar 2 op de rekening?",
+        "options": [
+          {
+            "text": "€5.125,00",
+            "foutanalyse": "Dit is alleen na jaar 1. Vergeet jaar 2 niet."
+          },
+          {
+            "text": "€5.285,00",
+            "foutanalyse": "Je hebt de percentages bij elkaar opgeteld (5,7%). Bereken ze stap voor stap."
+          },
+          {
+            "text": "€5.289,00",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€5.500,00",
+            "foutanalyse": "Dit is te veel. Controleer je berekening van de rente percentages."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een samengestelde rente berekening: elk jaar op het nieuwe bedrag.",
+          "berekening": [
+            "Na jaar 1: €5.000 × 1,025 = €5.125",
+            "Na jaar 2: €5.125 × 1,032 = €5.289"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel geld staat er na jaar 3 op de rekening?",
+        "options": [
+          {
+            "text": "€5.289,00",
+            "foutanalyse": "Dit is het bedrag na jaar 2. Vergeet jaar 3 niet."
+          },
+          {
+            "text": "€5.400,00",
+            "foutanalyse": "Dit is niet het juiste antwoord. Bereken 2,8% rente over €5.289."
+          },
+          {
+            "text": "€5.437,09",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€5.500,00",
+            "foutanalyse": "Dit is te veel. 0,028 betekent 2,8%, niet 28%."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een samengestelde rente met decimale notatie: 0,028 = 2,8%.",
+          "berekening": [
+            "Na jaar 2: €5.289",
+            "Na jaar 3: €5.289 × 1,028 = €5.437,092 ≈ €5.437,09"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "samengestelde percentage groei"
+  },
+  {
+    "id": 287,
+    "title": "Voedselbank donaties",
+    "theme": "breuken",
+    "content": "Een voedselbank ontvangt 1.600 kg voedsel. Hiervan is ⅜ groente, 0,4 is brood en de rest zijn conserven. Van de groente is 85% vers. Van het verse groente gaat ⅘ naar gezinnen, de rest naar een soepkeuken.",
+    "questions": [
+      {
+        "question": "Hoeveel kilogram verse groente is er?",
+        "options": [
+          {
+            "text": "408 kg",
+            "foutanalyse": "Dit is hoeveel verse groente naar gezinnen gaat, niet het totaal aan verse groente."
+          },
+          {
+            "text": "510 kg",
+            "foutanalyse": ""
+          },
+          {
+            "text": "600 kg",
+            "foutanalyse": "Dit is het totaal aan groente, niet alleen de verse groente. Bereken 85% hiervan."
+          },
+          {
+            "text": "640 kg",
+            "foutanalyse": "Dit is het totaal aan brood, niet verse groente."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een percentage van een breuk.",
+          "berekening": [
+            "Groente: ⅜ van 1.600 = 1.600 × 3 ÷ 8 = 600 kg",
+            "Vers: 85% van 600 = 0,85 × 600 = 510 kg"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel kilogram verse groente gaat er naar de soepkeuken?",
+        "options": [
+          {
+            "text": "90 kg",
+            "foutanalyse": "Dit is te weinig. Bereken ⅕ van 510 kg (of 20% van 510)."
+          },
+          {
+            "text": "102 kg",
+            "foutanalyse": ""
+          },
+          {
+            "text": "408 kg",
+            "foutanalyse": "Dit is hoeveel naar gezinnen gaat, niet naar de soepkeuken."
+          },
+          {
+            "text": "510 kg",
+            "foutanalyse": "Dit is het totaal aan verse groente. Bereken hoeveel naar de soepkeuken gaat (⅕)."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een breuk van een percentage van een breuk: drie stappen.",
+          "berekening": [
+            "Verse groente: 510 kg",
+            "Naar gezinnen: ⅘ van 510 = 408 kg",
+            "Naar soepkeuken: ⅕ van 510 = 102 kg",
+            "Of: 510 - 408 = 102 kg"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "breuk van percentage van breuk"
+  },
+  {
+    "id": 288,
+    "title": "Fitness centrum ledenaantal",
+    "theme": "procenten",
+    "content": "Een fitness heeft 1.200 leden. In januari komen er 15% nieuwe leden bij. In februari zegt 8% van het nieuwe totaal het lidmaatschap op. In maart komen er weer 0,12 nieuwe leden bij (12% van het aantal na februari).",
+    "questions": [
+      {
+        "question": "Hoeveel leden zijn er na februari?",
+        "options": [
+          {
+            "text": "1.196 leden",
+            "foutanalyse": "Je hebt 8% van het oorspronkelijke aantal afgetrokken. Bereken 8% van het aantal na januari."
+          },
+          {
+            "text": "1.242 leden",
+            "foutanalyse": "Je hebt de percentages verkeerd berekend. Werk stap voor stap."
+          },
+          {
+            "text": "1.265 leden",
+            "foutanalyse": ""
+          },
+          {
+            "text": "1.380 leden",
+            "foutanalyse": "Dit is het aantal na januari, voordat 8% opzegt in februari."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een groei en krimp berekening: percentages achter elkaar toepassen.",
+          "berekening": [
+            "Na januari: 1.200 × 1,15 = 1.380 leden",
+            "Na februari: 1.380 × 0,92 = 1.269,6 ≈ 1.265 leden (afgerond naar beneden)"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel leden zijn er na maart?",
+        "options": [
+          {
+            "text": "1.265 leden",
+            "foutanalyse": "Dit is het aantal na februari. Vergeet maart niet."
+          },
+          {
+            "text": "1.337 leden",
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening van 12% groei."
+          },
+          {
+            "text": "1.417 leden",
+            "foutanalyse": ""
+          },
+          {
+            "text": "1.512 leden",
+            "foutanalyse": "Dit is te veel. Bereken 12% van het aantal na februari en tel dat erbij op."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een groei/krimp/groei combinatie met decimale notatie.",
+          "berekening": [
+            "Na februari: 1.265 leden",
+            "Maart groei: 12% van 1.265 = 0,12 × 1.265 = 151,8 ≈ 152 leden",
+            "Na maart: 1.265 + 152 = 1.417 leden",
+            "Of: 1.265 × 1,12 = 1.416,8 ≈ 1.417 leden"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "percentage groei en krimp"
   }
 ]
