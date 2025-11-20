@@ -546,6 +546,43 @@
             "Bereken: als 75% = €125,00, dan is 100% = ?",
             "(€125,00 ÷ 75) × 100 = €166,67 (afgerond)"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Er zijn 30 kinderen in de klas", "Sarah heeft al €80,00 gespaard", "In de winkel werken 5 medewerkers", "Ze krijgt elke week €7,50 zakgeld"],
+            "hoofdvraag": "Wat was de normale prijs zonder korting?",
+            "tussenstappen": ["Bepaal welk percentage van de normale prijs €125 is", "Bereken 100% van de normale prijs"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Prijs met korting": "€125,00",
+              "Korting": "25%",
+              "Percentage dat betaald wordt": "75% (100% - 25%)"
+            },
+            "tool": "Percentages en delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken 100% van de normale prijs",
+                "berekening": "€125,00 ÷ 0,75",
+                "resultaat": "€166,67",
+                "uitleg": "Als 75% = €125, dan is 100% = €125 gedeeld door 0,75"
+              },
+              {
+                "stap": "Rond af naar centen",
+                "berekening": "€166,67 → €166,70",
+                "resultaat": "€166,70",
+                "uitleg": "Afronden naar gebruikelijke prijsnotatie"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€166,70 is logisch hoger dan €125 omdat er korting gegeven is",
+            "antwoord": "€166,70"
+          }
         }
       },
       {
@@ -576,6 +613,43 @@
             "Ze krijgt €7,50 per week",
             "€45,00 ÷ €7,50 = 6 weken"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Er zijn 30 kinderen in de klas", "Dat is 25% korting op de normale prijs", "In de winkel werken 5 medewerkers"],
+            "hoofdvraag": "Hoeveel weken moet Sarah nog sparen?",
+            "tussenstappen": ["Bereken hoeveel Sarah nog moet sparen", "Deel door het zakgeld per week"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Totale kosten schoolkamp": "€125,00",
+              "Al gespaard": "€80,00",
+              "Zakgeld per week": "€7,50"
+            },
+            "tool": "Aftrekken en delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken wat Sarah nog moet sparen",
+                "berekening": "€125,00 - €80,00",
+                "resultaat": "€45,00",
+                "uitleg": "Trek het al gespaarde bedrag af van de totale kosten"
+              },
+              {
+                "stap": "Bereken aantal weken",
+                "berekening": "€45,00 ÷ €7,50",
+                "resultaat": "6 weken",
+                "uitleg": "Deel het benodigde bedrag door het zakgeld per week"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "weken (aantal)",
+            "logica_check": "6 weken is logisch: 6 × €7,50 = €45,00 wat precies genoeg is",
+            "antwoord": "6 weken"
+          }
         }
       }
     ],
@@ -886,6 +960,36 @@
             "4 boeken × €8,95 = €35,80",
             "Dit is het bedrag zonder korting"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Het weer is mooi", "Bij aankoop van 3 of meer boeken krijg je 15% korting"],
+            "hoofdvraag": "Hoeveel moet Emma betalen zonder korting?",
+            "tussenstappen": ["Vermenigvuldig aantal boeken met prijs per boek"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Prijs per boek": "€8,95",
+              "Aantal boeken": "4"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totaalprijs",
+                "berekening": "4 × €8,95",
+                "resultaat": "€35,80",
+                "uitleg": "Vermenigvuldig aantal boeken met de prijs per boek"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€35,80 is logisch voor 4 boeken van bijna €9 elk",
+            "antwoord": "€35,80"
+          }
         }
       },
       {
@@ -916,6 +1020,37 @@
             "€35,80 × 0,85 = €30,43",
             "Of: 15% van €35,80 = €5,37 korting, dus €35,80 - €5,37 = €30,43"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Het weer is mooi"],
+            "hoofdvraag": "Hoeveel moet Emma betalen mét 15% korting?",
+            "tussenstappen": ["Gebruik het totaalbedrag zonder korting (€35,80)", "Bereken 15% korting", "Trek korting af van totaal"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Totaalbedrag zonder korting": "€35,80",
+              "Korting": "15%",
+              "Percentage dat betaald wordt": "85% (100% - 15%)"
+            },
+            "tool": "Percentages en aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken bedrag met korting",
+                "berekening": "€35,80 × 0,85",
+                "resultaat": "€30,43",
+                "uitleg": "Vermenigvuldig met 0,85 omdat je 85% betaalt (100% - 15% korting)"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€30,43 is logisch lager dan €35,80 door de 15% korting",
+            "antwoord": "€30,43"
+          }
         }
       }
     ],
@@ -1636,6 +1771,51 @@
             "Baby Max is gratis (onder de 4 jaar)",
             "Totaal: €25,00 + €15,00 = €40,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel moet het gezin in totaal betalen?",
+            "tussenstappen": ["Tel aantal volwassenen en bereken hun kosten", "Tel aantal betalende kinderen en bereken hun kosten", "Tel beide bedragen bij elkaar op"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Volwassenen": "2 (vader 38 jaar, moeder 36 jaar)",
+              "Prijs volwassene": "€12,50",
+              "Kinderen 4-12 jaar": "2 (Sanne 11 jaar, Tim 8 jaar)",
+              "Prijs kind": "€7,50",
+              "Kinderen onder 4": "1 (Max 2 jaar, gratis)"
+            },
+            "tool": "Vermenigvuldigen en optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken kosten volwassenen",
+                "berekening": "2 × €12,50",
+                "resultaat": "€25,00",
+                "uitleg": "Twee volwassenen (vader en moeder) betalen elk €12,50"
+              },
+              {
+                "stap": "Bereken kosten kinderen",
+                "berekening": "2 × €7,50",
+                "resultaat": "€15,00",
+                "uitleg": "Twee kinderen (Sanne en Tim) betalen elk €7,50, baby Max is gratis"
+              },
+              {
+                "stap": "Tel totale kosten",
+                "berekening": "€25,00 + €15,00",
+                "resultaat": "€40,00",
+                "uitleg": "Tel kosten volwassenen en kinderen bij elkaar op"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€40 is logisch voor een gezin met 2 volwassenen en 2 betalende kinderen",
+            "antwoord": "€40,00"
+          }
         }
       },
       {
@@ -1665,6 +1845,36 @@
             "Gezinsarrangement: €35,00",
             "Besparing: €40,00 - €35,00 = €5,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel besparen ze met het gezinsarrangement?",
+            "tussenstappen": ["Gebruik totale kosten uit vorige vraag (€40)", "Trek arrangementsprijs af"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Normale prijs": "€40,00",
+              "Gezinsarrangement": "€35,00"
+            },
+            "tool": "Aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken besparing",
+                "berekening": "€40,00 - €35,00",
+                "resultaat": "€5,00",
+                "uitleg": "Trek de arrangementsprijs af van de normale prijs"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€5 besparing is logisch als verschil tussen €40 en €35",
+            "antwoord": "€5,00"
+          }
         }
       }
     ],
@@ -4013,6 +4223,39 @@
             "€2,45 + €1,89 + €3,75 + €2,20 + €1,95",
             "= €12,24"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Er zijn 30 kinderen in de klas"],
+            "hoofdvraag": "Hoeveel kosten alle boodschappen samen?",
+            "tussenstappen": ["Tel alle prijzen bij elkaar op"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Brood": "€2,45",
+              "Melk": "€1,89",
+              "Kaas": "€3,75",
+              "Appels": "€2,20",
+              "Koekjes": "€1,95"
+            },
+            "tool": "Optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Tel alle bedragen op",
+                "berekening": "€2,45 + €1,89 + €3,75 + €2,20 + €1,95",
+                "resultaat": "€12,24",
+                "uitleg": "Tel alle prijzen bij elkaar op om het totaal te krijgen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€12,24 is logisch voor 5 producten met prijzen tussen €1,89 en €3,75",
+            "antwoord": "€12,20"
+          }
         }
       },
       {
@@ -4042,6 +4285,36 @@
             "Betaald met: €20,00",
             "Wisselgeld: €20,00 - €12,24 = €7,76"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Er zijn 30 kinderen in de klas"],
+            "hoofdvraag": "Hoeveel wisselgeld krijgt mama terug?",
+            "tussenstappen": ["Gebruik totaalbedrag boodschappen uit vorige vraag", "Trek af van €20"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Betaald met": "€20,00",
+              "Totale kosten": "€12,24"
+            },
+            "tool": "Aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken wisselgeld",
+                "berekening": "€20,00 - €12,24",
+                "resultaat": "€7,76",
+                "uitleg": "Trek de totale kosten af van het betaalde bedrag"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€7,76 is logisch als wisselgeld van €20 na het betalen van €12,24",
+            "antwoord": "€7,80"
+          }
         }
       }
     ],
@@ -4080,6 +4353,36 @@
             "Al gespaard: €28,50",
             "Nog nodig: €45,00 - €28,50 = €16,50"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Elke week krijgt hij €3,50 zakgeld"],
+            "hoofdvraag": "Hoeveel geld moet Daan nog sparen?",
+            "tussenstappen": ["Trek het al gespaarde bedrag af van de totale prijs"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Prijs voetbal": "€45,00",
+              "Al gespaard": "€28,50"
+            },
+            "tool": "Aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken nog te sparen bedrag",
+                "berekening": "€45,00 - €28,50",
+                "resultaat": "€16,50",
+                "uitleg": "Trek het al gespaarde bedrag af van de totale prijs"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€16,50 is logisch als verschil tussen €45 en €28,50",
+            "antwoord": "€16,50"
+          }
         }
       },
       {
@@ -4110,6 +4413,42 @@
             "Aantal weken: €16,50 ÷ €3,50 = 4,7... weken",
             "Hij moet 5 hele weken sparen (na 4 weken heeft hij nog niet genoeg)"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel weken moet Daan nog sparen?",
+            "tussenstappen": ["Gebruik bedrag uit vorige vraag (€16,50)", "Deel door zakgeld per week", "Rond naar boven af voor hele weken"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Nog te sparen": "€16,50",
+              "Zakgeld per week": "€3,50"
+            },
+            "tool": "Delen en naar boven afronden",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken aantal weken",
+                "berekening": "€16,50 ÷ €3,50",
+                "resultaat": "4,71 weken",
+                "uitleg": "Deel het nog te sparen bedrag door het zakgeld per week"
+              },
+              {
+                "stap": "Rond naar boven af",
+                "berekening": "4,71 → 5",
+                "resultaat": "5 weken",
+                "uitleg": "Hij heeft 5 hele weken nodig, want na 4 weken heeft hij nog niet genoeg"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "weken (aantal)",
+            "logica_check": "5 weken is logisch: 5 × €3,50 = €17,50 wat net genoeg is",
+            "antwoord": "5 weken"
+          }
         }
       }
     ],
@@ -4147,6 +4486,36 @@
           "berekening": [
             "Prijs per strip: €25,00 ÷ 50 = €0,50 per strip"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Losse strippen kosten €0,75 per stuk", "De achtbaan kost 8 strippen, de botsauto's 5 strippen"],
+            "hoofdvraag": "Hoeveel kost één strip op de strippenkaart?",
+            "tussenstappen": ["Deel de prijs van de kaart door het aantal strippen"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Prijs strippenkaart": "€25,00",
+              "Aantal strippen": "50"
+            },
+            "tool": "Delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken prijs per strip",
+                "berekening": "€25,00 ÷ 50",
+                "resultaat": "€0,50",
+                "uitleg": "Deel de totaalprijs door het aantal strippen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€0,50 per strip is logisch voor een kaart van €25 met 50 strippen",
+            "antwoord": "€0,50"
+          }
         }
       },
       {
@@ -4176,6 +4545,36 @@
             "Strip op kaart: €0,50",
             "Besparing: €0,75 - €0,50 = €0,25 per strip"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["De achtbaan kost 8 strippen, de botsauto's 5 strippen"],
+            "hoofdvraag": "Hoeveel bespaar je per strip met de strippenkaart?",
+            "tussenstappen": ["Gebruik prijs per strip op kaart uit vorige vraag (€0,50)", "Trek af van prijs losse strip"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Losse strip": "€0,75",
+              "Strip op kaart": "€0,50"
+            },
+            "tool": "Aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken besparing per strip",
+                "berekening": "€0,75 - €0,50",
+                "resultaat": "€0,25",
+                "uitleg": "Trek de prijs per strip op de kaart af van de prijs van een losse strip"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€0,20-€0,25 besparing is logisch bij prijsverschil tussen €0,75 en €0,50",
+            "antwoord": "€0,20"
+          }
         }
       },
       {
@@ -4205,6 +4604,43 @@
             "Totaal: 8 + 5 = 13 strippen",
             "Kosten: 13 × €0,50 = €6,50"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Losse strippen kosten €0,75 per stuk"],
+            "hoofdvraag": "Hoeveel kost het om 1× achtbaan en 1× botsauto's te doen?",
+            "tussenstappen": ["Tel aantal strippen voor beide attracties", "Vermenigvuldig met prijs per strip op kaart"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Achtbaan": "8 strippen",
+              "Botsauto's": "5 strippen",
+              "Prijs per strip op kaart": "€0,50"
+            },
+            "tool": "Optellen en vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Tel aantal strippen",
+                "berekening": "8 + 5",
+                "resultaat": "13 strippen",
+                "uitleg": "Tel strippen voor achtbaan en botsauto's bij elkaar"
+              },
+              {
+                "stap": "Bereken totale kosten",
+                "berekening": "13 × €0,50",
+                "resultaat": "€6,50",
+                "uitleg": "Vermenigvuldig aantal strippen met prijs per strip"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€6,50 is logisch voor 13 strippen à €0,50",
+            "antwoord": "€6,50"
+          }
         }
       }
     ],
@@ -4242,6 +4678,37 @@
           "berekening": [
             "€18,95 + €14,50 + €22,75 = €56,20"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Bij aankoop van meer dan €50,00 krijgt ze €5,00 korting"],
+            "hoofdvraag": "Hoeveel kosten alle cadeaus samen zonder korting?",
+            "tussenstappen": ["Tel alle prijzen bij elkaar op"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Sjaal voor moeder": "€18,95",
+              "Boek voor vader": "€14,50",
+              "Spelletje voor broertje": "€22,75"
+            },
+            "tool": "Optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Tel alle prijzen op",
+                "berekening": "€18,95 + €14,50 + €22,75",
+                "resultaat": "€56,20",
+                "uitleg": "Tel alle cadeau prijzen bij elkaar op"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€56,20 is logisch voor 3 cadeaus met prijzen tussen €14,50 en €22,75",
+            "antwoord": "€56,20"
+          }
         }
       },
       {
@@ -4271,6 +4738,42 @@
             "Dit is meer dan €50,00, dus ze krijgt €5,00 korting",
             "Totaal met korting: €56,20 - €5,00 = €51,20"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel moet Sophie in totaal betalen?",
+            "tussenstappen": ["Gebruik totaal uit vorige vraag (€56,20)", "Controleer of korting van toepassing is", "Trek korting af"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Totaal zonder korting": "€56,20",
+              "Korting bij > €50": "€5,00"
+            },
+            "tool": "Aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Controleer kortingsvoorwaarde",
+                "berekening": "€56,20 > €50,00",
+                "resultaat": "Ja, korting van toepassing",
+                "uitleg": "Het totaal is meer dan €50, dus €5 korting geldt"
+              },
+              {
+                "stap": "Trek korting af",
+                "berekening": "€56,20 - €5,00",
+                "resultaat": "€51,20",
+                "uitleg": "Trek de korting af van het totaalbedrag"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€51,20 is logisch: €56,20 min €5 korting",
+            "antwoord": "€51,20"
+          }
         }
       }
     ],
@@ -4309,6 +4812,36 @@
             "Aantal flesjes: 100",
             "Totaal: 100 × €1,20 = €120,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Bij de groothandel kost een pak van 24 flesjes €21,60"],
+            "hoofdvraag": "Hoeveel kosten 100 flesjes bij de supermarkt?",
+            "tussenstappen": ["Vermenigvuldig aantal flesjes met prijs per stuk"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Aantal flesjes": "100",
+              "Prijs per flesje supermarkt": "€1,20"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totale kosten",
+                "berekening": "100 × €1,20",
+                "resultaat": "€120,00",
+                "uitleg": "Vermenigvuldig aantal flesjes met de prijs per stuk"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€120 is logisch voor 100 flesjes à €1,20",
+            "antwoord": "€120,00"
+          }
         }
       },
       {
@@ -4338,6 +4871,42 @@
             "100 ÷ 24 = 4,17... pakketten",
             "Je kunt alleen hele pakketten kopen, dus 5 pakketten (dat geeft 120 flesjes)"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Flesjes sap kosten €1,20 per stuk bij de supermarkt"],
+            "hoofdvraag": "Hoeveel pakketten moet de school kopen?",
+            "tussenstappen": ["Deel 100 door pakketgrootte", "Rond naar boven voor hele pakketten"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Aantal flesjes nodig": "100",
+              "Flesjes per pakket": "24"
+            },
+            "tool": "Delen en naar boven afronden",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken aantal pakketten",
+                "berekening": "100 ÷ 24",
+                "resultaat": "4,17 pakketten",
+                "uitleg": "Deel aantal benodigde flesjes door flesjes per pakket"
+              },
+              {
+                "stap": "Rond naar boven af",
+                "berekening": "4,17 → 5",
+                "resultaat": "5 pakketten",
+                "uitleg": "Je kunt alleen hele pakketten kopen, dus rond naar boven"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "pakketten (aantal)",
+            "logica_check": "5 pakketten is logisch: 5 × 24 = 120 flesjes (genoeg voor 100)",
+            "antwoord": "5 pakketten"
+          }
         }
       },
       {
@@ -4372,6 +4941,43 @@
             "5 pakketten groothandel: €108,00",
             "Besparing: €120,00 - €108,00 = €12,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel besparen ze bij de groothandel?",
+            "tussenstappen": ["Bereken kosten 5 pakketten groothandel", "Vergelijk met kosten 100 flesjes supermarkt", "Bereken besparing"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Pakketten nodig": "5",
+              "Prijs per pakket groothandel": "€21,60",
+              "Kosten 100 flesjes supermarkt": "€120,00"
+            },
+            "tool": "Vermenigvuldigen en aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken kosten groothandel",
+                "berekening": "5 × €21,60",
+                "resultaat": "€108,00",
+                "uitleg": "Vermenigvuldig aantal pakketten met prijs per pakket"
+              },
+              {
+                "stap": "Bereken besparing",
+                "berekening": "€120,00 - €108,00",
+                "resultaat": "€12,00",
+                "uitleg": "Trek groothandelprijs af van supermarktprijs voor 100 flesjes"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€12 besparing is logisch bij verschil tussen €120 en €108",
+            "antwoord": "€12,00"
+          }
         }
       }
     ],
@@ -4410,6 +5016,36 @@
             "Aantal kinderen: 4",
             "Per kind: €80,00 ÷ 4 = €20,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Van het geld wil elk kind een ijsje kopen van €2,50"],
+            "hoofdvraag": "Hoeveel geld krijgt elk kind?",
+            "tussenstappen": ["Deel het totale bedrag door aantal kinderen"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Totaal vakantiegeld": "€80,00",
+              "Aantal kleinkinderen": "4"
+            },
+            "tool": "Delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Verdeel gelijk over kinderen",
+                "berekening": "€80,00 ÷ 4",
+                "resultaat": "€20,00",
+                "uitleg": "Deel het totale bedrag eerlijk door 4 kleinkinderen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€20 per kind is logisch: 4 × €20 = €80",
+            "antwoord": "€20,00"
+          }
         }
       },
       {
@@ -4439,6 +5075,36 @@
             "Ijsje kost: €2,50",
             "Over: €20,00 - €2,50 = €17,50"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel geld houdt elk kind over?",
+            "tussenstappen": ["Gebruik bedrag per kind uit vorige vraag (€20)", "Trek prijs ijsje af"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Geld per kind": "€20,00",
+              "Prijs ijsje": "€2,50"
+            },
+            "tool": "Aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Trek ijsje af",
+                "berekening": "€20,00 - €2,50",
+                "resultaat": "€17,50",
+                "uitleg": "Trek de prijs van het ijsje af van het bedrag per kind"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€17,50 is logisch: €20 min €2,50 voor ijsje",
+            "antwoord": "€17,50"
+          }
         }
       }
     ],
@@ -4477,6 +5143,36 @@
             "Nieuwe prijs broek: €35,00",
             "Besparing: €50,00 - €35,00 = €15,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Alle shirts zijn nu €18,00 in plaats van €25,00", "Kevin koopt 2 broeken en 3 shirts"],
+            "hoofdvraag": "Hoeveel bespaart Kevin op 1 broek?",
+            "tussenstappen": ["Trek nieuwe prijs af van oude prijs"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Oude prijs broek": "€50,00",
+              "Nieuwe prijs broek": "€35,00"
+            },
+            "tool": "Aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken besparing",
+                "berekening": "€50,00 - €35,00",
+                "resultaat": "€15,00",
+                "uitleg": "Trek de nieuwe prijs af van de oude prijs"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€15 besparing is logisch bij prijsverschil tussen €50 en €35",
+            "antwoord": "€15,00"
+          }
         }
       },
       {
@@ -4507,6 +5203,50 @@
             "3 shirts: 3 × €18,00 = €54,00",
             "Totaal: €70,00 + €54,00 = €124,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Alle broeken waren €50,00", "Alle shirts waren €25,00"],
+            "hoofdvraag": "Hoeveel betaalt Kevin in totaal?",
+            "tussenstappen": ["Bereken kosten 2 broeken", "Bereken kosten 3 shirts", "Tel bij elkaar op"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Aantal broeken": "2",
+              "Prijs per broek uitverkoop": "€35,00",
+              "Aantal shirts": "3",
+              "Prijs per shirt uitverkoop": "€18,00"
+            },
+            "tool": "Vermenigvuldigen en optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken kosten broeken",
+                "berekening": "2 × €35,00",
+                "resultaat": "€70,00",
+                "uitleg": "Vermenigvuldig aantal broeken met uitverkoopprijs"
+              },
+              {
+                "stap": "Bereken kosten shirts",
+                "berekening": "3 × €18,00",
+                "resultaat": "€54,00",
+                "uitleg": "Vermenigvuldig aantal shirts met uitverkoopprijs"
+              },
+              {
+                "stap": "Tel totaal op",
+                "berekening": "€70,00 + €54,00",
+                "resultaat": "€124,00",
+                "uitleg": "Tel kosten broeken en shirts bij elkaar"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€124 is logisch voor 2 broeken en 3 shirts in de uitverkoop",
+            "antwoord": "€124,00"
+          }
         }
       },
       {
@@ -4537,6 +5277,50 @@
             "3 shirts à €25,00: 3 × €25,00 = €75,00",
             "Totaal: €100,00 + €75,00 = €175,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel zou Kevin betaald hebben zonder uitverkoop?",
+            "tussenstappen": ["Bereken kosten 2 broeken tegen oude prijs", "Bereken kosten 3 shirts tegen oude prijs", "Tel bij elkaar op"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Aantal broeken": "2",
+              "Oude prijs per broek": "€50,00",
+              "Aantal shirts": "3",
+              "Oude prijs per shirt": "€25,00"
+            },
+            "tool": "Vermenigvuldigen en optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken kosten broeken",
+                "berekening": "2 × €50,00",
+                "resultaat": "€100,00",
+                "uitleg": "Vermenigvuldig aantal broeken met oude prijs"
+              },
+              {
+                "stap": "Bereken kosten shirts",
+                "berekening": "3 × €25,00",
+                "resultaat": "€75,00",
+                "uitleg": "Vermenigvuldig aantal shirts met oude prijs"
+              },
+              {
+                "stap": "Tel totaal op",
+                "berekening": "€100,00 + €75,00",
+                "resultaat": "€175,00",
+                "uitleg": "Tel kosten broeken en shirts bij elkaar"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€175 is logisch voor 2 broeken en 3 shirts tegen oude prijzen",
+            "antwoord": "€175,00"
+          }
         }
       }
     ],
@@ -4575,6 +5359,36 @@
             "Naar spaarrekening: €4,00",
             "Mag uitgeven: €12,50 - €4,00 = €8,50"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Na 8 weken wil ze iets kopen"],
+            "hoofdvraag": "Hoeveel mag Lisa elke week uitgeven?",
+            "tussenstappen": ["Trek spaarbedrag af van weekverdienste"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Verdienste per week": "€12,50",
+              "Naar spaarrekening": "€4,00"
+            },
+            "tool": "Aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken uitgaafbedrag",
+                "berekening": "€12,50 - €4,00",
+                "resultaat": "€8,50",
+                "uitleg": "Trek spaarbedrag af van weekverdienste"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€8,50 is logisch: €12,50 min €4 sparen",
+            "antwoord": "€8,50"
+          }
         }
       },
       {
@@ -4604,6 +5418,36 @@
             "Aantal weken: 8",
             "Totaal gespaard: 8 × €4,00 = €32,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel heeft Lisa na 8 weken gespaard?",
+            "tussenstappen": ["Vermenigvuldig weekspaar bedrag met 8"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Sparen per week": "€4,00",
+              "Aantal weken": "8"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totaal gespaard",
+                "berekening": "8 × €4,00",
+                "resultaat": "€32,00",
+                "uitleg": "Vermenigvuldig weeksparen met aantal weken"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€32 is logisch: 8 weken × €4 per week",
+            "antwoord": "€32,00"
+          }
         }
       },
       {
@@ -4633,6 +5477,36 @@
             "Aantal weken: 8",
             "Totaal verdiend: 8 × €12,50 = €100,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel heeft Lisa in totaal verdiend?",
+            "tussenstappen": ["Vermenigvuldig weekverdienste met 8 weken"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Verdienste per week": "€12,50",
+              "Aantal weken": "8"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totaal verdiend",
+                "berekening": "8 × €12,50",
+                "resultaat": "€100,00",
+                "uitleg": "Vermenigvuldig weekverdienste met aantal weken"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€100 is logisch: 8 weken × €12,50 per week",
+            "antwoord": "€100,00"
+          }
         }
       }
     ],
@@ -4671,6 +5545,36 @@
             "Aantal personen: 4",
             "Totaal kaartjes: 4 × €9,50 = €38,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Ze kopen ook 2 grote bakken popcorn van €6,50 per bak"],
+            "hoofdvraag": "Hoeveel kosten alle bioscoopkaartjes?",
+            "tussenstappen": ["Vermenigvuldig prijs per kaartje met aantal personen"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Aantal personen": "4",
+              "Prijs per kaartje": "€9,50"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totaal kaartjes",
+                "berekening": "4 × €9,50",
+                "resultaat": "€38,00",
+                "uitleg": "Vermenigvuldig aantal personen met prijs per kaartje"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€38 is logisch voor 4 kaartjes à €9,50",
+            "antwoord": "€38,00"
+          }
         }
       },
       {
@@ -4701,6 +5605,50 @@
             "Totaal: €38,00 + €13,00 = €51,00",
             "Per persoon: €51,00 ÷ 4 = €12,75 ≈ €13,00 (afgerond)"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel moet elk persoon betalen?",
+            "tussenstappen": ["Bereken kosten popcorn", "Tel op bij kaartjes", "Deel door 4 personen"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Kosten kaartjes": "€38,00",
+              "Aantal bakken popcorn": "2",
+              "Prijs per bak": "€6,50",
+              "Aantal personen": "4"
+            },
+            "tool": "Vermenigvuldigen, optellen en delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken kosten popcorn",
+                "berekening": "2 × €6,50",
+                "resultaat": "€13,00",
+                "uitleg": "Vermenigvuldig aantal bakken met prijs per bak"
+              },
+              {
+                "stap": "Bereken totale kosten",
+                "berekening": "€38,00 + €13,00",
+                "resultaat": "€51,00",
+                "uitleg": "Tel kosten kaartjes en popcorn bij elkaar"
+              },
+              {
+                "stap": "Verdeel per persoon",
+                "berekening": "€51,00 ÷ 4",
+                "resultaat": "€12,75 ≈ €13,00",
+                "uitleg": "Deel totale kosten door aantal personen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€13 per persoon is logisch voor totaal €51 gedeeld door 4",
+            "antwoord": "€13,00"
+          }
         }
       }
     ],
@@ -4739,6 +5687,36 @@
             "Aantal kilo: 3",
             "Totaal appels: 3 × €2,40 = €7,20"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["een kilo peren €3,20", "2 kilo peren", "Ze betaalt met een briefje van €20,00"],
+            "hoofdvraag": "Hoeveel betaalt moeder voor de appels?",
+            "tussenstappen": ["Vermenigvuldig aantal kilo appels met prijs per kilo"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Prijs per kilo appels": "€2,40",
+              "Aantal kilo appels": "3"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken kosten appels",
+                "berekening": "3 × €2,40",
+                "resultaat": "€7,20",
+                "uitleg": "Vermenigvuldig aantal kilo met prijs per kilo"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€7,20 is logisch voor 3 kilo à €2,40",
+            "antwoord": "€7,20"
+          }
         }
       },
       {
@@ -4770,6 +5748,50 @@
             "Totaal: €7,20 + €6,40 = €13,60",
             "Wisselgeld: €20,00 - €13,60 = €6,40"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel wisselgeld krijgt moeder terug?",
+            "tussenstappen": ["Bereken kosten appels", "Bereken kosten peren", "Tel totaal op", "Trek af van €20"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Kosten appels": "€7,20",
+              "Aantal kilo peren": "2",
+              "Prijs per kilo peren": "€3,20",
+              "Betaald met": "€20,00"
+            },
+            "tool": "Vermenigvuldigen, optellen en aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken kosten peren",
+                "berekening": "2 × €3,20",
+                "resultaat": "€6,40",
+                "uitleg": "Vermenigvuldig aantal kilo peren met prijs per kilo"
+              },
+              {
+                "stap": "Bereken totale kosten",
+                "berekening": "€7,20 + €6,40",
+                "resultaat": "€13,60",
+                "uitleg": "Tel kosten appels en peren bij elkaar"
+              },
+              {
+                "stap": "Bereken wisselgeld",
+                "berekening": "€20,00 - €13,60",
+                "resultaat": "€6,40",
+                "uitleg": "Trek totale kosten af van betaalde bedrag"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€6,40 wisselgeld is logisch bij €20 betaald en €13,60 kosten",
+            "antwoord": "€6,40"
+          }
         }
       }
     ],
@@ -4808,6 +5830,36 @@
             "Kaart: €2,50",
             "Totaal: €37,50 + €2,50 = €40,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Er zijn 30 kinderen in de klas", "Het is een zonnige dag"],
+            "hoofdvraag": "Hoeveel kosten cadeau en kaart samen?",
+            "tussenstappen": ["Tel prijs cadeau en prijs kaart bij elkaar op"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Prijs cadeau": "€37,50",
+              "Prijs kaart": "€2,50"
+            },
+            "tool": "Optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Tel prijzen op",
+                "berekening": "€37,50 + €2,50",
+                "resultaat": "€40,00",
+                "uitleg": "Tel prijs cadeau en kaart bij elkaar"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€40 is logisch als som van €37,50 en €2,50",
+            "antwoord": "€40,00"
+          }
         }
       },
       {
@@ -4837,6 +5889,36 @@
             "Aantal kinderen: 5",
             "Per kind: €40,00 ÷ 5 = €8,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Er zijn 30 kinderen in de klas", "Het is een zonnige dag"],
+            "hoofdvraag": "Hoeveel moet elk kind betalen?",
+            "tussenstappen": ["Gebruik totaal uit vorige vraag (€40)", "Deel door 5 kinderen"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Totale kosten": "€40,00",
+              "Aantal kinderen": "5"
+            },
+            "tool": "Delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Verdeel kosten",
+                "berekening": "€40,00 ÷ 5",
+                "resultaat": "€8,00",
+                "uitleg": "Deel totale kosten eerlijk door 5 kinderen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€8 per kind is logisch: 5 × €8 = €40",
+            "antwoord": "€8,00"
+          }
         }
       }
     ],
@@ -4875,6 +5957,36 @@
             "Het derde figuur kost de helft",
             "€15,00 ÷ 2 = €7,50"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel betaalt Robin voor het derde figuur?",
+            "tussenstappen": ["Bereken de helft van de normale prijs"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Normale prijs per figuur": "€15,00",
+              "Korting op derde artikel": "de helft"
+            },
+            "tool": "Delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken de helft van de prijs",
+                "berekening": "€15,00 ÷ 2",
+                "resultaat": "€7,50",
+                "uitleg": "Het derde figuur kost de helft van de normale prijs"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€7,50 is logisch: de helft van €15,00",
+            "antwoord": "€7,50"
+          }
         }
       },
       {
@@ -4905,6 +6017,55 @@
             "Derde figuur: €7,50",
             "Totaal: €15,00 + €15,00 + €7,50 = €37,50"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel betaalt Robin in totaal voor de 3 figuren?",
+            "tussenstappen": ["Bereken prijs eerste figuur", "Bereken prijs tweede figuur", "Bereken prijs derde figuur (de helft)", "Tel alle prijzen op"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Normale prijs per figuur": "€15,00",
+              "Aantal figuren": "3",
+              "Korting derde figuur": "de helft"
+            },
+            "tool": "Delen en optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Prijs eerste figuur",
+                "berekening": "€15,00",
+                "resultaat": "€15,00",
+                "uitleg": "Eerste figuur kost normale prijs"
+              },
+              {
+                "stap": "Prijs tweede figuur",
+                "berekening": "€15,00",
+                "resultaat": "€15,00",
+                "uitleg": "Tweede figuur kost normale prijs"
+              },
+              {
+                "stap": "Prijs derde figuur",
+                "berekening": "€15,00 ÷ 2",
+                "resultaat": "€7,50",
+                "uitleg": "Derde figuur kost de helft"
+              },
+              {
+                "stap": "Tel alle prijzen op",
+                "berekening": "€15,00 + €15,00 + €7,50",
+                "resultaat": "€37,50",
+                "uitleg": "Som van alle drie figuren"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€37,50 is logisch: minder dan 3 × €15,00 (€45,00) door de korting op het derde figuur",
+            "antwoord": "€37,50"
+          }
         }
       },
       {
@@ -4935,6 +6096,43 @@
             "Met actie: €37,50",
             "Besparing: €45,00 - €37,50 = €7,50"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel bespaart Robin door de actie?",
+            "tussenstappen": ["Bereken prijs zonder actie", "Bereken prijs met actie", "Trek af om besparing te vinden"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Normale prijs per figuur": "€15,00",
+              "Aantal figuren": "3",
+              "Totaal met actie": "€37,50"
+            },
+            "tool": "Vermenigvuldigen en aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken prijs zonder actie",
+                "berekening": "3 × €15,00",
+                "resultaat": "€45,00",
+                "uitleg": "Drie figuren tegen normale prijs"
+              },
+              {
+                "stap": "Trek af prijs met actie",
+                "berekening": "€45,00 - €37,50",
+                "resultaat": "€7,50",
+                "uitleg": "Verschil tussen normale prijs en actieprijs"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€7,50 besparing is logisch: precies de helft van €15,00 (korting op het derde figuur)",
+            "antwoord": "€7,50"
+          }
         }
       }
     ],
@@ -4973,6 +6171,36 @@
             "Aantal bezoeken: 8",
             "Totaal: 8 × €6,00 = €48,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["maandabonnement van €35,00"],
+            "hoofdvraag": "Hoeveel betaalt Fatima per maand zonder abonnement?",
+            "tussenstappen": ["Vermenigvuldig aantal bezoeken met prijs per bezoek"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Prijs losse toegang": "€6,00 per bezoek",
+              "Aantal bezoeken per maand": "8"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totale kosten losse bezoeken",
+                "berekening": "8 × €6,00",
+                "resultaat": "€48,00",
+                "uitleg": "Vermenigvuldig aantal bezoeken met prijs per bezoek"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€48,00 is logisch: 8 bezoeken × €6,00 per bezoek",
+            "antwoord": "€48,00"
+          }
         }
       },
       {
@@ -5002,6 +6230,36 @@
             "Met abonnement: €35,00",
             "Besparing: €48,00 - €35,00 = €13,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel bespaart Fatima per maand met een abonnement?",
+            "tussenstappen": ["Gebruik het bedrag zonder abonnement (€48,00)", "Trek de prijs van het abonnement af"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Kosten zonder abonnement": "€48,00",
+              "Prijs maandabonnement": "€35,00"
+            },
+            "tool": "Aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken besparing",
+                "berekening": "€48,00 - €35,00",
+                "resultaat": "€13,00",
+                "uitleg": "Trek de prijs van het abonnement af van de kosten zonder abonnement"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€13,00 besparing is logisch: verschil tussen €48,00 en €35,00",
+            "antwoord": "€13,00"
+          }
         }
       },
       {
@@ -5032,6 +6290,42 @@
             "€35,00 ÷ €6,00 = 5,83... bezoeken",
             "Vanaf 6 bezoeken is het abonnement voordeliger (6 × €6,00 = €36,00 > €35,00)"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Fatima gaat gemiddeld 8 keer per maand zwemmen"],
+            "hoofdvraag": "Vanaf hoeveel bezoeken per maand is een abonnement voordeliger?",
+            "tussenstappen": ["Deel prijs abonnement door prijs per bezoek", "Rond naar boven naar het volgende hele getal"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Prijs losse toegang": "€6,00 per bezoek",
+              "Prijs maandabonnement": "€35,00"
+            },
+            "tool": "Delen en afronden",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken breekpunt",
+                "berekening": "€35,00 ÷ €6,00",
+                "resultaat": "5,83...",
+                "uitleg": "Deel de prijs van het abonnement door de prijs per bezoek"
+              },
+              {
+                "stap": "Rond naar boven",
+                "berekening": "5,83... → 6 bezoeken",
+                "resultaat": "6 bezoeken",
+                "uitleg": "Vanaf 6 bezoeken (6 × €6,00 = €36,00) is het abonnement voordeliger"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "bezoeken (aantal)",
+            "logica_check": "6 bezoeken is logisch: 5 bezoeken kost €30,00 (goedkoper dan abonnement), 6 bezoeken kost €36,00 (duurder dan abonnement)",
+            "antwoord": "6 bezoeken"
+          }
         }
       }
     ],
@@ -5070,6 +6364,36 @@
             "Aantal schriften: 6",
             "Totaal: 6 × €0,85 = €5,10"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Een etui kost €8,95", "een rekenmachine kost €12,50"],
+            "hoofdvraag": "Hoeveel betaalt Yasmin voor alle schriften?",
+            "tussenstappen": ["Vermenigvuldig aantal schriften met prijs per schrift"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Prijs per schrift": "€0,85",
+              "Aantal schriften": "6"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totale kosten schriften",
+                "berekening": "6 × €0,85",
+                "resultaat": "€5,10",
+                "uitleg": "Vermenigvuldig aantal schriften met prijs per schrift"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€5,10 is logisch: 6 schriften van minder dan €1 per stuk",
+            "antwoord": "€5,10"
+          }
         }
       },
       {
@@ -5100,6 +6424,37 @@
             "Rekenmachine: €12,50",
             "Totaal: €8,95 + €5,10 + €12,50 = €26,55"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel kosten alle schoolspullen samen?",
+            "tussenstappen": ["Tel alle bedragen op: etui, schriften en rekenmachine"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Prijs etui": "€8,95",
+              "Prijs schriften (6 stuks)": "€5,10",
+              "Prijs rekenmachine": "€12,50"
+            },
+            "tool": "Optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Tel alle prijzen op",
+                "berekening": "€8,95 + €5,10 + €12,50",
+                "resultaat": "€26,55",
+                "uitleg": "Som van etui, schriften en rekenmachine"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€26,55 is logisch: alle drie artikelen opgeteld",
+            "antwoord": "€26,60"
+          }
         }
       }
     ],
@@ -5140,6 +6495,44 @@
             "1 milkshake: €3,50",
             "Totaal: €5,00 + €3,00 + €3,50 = €11,50"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Hij betaalt met een briefje van €20,00"],
+            "hoofdvraag": "Hoeveel kost de bestelling?",
+            "tussenstappen": ["Bereken kosten van 2 frikandellen", "Tel alle artikelen op"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Prijs per frikandel": "€2,50",
+              "Aantal frikandellen": "2",
+              "Prijs patat": "€3,00",
+              "Prijs milkshake": "€3,50"
+            },
+            "tool": "Vermenigvuldigen en optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken kosten frikandellen",
+                "berekening": "2 × €2,50",
+                "resultaat": "€5,00",
+                "uitleg": "Vermenigvuldig aantal frikandellen met prijs per stuk"
+              },
+              {
+                "stap": "Tel alle artikelen op",
+                "berekening": "€5,00 + €3,00 + €3,50",
+                "resultaat": "€11,50",
+                "uitleg": "Som van alle bestelde artikelen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€11,50 is logisch: totaal van alle bestelde items",
+            "antwoord": "€11,50"
+          }
         }
       },
       {
@@ -5169,6 +6562,36 @@
             "Kosten: €11,50",
             "Wisselgeld: €20,00 - €11,50 = €8,50"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel wisselgeld krijgt Thomas?",
+            "tussenstappen": ["Gebruik de totale kosten uit de vorige vraag (€11,50)", "Trek af van het betaalde bedrag"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Kosten bestelling": "€11,50",
+              "Betaald bedrag": "€20,00"
+            },
+            "tool": "Aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken wisselgeld",
+                "berekening": "€20,00 - €11,50",
+                "resultaat": "€8,50",
+                "uitleg": "Trek de kosten af van het betaalde bedrag"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€8,50 wisselgeld is logisch: ongeveer de helft van €20,00 voor bestelling van €11,50",
+            "antwoord": "€8,50"
+          }
         }
       }
     ],
@@ -5207,6 +6630,39 @@
             "€0,50 + €0,75 + €1,00 + €1,00 + €0,50",
             "= €3,75 per ronde"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["In de winkel werken 5 medewerkers", "Amira loopt 12 rondes"],
+            "hoofdvraag": "Hoeveel krijgt Amira per ronde van alle sponsoren samen?",
+            "tussenstappen": ["Tel alle bedragen van de sponsoren op"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Opa": "€0,50 per ronde",
+              "Oma": "€0,75 per ronde",
+              "Papa": "€1,00 per ronde",
+              "Mama": "€1,00 per ronde",
+              "Tante": "€0,50 per ronde"
+            },
+            "tool": "Optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Tel alle sponsorbedragen op",
+                "berekening": "€0,50 + €0,75 + €1,00 + €1,00 + €0,50",
+                "resultaat": "€3,75",
+                "uitleg": "Som van alle bedragen per ronde"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€3,75 per ronde is logisch: 5 sponsoren geven bedragen tussen €0,50 en €1,00",
+            "antwoord": "€3,75"
+          }
         }
       },
       {
@@ -5236,6 +6692,36 @@
             "Aantal rondes: 12",
             "Totaal: 12 × €3,75 = €45,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["In de winkel werken 5 medewerkers"],
+            "hoofdvraag": "Hoeveel geld haalt Amira in totaal op?",
+            "tussenstappen": ["Gebruik het bedrag per ronde (€3,75)", "Vermenigvuldig met aantal rondes"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Bedrag per ronde": "€3,75",
+              "Aantal rondes": "12"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totaal opgehaald bedrag",
+                "berekening": "12 × €3,75",
+                "resultaat": "€45,00",
+                "uitleg": "Vermenigvuldig aantal rondes met bedrag per ronde"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€45,00 is logisch: 12 rondes × ongeveer €4 per ronde",
+            "antwoord": "€45,00"
+          }
         }
       }
     ],
@@ -5274,6 +6760,36 @@
             "Aantal ritten per dag: 2",
             "Per dag: 2 × €3,20 = €6,40"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Een dagkaart kost €8,00", "Een weekkaart kost €25,00", "Het is april", "5 dagen per week"],
+            "hoofdvraag": "Hoeveel betaalt Omar per dag met losse kaartjes?",
+            "tussenstappen": ["Vermenigvuldig aantal ritten per dag met prijs per rit"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Prijs enkele busreis": "€3,20",
+              "Aantal ritten per dag": "2"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken kosten per dag",
+                "berekening": "2 × €3,20",
+                "resultaat": "€6,40",
+                "uitleg": "Vermenigvuldig aantal ritten met prijs per rit"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€6,40 is logisch: 2 ritten × €3,20 per rit",
+            "antwoord": "€6,40"
+          }
         }
       },
       {
@@ -5305,6 +6821,50 @@
             "Weekkaart: €25,00",
             "Weekkaart is het goedkoopst"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Het is april"],
+            "hoofdvraag": "Wat is de goedkoopste optie voor Omar per week?",
+            "tussenstappen": ["Bereken kosten losse kaartjes per week", "Bereken kosten dagkaarten per week", "Vergelijk met weekkaart"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Kosten per dag met losse kaartjes": "€6,40",
+              "Prijs dagkaart": "€8,00",
+              "Prijs weekkaart": "€25,00",
+              "Aantal dagen per week": "5"
+            },
+            "tool": "Vermenigvuldigen en vergelijken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken kosten losse kaartjes per week",
+                "berekening": "5 × €6,40",
+                "resultaat": "€32,00",
+                "uitleg": "Vermenigvuldig dagen per week met kosten per dag"
+              },
+              {
+                "stap": "Bereken kosten dagkaarten per week",
+                "berekening": "5 × €8,00",
+                "resultaat": "€40,00",
+                "uitleg": "Vermenigvuldig dagen per week met prijs dagkaart"
+              },
+              {
+                "stap": "Vergelijk alle opties",
+                "berekening": "€25,00 < €32,00 < €40,00",
+                "resultaat": "Weekkaart (€25,00)",
+                "uitleg": "Weekkaart is het goedkoopst"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "Weekkaart €25,00 is logisch: goedkoper dan losse kaartjes (€32,00) en dagkaarten (€40,00)",
+            "antwoord": "Weekkaart (€25,0)"
+          }
         }
       }
     ],
@@ -5343,6 +6903,36 @@
             "Aantal pizza's: 3",
             "Totaal: 3 × €11,50 = €34,50"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["6 vrienden", "je kunt er 2-3 personen van laten eten", "De rit duurt 45 minuten", "De bezorgkosten zijn €3,50", "Ze delen alle kosten eerlijk"],
+            "hoofdvraag": "Hoeveel kosten de 3 pizza's samen?",
+            "tussenstappen": ["Vermenigvuldig aantal pizza's met prijs per pizza"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Prijs per pizza": "€11,50",
+              "Aantal pizza's": "3"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totale kosten pizza's",
+                "berekening": "3 × €11,50",
+                "resultaat": "€34,50",
+                "uitleg": "Vermenigvuldig aantal pizza's met prijs per pizza"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€34,50 is logisch: 3 pizza's × ongeveer €12 per pizza",
+            "antwoord": "€34,50"
+          }
         }
       },
       {
@@ -5373,6 +6963,43 @@
             "Totaal: €34,50 + €3,50 = €38,00",
             "Per persoon: €38,00 ÷ 6 = €6,33..."
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["je kunt er 2-3 personen van laten eten", "De rit duurt 45 minuten"],
+            "hoofdvraag": "Hoeveel moet elk persoon betalen inclusief bezorgkosten?",
+            "tussenstappen": ["Tel bezorgkosten bij pizza's op", "Deel totaal door aantal personen"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Kosten pizza's": "€34,50",
+              "Bezorgkosten": "€3,50",
+              "Aantal personen": "6"
+            },
+            "tool": "Optellen en delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totale kosten",
+                "berekening": "€34,50 + €3,50",
+                "resultaat": "€38,00",
+                "uitleg": "Tel pizza's en bezorgkosten op"
+              },
+              {
+                "stap": "Deel door aantal personen",
+                "berekening": "€38,00 ÷ 6",
+                "resultaat": "€6,33...",
+                "uitleg": "Deel totaal door 6 personen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€6,33 per persoon is logisch: €38,00 gedeeld door 6 personen",
+            "antwoord": "€6,30"
+          }
         }
       }
     ],
@@ -5413,6 +7040,58 @@
             "2 chocoladerepen: 2 × €1,20 = €2,40",
             "Totaal: €1,80 + €1,35 + €2,40 = €5,55"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Mike heeft €5,00"],
+            "hoofdvraag": "Hoeveel kosten alle snoepjes die Mike wil?",
+            "tussenstappen": ["Bereken kosten dropveters", "Bereken kosten lolly's", "Bereken kosten chocoladerepen", "Tel alles op"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Prijs dropveters": "€0,60 per stuk",
+              "Aantal dropveters": "3",
+              "Prijs lolly's": "€0,45 per stuk",
+              "Aantal lolly's": "3",
+              "Prijs chocoladerepen": "€1,20 per stuk",
+              "Aantal chocoladerepen": "2"
+            },
+            "tool": "Vermenigvuldigen en optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken kosten dropveters",
+                "berekening": "3 × €0,60",
+                "resultaat": "€1,80",
+                "uitleg": "Vermenigvuldig aantal dropveters met prijs per stuk"
+              },
+              {
+                "stap": "Bereken kosten lolly's",
+                "berekening": "3 × €0,45",
+                "resultaat": "€1,35",
+                "uitleg": "Vermenigvuldig aantal lolly's met prijs per stuk"
+              },
+              {
+                "stap": "Bereken kosten chocoladerepen",
+                "berekening": "2 × €1,20",
+                "resultaat": "€2,40",
+                "uitleg": "Vermenigvuldig aantal chocoladerepen met prijs per stuk"
+              },
+              {
+                "stap": "Tel alle kosten op",
+                "berekening": "€1,80 + €1,35 + €2,40",
+                "resultaat": "€5,55",
+                "uitleg": "Som van alle snoepjes"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€5,55 is logisch: ongeveer €2 aan dropveters, €1,50 aan lolly's en €2,50 aan chocoladerepen",
+            "antwoord": "€5,60"
+          }
         }
       },
       {
@@ -5442,6 +7121,42 @@
             "Totale kosten: €5,55",
             "Tekort: €5,55 - €5,00 = €0,55"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Heeft Mike genoeg geld?",
+            "tussenstappen": ["Vergelijk totale kosten met zijn budget", "Bereken tekort of overschot"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Budget Mike": "€5,00",
+              "Totale kosten": "€5,55"
+            },
+            "tool": "Vergelijken en aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Vergelijk budget met kosten",
+                "berekening": "€5,00 < €5,55",
+                "resultaat": "Niet genoeg",
+                "uitleg": "Budget is lager dan totale kosten"
+              },
+              {
+                "stap": "Bereken tekort",
+                "berekening": "€5,55 - €5,00",
+                "resultaat": "€0,55",
+                "uitleg": "Verschil tussen kosten en budget"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€0,55 tekort is logisch: kosten (€5,55) zijn hoger dan budget (€5,00)",
+            "antwoord": "Nee, hij komt €0,60 tekort"
+          }
         }
       }
     ],
@@ -5480,6 +7195,36 @@
             "Aantal keer spelen: 5",
             "Totaal: 5 × 3 = 15 muntjes"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Er zijn 30 kinderen in de klas", "Je kunt 10 muntjes kopen voor €8,00 of 25 muntjes voor €18,00", "De rit duurt 45 minuten"],
+            "hoofdvraag": "Hoeveel muntjes heeft Mohammed nodig?",
+            "tussenstappen": ["Vermenigvuldig aantal keer spelen met muntjes per keer"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Kosten per keer": "3 muntjes",
+              "Aantal keer spelen": "5"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totaal aantal muntjes",
+                "berekening": "5 × 3",
+                "resultaat": "15 muntjes",
+                "uitleg": "Vermenigvuldig aantal keer spelen met muntjes per keer"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "muntjes (aantal)",
+            "logica_check": "15 muntjes is logisch: 5 keer spelen × 3 muntjes per keer",
+            "antwoord": "15 muntjes"
+          }
         }
       },
       {
@@ -5511,6 +7256,55 @@
             "1× 25 muntjes = 25 muntjes voor €18,00 (voldoende maar duurder)",
             "Goedkoopst: 2× 10 muntjes voor €16,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Er zijn 30 kinderen in de klas", "De rit duurt 45 minuten"],
+            "hoofdvraag": "Wat is de goedkoopste manier om genoeg muntjes te kopen?",
+            "tussenstappen": ["Mohammed heeft 15 muntjes nodig", "Bereken opties", "Vergelijk prijzen"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Aantal benodigde muntjes": "15",
+              "Pakket 1": "10 muntjes voor €8,00",
+              "Pakket 2": "25 muntjes voor €18,00"
+            },
+            "tool": "Vermenigvuldigen en vergelijken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Optie 1: 1× pakket van 10 muntjes",
+                "berekening": "10 muntjes < 15",
+                "resultaat": "Niet genoeg",
+                "uitleg": "1 pakket van 10 is te weinig"
+              },
+              {
+                "stap": "Optie 2: 2× pakket van 10 muntjes",
+                "berekening": "2 × €8,00 = €16,00 (20 muntjes)",
+                "resultaat": "€16,00",
+                "uitleg": "Genoeg muntjes voor €16,00"
+              },
+              {
+                "stap": "Optie 3: 1× pakket van 25 muntjes",
+                "berekening": "€18,00 (25 muntjes)",
+                "resultaat": "€18,00",
+                "uitleg": "Genoeg muntjes voor €18,00"
+              },
+              {
+                "stap": "Vergelijk prijzen",
+                "berekening": "€16,00 < €18,00",
+                "resultaat": "2× pakket van 10 muntjes",
+                "uitleg": "Goedkoopste optie is 2× 10 muntjes"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "2× pakket van 10 muntjes (€16,00) is logisch: goedkoper dan 1× pakket van 25 (€18,00)",
+            "antwoord": "2× pakket van 10 muntjes (€16,0)"
+          }
         }
       }
     ],
@@ -14362,6 +16156,36 @@
             "Aantal leerlingen: 32",
             "Totaal lunches: 32 × €6,50 = €208,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Bus: €8,50 per leerling (€272,00 totaal)", "Activiteiten: €12,00 per leerling (€384,00 totaal)", "Totaal: €864,00", "Het is 's ochtends"],
+            "hoofdvraag": "Hoeveel kosten de lunches in totaal?",
+            "tussenstappen": ["Vermenigvuldig prijs per lunch met aantal leerlingen"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Prijs lunch per leerling": "€6,50",
+              "Aantal leerlingen": "32"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totale kosten lunches",
+                "berekening": "32 × €6,50",
+                "resultaat": "€208,00",
+                "uitleg": "Vermenigvuldig aantal leerlingen met prijs per lunch"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€208,00 is logisch: 32 leerlingen × ongeveer €6,50 per lunch",
+            "antwoord": "€208,00"
+          }
         }
       },
       {
@@ -14391,6 +16215,36 @@
             "Aantal leerlingen: 32",
             "Prijs per leerling: €864,00 ÷ 32 = €27,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Het is 's ochtends"],
+            "hoofdvraag": "Hoeveel betaalt één leerling voor het hele schoolkamp?",
+            "tussenstappen": ["Gebruik de totale kosten uit de tabel", "Deel door aantal leerlingen"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Totale kosten schoolkamp": "€864,00",
+              "Aantal leerlingen": "32"
+            },
+            "tool": "Delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken kosten per leerling",
+                "berekening": "€864,00 ÷ 32",
+                "resultaat": "€27,00",
+                "uitleg": "Deel totale kosten door aantal leerlingen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€27,00 per leerling is logisch: €8,50 (bus) + €12,00 (activiteiten) + €6,50 (lunch) = €27,00",
+            "antwoord": "€27,00"
+          }
         }
       }
     ],
