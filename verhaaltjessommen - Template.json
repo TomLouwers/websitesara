@@ -9183,5 +9183,698 @@
         }
       }
     ]
+  },
+  {
+    "id": 231,
+    "title": "Aquarium vullen",
+    "theme": "metriek-stelsel",
+    "content": "Lisa heeft een aquarium van 80 cm lang, 40 cm breed en 50 cm hoog. Ze vult het tot 5 cm onder de rand. 1 liter = 1 kubieke decimeter (dm³).",
+    "questions": [
+      {
+        "question": "Hoeveel liter water past er in het aquarium?",
+        "options": [
+          "144 liter",
+          "160 liter",
+          "180 liter",
+          "200 liter"
+        ],
+        "correct": 0,
+        "extra_info": {
+          "tips": [
+            "Het water staat tot 5 cm onder de rand, dus de waterhoogte is: 50 - 5 = 45 cm",
+            "Volume in cm³: 80 × 40 × 45 = 144.000 cm³",
+            "1 liter = 1 dm³ = 1000 cm³",
+            "144.000 cm³ ÷ 1000 = 144 liter"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel kubieke decimeter (dm³) is dit?",
+        "options": [
+          "144 dm³",
+          "14,4 dm³",
+          "1440 dm³",
+          "1,44 dm³"
+        ],
+        "correct": 0,
+        "extra_info": {
+          "tips": [
+            "1 liter = 1 dm³",
+            "144 liter = 144 dm³"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 232,
+    "title": "Zwembad vullen",
+    "theme": "metriek-stelsel",
+    "content": "Een zwembad heeft een inhoud van 45.000 liter. De kraan vult met een snelheid van 750 liter per uur. 1 m³ = 1000 liter.",
+    "questions": [
+      {
+        "question": "Hoeveel kubieke meter (m³) water past er in het zwembad?",
+        "options": [
+          "4,5 m³",
+          "45 m³",
+          "450 m³",
+          "4500 m³"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "1 m³ = 1000 liter",
+            "45.000 liter ÷ 1000 = 45 m³"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel uur duurt het om het zwembad te vullen?",
+        "options": [
+          "30 uur",
+          "45 uur",
+          "60 uur",
+          "75 uur"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Inhoud zwembad: 45.000 liter",
+            "Vul snelheid: 750 liter per uur",
+            "Tijd = inhoud ÷ snelheid: 45.000 ÷ 750 = 60 uur"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 233,
+    "title": "Verfsommen",
+    "theme": "metriek-stelsel",
+    "content": "Een rechthoekige kamer is 6 meter lang en 4,5 meter breed. De muren zijn 2,5 meter hoog. 1 liter verf dekt 8 m² muur.",
+    "questions": [
+      {
+        "question": "Wat is de totale oppervlakte van de vier muren samen?",
+        "options": [
+          "42,5 m²",
+          "52,5 m²",
+          "67,5 m²",
+          "105 m²"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Omtrek van de kamer: 2 × (6 + 4,5) = 2 × 10,5 = 21 meter",
+            "Oppervlakte vier muren: omtrek × hoogte = 21 × 2,5 = 52,5 m²"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel liter verf is er minimaal nodig?",
+        "options": [
+          "6 liter",
+          "6,5 liter",
+          "7 liter",
+          "8 liter"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Totale oppervlakte: 52,5 m²",
+            "1 liter dekt 8 m²",
+            "Benodigde verf: 52,5 ÷ 8 = 6,5625 liter",
+            "Je kunt alleen hele liters kopen, dus afgerond naar boven: 7 liter"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 234,
+    "title": "L-vormige tuin",
+    "theme": "metriek-stelsel",
+    "content": "Een L-vormige tuin bestaat uit twee rechthoeken: deel A is 8 meter lang en 5 meter breed, deel B is 6 meter lang en 3 meter breed. De tuinaarde kost €12,50 per m².",
+    "questions": [
+      {
+        "question": "Wat is de totale oppervlakte van de tuin?",
+        "options": [
+          "52 m²",
+          "58 m²",
+          "64 m²",
+          "70 m²"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Oppervlakte deel A: 8 × 5 = 40 m²",
+            "Oppervlakte deel B: 6 × 3 = 18 m²",
+            "Totale oppervlakte: 40 + 18 = 58 m²"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel kost de tuinaarde voor de hele tuin?",
+        "options": [
+          "€650,00",
+          "€700,00",
+          "€725,00",
+          "€750,00"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Totale oppervlakte: 58 m²",
+            "Prijs per m²: €12,50",
+            "Totale kosten: 58 × €12,50 = €725,00"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 235,
+    "title": "Spaarrekening met rente",
+    "theme": "procenten-rente",
+    "content": "Emma zet €2000,- op een spaarrekening met 3% rente per jaar. De rente wordt elk jaar bij het bedrag opgeteld (samengestelde interest).",
+    "questions": [
+      {
+        "question": "Hoeveel geld heeft Emma na 1 jaar?",
+        "options": [
+          "€2030,-",
+          "€2060,-",
+          "€2090,-",
+          "€2120,-"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Rente na jaar 1: 3% van €2000,- = 0,03 × €2000,- = €60,-",
+            "Totaal na jaar 1: €2000,- + €60,- = €2060,-",
+            "Of: €2000,- × 1,03 = €2060,-"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel geld heeft Emma na 2 jaar?",
+        "options": [
+          "€2120,-",
+          "€2121,80",
+          "€2123,60",
+          "€2180,-"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Na jaar 1: €2060,-",
+            "Rente na jaar 2: 3% van €2060,- = 0,03 × €2060,- = €61,80",
+            "Totaal na jaar 2: €2060,- + €61,80 = €2121,80",
+            "Of: €2000,- × 1,03² = €2000,- × 1,0609 = €2121,80"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 236,
+    "title": "Waardedaling auto",
+    "theme": "procenten-rente",
+    "content": "Een nieuwe auto kost €24.000,-. De auto verliest elk jaar 15% van zijn waarde (op basis van de waarde aan het begin van dat jaar).",
+    "questions": [
+      {
+        "question": "Hoeveel is de auto waard na 1 jaar?",
+        "options": [
+          "€18.400,-",
+          "€19.200,-",
+          "€20.000,-",
+          "€20.400,-"
+        ],
+        "correct": 3,
+        "extra_info": {
+          "tips": [
+            "Waardedaling na jaar 1: 15% van €24.000,- = 0,15 × €24.000,- = €3600,-",
+            "Waarde na jaar 1: €24.000,- - €3600,- = €20.400,-",
+            "Of: €24.000,- × 0,85 = €20.400,-"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel is de auto waard na 2 jaar?",
+        "options": [
+          "€16.340,-",
+          "€17.000,-",
+          "€17.340,-",
+          "€18.000,-"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Na jaar 1: €20.400,-",
+            "Waardedaling na jaar 2: 15% van €20.400,- = 0,15 × €20.400,- = €3060,-",
+            "Waarde na jaar 2: €20.400,- - €3060,- = €17.340,-",
+            "Of: €24.000,- × 0,85² = €24.000,- × 0,7225 = €17.340,-"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 237,
+    "title": "Korting op korting",
+    "theme": "procenten-rente",
+    "content": "Een winkel geeft eerst 20% korting op alle artikelen. Daarna krijg je als klantenkaarthouder nog eens 10% extra korting op de nieuwe prijs. Een jas kost oorspronkelijk €150,-.",
+    "questions": [
+      {
+        "question": "Hoeveel kost de jas na de eerste korting van 20%?",
+        "options": [
+          "€100,-",
+          "€110,-",
+          "€120,-",
+          "€130,-"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Eerste korting: 20% van €150,- = 0,20 × €150,- = €30,-",
+            "Prijs na eerste korting: €150,- - €30,- = €120,-",
+            "Of: €150,- × 0,80 = €120,-"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel kost de jas na beide kortingen?",
+        "options": [
+          "€105,-",
+          "€108,-",
+          "€110,-",
+          "€115,-"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Na eerste korting: €120,-",
+            "Tweede korting: 10% van €120,- = 0,10 × €120,- = €12,-",
+            "Eindprijs: €120,- - €12,- = €108,-",
+            "Of: €150,- × 0,80 × 0,90 = €150,- × 0,72 = €108,-",
+            "Let op: Dit is NIET 30% korting! (30% zou €105,- zijn)"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 238,
+    "title": "Populatiegroei",
+    "theme": "procenten-rente",
+    "content": "In een natuurgebied leven 800 herten. Het aantal herten groeit elk jaar met 12% (samengestelde groei).",
+    "questions": [
+      {
+        "question": "Hoeveel herten zijn er na 1 jaar?",
+        "options": [
+          "896 herten",
+          "900 herten",
+          "912 herten",
+          "920 herten"
+        ],
+        "correct": 0,
+        "extra_info": {
+          "tips": [
+            "Groei na jaar 1: 12% van 800 = 0,12 × 800 = 96 herten",
+            "Totaal na jaar 1: 800 + 96 = 896 herten",
+            "Of: 800 × 1,12 = 896 herten"
+          ]
+        }
+      },
+      {
+        "question": "Ongeveer hoeveel herten zijn er na 2 jaar?",
+        "options": [
+          "992 herten",
+          "1000 herten",
+          "1003 herten",
+          "1024 herten"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Na jaar 1: 896 herten",
+            "Groei na jaar 2: 12% van 896 = 0,12 × 896 = 107,52 herten",
+            "Totaal na jaar 2: 896 + 107,52 ≈ 1003,52 ≈ 1003 herten",
+            "Of: 800 × 1,12² = 800 × 1,2544 = 1003,52 ≈ 1003 herten"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 239,
+    "title": "Nachttrein naar Berlijn",
+    "theme": "tijd-snelheid",
+    "content": "De trein van Amsterdam naar Berlijn vertrekt om 23:45 uur. De reis duurt 6 uur en 40 minuten. In de trein kun je slapen.",
+    "questions": [
+      {
+        "question": "Hoe laat komt de trein aan in Berlijn?",
+        "options": [
+          "05:25 uur",
+          "06:15 uur",
+          "06:25 uur",
+          "06:35 uur"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Vertrek: 23:45 uur",
+            "Reisduur: 6 uur en 40 minuten",
+            "Van 23:45 uur naar middernacht: 15 minuten",
+            "Na middernacht nog: 6 uur 40 minuten - 15 minuten = 6 uur 25 minuten",
+            "Aankomst: 00:00 uur + 6 uur 25 minuten = 06:25 uur"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel minuten na middernacht komt de trein aan?",
+        "options": [
+          "355 minuten",
+          "375 minuten",
+          "385 minuten",
+          "395 minuten"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Aankomst: 06:25 uur",
+            "Dit is 6 uur en 25 minuten na middernacht",
+            "6 uur = 6 × 60 = 360 minuten",
+            "360 + 25 = 385 minuten"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 240,
+    "title": "Nieuwjaarsfeest",
+    "theme": "tijd-snelheid",
+    "content": "Een nieuwjaarsfeest begint op 31 december om 22:30 uur en eindigt op 1 januari om 02:15 uur. Elk uur wordt er 15 minuten muziek gedraaid.",
+    "questions": [
+      {
+        "question": "Hoe lang duurt het feest?",
+        "options": [
+          "3 uur en 15 minuten",
+          "3 uur en 30 minuten",
+          "3 uur en 45 minuten",
+          "4 uur en 15 minuten"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Van 22:30 uur naar middernacht: 1 uur en 30 minuten",
+            "Van middernacht naar 02:15 uur: 2 uur en 15 minuten",
+            "Totaal: 1 uur 30 minuten + 2 uur 15 minuten = 3 uur en 45 minuten"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel minuten muziek wordt er in totaal gedraaid?",
+        "options": [
+          "45 minuten",
+          "52 minuten",
+          "56 minuten",
+          "60 minuten"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Het feest duurt 3 uur en 45 minuten = 3,75 uur",
+            "Afgerond naar beneden: 3 hele uren zijn verstreken",
+            "Elk uur 15 minuten muziek: 3 × 15 = 45 minuten",
+            "Maar wacht: van 22:30 tot 02:15 zijn er 4 'uur-periodes':",
+            "22:30-23:30 (uur 1), 23:30-00:30 (uur 2), 00:30-01:30 (uur 3), 01:30-02:15 (deel van uur 4)",
+            "In de eerste 3 hele uren: 3 × 15 = 45 minuten",
+            "In het laatste deel (45 minuten) wordt ook nog 11 minuten muziek gedraaid (15 min/uur × 0,75)",
+            "Correctie: 15 minuten per uur betekent elk heel uur. Er zijn bijna 4 uren, dus ongeveer 4 × 15 = 60 minuten, maar het laatste uur is niet compleet",
+            "Beter: 3,75 uur × 15 minuten/uur = 56,25 minuten ≈ 56 minuten"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 241,
+    "title": "Inhaalrace",
+    "theme": "tijd-snelheid",
+    "content": "Lisa en Tom fietsen in dezelfde richting van Amsterdam naar Utrecht (45 km). Lisa vertrekt om 09:00 uur met 15 km/uur. Tom vertrekt om 09:30 uur met 20 km/uur.",
+    "questions": [
+      {
+        "question": "Hoeveel kilometer heeft Lisa afgelegd als Tom vertrekt?",
+        "options": [
+          "5 km",
+          "7,5 km",
+          "10 km",
+          "12,5 km"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Lisa vertrekt om 09:00 uur, Tom om 09:30 uur",
+            "Verschil: 30 minuten = 0,5 uur",
+            "Lisa's snelheid: 15 km/uur",
+            "Afstand in 0,5 uur: 15 × 0,5 = 7,5 km"
+          ]
+        }
+      },
+      {
+        "question": "Hoe laat haalt Tom Lisa in?",
+        "options": [
+          "10:30 uur",
+          "11:00 uur",
+          "11:15 uur",
+          "11:30 uur"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Als Tom vertrekt (09:30) is Lisa al 7,5 km vooruit",
+            "Tom fietst 5 km/uur sneller dan Lisa (20 - 15 = 5 km/uur)",
+            "Tijd om Lisa in te halen: 7,5 km ÷ 5 km/uur = 1,5 uur",
+            "09:30 uur + 1 uur 30 minuten = 11:00 uur",
+            "Controle: In 1,5 uur fietst Tom: 20 × 1,5 = 30 km",
+            "In 2 uur fietst Lisa (09:00-11:00): 15 × 2 = 30 km ✓"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 242,
+    "title": "Nachtdienst ziekenhuis",
+    "theme": "tijd-snelheid",
+    "content": "Dokter Jansen heeft nachtdienst van 23:00 uur tot 07:00 uur. Tijdens de nachtdienst behandelt hij gemiddeld 3 patiënten per uur.",
+    "questions": [
+      {
+        "question": "Hoe lang duurt de nachtdienst?",
+        "options": [
+          "6 uur",
+          "7 uur",
+          "8 uur",
+          "9 uur"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Van 23:00 uur naar middernacht: 1 uur",
+            "Van middernacht naar 07:00 uur: 7 uur",
+            "Totaal: 1 + 7 = 8 uur"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel patiënten behandelt dokter Jansen tijdens deze nachtdienst?",
+        "options": [
+          "18 patiënten",
+          "21 patiënten",
+          "24 patiënten",
+          "27 patiënten"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Duur nachtdienst: 8 uur",
+            "Aantal patiënten per uur: 3",
+            "Totaal: 8 × 3 = 24 patiënten"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 243,
+    "title": "Plattegrond van de school",
+    "theme": "schaal",
+    "content": "Op een plattegrond van de school is de gymzaal 8 cm lang. In werkelijkheid is de gymzaal 24 meter lang.",
+    "questions": [
+      {
+        "question": "Wat is de schaal van de plattegrond?",
+        "options": [
+          "1:100",
+          "1:200",
+          "1:250",
+          "1:300"
+        ],
+        "correct": 3,
+        "extra_info": {
+          "tips": [
+            "Op tekening: 8 cm",
+            "In werkelijkheid: 24 meter = 2400 cm",
+            "Schaal: 1 : (2400 ÷ 8) = 1 : 300",
+            "Check: 8 cm × 300 = 2400 cm = 24 meter ✓"
+          ]
+        }
+      },
+      {
+        "question": "Het schoolplein is in werkelijkheid 45 meter breed. Hoe breed is het op de plattegrond?",
+        "options": [
+          "12 cm",
+          "13,5 cm",
+          "15 cm",
+          "18 cm"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Schaal: 1:300",
+            "Werkelijkheid: 45 meter = 4500 cm",
+            "Op tekening: 4500 ÷ 300 = 15 cm"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 244,
+    "title": "Kaart van Nederland",
+    "theme": "schaal",
+    "content": "Op een kaart meet de afstand tussen Amsterdam en Rotterdam 6 cm. De werkelijke afstand is ongeveer 60 km.",
+    "questions": [
+      {
+        "question": "Wat is de schaal van deze kaart?",
+        "options": [
+          "1:100.000",
+          "1:500.000",
+          "1:1.000.000",
+          "1:10.000.000"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Op kaart: 6 cm",
+            "Werkelijkheid: 60 km = 60.000 meter = 6.000.000 cm",
+            "Schaal: 1 : (6.000.000 ÷ 6) = 1 : 1.000.000",
+            "Check: 6 cm × 1.000.000 = 6.000.000 cm = 60 km ✓"
+          ]
+        }
+      },
+      {
+        "question": "De afstand tussen Utrecht en Den Haag is op de kaart 5 cm. Hoe groot is de werkelijke afstand?",
+        "options": [
+          "40 km",
+          "45 km",
+          "50 km",
+          "55 km"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Schaal: 1:1.000.000",
+            "Op kaart: 5 cm",
+            "Werkelijkheid: 5 cm × 1.000.000 = 5.000.000 cm = 50.000 meter = 50 km"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 245,
+    "title": "Maquette van een huis",
+    "theme": "schaal",
+    "content": "Een architect maakt een maquette van een nieuw huis. Het echte huis wordt 12 meter hoog. Op de maquette is het huis 30 cm hoog.",
+    "questions": [
+      {
+        "question": "Wat is de schaal van de maquette?",
+        "options": [
+          "1:25",
+          "1:30",
+          "1:40",
+          "1:50"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Op maquette: 30 cm",
+            "Werkelijkheid: 12 meter = 1200 cm",
+            "Schaal: 1 : (1200 ÷ 30) = 1 : 40",
+            "Check: 30 cm × 40 = 1200 cm = 12 meter ✓"
+          ]
+        }
+      },
+      {
+        "question": "De voordeur is in werkelijkheid 2,4 meter hoog. Hoe hoog is de voordeur op de maquette?",
+        "options": [
+          "4 cm",
+          "5 cm",
+          "6 cm",
+          "8 cm"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Schaal: 1:40",
+            "Werkelijkheid: 2,4 meter = 240 cm",
+            "Op maquette: 240 ÷ 40 = 6 cm"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 246,
+    "title": "Wandelroute in het bos",
+    "theme": "schaal",
+    "content": "Op een wandelkaart is een route 15 cm lang. De werkelijke route is 4,5 km lang.",
+    "questions": [
+      {
+        "question": "Wat is de schaal van deze wandelkaart?",
+        "options": [
+          "1:20.000",
+          "1:25.000",
+          "1:30.000",
+          "1:35.000"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Op kaart: 15 cm",
+            "Werkelijkheid: 4,5 km = 4500 meter = 450.000 cm",
+            "Schaal: 1 : (450.000 ÷ 15) = 1 : 30.000",
+            "Check: 15 cm × 30.000 = 450.000 cm = 4,5 km ✓"
+          ]
+        }
+      },
+      {
+        "question": "Een andere route is in werkelijkheid 7,5 km. Hoe lang is deze route op de kaart?",
+        "options": [
+          "20 cm",
+          "22,5 cm",
+          "25 cm",
+          "30 cm"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Schaal: 1:30.000",
+            "Werkelijkheid: 7,5 km = 7500 meter = 750.000 cm",
+            "Op kaart: 750.000 ÷ 30.000 = 25 cm"
+          ]
+        }
+      }
+    ]
   }
 ]
