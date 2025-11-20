@@ -15389,5 +15389,347 @@
       }
     ],
     "sub_theme": "kaarten en schaal"
+  },
+  {
+    "id": 247,
+    "title": "Tuintegels kopen",
+    "theme": "metriek-stelsel",
+    "content": "De familie Jansen wil hun terras betegelen. Het terras is 6 meter lang en 4 meter breed. De tegels zijn vierkant met zijden van 50 cm. Een pak tegels (10 stuks) kost €45,00.",
+    "questions": [
+      {
+        "question": "Wat is de oppervlakte van het terras in vierkante centimeter (cm²)?",
+        "options": [
+          {
+            "text": "24 cm²",
+            "foutanalyse": "Je hebt vergeten om te rekenen naar cm². Check de omrekening: 1 m = 100 cm, dus 1 m² = 10.000 cm²."
+          },
+          {
+            "text": "2.400 cm²",
+            "foutanalyse": "Je bent op de goede weg, maar je hebt een fout gemaakt bij het omrekenen. 1 m² = 100 × 100 = 10.000 cm²."
+          },
+          {
+            "text": "24.000 cm²",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "240.000 cm²",
+            "foutanalyse": ""
+          }
+        ],
+        "correct": 3,
+        "extra_info": {
+          "concept": "Dit is een meeteenheid probleem: let goed op de eenheden en reken ze om waar nodig. 1 m² = 10.000 cm².",
+          "berekening": [
+            "Oppervlakte terras: 6 × 4 = 24 m²",
+            "Omrekenen naar cm²: 1 m² = 100 × 100 = 10.000 cm²",
+            "24 m² = 24 × 10.000 = 240.000 cm²"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel tegels zijn er nodig om het hele terras te betegelen?",
+        "options": [
+          {
+            "text": "24 tegels",
+            "foutanalyse": "Je hebt alleen de oppervlakte in m² berekend. Bereken hoeveel tegels van 50 × 50 cm passen in het terras."
+          },
+          {
+            "text": "48 tegels",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "96 tegels",
+            "foutanalyse": ""
+          },
+          {
+            "text": "192 tegels",
+            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een deelberekening: je moet het totaal delen door de grootte van één deel.",
+          "berekening": [
+            "Oppervlakte 1 tegel: 50 × 50 = 2.500 cm²",
+            "Aantal tegels: 240.000 ÷ 2.500 = 96 tegels"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "oppervlakte en eenheden"
+  },
+  {
+    "id": 248,
+    "title": "Zwembad opvullen",
+    "theme": "metriek-stelsel",
+    "content": "Een opblaasbaar zwembad heeft een lengte van 3 meter, een breedte van 2 meter en een hoogte van 60 cm. De familie vult het tot 10 cm onder de rand. 1 m³ = 1.000 liter.",
+    "questions": [
+      {
+        "question": "Hoeveel kubieke meter (m³) water zit er in het zwembad?",
+        "options": [
+          {
+            "text": "2,5 m³",
+            "foutanalyse": "Je hebt vergeten dat het water tot 10 cm onder de rand staat. De waterhoogte is 50 cm, niet 60 cm."
+          },
+          {
+            "text": "3 m³",
+            "foutanalyse": ""
+          },
+          {
+            "text": "3,6 m³",
+            "foutanalyse": "Je hebt vergeten dat het water tot 10 cm onder de rand staat. Bereken eerst de juiste waterhoogte."
+          },
+          {
+            "text": "30 m³",
+            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een meeteenheid probleem: let goed op de eenheden en reken ze om waar nodig. 1 m = 100 cm.",
+          "berekening": [
+            "Waterhoogte: 60 - 10 = 50 cm = 0,5 m",
+            "Volume: 3 × 2 × 0,5 = 3 m³"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel liter water zit er in het zwembad?",
+        "options": [
+          {
+            "text": "300 liter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen. 1 m³ = 1.000 liter, niet 100 liter."
+          },
+          {
+            "text": "3.000 liter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "30.000 liter",
+            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+          },
+          {
+            "text": "300.000 liter",
+            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een meeteenheid probleem: 1 m³ = 1.000 liter.",
+          "berekening": [
+            "Volume: 3 m³",
+            "Omrekenen: 3 × 1.000 = 3.000 liter"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "volume en eenheden"
+  },
+  {
+    "id": 249,
+    "title": "Schoolplein opnieuw schilderen",
+    "theme": "metriek-stelsel",
+    "content": "Het schoolplein wordt opnieuw geschilderd. Het speelveld is 1.500 cm lang en 800 cm breed. Eén blik verf dekt 5 m². Een blik verf kost €28,50.",
+    "questions": [
+      {
+        "question": "Hoeveel vierkante meter (m²) moet er geschilderd worden?",
+        "options": [
+          {
+            "text": "12 m²",
+            "foutanalyse": ""
+          },
+          {
+            "text": "120 m²",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "1.200 m²",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen van cm naar m. Let op: 1 m = 100 cm."
+          },
+          {
+            "text": "12.000 m²",
+            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een meeteenheid probleem: reken de eenheden om naar m² (1 m = 100 cm, dus 1 m² = 10.000 cm²).",
+          "berekening": [
+            "Omrekenen: 1.500 cm = 15 m en 800 cm = 8 m",
+            "Oppervlakte: 15 × 8 = 120 m²",
+            "Of: 1.500 × 800 = 1.200.000 cm² = 120 m²"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel blikken verf zijn er minimaal nodig?",
+        "options": [
+          {
+            "text": "20 blikken",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken opnieuw hoeveel m² geschilderd moet worden en deel dit door 5."
+          },
+          {
+            "text": "24 blikken",
+            "foutanalyse": ""
+          },
+          {
+            "text": "25 blikken",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "30 blikken",
+            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een deelberekening: deel het totaal door hoeveel één blik dekt.",
+          "berekening": [
+            "Oppervlakte: 120 m²",
+            "Aantal blikken: 120 ÷ 5 = 24 blikken"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "oppervlakte en eenheden"
+  },
+  {
+    "id": 250,
+    "title": "Regenwater opvangen",
+    "theme": "metriek-stelsel",
+    "content": "In de tuin staat een regenton met een diameter van 80 cm en een hoogte van 120 cm. Na een flinke regenbui is de ton voor driekwart gevuld. 1 dm³ = 1 liter.",
+    "questions": [
+      {
+        "question": "Wat is de inhoud van de gehele regenton in kubieke decimeter (dm³)?",
+        "options": [
+          {
+            "text": "60,3 dm³",
+            "foutanalyse": "Dit is niet het juiste antwoord. Voor een cilinder gebruik je de formule: π × r² × h."
+          },
+          {
+            "text": "603 dm³",
+            "foutanalyse": ""
+          },
+          {
+            "text": "6.030 dm³",
+            "foutanalyse": "Dit is niet het juiste antwoord. Let op je eenheden en controleer je berekening."
+          },
+          {
+            "text": "2.412 dm³",
+            "foutanalyse": "Je hebt waarschijnlijk de diameter gebruikt in plaats van de straal. Gebruik r = diameter ÷ 2."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een volume berekening van een cilinder: V = π × r² × h. Let op: gebruik de straal (r = diameter ÷ 2).",
+          "berekening": [
+            "Omrekenen naar dm: 80 cm = 8 dm, 120 cm = 12 dm",
+            "Straal: 8 ÷ 2 = 4 dm",
+            "Volume cilinder: π × 4² × 12 ≈ 3,14 × 16 × 12 ≈ 603 dm³"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel liter water zit er nu in de regenton (driekwart vol)?",
+        "options": [
+          {
+            "text": "150,75 liter",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken opnieuw driekwart van de totale inhoud."
+          },
+          {
+            "text": "402 liter",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "452,25 liter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "603 liter",
+            "foutanalyse": "Dit is de totale inhoud, maar de ton is maar driekwart vol. Bereken ¾ van dit getal."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een breukberekening met eenheden: 1 dm³ = 1 liter.",
+          "berekening": [
+            "Totale inhoud: 603 dm³ = 603 liter",
+            "Driekwart vol: 603 × ¾ = 603 × 0,75 = 452,25 liter"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "volume en eenheden"
+  },
+  {
+    "id": 251,
+    "title": "Behang plakken",
+    "theme": "metriek-stelsel",
+    "content": "Een muur is 450 cm breed en 275 cm hoog. Er zitten twee ramen in de muur die elk 120 cm breed en 80 cm hoog zijn. Een rol behang dekt 5,2 m².",
+    "questions": [
+      {
+        "question": "Hoeveel vierkante meter (m²) muur moet er behangen worden (na aftrek van de ramen)?",
+        "options": [
+          {
+            "text": "10,45 m²",
+            "foutanalyse": ""
+          },
+          {
+            "text": "10,56 m²",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer of je beide ramen hebt afgetrokken."
+          },
+          {
+            "text": "12,375 m²",
+            "foutanalyse": "Je hebt vergeten de ramen af te trekken van de totale muuroppervlakte."
+          },
+          {
+            "text": "14,3 m²",
+            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een aftreksom met oppervlakte: bereken de muuroppervlakte en trek de raamoppervlaktes af.",
+          "berekening": [
+            "Omrekenen: 450 cm = 4,5 m en 275 cm = 2,75 m",
+            "Muuroppervlakte: 4,5 × 2,75 = 12,375 m²",
+            "Raamoppervlakte per stuk: 1,2 × 0,8 = 0,96 m²",
+            "Twee ramen: 2 × 0,96 = 1,92 m²",
+            "Te behangen: 12,375 - 1,92 = 10,455 ≈ 10,45 m²"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel rollen behang zijn er minimaal nodig?",
+        "options": [
+          {
+            "text": "1 rol",
+            "foutanalyse": "Dit is niet genoeg. Bereken hoeveel m² er behangen moet worden en hoeveel m² één rol dekt."
+          },
+          {
+            "text": "2 rollen",
+            "foutanalyse": ""
+          },
+          {
+            "text": "3 rollen",
+            "foutanalyse": "Je hebt te veel rollen berekend. Controleer je deling nog eens."
+          },
+          {
+            "text": "4 rollen",
+            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een deelberekening: deel het totaal door hoeveel één rol dekt. Bij rest rond je naar boven af.",
+          "berekening": [
+            "Te behangen: 10,45 m²",
+            "Aantal rollen: 10,45 ÷ 5,2 ≈ 2,01",
+            "Je kunt geen 0,01 rol kopen, dus je hebt 2 rollen nodig (eerste rol dekt 5,2 m², tweede rol dekt de resterende 5,25 m²)"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "oppervlakte en eenheden"
   }
 ]
