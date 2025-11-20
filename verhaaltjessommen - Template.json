@@ -16755,5 +16755,682 @@
       }
     ],
     "sub_theme": "percentage van breuk van decimaal"
+  },
+  {
+    "id": 267,
+    "title": "Badkamer betegelen",
+    "theme": "metriek-stelsel",
+    "content": "Een badkamer heeft een vloer van 3,5 meter bij 2,8 meter. De tegels zijn 20 cm × 20 cm groot. Een doos bevat 25 tegels en kost €32,50. Er moet 10% extra tegels gekocht worden voor snijverlies.",
+    "questions": [
+      {
+        "question": "Hoeveel vierkante centimeter (cm²) is de vloer?",
+        "options": [
+          {
+            "text": "9,8 cm²",
+            "foutanalyse": "Je hebt alleen de meters bij elkaar opgeteld. Je moet vermenigvuldigen en omrekenen naar cm²."
+          },
+          {
+            "text": "980 cm²",
+            "foutanalyse": "Je hebt vergeten om te rekenen naar cm². Let op: 1 m² = 10.000 cm²."
+          },
+          {
+            "text": "9.800 cm²",
+            "foutanalyse": "Je bent op de goede weg, maar 1 m² = 10.000 cm², dus vermenigvuldig nog met 10."
+          },
+          {
+            "text": "98.000 cm²",
+            "foutanalyse": ""
+          }
+        ],
+        "correct": 3,
+        "extra_info": {
+          "concept": "Dit is een meeteenheid probleem: 1 m² = 10.000 cm² (100 × 100).",
+          "berekening": [
+            "Oppervlakte: 3,5 × 2,8 = 9,8 m²",
+            "Omrekenen: 9,8 × 10.000 = 98.000 cm²"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel dozen tegels moet er minimaal gekocht worden (inclusief 10% snijverlies)?",
+        "options": [
+          {
+            "text": "10 dozen",
+            "foutanalyse": "Je hebt het snijverlies vergeten. Er moet 10% extra gekocht worden."
+          },
+          {
+            "text": "11 dozen",
+            "foutanalyse": ""
+          },
+          {
+            "text": "12 dozen",
+            "foutanalyse": "Dit is te veel. Bereken eerst het aantal tegels en deel door 25."
+          },
+          {
+            "text": "13 dozen",
+            "foutanalyse": "Dit is te veel. Controleer je berekening stap voor stap."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een deelberekening met percentage extra: bereken eerst het aantal tegels inclusief 10% extra.",
+          "berekening": [
+            "Oppervlakte tegel: 20 × 20 = 400 cm²",
+            "Aantal tegels: 98.000 ÷ 400 = 245 tegels",
+            "Met 10% extra: 245 × 1,10 = 269,5 tegels",
+            "Aantal dozen: 270 ÷ 25 = 10,8, dus 11 dozen"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "oppervlakte en eenheden"
+  },
+  {
+    "id": 268,
+    "title": "Vijver in de tuin",
+    "theme": "metriek-stelsel",
+    "content": "Een rechthoekige vijver is 4 meter lang, 2,5 meter breed en 80 cm diep. De vijver wordt voor ⅘ gevuld met water. 1 kubieke meter (m³) = 1.000 liter.",
+    "questions": [
+      {
+        "question": "Hoeveel kubieke meter (m³) water kan er maximaal in de vijver?",
+        "options": [
+          {
+            "text": "6,4 m³",
+            "foutanalyse": "Je hebt de diepte waarschijnlijk niet omgerekend naar meters. 80 cm = 0,8 m."
+          },
+          {
+            "text": "8 m³",
+            "foutanalyse": ""
+          },
+          {
+            "text": "10 m³",
+            "foutanalyse": "Dit is te veel. Controleer de diepte: 80 cm = 0,8 m, niet 1 m."
+          },
+          {
+            "text": "80 m³",
+            "foutanalyse": "Je hebt vergeten om cm naar m om te rekenen. 80 cm = 0,8 m."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een volume berekening: V = lengte × breedte × hoogte. Let op de eenheden!",
+          "berekening": [
+            "Diepte omrekenen: 80 cm = 0,8 m",
+            "Volume: 4 × 2,5 × 0,8 = 8 m³"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel liter water zit er in de vijver als deze voor ⅘ is gevuld?",
+        "options": [
+          {
+            "text": "1.600 liter",
+            "foutanalyse": "Dit is te weinig. Bereken eerst het totale volume, dan ⅘ daarvan, en reken om naar liters."
+          },
+          {
+            "text": "6.400 liter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "8.000 liter",
+            "foutanalyse": "Dit is het totale volume, maar de vijver is maar ⅘ gevuld."
+          },
+          {
+            "text": "10.000 liter",
+            "foutanalyse": "Dit is te veel. De vijver bevat maximaal 8 m³ en is slechts ⅘ gevuld."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een combinatie van volume en breuk berekening: 1 m³ = 1.000 liter.",
+          "berekening": [
+            "Volume bij ⅘: 8 × ⅘ = 8 × 4 ÷ 5 = 6,4 m³",
+            "Omrekenen: 6,4 × 1.000 = 6.400 liter"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "volume en eenheden"
+  },
+  {
+    "id": 269,
+    "title": "Zandbak vullen",
+    "theme": "metriek-stelsel",
+    "content": "Een zandbak is 3 meter lang, 2 meter breed en wordt 40 cm hoog gevuld met zand. Zand wordt geleverd in zakken van 50 liter (= 50 dm³). Een zak kost €4,80.",
+    "questions": [
+      {
+        "question": "Hoeveel kubieke decimeter (dm³) zand past er in de zandbak?",
+        "options": [
+          {
+            "text": "240 dm³",
+            "foutanalyse": "Dit is te weinig. Let op de conversie: 1 m = 10 dm."
+          },
+          {
+            "text": "2.400 dm³",
+            "foutanalyse": ""
+          },
+          {
+            "text": "24.000 dm³",
+            "foutanalyse": "Dit is te veel. Controleer je omrekening van meter naar decimeter."
+          },
+          {
+            "text": "240.000 dm³",
+            "foutanalyse": "Dit is veel te veel. 1 m = 10 dm, dus 1 m³ = 1.000 dm³."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een volume berekening met eenheidsconversie: 1 m = 10 dm, dus 1 m³ = 1.000 dm³.",
+          "berekening": [
+            "Omrekenen: 3 m = 30 dm, 2 m = 20 dm, 40 cm = 4 dm",
+            "Volume: 30 × 20 × 4 = 2.400 dm³",
+            "Of: 3 × 2 × 0,4 = 2,4 m³ = 2.400 dm³"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel zakken zand moet er gekocht worden?",
+        "options": [
+          {
+            "text": "40 zakken",
+            "foutanalyse": "Dit is te weinig. Bereken het totale volume en deel door 50 liter per zak."
+          },
+          {
+            "text": "48 zakken",
+            "foutanalyse": ""
+          },
+          {
+            "text": "50 zakken",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "60 zakken",
+            "foutanalyse": "Dit is te veel. Bereken: 2.400 dm³ ÷ 50 dm³."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een deelberekening: 1 dm³ = 1 liter.",
+          "berekening": [
+            "Volume: 2.400 dm³ = 2.400 liter",
+            "Aantal zakken: 2.400 ÷ 50 = 48 zakken"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "volume en eenheden"
+  },
+  {
+    "id": 270,
+    "title": "Sportveld aanleggen",
+    "theme": "metriek-stelsel",
+    "content": "Een sportveld is 4.500 cm lang en 2.800 cm breed. Er moet 6 cm dik kunstgras worden aangelegd. 1 m³ kunstgras kost €185,00.",
+    "questions": [
+      {
+        "question": "Wat is de oppervlakte van het sportveld in vierkante meter (m²)?",
+        "options": [
+          {
+            "text": "12,6 m²",
+            "foutanalyse": "Je hebt de meters verkeerd berekend. 4.500 cm = 45 m en 2.800 cm = 28 m."
+          },
+          {
+            "text": "126 m²",
+            "foutanalyse": ""
+          },
+          {
+            "text": "1.260 m²",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen van cm naar m. 100 cm = 1 m."
+          },
+          {
+            "text": "12.600.000 m²",
+            "foutanalyse": "Dit is veel te veel. Reken eerst om naar meters voordat je vermenigvuldigt."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een oppervlakte berekening met eenheidsconversie: 100 cm = 1 m.",
+          "berekening": [
+            "Omrekenen: 4.500 cm = 45 m en 2.800 cm = 28 m",
+            "Oppervlakte: 45 × 28 = 1.260 m²"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel kubieke meter (m³) kunstgras is er nodig?",
+        "options": [
+          {
+            "text": "7,56 m³",
+            "foutanalyse": ""
+          },
+          {
+            "text": "75,6 m³",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. 6 cm = 0,06 m, niet 0,6 m."
+          },
+          {
+            "text": "756 m³",
+            "foutanalyse": "Dit is te veel. Controleer de omrekening van cm naar m voor de dikte."
+          },
+          {
+            "text": "7.560 m³",
+            "foutanalyse": "Dit is veel te veel. De laag is maar 6 cm dik = 0,06 m."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een volume berekening: V = oppervlakte × dikte. Let op de eenheden!",
+          "berekening": [
+            "Oppervlakte: 126 m²",
+            "Dikte: 6 cm = 0,06 m",
+            "Volume: 126 × 0,06 = 7,56 m³"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "oppervlakte en volume"
+  },
+  {
+    "id": 271,
+    "title": "Aquarium in de klas",
+    "theme": "metriek-stelsel",
+    "content": "Het klasaquarium is 90 cm lang, 35 cm breed en 50 cm hoog. Het water staat tot 5 cm onder de rand. De klas wil ⅕ van het water vervangen. 1 liter = 1 dm³.",
+    "questions": [
+      {
+        "question": "Hoeveel liter water zit er in het aquarium?",
+        "options": [
+          {
+            "text": "14,175 liter",
+            "foutanalyse": "Je hebt vergeten de eenheden goed om te rekenen. Gebruik dm voor de berekening."
+          },
+          {
+            "text": "141,75 liter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "157,5 liter",
+            "foutanalyse": "Je hebt vergeten dat het water 5 cm onder de rand staat. De waterhoogte is 45 cm."
+          },
+          {
+            "text": "1.417,5 liter",
+            "foutanalyse": "Dit is te veel. Controleer je omrekening naar dm³."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een volume berekening: 1 dm³ = 1 liter, en 10 cm = 1 dm.",
+          "berekening": [
+            "Waterhoogte: 50 - 5 = 45 cm = 4,5 dm",
+            "Omrekenen: 90 cm = 9 dm, 35 cm = 3,5 dm",
+            "Volume: 9 × 3,5 × 4,5 = 141,75 dm³ = 141,75 liter"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel liter water moet de klas vervangen (⅕ van het totaal)?",
+        "options": [
+          {
+            "text": "28,35 liter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "31,5 liter",
+            "foutanalyse": "Je hebt waarschijnlijk ⅕ van het verkeerde volume berekend. Check de waterhoogte."
+          },
+          {
+            "text": "70,875 liter",
+            "foutanalyse": "Dit is te veel. ⅕ betekent delen door 5, niet vermenigvuldigen."
+          },
+          {
+            "text": "141,75 liter",
+            "foutanalyse": "Dit is het totale volume. Je moet ⅕ hiervan berekenen."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een breuk van een volume: bereken ⅕ van het totaal.",
+          "berekening": [
+            "Totaal water: 141,75 liter",
+            "Te vervangen: ⅕ van 141,75 = 141,75 ÷ 5 = 28,35 liter"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "volume en eenheden"
+  },
+  {
+    "id": 272,
+    "title": "Parkeerplaats asfalteren",
+    "theme": "metriek-stelsel",
+    "content": "Een parkeerplaats van 25 meter bij 18 meter krijgt een nieuwe asfaltlaag van 8 cm dik. Asfalt kost €45,00 per m³. Er moet 5% extra asfalt besteld worden voor oneffenheden.",
+    "questions": [
+      {
+        "question": "Hoeveel kubieke meter (m³) asfalt is er nodig (zonder de 5% extra)?",
+        "options": [
+          {
+            "text": "3,6 m³",
+            "foutanalyse": "Dit is te weinig. Bereken de oppervlakte en vermenigvuldig met de dikte in meters."
+          },
+          {
+            "text": "36 m³",
+            "foutanalyse": ""
+          },
+          {
+            "text": "360 m³",
+            "foutanalyse": "Dit is te veel. 8 cm = 0,08 m, niet 0,8 m."
+          },
+          {
+            "text": "3.600 m³",
+            "foutanalyse": "Dit is veel te veel. Controleer de omrekening van cm naar m."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een volume berekening: V = oppervlakte × dikte.",
+          "berekening": [
+            "Oppervlakte: 25 × 18 = 450 m²",
+            "Dikte: 8 cm = 0,08 m",
+            "Volume: 450 × 0,08 = 36 m³"
+          ]
+        }
+      },
+      {
+        "question": "Wat zijn de totale kosten inclusief 5% extra asfalt?",
+        "options": [
+          {
+            "text": "€1.620,00",
+            "foutanalyse": "Je hebt de 5% extra vergeten. Tel 5% bij het volume op voordat je vermenigvuldigt met de prijs."
+          },
+          {
+            "text": "€1.701,00",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€1.800,00",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer de berekening van 5% extra."
+          },
+          {
+            "text": "€1.890,00",
+            "foutanalyse": "Dit is te veel. 5% extra betekent vermenigvuldigen met 1,05."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een percentage toevoeging op een volume berekening.",
+          "berekening": [
+            "Volume met 5% extra: 36 × 1,05 = 37,8 m³",
+            "Kosten: 37,8 × €45,00 = €1.701,00"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "volume en eenheden"
+  },
+  {
+    "id": 273,
+    "title": "Boomhut bouwen",
+    "theme": "metriek-stelsel",
+    "content": "De vloer van een boomhut is 220 cm bij 180 cm. Er worden planken gebruikt van 15 cm breed. Een plank kost €12,50 per strekkende meter. Er is 3 m² extra hout nodig voor snijverlies.",
+    "questions": [
+      {
+        "question": "Wat is de oppervlakte van de vloer in vierkante meter (m²)?",
+        "options": [
+          {
+            "text": "3,96 m²",
+            "foutanalyse": ""
+          },
+          {
+            "text": "4 m²",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Reken de exacte oppervlakte uit."
+          },
+          {
+            "text": "39,6 m²",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen. 100 cm = 1 m."
+          },
+          {
+            "text": "396 m²",
+            "foutanalyse": "Dit is veel te veel. Reken eerst om naar meters: 220 cm = 2,2 m."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een oppervlakte berekening met conversie: 100 cm = 1 m.",
+          "berekening": [
+            "Omrekenen: 220 cm = 2,2 m en 180 cm = 1,8 m",
+            "Oppervlakte: 2,2 × 1,8 = 3,96 m²"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel vierkante meter (m²) hout is er in totaal nodig (inclusief 3 m² snijverlies)?",
+        "options": [
+          {
+            "text": "6,96 m²",
+            "foutanalyse": ""
+          },
+          {
+            "text": "7 m²",
+            "foutanalyse": "Je zit dichtbij! Bereken de exacte oppervlakte."
+          },
+          {
+            "text": "11,88 m²",
+            "foutanalyse": "Dit is te veel. Snijverlies is 3 m², niet 3 × de vloeroppervlakte."
+          },
+          {
+            "text": "15 m²",
+            "foutanalyse": "Dit is niet het juiste antwoord. Tel de vloeroppervlakte en snijverlies op."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een optelsom met oppervlaktes.",
+          "berekening": [
+            "Vloer: 3,96 m²",
+            "Totaal met snijverlies: 3,96 + 3 = 6,96 m²"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "oppervlakte en eenheden"
+  },
+  {
+    "id": 274,
+    "title": "Zwembad bijvullen",
+    "theme": "metriek-stelsel",
+    "content": "Een openbaar zwembad is 25 meter lang, 12 meter breed en gemiddeld 1,6 meter diep. Door verdamping verliest het zwembad dagelijks 0,8% van zijn waterinhoud. 1 m³ water kost €1,25.",
+    "questions": [
+      {
+        "question": "Hoeveel liter water bevat het zwembad?",
+        "options": [
+          {
+            "text": "480 liter",
+            "foutanalyse": "Dit is veel te weinig. Je hebt waarschijnlijk een fout gemaakt in de berekening."
+          },
+          {
+            "text": "4.800 liter",
+            "foutanalyse": "Dit is te weinig. Vergeet niet dat 1 m³ = 1.000 liter."
+          },
+          {
+            "text": "48.000 liter",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "480.000 liter",
+            "foutanalyse": ""
+          }
+        ],
+        "correct": 3,
+        "extra_info": {
+          "concept": "Dit is een volume berekening: 1 m³ = 1.000 liter.",
+          "berekening": [
+            "Volume: 25 × 12 × 1,6 = 480 m³",
+            "Omrekenen: 480 × 1.000 = 480.000 liter"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel liter water moet er dagelijks worden bijgevuld door verdamping (0,8%)?",
+        "options": [
+          {
+            "text": "384 liter",
+            "foutanalyse": "Dit is te weinig. Bereken 0,8% van het totale volume."
+          },
+          {
+            "text": "3.840 liter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "38.400 liter",
+            "foutanalyse": "Dit is te veel. 0,8% = 0,008, niet 0,08."
+          },
+          {
+            "text": "48.000 liter",
+            "foutanalyse": "Dit is 10% van het totaal, niet 0,8%."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een percentage berekening: 0,8% = 0,008.",
+          "berekening": [
+            "Totaal: 480.000 liter",
+            "0,8% daarvan: 480.000 × 0,008 = 3.840 liter"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "volume en eenheden"
+  },
+  {
+    "id": 275,
+    "title": "Opslagruimte verhuur",
+    "theme": "metriek-stelsel",
+    "content": "Een opslagbedrijf verhuurt boxen. Een kleine box is 2,5 m lang, 2 m breed en 2,4 m hoog. Een grote box heeft dubbele lengte en breedte, maar dezelfde hoogte. De huurprijs is €0,15 per m³ per maand.",
+    "questions": [
+      {
+        "question": "Hoeveel kubieke meter (m³) is een kleine box?",
+        "options": [
+          {
+            "text": "6,9 m³",
+            "foutanalyse": "Je hebt de afmetingen waarschijnlijk bij elkaar opgeteld in plaats van vermenigvuldigd."
+          },
+          {
+            "text": "12 m³",
+            "foutanalyse": ""
+          },
+          {
+            "text": "14,4 m³",
+            "foutanalyse": "Dit is het volume van een grote box, niet van een kleine."
+          },
+          {
+            "text": "24 m³",
+            "foutanalyse": "Dit is te veel. Controleer je berekening: 2,5 × 2 × 2,4."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een volume berekening: V = lengte × breedte × hoogte.",
+          "berekening": [
+            "Volume: 2,5 × 2 × 2,4 = 12 m³"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel kubieke meter (m³) is een grote box (dubbele lengte en breedte)?",
+        "options": [
+          {
+            "text": "24 m³",
+            "foutanalyse": "Dit is dubbel volume, maar de box heeft dubbele lengte EN dubbele breedte."
+          },
+          {
+            "text": "36 m³",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Dubbele lengte EN breedte betekent 2 × 2 = 4 keer het volume."
+          },
+          {
+            "text": "48 m³",
+            "foutanalyse": ""
+          },
+          {
+            "text": "96 m³",
+            "foutanalyse": "Dit is te veel. Bereken: 5 × 4 × 2,4."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een volume berekening: dubbele lengte EN breedte betekent 4× het grondoppervlak.",
+          "berekening": [
+            "Grote box: (2 × 2,5) × (2 × 2) × 2,4 = 5 × 4 × 2,4 = 48 m³",
+            "Of: 4 × 12 m³ = 48 m³"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "volume en eenheden"
+  },
+  {
+    "id": 276,
+    "title": "Bakstenen bestellen",
+    "theme": "metriek-stelsel",
+    "content": "Een muur wordt 6 meter lang, 2,2 meter hoog en 20 cm dik. Een baksteen is 20 cm × 10 cm × 5 cm. Voor de voegen gaat er 15% van de ruimte verloren. 100 bakstenen kosten €85,00.",
+    "questions": [
+      {
+        "question": "Hoeveel kubieke meter (m³) is de muur?",
+        "options": [
+          {
+            "text": "0,264 m³",
+            "foutanalyse": "Dit is te weinig. Controleer je omrekening van cm naar m."
+          },
+          {
+            "text": "2,64 m³",
+            "foutanalyse": ""
+          },
+          {
+            "text": "26,4 m³",
+            "foutanalyse": "Dit is te veel. 20 cm = 0,2 m, niet 2 m."
+          },
+          {
+            "text": "264 m³",
+            "foutanalyse": "Dit is veel te veel. Reken de dikte om naar meters: 20 cm = 0,2 m."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een volume berekening met conversie: 100 cm = 1 m.",
+          "berekening": [
+            "Dikte: 20 cm = 0,2 m",
+            "Volume: 6 × 2,2 × 0,2 = 2,64 m³"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel bakstenen zijn er nodig (rekening houdend met 15% verlies voor voegen)?",
+        "options": [
+          {
+            "text": "2.244 bakstenen",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2.640 bakstenen",
+            "foutanalyse": "Je hebt het voegenverlie niet meegenomen. 85% van de ruimte is baksteen, niet 100%."
+          },
+          {
+            "text": "3.108 bakstenen",
+            "foutanalyse": "Je hebt 15% erbij geteld in plaats van eraf. Bij voegen is er minder baksteen nodig."
+          },
+          {
+            "text": "1.870 bakstenen",
+            "foutanalyse": "Dit is te weinig. Bereken eerst hoeveel bakstenen in het totale volume passen en vermenigvuldig met 0,85."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een volume berekening met percentage: 15% is voeg, dus 85% is baksteen.",
+          "berekening": [
+            "Muurvolume: 2,64 m³ = 2.640.000 cm³",
+            "Volume baksteen (85% van totaal): 2.640.000 × 0,85 = 2.244.000 cm³",
+            "Volume per baksteen: 20 × 10 × 5 = 1.000 cm³",
+            "Aantal bakstenen: 2.244.000 ÷ 1.000 = 2.244 bakstenen"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "volume en eenheden"
   }
 ]
