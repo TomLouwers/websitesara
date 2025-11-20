@@ -15731,5 +15731,347 @@
       }
     ],
     "sub_theme": "oppervlakte en eenheden"
+  },
+  {
+    "id": 252,
+    "title": "Taartenverkoop op de schoolmarkt",
+    "theme": "breuken",
+    "content": "Op de schoolmarkt is er een taart van 24 stukken. Aan het einde van de ochtend is ⅔ van de taart verkocht. In de middag wordt ½ van het resterende deel verkocht.",
+    "questions": [
+      {
+        "question": "Welk deel van de hele taart is er in de middag verkocht?",
+        "options": [
+          {
+            "text": "⅙ van de taart",
+            "foutanalyse": ""
+          },
+          {
+            "text": "⅓ van de taart",
+            "foutanalyse": "Dit is het resterende deel na de ochtend, niet wat er in de middag verkocht is. Je moet ½ van ⅓ berekenen."
+          },
+          {
+            "text": "½ van de taart",
+            "foutanalyse": "Je hebt alleen naar de middag gekeken. Maar in de middag werd ½ van het resterende deel verkocht, niet ½ van de hele taart."
+          },
+          {
+            "text": "⅔ van de taart",
+            "foutanalyse": "Dit is wat er in de ochtend verkocht is, niet in de middag."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een breuk van een breuk berekening: vermenigvuldig de breuken met elkaar (breuk × breuk).",
+          "berekening": [
+            "Ochtend verkocht: ⅔ van de taart",
+            "Restant na ochtend: 1 - ⅔ = ⅓ van de taart",
+            "Middag verkocht: ½ van ⅓ = ½ × ⅓ = 1/6 van de hele taart"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel stukken taart zijn er in totaal verkocht (ochtend + middag)?",
+        "options": [
+          {
+            "text": "16 stukken",
+            "foutanalyse": "Dit is alleen de verkoop van de ochtend. Tel ook de middagverkoop erbij op."
+          },
+          {
+            "text": "20 stukken",
+            "foutanalyse": ""
+          },
+          {
+            "text": "22 stukken",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "24 stukken",
+            "foutanalyse": "Dit is het totaal aantal stukken, maar niet alles is verkocht."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een totaalberekening met breuken: tel de breuken op en vermenigvuldig met het totaal.",
+          "berekening": [
+            "Totaal verkocht: ⅔ + 1/6 = 4/6 + 1/6 = 5/6 van de taart",
+            "Aantal stukken: 5/6 × 24 = 20 stukken"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "breuken van breuken"
+  },
+  {
+    "id": 253,
+    "title": "Korting bij de kledingwinkel",
+    "theme": "procenten",
+    "content": "Een broek kost €60,00. De winkel geeft eerst 25% korting. Op de nieuwe prijs wordt nog eens 20% extra korting gegeven voor klanten met een klantenkaart.",
+    "questions": [
+      {
+        "question": "Wat is de prijs na de eerste korting van 25%?",
+        "options": [
+          {
+            "text": "€15,00",
+            "foutanalyse": "Dit is het kortingsbedrag, niet de nieuwe prijs. Trek het kortingsbedrag af van de oorspronkelijke prijs."
+          },
+          {
+            "text": "€35,00",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. 25% van €60,00 is €15,00, dus de nieuwe prijs is €60,00 - €15,00."
+          },
+          {
+            "text": "€45,00",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€50,00",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een percentage berekening: bereken het percentage en trek het af van het totaal.",
+          "berekening": [
+            "25% van €60,00 = 0,25 × €60,00 = €15,00 korting",
+            "Nieuwe prijs: €60,00 - €15,00 = €45,00"
+          ]
+        }
+      },
+      {
+        "question": "Wat is de eindprijs na beide kortingen (25% en daarna nog 20%)?",
+        "options": [
+          {
+            "text": "€27,00",
+            "foutanalyse": "Je hebt 45% korting berekend (25% + 20%). Dit is fout omdat de tweede korting op de al verlaagde prijs wordt gegeven, niet op de oorspronkelijke prijs."
+          },
+          {
+            "text": "€33,00",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "€36,00",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€40,00",
+            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een percentage van een percentage berekening: bereken de kortingen stap voor stap, niet bij elkaar optellen.",
+          "berekening": [
+            "Prijs na eerste korting: €45,00",
+            "20% korting op €45,00 = 0,20 × €45,00 = €9,00",
+            "Eindprijs: €45,00 - €9,00 = €36,00"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "percentage van percentage"
+  },
+  {
+    "id": 254,
+    "title": "Snoeppot verdelen",
+    "theme": "breuken",
+    "content": "In een pot zitten 180 snoepjes. Lisa krijgt ⅓ van alle snoepjes. Van de snoepjes die Lisa krijgt, geeft ze 40% aan haar broertje.",
+    "questions": [
+      {
+        "question": "Hoeveel snoepjes krijgt Lisa in totaal (voor haarzelf en haar broertje samen)?",
+        "options": [
+          {
+            "text": "24 snoepjes",
+            "foutanalyse": "Dit is alleen wat Lisa aan haar broertje geeft. Je moet berekenen hoeveel Lisa in totaal krijgt van de pot."
+          },
+          {
+            "text": "36 snoepjes",
+            "foutanalyse": "Dit is wat Lisa overhoudt na het weggeven. De vraag is hoeveel Lisa in totaal krijgt van de pot."
+          },
+          {
+            "text": "60 snoepjes",
+            "foutanalyse": ""
+          },
+          {
+            "text": "72 snoepjes",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. ⅓ van 180 is niet 72."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een breukberekening: bereken ⅓ van het totaal.",
+          "berekening": [
+            "Lisa krijgt: ⅓ van 180 = 180 ÷ 3 = 60 snoepjes"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel snoepjes houdt Lisa voor zichzelf over?",
+        "options": [
+          {
+            "text": "20 snoepjes",
+            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+          },
+          {
+            "text": "24 snoepjes",
+            "foutanalyse": "Dit is wat Lisa aan haar broertje geeft, niet wat ze overhoudt. Bereken 60% van wat Lisa krijgt."
+          },
+          {
+            "text": "36 snoepjes",
+            "foutanalyse": ""
+          },
+          {
+            "text": "40 snoepjes",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een percentage van een breuk berekening: bereken eerst de breuk, dan het percentage.",
+          "berekening": [
+            "Lisa krijgt: 60 snoepjes",
+            "Lisa geeft weg: 40% van 60 = 0,40 × 60 = 24 snoepjes",
+            "Lisa houdt over: 60 - 24 = 36 snoepjes",
+            "Of: 60% van 60 = 0,60 × 60 = 36 snoepjes"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "percentage van breuk"
+  },
+  {
+    "id": 255,
+    "title": "Waterverbruik berekenen",
+    "theme": "breuken",
+    "content": "Een watertank bevat 2.400 liter water. Op maandag wordt 0,25 van het water gebruikt. Op dinsdag wordt ⅖ van het resterende water gebruikt.",
+    "questions": [
+      {
+        "question": "Hoeveel liter water werd er op maandag gebruikt?",
+        "options": [
+          {
+            "text": "240 liter",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. 0,25 is hetzelfde als ¼, dus 2.400 ÷ 4."
+          },
+          {
+            "text": "480 liter",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "600 liter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "960 liter",
+            "foutanalyse": "Dit is te veel. Controleer of je 0,25 juist hebt geïnterpreteerd (0,25 = ¼)."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een decimaal getal berekening: 0,25 = ¼ = 25%.",
+          "berekening": [
+            "Maandag gebruikt: 0,25 × 2.400 = 600 liter",
+            "Of: ¼ × 2.400 = 2.400 ÷ 4 = 600 liter"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel liter water bleef er over na dinsdag?",
+        "options": [
+          {
+            "text": "720 liter",
+            "foutanalyse": "Dit is wat er op dinsdag gebruikt werd. De vraag vraagt naar het restant na dinsdag."
+          },
+          {
+            "text": "1.080 liter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "1.200 liter",
+            "foutanalyse": "Dit is het restant na maandag, niet na dinsdag. Bereken ook het verbruik van dinsdag."
+          },
+          {
+            "text": "1.800 liter",
+            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een combinatie van decimaal en breuk: bereken stap voor stap en trek af van het totaal.",
+          "berekening": [
+            "Na maandag over: 2.400 - 600 = 1.800 liter",
+            "Dinsdag gebruikt: ⅖ van 1.800 = 1.800 × 2 ÷ 5 = 720 liter",
+            "Na dinsdag over: 1.800 - 720 = 1.080 liter"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "decimalen en breuken combineren"
+  },
+  {
+    "id": 256,
+    "title": "Spaaractie voor de klas",
+    "theme": "breuken",
+    "content": "De klas spaart voor een uitje. Ze hebben €240,00 gespaard. Ze geven ⅜ van het geld uit aan kaartjes. Van het overgebleven geld geven ze 30% uit aan vervoer. De rest is voor eten en drinken.",
+    "questions": [
+      {
+        "question": "Hoeveel euro blijft er over voor eten en drinken?",
+        "options": [
+          {
+            "text": "€105,00",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€112,50",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "€150,00",
+            "foutanalyse": "Dit is het bedrag na de kaartjes, maar je moet ook het vervoer nog aftrekken."
+          },
+          {
+            "text": "€168,00",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer alle stappen opnieuw."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een complexe berekening met breuken en procenten: werk stap voor stap en trek steeds af.",
+          "berekening": [
+            "Kaartjes: ⅜ van €240,00 = €240,00 × 3 ÷ 8 = €90,00",
+            "Na kaartjes: €240,00 - €90,00 = €150,00",
+            "Vervoer: 30% van €150,00 = 0,30 × €150,00 = €45,00",
+            "Voor eten en drinken: €150,00 - €45,00 = €105,00"
+          ]
+        }
+      },
+      {
+        "question": "Welk deel van het totale spaargeld wordt er aan vervoer uitgegeven?",
+        "options": [
+          {
+            "text": "3/16 van het totaal",
+            "foutanalyse": ""
+          },
+          {
+            "text": "¼ van het totaal",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Het vervoer is 30% van €150,00, maar welk deel is dat van de originele €240,00?"
+          },
+          {
+            "text": "30/100 van het totaal",
+            "foutanalyse": "30% is wel gebruikt, maar dit is 30% van het resterende bedrag na de kaartjes, niet van het totaal."
+          },
+          {
+            "text": "⅜ van het totaal",
+            "foutanalyse": "Dit is het deel dat aan kaartjes werd uitgegeven, niet aan vervoer."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een percentage van een restant als breuk van het totaal: bereken het bedrag en deel door het totaal.",
+          "berekening": [
+            "Vervoer: €45,00 (uit vorige vraag)",
+            "Als breuk van totaal: €45,00 ÷ €240,00 = 45/240",
+            "Vereenvoudigen: 45/240 = 9/48 = 3/16"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "complexe breuken en procenten"
   }
 ]
