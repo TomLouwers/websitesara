@@ -1641,7 +1641,8 @@
                             strategy: question.strategy,
                             tips: question.tips,
                             possible_answer: question.possible_answer, // Add possible_answer for open questions
-                            extra_info: question.extra_info // NIEUW: extra_info toevoegen
+                            extra_info: question.extra_info, // NIEUW: extra_info toevoegen
+                            lova: question.lova // L.O.V.A. data
                         });
                     });
                 } else if (item.question) {
@@ -1659,7 +1660,8 @@
                         strategy: item.strategy,
                         tips: item.tips,
                         possible_answer: item.possible_answer, // Add possible_answer for open questions
-                        extra_info: item.extra_info // NIEUW: extra_info toevoegen
+                        extra_info: item.extra_info, // NIEUW: extra_info toevoegen
+                        lova: item.lova // L.O.V.A. data
                     });
                 }
             });
