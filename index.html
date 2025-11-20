@@ -894,12 +894,13 @@
                 // Multiple choice question
                 optionsContainer.classList.remove('hidden');
                 textareaAnswer.classList.add('hidden');
-                
+
                 optionsContainer.innerHTML = '';
                 currentQuestion.options.forEach((option, index) => {
                     const optionElement = document.createElement('div');
                     optionElement.className = 'option';
-                    optionElement.textContent = option;
+                    // Handle both old format (string) and new format (object with text property)
+                    optionElement.textContent = typeof option === 'string' ? option : option.text;
                     optionElement.onclick = () => selectOption(index);
                     optionsContainer.appendChild(optionElement);
                 });
@@ -973,19 +974,48 @@
                     }
                     feedbackSection.classList.add('incorrect');
                     feedbackTitle.textContent = 'Niet correct!';
-                    feedbackMessage.textContent = 'Helaas, dat is niet helemaal correct.';
-                    correctAnswerDisplay.textContent = `Het juiste antwoord was: "${currentQuestion.options[correctIndex]}"`;
+
+                    // Show error analysis if available for the selected wrong answer
+                    const selectedOption = currentQuestion.options[selectedAnswer];
+                    const errorAnalysis = (typeof selectedOption === 'object' && selectedOption.foutanalyse) ? selectedOption.foutanalyse : '';
+
+                    if (errorAnalysis) {
+                        feedbackMessage.textContent = errorAnalysis;
+                    } else {
+                        feedbackMessage.textContent = 'Helaas, dat is niet helemaal correct.';
+                    }
+
+                    // Show correct answer - handle both string and object format
+                    const correctAnswerText = typeof currentQuestion.options[correctIndex] === 'string'
+                        ? currentQuestion.options[correctIndex]
+                        : currentQuestion.options[correctIndex].text;
+                    correctAnswerDisplay.textContent = `Het juiste antwoord was: "${correctAnswerText}"`;
                     correctAnswerDisplay.classList.remove('hidden');
                     strategyAndTips.classList.add('hidden'); // No strategy/tips for MC by default
-                    
+
                     // NIEUW: Toon extra_info bij incorrect antwoord (meerkeuze)
                     if (currentQuestion.extra_info) {
                         if (typeof currentQuestion.extra_info === 'string') {
                             // Simple string format (like brandaan)
                             extraInfoDisplay.innerHTML = `<h4>Achtergrondinfo:</h4><p>${currentQuestion.extra_info}</p>`;
                             extraInfoDisplay.classList.remove('hidden');
+                        } else if (currentQuestion.extra_info.concept || currentQuestion.extra_info.berekening) {
+                            // New format with concept and berekening
+                            let infoHtml = '';
+                            if (currentQuestion.extra_info.concept) {
+                                infoHtml += `<h4>Concept:</h4><p>${currentQuestion.extra_info.concept}</p>`;
+                            }
+                            if (currentQuestion.extra_info.berekening && currentQuestion.extra_info.berekening.length > 0) {
+                                infoHtml += '<h4>Berekening:</h4><ul>';
+                                currentQuestion.extra_info.berekening.forEach(step => {
+                                    infoHtml += `<li>${step}</li>`;
+                                });
+                                infoHtml += '</ul>';
+                            }
+                            extraInfoDisplay.innerHTML = infoHtml;
+                            extraInfoDisplay.classList.remove('hidden');
                         } else if (currentQuestion.extra_info.tips) {
-                            // Object with tips array format (like begrijpendlezen)
+                            // Old format with tips array (like begrijpendlezen)
                             let tipsHtml = '<h4>Extra Tips:</h4><ul>';
                             currentQuestion.extra_info.tips.forEach(tip => {
                                 tipsHtml += `<li>${tip}</li>`;
