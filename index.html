@@ -684,6 +684,78 @@
 
         /* Old L.O.V.A. interactive styles removed - now using simpler help panel */
 
+        /* Review Page Styles */
+        .review-item {
+            background-color: white;
+            border-left: 4px solid var(--color-incorrect);
+            border-radius: var(--border-radius-card);
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow-elevation-1);
+        }
+
+        .review-item-header {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        .review-question {
+            font-size: 1.1em;
+            color: var(--text-color-dark);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .review-answer-section {
+            margin-bottom: 12px;
+        }
+
+        .review-label {
+            font-weight: 600;
+            color: var(--text-color-medium);
+            margin-right: 8px;
+        }
+
+        .review-your-answer {
+            color: var(--color-incorrect);
+            background-color: #ffebee;
+            padding: 8px 12px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .review-correct-answer {
+            color: var(--color-correct);
+            background-color: #e8f5e9;
+            padding: 8px 12px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .review-explanation {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 12px;
+            color: var(--text-color-dark);
+            line-height: 1.6;
+        }
+
+        .review-content {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            color: var(--text-color-dark);
+            font-size: 0.95em;
+        }
+
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             .header h1 {
@@ -833,6 +905,33 @@
             .btn-lova-help {
                 font-size: 0.95em;
                 padding: 10px 20px;
+            }
+
+            /* Review page mobile styles */
+            .review-item {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+
+            .review-item-header {
+                font-size: 1.1em;
+            }
+
+            .review-question {
+                font-size: 1em;
+            }
+
+            .review-your-answer,
+            .review-correct-answer {
+                display: block;
+                margin-top: 5px;
+            }
+
+            .quiz-controls > div {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
             }
         }
     </style>
@@ -1009,9 +1108,14 @@
             </div>
 
             <div class="quiz-controls">
-                <button class="btn btn-secondary" onclick="goToLanding()">
-                    <i class="material-icons">arrow_back</i> Terug
-                </button>
+                <div>
+                    <button class="btn btn-secondary" onclick="goToLanding()">
+                        <i class="material-icons">arrow_back</i> Terug
+                    </button>
+                    <button class="btn btn-secondary" onclick="stopQuiz()" style="background-color: #e07a5f; color: white;">
+                        <i class="material-icons">stop</i> Stop
+                    </button>
+                </div>
                 <div>
                     <button class="btn" id="submitBtn" onclick="submitAnswer()">
                         <i class="material-icons">check_circle_outline</i> Controleer Antwoord
@@ -1027,6 +1131,20 @@
             <div class="results-score" id="finalScore">0/0</div>
             <div class="results-message" id="resultsMessage">Goed gedaan!</div>
             <button class="btn" onclick="goToLanding()">
+                <i class="material-icons">refresh</i> Nieuwe Quiz
+            </button>
+        </div>
+
+        <div id="reviewPage" class="results-container" style="display: none;">
+            <h2 style="color: var(--primary-color); margin-bottom: 20px;">📚 Leermoment: Review je fouten</h2>
+            <div class="results-score" id="reviewScore">0/0</div>
+            <div class="results-message" id="reviewMessage">Hier zijn de vragen die je fout had. Bestudeer ze goed!</div>
+
+            <div id="wrongAnswersContainer" style="margin-top: 30px;">
+                <!-- Wrong answers will be dynamically inserted here -->
+            </div>
+
+            <button class="btn" onclick="goToLanding()" style="margin-top: 30px;">
                 <i class="material-icons">refresh</i> Nieuwe Quiz
             </button>
         </div>
@@ -1047,6 +1165,7 @@
         let totalQuestions = 0;
         let selectedAnswer = null;
         let hasAnswered = false;
+        let wrongAnswers = []; // Track wrong answers for review
 
         // Progress tracker by category
         let categoryProgress = {};
@@ -1365,6 +1484,7 @@
             currentQuestionIndex = 0;
             score = 0;
             hasAnswered = false;
+            wrongAnswers = []; // Reset wrong answers for new quiz
             lovaClickCount = 0; // Reset L.O.V.A. click counter
 
             // Create randomized questions from the current quiz data
@@ -1617,6 +1737,18 @@
                     correctAnswerDisplay.classList.remove('hidden');
                     strategyAndTips.classList.add('hidden'); // No strategy/tips for MC by default
 
+                    // Track wrong answer for review
+                    const userAnswerText = typeof selectedOption === 'string'
+                        ? selectedOption
+                        : selectedOption.text;
+                    wrongAnswers.push({
+                        question: currentQuestion,
+                        userAnswer: userAnswerText,
+                        correctAnswer: correctAnswerText,
+                        explanation: errorAnalysis || feedbackMessage.textContent,
+                        questionType: 'multiple-choice'
+                    });
+
                     // NIEUW: Toon extra_info bij incorrect antwoord (meerkeuze)
                     if (currentQuestion.extra_info) {
                         if (typeof currentQuestion.extra_info === 'string') {
@@ -1685,10 +1817,19 @@
 
                     // Update category progress tracker
                     updateCategoryProgress(currentQuestion.theme, false);
-                    
+
                     correctAnswerDisplay.textContent = `Voorbeeld antwoord: "${currentQuestion.possible_answer}"`;
                     correctAnswerDisplay.classList.remove('hidden');
-                    
+
+                    // Track wrong answer for review
+                    wrongAnswers.push({
+                        question: currentQuestion,
+                        userAnswer: userAnswer,
+                        correctAnswer: currentQuestion.possible_answer,
+                        explanation: feedbackMessage.textContent,
+                        questionType: 'open-ended'
+                    });
+
                     // Display strategy and tips if available
                     if (currentQuestion.strategy || (currentQuestion.tips && currentQuestion.tips.length > 0)) {
                         strategyAndTips.classList.remove('hidden');
@@ -1766,6 +1907,7 @@
             document.getElementById('themePage').style.display = 'none';
             document.getElementById('quizPage').style.display = 'none';
             document.getElementById('resultsPage').style.display = 'none';
+            document.getElementById('reviewPage').style.display = 'none';
             // Reset quiz state when returning to landing page
             currentQuiz = null;
             randomizedQuestions = [];
@@ -1776,9 +1918,135 @@
             totalQuestions = 0;
             selectedAnswer = null;
             hasAnswered = false;
+            wrongAnswers = [];
             lovaClickCount = 0; // Reset L.O.V.A. click counter
             // Reset L.O.V.A. panel state
             lovaHelpPanelExpanded = false;
+        }
+
+        // Stop quiz early and show review of wrong answers
+        function stopQuiz() {
+            if (wrongAnswers.length === 0) {
+                alert('Geweldig! Je hebt nog geen fouten gemaakt. Ga door met oefenen!');
+                return;
+            }
+
+            // Calculate the number of questions answered
+            const questionsAnswered = currentQuestionIndex + (hasAnswered ? 1 : 0);
+
+            // Show review page
+            showReviewPage(questionsAnswered);
+        }
+
+        // Display review page with wrong answers
+        function showReviewPage(questionsAnswered) {
+            document.getElementById('quizPage').style.display = 'none';
+            document.getElementById('reviewPage').style.display = 'block';
+
+            // Update score
+            const correctAnswers = questionsAnswered - wrongAnswers.length;
+            document.getElementById('reviewScore').textContent = `${correctAnswers}/${questionsAnswered}`;
+
+            // Update message
+            if (wrongAnswers.length === 1) {
+                document.getElementById('reviewMessage').textContent = 'Je had 1 vraag fout. Bestudeer deze goed om ervan te leren!';
+            } else {
+                document.getElementById('reviewMessage').textContent = `Je had ${wrongAnswers.length} vragen fout. Bestudeer ze goed om ervan te leren!`;
+            }
+
+            // Display wrong answers
+            const container = document.getElementById('wrongAnswersContainer');
+            container.innerHTML = '';
+
+            wrongAnswers.forEach((item, index) => {
+                const reviewItem = document.createElement('div');
+                reviewItem.className = 'review-item';
+
+                let contentHtml = '';
+
+                // Add reading content if available
+                if (item.question.content) {
+                    contentHtml += `<div class="review-content">${item.question.content}</div>`;
+                }
+
+                // Add visual table if available
+                if (item.question.visual) {
+                    contentHtml += `<div class="review-content">${renderVisualData(item.question.visual)}</div>`;
+                }
+
+                reviewItem.innerHTML = `
+                    <div class="review-item-header">Vraag ${index + 1}</div>
+                    ${contentHtml}
+                    <div class="review-question">${item.question.question}</div>
+
+                    <div class="review-answer-section">
+                        <span class="review-label">Jouw antwoord:</span>
+                        <span class="review-your-answer">${item.userAnswer}</span>
+                    </div>
+
+                    <div class="review-answer-section">
+                        <span class="review-label">Juiste antwoord:</span>
+                        <span class="review-correct-answer">${item.correctAnswer}</span>
+                    </div>
+
+                    ${item.explanation ? `<div class="review-explanation"><strong>Uitleg:</strong> ${item.explanation}</div>` : ''}
+
+                    ${item.question.extra_info ? generateExtraInfoHtml(item.question.extra_info) : ''}
+
+                    ${item.questionType === 'open-ended' && (item.question.strategy || item.question.tips) ? generateStrategyTipsHtml(item.question) : ''}
+                `;
+
+                container.appendChild(reviewItem);
+            });
+        }
+
+        // Helper function to generate extra_info HTML
+        function generateExtraInfoHtml(extra_info) {
+            let html = '<div class="review-explanation">';
+
+            if (typeof extra_info === 'string') {
+                html += `<strong>Achtergrondinfo:</strong> ${extra_info}`;
+            } else if (extra_info.concept || extra_info.berekening) {
+                if (extra_info.concept) {
+                    html += `<strong>Concept:</strong> ${extra_info.concept}<br><br>`;
+                }
+                if (extra_info.berekening && extra_info.berekening.length > 0) {
+                    html += '<strong>Berekening:</strong><ul>';
+                    extra_info.berekening.forEach(step => {
+                        html += `<li>${step}</li>`;
+                    });
+                    html += '</ul>';
+                }
+            } else if (extra_info.tips) {
+                html += '<strong>Extra Tips:</strong><ul>';
+                extra_info.tips.forEach(tip => {
+                    html += `<li>${tip}</li>`;
+                });
+                html += '</ul>';
+            }
+
+            html += '</div>';
+            return html;
+        }
+
+        // Helper function to generate strategy and tips HTML
+        function generateStrategyTipsHtml(question) {
+            let html = '<div class="review-explanation">';
+
+            if (question.strategy) {
+                html += `<strong>Strategie:</strong> ${question.strategy}<br><br>`;
+            }
+
+            if (question.tips && question.tips.length > 0) {
+                html += '<strong>Tips:</strong><ul>';
+                question.tips.forEach(tip => {
+                    html += `<li>${tip}</li>`;
+                });
+                html += '</ul>';
+            }
+
+            html += '</div>';
+            return html;
         }
 
         // ========================================
