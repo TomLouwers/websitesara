@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         /* General Styles */
@@ -24,7 +24,7 @@
             --background-gradient-start: #F4F6F8; /* Very light cool gray */
             --background-gradient-end: #E8EEF2;   /* Slightly cooler light gray */
 
-            --surface-color: #FFFFFF; /* Pure white for optimal contrast */
+            --surface-color: #FDFBF7; /* Warm off-white - reduces glare for dyslexic readers */
             --on-surface-color: #2C3E50; /* Dark slate - softer than pure black, reduces harshness */
             --on-background-color: #2C3E50; /* Dark slate for readability on light backgrounds */
 
@@ -55,7 +55,7 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Lexend', sans-serif;
             background: linear-gradient(135deg, var(--background-gradient-start) 0%, var(--background-gradient-end) 100%);
             min-height: 100vh;
             color: var(--on-background-color); /* Changed to on-background-color for body text */
@@ -63,6 +63,7 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
+            letter-spacing: 0.01em; /* Slight increase for better dyslexia readability */
         }
 
         .container {
@@ -207,7 +208,23 @@
             color: var(--text-color-dark);
             max-height: 350px;
             overflow-y: auto;
+            overflow-x: auto; /* Allow horizontal scroll for wide content */
             box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+            word-wrap: break-word;
+        }
+
+        /* Responsive table container for mobile */
+        .table-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .table-container table {
+            min-width: 100%;
+            width: max-content; /* Allow table to be as wide as needed */
         }
 
         .question-text {
@@ -275,11 +292,13 @@
             border: 2px solid #e0e0e0;
             border-radius: var(--border-radius-button);
             font-size: 1.15em;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Lexend', sans-serif;
             resize: vertical;
             margin-top: 15px;
             box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
             color: var(--text-color-dark); /* Ensure text in textarea is dark */
+            letter-spacing: 0.01em; /* Better readability for dyslexic users */
+            line-height: 1.6; /* Increased line height for better readability */
         }
         .textarea-answer:focus {
             outline: none;
@@ -532,7 +551,10 @@
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             .header h1 {
-                font-size: 2.2em;
+                font-size: 1.9em; /* Reduced from 2.2em for better mobile fit */
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                hyphens: auto;
             }
 
             .subject-grid {
@@ -544,22 +566,34 @@
                 min-height: 180px;
             }
 
+            .subject-card h3 {
+                font-size: 1.3em; /* Reduced from 1.6em for mobile */
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+
             .quiz-container, .results-container {
                 padding: 25px;
             }
 
             .question-text {
-                font-size: 1.3em;
+                font-size: 1.2em; /* Reduced from 1.3em for better fit */
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                hyphens: auto;
             }
 
             .option {
                 padding: 15px 20px;
                 font-size: 1.05em;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
             }
 
             .btn {
                 padding: 12px 25px;
                 font-size: 1em;
+                width: 100%; /* Full width buttons for easier tapping */
             }
             .quiz-controls {
                 flex-direction: column;
@@ -617,6 +651,34 @@
             /* Start collapsed on mobile for better UX */
             .progress-tracker {
                 /* Will be controlled by JS */
+            }
+
+            /* Mobile-optimized table styles */
+            .reading-content {
+                padding: 15px; /* Reduce padding on mobile */
+                font-size: 0.95em; /* Slightly smaller text */
+            }
+
+            .table-container table {
+                font-size: 0.85em; /* Smaller font for tables on mobile */
+            }
+
+            .table-container th,
+            .table-container td {
+                padding: 8px !important; /* Reduce padding in table cells */
+                min-width: 80px; /* Minimum width for readability */
+            }
+
+            /* Add scroll hint for tables */
+            .table-container::after {
+                content: "← Scroll horizontaal voor meer →";
+                display: block;
+                text-align: center;
+                font-size: 0.75em;
+                color: var(--text-color-medium);
+                padding: 5px;
+                background-color: rgba(74, 123, 167, 0.1);
+                border-radius: 0 0 8px 8px;
             }
         }
     </style>
@@ -1119,18 +1181,20 @@
             loadCurrentQuestion();
         }
 
-        // Render visual data (tables) as HTML
+        // Render visual data (tables) as HTML with mobile-responsive wrapper
         function renderVisualData(visualData) {
             if (!visualData || visualData.type !== 'table') {
                 return '';
             }
 
-            let html = '<table style="width: 100%; border-collapse: collapse; margin: 15px 0; background-color: white;">';
+            // Wrap table in responsive container for mobile scrolling
+            let html = '<div class="table-container">';
+            html += '<table style="width: 100%; border-collapse: collapse; background-color: white;">';
 
             // Add headers
             html += '<thead><tr>';
             visualData.headers.forEach(header => {
-                html += `<th style="border: 2px solid #4A7BA7; padding: 12px; background-color: #4A7BA7; color: white; font-weight: 500; text-align: left;">${header}</th>`;
+                html += `<th style="border: 2px solid #4A7BA7; padding: 12px; background-color: #4A7BA7; color: white; font-weight: 500; text-align: left; white-space: nowrap;">${header}</th>`;
             });
             html += '</tr></thead>';
 
@@ -1140,11 +1204,12 @@
                 const bgColor = rowIndex % 2 === 0 ? '#f8f8f8' : '#ffffff';
                 html += `<tr style="background-color: ${bgColor};">`;
                 row.forEach(cell => {
-                    html += `<td style="border: 1px solid #e0e0e0; padding: 10px; color: #2C3E50;">${cell}</td>`;
+                    html += `<td style="border: 1px solid #e0e0e0; padding: 10px; color: #2C3E50; word-wrap: break-word;">${cell}</td>`;
                 });
                 html += '</tr>';
             });
             html += '</tbody></table>';
+            html += '</div>'; // Close responsive container
 
             return html;
         }
