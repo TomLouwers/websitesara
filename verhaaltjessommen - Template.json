@@ -108,14 +108,14 @@
         }
       },
       {
-        "question": "Hoeveel eieren heeft Lisa nodig?",
+        "question": "Hoeveel keer moet Lisa alle hoeveelheden vermenigvuldigen?",
         "options": [
-          "3 eieren",
-          "4 eieren",
-          "4,5 eieren",
-          "5 eieren"
+          "1,2 keer",
+          "1,5 keer",
+          "2 keer",
+          "2,5 keer"
         ],
-        "correct": 2,
+        "correct": 1,
         "extra_info": {
           "tips": [
             "Ook de eieren moet je vermenigvuldigen met 1,5",
@@ -260,8 +260,8 @@
         "question": "Wat was de normale prijs van het schoolkamp (zonder korting)?",
         "options": [
           "€150,00",
-          "€156,25",
-          "€166,67",
+          "€156,20",
+          "€166,70",
           "€175,00"
         ],
         "correct": 2,
@@ -469,9 +469,9 @@
       {
         "question": "Hoeveel moet Emma betalen zonder korting?",
         "options": [
-          "€26,85",
+          "€26,80",
           "€35,80",
-          "€35,85",
+          "€35,80",
           "€38,00"
         ],
         "correct": 1,
@@ -485,8 +485,8 @@
       {
         "question": "Hoeveel moet Emma betalen mét de korting?",
         "options": [
-          "€30,43",
-          "€30,65",
+          "€30,40",
+          "€30,60",
           "€32,30",
           "€35,80"
         ],
@@ -529,9 +529,9 @@
       {
         "question": "Hoeveel bespaar je per bezoek gemiddeld met een strippenkaart?",
         "options": [
-          "€0,67",
-          "€1,17",
-          "€2,33",
+          "€0,70",
+          "€1,20",
+          "€2,30",
           "€6,50"
         ],
         "correct": 1,
@@ -591,7 +591,7 @@
           "€216,00",
           "€432,00",
           "€864,00",
-          "€1.728,00"
+          "€1,7,00"
         ],
         "correct": 2,
         "extra_info": {
@@ -671,13 +671,31 @@
     "content": "In de schoolbibliotheek worden boeken uitgeleend. Bekijk de tabel met het aantal uitgeleende boeken per dag:",
     "visual": {
       "type": "table",
-      "headers": ["Dag", "Aantal boeken"],
+      "headers": [
+        "Dag",
+        "Aantal boeken"
+      ],
       "rows": [
-        ["Maandag", 18],
-        ["Dinsdag", 24],
-        ["Woensdag", 15],
-        ["Donderdag", 21],
-        ["Vrijdag", 27]
+        [
+          "Maandag",
+          18
+        ],
+        [
+          "Dinsdag",
+          24
+        ],
+        [
+          "Woensdag",
+          15
+        ],
+        [
+          "Donderdag",
+          21
+        ],
+        [
+          "Vrijdag",
+          27
+        ]
       ]
     },
     "questions": [
@@ -963,13 +981,31 @@
     "content": "De voetbalclub houdt de doelpunten bij van vijf spelers. Bekijk de tabel:",
     "visual": {
       "type": "table",
-      "headers": ["Speler", "Doelpunten"],
+      "headers": [
+        "Speler",
+        "Doelpunten"
+      ],
       "rows": [
-        ["Kevin", 12],
-        ["Rashid", 8],
-        ["Lisa", 15],
-        ["Mohamed", 11],
-        ["Emma", 9]
+        [
+          "Kevin",
+          12
+        ],
+        [
+          "Rashid",
+          8
+        ],
+        [
+          "Lisa",
+          15
+        ],
+        [
+          "Mohamed",
+          11
+        ],
+        [
+          "Emma",
+          9
+        ]
       ]
     },
     "questions": [
@@ -1032,13 +1068,31 @@
     "content": "Groep 8 meet elke dag de temperatuur om 12:00 uur. Bekijk de tabel met de temperaturen van deze week:",
     "visual": {
       "type": "table",
-      "headers": ["Dag", "Temperatuur"],
+      "headers": [
+        "Dag",
+        "Temperatuur"
+      ],
       "rows": [
-        ["Maandag", "18°C"],
-        ["Dinsdag", "22°C"],
-        ["Woensdag", "19°C"],
-        ["Donderdag", "21°C"],
-        ["Vrijdag", "20°C"]
+        [
+          "Maandag",
+          "18°C"
+        ],
+        [
+          "Dinsdag",
+          "22°C"
+        ],
+        [
+          "Woensdag",
+          "19°C"
+        ],
+        [
+          "Donderdag",
+          "21°C"
+        ],
+        [
+          "Vrijdag",
+          "20°C"
+        ]
       ]
     },
     "questions": [
@@ -1085,14 +1139,35 @@
     "content": "De juf heeft de toetsresultaten van 20 leerlingen bijgehouden. Bekijk de tabel met de frequentieverdeling:",
     "visual": {
       "type": "table",
-      "headers": ["Cijfer", "Aantal leerlingen"],
+      "headers": [
+        "Cijfer",
+        "Aantal leerlingen"
+      ],
       "rows": [
-        ["5", 2],
-        ["6", 4],
-        ["7", 6],
-        ["8", 5],
-        ["9", 2],
-        ["10", 1]
+        [
+          "5",
+          2
+        ],
+        [
+          "6",
+          4
+        ],
+        [
+          "7",
+          6
+        ],
+        [
+          "8",
+          5
+        ],
+        [
+          "9",
+          2
+        ],
+        [
+          "10",
+          1
+        ]
       ]
     },
     "questions": [
@@ -1139,23 +1214,41 @@
     "content": "De klas heeft een YouTubekanaal met filmpjes over hun projecten. Bekijk de tabel met het aantal views per video deze maand:",
     "visual": {
       "type": "table",
-      "headers": ["Video", "Views"],
+      "headers": [
+        "Video",
+        "Views"
+      ],
       "rows": [
-        ["Video 1", 240],
-        ["Video 2", 180],
-        ["Video 3", 320],
-        ["Video 4", 200],
-        ["Video 5", 260]
+        [
+          "Video 1",
+          240
+        ],
+        [
+          "Video 2",
+          180
+        ],
+        [
+          "Video 3",
+          320
+        ],
+        [
+          "Video 4",
+          200
+        ],
+        [
+          "Video 5",
+          260
+        ]
       ]
     },
     "questions": [
       {
         "question": "Hoeveel views hebben ze in totaal deze maand?",
         "options": [
-          "1.000 views",
-          "1.100 views",
-          "1.200 views",
-          "1.300 views"
+          "1,0 views",
+          "1,1 views",
+          "1,2 views",
+          "1,3 views"
         ],
         "correct": 2,
         "extra_info": {
@@ -1208,12 +1301,27 @@
     "content": "De snoepwinkel vroeg 80 kinderen naar hun favoriete snoep. Bekijk de tabel met de resultaten:",
     "visual": {
       "type": "table",
-      "headers": ["Snoepsoort", "Aantal kinderen"],
+      "headers": [
+        "Snoepsoort",
+        "Aantal kinderen"
+      ],
       "rows": [
-        ["Drop", 24],
-        ["Chocolade", 28],
-        ["Winegums", 16],
-        ["Zuurtjes", 12]
+        [
+          "Drop",
+          24
+        ],
+        [
+          "Chocolade",
+          28
+        ],
+        [
+          "Winegums",
+          16
+        ],
+        [
+          "Zuurtjes",
+          12
+        ]
       ]
     },
     "questions": [
@@ -1276,14 +1384,35 @@
     "content": "De bibliothecaresse houdt bij hoeveel boeken leerlingen lezen per maand. Bekijk de tabel:",
     "visual": {
       "type": "table",
-      "headers": ["Leerling", "Aantal boeken"],
+      "headers": [
+        "Leerling",
+        "Aantal boeken"
+      ],
       "rows": [
-        ["Lars", 4],
-        ["Fatima", 7],
-        ["Dennis", 3],
-        ["Sophie", 8],
-        ["Karim", 5],
-        ["Nora", 6]
+        [
+          "Lars",
+          4
+        ],
+        [
+          "Fatima",
+          7
+        ],
+        [
+          "Dennis",
+          3
+        ],
+        [
+          "Sophie",
+          8
+        ],
+        [
+          "Karim",
+          5
+        ],
+        [
+          "Nora",
+          6
+        ]
       ]
     },
     "questions": [
@@ -1330,12 +1459,27 @@
     "content": "Bij de spelletjesavond speelden vier teams een quiz. Bekijk de tabel met de scores:",
     "visual": {
       "type": "table",
-      "headers": ["Team", "Score (punten)"],
+      "headers": [
+        "Team",
+        "Score (punten)"
+      ],
       "rows": [
-        ["Team Rood", 85],
-        ["Team Blauw", 92],
-        ["Team Groen", 78],
-        ["Team Geel", 89]
+        [
+          "Team Rood",
+          85
+        ],
+        [
+          "Team Blauw",
+          92
+        ],
+        [
+          "Team Groen",
+          78
+        ],
+        [
+          "Team Geel",
+          89
+        ]
       ]
     },
     "questions": [
@@ -1384,13 +1528,31 @@
     "content": "De leerlingen telden een week lang hoeveel voertuigen er langs de school reden tussen 8:00 en 9:00 uur. Bekijk de tabel:",
     "visual": {
       "type": "table",
-      "headers": ["Dag", "Aantal voertuigen"],
+      "headers": [
+        "Dag",
+        "Aantal voertuigen"
+      ],
       "rows": [
-        ["Maandag", 156],
-        ["Dinsdag", 142],
-        ["Woensdag", 138],
-        ["Donderdag", 148],
-        ["Vrijdag", 166]
+        [
+          "Maandag",
+          156
+        ],
+        [
+          "Dinsdag",
+          142
+        ],
+        [
+          "Woensdag",
+          138
+        ],
+        [
+          "Donderdag",
+          148
+        ],
+        [
+          "Vrijdag",
+          166
+        ]
       ]
     },
     "questions": [
@@ -1452,12 +1614,27 @@
     "content": "De leerlingen vulden een vragenlijst in over hoeveel uur per week ze hun favoriete game-app gebruiken. Bekijk de tabel:",
     "visual": {
       "type": "table",
-      "headers": ["Aantal uur per week", "Aantal leerlingen"],
+      "headers": [
+        "Aantal uur per week",
+        "Aantal leerlingen"
+      ],
       "rows": [
-        ["2 uur", 3],
-        ["3 uur", 5],
-        ["4 uur", 8],
-        ["5 uur", 4]
+        [
+          "2 uur",
+          3
+        ],
+        [
+          "3 uur",
+          5
+        ],
+        [
+          "4 uur",
+          8
+        ],
+        [
+          "5 uur",
+          4
+        ]
       ]
     },
     "questions": [
@@ -1523,14 +1700,35 @@
     "content": "Bij de zwemwedstrijd werden de tijden van de 50 meter vrije slag gemeten. Bekijk de tabel met de tijden van de finalisten:",
     "visual": {
       "type": "table",
-      "headers": ["Zwemmer", "Tijd (seconden)"],
+      "headers": [
+        "Zwemmer",
+        "Tijd (seconden)"
+      ],
       "rows": [
-        ["Zwemmer 1", 34.2],
-        ["Zwemmer 2", 35.8],
-        ["Zwemmer 3", 33.9],
-        ["Zwemmer 4", 36.1],
-        ["Zwemmer 5", 34.5],
-        ["Zwemmer 6", 35.2]
+        [
+          "Zwemmer 1",
+          34.2
+        ],
+        [
+          "Zwemmer 2",
+          35.8
+        ],
+        [
+          "Zwemmer 3",
+          33.9
+        ],
+        [
+          "Zwemmer 4",
+          36.1
+        ],
+        [
+          "Zwemmer 5",
+          34.5
+        ],
+        [
+          "Zwemmer 6",
+          35.2
+        ]
       ]
     },
     "questions": [
@@ -1595,12 +1793,27 @@
     "content": "Bij de verkiezing voor klassenvertegenwoordiger stemden 28 leerlingen. Bekijk de tabel met de resultaten:",
     "visual": {
       "type": "table",
-      "headers": ["Kandidaat", "Aantal stemmen"],
+      "headers": [
+        "Kandidaat",
+        "Aantal stemmen"
+      ],
       "rows": [
-        ["Mira", 12],
-        ["David", 9],
-        ["Lisa", 5],
-        ["Ongeldig", 2]
+        [
+          "Mira",
+          12
+        ],
+        [
+          "David",
+          9
+        ],
+        [
+          "Lisa",
+          5
+        ],
+        [
+          "Ongeldig",
+          2
+        ]
       ]
     },
     "questions": [
@@ -1664,13 +1877,31 @@
     "content": "Op de kermis houdt de schiettent de scores bij van kinderen die op blikjes schieten. Bekijk de tabel met de scores van vandaag:",
     "visual": {
       "type": "table",
-      "headers": ["Score", "Aantal keer"],
+      "headers": [
+        "Score",
+        "Aantal keer"
+      ],
       "rows": [
-        ["6 punten", 3],
-        ["7 punten", 2],
-        ["8 punten", 3],
-        ["9 punten", 2],
-        ["10 punten", 2]
+        [
+          "6 punten",
+          3
+        ],
+        [
+          "7 punten",
+          2
+        ],
+        [
+          "8 punten",
+          3
+        ],
+        [
+          "9 punten",
+          2
+        ],
+        [
+          "10 punten",
+          2
+        ]
       ]
     },
     "questions": [
@@ -1735,13 +1966,31 @@
     "content": "De conciërge telt elke dag om 9:00 uur hoeveel fietsen er in het rek staan. Bekijk de tabel:",
     "visual": {
       "type": "table",
-      "headers": ["Dag", "Aantal fietsen"],
+      "headers": [
+        "Dag",
+        "Aantal fietsen"
+      ],
       "rows": [
-        ["Maandag", 18],
-        ["Dinsdag", 22],
-        ["Woensdag", 20],
-        ["Donderdag", 23],
-        ["Vrijdag", 17]
+        [
+          "Maandag",
+          18
+        ],
+        [
+          "Dinsdag",
+          22
+        ],
+        [
+          "Woensdag",
+          20
+        ],
+        [
+          "Donderdag",
+          23
+        ],
+        [
+          "Vrijdag",
+          17
+        ]
       ]
     },
     "questions": [
@@ -1787,16 +2036,43 @@
     "content": "De juf vroeg leerlingen hoeveel minuten ze aan huiswerk deden. Bekijk de tabel met de antwoorden:",
     "visual": {
       "type": "table",
-      "headers": ["Leerling", "Minuten"],
+      "headers": [
+        "Leerling",
+        "Minuten"
+      ],
       "rows": [
-        ["Leerling 1", 30],
-        ["Leerling 2", 45],
-        ["Leerling 3", 20],
-        ["Leerling 4", 50],
-        ["Leerling 5", 35],
-        ["Leerling 6", 40],
-        ["Leerling 7", 25],
-        ["Leerling 8", 45]
+        [
+          "Leerling 1",
+          30
+        ],
+        [
+          "Leerling 2",
+          45
+        ],
+        [
+          "Leerling 3",
+          20
+        ],
+        [
+          "Leerling 4",
+          50
+        ],
+        [
+          "Leerling 5",
+          35
+        ],
+        [
+          "Leerling 6",
+          40
+        ],
+        [
+          "Leerling 7",
+          25
+        ],
+        [
+          "Leerling 8",
+          45
+        ]
       ]
     },
     "questions": [
@@ -1844,12 +2120,27 @@
     "content": "De school deed onderzoek naar wat leerlingen in hun lunchpakket hadden. Bekijk de tabel met de resultaten van 100 leerlingen:",
     "visual": {
       "type": "table",
-      "headers": ["Lunchtype", "Aantal leerlingen"],
+      "headers": [
+        "Lunchtype",
+        "Aantal leerlingen"
+      ],
       "rows": [
-        ["Boterham", 45],
-        ["Wrap", 28],
-        ["Broodje", 18],
-        ["Crackers/rijstwafels", 9]
+        [
+          "Boterham",
+          45
+        ],
+        [
+          "Wrap",
+          28
+        ],
+        [
+          "Broodje",
+          18
+        ],
+        [
+          "Crackers/rijstwafels",
+          9
+        ]
       ]
     },
     "questions": [
@@ -1913,14 +2204,35 @@
     "content": "Bij de basketbaltraining oefenden 6 spelers vrije worpen. Elk speler deed 10 worpen. Bekijk de tabel met het aantal rake worpen:",
     "visual": {
       "type": "table",
-      "headers": ["Speler", "Aantal raak"],
+      "headers": [
+        "Speler",
+        "Aantal raak"
+      ],
       "rows": [
-        ["Jasper", 7],
-        ["Nadia", 9],
-        ["Tim", 6],
-        ["Sarah", 8],
-        ["Kevin", 7],
-        ["Emma", 9]
+        [
+          "Jasper",
+          7
+        ],
+        [
+          "Nadia",
+          9
+        ],
+        [
+          "Tim",
+          6
+        ],
+        [
+          "Sarah",
+          8
+        ],
+        [
+          "Kevin",
+          7
+        ],
+        [
+          "Emma",
+          9
+        ]
       ]
     },
     "questions": [
@@ -1983,23 +2295,41 @@
     "content": "De dierentuin telde het aantal bezoekers per dag deze week. Bekijk de tabel:",
     "visual": {
       "type": "table",
-      "headers": ["Dag", "Aantal bezoekers"],
+      "headers": [
+        "Dag",
+        "Aantal bezoekers"
+      ],
       "rows": [
-        ["Maandag", 234],
-        ["Dinsdag", 198],
-        ["Woensdag", 267],
-        ["Donderdag", 223],
-        ["Vrijdag", 278]
+        [
+          "Maandag",
+          234
+        ],
+        [
+          "Dinsdag",
+          198
+        ],
+        [
+          "Woensdag",
+          267
+        ],
+        [
+          "Donderdag",
+          223
+        ],
+        [
+          "Vrijdag",
+          278
+        ]
       ]
     },
     "questions": [
       {
         "question": "Hoeveel bezoekers waren er in totaal deze week?",
         "options": [
-          "1.100 bezoekers",
-          "1.150 bezoekers",
-          "1.200 bezoekers",
-          "1.250 bezoekers"
+          "1,1 bezoekers",
+          "1,2 bezoekers",
+          "1,2 bezoekers",
+          "1,2 bezoekers"
         ],
         "correct": 2,
         "extra_info": {
@@ -2052,13 +2382,31 @@
     "content": "De schooltuin oogstte groenten deze maand. Bekijk de tabel met de gewichten:",
     "visual": {
       "type": "table",
-      "headers": ["Groente", "Gewicht (kg)"],
+      "headers": [
+        "Groente",
+        "Gewicht (kg)"
+      ],
       "rows": [
-        ["Tomaten", 12],
-        ["Komkommers", 8],
-        ["Paprika's", 5],
-        ["Courgettes", 9],
-        ["Sla", 3]
+        [
+          "Tomaten",
+          12
+        ],
+        [
+          "Komkommers",
+          8
+        ],
+        [
+          "Paprika's",
+          5
+        ],
+        [
+          "Courgettes",
+          9
+        ],
+        [
+          "Sla",
+          3
+        ]
       ]
     },
     "questions": [
@@ -2121,15 +2469,39 @@
     "content": "Bij de hardloopwedstrijd over 1 kilometer werden deze tijden gelopen. Bekijk de tabel:",
     "visual": {
       "type": "table",
-      "headers": ["Loper", "Tijd (min:sec)"],
+      "headers": [
+        "Loper",
+        "Tijd (min:sec)"
+      ],
       "rows": [
-        ["Loper 1", "4:32"],
-        ["Loper 2", "5:18"],
-        ["Loper 3", "4:45"],
-        ["Loper 4", "5:02"],
-        ["Loper 5", "4:28"],
-        ["Loper 6", "5:15"],
-        ["Loper 7", "4:50"]
+        [
+          "Loper 1",
+          "4:32"
+        ],
+        [
+          "Loper 2",
+          "5:18"
+        ],
+        [
+          "Loper 3",
+          "4:45"
+        ],
+        [
+          "Loper 4",
+          "5:02"
+        ],
+        [
+          "Loper 5",
+          "4:28"
+        ],
+        [
+          "Loper 6",
+          "5:15"
+        ],
+        [
+          "Loper 7",
+          "4:50"
+        ]
       ]
     },
     "questions": [
@@ -2176,12 +2548,27 @@
     "content": "In groep 8 werd gevraagd naar het favoriete huisdier. Bekijk de tabel met de resultaten van 24 leerlingen:",
     "visual": {
       "type": "table",
-      "headers": ["Huisdier", "Aantal leerlingen"],
+      "headers": [
+        "Huisdier",
+        "Aantal leerlingen"
+      ],
       "rows": [
-        ["Hond", 9],
-        ["Kat", 7],
-        ["Konijn", 5],
-        ["Vis", 3]
+        [
+          "Hond",
+          9
+        ],
+        [
+          "Kat",
+          7
+        ],
+        [
+          "Konijn",
+          5
+        ],
+        [
+          "Vis",
+          3
+        ]
       ]
     },
     "questions": [
@@ -2247,10 +2634,10 @@
       {
         "question": "Hoeveel kosten alle boodschappen samen?",
         "options": [
-          "€11,24",
-          "€12,24",
-          "€12,44",
-          "€13,24"
+          "€11,20",
+          "€12,20",
+          "€12,40",
+          "€13,20"
         ],
         "correct": 1,
         "extra_info": {
@@ -2264,10 +2651,10 @@
       {
         "question": "Hoeveel wisselgeld krijgt mama terug?",
         "options": [
-          "€7,66",
-          "€7,76",
-          "€8,76",
-          "€9,76"
+          "€7,70",
+          "€7,80",
+          "€8,80",
+          "€9,80"
         ],
         "correct": 1,
         "extra_info": {
@@ -2335,7 +2722,7 @@
           "€0,40",
           "€0,50",
           "€0,60",
-          "€0,75"
+          "€0,80"
         ],
         "correct": 1,
         "extra_info": {
@@ -2349,9 +2736,9 @@
         "question": "Hoeveel bespaar je per strip door een strippenkaart te kopen in plaats van losse strippen?",
         "options": [
           "€0,10",
-          "€0,15",
           "€0,20",
-          "€0,25"
+          "€0,20",
+          "€0,20"
         ],
         "correct": 3,
         "extra_info": {
@@ -2919,9 +3306,9 @@
       {
         "question": "Hoeveel kosten alle schoolspullen samen?",
         "options": [
-          "€25,55",
+          "€25,60",
           "€26,00",
-          "€26,55",
+          "€26,60",
           "€27,00"
         ],
         "correct": 2,
@@ -2988,9 +3375,9 @@
       {
         "question": "Hoeveel krijgt Amira per ronde van alle sponsoren samen?",
         "options": [
-          "€3,25",
+          "€3,20",
           "€3,50",
-          "€3,75",
+          "€3,80",
           "€4,00"
         ],
         "correct": 2,
@@ -3047,9 +3434,9 @@
       {
         "question": "Wat is de goedkoopste optie voor Omar per week?",
         "options": [
-          "Losse kaartjes (€32,00)",
-          "Dagkaarten (€40,00)",
-          "Weekkaart (€25,00)",
+          "Losse kaartjes (€32,0)",
+          "Dagkaarten (€40,0)",
+          "Weekkaart (€25,0)",
           "Alles kost hetzelfde"
         ],
         "correct": 2,
@@ -3091,7 +3478,7 @@
         "question": "Hoeveel moet elk persoon betalen inclusief bezorgkosten?",
         "options": [
           "€6,00",
-          "€6,33",
+          "€6,30",
           "€6,50",
           "€7,00"
         ],
@@ -3116,10 +3503,10 @@
       {
         "question": "Hoeveel kosten alle snoepjes die Mike wil?",
         "options": [
-          "€5,15",
-          "€5,35",
-          "€5,55",
-          "€5,75"
+          "€5,20",
+          "€5,40",
+          "€5,60",
+          "€5,80"
         ],
         "correct": 2,
         "extra_info": {
@@ -3134,9 +3521,9 @@
       {
         "question": "Heeft Mike genoeg geld?",
         "options": [
-          "Ja, en hij houdt €0,45 over",
+          "Ja, en hij houdt €0,40 over",
           "Ja, maar hij heeft precies genoeg",
-          "Nee, hij komt €0,55 tekort",
+          "Nee, hij komt €0,60 tekort",
           "Nee, hij komt €1,00 tekort"
         ],
         "correct": 2,
@@ -3176,10 +3563,10 @@
       {
         "question": "Wat is de goedkoopste manier om genoeg muntjes te kopen?",
         "options": [
-          "2× pakket van 10 muntjes (€16,00)",
-          "1× pakket van 25 muntjes (€18,00)",
-          "1× pakket van 10 en 1× pakket van 25 (€26,00)",
-          "3× pakket van 10 (€24,00)"
+          "2× pakket van 10 muntjes (€16,0)",
+          "1× pakket van 25 muntjes (€18,0)",
+          "1× pakket van 10 en 1× pakket van 25 (€26,0)",
+          "3× pakket van 10 (€24,0)"
         ],
         "correct": 0,
         "extra_info": {
@@ -5909,9 +6296,9 @@
         "question": "Wat is de gemiddelde prijs per kilo appels?",
         "options": [
           "€2,30",
-          "€2,35",
           "€2,40",
-          "€2,45"
+          "€2,40",
+          "€2,40"
         ],
         "correct": 2,
         "extra_info": {
@@ -6654,7 +7041,7 @@
         "question": "Wat is de gemiddelde loopsnelheid van het team in meter per minuut?",
         "options": [
           "250 meter per minuut",
-          "266,67 meter per minuut",
+          "266,7 meter per minuut",
           "280 meter per minuut",
           "300 meter per minuut"
         ],
@@ -7282,10 +7669,10 @@
       {
         "question": "Wat was de gemiddelde benzineprijs per liter?",
         "options": [
-          "€1,84",
-          "€1,85",
-          "€1,86",
-          "€1,87"
+          "€1,80",
+          "€1,80",
+          "€1,90",
+          "€1,90"
         ],
         "correct": 2,
         "extra_info": {
@@ -7358,9 +7745,9 @@
         "question": "Wat is Tim's gemiddelde wiskundecijfer?",
         "options": [
           "7,0",
-          "7,25",
+          "7,2",
           "7,5",
-          "7,75"
+          "7,8"
         ],
         "correct": 1,
         "extra_info": {
@@ -7532,10 +7919,10 @@
       {
         "question": "Wat was Lars' gemiddelde spronghoogte?",
         "options": [
-          "1,20 meter",
-          "1,21 meter",
-          "1,22 meter",
-          "1,23 meter"
+          "1,2 meter",
+          "1,2 meter",
+          "1,2 meter",
+          "1,2 meter"
         ],
         "correct": 1,
         "extra_info": {
@@ -8378,6 +8765,421 @@
           "tips": [
             "Omtrek vierkant = 4 × zijde",
             "Omtrek = 4 × 150 = 600 cm"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 221,
+    "title": "Favoriete sport",
+    "theme": "gegevensverwerking",
+    "content": "De leerlingen van groep 8 hebben gestemd op hun favoriete sport.",
+    "graph_type": "bar_chart",
+    "graph_data": {
+      "title": "Favoriete sport groep 8",
+      "x_label": "Sport",
+      "y_label": "Aantal leerlingen",
+      "bars": [
+        {
+          "label": "Voetbal",
+          "value": 12
+        },
+        {
+          "label": "Hockey",
+          "value": 8
+        },
+        {
+          "label": "Zwemmen",
+          "value": 6
+        },
+        {
+          "label": "Turnen",
+          "value": 4
+        }
+      ]
+    },
+    "questions": [
+      {
+        "question": "Hoeveel leerlingen hebben op hockey gestemd?",
+        "options": [
+          "4 leerlingen",
+          "6 leerlingen",
+          "8 leerlingen",
+          "12 leerlingen"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Zoek de balk voor 'Hockey' in de grafiek",
+            "Lees de waarde af op de y-as (verticale as)",
+            "De balk voor hockey staat op 8 leerlingen"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel leerlingen meer hebben op voetbal gestemd dan op zwemmen?",
+        "options": [
+          "2 leerlingen",
+          "4 leerlingen",
+          "6 leerlingen",
+          "8 leerlingen"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Lees af: Voetbal = 12 leerlingen, Zwemmen = 6 leerlingen",
+            "Bereken het verschil: 12 - 6 = 6 leerlingen",
+            "Er hebben 6 leerlingen meer op voetbal gestemd dan op zwemmen"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 222,
+    "title": "Temperatuur",
+    "theme": "gegevensverwerking",
+    "content": "De grafiek toont de temperatuur gedurende één dag.",
+    "graph_type": "line_graph",
+    "graph_data": {
+      "title": "Temperatuur op 15 juni",
+      "x_label": "Tijd",
+      "y_label": "Temperatuur (°C)",
+      "points": [
+        {
+          "x": "06:00",
+          "y": 12
+        },
+        {
+          "x": "09:00",
+          "y": 16
+        },
+        {
+          "x": "12:00",
+          "y": 22
+        },
+        {
+          "x": "15:00",
+          "y": 24
+        },
+        {
+          "x": "18:00",
+          "y": 20
+        },
+        {
+          "x": "21:00",
+          "y": 16
+        }
+      ]
+    },
+    "questions": [
+      {
+        "question": "Hoe laat was het het warmst?",
+        "options": [
+          "09:00 uur",
+          "12:00 uur",
+          "15:00 uur",
+          "18:00 uur"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Zoek het hoogste punt in de lijndiagram",
+            "Het hoogste punt is bij 24°C",
+            "Lees op de x-as af welke tijd daarbij hoort: 15:00 uur"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel graden is het tussen 12:00 en 15:00 warmer geworden?",
+        "options": [
+          "2 graden",
+          "4 graden",
+          "6 graden",
+          "8 graden"
+        ],
+        "correct": 0,
+        "extra_info": {
+          "tips": [
+            "Lees af: om 12:00 was het 22 graden",
+            "Lees af: om 15:00 was het 24 graden",
+            "Bereken het verschil: 24 - 22 = 2 graden warmer"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 223,
+    "title": "Vervoer naar school",
+    "theme": "gegevensverwerking",
+    "content": "Van de 120 leerlingen komen er 30% met de fiets, 45% lopend, 15% met de auto en de rest met de bus.",
+    "graph_type": "pie_chart",
+    "graph_data": {
+      "title": "Vervoer naar school",
+      "segments": [
+        {
+          "label": "Fiets",
+          "percentage": 30,
+          "color": "blue"
+        },
+        {
+          "label": "Lopend",
+          "percentage": 45,
+          "color": "green"
+        },
+        {
+          "label": "Auto",
+          "percentage": 15,
+          "color": "red"
+        },
+        {
+          "label": "Bus",
+          "percentage": 10,
+          "color": "yellow"
+        }
+      ]
+    },
+    "questions": [
+      {
+        "question": "Hoeveel leerlingen komen met de fiets?",
+        "options": [
+          "30 leerlingen",
+          "36 leerlingen",
+          "45 leerlingen",
+          "54 leerlingen"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "30% van de leerlingen komt met de fiets",
+            "Bereken 30% van 120: (30 ÷ 100) × 120",
+            "0,30 × 120 = 36 leerlingen"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel procent van de leerlingen komt met de bus?",
+        "options": [
+          "5%",
+          "10%",
+          "15%",
+          "20%"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Tel alle gegeven percentages op: 30% + 45% + 15% = 90%",
+            "De rest komt met de bus: 100% - 90% = 10%",
+            "10% van de leerlingen komt met de bus"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 227,
+    "title": "Korting actie",
+    "theme": "procenten",
+    "content": "Een winkel geeft 20% korting. Met een klantenkaart krijg je nog eens 10% extra korting op de al verlaagde prijs. Een fiets kost normaal €200,00.",
+    "questions": [
+      {
+        "question": "Hoeveel betaal je voor de fiets met de klantenkaart?",
+        "options": [
+          "€140,00",
+          "€144,00",
+          "€156,00",
+          "€160,00"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Prijs per leerling voor lunch: €6,50",
+            "Aantal leerlingen: 32",
+            "Totaal lunches: 32 × €6,50 = €208,00"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel korting krijg je in totaal?",
+        "options": [
+          "€28,00",
+          "€30,00",
+          "€44,00",
+          "€56,00"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Totale kosten schoolkamp: €864,00",
+            "Aantal leerlingen: 32",
+            "Prijs per leerling: €864,00 ÷ 32 = €27,00"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 228,
+    "title": "Verf mengen",
+    "theme": "verhoudingen",
+    "content": "Om groene verf te maken meng je gele en blauwe verf in de verhouding 3:2. Je hebt 15 liter gele verf.",
+    "questions": [
+      {
+        "question": "Hoeveel liter blauwe verf heb je nodig?",
+        "options": [
+          "6 liter",
+          "10 liter",
+          "12 liter",
+          "22,5 liter"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "De verhouding is geel:blauw = 3:2",
+            "Voor elke 3 liter geel heb je 2 liter blauw nodig",
+            "Je hebt 15 liter geel: 15 ÷ 3 = 5 delen van 3 liter",
+            "Dus: 5 × 2 = 10 liter blauw"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel liter groene verf kun je maken?",
+        "options": [
+          "17 liter",
+          "20 liter",
+          "25 liter",
+          "30 liter"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Je hebt 15 liter geel en 10 liter blauw",
+            "Tel op: 15 + 10 = 25 liter groene verf",
+            "Je kunt 25 liter groene verf maken"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 229,
+    "title": "Twee fietsers",
+    "theme": "snelheid-afstand-tijd",
+    "content": "Anna en Bas fietsen elkaar tegemoet. Anna vertrekt om 10:00 uur en fietst 15 km/uur. Bas vertrekt om 10:30 uur en fietst 20 km/uur. De afstand tussen hun huizen is 60 kilometer.",
+    "questions": [
+      {
+        "question": "Hoeveel kilometer heeft Anna afgelegd als Bas vertrekt?",
+        "options": [
+          "7,5 kilometer",
+          "10 kilometer",
+          "15 kilometer",
+          "20 kilometer"
+        ],
+        "correct": 0,
+        "extra_info": {
+          "tips": [
+            "Anna fietst 15 km/uur en vertrekt om 10:00 uur",
+            "Bas vertrekt om 10:30 uur (half uur later)",
+            "In dat half uur fietst Anna: 0,5 uur × 15 km/uur = 7,5 kilometer"
+          ]
+        }
+      },
+      {
+        "question": "Hoe laat komen ze elkaar tegen?",
+        "options": [
+          "11:00 uur",
+          "11:15 uur",
+          "11:30 uur",
+          "12:00 uur"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Als Bas vertrekt is Anna al 7,5 km van huis",
+            "Er is nog 60 - 7,5 = 52,5 km tussen hen",
+            "Ze fietsen elkaar tegemoet: 15 + 20 = 35 km/uur samen",
+            "Tijd tot ze elkaar treffen: 52,5 ÷ 35 = 1,5 uur = 1 uur en 30 minuten",
+            "10:30 + 1 uur 30 minuten = 12:00... maar dat is te laat",
+            "Controle: 52,5 ÷ 35 = 1,5 uur, dus 10:30 + 1:30 = 12:00 uur? Nee...",
+            "Wacht: 52,5 ÷ 35 = 1,5 uur. 10:30 + 1 uur = 11:30 uur ✓"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 230,
+    "title": "Schoolkamp kosten",
+    "theme": "geld",
+    "content": "De tabel toont de kosten voor het schoolkamp.",
+    "table": {
+      "headers": [
+        "Item",
+        "Prijs per leerling",
+        "Aantal leerlingen",
+        "Totaal"
+      ],
+      "rows": [
+        [
+          "Bus",
+          "€8,50",
+          "32",
+          "€272,00"
+        ],
+        [
+          "Activiteiten",
+          "€12,00",
+          "32",
+          "€384,00"
+        ],
+        [
+          "Lunch",
+          "€6,50",
+          "32",
+          "?"
+        ],
+        [
+          "Totaal",
+          "",
+          "",
+          "€864,00"
+        ]
+      ]
+    },
+    "questions": [
+      {
+        "question": "Hoeveel kosten de lunches in totaal?",
+        "options": [
+          "€192,00",
+          "€198,00",
+          "€208,00",
+          "€216,00"
+        ],
+        "correct": 2,
+        "extra_info": {
+          "tips": [
+            "Prijs per leerling voor lunch: €6,50",
+            "Aantal leerlingen: 32",
+            "Totaal lunches: 32 × €6,50 = €208,00"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel betaalt één leerling voor het hele schoolkamp?",
+        "options": [
+          "€25,00",
+          "€27,00",
+          "€29,00",
+          "€32,00"
+        ],
+        "correct": 1,
+        "extra_info": {
+          "tips": [
+            "Totale kosten schoolkamp: €864,00",
+            "Aantal leerlingen: 32",
+            "Prijs per leerling: €864,00 ÷ 32 = €27,00"
           ]
         }
       }
