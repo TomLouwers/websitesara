@@ -910,6 +910,7 @@
                         <div class="progress-summary">
                             <span class="summary-stat correct">✓ <span id="totalCorrect">0</span></span>
                             <span class="summary-stat incorrect">✗ <span id="totalIncorrect">0</span></span>
+                            <span class="summary-stat" style="color: var(--secondary-color);">📋 <span id="lovaClicks">0</span></span>
                         </div>
                         <span class="toggle-icon">▼</span>
                     </div>
@@ -1050,6 +1051,7 @@
         // Progress tracker by category
         let categoryProgress = {};
         let isProgressTrackerCollapsed = false;
+        let lovaClickCount = 0; // Track L.O.V.A. button clicks
 
         // Toggle progress tracker visibility
         function toggleProgressTracker() {
@@ -1172,6 +1174,7 @@
             // Update summary totals
             document.getElementById('totalCorrect').textContent = totalCorrect;
             document.getElementById('totalIncorrect').textContent = totalIncorrect;
+            document.getElementById('lovaClicks').textContent = lovaClickCount;
         }
 
         // Shuffle array function (Fisher-Yates algorithm)
@@ -1362,6 +1365,7 @@
             currentQuestionIndex = 0;
             score = 0;
             hasAnswered = false;
+            lovaClickCount = 0; // Reset L.O.V.A. click counter
 
             // Create randomized questions from the current quiz data
             randomizedQuestions = createRandomizedQuestions(currentQuiz);
@@ -1772,6 +1776,7 @@
             totalQuestions = 0;
             selectedAnswer = null;
             hasAnswered = false;
+            lovaClickCount = 0; // Reset L.O.V.A. click counter
             // Reset L.O.V.A. panel state
             lovaHelpPanelExpanded = false;
         }
@@ -1792,6 +1797,10 @@
                 panel.classList.add('expanded');
                 panel.classList.remove('hidden');
                 icon.textContent = '▲';
+
+                // Increment L.O.V.A. click counter
+                lovaClickCount++;
+                document.getElementById('lovaClicks').textContent = lovaClickCount;
             } else {
                 panel.classList.remove('expanded');
                 setTimeout(() => {
