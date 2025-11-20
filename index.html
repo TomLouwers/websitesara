@@ -548,456 +548,141 @@
             color: var(--color-incorrect);
         }
 
-        /* L.O.V.A. Mode Styles */
-        .lova-mode-toggle {
+        /* L.O.V.A. Help Button */
+        .lova-help-button-container {
             display: flex;
-            gap: 10px;
             justify-content: center;
-            margin: 20px 0;
-            padding: 10px;
-            background-color: rgba(74, 123, 167, 0.05);
-            border-radius: var(--border-radius-card);
-        }
-
-        .btn-mode {
-            background-color: white;
-            color: var(--text-color-dark);
-            border: 2px solid #e0e0e0;
-            padding: 12px 25px;
-            border-radius: var(--border-radius-button);
-            cursor: pointer;
-            font-size: 1em;
-            transition: all 0.3s ease;
-            font-family: 'Lexend', sans-serif;
-            font-weight: 500;
-        }
-
-        .btn-mode:hover {
-            background-color: var(--primary-light);
-            color: white;
-            border-color: var(--primary-light);
-            transform: translateY(-2px);
-        }
-
-        .btn-mode.active {
-            background-color: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
-            box-shadow: var(--shadow-elevation-2);
-        }
-
-        /* L.O.V.A. Step Progress */
-        .lova-progress {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
-            padding: 15px;
-            background: linear-gradient(90deg, #E8EEF2 0%, #F4F6F8 100%);
-            border-radius: 12px;
-            gap: 10px;
-        }
-
-        .lova-step {
-            flex: 1;
-            text-align: center;
-            padding: 10px;
-            opacity: 0.4;
-            transition: all 0.3s ease;
-            border-radius: 8px;
-        }
-
-        .lova-step.active {
-            opacity: 1;
-            transform: scale(1.05);
-            background-color: rgba(74, 123, 167, 0.1);
-        }
-
-        .lova-step.completed {
-            opacity: 0.7;
-            background-color: rgba(82, 199, 136, 0.1);
-        }
-
-        .step-icon {
-            font-size: 2em;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .step-name {
-            font-size: 0.9em;
-            color: var(--text-color-dark);
-            font-weight: 500;
-        }
-
-        /* L.O.V.A. Step Container */
-        .lova-step-container {
-            margin-top: 20px;
-        }
-
-        .lova-step-content {
-            background-color: #f8f8f8;
-            border-radius: var(--border-radius-card);
-            padding: 25px;
-            margin-bottom: 20px;
-        }
-
-        .lova-step-title {
-            font-size: 1.8em;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .lova-instruction {
-            font-size: 1.1em;
-            color: var(--text-color-medium);
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: rgba(93, 173, 226, 0.1);
-            border-left: 4px solid var(--secondary-color);
-            border-radius: 8px;
-        }
-
-        .lova-section {
-            margin-bottom: 25px;
-            background-color: white;
-            padding: 20px;
-            border-radius: var(--border-radius-button);
-            box-shadow: var(--shadow-elevation-1);
-        }
-
-        .lova-section h4 {
-            font-size: 1.2em;
-            color: var(--primary-dark);
-            margin-bottom: 12px;
-            font-weight: 500;
-        }
-
-        .lova-answer {
-            font-size: 1.15em;
-            color: var(--text-color-dark);
-            font-weight: 500;
-            padding: 10px;
-            background-color: #e3f2fd;
-            border-radius: 6px;
-        }
-
-        .lova-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .lova-list li {
-            padding: 10px 15px;
-            margin-bottom: 8px;
-            background-color: #f5f5f5;
-            border-left: 3px solid var(--secondary-color);
-            border-radius: 4px;
-        }
-
-        /* Highlighting Tool */
-        .highlight-content {
-            font-size: 1.1em;
-            line-height: 1.8;
-            padding: 15px;
-            background-color: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-
-        .highlightable {
-            cursor: pointer;
-            padding: 2px 4px;
-            border-radius: 3px;
-            transition: background-color 0.2s;
-            display: inline-block;
-        }
-
-        .highlightable:hover {
-            background-color: rgba(74, 123, 167, 0.1);
-        }
-
-        .highlightable.marked-ruis {
-            background-color: #ffebee;
-            text-decoration: line-through;
-            color: var(--color-incorrect);
-        }
-
-        .highlightable.marked-relevant {
-            background-color: #e8f5e9;
-            font-weight: bold;
-            color: var(--color-correct);
-        }
-
-        /* Number Input Grid */
-        .number-inputs {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
             margin: 15px 0;
         }
 
-        .number-input-group {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .number-input-group label {
-            font-size: 0.95em;
-            color: var(--text-color-medium);
-            font-weight: 500;
-        }
-
-        .number-input-group input {
-            padding: 12px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1.1em;
-            font-family: 'Lexend', sans-serif;
-            transition: border-color 0.2s;
-        }
-
-        .number-input-group input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-
-        .number-input-group input.correct {
-            border-color: var(--color-correct);
-            background-color: #e8f5e9;
-        }
-
-        .number-input-group input.incorrect {
-            border-color: var(--color-incorrect);
-            background-color: #ffebee;
-        }
-
-        .btn-check {
+        .btn-lova-help {
             background-color: var(--secondary-color);
             color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: var(--border-radius-button);
-            cursor: pointer;
-            font-size: 1em;
-            margin-top: 10px;
-            transition: all 0.3s ease;
             font-weight: 500;
-        }
-
-        .btn-check:hover {
-            background-color: var(--secondary-dark);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-elevation-2);
-        }
-
-        /* L.O.V.A. Tool Options */
-        .lova-tool-options {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .tool-option {
-            padding: 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            background-color: white;
-        }
-
-        .tool-option:hover {
-            border-color: var(--primary-light);
-            background-color: #f5f5f5;
-        }
-
-        .tool-option.selected {
-            border-color: var(--primary-color);
-            background-color: #e3f2fd;
-        }
-
-        .tool-option.correct {
-            border-color: var(--color-correct);
-            background-color: #e8f5e9;
-        }
-
-        .tool-option.incorrect {
-            border-color: var(--color-incorrect);
-            background-color: #ffebee;
-        }
-
-        /* Calculation Steps */
-        .calculation-steps {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .berekening-stap {
-            background-color: white;
-            border-left: 4px solid var(--primary-color);
-            padding: 20px;
-            border-radius: 8px;
             box-shadow: var(--shadow-elevation-1);
         }
 
-        .stap-beschrijving {
-            font-size: 1.1em;
-            color: var(--text-color-dark);
-            font-weight: 500;
-            margin-bottom: 10px;
+        .btn-lova-help:hover {
+            background-color: var(--secondary-dark);
         }
 
-        .stap-uitleg {
-            font-size: 0.95em;
-            color: var(--text-color-medium);
+        #lovaToggleIcon {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .lova-help-panel.expanded #lovaToggleIcon {
+            transform: rotate(180deg);
+        }
+
+        /* L.O.V.A. Help Panel */
+        .lova-help-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, margin 0.4s ease;
+            background-color: rgba(93, 173, 226, 0.05);
+            border-radius: var(--border-radius-card);
+            margin: 0 0 20px 0;
+        }
+
+        .lova-help-panel.expanded {
+            max-height: 2000px;
+            margin: 20px 0;
+        }
+
+        .lova-help-content {
+            padding: 25px;
+        }
+
+        .lova-help-step {
+            margin-bottom: 25px;
+            background-color: white;
+            border-radius: var(--border-radius-button);
+            padding: 20px;
+            box-shadow: var(--shadow-elevation-1);
+        }
+
+        .lova-help-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .lova-help-step-title {
+            font-size: 1.3em;
+            color: var(--primary-color);
             margin-bottom: 15px;
-            font-style: italic;
+            font-weight: 600;
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 10px;
         }
 
-        .berekening-input {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            margin-top: 10px;
+        .lova-help-section {
+            margin-bottom: 15px;
         }
 
-        .berekening-input input {
-            flex: 1;
-            padding: 12px;
-            font-size: 1.1em;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-family: 'Lexend', sans-serif;
+        .lova-help-section:last-child {
+            margin-bottom: 0;
         }
 
-        .berekening-input input:focus {
-            outline: none;
-            border-color: var(--primary-color);
+        .lova-help-section p {
+            margin-bottom: 8px;
+            line-height: 1.6;
         }
 
-        .berekening-input input.correct {
-            border-color: var(--color-correct);
-            background-color: #e8f5e9;
+        .lova-help-text {
+            color: var(--text-color-dark);
+            font-size: 1.05em;
         }
 
-        .berekening-input input.incorrect {
-            border-color: var(--color-incorrect);
-            background-color: #ffebee;
+        .lova-help-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
         }
 
-        .stap-feedback {
-            margin-top: 10px;
-            padding: 10px;
-            border-radius: 6px;
-            font-weight: 500;
+        .lova-help-list li {
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            background-color: #f5f5f5;
+            border-left: 3px solid var(--secondary-color);
+            border-radius: 4px;
+            color: var(--text-color-dark);
         }
 
-        .stap-feedback.correct {
-            color: var(--color-correct);
-            background-color: #e8f5e9;
-        }
-
-        .stap-feedback.incorrect {
-            color: var(--color-incorrect);
-            background-color: #ffebee;
-        }
-
-        /* Validation Checklist */
-        .validation-checklist {
+        .lova-help-bewerkingen {
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
 
-        .validation-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .lova-help-bewerking {
+            background-color: #f8f8f8;
             padding: 15px;
-            background-color: #f5f5f5;
             border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-size: 1.05em;
+            border-left: 4px solid var(--primary-color);
         }
 
-        .validation-item:hover {
-            background-color: #eff0f0;
+        .lova-help-bewerking-stap {
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 5px;
         }
 
-        .validation-item input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
-        }
-
-        .expected-unit {
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-
-        .logic-hint {
-            color: var(--text-color-medium);
+        .lova-help-bewerking-uitleg {
             font-size: 0.95em;
+            color: var(--text-color-medium);
+            margin-bottom: 8px;
             font-style: italic;
         }
 
-        .lova-calculated-result {
-            font-size: 1.5em;
-            color: var(--primary-color);
-            font-weight: bold;
-            padding: 15px;
-            background-color: #e3f2fd;
-            border-radius: 8px;
-            text-align: center;
+        .lova-help-bewerking-calc {
+            font-family: 'Courier New', monospace;
+            background-color: white;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 8px;
         }
 
-        /* L.O.V.A. Feedback */
-        .lova-feedback {
-            margin-top: 15px;
-            padding: 15px;
-            border-radius: 8px;
-            font-weight: 500;
-        }
-
-        .lova-feedback.correct {
-            background-color: #e8f5e9;
-            border-left: 4px solid var(--color-correct);
-            color: var(--color-correct);
-        }
-
-        .lova-feedback.incorrect {
-            background-color: #ffebee;
-            border-left: 4px solid var(--color-incorrect);
-            color: var(--color-incorrect);
-        }
-
-        /* L.O.V.A. Navigation Buttons */
-        .lova-step-nav {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-            gap: 15px;
-        }
-
-        .lova-next-btn {
-            background-color: var(--color-correct);
-        }
-
-        .lova-next-btn:hover {
-            background-color: #3fa76e;
-        }
-
-        .lova-next-btn:disabled {
-            background-color: #cccccc;
-            cursor: not-allowed;
-            opacity: 0.6;
-        }
+        /* Old L.O.V.A. interactive styles removed - now using simpler help panel */
 
         /* Responsive Adjustments */
         @media (max-width: 768px) {
@@ -1132,61 +817,22 @@
                 border-radius: 0 0 8px 8px;
             }
 
-            /* L.O.V.A. Mobile Styles */
-            .lova-mode-toggle {
-                flex-direction: column;
-                gap: 8px;
+            /* L.O.V.A. Help Panel Mobile Styles */
+            .lova-help-content {
+                padding: 15px;
             }
 
-            .btn-mode {
+            .lova-help-step {
+                padding: 15px;
+            }
+
+            .lova-help-step-title {
+                font-size: 1.1em;
+            }
+
+            .btn-lova-help {
+                font-size: 0.95em;
                 padding: 10px 20px;
-                font-size: 0.95em;
-            }
-
-            .lova-progress {
-                padding: 10px;
-                gap: 5px;
-            }
-
-            .step-icon {
-                font-size: 1.5em;
-            }
-
-            .step-name {
-                font-size: 0.75em;
-            }
-
-            .lova-step-content {
-                padding: 15px;
-            }
-
-            .lova-step-title {
-                font-size: 1.4em;
-            }
-
-            .lova-instruction {
-                font-size: 0.95em;
-                padding: 12px;
-            }
-
-            .lova-section {
-                padding: 15px;
-            }
-
-            .number-inputs {
-                grid-template-columns: 1fr;
-            }
-
-            .lova-step-nav {
-                flex-direction: column;
-            }
-
-            .berekening-input {
-                flex-direction: column;
-            }
-
-            .berekening-input button {
-                width: 100%;
             }
         }
     </style>
@@ -1274,34 +920,11 @@
             <div class="quiz-header">
                 <h2 id="quizTitle">Quiz</h2>
 
-                <!-- L.O.V.A. Mode Toggle (only shown for verhaaltjessommen) -->
-                <div id="lovaModeToggle" class="lova-mode-toggle hidden">
-                    <button class="btn-mode active" data-mode="lova" onclick="setLovaMode('lova')">
-                        📋 L.O.V.A. Stappenplan
+                <!-- L.O.V.A. Help Button (only shown for verhaaltjessommen with L.O.V.A. data) -->
+                <div id="lovaHelpButton" class="lova-help-button-container hidden">
+                    <button class="btn btn-lova-help" onclick="toggleLovaPanel()">
+                        <span id="lovaToggleIcon">▼</span> 📋 L.O.V.A. Stappenplan
                     </button>
-                    <button class="btn-mode" data-mode="practice" onclick="setLovaMode('practice')">
-                        ⚡ Snelle Oefening
-                    </button>
-                </div>
-
-                <!-- L.O.V.A. Step Progress Indicator -->
-                <div id="lovaProgress" class="lova-progress hidden">
-                    <div class="lova-step active" data-step="1">
-                        <span class="step-icon">📖</span>
-                        <span class="step-name">Lezen</span>
-                    </div>
-                    <div class="lova-step" data-step="2">
-                        <span class="step-icon">🗃️</span>
-                        <span class="step-name">Ordenen</span>
-                    </div>
-                    <div class="lova-step" data-step="3">
-                        <span class="step-icon">✍️</span>
-                        <span class="step-name">Vormen</span>
-                    </div>
-                    <div class="lova-step" data-step="4">
-                        <span class="step-icon">✅</span>
-                        <span class="step-name">Antwoorden</span>
-                    </div>
                 </div>
 
                 <div class="quiz-progress">
@@ -1314,121 +937,62 @@
                 <div id="readingContent" class="reading-content hidden"></div>
                 <div class="question-text" id="questionText"></div>
 
-                <!-- L.O.V.A. Step Containers -->
-                <div id="lovaStepContainer" class="lova-step-container hidden">
-                    <!-- Stap 1: Lezen -->
-                    <div id="lovaStap1" class="lova-step-content hidden">
-                        <h3 class="lova-step-title">📖 Stap 1: Lezen</h3>
-                        <p class="lova-instruction">Lees de som twee keer: eerst voor de context, dan voor de precieze vraag.</p>
-
-                        <div class="lova-section">
-                            <h4>Wat wordt er gevraagd?</h4>
-                            <p id="lovaHoofdvraag" class="lova-answer"></p>
-                        </div>
-
-                        <div class="lova-section">
-                            <h4>Onderstreep de ruis (onnodige informatie):</h4>
-                            <div id="lovaHighlightContent" class="highlight-content"></div>
-                            <div id="lovaRuisFeedback" class="lova-feedback hidden"></div>
-                        </div>
-
-                        <div class="lova-section">
-                            <h4>Welke tussenstappen zijn nodig?</h4>
-                            <ul id="lovaTussenstappen" class="lova-list"></ul>
-                        </div>
-
-                        <button class="btn lova-next-btn" onclick="goToLovaStep(2)">
-                            Volgende Stap: Ordenen →
-                        </button>
-                    </div>
-
-                    <!-- Stap 2: Ordenen -->
-                    <div id="lovaStap2" class="lova-step-content hidden">
-                        <h3 class="lova-step-title">🗃️ Stap 2: Ordenen</h3>
-                        <p class="lova-instruction">Verzamel de relevante getallen en kies de juiste wiskundige tool.</p>
-
-                        <div class="lova-section">
-                            <h4>Vul de relevante getallen in:</h4>
-                            <div id="lovaNumberInputs" class="number-inputs"></div>
-                            <button class="btn-check" onclick="checkLovaNumbers()">Controleer getallen</button>
-                            <div id="lovaNumberFeedback" class="lova-feedback hidden"></div>
-                        </div>
-
-                        <div class="lova-section">
-                            <h4>Welke wiskundige tool ga je gebruiken?</h4>
-                            <div id="lovaToolOptions" class="lova-tool-options"></div>
-                            <div id="lovaToolFeedback" class="lova-feedback hidden"></div>
-                        </div>
-
-                        <div class="lova-step-nav">
-                            <button class="btn btn-secondary" onclick="goToLovaStep(1)">
-                                ← Terug naar Lezen
-                            </button>
-                            <button class="btn lova-next-btn" onclick="goToLovaStep(3)">
-                                Volgende Stap: Vormen →
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Stap 3: Vormen -->
-                    <div id="lovaStap3" class="lova-step-content hidden">
-                        <h3 class="lova-step-title">✍️ Stap 3: Vormen</h3>
-                        <p class="lova-instruction">Voer de berekening stap voor stap uit.</p>
-
-                        <div id="lovaCalculationSteps" class="calculation-steps"></div>
-
-                        <div class="lova-step-nav">
-                            <button class="btn btn-secondary" onclick="goToLovaStep(2)">
-                                ← Terug naar Ordenen
-                            </button>
-                            <button class="btn lova-next-btn" id="lovaStap3NextBtn" onclick="goToLovaStep(4)" disabled>
-                                Volgende Stap: Antwoorden →
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Stap 4: Antwoorden -->
-                    <div id="lovaStap4" class="lova-step-content hidden">
-                        <h3 class="lova-step-title">✅ Stap 4: Antwoorden</h3>
-                        <p class="lova-instruction">Controleer je antwoord en kies het juiste antwoord uit de opties.</p>
-
-                        <div class="lova-section">
-                            <h4>Je hebt berekend:</h4>
-                            <p id="lovaCalculatedAnswer" class="lova-calculated-result"></p>
-                        </div>
-
-                        <div class="lova-section">
-                            <h4>Controleer:</h4>
-                            <div class="validation-checklist">
-                                <label class="validation-item">
-                                    <input type="checkbox" id="lovaCheckUnit" onchange="updateLovaValidation()">
-                                    <span>Klopt de eenheid? <span id="lovaExpectedUnit" class="expected-unit"></span></span>
-                                </label>
-                                <label class="validation-item">
-                                    <input type="checkbox" id="lovaCheckLogic" onchange="updateLovaValidation()">
-                                    <span>Is het antwoord logisch? <span id="lovaLogicCheck" class="logic-hint"></span></span>
-                                </label>
+                <!-- L.O.V.A. Help Panel (collapsible guidance) -->
+                <div id="lovaHelpPanel" class="lova-help-panel hidden">
+                    <div class="lova-help-content">
+                        <!-- Stap 1: Lezen -->
+                        <div class="lova-help-step">
+                            <h4 class="lova-help-step-title">📖 Stap 1: Lezen</h4>
+                            <div class="lova-help-section">
+                                <p><strong>Wat wordt er gevraagd?</strong></p>
+                                <p id="lovaHelpHoofdvraag" class="lova-help-text"></p>
+                            </div>
+                            <div class="lova-help-section">
+                                <p><strong>Let op: dit is ruis (niet nodig voor deze vraag):</strong></p>
+                                <ul id="lovaHelpRuis" class="lova-help-list"></ul>
+                            </div>
+                            <div class="lova-help-section">
+                                <p><strong>Tussenstappen:</strong></p>
+                                <ul id="lovaHelpTussenstappen" class="lova-help-list"></ul>
                             </div>
                         </div>
 
-                        <div class="lova-section">
-                            <h4>Kies nu het juiste antwoord:</h4>
-                            <div id="lovaFinalOptions" class="options-container"></div>
+                        <!-- Stap 2: Ordenen -->
+                        <div class="lova-help-step">
+                            <h4 class="lova-help-step-title">🗃️ Stap 2: Ordenen</h4>
+                            <div class="lova-help-section">
+                                <p><strong>Relevante getallen:</strong></p>
+                                <ul id="lovaHelpGetallen" class="lova-help-list"></ul>
+                            </div>
+                            <div class="lova-help-section">
+                                <p><strong>Wiskundige tool:</strong></p>
+                                <p id="lovaHelpTool" class="lova-help-text"></p>
+                            </div>
                         </div>
 
-                        <div class="lova-step-nav">
-                            <button class="btn btn-secondary" onclick="goToLovaStep(3)">
-                                ← Terug naar Vormen
-                            </button>
+                        <!-- Stap 3: Vormen -->
+                        <div class="lova-help-step">
+                            <h4 class="lova-help-step-title">✍️ Stap 3: Vormen</h4>
+                            <div id="lovaHelpBewerkingen" class="lova-help-bewerkingen"></div>
+                        </div>
+
+                        <!-- Stap 4: Antwoorden -->
+                        <div class="lova-help-step">
+                            <h4 class="lova-help-step-title">✅ Stap 4: Antwoorden</h4>
+                            <div class="lova-help-section">
+                                <p><strong>Verwachte eenheid:</strong> <span id="lovaHelpEenheid" class="lova-help-text"></span></p>
+                            </div>
+                            <div class="lova-help-section">
+                                <p><strong>Logica check:</strong></p>
+                                <p id="lovaHelpLogica" class="lova-help-text"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Regular quiz content (for non-L.O.V.A. mode) -->
-                <div id="regularQuizContent">
-                    <div id="optionsContainer" class="options-container"></div>
-                    <textarea id="textareaAnswer" class="textarea-answer hidden" placeholder="Typ hier je antwoord..."></textarea>
-                </div>
+                <!-- Quiz content (always visible in regular quiz mode) -->
+                <div id="optionsContainer" class="options-container"></div>
+                <textarea id="textareaAnswer" class="textarea-answer hidden" placeholder="Typ hier je antwoord..."></textarea>
             </div>
 
             <div id="feedbackSection" class="hidden">
@@ -1823,26 +1387,7 @@
             };
             document.getElementById('quizTitle').textContent = titles[subject] || 'Quiz';
 
-            // Show L.O.V.A. mode toggle only for verhaaltjessommen
-            const lovaModeToggle = document.getElementById('lovaModeToggle');
-            if (subject === 'verhaaltjessommen') {
-                lovaModeToggle.classList.remove('hidden');
-                // Check if any question has L.O.V.A. data
-                const hasAnyLovaData = randomizedQuestions.some(q => q.lova && q.lova.stap1_lezen);
-                if (hasAnyLovaData) {
-                    // Enable L.O.V.A. mode by default
-                    lovaMode = 'lova';
-                    document.querySelectorAll('.btn-mode').forEach(btn => {
-                        btn.classList.remove('active');
-                        if (btn.dataset.mode === 'lova') {
-                            btn.classList.add('active');
-                        }
-                    });
-                }
-            } else {
-                lovaModeToggle.classList.add('hidden');
-                lovaMode = 'practice';
-            }
+            // L.O.V.A. help button will be shown/hidden automatically per question based on lova data
 
             // Start collapsed on mobile for better UX
             const tracker = document.getElementById('progressTracker');
@@ -1927,75 +1472,64 @@
             // Load question
             document.getElementById('questionText').textContent = currentQuestion.question;
 
-            // Check if L.O.V.A. mode is active and question has L.O.V.A. data
+            // Check if question has L.O.V.A. data
             const hasLovaData = currentQuestion.lova && currentQuestion.lova.stap1_lezen;
-            const lovaContainer = document.getElementById('lovaStepContainer');
-            const regularContainer = document.getElementById('regularQuizContent');
+            const lovaHelpButton = document.getElementById('lovaHelpButton');
+            const lovaHelpPanel = document.getElementById('lovaHelpPanel');
 
-            if (lovaMode === 'lova' && hasLovaData) {
-                // Show L.O.V.A. mode
-                lovaContainer.classList.remove('hidden');
-                regularContainer.classList.add('hidden');
+            if (hasLovaData) {
+                // Show L.O.V.A. help button and load data into panel
+                lovaHelpButton.classList.remove('hidden');
+                loadLovaHelpData(currentQuestion);
 
-                // Reset L.O.V.A. state for new question
-                currentLovaStep = 1;
-                lovaCalculatedResult = null;
-
-                // Show L.O.V.A. progress
-                document.getElementById('lovaProgress').classList.remove('hidden');
-
-                // Load first L.O.V.A. step
-                goToLovaStep(1);
-
-                // Hide regular submit/next buttons
-                document.getElementById('submitBtn').classList.add('hidden');
-                document.getElementById('nextBtn').classList.add('hidden');
+                // Reset panel to collapsed state for new question
+                lovaHelpPanelExpanded = false;
+                lovaHelpPanel.classList.remove('expanded');
+                lovaHelpPanel.classList.add('hidden');
+                document.getElementById('lovaToggleIcon').textContent = '▼';
             } else {
-                // Show regular quiz mode
-                lovaContainer.classList.add('hidden');
-                regularContainer.classList.remove('hidden');
-
-                // Hide L.O.V.A. progress
-                document.getElementById('lovaProgress').classList.add('hidden');
-
-                // Handle different question types
-                const optionsContainer = document.getElementById('optionsContainer');
-                const textareaAnswer = document.getElementById('textareaAnswer');
-                const feedbackSection = document.getElementById('feedbackSection');
-
-                // Hide feedback section and reset classes for new question
-                feedbackSection.classList.add('hidden');
-                feedbackSection.classList.remove('correct', 'incorrect');
-                document.getElementById('correctAnswerDisplay').classList.add('hidden');
-                document.getElementById('extraInfoDisplay').classList.add('hidden');
-                document.getElementById('strategyAndTips').classList.add('hidden');
-
-                if (currentQuestion.options) {
-                    // Multiple choice question
-                    optionsContainer.classList.remove('hidden');
-                    textareaAnswer.classList.add('hidden');
-
-                    optionsContainer.innerHTML = '';
-                    currentQuestion.options.forEach((option, index) => {
-                        const optionElement = document.createElement('div');
-                        optionElement.className = 'option';
-                        optionElement.textContent = typeof option === 'string' ? option : option.text;
-                        optionElement.onclick = () => selectOption(index);
-                        optionsContainer.appendChild(optionElement);
-                    });
-                } else {
-                    // Open question
-                    optionsContainer.classList.add('hidden');
-                    textareaAnswer.classList.remove('hidden');
-                    textareaAnswer.value = '';
-                }
-
-                // Reset UI state
-                selectedAnswer = null;
-                hasAnswered = false;
-                document.getElementById('submitBtn').classList.remove('hidden');
-                document.getElementById('nextBtn').classList.add('hidden');
+                // Hide L.O.V.A. help button
+                lovaHelpButton.classList.add('hidden');
+                lovaHelpPanel.classList.add('hidden');
             }
+
+            // Handle different question types (always show regular quiz)
+            const optionsContainer = document.getElementById('optionsContainer');
+            const textareaAnswer = document.getElementById('textareaAnswer');
+            const feedbackSection = document.getElementById('feedbackSection');
+
+            // Hide feedback section and reset classes for new question
+            feedbackSection.classList.add('hidden');
+            feedbackSection.classList.remove('correct', 'incorrect');
+            document.getElementById('correctAnswerDisplay').classList.add('hidden');
+            document.getElementById('extraInfoDisplay').classList.add('hidden');
+            document.getElementById('strategyAndTips').classList.add('hidden');
+
+            if (currentQuestion.options) {
+                // Multiple choice question
+                optionsContainer.classList.remove('hidden');
+                textareaAnswer.classList.add('hidden');
+
+                optionsContainer.innerHTML = '';
+                currentQuestion.options.forEach((option, index) => {
+                    const optionElement = document.createElement('div');
+                    optionElement.className = 'option';
+                    optionElement.textContent = typeof option === 'string' ? option : option.text;
+                    optionElement.onclick = () => selectOption(index);
+                    optionsContainer.appendChild(optionElement);
+                });
+            } else {
+                // Open question
+                optionsContainer.classList.add('hidden');
+                textareaAnswer.classList.remove('hidden');
+                textareaAnswer.value = '';
+            }
+
+            // Reset UI state
+            selectedAnswer = null;
+            hasAnswered = false;
+            document.getElementById('submitBtn').classList.remove('hidden');
+            document.getElementById('nextBtn').classList.add('hidden');
         }
 
         function selectOption(index) {
@@ -2238,395 +1772,102 @@
             totalQuestions = 0;
             selectedAnswer = null;
             hasAnswered = false;
-            // Reset L.O.V.A. state
-            lovaMode = 'lova';
-            currentLovaStep = 1;
+            // Reset L.O.V.A. panel state
+            lovaHelpPanelExpanded = false;
         }
 
         // ========================================
-        // L.O.V.A. Mode Implementation
+        // L.O.V.A. Help Panel (Simplified)
         // ========================================
 
-        let lovaMode = 'lova'; // 'lova' or 'practice'
-        let currentLovaStep = 1; // 1-4
-        let lovaUserInputs = {}; // Store user inputs for validation
-        let lovaCalculatedResult = null;
+        let lovaHelpPanelExpanded = false;
 
-        // Set L.O.V.A. mode
-        function setLovaMode(mode) {
-            lovaMode = mode;
+        // Toggle L.O.V.A. help panel
+        function toggleLovaPanel() {
+            lovaHelpPanelExpanded = !lovaHelpPanelExpanded;
+            const panel = document.getElementById('lovaHelpPanel');
+            const icon = document.getElementById('lovaToggleIcon');
 
-            // Update button states
-            document.querySelectorAll('.btn-mode').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.dataset.mode === mode) {
-                    btn.classList.add('active');
-                }
-            });
-
-            // Show/hide L.O.V.A. progress indicator
-            const lovaProgress = document.getElementById('lovaProgress');
-            if (mode === 'lova') {
-                lovaProgress.classList.remove('hidden');
+            if (lovaHelpPanelExpanded) {
+                panel.classList.add('expanded');
+                panel.classList.remove('hidden');
+                icon.textContent = '▲';
             } else {
-                lovaProgress.classList.add('hidden');
-            }
-
-            // Reload current question with new mode
-            loadCurrentQuestion();
-        }
-
-        // Go to specific L.O.V.A. step
-        function goToLovaStep(step) {
-            currentLovaStep = step;
-
-            // Update step progress indicator
-            document.querySelectorAll('.lova-step').forEach((stepEl, index) => {
-                stepEl.classList.remove('active', 'completed');
-                if (index + 1 === step) {
-                    stepEl.classList.add('active');
-                } else if (index + 1 < step) {
-                    stepEl.classList.add('completed');
-                }
-            });
-
-            // Hide all step contents
-            document.querySelectorAll('.lova-step-content').forEach(content => {
-                content.classList.add('hidden');
-            });
-
-            // Show current step content
-            document.getElementById(`lovaStap${step}`).classList.remove('hidden');
-
-            // Load content for the current step
-            const currentQuestion = randomizedQuestions[currentQuestionIndex];
-            if (currentQuestion && currentQuestion.lova) {
-                switch(step) {
-                    case 1:
-                        renderLovaStap1(currentQuestion);
-                        break;
-                    case 2:
-                        renderLovaStap2(currentQuestion);
-                        break;
-                    case 3:
-                        renderLovaStap3(currentQuestion);
-                        break;
-                    case 4:
-                        renderLovaStap4(currentQuestion);
-                        break;
-                }
-            }
-        }
-
-        // Render Stap 1: Lezen
-        function renderLovaStap1(question) {
-            const lova = question.lova.stap1_lezen;
-
-            // Show hoofdvraag
-            document.getElementById('lovaHoofdvraag').textContent = lova.hoofdvraag;
-
-            // Show tussenstappen
-            const tussenstappenList = document.getElementById('lovaTussenstappen');
-            tussenstappenList.innerHTML = '';
-            lova.tussenstappen.forEach(stap => {
-                const li = document.createElement('li');
-                li.textContent = stap;
-                tussenstappenList.appendChild(li);
-            });
-
-            // Create highlightable content
-            const content = question.content;
-            const highlightContent = document.getElementById('lovaHighlightContent');
-
-            // Split content into sentences
-            const sentences = content.split(/\.\s+/);
-            let html = '';
-
-            sentences.forEach((sentence, index) => {
-                if (sentence.trim()) {
-                    const isRuis = lova.ruis.some(r => sentence.includes(r.replace(/\.$/, '')));
-                    html += `<span class="highlightable ${isRuis ? 'marked-ruis' : ''}" data-sentence="${index}">${sentence}.</span> `;
-                }
-            });
-
-            highlightContent.innerHTML = html;
-
-            // Show feedback about identifying ruis
-            const feedback = document.getElementById('lovaRuisFeedback');
-            feedback.classList.remove('hidden');
-            feedback.className = 'lova-feedback correct';
-            feedback.textContent = '💡 Ruis (onnodige informatie) is al gemarkeerd met een rode streep door.';
-        }
-
-        // Render Stap 2: Ordenen
-        function renderLovaStap2(question) {
-            const lova = question.lova.stap2_ordenen;
-
-            // Render number inputs
-            const numberInputsContainer = document.getElementById('lovaNumberInputs');
-            numberInputsContainer.innerHTML = '';
-
-            Object.entries(lova.relevante_getallen).forEach(([label, value]) => {
-                const inputGroup = document.createElement('div');
-                inputGroup.className = 'number-input-group';
-                inputGroup.innerHTML = `
-                    <label>${label}:</label>
-                    <input type="text" data-label="${label}" data-expected="${value}" placeholder="Vul het getal in...">
-                `;
-                numberInputsContainer.appendChild(inputGroup);
-            });
-
-            // Render tool options
-            const toolOptionsContainer = document.getElementById('lovaToolOptions');
-            toolOptionsContainer.innerHTML = '';
-
-            const toolOptions = [
-                'Verhoudingstabel',
-                'Optellen/Aftrekken',
-                'Vermenigvuldigen/Delen',
-                'Formule (Snelheid/Afstand/Tijd)',
-                'Combinatoriek'
-            ];
-
-            toolOptions.forEach(tool => {
-                const option = document.createElement('div');
-                option.className = 'tool-option';
-                option.textContent = tool;
-                option.dataset.tool = tool;
-                option.onclick = () => selectTool(option, lova.tool);
-                toolOptionsContainer.appendChild(option);
-            });
-        }
-
-        // Check L.O.V.A. numbers
-        function checkLovaNumbers() {
-            const inputs = document.querySelectorAll('#lovaNumberInputs input');
-            let allCorrect = true;
-
-            inputs.forEach(input => {
-                const userValue = input.value.trim();
-                const expected = input.dataset.expected;
-
-                if (userValue === expected) {
-                    input.classList.remove('incorrect');
-                    input.classList.add('correct');
-                } else {
-                    input.classList.remove('correct');
-                    input.classList.add('incorrect');
-                    allCorrect = false;
-                }
-            });
-
-            const feedback = document.getElementById('lovaNumberFeedback');
-            feedback.classList.remove('hidden');
-
-            if (allCorrect) {
-                feedback.className = 'lova-feedback correct';
-                feedback.textContent = '✓ Perfect! Alle getallen zijn correct verzameld.';
-            } else {
-                feedback.className = 'lova-feedback incorrect';
-                feedback.textContent = '✗ Controleer de rode velden nog eens. Gebruik dezelfde notatie als in de tekst (bijv. €15,50).';
-            }
-        }
-
-        // Select tool
-        function selectTool(optionElement, expectedTool) {
-            // Remove previous selection
-            document.querySelectorAll('.tool-option').forEach(opt => {
-                opt.classList.remove('selected', 'correct', 'incorrect');
-            });
-
-            // Mark as selected
-            optionElement.classList.add('selected');
-
-            // Check if correct (flexible matching)
-            const feedback = document.getElementById('lovaToolFeedback');
-            feedback.classList.remove('hidden');
-
-            const userTool = optionElement.dataset.tool.toLowerCase();
-            const expected = expectedTool.toLowerCase();
-
-            if (expected.includes(userTool) || userTool.includes(expected)) {
-                optionElement.classList.add('correct');
-                feedback.className = 'lova-feedback correct';
-                feedback.textContent = '✓ Goede keuze! Dit is de juiste wiskundige tool voor deze som.';
-            } else {
-                optionElement.classList.add('incorrect');
-                feedback.className = 'lova-feedback incorrect';
-                feedback.textContent = `💡 Hint: Bij deze som moet je gebruikmaken van "${expectedTool}".`;
-            }
-        }
-
-        // Render Stap 3: Vormen
-        function renderLovaStap3(question) {
-            const lova = question.lova.stap3_vormen;
-            const calculationStepsContainer = document.getElementById('lovaCalculationSteps');
-            calculationStepsContainer.innerHTML = '';
-
-            lova.bewerkingen.forEach((bewerking, index) => {
-                const stepDiv = document.createElement('div');
-                stepDiv.className = 'berekening-stap';
-                stepDiv.innerHTML = `
-                    <p class="stap-beschrijving">${bewerking.stap}</p>
-                    <p class="stap-uitleg">${bewerking.uitleg}</p>
-                    <p><strong>Berekening:</strong> ${bewerking.berekening}</p>
-                    <div class="berekening-input">
-                        <input type="text"
-                               id="lovaCalcStep${index}"
-                               data-expected="${bewerking.resultaat}"
-                               placeholder="Vul het resultaat in...">
-                        <button class="btn-check" onclick="checkCalculationStep(${index}, '${bewerking.resultaat}')">
-                            Controleer
-                        </button>
-                    </div>
-                    <div id="lovaCalcFeedback${index}" class="stap-feedback hidden"></div>
-                `;
-                calculationStepsContainer.appendChild(stepDiv);
-            });
-
-            // Check if all steps are complete to enable next button
-            updateStap3NextButton();
-        }
-
-        // Check calculation step
-        function checkCalculationStep(stepIndex, expectedResult) {
-            const input = document.getElementById(`lovaCalcStep${stepIndex}`);
-            const feedback = document.getElementById(`lovaCalcFeedback${stepIndex}`);
-            const userValue = input.value.trim();
-
-            feedback.classList.remove('hidden');
-
-            if (userValue === expectedResult) {
-                input.classList.remove('incorrect');
-                input.classList.add('correct');
-                feedback.className = 'stap-feedback correct';
-                feedback.textContent = '✓ Correct! Je berekening klopt.';
-
-                // Store the result if this is the last step
-                const currentQuestion = randomizedQuestions[currentQuestionIndex];
-                const totalSteps = currentQuestion.lova.stap3_vormen.bewerkingen.length;
-                if (stepIndex === totalSteps - 1) {
-                    lovaCalculatedResult = expectedResult;
-                }
-            } else {
-                input.classList.remove('correct');
-                input.classList.add('incorrect');
-                feedback.className = 'stap-feedback incorrect';
-                feedback.textContent = `✗ Niet helemaal. Het juiste antwoord is ${expectedResult}. Probeer de berekening nog eens stap voor stap.`;
-            }
-
-            // Update next button status
-            updateStap3NextButton();
-        }
-
-        // Update Stap 3 next button status
-        function updateStap3NextButton() {
-            const nextBtn = document.getElementById('lovaStap3NextBtn');
-            const currentQuestion = randomizedQuestions[currentQuestionIndex];
-
-            if (!currentQuestion || !currentQuestion.lova) {
-                return;
-            }
-
-            const totalSteps = currentQuestion.lova.stap3_vormen.bewerkingen.length;
-            let allComplete = true;
-
-            for (let i = 0; i < totalSteps; i++) {
-                const input = document.getElementById(`lovaCalcStep${i}`);
-                if (!input || !input.classList.contains('correct')) {
-                    allComplete = false;
-                    break;
-                }
-            }
-
-            nextBtn.disabled = !allComplete;
-        }
-
-        // Render Stap 4: Antwoorden
-        function renderLovaStap4(question) {
-            const lova = question.lova.stap4_antwoorden;
-
-            // Show calculated answer
-            document.getElementById('lovaCalculatedAnswer').textContent = lovaCalculatedResult || lova.antwoord;
-
-            // Show expected unit and logic check
-            document.getElementById('lovaExpectedUnit').textContent = `(verwacht: ${lova.verwachte_eenheid})`;
-            document.getElementById('lovaLogicCheck').textContent = `(${lova.logica_check})`;
-
-            // Reset checkboxes
-            document.getElementById('lovaCheckUnit').checked = false;
-            document.getElementById('lovaCheckLogic').checked = false;
-
-            // Render final options
-            const optionsContainer = document.getElementById('lovaFinalOptions');
-            optionsContainer.innerHTML = '';
-
-            question.options.forEach((option, index) => {
-                const optionElement = document.createElement('div');
-                optionElement.className = 'option';
-                optionElement.textContent = typeof option === 'string' ? option : option.text;
-                optionElement.onclick = () => selectLovaFinalAnswer(index, question.correct);
-                optionsContainer.appendChild(optionElement);
-            });
-        }
-
-        // Update L.O.V.A. validation
-        function updateLovaValidation() {
-            const unitChecked = document.getElementById('lovaCheckUnit').checked;
-            const logicChecked = document.getElementById('lovaCheckLogic').checked;
-
-            // Could add visual feedback here
-            if (unitChecked && logicChecked) {
-                // User has validated their answer
-            }
-        }
-
-        // Select final L.O.V.A. answer
-        function selectLovaFinalAnswer(selectedIndex, correctIndex) {
-            const options = document.querySelectorAll('#lovaFinalOptions .option');
-
-            // Remove previous selection
-            options.forEach(opt => {
-                opt.classList.remove('selected', 'correct', 'incorrect');
-            });
-
-            // Mark selection
-            options[selectedIndex].classList.add('selected');
-
-            if (selectedIndex === correctIndex) {
-                options[selectedIndex].classList.add('correct');
-                score++;
-
-                // Update category progress
-                const currentQuestion = randomizedQuestions[currentQuestionIndex];
-                updateCategoryProgress(currentQuestion.theme, true);
-
-                // Show success message
+                panel.classList.remove('expanded');
                 setTimeout(() => {
-                    alert('🎉 Correct! Je hebt de L.O.V.A.-methode goed toegepast!');
-                    nextQuestion();
-                }, 500);
-            } else {
-                options[selectedIndex].classList.add('incorrect');
-                options[correctIndex].classList.add('correct');
+                    if (!lovaHelpPanelExpanded) {
+                        panel.classList.add('hidden');
+                    }
+                }, 400); // Match transition duration
+                icon.textContent = '▼';
+            }
+        }
 
-                // Update category progress
-                const currentQuestion = randomizedQuestions[currentQuestionIndex];
-                updateCategoryProgress(currentQuestion.theme, false);
+        // Load L.O.V.A. help data into the panel
+        function loadLovaHelpData(question) {
+            if (!question || !question.lova) return;
 
-                // Show feedback
-                const selectedOption = currentQuestion.options[selectedIndex];
-                const foutanalyse = (typeof selectedOption === 'object' && selectedOption.foutanalyse) ?
-                    selectedOption.foutanalyse : 'Helaas, dat is niet correct.';
+            const lova = question.lova;
 
-                setTimeout(() => {
-                    alert(`❌ ${foutanalyse}\n\nHet juiste antwoord was: ${typeof currentQuestion.options[correctIndex] === 'string' ? currentQuestion.options[correctIndex] : currentQuestion.options[correctIndex].text}`);
-                    nextQuestion();
-                }, 500);
+            // Stap 1: Lezen
+            if (lova.stap1_lezen) {
+                document.getElementById('lovaHelpHoofdvraag').textContent = lova.stap1_lezen.hoofdvraag;
+
+                const ruisList = document.getElementById('lovaHelpRuis');
+                ruisList.innerHTML = '';
+                lova.stap1_lezen.ruis.forEach(r => {
+                    const li = document.createElement('li');
+                    li.textContent = r;
+                    ruisList.appendChild(li);
+                });
+
+                const tussenstappenList = document.getElementById('lovaHelpTussenstappen');
+                tussenstappenList.innerHTML = '';
+                lova.stap1_lezen.tussenstappen.forEach(t => {
+                    const li = document.createElement('li');
+                    li.textContent = t;
+                    tussenstappenList.appendChild(li);
+                });
             }
 
-            hasAnswered = true;
+            // Stap 2: Ordenen
+            if (lova.stap2_ordenen) {
+                const getallenList = document.getElementById('lovaHelpGetallen');
+                getallenList.innerHTML = '';
+                Object.entries(lova.stap2_ordenen.relevante_getallen).forEach(([label, value]) => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<strong>${label}:</strong> ${value}`;
+                    getallenList.appendChild(li);
+                });
+
+                document.getElementById('lovaHelpTool').textContent = lova.stap2_ordenen.tool;
+            }
+
+            // Stap 3: Vormen
+            if (lova.stap3_vormen && lova.stap3_vormen.bewerkingen) {
+                const bewerkingenContainer = document.getElementById('lovaHelpBewerkingen');
+                bewerkingenContainer.innerHTML = '';
+
+                lova.stap3_vormen.bewerkingen.forEach((bew, index) => {
+                    const bewDiv = document.createElement('div');
+                    bewDiv.className = 'lova-help-bewerking';
+                    bewDiv.innerHTML = `
+                        <div class="lova-help-bewerking-stap">${index + 1}. ${bew.stap}</div>
+                        <div class="lova-help-bewerking-uitleg">${bew.uitleg}</div>
+                        <div class="lova-help-bewerking-calc">${bew.berekening} = ${bew.resultaat}</div>
+                    `;
+                    bewerkingenContainer.appendChild(bewDiv);
+                });
+            }
+
+            // Stap 4: Antwoorden
+            if (lova.stap4_antwoorden) {
+                document.getElementById('lovaHelpEenheid').textContent = lova.stap4_antwoorden.verwachte_eenheid;
+                document.getElementById('lovaHelpLogica').textContent = lova.stap4_antwoorden.logica_check;
+            }
         }
+
+        // (All old L.O.V.A. step-by-step functions removed - now using simpler help panel)
     </script>
 </body>
 </html>
