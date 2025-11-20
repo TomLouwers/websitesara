@@ -16800,6 +16800,2049 @@
     "sub_theme": "samengestelde interest"
   },
   {
+    "id": 289,
+    "title": "Winkelkorting",
+    "theme": "procenten-rente",
+    "content": "Een winkel heeft een uitverkoop. Een laptop kost normaal €650,-. Nu krijg je 15% korting.",
+    "questions": [
+      {
+        "question": "Hoeveel euro korting krijg je op de laptop?",
+        "options": [
+          {
+            "text": "€87,50",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je berekening nog eens."
+          },
+          {
+            "text": "€97,50",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€107,50",
+            "foutanalyse": "Je hebt een verkeerde berekening gemaakt. Bereken 15% van €650,-."
+          },
+          {
+            "text": "€650,-",
+            "foutanalyse": "Dit is de originele prijs, niet de korting."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Percentages berekenen: een percentage van een bedrag uitrekenen.",
+          "berekening": [
+            "15% van €650,- = 0,15 × €650,- = €97,50"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel betaal je voor de laptop na de korting?",
+        "options": [
+          {
+            "text": "€535,50",
+            "foutanalyse": "Je hebt een fout gemaakt in de berekening. Controleer je tussenstappen."
+          },
+          {
+            "text": "€542,50",
+            "foutanalyse": "Je hebt een fout gemaakt in de berekening. Controleer je tussenstappen."
+          },
+          {
+            "text": "€552,50",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€562,50",
+            "foutanalyse": "Je hebt een fout gemaakt in de berekening. Controleer je tussenstappen."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Eindprijs berekenen na korting.",
+          "berekening": [
+            "Korting: €97,50",
+            "Nieuwe prijs: €650,- - €97,50 = €552,50",
+            "Of: €650,- × 0,85 = €552,50"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "korting berekenen"
+  },
+  {
+    "id": 290,
+    "title": "BTW berekening",
+    "theme": "procenten-rente",
+    "content": "Een bedrijf verkoopt producten. De prijs exclusief BTW is €120,-. Ze moeten 21% BTW berekenen.",
+    "questions": [
+      {
+        "question": "Hoeveel BTW moet er betaald worden?",
+        "options": [
+          {
+            "text": "€21,-",
+            "foutanalyse": "Dit is het percentage, niet het bedrag. Bereken 21% van €120,-."
+          },
+          {
+            "text": "€24,-",
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening van 21% van €120,-."
+          },
+          {
+            "text": "€25,20",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€30,-",
+            "foutanalyse": "Dit is te veel. Bereken 21% van €120,- nauwkeurig."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "BTW (belasting) berekenen over een bedrag.",
+          "berekening": [
+            "21% van €120,- = 0,21 × €120,- = €25,20"
+          ]
+        }
+      },
+      {
+        "question": "Wat is de prijs inclusief BTW?",
+        "options": [
+          {
+            "text": "€141,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening."
+          },
+          {
+            "text": "€144,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Tel de BTW op bij de prijs."
+          },
+          {
+            "text": "€145,20",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€150,-",
+            "foutanalyse": "Dit is te veel. Tel €120,- en €25,20 bij elkaar op."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Prijs inclusief BTW berekenen.",
+          "berekening": [
+            "BTW: €25,20",
+            "Totaalprijs: €120,- + €25,20 = €145,20",
+            "Of: €120,- × 1,21 = €145,20"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "BTW berekeningen"
+  },
+  {
+    "id": 291,
+    "title": "Prijsverhoging benzine",
+    "theme": "procenten-rente",
+    "content": "De benzineprijs was vorige maand €1,80 per liter. Deze maand is de prijs met 8% gestegen.",
+    "questions": [
+      {
+        "question": "Hoeveel is de benzineprijs gestegen (in euro's)?",
+        "options": [
+          {
+            "text": "€0,08",
+            "foutanalyse": "Dit is het percentage als getal, niet de prijsstijging. Bereken 8% van €1,80."
+          },
+          {
+            "text": "€0,12",
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening van 8% van €1,80."
+          },
+          {
+            "text": "€0,144",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€0,18",
+            "foutanalyse": "Dit is te veel. Bereken 8% van €1,80 nauwkeurig."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Prijsstijging berekenen met percentages.",
+          "berekening": [
+            "8% van €1,80 = 0,08 × €1,80 = €0,144"
+          ]
+        }
+      },
+      {
+        "question": "Wat is de nieuwe benzineprijs per liter?",
+        "options": [
+          {
+            "text": "€1,88",
+            "foutanalyse": "Je hebt een fout gemaakt bij het optellen. Controleer je berekening."
+          },
+          {
+            "text": "€1,92",
+            "foutanalyse": "Dit is te veel. Tel €1,80 en €0,144 bij elkaar op."
+          },
+          {
+            "text": "€1,944",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€1,98",
+            "foutanalyse": "Dit is te hoog. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Nieuwe prijs berekenen na een stijging.",
+          "berekening": [
+            "Stijging: €0,144",
+            "Nieuwe prijs: €1,80 + €0,144 = €1,944",
+            "Of: €1,80 × 1,08 = €1,944"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "prijsverhoging"
+  },
+  {
+    "id": 292,
+    "title": "Spaarrekening",
+    "theme": "procenten-rente",
+    "content": "Tim zet €1.500,- op zijn spaarrekening. De bank geeft 2,5% rente per jaar.",
+    "questions": [
+      {
+        "question": "Hoeveel rente krijgt Tim na 1 jaar?",
+        "options": [
+          {
+            "text": "€25,-",
+            "foutanalyse": "Dit zou kloppen bij 2,5% maar je moet 2,5 delen door 100 voor het percentage."
+          },
+          {
+            "text": "€32,50",
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening van 2,5%."
+          },
+          {
+            "text": "€37,50",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€40,-",
+            "foutanalyse": "Dit is te veel. Bereken 2,5% van €1.500,-."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Rente berekenen over een spaarbedrag.",
+          "berekening": [
+            "2,5% van €1.500,- = 0,025 × €1.500,- = €37,50"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel geld heeft Tim in totaal na 1 jaar?",
+        "options": [
+          {
+            "text": "€1.525,-",
+            "foutanalyse": "Dit is te weinig. Tel de rente erbij op."
+          },
+          {
+            "text": "€1.532,50",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening."
+          },
+          {
+            "text": "€1.537,50",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€1.540,-",
+            "foutanalyse": "Dit is te veel. Tel €1.500,- en €37,50 bij elkaar op."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Totaalbedrag berekenen na rente.",
+          "berekening": [
+            "Rente: €37,50",
+            "Totaal: €1.500,- + €37,50 = €1.537,50",
+            "Of: €1.500,- × 1,025 = €1.537,50"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "sparen en rente"
+  },
+  {
+    "id": 293,
+    "title": "Uitverkoop kledingtstore",
+    "theme": "procenten-rente",
+    "content": "Een kledingzaak heeft een grote uitverkoop. Alle jassen hebben 35% korting. Een jas kostte oorspronkelijk €180,-.",
+    "questions": [
+      {
+        "question": "Hoeveel betaal je voor de jas tijdens de uitverkoop?",
+        "options": [
+          {
+            "text": "€63,-",
+            "foutanalyse": "Dit is de korting, niet de nieuwe prijs. Trek de korting af van €180,-."
+          },
+          {
+            "text": "€117,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€127,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken eerst de korting."
+          },
+          {
+            "text": "€145,-",
+            "foutanalyse": "Dit is niet juist. Bereken 35% korting op €180,-."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Nieuwe prijs berekenen na een percentage korting.",
+          "berekening": [
+            "Korting: 35% van €180,- = 0,35 × €180,- = €63,-",
+            "Nieuwe prijs: €180,- - €63,- = €117,-",
+            "Of: €180,- × 0,65 = €117,-"
+          ]
+        }
+      },
+      {
+        "question": "Als je 3 van deze jassen koopt, hoeveel bespaar je in totaal?",
+        "options": [
+          {
+            "text": "€63,-",
+            "foutanalyse": "Dit is de besparing op 1 jas. Je moet dit vermenigvuldigen met 3."
+          },
+          {
+            "text": "€180,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening."
+          },
+          {
+            "text": "€189,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€351,-",
+            "foutanalyse": "Dit is te veel. Bereken de besparing per jas en vermenigvuldig met 3."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Totale besparing berekenen bij meerdere artikelen.",
+          "berekening": [
+            "Besparing per jas: €63,-",
+            "Totale besparing: 3 × €63,- = €189,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "korting en besparen"
+  },
+  {
+    "id": 294,
+    "title": "Prijs van een fiets",
+    "theme": "procenten-rente",
+    "content": "Een fietsenwinkel verhoogt alle prijzen met 12%. Een mountainbike kostte eerst €450,-.",
+    "questions": [
+      {
+        "question": "Hoeveel euro wordt de mountainbike duurder?",
+        "options": [
+          {
+            "text": "€12,-",
+            "foutanalyse": "Dit is het percentage als getal, niet de prijsstijging. Bereken 12% van €450,-."
+          },
+          {
+            "text": "€48,-",
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening van 12% van €450,-."
+          },
+          {
+            "text": "€54,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€60,-",
+            "foutanalyse": "Dit is te veel. Bereken 12% van €450,- nauwkeurig."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Prijsstijging berekenen.",
+          "berekening": [
+            "12% van €450,- = 0,12 × €450,- = €54,-"
+          ]
+        }
+      },
+      {
+        "question": "Wat is de nieuwe prijs van de mountainbike?",
+        "options": [
+          {
+            "text": "€462,-",
+            "foutanalyse": "Dit is te weinig. Tel de prijsstijging op bij €450,-."
+          },
+          {
+            "text": "€498,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening."
+          },
+          {
+            "text": "€504,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€510,-",
+            "foutanalyse": "Dit is te veel. Tel €450,- en €54,- bij elkaar op."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Nieuwe prijs berekenen na verhoging.",
+          "berekening": [
+            "Prijsstijging: €54,-",
+            "Nieuwe prijs: €450,- + €54,- = €504,-",
+            "Of: €450,- × 1,12 = €504,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "prijsverhoging"
+  },
+  {
+    "id": 295,
+    "title": "Klantenkaart korting",
+    "theme": "procenten-rente",
+    "content": "In een boekwinkel krijg je met een klantenkaart 18% korting. Je koopt boeken voor in totaal €75,-.",
+    "questions": [
+      {
+        "question": "Hoeveel korting krijg je met de klantenkaart?",
+        "options": [
+          {
+            "text": "€12,50",
+            "foutanalyse": "Je hebt een fout gemaakt in de berekening. Bereken 18% van €75,-."
+          },
+          {
+            "text": "€13,50",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€14,50",
+            "foutanalyse": "Dit is te veel. Controleer je berekening van 18% van €75,-."
+          },
+          {
+            "text": "€18,-",
+            "foutanalyse": "Dit is het percentage als getal, niet de korting."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Korting berekenen met een percentage.",
+          "berekening": [
+            "18% van €75,- = 0,18 × €75,- = €13,50"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel betaal je uiteindelijk voor de boeken?",
+        "options": [
+          {
+            "text": "€57,-",
+            "foutanalyse": "Dit is te weinig. Controleer je berekening."
+          },
+          {
+            "text": "€60,50",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Trek de korting af."
+          },
+          {
+            "text": "€61,50",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€63,50",
+            "foutanalyse": "Dit is te veel. Trek €13,50 af van €75,-."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Eindprijs berekenen na korting.",
+          "berekening": [
+            "Korting: €13,50",
+            "Eindprijs: €75,- - €13,50 = €61,50",
+            "Of: €75,- × 0,82 = €61,50"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "korting berekenen"
+  },
+  {
+    "id": 296,
+    "title": "Investering met groei",
+    "theme": "procenten-rente",
+    "content": "Een bedrijf investeert €5.000,- in een project. Ze verwachten dat dit bedrag elk jaar met 6% groeit.",
+    "questions": [
+      {
+        "question": "Hoeveel is de investering waard na 1 jaar?",
+        "options": [
+          {
+            "text": "€5.060,-",
+            "foutanalyse": "Dit is te weinig. Bereken 6% van €5.000,-."
+          },
+          {
+            "text": "€5.300,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€5.360,-",
+            "foutanalyse": "Dit is te veel. Controleer je berekening."
+          },
+          {
+            "text": "€5.600,-",
+            "foutanalyse": "Dit is veel te veel. Bereken 6% van €5.000,-."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Waarde berekenen na groei met een percentage.",
+          "berekening": [
+            "Groei: 6% van €5.000,- = 0,06 × €5.000,- = €300,-",
+            "Nieuwe waarde: €5.000,- + €300,- = €5.300,-",
+            "Of: €5.000,- × 1,06 = €5.300,-"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel is de investering waard na 2 jaar?",
+        "options": [
+          {
+            "text": "€5.600,-",
+            "foutanalyse": "Dit zou kloppen bij 2 × 6% = 12% groei, maar bij samengestelde groei is het meer."
+          },
+          {
+            "text": "€5.612,-",
+            "foutanalyse": "Je zit dichtbij! Denk aan samengestelde groei."
+          },
+          {
+            "text": "€5.618,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€5.636,-",
+            "foutanalyse": "Dit is te veel. Bereken de groei over 2 jaar."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Samengestelde groei over meerdere jaren.",
+          "berekening": [
+            "Na jaar 1: €5.300,-",
+            "Groei jaar 2: 6% van €5.300,- = 0,06 × €5.300,- = €318,-",
+            "Na jaar 2: €5.300,- + €318,- = €5.618,-",
+            "Of: €5.000,- × 1,06² = €5.000,- × 1,1236 = €5.618,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "samengestelde groei"
+  },
+  {
+    "id": 297,
+    "title": "Terugrekenen vanaf eindprijs",
+    "theme": "procenten-rente",
+    "content": "Na 20% korting betaal je €96,- voor een paar schoenen.",
+    "questions": [
+      {
+        "question": "Hoeveel kostten de schoenen oorspronkelijk?",
+        "options": [
+          {
+            "text": "€115,20",
+            "foutanalyse": "Je hebt 20% bij €96,- opgeteld, maar dat is niet correct. €96,- is 80% van de originele prijs."
+          },
+          {
+            "text": "€116,-",
+            "foutanalyse": "Je zit dichtbij! €96,- is 80% van de originele prijs."
+          },
+          {
+            "text": "€120,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€125,-",
+            "foutanalyse": "Dit is te veel. Bedenk dat €96,- gelijk is aan 80% van de originele prijs."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Terugrekenen: van eindprijs naar oorspronkelijke prijs.",
+          "berekening": [
+            "Na 20% korting betaal je 80% van de originele prijs",
+            "€96,- = 80% van de originele prijs",
+            "Originele prijs = €96,- ÷ 0,80 = €120,-",
+            "Check: 20% van €120,- = €24,-, dus €120,- - €24,- = €96,-"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel korting heb je gekregen in euro's?",
+        "options": [
+          {
+            "text": "€19,20",
+            "foutanalyse": "Dit is 20% van €96,-, maar de korting wordt berekend op de oorspronkelijke prijs."
+          },
+          {
+            "text": "€20,-",
+            "foutanalyse": "Dit lijkt logisch, maar bereken 20% van de oorspronkelijke prijs."
+          },
+          {
+            "text": "€24,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€25,-",
+            "foutanalyse": "Dit is te veel. Bereken 20% van €120,-."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Korting berekenen vanaf oorspronkelijke prijs.",
+          "berekening": [
+            "Oorspronkelijke prijs: €120,-",
+            "Korting: 20% van €120,- = 0,20 × €120,- = €24,-",
+            "Of: €120,- - €96,- = €24,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "terugrekenen percentage"
+  },
+  {
+    "id": 298,
+    "title": "Dubbele korting",
+    "theme": "procenten-rente",
+    "content": "Een meubelzaak geeft eerst 10% korting op alle meubels. Daarna krijgen studenten nog eens 15% extra korting op de nieuwe prijs. Een bureau kost oorspronkelijk €200,-.",
+    "questions": [
+      {
+        "question": "Hoeveel kost het bureau na de eerste korting van 10%?",
+        "options": [
+          {
+            "text": "€170,-",
+            "foutanalyse": "Dit zou kloppen als de korting 15% was, maar de eerste korting is 10%."
+          },
+          {
+            "text": "€180,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€190,-",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 10% van €200,-."
+          },
+          {
+            "text": "€200,-",
+            "foutanalyse": "Dit is de originele prijs. Trek de korting eraf."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Eerste korting berekenen.",
+          "berekening": [
+            "10% van €200,- = 0,10 × €200,- = €20,-",
+            "Prijs na eerste korting: €200,- - €20,- = €180,-",
+            "Of: €200,- × 0,90 = €180,-"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel betaalt een student uiteindelijk voor het bureau?",
+        "options": [
+          {
+            "text": "€150,-",
+            "foutanalyse": "Dit zou kloppen als je 10% + 15% = 25% korting had, maar de kortingen worden achter elkaar toegepast."
+          },
+          {
+            "text": "€153,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€157,-",
+            "foutanalyse": "Je zit dichtbij! Bereken 15% korting op €180,-."
+          },
+          {
+            "text": "€160,-",
+            "foutanalyse": "Dit is niet juist. Pas 15% korting toe op €180,-."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dubbele korting: kortingen achter elkaar toepassen.",
+          "berekening": [
+            "Na eerste korting: €180,-",
+            "Tweede korting: 15% van €180,- = 0,15 × €180,- = €27,-",
+            "Eindprijs: €180,- - €27,- = €153,-",
+            "Of: €200,- × 0,90 × 0,85 = €200,- × 0,765 = €153,-",
+            "Let op: Dit is NIET 25% korting! (25% zou €150,- zijn)"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "meerdere kortingen"
+  },
+  {
+    "id": 299,
+    "title": "Bevolkingsgroei",
+    "theme": "procenten-rente",
+    "content": "Een dorp heeft 2.400 inwoners. Het aantal inwoners groeit elk jaar met 5%.",
+    "questions": [
+      {
+        "question": "Hoeveel inwoners heeft het dorp na 1 jaar?",
+        "options": [
+          {
+            "text": "2.405 inwoners",
+            "foutanalyse": "Je hebt 5 inwoners erbij geteld, maar het moet 5% zijn."
+          },
+          {
+            "text": "2.420 inwoners",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 5% van 2.400."
+          },
+          {
+            "text": "2.520 inwoners",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2.640 inwoners",
+            "foutanalyse": "Dit is te veel. Controleer je berekening van 5%."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Bevolkingsgroei met een percentage berekenen.",
+          "berekening": [
+            "Groei: 5% van 2.400 = 0,05 × 2.400 = 120 inwoners",
+            "Na 1 jaar: 2.400 + 120 = 2.520 inwoners",
+            "Of: 2.400 × 1,05 = 2.520 inwoners"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel inwoners heeft het dorp na 2 jaar?",
+        "options": [
+          {
+            "text": "2.520 inwoners",
+            "foutanalyse": "Dit is het aantal na 1 jaar. Bereken ook de groei in jaar 2."
+          },
+          {
+            "text": "2.640 inwoners",
+            "foutanalyse": "Dit zou kloppen bij 2 × 5% = 10%, maar bij samengestelde groei is het iets meer."
+          },
+          {
+            "text": "2.646 inwoners",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2.760 inwoners",
+            "foutanalyse": "Dit is te veel. Bereken de samengestelde groei."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Samengestelde groei over 2 jaar.",
+          "berekening": [
+            "Na jaar 1: 2.520 inwoners",
+            "Groei jaar 2: 5% van 2.520 = 0,05 × 2.520 = 126 inwoners",
+            "Na jaar 2: 2.520 + 126 = 2.646 inwoners",
+            "Of: 2.400 × 1,05² = 2.400 × 1,1025 = 2.646 inwoners"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "samengestelde groei"
+  },
+  {
+    "id": 300,
+    "title": "Percentage van percentage",
+    "theme": "procenten-rente",
+    "content": "Van de 600 leerlingen op een school fietst 60% naar school. Van de fietsers komt 25% uit de stad.",
+    "questions": [
+      {
+        "question": "Hoeveel leerlingen fietsen naar school?",
+        "options": [
+          {
+            "text": "240 leerlingen",
+            "foutanalyse": "Dit is 40% van 600. De vraag is hoeveel er fietsen (60%)."
+          },
+          {
+            "text": "300 leerlingen",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 60% van 600."
+          },
+          {
+            "text": "360 leerlingen",
+            "foutanalyse": ""
+          },
+          {
+            "text": "420 leerlingen",
+            "foutanalyse": "Dit is te veel. Bereken 60% van 600."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Percentage van een geheel berekenen.",
+          "berekening": [
+            "60% van 600 = 0,60 × 600 = 360 leerlingen"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel fietsende leerlingen komen uit de stad?",
+        "options": [
+          {
+            "text": "60 leerlingen",
+            "foutanalyse": "Dit is te weinig. Bereken 25% van het aantal fietsers."
+          },
+          {
+            "text": "75 leerlingen",
+            "foutanalyse": "Je hebt 25% van alle leerlingen berekend, maar het moet van de fietsers."
+          },
+          {
+            "text": "90 leerlingen",
+            "foutanalyse": ""
+          },
+          {
+            "text": "150 leerlingen",
+            "foutanalyse": "Dit is te veel. Bereken 25% van 360."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Percentage van een percentage: eerst het eerste percentage berekenen, dan het tweede.",
+          "berekening": [
+            "Aantal fietsers: 360 leerlingen",
+            "Uit de stad: 25% van 360 = 0,25 × 360 = 90 leerlingen",
+            "Of: 600 × 0,60 × 0,25 = 600 × 0,15 = 90 leerlingen"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "percentage van percentage"
+  },
+  {
+    "id": 301,
+    "title": "Salarisverhoging",
+    "theme": "procenten-rente",
+    "content": "Mevrouw Jansen verdient €2.800,- per maand. Ze krijgt een salarisverhoging van 4,5%.",
+    "questions": [
+      {
+        "question": "Hoeveel euro komt er bij haar salaris bij?",
+        "options": [
+          {
+            "text": "€112,-",
+            "foutanalyse": "Dit is 4% van €2.800,-. De verhoging is 4,5%."
+          },
+          {
+            "text": "€120,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 4,5% van €2.800,-."
+          },
+          {
+            "text": "€126,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€140,-",
+            "foutanalyse": "Dit is 5% van €2.800,-. De verhoging is 4,5%."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Verhoging berekenen met een kommagetal percentage.",
+          "berekening": [
+            "4,5% van €2.800,- = 0,045 × €2.800,- = €126,-"
+          ]
+        }
+      },
+      {
+        "question": "Wat is het nieuwe salaris van mevrouw Jansen?",
+        "options": [
+          {
+            "text": "€2.912,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Tel de verhoging op bij het oude salaris."
+          },
+          {
+            "text": "€2.920,-",
+            "foutanalyse": "Dit is niet juist. Tel €2.800,- en €126,- bij elkaar op."
+          },
+          {
+            "text": "€2.926,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€2.940,-",
+            "foutanalyse": "Dit is te veel. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Nieuw bedrag berekenen na verhoging.",
+          "berekening": [
+            "Verhoging: €126,-",
+            "Nieuw salaris: €2.800,- + €126,- = €2.926,-",
+            "Of: €2.800,- × 1,045 = €2.926,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "salarisverhoging"
+  },
+  {
+    "id": 302,
+    "title": "BTW inclusief en exclusief",
+    "theme": "procenten-rente",
+    "content": "Een elektronica winkel verkoopt een laptop voor €726,- inclusief 21% BTW.",
+    "questions": [
+      {
+        "question": "Wat is de prijs exclusief BTW?",
+        "options": [
+          {
+            "text": "€573,54",
+            "foutanalyse": "Je hebt 21% van €726,- afgetrokken, maar dat is niet juist. €726,- is 121% van de prijs exclusief BTW."
+          },
+          {
+            "text": "€600,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€605,-",
+            "foutanalyse": "Je zit dichtbij! €726,- is 121% van de prijs exclusief BTW."
+          },
+          {
+            "text": "€615,-",
+            "foutanalyse": "Dit is niet juist. Deel €726,- door 1,21."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Terugrekenen van prijs inclusief BTW naar exclusief BTW.",
+          "berekening": [
+            "Prijs inclusief BTW = 121% van prijs exclusief BTW",
+            "€726,- = 121% van de prijs exclusief BTW",
+            "Prijs exclusief BTW = €726,- ÷ 1,21 = €600,-",
+            "Check: €600,- × 1,21 = €726,-"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel BTW zit er in de prijs?",
+        "options": [
+          {
+            "text": "€121,-",
+            "foutanalyse": "Dit lijkt logisch omdat 21% erin zit, maar bereken het correct."
+          },
+          {
+            "text": "€126,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€131,-",
+            "foutanalyse": "Dit is te veel. Bereken 21% van €600,-."
+          },
+          {
+            "text": "€152,46",
+            "foutanalyse": "Je hebt 21% van €726,- berekend, maar BTW wordt berekend over de prijs exclusief BTW."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "BTW bedrag berekenen.",
+          "berekening": [
+            "Prijs exclusief BTW: €600,-",
+            "BTW: 21% van €600,- = 0,21 × €600,- = €126,-",
+            "Of: €726,- - €600,- = €126,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "BTW berekeningen"
+  },
+  {
+    "id": 303,
+    "title": "Rentepercentage berekenen",
+    "theme": "procenten-rente",
+    "content": "Lisa heeft €4.000,- op een spaarrekening staan. Na 1 jaar heeft ze €4.180,- op haar rekening.",
+    "questions": [
+      {
+        "question": "Hoeveel rente heeft Lisa ontvangen?",
+        "options": [
+          {
+            "text": "€80,-",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken het verschil tussen €4.180,- en €4.000,-."
+          },
+          {
+            "text": "€180,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€280,-",
+            "foutanalyse": "Dit is te veel. Trek €4.000,- af van €4.180,-."
+          },
+          {
+            "text": "€380,-",
+            "foutanalyse": "Dit is veel te veel. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Rente berekenen door het verschil te nemen.",
+          "berekening": [
+            "Rente = Eindbedrag - Startbedrag",
+            "Rente = €4.180,- - €4.000,- = €180,-"
+          ]
+        }
+      },
+      {
+        "question": "Wat was het rentepercentage?",
+        "options": [
+          {
+            "text": "4%",
+            "foutanalyse": "Je zit dichtbij! Bereken (€180,- ÷ €4.000,-) × 100%."
+          },
+          {
+            "text": "4,2%",
+            "foutanalyse": "Je hebt €180,- gedeeld door €4.180,-, maar het moet gedeeld door €4.000,-."
+          },
+          {
+            "text": "4,5%",
+            "foutanalyse": ""
+          },
+          {
+            "text": "5%",
+            "foutanalyse": "Dit is te hoog. Bereken (€180,- ÷ €4.000,-) × 100%."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Rentepercentage berekenen vanuit rente en startbedrag.",
+          "berekening": [
+            "Rente: €180,-",
+            "Startbedrag: €4.000,-",
+            "Percentage = (Rente ÷ Startbedrag) × 100%",
+            "Percentage = (€180,- ÷ €4.000,-) × 100% = 0,045 × 100% = 4,5%",
+            "Check: 4,5% van €4.000,- = 0,045 × €4.000,- = €180,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "rentepercentage berekenen"
+  },
+  {
+    "id": 304,
+    "title": "Afschrijving computerapparatuur",
+    "theme": "procenten-rente",
+    "content": "Een school koopt computers voor €18.000,-. De computers verliezen elk jaar 20% van hun waarde.",
+    "questions": [
+      {
+        "question": "Wat is de waarde van de computers na 1 jaar?",
+        "options": [
+          {
+            "text": "€14.000,-",
+            "foutanalyse": "Dit is te weinig. Bereken 20% van €18.000,- en trek dit af."
+          },
+          {
+            "text": "€14.400,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€15.000,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening."
+          },
+          {
+            "text": "€16.000,-",
+            "foutanalyse": "Dit is te hoog. Bereken 20% van €18.000,-."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Waardedaling berekenen met een percentage.",
+          "berekening": [
+            "Waardedaling: 20% van €18.000,- = 0,20 × €18.000,- = €3.600,-",
+            "Nieuwe waarde: €18.000,- - €3.600,- = €14.400,-",
+            "Of: €18.000,- × 0,80 = €14.400,-"
+          ]
+        }
+      },
+      {
+        "question": "Wat is de waarde van de computers na 2 jaar?",
+        "options": [
+          {
+            "text": "€10.800,-",
+            "foutanalyse": "Dit zou kloppen bij 2 × 20% = 40% waardedaling, maar het is samengestelde daling."
+          },
+          {
+            "text": "€11.520,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€12.000,-",
+            "foutanalyse": "Dit is te hoog. Bereken de waardedaling over 2 jaar."
+          },
+          {
+            "text": "€12.600,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Samengestelde waardedaling over meerdere jaren.",
+          "berekening": [
+            "Na jaar 1: €14.400,-",
+            "Waardedaling jaar 2: 20% van €14.400,- = 0,20 × €14.400,- = €2.880,-",
+            "Na jaar 2: €14.400,- - €2.880,- = €11.520,-",
+            "Of: €18.000,- × 0,80² = €18.000,- × 0,64 = €11.520,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "waardedaling"
+  },
+  {
+    "id": 305,
+    "title": "Webshop bezoekersgroei",
+    "theme": "procenten-rente",
+    "content": "Een webshop had vorige maand 8.000 bezoekers. Deze maand is het aantal bezoekers met 25% gestegen.",
+    "questions": [
+      {
+        "question": "Hoeveel bezoekers heeft de webshop deze maand?",
+        "options": [
+          {
+            "text": "8.025 bezoekers",
+            "foutanalyse": "Je hebt 25 bezoekers erbij geteld, maar het moet 25% zijn."
+          },
+          {
+            "text": "9.600 bezoekers",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 25% van 8.000."
+          },
+          {
+            "text": "10.000 bezoekers",
+            "foutanalyse": ""
+          },
+          {
+            "text": "10.400 bezoekers",
+            "foutanalyse": "Dit is te veel. Bereken 25% van 8.000 en tel dit op."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Groei berekenen met een percentage.",
+          "berekening": [
+            "Groei: 25% van 8.000 = 0,25 × 8.000 = 2.000 bezoekers",
+            "Totaal deze maand: 8.000 + 2.000 = 10.000 bezoekers",
+            "Of: 8.000 × 1,25 = 10.000 bezoekers"
+          ]
+        }
+      },
+      {
+        "question": "Als de groei volgende maand weer 25% is, hoeveel bezoekers zijn er dan?",
+        "options": [
+          {
+            "text": "11.500 bezoekers",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 25% van 10.000."
+          },
+          {
+            "text": "12.000 bezoekers",
+            "foutanalyse": "Dit zou kloppen bij 50% groei totaal, maar de groei is samengesteld."
+          },
+          {
+            "text": "12.500 bezoekers",
+            "foutanalyse": ""
+          },
+          {
+            "text": "13.000 bezoekers",
+            "foutanalyse": "Dit is te veel. Bereken 25% van 10.000."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Samengestelde groei over meerdere periodes.",
+          "berekening": [
+            "Deze maand: 10.000 bezoekers",
+            "Groei volgende maand: 25% van 10.000 = 0,25 × 10.000 = 2.500 bezoekers",
+            "Volgende maand: 10.000 + 2.500 = 12.500 bezoekers",
+            "Of: 8.000 × 1,25² = 8.000 × 1,5625 = 12.500 bezoekers"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "groeipercentage"
+  },
+  {
+    "id": 306,
+    "title": "Vakantiegeld",
+    "theme": "procenten-rente",
+    "content": "Meneer de Vries verdient €3.200,- per maand. Hij krijgt 8% vakantiegeld over zijn jaarsalaris.",
+    "questions": [
+      {
+        "question": "Wat is het jaarsalaris van meneer de Vries?",
+        "options": [
+          {
+            "text": "€32.000,-",
+            "foutanalyse": "Dit is 10 maanden salaris. Een jaar heeft 12 maanden."
+          },
+          {
+            "text": "€36.000,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 12 × €3.200,-."
+          },
+          {
+            "text": "€38.400,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€40.000,-",
+            "foutanalyse": "Dit is te veel. Vermenigvuldig €3.200,- met 12 maanden."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Jaarsalaris berekenen vanuit maandsalaris.",
+          "berekening": [
+            "Jaarsalaris = 12 × maandsalaris",
+            "Jaarsalaris = 12 × €3.200,- = €38.400,-"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel vakantiegeld krijgt meneer de Vries?",
+        "options": [
+          {
+            "text": "€2.560,-",
+            "foutanalyse": "Je hebt 8% van het maandsalaris berekend, maar het moet van het jaarsalaris."
+          },
+          {
+            "text": "€2.880,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 8% van €38.400,-."
+          },
+          {
+            "text": "€3.072,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€3.200,-",
+            "foutanalyse": "Dit is het maandsalaris, niet het vakantiegeld."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Vakantiegeld berekenen als percentage van jaarsalaris.",
+          "berekening": [
+            "Jaarsalaris: €38.400,-",
+            "Vakantiegeld: 8% van €38.400,- = 0,08 × €38.400,- = €3.072,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "vakantiegeld percentage"
+  },
+  {
+    "id": 307,
+    "title": "Actiekorting supermarkt",
+    "theme": "procenten-rente",
+    "content": "Een supermarkt heeft een actie: bij 3 producten krijg je 30% korting op het totaalbedrag. Drie producten kosten samen €45,-.",
+    "questions": [
+      {
+        "question": "Hoeveel korting krijg je?",
+        "options": [
+          {
+            "text": "€12,50",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 30% van €45,-."
+          },
+          {
+            "text": "€13,50",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€14,50",
+            "foutanalyse": "Dit is te veel. Bereken 30% van €45,- nauwkeurig."
+          },
+          {
+            "text": "€15,-",
+            "foutanalyse": "Dit is te veel. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Korting berekenen op een totaalbedrag.",
+          "berekening": [
+            "30% van €45,- = 0,30 × €45,- = €13,50"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel betaal je na de korting?",
+        "options": [
+          {
+            "text": "€30,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Trek de korting af van €45,-."
+          },
+          {
+            "text": "€31,50",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€32,50",
+            "foutanalyse": "Dit is niet juist. Trek €13,50 af van €45,-."
+          },
+          {
+            "text": "€33,50",
+            "foutanalyse": "Dit is te veel. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Eindprijs berekenen na korting.",
+          "berekening": [
+            "Korting: €13,50",
+            "Eindprijs: €45,- - €13,50 = €31,50",
+            "Of: €45,- × 0,70 = €31,50"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "actiekorting"
+  },
+  {
+    "id": 308,
+    "title": "Winstmarge berekenen",
+    "theme": "procenten-rente",
+    "content": "Een winkelier koopt een artikel in voor €60,- en verkoopt het voor €90,-.",
+    "questions": [
+      {
+        "question": "Hoeveel winst maakt de winkelier per artikel?",
+        "options": [
+          {
+            "text": "€20,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Trek €60,- af van €90,-."
+          },
+          {
+            "text": "€25,-",
+            "foutanalyse": "Dit is niet juist. Bereken het verschil tussen €90,- en €60,-."
+          },
+          {
+            "text": "€30,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€35,-",
+            "foutanalyse": "Dit is te veel. Trek de inkoopprijs af van de verkoopprijs."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Winst berekenen: verkoopprijs min inkoopprijs.",
+          "berekening": [
+            "Winst = Verkoopprijs - Inkoopprijs",
+            "Winst = €90,- - €60,- = €30,-"
+          ]
+        }
+      },
+      {
+        "question": "Wat is de winstmarge in procenten (op basis van de inkoopprijs)?",
+        "options": [
+          {
+            "text": "30%",
+            "foutanalyse": "Je hebt €30 als percentage genomen, maar bereken (€30 ÷ €60) × 100%."
+          },
+          {
+            "text": "33%",
+            "foutanalyse": "Je hebt de winst gedeeld door de verkoopprijs, maar het moet door de inkoopprijs."
+          },
+          {
+            "text": "50%",
+            "foutanalyse": ""
+          },
+          {
+            "text": "60%",
+            "foutanalyse": "Dit is te hoog. Bereken (€30 ÷ €60) × 100%."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Winstmarge percentage berekenen.",
+          "berekening": [
+            "Winst: €30,-",
+            "Inkoopprijs: €60,-",
+            "Winstmarge = (Winst ÷ Inkoopprijs) × 100%",
+            "Winstmarge = (€30 ÷ €60) × 100% = 0,5 × 100% = 50%"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "winstmarge"
+  },
+  {
+    "id": 309,
+    "title": "Sociale media groei",
+    "theme": "procenten-rente",
+    "content": "Een YouTuber heeft 12.000 abonnees. Het aantal abonnees groeit met 15% per maand.",
+    "questions": [
+      {
+        "question": "Hoeveel abonnees heeft de YouTuber na 1 maand?",
+        "options": [
+          {
+            "text": "12.150 abonnees",
+            "foutanalyse": "Je hebt 150 abonnees erbij geteld, maar 15% is meer."
+          },
+          {
+            "text": "13.200 abonnees",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 15% van 12.000."
+          },
+          {
+            "text": "13.800 abonnees",
+            "foutanalyse": ""
+          },
+          {
+            "text": "14.400 abonnees",
+            "foutanalyse": "Dit is te veel. Bereken 15% van 12.000 en tel dit op."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Groei berekenen met een percentage.",
+          "berekening": [
+            "Groei: 15% van 12.000 = 0,15 × 12.000 = 1.800 abonnees",
+            "Na 1 maand: 12.000 + 1.800 = 13.800 abonnees",
+            "Of: 12.000 × 1,15 = 13.800 abonnees"
+          ]
+        }
+      },
+      {
+        "question": "Ongeveer hoeveel abonnees heeft de YouTuber na 2 maanden?",
+        "options": [
+          {
+            "text": "14.400 abonnees",
+            "foutanalyse": "Dit zou kloppen bij 2 × 15% = 30% groei, maar de groei is samengesteld."
+          },
+          {
+            "text": "15.600 abonnees",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken de samengestelde groei."
+          },
+          {
+            "text": "15.870 abonnees",
+            "foutanalyse": ""
+          },
+          {
+            "text": "16.200 abonnees",
+            "foutanalyse": "Dit is te veel. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Samengestelde groei over meerdere periodes.",
+          "berekening": [
+            "Na 1 maand: 13.800 abonnees",
+            "Groei maand 2: 15% van 13.800 = 0,15 × 13.800 = 2.070 abonnees",
+            "Na 2 maanden: 13.800 + 2.070 = 15.870 abonnees",
+            "Of: 12.000 × 1,15² = 12.000 × 1,3225 = 15.870 abonnees"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "samengestelde groei"
+  },
+  {
+    "id": 310,
+    "title": "Energiebesparing",
+    "theme": "procenten-rente",
+    "content": "Een gezin gebruikt normaal 3.600 kWh (kilowattuur) stroom per jaar. Door isolatie en zonnepanelen besparen ze 35%.",
+    "questions": [
+      {
+        "question": "Hoeveel kWh besparen ze per jaar?",
+        "options": [
+          {
+            "text": "1.080 kWh",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 35% van 3.600."
+          },
+          {
+            "text": "1.200 kWh",
+            "foutanalyse": "Dit is te weinig. Bereken 35% van 3.600 nauwkeurig."
+          },
+          {
+            "text": "1.260 kWh",
+            "foutanalyse": ""
+          },
+          {
+            "text": "1.350 kWh",
+            "foutanalyse": "Dit is te veel. Controleer je berekening van 35%."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Besparing berekenen met een percentage.",
+          "berekening": [
+            "35% van 3.600 = 0,35 × 3.600 = 1.260 kWh"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel kWh gebruiken ze nu nog per jaar?",
+        "options": [
+          {
+            "text": "2.240 kWh",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Trek de besparing af van 3.600."
+          },
+          {
+            "text": "2.340 kWh",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2.440 kWh",
+            "foutanalyse": "Dit is te veel. Trek 1.260 af van 3.600."
+          },
+          {
+            "text": "2.540 kWh",
+            "foutanalyse": "Dit is te veel. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Nieuw verbruik berekenen na besparing.",
+          "berekening": [
+            "Besparing: 1.260 kWh",
+            "Nieuw verbruik: 3.600 - 1.260 = 2.340 kWh",
+            "Of: 3.600 × 0,65 = 2.340 kWh"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "besparing percentage"
+  },
+  {
+    "id": 311,
+    "title": "Omzet en BTW",
+    "theme": "procenten-rente",
+    "content": "Een bedrijf heeft een omzet van €45.000,- exclusief BTW. Ze moeten 21% BTW afdragen.",
+    "questions": [
+      {
+        "question": "Hoeveel BTW moet het bedrijf afdragen?",
+        "options": [
+          {
+            "text": "€8.450,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 21% van €45.000,-."
+          },
+          {
+            "text": "€9.000,-",
+            "foutanalyse": "Dit is 20% van €45.000,-. De BTW is 21%."
+          },
+          {
+            "text": "€9.450,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€9.900,-",
+            "foutanalyse": "Dit is te veel. Bereken 21% van €45.000,- nauwkeurig."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "BTW berekenen over omzet.",
+          "berekening": [
+            "21% van €45.000,- = 0,21 × €45.000,- = €9.450,-"
+          ]
+        }
+      },
+      {
+        "question": "Wat is de totale omzet inclusief BTW?",
+        "options": [
+          {
+            "text": "€52.500,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Tel de BTW op bij de omzet."
+          },
+          {
+            "text": "€53.450,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening."
+          },
+          {
+            "text": "€54.450,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€55.450,-",
+            "foutanalyse": "Dit is te veel. Tel €45.000,- en €9.450,- bij elkaar op."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Omzet inclusief BTW berekenen.",
+          "berekening": [
+            "BTW: €9.450,-",
+            "Omzet inclusief BTW: €45.000,- + €9.450,- = €54.450,-",
+            "Of: €45.000,- × 1,21 = €54.450,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "BTW en omzet"
+  },
+  {
+    "id": 312,
+    "title": "Klassensamenstelling",
+    "theme": "procenten-rente",
+    "content": "In een klas van 28 leerlingen is 40% jongen en 60% meisje.",
+    "questions": [
+      {
+        "question": "Hoeveel jongens zitten er in de klas?",
+        "options": [
+          {
+            "text": "10 jongens",
+            "foutanalyse": "Dit is te weinig. Bereken 40% van 28."
+          },
+          {
+            "text": "11 jongens",
+            "foutanalyse": ""
+          },
+          {
+            "text": "12 jongens",
+            "foutanalyse": "Dit is te veel. Bereken 40% van 28 nauwkeurig."
+          },
+          {
+            "text": "14 jongens",
+            "foutanalyse": "Dit is de helft van 28. Bereken 40%."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Percentage van een geheel berekenen.",
+          "berekening": [
+            "40% van 28 = 0,40 × 28 = 11,2 ≈ 11 jongens"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel meisjes zitten er in de klas?",
+        "options": [
+          {
+            "text": "16 meisjes",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 60% van 28."
+          },
+          {
+            "text": "17 meisjes",
+            "foutanalyse": ""
+          },
+          {
+            "text": "18 meisjes",
+            "foutanalyse": "Dit is te veel. Controleer je berekening."
+          },
+          {
+            "text": "19 meisjes",
+            "foutanalyse": "Dit is te veel. Bereken 60% van 28."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Percentage berekenen of afleiden uit totaal.",
+          "berekening": [
+            "60% van 28 = 0,60 × 28 = 16,8 ≈ 17 meisjes",
+            "Of: 28 - 11 = 17 meisjes"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "percentage van groep"
+  },
+  {
+    "id": 313,
+    "title": "Parkeerabonnement korting",
+    "theme": "procenten-rente",
+    "content": "Een parkeerabonnement kost €15,- per maand. Bij een jaarabonnement krijg je 18% korting op de totale prijs.",
+    "questions": [
+      {
+        "question": "Wat kost het parkeerabonnement voor 12 maanden zonder korting?",
+        "options": [
+          {
+            "text": "€165,-",
+            "foutanalyse": "Dit is te weinig. Vermenigvuldig €15,- met 12 maanden."
+          },
+          {
+            "text": "€170,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 12 × €15,-."
+          },
+          {
+            "text": "€180,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€190,-",
+            "foutanalyse": "Dit is te veel. Bereken 12 × €15,-."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Jaarprijs berekenen vanuit maandprijs.",
+          "berekening": [
+            "Jaarprijs zonder korting = 12 × €15,- = €180,-"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel betaal je voor het jaarabonnement met 18% korting?",
+        "options": [
+          {
+            "text": "€144,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken de korting en trek af."
+          },
+          {
+            "text": "€147,60",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€150,-",
+            "foutanalyse": "Dit is niet juist. Bereken 18% van €180,- en trek af."
+          },
+          {
+            "text": "€162,-",
+            "foutanalyse": "Dit is te veel. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Prijs na korting berekenen.",
+          "berekening": [
+            "Prijs zonder korting: €180,-",
+            "Korting: 18% van €180,- = 0,18 × €180,- = €32,40",
+            "Prijs met korting: €180,- - €32,40 = €147,60",
+            "Of: €180,- × 0,82 = €147,60"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "jaarabonnement korting"
+  },
+  {
+    "id": 314,
+    "title": "Fooi berekenen",
+    "theme": "procenten-rente",
+    "content": "In een restaurant betaal je €85,- voor het eten. Je wilt 12% fooi geven.",
+    "questions": [
+      {
+        "question": "Hoeveel fooi geef je?",
+        "options": [
+          {
+            "text": "€8,50",
+            "foutanalyse": "Dit is 10% van €85,-. De fooi is 12%."
+          },
+          {
+            "text": "€9,20",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 12% van €85,-."
+          },
+          {
+            "text": "€10,20",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€12,-",
+            "foutanalyse": "Je hebt 12 als bedrag genomen, maar bereken 12% van €85,-."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Fooi berekenen als percentage.",
+          "berekening": [
+            "12% van €85,- = 0,12 × €85,- = €10,20"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel betaal je in totaal inclusief fooi?",
+        "options": [
+          {
+            "text": "€93,70",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Tel de fooi op bij €85,-."
+          },
+          {
+            "text": "€94,20",
+            "foutanalyse": "Dit is niet juist. Tel €85,- en €10,20 bij elkaar op."
+          },
+          {
+            "text": "€95,20",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€97,-",
+            "foutanalyse": "Dit is te veel. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Totaalbedrag berekenen inclusief fooi.",
+          "berekening": [
+            "Fooi: €10,20",
+            "Totaal: €85,- + €10,20 = €95,20",
+            "Of: €85,- × 1,12 = €95,20"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "fooi percentage"
+  },
+  {
+    "id": 315,
+    "title": "Contributie sportvereniging",
+    "theme": "procenten-rente",
+    "content": "De contributie van een voetbalvereniging is €240,- per jaar. Volgend jaar gaat de contributie met 7,5% omhoog.",
+    "questions": [
+      {
+        "question": "Hoeveel euro gaat de contributie omhoog?",
+        "options": [
+          {
+            "text": "€15,-",
+            "foutanalyse": "Dit is te weinig. Bereken 7,5% van €240,-."
+          },
+          {
+            "text": "€16,50",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening."
+          },
+          {
+            "text": "€18,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€20,-",
+            "foutanalyse": "Dit is te veel. Bereken 7,5% van €240,- nauwkeurig."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Verhoging berekenen met kommagetal percentage.",
+          "berekening": [
+            "7,5% van €240,- = 0,075 × €240,- = €18,-"
+          ]
+        }
+      },
+      {
+        "question": "Wat is de nieuwe contributie volgend jaar?",
+        "options": [
+          {
+            "text": "€255,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Tel €18,- op bij €240,-."
+          },
+          {
+            "text": "€256,50",
+            "foutanalyse": "Dit is niet juist. Controleer je berekening."
+          },
+          {
+            "text": "€258,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€260,-",
+            "foutanalyse": "Dit is te veel. Tel €240,- en €18,- bij elkaar op."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Nieuwe prijs berekenen na verhoging.",
+          "berekening": [
+            "Verhoging: €18,-",
+            "Nieuwe contributie: €240,- + €18,- = €258,-",
+            "Of: €240,- × 1,075 = €258,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "contributie verhoging"
+  },
+  {
+    "id": 316,
+    "title": "Verkiezingsuitslag",
+    "theme": "procenten-rente",
+    "content": "Bij de verkiezingen hebben 4.500 mensen gestemd. Partij A kreeg 36% van de stemmen.",
+    "questions": [
+      {
+        "question": "Hoeveel stemmen kreeg partij A?",
+        "options": [
+          {
+            "text": "1.440 stemmen",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 36% van 4.500."
+          },
+          {
+            "text": "1.560 stemmen",
+            "foutanalyse": "Dit is te weinig. Controleer je berekening van 36%."
+          },
+          {
+            "text": "1.620 stemmen",
+            "foutanalyse": ""
+          },
+          {
+            "text": "1.800 stemmen",
+            "foutanalyse": "Dit is 40% van 4.500. Bereken 36%."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Percentage van een geheel berekenen.",
+          "berekening": [
+            "36% van 4.500 = 0,36 × 4.500 = 1.620 stemmen"
+          ]
+        }
+      },
+      {
+        "question": "Partij B kreeg 28% van de stemmen. Hoeveel stemmen meer heeft partij A dan partij B?",
+        "options": [
+          {
+            "text": "270 stemmen",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken eerst de stemmen van partij B."
+          },
+          {
+            "text": "320 stemmen",
+            "foutanalyse": "Dit is niet juist. Controleer je berekening."
+          },
+          {
+            "text": "360 stemmen",
+            "foutanalyse": ""
+          },
+          {
+            "text": "400 stemmen",
+            "foutanalyse": "Dit is te veel. Bereken het verschil tussen 36% en 28% van 4.500."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Verschil berekenen tussen percentages.",
+          "berekening": [
+            "Partij A: 1.620 stemmen",
+            "Partij B: 28% van 4.500 = 0,28 × 4.500 = 1.260 stemmen",
+            "Verschil: 1.620 - 1.260 = 360 stemmen",
+            "Of: (36% - 28%) van 4.500 = 8% van 4.500 = 360 stemmen"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "percentage van totaal"
+  },
+  {
+    "id": 317,
+    "title": "Spaaractie bonusrente",
+    "theme": "procenten-rente",
+    "content": "Een bank heeft een spaaractie. Je krijgt 3% rente, en als je 1 jaar niet opneemt krijg je 0,5% bonusrente extra. Emma zet €5.000,- op deze rekening en laat het 1 jaar staan.",
+    "questions": [
+      {
+        "question": "Hoeveel totale rente (3% + 0,5%) krijgt Emma na 1 jaar?",
+        "options": [
+          {
+            "text": "€150,-",
+            "foutanalyse": "Dit is alleen de 3% rente. Vergeet de bonusrente niet."
+          },
+          {
+            "text": "€165,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 3,5% van €5.000,-."
+          },
+          {
+            "text": "€175,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€180,-",
+            "foutanalyse": "Dit is te veel. Bereken 3,5% van €5.000,- nauwkeurig."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Totale rente berekenen met bonusrente.",
+          "berekening": [
+            "Totale rente: 3% + 0,5% = 3,5%",
+            "3,5% van €5.000,- = 0,035 × €5.000,- = €175,-"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel geld heeft Emma in totaal na 1 jaar?",
+        "options": [
+          {
+            "text": "€5.150,-",
+            "foutanalyse": "Je hebt alleen de 3% rente erbij geteld. Vergeet de bonusrente niet."
+          },
+          {
+            "text": "€5.165,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Tel de totale rente op."
+          },
+          {
+            "text": "€5.175,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€5.200,-",
+            "foutanalyse": "Dit is te veel. Tel €5.000,- en €175,- bij elkaar op."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Totaalbedrag berekenen na rente.",
+          "berekening": [
+            "Totale rente: €175,-",
+            "Totaalbedrag: €5.000,- + €175,- = €5.175,-",
+            "Of: €5.000,- × 1,035 = €5.175,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "bonusrente"
+  },
+  {
+    "id": 318,
+    "title": "Lening met rente",
+    "theme": "procenten-rente",
+    "content": "Meneer Bakker leent €8.000,- van de bank. Hij moet 4% rente per jaar betalen. Na 1 jaar betaalt hij de lening inclusief rente terug.",
+    "questions": [
+      {
+        "question": "Hoeveel rente moet meneer Bakker betalen?",
+        "options": [
+          {
+            "text": "€280,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 4% van €8.000,-."
+          },
+          {
+            "text": "€300,-",
+            "foutanalyse": "Dit is te weinig. Controleer je berekening van 4%."
+          },
+          {
+            "text": "€320,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€400,-",
+            "foutanalyse": "Dit is 5% van €8.000,-. De rente is 4%."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Rente berekenen over een lening.",
+          "berekening": [
+            "4% van €8.000,- = 0,04 × €8.000,- = €320,-"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel moet meneer Bakker in totaal terugbetalen?",
+        "options": [
+          {
+            "text": "€8.280,-",
+            "foutanalyse": "Je hebt een fout gemaakt. Tel de rente op bij de lening."
+          },
+          {
+            "text": "€8.300,-",
+            "foutanalyse": "Dit is niet juist. Tel €8.000,- en €320,- bij elkaar op."
+          },
+          {
+            "text": "€8.320,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€8.400,-",
+            "foutanalyse": "Dit is te veel. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Totaalbedrag berekenen van lening plus rente.",
+          "berekening": [
+            "Rente: €320,-",
+            "Totaal terug te betalen: €8.000,- + €320,- = €8.320,-",
+            "Of: €8.000,- × 1,04 = €8.320,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "lening en rente"
+  },
+  {
     "id": 239,
     "title": "Nachttrein naar Berlijn",
     "theme": "tijd-snelheid",
@@ -17080,6 +19123,2039 @@
       }
     ],
     "sub_theme": "tijden over middernacht"
+  },
+  {
+    "id": 319,
+    "title": "Fietsen naar school",
+    "theme": "tijd-snelheid",
+    "content": "Lisa fietst elke dag 4 kilometer naar school. Ze fietst met een snelheid van 12 km per uur.",
+    "questions": [
+      {
+        "question": "Hoeveel minuten doet Lisa erover om naar school te fietsen?",
+        "options": [
+          {
+            "text": "15 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken eerst hoeveel uur, dan omrekenen naar minuten."
+          },
+          {
+            "text": "20 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "24 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt. Controleer je berekening."
+          },
+          {
+            "text": "30 minuten",
+            "foutanalyse": "Dit is te lang. Bereken 4 ÷ 12 en reken om naar minuten."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Tijd berekenen: tijd = afstand ÷ snelheid.",
+          "berekening": [
+            "Tijd = 4 km ÷ 12 km/u = 0,333... uur = 1/3 uur",
+            "1/3 uur = 60 minuten ÷ 3 = 20 minuten"
+          ]
+        }
+      },
+      {
+        "question": "Als Lisa om 08:10 uur van huis vertrekt, hoe laat is ze dan op school?",
+        "options": [
+          {
+            "text": "08:25 uur",
+            "foutanalyse": "Je hebt een fout gemaakt bij de tijdberekening."
+          },
+          {
+            "text": "08:30 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "08:34 uur",
+            "foutanalyse": "Je hebt een fout gemaakt. De reistijd is 20 minuten."
+          },
+          {
+            "text": "08:40 uur",
+            "foutanalyse": "Dit is te laat. Tel 20 minuten op bij 08:10 uur."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Aankomsttijd berekenen: vertrektijd + reisduur.",
+          "berekening": [
+            "Reisduur: 20 minuten",
+            "Aankomst: 08:10 uur + 20 minuten = 08:30 uur"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "snelheid en afstand"
+  },
+  {
+    "id": 320,
+    "title": "Autorit naar oma",
+    "theme": "tijd-snelheid",
+    "content": "De familie rijdt met de auto naar oma. De afstand is 120 kilometer en ze rijden gemiddeld 80 km per uur.",
+    "questions": [
+      {
+        "question": "Hoeveel tijd duurt de rit?",
+        "options": [
+          {
+            "text": "1 uur",
+            "foutanalyse": "Dit is te weinig. Bereken 120 ÷ 80."
+          },
+          {
+            "text": "1 uur en 20 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt. Controleer je berekening."
+          },
+          {
+            "text": "1 uur en 30 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "1 uur en 40 minuten",
+            "foutanalyse": "Dit is te lang. Bereken 120 ÷ 80."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Tijd berekenen: tijd = afstand ÷ snelheid.",
+          "berekening": [
+            "Tijd = 120 km ÷ 80 km/u = 1,5 uur",
+            "1,5 uur = 1 uur en 30 minuten"
+          ]
+        }
+      },
+      {
+        "question": "Ze vertrekken om 14:15 uur. Hoe laat komen ze aan bij oma?",
+        "options": [
+          {
+            "text": "15:30 uur",
+            "foutanalyse": "Je hebt een fout gemaakt bij de tijdberekening."
+          },
+          {
+            "text": "15:35 uur",
+            "foutanalyse": "Je hebt een fout gemaakt. De reistijd is 1,5 uur."
+          },
+          {
+            "text": "15:45 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "15:55 uur",
+            "foutanalyse": "Dit is te laat. Tel 1 uur en 30 minuten op bij 14:15."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Aankomsttijd berekenen.",
+          "berekening": [
+            "Reisduur: 1 uur en 30 minuten",
+            "Aankomst: 14:15 + 1:30 = 15:45 uur"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "snelheid en tijd"
+  },
+  {
+    "id": 321,
+    "title": "Hardlopen in het park",
+    "theme": "tijd-snelheid",
+    "content": "Tom rent een rondje in het park van 3 kilometer. Hij doet er 24 minuten over.",
+    "questions": [
+      {
+        "question": "Wat is Toms gemiddelde snelheid in km per uur?",
+        "options": [
+          {
+            "text": "6 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt. Reken 24 minuten eerst om naar uren."
+          },
+          {
+            "text": "7 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "7,5 km/u",
+            "foutanalyse": ""
+          },
+          {
+            "text": "8 km/u",
+            "foutanalyse": "Dit is te hoog. Bereken 3 km ÷ (24/60) uur."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Snelheid berekenen: snelheid = afstand ÷ tijd.",
+          "berekening": [
+            "Tijd: 24 minuten = 24/60 uur = 0,4 uur",
+            "Snelheid = 3 km ÷ 0,4 uur = 7,5 km/u"
+          ]
+        }
+      },
+      {
+        "question": "Als Tom 2 rondjes rent, hoeveel tijd doet hij daar in totaal over?",
+        "options": [
+          {
+            "text": "40 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 2 × 24 minuten."
+          },
+          {
+            "text": "44 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt bij de vermenigvuldiging."
+          },
+          {
+            "text": "48 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "52 minuten",
+            "foutanalyse": "Dit is te veel. Vermenigvuldig 24 met 2."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Totale tijd bij meerdere rondjes.",
+          "berekening": [
+            "Tijd per rondje: 24 minuten",
+            "2 rondjes: 2 × 24 = 48 minuten"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "snelheid berekenen"
+  },
+  {
+    "id": 322,
+    "title": "Busrit naar het museum",
+    "theme": "tijd-snelheid",
+    "content": "De bus rijdt van school naar het museum. De bus vertrekt om 09:25 uur en komt aan om 10:50 uur.",
+    "questions": [
+      {
+        "question": "Hoe lang duurt de busrit?",
+        "options": [
+          {
+            "text": "1 uur en 15 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt bij het berekenen van de tijdsduur."
+          },
+          {
+            "text": "1 uur en 20 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken het verschil tussen 10:50 en 09:25."
+          },
+          {
+            "text": "1 uur en 25 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "1 uur en 30 minuten",
+            "foutanalyse": "Dit is te lang. Bereken nauwkeurig."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Tijdsduur berekenen: eindtijd - begintijd.",
+          "berekening": [
+            "Van 09:25 naar 10:25: 1 uur",
+            "Van 10:25 naar 10:50: 25 minuten",
+            "Totaal: 1 uur en 25 minuten"
+          ]
+        }
+      },
+      {
+        "question": "De bus rijdt 68 kilometer. Wat is de gemiddelde snelheid van de bus in km per uur?",
+        "options": [
+          {
+            "text": "44 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt. Reken de tijd om naar uren en deel de afstand."
+          },
+          {
+            "text": "48 km/u",
+            "foutanalyse": ""
+          },
+          {
+            "text": "52 km/u",
+            "foutanalyse": "Dit is te hoog. Controleer je berekening."
+          },
+          {
+            "text": "56 km/u",
+            "foutanalyse": "Dit is te hoog. Bereken 68 ÷ (85/60)."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Gemiddelde snelheid berekenen.",
+          "berekening": [
+            "Tijd: 1 uur en 25 minuten = 85 minuten = 85/60 uur ≈ 1,417 uur",
+            "Snelheid = 68 km ÷ 1,417 uur ≈ 48 km/u"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "tijdsduur berekenen"
+  },
+  {
+    "id": 323,
+    "title": "Wandeltocht",
+    "theme": "tijd-snelheid",
+    "content": "Een groep maakt een wandeltocht van 15 kilometer. Ze lopen met een snelheid van 5 km per uur.",
+    "questions": [
+      {
+        "question": "Hoeveel uur duurt de wandeltocht?",
+        "options": [
+          {
+            "text": "2 uur",
+            "foutanalyse": "Dit is te weinig. Bereken 15 ÷ 5."
+          },
+          {
+            "text": "2,5 uur",
+            "foutanalyse": "Je hebt een fout gemaakt bij de deling."
+          },
+          {
+            "text": "3 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "3,5 uur",
+            "foutanalyse": "Dit is te lang. Deel 15 door 5."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Tijd berekenen bij gegeven afstand en snelheid.",
+          "berekening": [
+            "Tijd = afstand ÷ snelheid",
+            "Tijd = 15 km ÷ 5 km/u = 3 uur"
+          ]
+        }
+      },
+      {
+        "question": "Ze vertrekken om 10:30 uur en pauzeren 30 minuten voor de lunch. Hoe laat zijn ze klaar?",
+        "options": [
+          {
+            "text": "13:30 uur",
+            "foutanalyse": "Je bent de lunchpauze vergeten."
+          },
+          {
+            "text": "13:45 uur",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "14:00 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "14:15 uur",
+            "foutanalyse": "Dit is te laat. Tel 3 uur wandelen + 30 minuten pauze bij 10:30."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Eindtijd berekenen met pauze.",
+          "berekening": [
+            "Wandeltijd: 3 uur",
+            "Pauze: 30 minuten",
+            "Totaal: 3 uur 30 minuten",
+            "10:30 + 3:30 = 14:00 uur"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "tijd en pauzes"
+  },
+  {
+    "id": 324,
+    "title": "Treinreis",
+    "theme": "tijd-snelheid",
+    "content": "Een trein rijdt van Utrecht naar Rotterdam, een afstand van 60 kilometer. De trein stopt 2 keer voor in totaal 8 minuten. De trein rijdt 120 km per uur.",
+    "questions": [
+      {
+        "question": "Hoeveel minuten is de trein onderweg (zonder stops)?",
+        "options": [
+          {
+            "text": "25 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 60 ÷ 120 en reken om naar minuten."
+          },
+          {
+            "text": "30 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "35 minuten",
+            "foutanalyse": "Dit is te lang. Bereken de tijd zonder stops."
+          },
+          {
+            "text": "40 minuten",
+            "foutanalyse": "Dit is te lang. Deel 60 door 120."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Reistijd berekenen zonder stops.",
+          "berekening": [
+            "Tijd = 60 km ÷ 120 km/u = 0,5 uur",
+            "0,5 uur = 30 minuten"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel minuten duurt de gehele reis inclusief stops?",
+        "options": [
+          {
+            "text": "30 minuten",
+            "foutanalyse": "Je bent de stops vergeten."
+          },
+          {
+            "text": "35 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt. Tel de stoptijd erbij op."
+          },
+          {
+            "text": "38 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "40 minuten",
+            "foutanalyse": "Dit is te lang. Tel 30 minuten + 8 minuten."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Totale reistijd inclusief stops.",
+          "berekening": [
+            "Reistijd zonder stops: 30 minuten",
+            "Stoptijd: 8 minuten",
+            "Totaal: 30 + 8 = 38 minuten"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "reistijd met stops"
+  },
+  {
+    "id": 325,
+    "title": "Fietsvakantie",
+    "theme": "tijd-snelheid",
+    "content": "Op de eerste dag van hun fietsvakantie fietst een gezin 45 kilometer in 3 uur. Op de tweede dag fietsen ze 60 kilometer in 4 uur.",
+    "questions": [
+      {
+        "question": "Wat is de gemiddelde snelheid op de eerste dag?",
+        "options": [
+          {
+            "text": "12 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt bij de deling."
+          },
+          {
+            "text": "13 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "15 km/u",
+            "foutanalyse": ""
+          },
+          {
+            "text": "18 km/u",
+            "foutanalyse": "Dit is te hoog. Deel 45 door 3."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Gemiddelde snelheid berekenen.",
+          "berekening": [
+            "Snelheid = afstand ÷ tijd",
+            "Snelheid = 45 km ÷ 3 uur = 15 km/u"
+          ]
+        }
+      },
+      {
+        "question": "Wat is de gemiddelde snelheid over beide dagen samen?",
+        "options": [
+          {
+            "text": "14 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken totale afstand ÷ totale tijd."
+          },
+          {
+            "text": "15 km/u",
+            "foutanalyse": ""
+          },
+          {
+            "text": "16 km/u",
+            "foutanalyse": "Dit is te hoog. Bereken (45+60) ÷ (3+4)."
+          },
+          {
+            "text": "17 km/u",
+            "foutanalyse": "Dit is te hoog. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Gemiddelde snelheid over meerdere dagen.",
+          "berekening": [
+            "Totale afstand: 45 + 60 = 105 km",
+            "Totale tijd: 3 + 4 = 7 uur",
+            "Gemiddelde snelheid = 105 ÷ 7 = 15 km/u"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "gemiddelde snelheid"
+  },
+  {
+    "id": 326,
+    "title": "Zwemwedstrijd",
+    "theme": "tijd-snelheid",
+    "content": "Bij een zwemwedstrijd zwemt Emma 400 meter in 8 minuten.",
+    "questions": [
+      {
+        "question": "Hoeveel meter zwemt Emma per minuut?",
+        "options": [
+          {
+            "text": "40 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij de deling."
+          },
+          {
+            "text": "45 meter",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 400 door 8."
+          },
+          {
+            "text": "50 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "55 meter",
+            "foutanalyse": "Dit is te veel. Bereken 400 ÷ 8."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Snelheid berekenen in meter per minuut.",
+          "berekening": [
+            "Snelheid = afstand ÷ tijd",
+            "Snelheid = 400 meter ÷ 8 minuten = 50 meter/minuut"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel minuten doet Emma erover om 1000 meter te zwemmen (met dezelfde snelheid)?",
+        "options": [
+          {
+            "text": "18 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 1000 ÷ 50."
+          },
+          {
+            "text": "20 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "22 minuten",
+            "foutanalyse": "Dit is te lang. Deel 1000 door 50."
+          },
+          {
+            "text": "25 minuten",
+            "foutanalyse": "Dit is te lang. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Tijd berekenen bij gegeven afstand en snelheid.",
+          "berekening": [
+            "Snelheid: 50 meter/minuut",
+            "Tijd = 1000 meter ÷ 50 meter/minuut = 20 minuten"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "snelheid in meter per minuut"
+  },
+  {
+    "id": 327,
+    "title": "Vliegtuigreis",
+    "theme": "tijd-snelheid",
+    "content": "Een vliegtuig vliegt van Amsterdam naar Barcelona, een afstand van 1200 kilometer. Het vliegtuig vliegt 600 km per uur.",
+    "questions": [
+      {
+        "question": "Hoeveel uur duurt de vlucht?",
+        "options": [
+          {
+            "text": "1,5 uur",
+            "foutanalyse": "Dit is te weinig. Bereken 1200 ÷ 600."
+          },
+          {
+            "text": "2 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2,5 uur",
+            "foutanalyse": "Dit is te lang. Deel 1200 door 600."
+          },
+          {
+            "text": "3 uur",
+            "foutanalyse": "Dit is te lang. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Vliegtijd berekenen.",
+          "berekening": [
+            "Tijd = afstand ÷ snelheid",
+            "Tijd = 1200 km ÷ 600 km/u = 2 uur"
+          ]
+        }
+      },
+      {
+        "question": "Het vliegtuig vertrekt om 11:30 uur. Hoe laat landt het in Barcelona?",
+        "options": [
+          {
+            "text": "13:00 uur",
+            "foutanalyse": "Je hebt een fout gemaakt. Tel 2 uur op bij 11:30."
+          },
+          {
+            "text": "13:30 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "14:00 uur",
+            "foutanalyse": "Dit is te laat. Tel 2 uur bij 11:30."
+          },
+          {
+            "text": "14:30 uur",
+            "foutanalyse": "Dit is veel te laat. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Aankomsttijd berekenen.",
+          "berekening": [
+            "Vliegtijd: 2 uur",
+            "Aankomst: 11:30 + 2:00 = 13:30 uur"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "grote snelheden"
+  },
+  {
+    "id": 328,
+    "title": "Racefiets trainen",
+    "theme": "tijd-snelheid",
+    "content": "Max traint op zijn racefiets. Hij fietst 36 kilometer in 1 uur en 30 minuten.",
+    "questions": [
+      {
+        "question": "Wat is Max' gemiddelde snelheid in km per uur?",
+        "options": [
+          {
+            "text": "20 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt. Reken 1,5 uur en deel 36 daardoor."
+          },
+          {
+            "text": "22 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "24 km/u",
+            "foutanalyse": ""
+          },
+          {
+            "text": "26 km/u",
+            "foutanalyse": "Dit is te hoog. Bereken 36 ÷ 1,5."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Gemiddelde snelheid berekenen.",
+          "berekening": [
+            "Tijd: 1 uur en 30 minuten = 1,5 uur",
+            "Snelheid = 36 km ÷ 1,5 uur = 24 km/u"
+          ]
+        }
+      },
+      {
+        "question": "Als Max met dezelfde snelheid 60 kilometer fietst, hoeveel minuten is hij dan onderweg?",
+        "options": [
+          {
+            "text": "120 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 60 ÷ 24 en reken om naar minuten."
+          },
+          {
+            "text": "135 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "150 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "165 minuten",
+            "foutanalyse": "Dit is te lang. Bereken 60 ÷ 24 = 2,5 uur = 150 minuten."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Tijd berekenen en omrekenen naar minuten.",
+          "berekening": [
+            "Snelheid: 24 km/u",
+            "Tijd = 60 km ÷ 24 km/u = 2,5 uur",
+            "2,5 uur = 2,5 × 60 = 150 minuten"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "snelheid en tijd omrekenen"
+  },
+  {
+    "id": 329,
+    "title": "Schoolreis per bus",
+    "theme": "tijd-snelheid",
+    "content": "De bus voor de schoolreis rijdt 210 kilometer. De eerste 140 kilometer rijdt de bus 70 km per uur. De laatste 70 kilometer rijdt de bus 50 km per uur vanwege files.",
+    "questions": [
+      {
+        "question": "Hoeveel uur duurt het eerste deel van de reis?",
+        "options": [
+          {
+            "text": "1,5 uur",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 140 ÷ 70."
+          },
+          {
+            "text": "1,8 uur",
+            "foutanalyse": "Je hebt een fout gemaakt bij de deling."
+          },
+          {
+            "text": "2 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2,2 uur",
+            "foutanalyse": "Dit is te lang. Deel 140 door 70."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Deeltijd berekenen.",
+          "berekening": [
+            "Tijd eerste deel = 140 km ÷ 70 km/u = 2 uur"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel uur duurt de gehele reis?",
+        "options": [
+          {
+            "text": "3 uur",
+            "foutanalyse": "Je hebt het tweede deel vergeten of verkeerd berekend."
+          },
+          {
+            "text": "3,2 uur",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken ook het tweede deel."
+          },
+          {
+            "text": "3,4 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "3,6 uur",
+            "foutanalyse": "Dit is te lang. Bereken 2 uur + (70 ÷ 50)."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Totale reistijd bij verschillende snelheden.",
+          "berekening": [
+            "Eerste deel: 2 uur",
+            "Tweede deel: 70 km ÷ 50 km/u = 1,4 uur",
+            "Totaal: 2 + 1,4 = 3,4 uur"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "meerdere trajecten"
+  },
+  {
+    "id": 330,
+    "title": "Marathon lopen",
+    "theme": "tijd-snelheid",
+    "content": "Een marathon is 42 kilometer lang. Jan loopt de marathon in 3 uur en 30 minuten.",
+    "questions": [
+      {
+        "question": "Wat is Jans gemiddelde snelheid in km per uur?",
+        "options": [
+          {
+            "text": "11 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt. Reken 3,5 uur en deel 42 daardoor."
+          },
+          {
+            "text": "11,5 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "12 km/u",
+            "foutanalyse": ""
+          },
+          {
+            "text": "12,5 km/u",
+            "foutanalyse": "Dit is te hoog. Bereken 42 ÷ 3,5."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Gemiddelde snelheid bij lange afstand.",
+          "berekening": [
+            "Tijd: 3 uur en 30 minuten = 3,5 uur",
+            "Snelheid = 42 km ÷ 3,5 uur = 12 km/u"
+          ]
+        }
+      },
+      {
+        "question": "Als Jan om 10:00 uur start, hoe laat is hij klaar?",
+        "options": [
+          {
+            "text": "13:00 uur",
+            "foutanalyse": "Je hebt alleen 3 uur erbij geteld. Vergeet de 30 minuten niet."
+          },
+          {
+            "text": "13:20 uur",
+            "foutanalyse": "Je hebt een fout gemaakt bij de tijdberekening."
+          },
+          {
+            "text": "13:30 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "13:45 uur",
+            "foutanalyse": "Dit is te laat. Tel 3,5 uur bij 10:00."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Eindtijd berekenen.",
+          "berekening": [
+            "Looptijd: 3 uur en 30 minuten",
+            "Eindtijd: 10:00 + 3:30 = 13:30 uur"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "lange afstand"
+  },
+  {
+    "id": 331,
+    "title": "Sneltrein versus stoptrein",
+    "theme": "tijd-snelheid",
+    "content": "Een sneltrein en een stoptrein rijden beide van stad A naar stad B, een afstand van 90 kilometer. De sneltrein rijdt 120 km/u, de stoptrein rijdt 60 km/u.",
+    "questions": [
+      {
+        "question": "Hoeveel minuten doet de sneltrein erover?",
+        "options": [
+          {
+            "text": "40 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 90 ÷ 120 en reken om naar minuten."
+          },
+          {
+            "text": "45 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "50 minuten",
+            "foutanalyse": "Dit is te lang. Bereken de tijd nauwkeurig."
+          },
+          {
+            "text": "60 minuten",
+            "foutanalyse": "Dit is te lang. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Reistijd sneltrein berekenen.",
+          "berekening": [
+            "Tijd = 90 km ÷ 120 km/u = 0,75 uur",
+            "0,75 uur = 45 minuten"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel minuten sneller is de sneltrein dan de stoptrein?",
+        "options": [
+          {
+            "text": "30 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken eerst beide tijden."
+          },
+          {
+            "text": "45 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "60 minuten",
+            "foutanalyse": "Dit is te veel. Bereken het verschil."
+          },
+          {
+            "text": "75 minuten",
+            "foutanalyse": "Dit is te veel. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Tijdsverschil berekenen.",
+          "berekening": [
+            "Sneltrein: 45 minuten",
+            "Stoptrein: 90 ÷ 60 = 1,5 uur = 90 minuten",
+            "Verschil: 90 - 45 = 45 minuten"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "snelheidsvergelijking"
+  },
+  {
+    "id": 332,
+    "title": "Skateboard naar het park",
+    "theme": "tijd-snelheid",
+    "content": "Sophie gaat op haar skateboard naar het park. Het park ligt 2,5 kilometer verderop. Ze rijdt met een snelheid van 10 km per uur.",
+    "questions": [
+      {
+        "question": "Hoeveel minuten doet Sophie erover?",
+        "options": [
+          {
+            "text": "12 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "15 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "18 minuten",
+            "foutanalyse": "Dit is te lang. Bereken 2,5 ÷ 10 en reken om."
+          },
+          {
+            "text": "20 minuten",
+            "foutanalyse": "Dit is te lang. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Tijd berekenen bij kommagetallen.",
+          "berekening": [
+            "Tijd = 2,5 km ÷ 10 km/u = 0,25 uur",
+            "0,25 uur = 0,25 × 60 = 15 minuten"
+          ]
+        }
+      },
+      {
+        "question": "Sophie vertrekt om 15:20 uur. Hoe laat is ze bij het park?",
+        "options": [
+          {
+            "text": "15:32 uur",
+            "foutanalyse": "Je hebt een fout gemaakt bij de tijdberekening."
+          },
+          {
+            "text": "15:35 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "15:38 uur",
+            "foutanalyse": "Dit is te laat. Tel 15 minuten bij 15:20."
+          },
+          {
+            "text": "15:40 uur",
+            "foutanalyse": "Dit is te laat. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Aankomsttijd berekenen.",
+          "berekening": [
+            "Reistijd: 15 minuten",
+            "Aankomst: 15:20 + 15 minuten = 15:35 uur"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "kommagetallen"
+  },
+  {
+    "id": 333,
+    "title": "Bezorgdienst",
+    "theme": "tijd-snelheid",
+    "content": "Een bezorger fietst 4 bestellingen rond. Elke rit is 3 kilometer en duurt 12 minuten fietsen. Tussen elke bezorging is 3 minuten nodig om het pakket af te leveren.",
+    "questions": [
+      {
+        "question": "Hoeveel minuten is de bezorger in totaal onderweg (alleen fietsen)?",
+        "options": [
+          {
+            "text": "36 minuten",
+            "foutanalyse": "Je hebt alleen 3 ritten gerekend, maar er zijn 4 bestellingen."
+          },
+          {
+            "text": "42 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 4 × 12."
+          },
+          {
+            "text": "48 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "54 minuten",
+            "foutanalyse": "Je hebt te veel gerekend. 4 bestellingen = 4 × 12 minuten."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Totale fietstijd berekenen.",
+          "berekening": [
+            "Aantal bestellingen: 4",
+            "Tijd per rit: 12 minuten",
+            "Totale fietstijd: 4 × 12 = 48 minuten"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel minuten duurt de hele bezorgronde inclusief aflevertijd?",
+        "options": [
+          {
+            "text": "54 minuten",
+            "foutanalyse": "Je hebt niet alle aflevertijden meegeteld."
+          },
+          {
+            "text": "57 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt. Tel fietstijd + aflevertijd."
+          },
+          {
+            "text": "60 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "63 minuten",
+            "foutanalyse": "Je hebt te veel aflevertijden gerekend."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Totale tijd inclusief tussenstops.",
+          "berekening": [
+            "Fietstijd: 48 minuten",
+            "Aflevertijd: 4 × 3 = 12 minuten",
+            "Totaal: 48 + 12 = 60 minuten = 1 uur"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "meerdere stops"
+  },
+  {
+    "id": 334,
+    "title": "Schaatsen op natuurijs",
+    "theme": "tijd-snelheid",
+    "content": "Mia schaatst een rondje op de schaatsbaan van 800 meter. Ze doet er 4 minuten over.",
+    "questions": [
+      {
+        "question": "Hoeveel meter schaatst Mia per minuut?",
+        "options": [
+          {
+            "text": "180 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij de deling."
+          },
+          {
+            "text": "200 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "220 meter",
+            "foutanalyse": "Dit is te veel. Deel 800 door 4."
+          },
+          {
+            "text": "250 meter",
+            "foutanalyse": "Dit is te veel. Bereken 800 ÷ 4."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Snelheid berekenen in meter per minuut.",
+          "berekening": [
+            "Snelheid = afstand ÷ tijd",
+            "Snelheid = 800 meter ÷ 4 minuten = 200 meter/minuut"
+          ]
+        }
+      },
+      {
+        "question": "Als Mia 3 rondjes schaatst, hoeveel minuten is ze dan bezig?",
+        "options": [
+          {
+            "text": "10 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 3 × 4."
+          },
+          {
+            "text": "11 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt bij de vermenigvuldiging."
+          },
+          {
+            "text": "12 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "14 minuten",
+            "foutanalyse": "Dit is te veel. Vermenigvuldig 4 met 3."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Totale tijd bij meerdere rondjes.",
+          "berekening": [
+            "Tijd per rondje: 4 minuten",
+            "3 rondjes: 3 × 4 = 12 minuten"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "snelheid in meter per minuut"
+  },
+  {
+    "id": 335,
+    "title": "Boot op de rivier",
+    "theme": "tijd-snelheid",
+    "content": "Een rondvaartboot vaart 18 kilometer over de rivier in 1 uur en 12 minuten.",
+    "questions": [
+      {
+        "question": "Wat is de gemiddelde snelheid van de boot in km per uur?",
+        "options": [
+          {
+            "text": "12 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt. Reken 72 minuten om naar uren."
+          },
+          {
+            "text": "13 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "15 km/u",
+            "foutanalyse": ""
+          },
+          {
+            "text": "16 km/u",
+            "foutanalyse": "Dit is te hoog. Bereken 18 ÷ 1,2."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Gemiddelde snelheid berekenen.",
+          "berekening": [
+            "Tijd: 1 uur en 12 minuten = 72 minuten = 1,2 uur",
+            "Snelheid = 18 km ÷ 1,2 uur = 15 km/u"
+          ]
+        }
+      },
+      {
+        "question": "De boot vertrekt om 13:40 uur. Hoe laat is de boot terug?",
+        "options": [
+          {
+            "text": "14:40 uur",
+            "foutanalyse": "Je hebt alleen 1 uur erbij geteld. Vergeet de 12 minuten niet."
+          },
+          {
+            "text": "14:48 uur",
+            "foutanalyse": "Je hebt een fout gemaakt bij de tijdberekening."
+          },
+          {
+            "text": "14:52 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "15:00 uur",
+            "foutanalyse": "Dit is te laat. Tel 1 uur en 12 minuten bij 13:40."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Aankomsttijd berekenen.",
+          "berekening": [
+            "Reistijd: 1 uur en 12 minuten",
+            "Aankomst: 13:40 + 1:12 = 14:52 uur"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "varen en snelheid"
+  },
+  {
+    "id": 336,
+    "title": "Postbode route",
+    "theme": "tijd-snelheid",
+    "content": "De postbode fietst zijn route van 24 kilometer. Hij fietst gemiddeld 16 km per uur.",
+    "questions": [
+      {
+        "question": "Hoeveel uur is de postbode onderweg?",
+        "options": [
+          {
+            "text": "1 uur",
+            "foutanalyse": "Dit is te weinig. Bereken 24 ÷ 16."
+          },
+          {
+            "text": "1,5 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2 uur",
+            "foutanalyse": "Dit is te lang. Deel 24 door 16."
+          },
+          {
+            "text": "2,5 uur",
+            "foutanalyse": "Dit is te lang. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Tijd berekenen bij gegeven afstand en snelheid.",
+          "berekening": [
+            "Tijd = afstand ÷ snelheid",
+            "Tijd = 24 km ÷ 16 km/u = 1,5 uur"
+          ]
+        }
+      },
+      {
+        "question": "De postbode start om 08:00 uur en pauzeert 15 minuten. Hoe laat is hij klaar?",
+        "options": [
+          {
+            "text": "09:30 uur",
+            "foutanalyse": "Je bent de pauze vergeten."
+          },
+          {
+            "text": "09:40 uur",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "09:45 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "09:55 uur",
+            "foutanalyse": "Dit is te laat. Tel 1,5 uur + 15 minuten bij 08:00."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Eindtijd berekenen met pauze.",
+          "berekening": [
+            "Fietstijd: 1,5 uur = 1 uur 30 minuten",
+            "Pauze: 15 minuten",
+            "Totaal: 1 uur 45 minuten",
+            "08:00 + 1:45 = 09:45 uur"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "route met pauze"
+  },
+  {
+    "id": 337,
+    "title": "Avondwandeling",
+    "theme": "tijd-snelheid",
+    "content": "Een groep maakt een avondwandeling. Ze lopen van 19:15 uur tot 21:00 uur. Ze leggen 7 kilometer af.",
+    "questions": [
+      {
+        "question": "Hoe lang duurde de wandeling?",
+        "options": [
+          {
+            "text": "1 uur en 30 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt bij het berekenen van de tijdsduur."
+          },
+          {
+            "text": "1 uur en 40 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken het verschil tussen 21:00 en 19:15."
+          },
+          {
+            "text": "1 uur en 45 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2 uur",
+            "foutanalyse": "Dit is te lang. Bereken nauwkeurig."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Tijdsduur berekenen.",
+          "berekening": [
+            "Van 19:15 naar 21:00",
+            "Van 19:15 naar 20:15: 1 uur",
+            "Van 20:15 naar 21:00: 45 minuten",
+            "Totaal: 1 uur en 45 minuten"
+          ]
+        }
+      },
+      {
+        "question": "Wat is de gemiddelde loopsnelheid in km per uur?",
+        "options": [
+          {
+            "text": "3,5 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt. Reken de tijd om naar uren."
+          },
+          {
+            "text": "4 km/u",
+            "foutanalyse": ""
+          },
+          {
+            "text": "4,5 km/u",
+            "foutanalyse": "Dit is te hoog. Bereken 7 ÷ 1,75."
+          },
+          {
+            "text": "5 km/u",
+            "foutanalyse": "Dit is te hoog. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Gemiddelde snelheid berekenen.",
+          "berekening": [
+            "Tijd: 1 uur en 45 minuten = 1,75 uur",
+            "Snelheid = 7 km ÷ 1,75 uur = 4 km/u"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "tijdsduur en snelheid"
+  },
+  {
+    "id": 338,
+    "title": "Scooter naar de stad",
+    "theme": "tijd-snelheid",
+    "content": "Jamal rijdt met zijn scooter 28 kilometer naar de stad. Hij rijdt gemiddeld 35 km per uur.",
+    "questions": [
+      {
+        "question": "Hoeveel minuten duurt de rit?",
+        "options": [
+          {
+            "text": "40 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 28 ÷ 35 en reken om naar minuten."
+          },
+          {
+            "text": "45 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "48 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "50 minuten",
+            "foutanalyse": "Dit is te lang. Bereken 28 ÷ 35 × 60."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Tijd berekenen en omrekenen naar minuten.",
+          "berekening": [
+            "Tijd = 28 km ÷ 35 km/u = 0,8 uur",
+            "0,8 uur = 0,8 × 60 = 48 minuten"
+          ]
+        }
+      },
+      {
+        "question": "Als Jamal om 10:15 uur vertrekt, hoe laat is hij in de stad?",
+        "options": [
+          {
+            "text": "10:55 uur",
+            "foutanalyse": "Je hebt een fout gemaakt bij de tijdberekening."
+          },
+          {
+            "text": "11:00 uur",
+            "foutanalyse": "Je hebt een fout gemaakt. Tel 48 minuten bij 10:15."
+          },
+          {
+            "text": "11:03 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "11:05 uur",
+            "foutanalyse": "Dit is te laat. Tel 48 minuten op bij 10:15."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Aankomsttijd berekenen.",
+          "berekening": [
+            "Reistijd: 48 minuten",
+            "Aankomst: 10:15 + 48 minuten = 11:03 uur"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "scooter snelheid"
+  },
+  {
+    "id": 339,
+    "title": "Kabelbaan in de bergen",
+    "theme": "tijd-snelheid",
+    "content": "Een kabelbaan in de bergen rijdt 3600 meter omhoog. De rit duurt 9 minuten.",
+    "questions": [
+      {
+        "question": "Hoeveel meter per minuut rijdt de kabelbaan?",
+        "options": [
+          {
+            "text": "350 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij de deling."
+          },
+          {
+            "text": "380 meter",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 3600 door 9."
+          },
+          {
+            "text": "400 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "420 meter",
+            "foutanalyse": "Dit is te veel. Bereken 3600 ÷ 9."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Snelheid berekenen in meter per minuut.",
+          "berekening": [
+            "Snelheid = afstand ÷ tijd",
+            "Snelheid = 3600 meter ÷ 9 minuten = 400 meter/minuut"
+          ]
+        }
+      },
+      {
+        "question": "Wat is de snelheid van de kabelbaan in km per uur?",
+        "options": [
+          {
+            "text": "20 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen."
+          },
+          {
+            "text": "22 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt. Reken om: 400 m/min naar km/u."
+          },
+          {
+            "text": "24 km/u",
+            "foutanalyse": ""
+          },
+          {
+            "text": "26 km/u",
+            "foutanalyse": "Dit is te hoog. Bereken 400 × 60 ÷ 1000."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Omrekenen van meter per minuut naar km per uur.",
+          "berekening": [
+            "Snelheid: 400 meter/minuut",
+            "400 meter/minuut × 60 minuten = 24.000 meter/uur",
+            "24.000 meter/uur = 24 km/u"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "eenheden omrekenen"
+  },
+  {
+    "id": 340,
+    "title": "Inline skaten",
+    "theme": "tijd-snelheid",
+    "content": "Nina gaat inline skaten. Ze skatet 10 kilometer in 40 minuten.",
+    "questions": [
+      {
+        "question": "Wat is Nina's gemiddelde snelheid in km per uur?",
+        "options": [
+          {
+            "text": "12 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt. Reken 40 minuten om naar uren."
+          },
+          {
+            "text": "14 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "15 km/u",
+            "foutanalyse": ""
+          },
+          {
+            "text": "16 km/u",
+            "foutanalyse": "Dit is te hoog. Bereken 10 ÷ (40/60)."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Gemiddelde snelheid berekenen.",
+          "berekening": [
+            "Tijd: 40 minuten = 40/60 uur = 2/3 uur ≈ 0,667 uur",
+            "Snelheid = 10 km ÷ 0,667 uur = 15 km/u"
+          ]
+        }
+      },
+      {
+        "question": "Als Nina 1 uur skatet met dezelfde snelheid, hoeveel kilometer legt ze af?",
+        "options": [
+          {
+            "text": "12 km",
+            "foutanalyse": "Je hebt een fout gemaakt. Vermenigvuldig de snelheid met de tijd."
+          },
+          {
+            "text": "13 km",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "15 km",
+            "foutanalyse": ""
+          },
+          {
+            "text": "18 km",
+            "foutanalyse": "Dit is te veel. Bereken 15 × 1."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Afstand berekenen: afstand = snelheid × tijd.",
+          "berekening": [
+            "Snelheid: 15 km/u",
+            "Tijd: 1 uur",
+            "Afstand = 15 km/u × 1 uur = 15 km"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "afstand berekenen"
+  },
+  {
+    "id": 341,
+    "title": "Roeiwedstrijd",
+    "theme": "tijd-snelheid",
+    "content": "Bij een roeiwedstrijd roeien twee teams een parcours van 2000 meter. Team A doet er 8 minuten over, team B doet er 10 minuten over.",
+    "questions": [
+      {
+        "question": "Wat is de gemiddelde snelheid van team A in meter per minuut?",
+        "options": [
+          {
+            "text": "200 meter/minuut",
+            "foutanalyse": "Je hebt een fout gemaakt bij de deling."
+          },
+          {
+            "text": "225 meter/minuut",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 2000 door 8."
+          },
+          {
+            "text": "250 meter/minuut",
+            "foutanalyse": ""
+          },
+          {
+            "text": "275 meter/minuut",
+            "foutanalyse": "Dit is te veel. Bereken 2000 ÷ 8."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Gemiddelde snelheid berekenen.",
+          "berekening": [
+            "Snelheid = afstand ÷ tijd",
+            "Snelheid team A = 2000 meter ÷ 8 minuten = 250 meter/minuut"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel minuten eerder is team A klaar dan team B?",
+        "options": [
+          {
+            "text": "1 minuut",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 10 - 8."
+          },
+          {
+            "text": "1,5 minuut",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "2 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2,5 minuut",
+            "foutanalyse": "Dit is te veel. Trek 8 van 10 af."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Tijdsverschil berekenen.",
+          "berekening": [
+            "Team A: 8 minuten",
+            "Team B: 10 minuten",
+            "Verschil: 10 - 8 = 2 minuten"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "wedstrijdvergelijking"
+  },
+  {
+    "id": 342,
+    "title": "Mountainbike route",
+    "theme": "tijd-snelheid",
+    "content": "Een mountainbike route is 42 kilometer lang. De eerste 28 kilometer gaat bergop met een snelheid van 14 km/u. De laatste 14 kilometer gaat bergaf met een snelheid van 28 km/u.",
+    "questions": [
+      {
+        "question": "Hoeveel uur duurt het eerste deel (bergop)?",
+        "options": [
+          {
+            "text": "1,5 uur",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 28 ÷ 14."
+          },
+          {
+            "text": "1,8 uur",
+            "foutanalyse": "Je hebt een fout gemaakt bij de deling."
+          },
+          {
+            "text": "2 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2,2 uur",
+            "foutanalyse": "Dit is te lang. Deel 28 door 14."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Deeltijd berekenen.",
+          "berekening": [
+            "Tijd bergop = 28 km ÷ 14 km/u = 2 uur"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel uur duurt de gehele route?",
+        "options": [
+          {
+            "text": "2,3 uur",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken ook het tweede deel."
+          },
+          {
+            "text": "2,4 uur",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "2,5 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2,8 uur",
+            "foutanalyse": "Dit is te lang. Bereken 2 uur + (14 ÷ 28)."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Totale tijd bij verschillende snelheden.",
+          "berekening": [
+            "Tijd bergop: 2 uur",
+            "Tijd bergaf: 14 km ÷ 28 km/u = 0,5 uur",
+            "Totaal: 2 + 0,5 = 2,5 uur"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "bergop en bergaf"
+  },
+  {
+    "id": 343,
+    "title": "Vrachtauto transport",
+    "theme": "tijd-snelheid",
+    "content": "Een vrachtauto rijdt een vracht van 240 kilometer. Hij rijdt gemiddeld 60 km per uur.",
+    "questions": [
+      {
+        "question": "Hoeveel uur is de vrachtauto onderweg?",
+        "options": [
+          {
+            "text": "3 uur",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 240 ÷ 60."
+          },
+          {
+            "text": "3,5 uur",
+            "foutanalyse": "Je hebt een fout gemaakt bij de deling."
+          },
+          {
+            "text": "4 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "4,5 uur",
+            "foutanalyse": "Dit is te lang. Deel 240 door 60."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Reistijd berekenen.",
+          "berekening": [
+            "Tijd = afstand ÷ snelheid",
+            "Tijd = 240 km ÷ 60 km/u = 4 uur"
+          ]
+        }
+      },
+      {
+        "question": "De chauffeur vertrekt om 06:30 uur en pauzeert 2 keer voor in totaal 45 minuten. Hoe laat is hij op de bestemming?",
+        "options": [
+          {
+            "text": "10:30 uur",
+            "foutanalyse": "Je bent de pauzes vergeten."
+          },
+          {
+            "text": "10:45 uur",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "11:15 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "11:30 uur",
+            "foutanalyse": "Dit is te laat. Tel 4 uur rijden + 45 minuten pauze bij 06:30."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Eindtijd berekenen met pauzes.",
+          "berekening": [
+            "Rijtijd: 4 uur",
+            "Pauzes: 45 minuten",
+            "Totaal: 4 uur 45 minuten",
+            "06:30 + 4:45 = 11:15 uur"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "lange afstand met pauzes"
+  },
+  {
+    "id": 344,
+    "title": "Schoolbus met stops",
+    "theme": "tijd-snelheid",
+    "content": "De schoolbus rijdt een route van 32 kilometer. Hij stopt bij 6 haltes. Bij elke halte stopt de bus 2 minuten. De bus rijdt gemiddeld 40 km per uur.",
+    "questions": [
+      {
+        "question": "Hoeveel minuten is de bus onderweg (alleen rijden)?",
+        "options": [
+          {
+            "text": "40 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 32 ÷ 40 en reken om naar minuten."
+          },
+          {
+            "text": "45 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "48 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "50 minuten",
+            "foutanalyse": "Dit is te lang. Bereken 32 ÷ 40 × 60."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Rijtijd berekenen.",
+          "berekening": [
+            "Tijd = 32 km ÷ 40 km/u = 0,8 uur",
+            "0,8 uur = 0,8 × 60 = 48 minuten"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel minuten duurt de gehele busroute inclusief stops?",
+        "options": [
+          {
+            "text": "56 minuten",
+            "foutanalyse": "Je hebt niet alle stops meegeteld."
+          },
+          {
+            "text": "58 minuten",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 6 × 2."
+          },
+          {
+            "text": "60 minuten",
+            "foutanalyse": ""
+          },
+          {
+            "text": "62 minuten",
+            "foutanalyse": "Je hebt te veel stops gerekend."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Totale tijd inclusief stops.",
+          "berekening": [
+            "Rijtijd: 48 minuten",
+            "Stoptijd: 6 stops × 2 minuten = 12 minuten",
+            "Totaal: 48 + 12 = 60 minuten = 1 uur"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "meerdere haltes"
+  },
+  {
+    "id": 345,
+    "title": "Skateboard wedstrijd",
+    "theme": "tijd-snelheid",
+    "content": "Bij een skateboard wedstrijd skaten twee deelnemers 500 meter. Deelnemer A doet er 2 minuten en 30 seconden over, deelnemer B doet er 3 minuten over.",
+    "questions": [
+      {
+        "question": "Wat is de gemiddelde snelheid van deelnemer A in meter per minuut?",
+        "options": [
+          {
+            "text": "180 meter/minuut",
+            "foutanalyse": "Je hebt een fout gemaakt. Reken 2,5 minuut en deel 500 daardoor."
+          },
+          {
+            "text": "190 meter/minuut",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "200 meter/minuut",
+            "foutanalyse": ""
+          },
+          {
+            "text": "210 meter/minuut",
+            "foutanalyse": "Dit is te hoog. Bereken 500 ÷ 2,5."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Gemiddelde snelheid berekenen.",
+          "berekening": [
+            "Tijd deelnemer A: 2 minuten en 30 seconden = 2,5 minuut",
+            "Snelheid = 500 meter ÷ 2,5 minuut = 200 meter/minuut"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel seconden sneller is deelnemer A dan deelnemer B?",
+        "options": [
+          {
+            "text": "20 seconden",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "25 seconden",
+            "foutanalyse": "Je hebt een fout gemaakt. Trek 2,5 minuut van 3 minuut af."
+          },
+          {
+            "text": "30 seconden",
+            "foutanalyse": ""
+          },
+          {
+            "text": "35 seconden",
+            "foutanalyse": "Dit is te veel. Bereken het verschil."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Tijdsverschil berekenen.",
+          "berekening": [
+            "Deelnemer A: 2 minuten 30 seconden = 150 seconden",
+            "Deelnemer B: 3 minuten = 180 seconden",
+            "Verschil: 180 - 150 = 30 seconden"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "seconden en minuten"
+  },
+  {
+    "id": 346,
+    "title": "Kano op het meer",
+    "theme": "tijd-snelheid",
+    "content": "Anne vaart met een kano over het meer. Ze vaart 6 kilometer in 1 uur en 20 minuten.",
+    "questions": [
+      {
+        "question": "Wat is Anne's gemiddelde snelheid in km per uur?",
+        "options": [
+          {
+            "text": "4 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt. Reken 80 minuten om naar uren."
+          },
+          {
+            "text": "4,2 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "4,5 km/u",
+            "foutanalyse": ""
+          },
+          {
+            "text": "5 km/u",
+            "foutanalyse": "Dit is te hoog. Bereken 6 ÷ (4/3)."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Gemiddelde snelheid berekenen.",
+          "berekening": [
+            "Tijd: 1 uur en 20 minuten = 80 minuten = 4/3 uur ≈ 1,333 uur",
+            "Snelheid = 6 km ÷ 1,333 uur = 4,5 km/u"
+          ]
+        }
+      },
+      {
+        "question": "Als Anne om 14:40 uur vertrekt, hoe laat is ze terug?",
+        "options": [
+          {
+            "text": "15:40 uur",
+            "foutanalyse": "Je hebt alleen 1 uur erbij geteld. Vergeet de 20 minuten niet."
+          },
+          {
+            "text": "15:55 uur",
+            "foutanalyse": "Je hebt een fout gemaakt bij de tijdberekening."
+          },
+          {
+            "text": "16:00 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "16:10 uur",
+            "foutanalyse": "Dit is te laat. Tel 1 uur en 20 minuten bij 14:40."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Aankomsttijd berekenen.",
+          "berekening": [
+            "Vaartijd: 1 uur en 20 minuten",
+            "Aankomst: 14:40 + 1:20 = 16:00 uur"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "varen en tijd"
+  },
+  {
+    "id": 347,
+    "title": "Sprint op de atletiekbaan",
+    "theme": "tijd-snelheid",
+    "content": "Bij een atletiekwedstrijd rent Sanne de 100 meter sprint in 15 seconden. Haar vriendin Lotte rent de 100 meter in 18 seconden.",
+    "questions": [
+      {
+        "question": "Hoeveel meter per seconde rent Sanne gemiddeld?",
+        "options": [
+          {
+            "text": "5,5 meter/seconde",
+            "foutanalyse": "Je hebt een fout gemaakt bij de deling."
+          },
+          {
+            "text": "6 meter/seconde",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 100 door 15."
+          },
+          {
+            "text": "6,67 meter/seconde",
+            "foutanalyse": ""
+          },
+          {
+            "text": "7 meter/seconde",
+            "foutanalyse": "Dit is te hoog. Bereken 100 ÷ 15."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Snelheid berekenen in meter per seconde.",
+          "berekening": [
+            "Snelheid = afstand ÷ tijd",
+            "Snelheid = 100 meter ÷ 15 seconden ≈ 6,67 meter/seconde"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel seconden sneller is Sanne dan Lotte?",
+        "options": [
+          {
+            "text": "2 seconden",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 18 - 15."
+          },
+          {
+            "text": "2,5 seconden",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "3 seconden",
+            "foutanalyse": ""
+          },
+          {
+            "text": "3,5 seconden",
+            "foutanalyse": "Dit is te veel. Trek 15 van 18 af."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Tijdsverschil berekenen.",
+          "berekening": [
+            "Sanne: 15 seconden",
+            "Lotte: 18 seconden",
+            "Verschil: 18 - 15 = 3 seconden"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "sprint en seconden"
+  },
+  {
+    "id": 348,
+    "title": "Paardenkoets tocht",
+    "theme": "tijd-snelheid",
+    "content": "Een paardenkoets maakt een tocht door de stad. De koets rijdt 8 kilometer in 1 uur.",
+    "questions": [
+      {
+        "question": "Wat is de snelheid van de paardenkoets?",
+        "options": [
+          {
+            "text": "6 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "7 km/u",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel de afstand door de tijd."
+          },
+          {
+            "text": "8 km/u",
+            "foutanalyse": ""
+          },
+          {
+            "text": "9 km/u",
+            "foutanalyse": "Dit is te hoog. Bereken 8 ÷ 1."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Snelheid berekenen bij eenvoudige tijden.",
+          "berekening": [
+            "Snelheid = afstand ÷ tijd",
+            "Snelheid = 8 km ÷ 1 uur = 8 km/u"
+          ]
+        }
+      },
+      {
+        "question": "Als de koets om 13:30 uur vertrekt en er een pauze van 15 minuten is, hoe laat is de tocht klaar?",
+        "options": [
+          {
+            "text": "14:30 uur",
+            "foutanalyse": "Je bent de pauze vergeten."
+          },
+          {
+            "text": "14:40 uur",
+            "foutanalyse": "Je hebt een fout gemaakt bij de berekening."
+          },
+          {
+            "text": "14:45 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "14:50 uur",
+            "foutanalyse": "Dit is te laat. Tel 1 uur + 15 minuten bij 13:30."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Eindtijd berekenen met pauze.",
+          "berekening": [
+            "Rijtijd: 1 uur",
+            "Pauze: 15 minuten",
+            "Totaal: 1 uur 15 minuten",
+            "13:30 + 1:15 = 14:45 uur"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "eenvoudige snelheid"
   },
   {
     "id": 243,
@@ -20216,5 +24292,2077 @@
       }
     ],
     "sub_theme": "percentage groei en krimp"
+  },
+  {
+    "id": 349,
+    "title": "Speelgoedauto schaalmodel",
+    "theme": "schaal",
+    "content": "Een speelgoedauto is een schaalmodel van een echte auto. De echte auto is 4 meter lang. Het speelgoedautootje is 10 cm lang.",
+    "questions": [
+      {
+        "question": "Wat is de schaal van het speelgoedautootje?",
+        "options": [
+          {
+            "text": "1:20",
+            "foutanalyse": "Je hebt een rekenfout gemaakt bij het delen. Controleer je berekening."
+          },
+          {
+            "text": "1:30",
+            "foutanalyse": "Dit is niet het juiste antwoord. Reken eerst beide maten om naar dezelfde eenheid."
+          },
+          {
+            "text": "1:40",
+            "foutanalyse": ""
+          },
+          {
+            "text": "1:50",
+            "foutanalyse": "Je hebt een fout gemaakt bij het delen. Bereken 400 ÷ 10."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Schaal berekenen: beide maten omrekenen naar dezelfde eenheid en dan delen.",
+          "berekening": [
+            "Echte auto: 4 meter = 400 cm",
+            "Schaal: 1 : (400 ÷ 10) = 1 : 40",
+            "Check: 10 cm × 40 = 400 cm = 4 meter ✓"
+          ]
+        }
+      },
+      {
+        "question": "De breedte van de echte auto is 180 cm. Hoe breed is het speelgoedautootje?",
+        "options": [
+          {
+            "text": "3,5 cm",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Deel 180 door 40."
+          },
+          {
+            "text": "4 cm",
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening nog eens."
+          },
+          {
+            "text": "4,5 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "5 cm",
+            "foutanalyse": "Dit is te groot. Bereken 180 ÷ 40."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar tekening: delen door de schaalfactor.",
+          "berekening": [
+            "Werkelijkheid: 180 cm",
+            "Schaal: 1:40, dus delen door 40",
+            "Op model: 180 ÷ 40 = 4,5 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "schaalmodellen"
+  },
+  {
+    "id": 350,
+    "title": "Bouwtekening huis",
+    "theme": "schaal",
+    "content": "Een architect maakt een bouwtekening van een huis op schaal 1:50. De voordeur is in werkelijkheid 210 cm hoog.",
+    "questions": [
+      {
+        "question": "Hoe hoog is de voordeur op de bouwtekening?",
+        "options": [
+          {
+            "text": "3,2 cm",
+            "foutanalyse": "Je hebt een fout gemaakt bij het delen. Controleer je berekening."
+          },
+          {
+            "text": "3,8 cm",
+            "foutanalyse": "Dit is niet helemaal juist. Deel 210 door 50."
+          },
+          {
+            "text": "4,2 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "4,8 cm",
+            "foutanalyse": "Dit is te veel. Bereken 210 ÷ 50."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar tekening bij gegeven schaal.",
+          "berekening": [
+            "Werkelijkheid: 210 cm",
+            "Schaal: 1:50, dus delen door 50",
+            "Op tekening: 210 ÷ 50 = 4,2 cm"
+          ]
+        }
+      },
+      {
+        "question": "Op de bouwtekening is de woonkamer 8 cm breed. Hoe breed is de woonkamer in werkelijkheid?",
+        "options": [
+          {
+            "text": "3,5 meter",
+            "foutanalyse": "Je hebt een fout gemaakt. Vermenigvuldig met 50 en reken om."
+          },
+          {
+            "text": "4 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "4,5 meter",
+            "foutanalyse": "Dit is te veel. Bereken 8 × 50 en reken om naar meters."
+          },
+          {
+            "text": "5 meter",
+            "foutanalyse": "Je hebt te veel vermenigvuldigd."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van tekening naar werkelijkheid: vermenigvuldigen met de schaalfactor.",
+          "berekening": [
+            "Op tekening: 8 cm",
+            "Schaal: 1:50, dus vermenigvuldigen met 50",
+            "Werkelijkheid: 8 × 50 = 400 cm = 4 meter"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "bouwtekeningen"
+  },
+  {
+    "id": 351,
+    "title": "Tuinontwerp",
+    "theme": "schaal",
+    "content": "Een hovenier maakt een plattegrond van een tuin. De schaal is 1:25. Op de plattegrond is het grasveld 12 cm lang.",
+    "questions": [
+      {
+        "question": "Hoe lang is het grasveld in werkelijkheid?",
+        "options": [
+          {
+            "text": "2,5 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen."
+          },
+          {
+            "text": "3 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "3,5 meter",
+            "foutanalyse": "Dit is te veel. Bereken 12 × 25 en reken om naar meters."
+          },
+          {
+            "text": "4 meter",
+            "foutanalyse": "Je hebt te veel vermenigvuldigd. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van plattegrond naar werkelijkheid met schaal 1:25.",
+          "berekening": [
+            "Op plattegrond: 12 cm",
+            "Schaal: 1:25, dus vermenigvuldigen met 25",
+            "Werkelijkheid: 12 × 25 = 300 cm = 3 meter"
+          ]
+        }
+      },
+      {
+        "question": "Het terras is in werkelijkheid 225 cm breed. Hoe breed is het terras op de plattegrond?",
+        "options": [
+          {
+            "text": "8 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 225 door 25."
+          },
+          {
+            "text": "8,5 cm",
+            "foutanalyse": "Dit is niet helemaal juist. Controleer je deling."
+          },
+          {
+            "text": "9 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "9,5 cm",
+            "foutanalyse": "Dit is te veel. Bereken 225 ÷ 25."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar plattegrond: delen door de schaalfactor.",
+          "berekening": [
+            "Werkelijkheid: 225 cm",
+            "Schaal: 1:25, dus delen door 25",
+            "Op plattegrond: 225 ÷ 25 = 9 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "tuinontwerpen"
+  },
+  {
+    "id": 352,
+    "title": "LEGO schaalmodel",
+    "theme": "schaal",
+    "content": "Tim bouwt een LEGO model van de Eiffeltoren. De echte Eiffeltoren is 300 meter hoog. Het LEGO model wordt 60 cm hoog.",
+    "questions": [
+      {
+        "question": "Wat is de schaal van het LEGO model?",
+        "options": [
+          {
+            "text": "1:400",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen en delen."
+          },
+          {
+            "text": "1:450",
+            "foutanalyse": "Dit is niet het juiste antwoord. Reken eerst beide maten om naar cm."
+          },
+          {
+            "text": "1:500",
+            "foutanalyse": ""
+          },
+          {
+            "text": "1:600",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 30.000 ÷ 60."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Schaal berekenen met grote afmetingen.",
+          "berekening": [
+            "Echte toren: 300 meter = 30.000 cm",
+            "Model: 60 cm",
+            "Schaal: 1 : (30.000 ÷ 60) = 1 : 500",
+            "Check: 60 cm × 500 = 30.000 cm = 300 meter ✓"
+          ]
+        }
+      },
+      {
+        "question": "De basis van de echte Eiffeltoren is 125 meter breed. Hoe breed is de basis van het LEGO model?",
+        "options": [
+          {
+            "text": "20 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 12.500 door 500."
+          },
+          {
+            "text": "25 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "30 cm",
+            "foutanalyse": "Dit is te veel. Bereken 125 meter ÷ 500."
+          },
+          {
+            "text": "35 cm",
+            "foutanalyse": "Je hebt verkeerd gedeeld. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar model met schaal 1:500.",
+          "berekening": [
+            "Werkelijkheid: 125 meter = 12.500 cm",
+            "Schaal: 1:500, dus delen door 500",
+            "Op model: 12.500 ÷ 500 = 25 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "schaalmodellen"
+  },
+  {
+    "id": 353,
+    "title": "Modeltrein",
+    "theme": "schaal",
+    "content": "Een modeltrein heeft schaal 1:87. Een wagon van de modeltrein is 15 cm lang.",
+    "questions": [
+      {
+        "question": "Hoe lang is de wagon in werkelijkheid?",
+        "options": [
+          {
+            "text": "11,5 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen."
+          },
+          {
+            "text": "12,5 meter",
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening nog eens."
+          },
+          {
+            "text": "13,05 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "14 meter",
+            "foutanalyse": "Dit is te lang. Bereken 15 × 87 en reken om naar meters."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van model naar werkelijkheid met schaal 1:87.",
+          "berekening": [
+            "Op model: 15 cm",
+            "Schaal: 1:87, dus vermenigvuldigen met 87",
+            "Werkelijkheid: 15 × 87 = 1.305 cm = 13,05 meter"
+          ]
+        }
+      },
+      {
+        "question": "Een echte trein is 174 cm hoog. Hoe hoog is de modeltrein?",
+        "options": [
+          {
+            "text": "1,8 cm",
+            "foutanalyse": "Je hebt een fout gemaakt bij het delen."
+          },
+          {
+            "text": "2 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2,2 cm",
+            "foutanalyse": "Dit is te veel. Deel 174 door 87."
+          },
+          {
+            "text": "2,4 cm",
+            "foutanalyse": "Je hebt verkeerd gedeeld."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar model: delen door de schaalfactor.",
+          "berekening": [
+            "Werkelijkheid: 174 cm",
+            "Schaal: 1:87, dus delen door 87",
+            "Op model: 174 ÷ 87 = 2 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "schaalmodellen"
+  },
+  {
+    "id": 354,
+    "title": "Stadsplattegrond",
+    "theme": "schaal",
+    "content": "Op een stadsplattegrond is de schaal 1:20.000. De afstand tussen het station en het stadhuis is op de kaart 7 cm.",
+    "questions": [
+      {
+        "question": "Hoe groot is de werkelijke afstand tussen het station en het stadhuis?",
+        "options": [
+          {
+            "text": "1,2 km",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen."
+          },
+          {
+            "text": "1,4 km",
+            "foutanalyse": ""
+          },
+          {
+            "text": "1,6 km",
+            "foutanalyse": "Dit is te veel. Bereken 7 × 20.000 en reken om naar km."
+          },
+          {
+            "text": "1,8 km",
+            "foutanalyse": "Je hebt verkeerd vermenigvuldigd."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van kaart naar werkelijkheid met grote schaal.",
+          "berekening": [
+            "Op kaart: 7 cm",
+            "Schaal: 1:20.000, dus vermenigvuldigen met 20.000",
+            "Werkelijkheid: 7 × 20.000 = 140.000 cm = 1.400 meter = 1,4 km"
+          ]
+        }
+      },
+      {
+        "question": "De afstand tussen het zwembad en de bibliotheek is 1,8 km. Hoe groot is deze afstand op de kaart?",
+        "options": [
+          {
+            "text": "8 cm",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen en delen."
+          },
+          {
+            "text": "8,5 cm",
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening."
+          },
+          {
+            "text": "9 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "9,5 cm",
+            "foutanalyse": "Dit is te veel. Bereken 180.000 ÷ 20.000."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar kaart: omrekenen en delen.",
+          "berekening": [
+            "Werkelijkheid: 1,8 km = 1.800 meter = 180.000 cm",
+            "Schaal: 1:20.000, dus delen door 20.000",
+            "Op kaart: 180.000 ÷ 20.000 = 9 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "kaarten en schaal"
+  },
+  {
+    "id": 355,
+    "title": "Wandelkaart",
+    "theme": "schaal",
+    "content": "Een wandelkaart heeft schaal 1:25.000. Lisa meet een wandelroute op de kaart en die is 8 cm lang.",
+    "questions": [
+      {
+        "question": "Hoe lang is de wandelroute in werkelijkheid?",
+        "options": [
+          {
+            "text": "1,5 km",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen."
+          },
+          {
+            "text": "1,8 km",
+            "foutanalyse": "Dit is niet helemaal juist. Bereken 8 × 25.000."
+          },
+          {
+            "text": "2 km",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2,5 km",
+            "foutanalyse": "Dit is te veel. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van kaart naar werkelijkheid met wandelkaart schaal.",
+          "berekening": [
+            "Op kaart: 8 cm",
+            "Schaal: 1:25.000, dus vermenigvuldigen met 25.000",
+            "Werkelijkheid: 8 × 25.000 = 200.000 cm = 2.000 meter = 2 km"
+          ]
+        }
+      },
+      {
+        "question": "Een andere route is in werkelijkheid 3,5 km. Hoe lang is deze route op de kaart?",
+        "options": [
+          {
+            "text": "12 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 350.000 ÷ 25.000."
+          },
+          {
+            "text": "13 cm",
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening nog eens."
+          },
+          {
+            "text": "14 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "15 cm",
+            "foutanalyse": "Dit is te veel. Deel 3,5 km door 25.000."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar kaart: omrekenen en delen.",
+          "berekening": [
+            "Werkelijkheid: 3,5 km = 3.500 meter = 350.000 cm",
+            "Schaal: 1:25.000, dus delen door 25.000",
+            "Op kaart: 350.000 ÷ 25.000 = 14 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "kaarten en schaal"
+  },
+  {
+    "id": 356,
+    "title": "Poppenhuis",
+    "theme": "schaal",
+    "content": "Een poppenhuis heeft schaal 1:12. Een bed in het poppenhuis is 15 cm lang.",
+    "questions": [
+      {
+        "question": "Hoe lang is een echt bed?",
+        "options": [
+          {
+            "text": "1,6 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen."
+          },
+          {
+            "text": "1,8 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2 meter",
+            "foutanalyse": "Dit is te lang. Bereken 15 × 12 en reken om naar meters."
+          },
+          {
+            "text": "2,2 meter",
+            "foutanalyse": "Je hebt verkeerd vermenigvuldigd."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van poppenhuis naar werkelijkheid met schaal 1:12.",
+          "berekening": [
+            "In poppenhuis: 15 cm",
+            "Schaal: 1:12, dus vermenigvuldigen met 12",
+            "Werkelijkheid: 15 × 12 = 180 cm = 1,8 meter"
+          ]
+        }
+      },
+      {
+        "question": "Een echte kast is 240 cm hoog. Hoe hoog is de kast in het poppenhuis?",
+        "options": [
+          {
+            "text": "18 cm",
+            "foutanalyse": "Je hebt een fout gemaakt bij het delen."
+          },
+          {
+            "text": "19 cm",
+            "foutanalyse": "Dit is niet helemaal juist. Deel 240 door 12."
+          },
+          {
+            "text": "20 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "21 cm",
+            "foutanalyse": "Dit is te hoog. Bereken 240 ÷ 12."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar poppenhuis: delen door de schaalfactor.",
+          "berekening": [
+            "Werkelijkheid: 240 cm",
+            "Schaal: 1:12, dus delen door 12",
+            "In poppenhuis: 240 ÷ 12 = 20 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "schaalmodellen"
+  },
+  {
+    "id": 357,
+    "title": "Architect tekening zwembad",
+    "theme": "schaal",
+    "content": "Een zwembad is 25 meter lang. Op de architect tekening is het zwembad 50 cm lang.",
+    "questions": [
+      {
+        "question": "Wat is de schaal van de tekening?",
+        "options": [
+          {
+            "text": "1:40",
+            "foutanalyse": "Je hebt een fout gemaakt. Reken beide maten om naar cm."
+          },
+          {
+            "text": "1:50",
+            "foutanalyse": ""
+          },
+          {
+            "text": "1:60",
+            "foutanalyse": "Dit is niet juist. Bereken 2.500 ÷ 50."
+          },
+          {
+            "text": "1:100",
+            "foutanalyse": "Je hebt verkeerd gedeeld."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Schaal berekenen met centimeters en meters.",
+          "berekening": [
+            "Echt zwembad: 25 meter = 2.500 cm",
+            "Op tekening: 50 cm",
+            "Schaal: 1 : (2.500 ÷ 50) = 1 : 50",
+            "Check: 50 cm × 50 = 2.500 cm = 25 meter ✓"
+          ]
+        }
+      },
+      {
+        "question": "Het zwembad is in werkelijkheid 10 meter breed. Hoe breed is het op de tekening?",
+        "options": [
+          {
+            "text": "15 cm",
+            "foutanalyse": "Je hebt een fout gemaakt bij het delen."
+          },
+          {
+            "text": "18 cm",
+            "foutanalyse": "Dit is niet helemaal juist. Deel 1.000 door 50."
+          },
+          {
+            "text": "20 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "25 cm",
+            "foutanalyse": "Dit is te veel. Bereken 10 meter ÷ 50."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar tekening met schaal 1:50.",
+          "berekening": [
+            "Werkelijkheid: 10 meter = 1.000 cm",
+            "Schaal: 1:50, dus delen door 50",
+            "Op tekening: 1.000 ÷ 50 = 20 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "bouwtekeningen"
+  },
+  {
+    "id": 358,
+    "title": "Schaalmodel zeilboot",
+    "theme": "schaal",
+    "content": "Jasper maakt een schaalmodel van een zeilboot op schaal 1:20. De mast van zijn model is 30 cm hoog.",
+    "questions": [
+      {
+        "question": "Hoe hoog is de mast van de echte zeilboot?",
+        "options": [
+          {
+            "text": "5 meter",
+            "foutanalyse": "Je hebt een fout gemaakt. Vermenigvuldig 30 met 20."
+          },
+          {
+            "text": "5,5 meter",
+            "foutanalyse": "Dit is niet helemaal juist. Controleer je berekening."
+          },
+          {
+            "text": "6 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "6,5 meter",
+            "foutanalyse": "Dit is te hoog. Bereken 30 × 20 en reken om naar meters."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van model naar werkelijkheid met schaal 1:20.",
+          "berekening": [
+            "Op model: 30 cm",
+            "Schaal: 1:20, dus vermenigvuldigen met 20",
+            "Werkelijkheid: 30 × 20 = 600 cm = 6 meter"
+          ]
+        }
+      },
+      {
+        "question": "De echte zeilboot is 8 meter lang. Hoe lang is het model?",
+        "options": [
+          {
+            "text": "35 cm",
+            "foutanalyse": "Je hebt een fout gemaakt bij het delen."
+          },
+          {
+            "text": "38 cm",
+            "foutanalyse": "Dit is niet helemaal juist. Deel 800 door 20."
+          },
+          {
+            "text": "40 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "45 cm",
+            "foutanalyse": "Dit is te lang. Bereken 8 meter ÷ 20."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar model: delen door de schaalfactor.",
+          "berekening": [
+            "Werkelijkheid: 8 meter = 800 cm",
+            "Schaal: 1:20, dus delen door 20",
+            "Op model: 800 ÷ 20 = 40 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "schaalmodellen"
+  },
+  {
+    "id": 359,
+    "title": "Dierentuinplattegrond",
+    "theme": "schaal",
+    "content": "Op een plattegrond van de dierentuin is de afstand van de ingang naar de apenrots 4 cm. De schaal is 1:500.",
+    "questions": [
+      {
+        "question": "Hoe ver moet je in werkelijkheid lopen van de ingang naar de apenrots?",
+        "options": [
+          {
+            "text": "15 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen."
+          },
+          {
+            "text": "18 meter",
+            "foutanalyse": "Dit is niet helemaal juist. Bereken 4 × 500."
+          },
+          {
+            "text": "20 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "25 meter",
+            "foutanalyse": "Dit is te ver. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van plattegrond naar werkelijkheid met schaal 1:500.",
+          "berekening": [
+            "Op plattegrond: 4 cm",
+            "Schaal: 1:500, dus vermenigvuldigen met 500",
+            "Werkelijkheid: 4 × 500 = 2.000 cm = 20 meter"
+          ]
+        }
+      },
+      {
+        "question": "De afstand van de apenrots naar het leeuwenverblijf is in werkelijkheid 35 meter. Hoe groot is deze afstand op de plattegrond?",
+        "options": [
+          {
+            "text": "6 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 3.500 door 500."
+          },
+          {
+            "text": "6,5 cm",
+            "foutanalyse": "Dit is niet helemaal juist. Controleer je berekening."
+          },
+          {
+            "text": "7 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "7,5 cm",
+            "foutanalyse": "Dit is te veel. Bereken 35 meter ÷ 500."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar plattegrond: omrekenen en delen.",
+          "berekening": [
+            "Werkelijkheid: 35 meter = 3.500 cm",
+            "Schaal: 1:500, dus delen door 500",
+            "Op plattegrond: 3.500 ÷ 500 = 7 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "plattegronden"
+  },
+  {
+    "id": 360,
+    "title": "Fietsroute kaart",
+    "theme": "schaal",
+    "content": "Een fietskaart heeft schaal 1:50.000. Op de kaart is een fietsroute 9 cm lang.",
+    "questions": [
+      {
+        "question": "Hoe lang is de fietsroute in werkelijkheid?",
+        "options": [
+          {
+            "text": "3,5 km",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen."
+          },
+          {
+            "text": "4 km",
+            "foutanalyse": "Dit is niet helemaal juist. Bereken 9 × 50.000."
+          },
+          {
+            "text": "4,5 km",
+            "foutanalyse": ""
+          },
+          {
+            "text": "5 km",
+            "foutanalyse": "Dit is te ver. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van kaart naar werkelijkheid met grote schaal.",
+          "berekening": [
+            "Op kaart: 9 cm",
+            "Schaal: 1:50.000, dus vermenigvuldigen met 50.000",
+            "Werkelijkheid: 9 × 50.000 = 450.000 cm = 4.500 meter = 4,5 km"
+          ]
+        }
+      },
+      {
+        "question": "Een andere route is in werkelijkheid 6 km. Hoe lang is deze route op de kaart?",
+        "options": [
+          {
+            "text": "10 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 600.000 ÷ 50.000."
+          },
+          {
+            "text": "11 cm",
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening."
+          },
+          {
+            "text": "12 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "13 cm",
+            "foutanalyse": "Dit is te veel. Deel 6 km door 50.000."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar kaart: omrekenen en delen.",
+          "berekening": [
+            "Werkelijkheid: 6 km = 6.000 meter = 600.000 cm",
+            "Schaal: 1:50.000, dus delen door 50.000",
+            "Op kaart: 600.000 ÷ 50.000 = 12 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "kaarten en schaal"
+  },
+  {
+    "id": 361,
+    "title": "Kamerindeling",
+    "theme": "schaal",
+    "content": "Op een plattegrond van een kamer is de lengte 15 cm. De schaal is 1:20. In de kamer staat een bureau.",
+    "questions": [
+      {
+        "question": "Hoe lang is de kamer in werkelijkheid?",
+        "options": [
+          {
+            "text": "2,5 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen."
+          },
+          {
+            "text": "2,8 meter",
+            "foutanalyse": "Dit is niet helemaal juist. Bereken 15 × 20."
+          },
+          {
+            "text": "3 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "3,5 meter",
+            "foutanalyse": "Dit is te lang. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van plattegrond naar werkelijkheid met schaal 1:20.",
+          "berekening": [
+            "Op plattegrond: 15 cm",
+            "Schaal: 1:20, dus vermenigvuldigen met 20",
+            "Werkelijkheid: 15 × 20 = 300 cm = 3 meter"
+          ]
+        }
+      },
+      {
+        "question": "Het bureau is in werkelijkheid 120 cm breed. Hoe breed is het bureau op de plattegrond?",
+        "options": [
+          {
+            "text": "5 cm",
+            "foutanalyse": "Je hebt een fout gemaakt bij het delen."
+          },
+          {
+            "text": "5,5 cm",
+            "foutanalyse": "Dit is niet helemaal juist. Deel 120 door 20."
+          },
+          {
+            "text": "6 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "6,5 cm",
+            "foutanalyse": "Dit is te breed. Bereken 120 ÷ 20."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar plattegrond: delen door de schaalfactor.",
+          "berekening": [
+            "Werkelijkheid: 120 cm",
+            "Schaal: 1:20, dus delen door 20",
+            "Op plattegrond: 120 ÷ 20 = 6 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "plattegronden"
+  },
+  {
+    "id": 362,
+    "title": "Stadspark plattegrond",
+    "theme": "schaal",
+    "content": "Een stadspark heeft een plattegrond op schaal 1:400. De vijver is op de plattegrond 5 cm breed.",
+    "questions": [
+      {
+        "question": "Hoe breed is de vijver in werkelijkheid?",
+        "options": [
+          {
+            "text": "18 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen."
+          },
+          {
+            "text": "20 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "22 meter",
+            "foutanalyse": "Dit is te breed. Bereken 5 × 400 en reken om naar meters."
+          },
+          {
+            "text": "25 meter",
+            "foutanalyse": "Je hebt verkeerd vermenigvuldigd."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van plattegrond naar werkelijkheid met schaal 1:400.",
+          "berekening": [
+            "Op plattegrond: 5 cm",
+            "Schaal: 1:400, dus vermenigvuldigen met 400",
+            "Werkelijkheid: 5 × 400 = 2.000 cm = 20 meter"
+          ]
+        }
+      },
+      {
+        "question": "Een speeltuin in het park is 32 meter lang. Hoe lang is de speeltuin op de plattegrond?",
+        "options": [
+          {
+            "text": "6 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 3.200 door 400."
+          },
+          {
+            "text": "7 cm",
+            "foutanalyse": "Dit is niet helemaal juist. Controleer je berekening."
+          },
+          {
+            "text": "8 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "9 cm",
+            "foutanalyse": "Dit is te lang. Bereken 32 meter ÷ 400."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar plattegrond: omrekenen en delen.",
+          "berekening": [
+            "Werkelijkheid: 32 meter = 3.200 cm",
+            "Schaal: 1:400, dus delen door 400",
+            "Op plattegrond: 3.200 ÷ 400 = 8 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "plattegronden"
+  },
+  {
+    "id": 363,
+    "title": "Museumplattegrond",
+    "theme": "schaal",
+    "content": "Een museumplattegrond heeft schaal 1:250. De Egyptische zaal is op de plattegrond 6 cm lang.",
+    "questions": [
+      {
+        "question": "Hoe lang is de Egyptische zaal in werkelijkheid?",
+        "options": [
+          {
+            "text": "12 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen."
+          },
+          {
+            "text": "13,5 meter",
+            "foutanalyse": "Dit is niet helemaal juist. Bereken 6 × 250."
+          },
+          {
+            "text": "15 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "18 meter",
+            "foutanalyse": "Dit is te lang. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van plattegrond naar werkelijkheid met schaal 1:250.",
+          "berekening": [
+            "Op plattegrond: 6 cm",
+            "Schaal: 1:250, dus vermenigvuldigen met 250",
+            "Werkelijkheid: 6 × 250 = 1.500 cm = 15 meter"
+          ]
+        }
+      },
+      {
+        "question": "De winkel is in werkelijkheid 10 meter breed. Hoe breed is de winkel op de plattegrond?",
+        "options": [
+          {
+            "text": "3 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 1.000 door 250."
+          },
+          {
+            "text": "3,5 cm",
+            "foutanalyse": "Dit is niet helemaal juist. Controleer je berekening."
+          },
+          {
+            "text": "4 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "4,5 cm",
+            "foutanalyse": "Dit is te breed. Bereken 10 meter ÷ 250."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar plattegrond: omrekenen en delen.",
+          "berekening": [
+            "Werkelijkheid: 10 meter = 1.000 cm",
+            "Schaal: 1:250, dus delen door 250",
+            "Op plattegrond: 1.000 ÷ 250 = 4 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "plattegronden"
+  },
+  {
+    "id": 364,
+    "title": "Vliegtuigmodel",
+    "theme": "schaal",
+    "content": "Een vliegtuigmodel heeft schaal 1:72. Het model is 42 cm lang.",
+    "questions": [
+      {
+        "question": "Hoe lang is het echte vliegtuig?",
+        "options": [
+          {
+            "text": "28 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen."
+          },
+          {
+            "text": "30,24 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "32 meter",
+            "foutanalyse": "Dit is te lang. Bereken 42 × 72 en reken om naar meters."
+          },
+          {
+            "text": "35 meter",
+            "foutanalyse": "Je hebt verkeerd vermenigvuldigd. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van model naar werkelijkheid met schaal 1:72.",
+          "berekening": [
+            "Op model: 42 cm",
+            "Schaal: 1:72, dus vermenigvuldigen met 72",
+            "Werkelijkheid: 42 × 72 = 3.024 cm = 30,24 meter"
+          ]
+        }
+      },
+      {
+        "question": "De spanwijdte van het echte vliegtuig is 28,8 meter. Hoe groot is de spanwijdte van het model?",
+        "options": [
+          {
+            "text": "38 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 2.880 door 72."
+          },
+          {
+            "text": "40 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "42 cm",
+            "foutanalyse": "Dit is te groot. Bereken 28,8 meter ÷ 72."
+          },
+          {
+            "text": "45 cm",
+            "foutanalyse": "Je hebt verkeerd gedeeld."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar model: delen door de schaalfactor.",
+          "berekening": [
+            "Werkelijkheid: 28,8 meter = 2.880 cm",
+            "Schaal: 1:72, dus delen door 72",
+            "Op model: 2.880 ÷ 72 = 40 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "schaalmodellen"
+  },
+  {
+    "id": 365,
+    "title": "Luchtfoto",
+    "theme": "schaal",
+    "content": "Een luchtfoto van een woonwijk heeft schaal 1:5.000. Op de foto is een voetbalveld 2 cm lang.",
+    "questions": [
+      {
+        "question": "Hoe lang is het voetbalveld in werkelijkheid?",
+        "options": [
+          {
+            "text": "80 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen."
+          },
+          {
+            "text": "90 meter",
+            "foutanalyse": "Dit is niet helemaal juist. Bereken 2 × 5.000."
+          },
+          {
+            "text": "100 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "110 meter",
+            "foutanalyse": "Dit is te lang. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van luchtfoto naar werkelijkheid met grote schaal.",
+          "berekening": [
+            "Op foto: 2 cm",
+            "Schaal: 1:5.000, dus vermenigvuldigen met 5.000",
+            "Werkelijkheid: 2 × 5.000 = 10.000 cm = 100 meter"
+          ]
+        }
+      },
+      {
+        "question": "Een school is in werkelijkheid 40 meter breed. Hoe breed is de school op de luchtfoto?",
+        "options": [
+          {
+            "text": "0,6 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 4.000 door 5.000."
+          },
+          {
+            "text": "0,7 cm",
+            "foutanalyse": "Dit is niet helemaal juist. Controleer je berekening."
+          },
+          {
+            "text": "0,8 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "0,9 cm",
+            "foutanalyse": "Dit is te breed. Bereken 40 meter ÷ 5.000."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar luchtfoto: omrekenen en delen.",
+          "berekening": [
+            "Werkelijkheid: 40 meter = 4.000 cm",
+            "Schaal: 1:5.000, dus delen door 5.000",
+            "Op foto: 4.000 ÷ 5.000 = 0,8 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "kaarten en schaal"
+  },
+  {
+    "id": 366,
+    "title": "Speelgoedpoppetjes",
+    "theme": "schaal",
+    "content": "Speelgoedpoppetjes hebben schaal 1:18. Een poppetje is 10 cm hoog.",
+    "questions": [
+      {
+        "question": "Hoe lang zou een echt persoon zijn die dit poppetje voorstelt?",
+        "options": [
+          {
+            "text": "1,6 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen."
+          },
+          {
+            "text": "1,7 meter",
+            "foutanalyse": "Dit is niet helemaal juist. Bereken 10 × 18."
+          },
+          {
+            "text": "1,8 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "1,9 meter",
+            "foutanalyse": "Dit is te lang. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van speelgoed naar werkelijkheid met schaal 1:18.",
+          "berekening": [
+            "Poppetje: 10 cm",
+            "Schaal: 1:18, dus vermenigvuldigen met 18",
+            "Werkelijkheid: 10 × 18 = 180 cm = 1,8 meter"
+          ]
+        }
+      },
+      {
+        "question": "Een echt bureau is 72 cm hoog. Hoe hoog is het speelgoedbureau?",
+        "options": [
+          {
+            "text": "3 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 72 door 18."
+          },
+          {
+            "text": "3,5 cm",
+            "foutanalyse": "Dit is niet helemaal juist. Controleer je berekening."
+          },
+          {
+            "text": "4 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "4,5 cm",
+            "foutanalyse": "Dit is te hoog. Bereken 72 ÷ 18."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar speelgoed: delen door de schaalfactor.",
+          "berekening": [
+            "Werkelijkheid: 72 cm",
+            "Schaal: 1:18, dus delen door 18",
+            "Speelgoed: 72 ÷ 18 = 4 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "schaalmodellen"
+  },
+  {
+    "id": 367,
+    "title": "Provinciekaart",
+    "theme": "schaal",
+    "content": "Een kaart van de provincie Gelderland heeft schaal 1:100.000. Op de kaart is de afstand tussen Arnhem en Nijmegen 18 cm.",
+    "questions": [
+      {
+        "question": "Hoe groot is de werkelijke afstand tussen Arnhem en Nijmegen?",
+        "options": [
+          {
+            "text": "16 km",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen."
+          },
+          {
+            "text": "17 km",
+            "foutanalyse": "Dit is niet helemaal juist. Bereken 18 × 100.000."
+          },
+          {
+            "text": "18 km",
+            "foutanalyse": ""
+          },
+          {
+            "text": "20 km",
+            "foutanalyse": "Dit is te ver. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van kaart naar werkelijkheid met zeer grote schaal.",
+          "berekening": [
+            "Op kaart: 18 cm",
+            "Schaal: 1:100.000, dus vermenigvuldigen met 100.000",
+            "Werkelijkheid: 18 × 100.000 = 1.800.000 cm = 18.000 meter = 18 km"
+          ]
+        }
+      },
+      {
+        "question": "De afstand tussen Apeldoorn en Zutphen is 25 km. Hoe groot is deze afstand op de kaart?",
+        "options": [
+          {
+            "text": "23 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 2.500.000 ÷ 100.000."
+          },
+          {
+            "text": "24 cm",
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening."
+          },
+          {
+            "text": "25 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "26 cm",
+            "foutanalyse": "Dit is te veel. Deel 25 km door 100.000."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar kaart: omrekenen en delen.",
+          "berekening": [
+            "Werkelijkheid: 25 km = 25.000 meter = 2.500.000 cm",
+            "Schaal: 1:100.000, dus delen door 100.000",
+            "Op kaart: 2.500.000 ÷ 100.000 = 25 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "kaarten en schaal"
+  },
+  {
+    "id": 368,
+    "title": "Maquette kasteel",
+    "theme": "schaal",
+    "content": "Een maquette van een kasteel heeft schaal 1:60. De toren van de maquette is 50 cm hoog.",
+    "questions": [
+      {
+        "question": "Hoe hoog is de toren van het echte kasteel?",
+        "options": [
+          {
+            "text": "28 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen."
+          },
+          {
+            "text": "30 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "32 meter",
+            "foutanalyse": "Dit is te hoog. Bereken 50 × 60 en reken om naar meters."
+          },
+          {
+            "text": "35 meter",
+            "foutanalyse": "Je hebt verkeerd vermenigvuldigd."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van maquette naar werkelijkheid met schaal 1:60.",
+          "berekening": [
+            "Op maquette: 50 cm",
+            "Schaal: 1:60, dus vermenigvuldigen met 60",
+            "Werkelijkheid: 50 × 60 = 3.000 cm = 30 meter"
+          ]
+        }
+      },
+      {
+        "question": "De slotgracht is in werkelijkheid 12 meter breed. Hoe breed is de slotgracht op de maquette?",
+        "options": [
+          {
+            "text": "18 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 1.200 door 60."
+          },
+          {
+            "text": "20 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "22 cm",
+            "foutanalyse": "Dit is te breed. Bereken 12 meter ÷ 60."
+          },
+          {
+            "text": "24 cm",
+            "foutanalyse": "Je hebt verkeerd gedeeld."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar maquette: omrekenen en delen.",
+          "berekening": [
+            "Werkelijkheid: 12 meter = 1.200 cm",
+            "Schaal: 1:60, dus delen door 60",
+            "Op maquette: 1.200 ÷ 60 = 20 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "schaalmodellen"
+  },
+  {
+    "id": 369,
+    "title": "Stadionplattegrond",
+    "theme": "schaal",
+    "content": "Een plattegrond van een voetbalstadion heeft schaal 1:800. Het voetbalveld is op de plattegrond 13 cm lang.",
+    "questions": [
+      {
+        "question": "Hoe lang is het voetbalveld in werkelijkheid?",
+        "options": [
+          {
+            "text": "96 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen."
+          },
+          {
+            "text": "100 meter",
+            "foutanalyse": "Dit is niet helemaal juist. Bereken 13 × 800."
+          },
+          {
+            "text": "104 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "108 meter",
+            "foutanalyse": "Dit is te lang. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van plattegrond naar werkelijkheid met schaal 1:800.",
+          "berekening": [
+            "Op plattegrond: 13 cm",
+            "Schaal: 1:800, dus vermenigvuldigen met 800",
+            "Werkelijkheid: 13 × 800 = 10.400 cm = 104 meter"
+          ]
+        }
+      },
+      {
+        "question": "De tribune is in werkelijkheid 64 meter lang. Hoe lang is de tribune op de plattegrond?",
+        "options": [
+          {
+            "text": "7 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 6.400 door 800."
+          },
+          {
+            "text": "7,5 cm",
+            "foutanalyse": "Dit is niet helemaal juist. Controleer je berekening."
+          },
+          {
+            "text": "8 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "8,5 cm",
+            "foutanalyse": "Dit is te lang. Bereken 64 meter ÷ 800."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar plattegrond: omrekenen en delen.",
+          "berekening": [
+            "Werkelijkheid: 64 meter = 6.400 cm",
+            "Schaal: 1:800, dus delen door 800",
+            "Op plattegrond: 6.400 ÷ 800 = 8 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "plattegronden"
+  },
+  {
+    "id": 370,
+    "title": "Autoracecircuit",
+    "theme": "schaal",
+    "content": "Een racecircuit van Zandvoort is op een kaart getekend met schaal 1:10.000. Een recht stuk is op de kaart 4,5 cm lang.",
+    "questions": [
+      {
+        "question": "Hoe lang is het rechte stuk in werkelijkheid?",
+        "options": [
+          {
+            "text": "400 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen."
+          },
+          {
+            "text": "425 meter",
+            "foutanalyse": "Dit is niet helemaal juist. Bereken 4,5 × 10.000."
+          },
+          {
+            "text": "450 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "500 meter",
+            "foutanalyse": "Dit is te lang. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van kaart naar werkelijkheid met kommagetallen.",
+          "berekening": [
+            "Op kaart: 4,5 cm",
+            "Schaal: 1:10.000, dus vermenigvuldigen met 10.000",
+            "Werkelijkheid: 4,5 × 10.000 = 45.000 cm = 450 meter"
+          ]
+        }
+      },
+      {
+        "question": "Het hele circuit is in werkelijkheid 4,2 km lang. Hoe lang is het circuit op de kaart?",
+        "options": [
+          {
+            "text": "40 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 420.000 ÷ 10.000."
+          },
+          {
+            "text": "42 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "44 cm",
+            "foutanalyse": "Dit is te lang. Deel 4,2 km door 10.000."
+          },
+          {
+            "text": "46 cm",
+            "foutanalyse": "Je hebt verkeerd gedeeld."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar kaart: omrekenen en delen.",
+          "berekening": [
+            "Werkelijkheid: 4,2 km = 4.200 meter = 420.000 cm",
+            "Schaal: 1:10.000, dus delen door 10.000",
+            "Op kaart: 420.000 ÷ 10.000 = 42 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "kaarten en schaal"
+  },
+  {
+    "id": 371,
+    "title": "Winkelcentrum plattegrond",
+    "theme": "schaal",
+    "content": "Een winkelcentrum heeft een plattegrond met schaal 1:200. De supermarkt is op de plattegrond 10 cm lang.",
+    "questions": [
+      {
+        "question": "Hoe lang is de supermarkt in werkelijkheid?",
+        "options": [
+          {
+            "text": "18 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen."
+          },
+          {
+            "text": "20 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "22 meter",
+            "foutanalyse": "Dit is te lang. Bereken 10 × 200 en reken om naar meters."
+          },
+          {
+            "text": "25 meter",
+            "foutanalyse": "Je hebt verkeerd vermenigvuldigd."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van plattegrond naar werkelijkheid met schaal 1:200.",
+          "berekening": [
+            "Op plattegrond: 10 cm",
+            "Schaal: 1:200, dus vermenigvuldigen met 200",
+            "Werkelijkheid: 10 × 200 = 2.000 cm = 20 meter"
+          ]
+        }
+      },
+      {
+        "question": "De kledingwinkel is in werkelijkheid 14 meter breed. Hoe breed is deze winkel op de plattegrond?",
+        "options": [
+          {
+            "text": "6 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 1.400 door 200."
+          },
+          {
+            "text": "6,5 cm",
+            "foutanalyse": "Dit is niet helemaal juist. Controleer je berekening."
+          },
+          {
+            "text": "7 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "7,5 cm",
+            "foutanalyse": "Dit is te breed. Bereken 14 meter ÷ 200."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar plattegrond: omrekenen en delen.",
+          "berekening": [
+            "Werkelijkheid: 14 meter = 1.400 cm",
+            "Schaal: 1:200, dus delen door 200",
+            "Op plattegrond: 1.400 ÷ 200 = 7 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "plattegronden"
+  },
+  {
+    "id": 372,
+    "title": "Scheepsmodel",
+    "theme": "schaal",
+    "content": "Een model van een cruiseschip heeft schaal 1:400. Het model is 80 cm lang.",
+    "questions": [
+      {
+        "question": "Hoe lang is het echte cruiseschip?",
+        "options": [
+          {
+            "text": "300 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen."
+          },
+          {
+            "text": "320 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "340 meter",
+            "foutanalyse": "Dit is te lang. Bereken 80 × 400 en reken om naar meters."
+          },
+          {
+            "text": "360 meter",
+            "foutanalyse": "Je hebt verkeerd vermenigvuldigd."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van model naar werkelijkheid met grote schaal.",
+          "berekening": [
+            "Op model: 80 cm",
+            "Schaal: 1:400, dus vermenigvuldigen met 400",
+            "Werkelijkheid: 80 × 400 = 32.000 cm = 320 meter"
+          ]
+        }
+      },
+      {
+        "question": "Het echte schip is 36 meter hoog. Hoe hoog is het model?",
+        "options": [
+          {
+            "text": "7 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 3.600 door 400."
+          },
+          {
+            "text": "8 cm",
+            "foutanalyse": "Dit is niet helemaal juist. Controleer je berekening."
+          },
+          {
+            "text": "9 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "10 cm",
+            "foutanalyse": "Dit is te hoog. Bereken 36 meter ÷ 400."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar model: omrekenen en delen.",
+          "berekening": [
+            "Werkelijkheid: 36 meter = 3.600 cm",
+            "Schaal: 1:400, dus delen door 400",
+            "Op model: 3.600 ÷ 400 = 9 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "schaalmodellen"
+  },
+  {
+    "id": 373,
+    "title": "Schoolgebouw plattegrond",
+    "theme": "schaal",
+    "content": "Op een plattegrond van een school is de aula 18 cm breed. De schaal is 1:150.",
+    "questions": [
+      {
+        "question": "Hoe breed is de aula in werkelijkheid?",
+        "options": [
+          {
+            "text": "24 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen."
+          },
+          {
+            "text": "25,5 meter",
+            "foutanalyse": "Dit is niet helemaal juist. Bereken 18 × 150."
+          },
+          {
+            "text": "27 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "30 meter",
+            "foutanalyse": "Dit is te breed. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van plattegrond naar werkelijkheid met schaal 1:150.",
+          "berekening": [
+            "Op plattegrond: 18 cm",
+            "Schaal: 1:150, dus vermenigvuldigen met 150",
+            "Werkelijkheid: 18 × 150 = 2.700 cm = 27 meter"
+          ]
+        }
+      },
+      {
+        "question": "De kantine is in werkelijkheid 22,5 meter lang. Hoe lang is de kantine op de plattegrond?",
+        "options": [
+          {
+            "text": "14 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 2.250 door 150."
+          },
+          {
+            "text": "15 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "16 cm",
+            "foutanalyse": "Dit is te lang. Bereken 22,5 meter ÷ 150."
+          },
+          {
+            "text": "17 cm",
+            "foutanalyse": "Je hebt verkeerd gedeeld."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar plattegrond: omrekenen en delen.",
+          "berekening": [
+            "Werkelijkheid: 22,5 meter = 2.250 cm",
+            "Schaal: 1:150, dus delen door 150",
+            "Op plattegrond: 2.250 ÷ 150 = 15 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "plattegronden"
+  },
+  {
+    "id": 374,
+    "title": "Racebaanmodel",
+    "theme": "schaal",
+    "content": "Een speelgoed racebaan heeft schaal 1:32. Een rechte rail is 50 cm lang.",
+    "questions": [
+      {
+        "question": "Hoe lang zou deze rail in werkelijkheid zijn?",
+        "options": [
+          {
+            "text": "14 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen."
+          },
+          {
+            "text": "15 meter",
+            "foutanalyse": "Dit is niet helemaal juist. Bereken 50 × 32."
+          },
+          {
+            "text": "16 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "18 meter",
+            "foutanalyse": "Dit is te lang. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van speelgoed naar werkelijkheid met schaal 1:32.",
+          "berekening": [
+            "Op racebaan: 50 cm",
+            "Schaal: 1:32, dus vermenigvuldigen met 32",
+            "Werkelijkheid: 50 × 32 = 1.600 cm = 16 meter"
+          ]
+        }
+      },
+      {
+        "question": "Een echte auto is 448 cm lang. Hoe lang is het raceautootje?",
+        "options": [
+          {
+            "text": "12 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 448 door 32."
+          },
+          {
+            "text": "13 cm",
+            "foutanalyse": "Dit is niet helemaal juist. Controleer je berekening."
+          },
+          {
+            "text": "14 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "15 cm",
+            "foutanalyse": "Dit is te lang. Bereken 448 ÷ 32."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar speelgoed: delen door de schaalfactor.",
+          "berekening": [
+            "Werkelijkheid: 448 cm",
+            "Schaal: 1:32, dus delen door 32",
+            "Op racebaan: 448 ÷ 32 = 14 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "schaalmodellen"
+  },
+  {
+    "id": 375,
+    "title": "Havenkaart",
+    "theme": "schaal",
+    "content": "Een kaart van de haven van Rotterdam heeft schaal 1:15.000. De afstand tussen twee kades is op de kaart 6 cm.",
+    "questions": [
+      {
+        "question": "Hoe groot is de werkelijke afstand tussen de kades?",
+        "options": [
+          {
+            "text": "800 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen."
+          },
+          {
+            "text": "850 meter",
+            "foutanalyse": "Dit is niet helemaal juist. Bereken 6 × 15.000."
+          },
+          {
+            "text": "900 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "950 meter",
+            "foutanalyse": "Dit is te ver. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van kaart naar werkelijkheid met grote schaal.",
+          "berekening": [
+            "Op kaart: 6 cm",
+            "Schaal: 1:15.000, dus vermenigvuldigen met 15.000",
+            "Werkelijkheid: 6 × 15.000 = 90.000 cm = 900 meter"
+          ]
+        }
+      },
+      {
+        "question": "Een containerschip is 300 meter lang. Hoe lang is het schip op de kaart?",
+        "options": [
+          {
+            "text": "1,8 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 30.000 ÷ 15.000."
+          },
+          {
+            "text": "2 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2,2 cm",
+            "foutanalyse": "Dit is te lang. Deel 300 meter door 15.000."
+          },
+          {
+            "text": "2,5 cm",
+            "foutanalyse": "Je hebt verkeerd gedeeld."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar kaart: omrekenen en delen.",
+          "berekening": [
+            "Werkelijkheid: 300 meter = 30.000 cm",
+            "Schaal: 1:15.000, dus delen door 15.000",
+            "Op kaart: 30.000 ÷ 15.000 = 2 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "kaarten en schaal"
+  },
+  {
+    "id": 376,
+    "title": "Treinstation plattegrond",
+    "theme": "schaal",
+    "content": "Een plattegrond van Amsterdam Centraal Station heeft schaal 1:600. Het perron is op de plattegrond 70 cm lang.",
+    "questions": [
+      {
+        "question": "Hoe lang is het perron in werkelijkheid?",
+        "options": [
+          {
+            "text": "400 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen."
+          },
+          {
+            "text": "420 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "440 meter",
+            "foutanalyse": "Dit is te lang. Bereken 70 × 600 en reken om naar meters."
+          },
+          {
+            "text": "450 meter",
+            "foutanalyse": "Je hebt verkeerd vermenigvuldigd."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van plattegrond naar werkelijkheid met schaal 1:600.",
+          "berekening": [
+            "Op plattegrond: 70 cm",
+            "Schaal: 1:600, dus vermenigvuldigen met 600",
+            "Werkelijkheid: 70 × 600 = 42.000 cm = 420 meter"
+          ]
+        }
+      },
+      {
+        "question": "De stationshal is in werkelijkheid 90 meter breed. Hoe breed is de stationshal op de plattegrond?",
+        "options": [
+          {
+            "text": "14 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 9.000 door 600."
+          },
+          {
+            "text": "15 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "16 cm",
+            "foutanalyse": "Dit is te breed. Bereken 90 meter ÷ 600."
+          },
+          {
+            "text": "18 cm",
+            "foutanalyse": "Je hebt verkeerd gedeeld."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar plattegrond: omrekenen en delen.",
+          "berekening": [
+            "Werkelijkheid: 90 meter = 9.000 cm",
+            "Schaal: 1:600, dus delen door 600",
+            "Op plattegrond: 9.000 ÷ 600 = 15 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "plattegronden"
+  },
+  {
+    "id": 377,
+    "title": "Legoblokje meting",
+    "theme": "schaal",
+    "content": "Een Lego-gebouw voorstelt een echt kantoorgebouw op schaal 1:100. Een Lego-raam is 1,2 cm breed.",
+    "questions": [
+      {
+        "question": "Hoe breed is het echte raam?",
+        "options": [
+          {
+            "text": "1 meter",
+            "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen."
+          },
+          {
+            "text": "1,2 meter",
+            "foutanalyse": ""
+          },
+          {
+            "text": "1,4 meter",
+            "foutanalyse": "Dit is te breed. Bereken 1,2 × 100 en reken om naar meters."
+          },
+          {
+            "text": "1,5 meter",
+            "foutanalyse": "Je hebt verkeerd vermenigvuldigd."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van Lego naar werkelijkheid met schaal 1:100.",
+          "berekening": [
+            "Op Lego: 1,2 cm",
+            "Schaal: 1:100, dus vermenigvuldigen met 100",
+            "Werkelijkheid: 1,2 × 100 = 120 cm = 1,2 meter"
+          ]
+        }
+      },
+      {
+        "question": "De echte deur is 2,5 meter hoog. Hoe hoog is de Lego-deur?",
+        "options": [
+          {
+            "text": "2 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Deel 250 door 100."
+          },
+          {
+            "text": "2,3 cm",
+            "foutanalyse": "Dit is niet helemaal juist. Controleer je berekening."
+          },
+          {
+            "text": "2,5 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2,8 cm",
+            "foutanalyse": "Dit is te hoog. Bereken 2,5 meter ÷ 100."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar Lego: omrekenen en delen.",
+          "berekening": [
+            "Werkelijkheid: 2,5 meter = 250 cm",
+            "Schaal: 1:100, dus delen door 100",
+            "Op Lego: 250 ÷ 100 = 2,5 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "schaalmodellen"
+  },
+  {
+    "id": 378,
+    "title": "Wereldbol",
+    "theme": "schaal",
+    "content": "Een wereldbol heeft een diameter van 30 cm. De schaal van de wereldbol is 1:42.000.000.",
+    "questions": [
+      {
+        "question": "Wat is de diameter van de aarde in werkelijkheid volgens deze wereldbol?",
+        "options": [
+          {
+            "text": "12.000 km",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen."
+          },
+          {
+            "text": "12.600 km",
+            "foutanalyse": ""
+          },
+          {
+            "text": "13.000 km",
+            "foutanalyse": "Dit is te groot. Bereken 30 × 42.000.000 en reken om naar km."
+          },
+          {
+            "text": "13.500 km",
+            "foutanalyse": "Je hebt verkeerd vermenigvuldigd."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van wereldbol naar werkelijkheid met zeer grote schaal.",
+          "berekening": [
+            "Op wereldbol: 30 cm",
+            "Schaal: 1:42.000.000, dus vermenigvuldigen met 42.000.000",
+            "Werkelijkheid: 30 × 42.000.000 = 1.260.000.000 cm = 12.600 km"
+          ]
+        }
+      },
+      {
+        "question": "Als de afstand tussen Amsterdam en Parijs ongeveer 420 km is, hoe groot is deze afstand op de wereldbol?",
+        "options": [
+          {
+            "text": "0,8 cm",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 42.000.000 ÷ 42.000.000."
+          },
+          {
+            "text": "1 cm",
+            "foutanalyse": ""
+          },
+          {
+            "text": "1,2 cm",
+            "foutanalyse": "Dit is te groot. Deel 420 km door 42.000.000."
+          },
+          {
+            "text": "1,5 cm",
+            "foutanalyse": "Je hebt verkeerd gedeeld."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Van werkelijkheid naar wereldbol: omrekenen en delen.",
+          "berekening": [
+            "Werkelijkheid: 420 km = 420.000 meter = 42.000.000 cm",
+            "Schaal: 1:42.000.000, dus delen door 42.000.000",
+            "Op wereldbol: 42.000.000 ÷ 42.000.000 = 1 cm"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "kaarten en schaal"
   }
 ]
