@@ -397,6 +397,78 @@
             margin-bottom: 5px;
         }
 
+        /* Progress Tracker Styles */
+        .progress-tracker {
+            background-color: rgba(98, 0, 238, 0.05);
+            border: 2px solid var(--primary-light);
+            border-radius: var(--border-radius-card);
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .progress-tracker-title {
+            font-size: 1.3em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .category-progress-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .category-item {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: var(--border-radius-button);
+            padding: 15px;
+            box-shadow: var(--shadow-elevation-1);
+        }
+
+        .category-name {
+            font-size: 1.1em;
+            font-weight: 500;
+            color: var(--text-color-dark);
+            margin-bottom: 10px;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .category-stats {
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.85em;
+            color: var(--text-color-medium);
+            font-weight: 400;
+        }
+
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .stat-value.correct {
+            color: var(--color-correct);
+        }
+
+        .stat-value.incorrect {
+            color: var(--color-incorrect);
+        }
+
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             .header h1 {
@@ -432,6 +504,19 @@
             .quiz-controls {
                 flex-direction: column;
                 gap: 15px;
+            }
+
+            /* Progress tracker responsive */
+            .category-progress-container {
+                grid-template-columns: 1fr;
+            }
+
+            .progress-tracker {
+                padding: 15px;
+            }
+
+            .progress-tracker-title {
+                font-size: 1.1em;
             }
         }
     </style>
@@ -501,6 +586,12 @@
         </div>
 
         <div id="quizPage" class="quiz-container" style="display: none;">
+            <!-- Progress Tracker Section -->
+            <div id="progressTracker" class="progress-tracker">
+                <h3 class="progress-tracker-title">Voortgang per categorie</h3>
+                <div id="categoryProgress" class="category-progress-container"></div>
+            </div>
+
             <div class="quiz-header">
                 <h2 id="quizTitle">Quiz</h2>
                 <div class="quiz-progress">
@@ -568,6 +659,9 @@
         let selectedAnswer = null;
         let hasAnswered = false;
 
+        // Progress tracker by category
+        let categoryProgress = {};
+
         // Highscore management
         function getHighscoreKey(subject, theme) {
             return `highscore_${subject}_${theme || 'all'}`;
@@ -597,6 +691,70 @@
                 localStorage.setItem('userName', name);
             }
             return name;
+        }
+
+        // Initialize category progress tracker
+        function initializeCategoryProgress(questions) {
+            categoryProgress = {};
+
+            // Extract all unique categories from the questions
+            const categories = [...new Set(questions.map(q => q.theme).filter(theme => theme))];
+
+            // Initialize counters for each category
+            categories.forEach(category => {
+                categoryProgress[category] = {
+                    correct: 0,
+                    incorrect: 0
+                };
+            });
+
+            // Update the display
+            updateProgressTrackerDisplay();
+        }
+
+        // Update category progress after answering
+        function updateCategoryProgress(theme, isCorrect) {
+            if (!theme || !categoryProgress[theme]) return;
+
+            if (isCorrect) {
+                categoryProgress[theme].correct++;
+            } else {
+                categoryProgress[theme].incorrect++;
+            }
+
+            // Update the display
+            updateProgressTrackerDisplay();
+        }
+
+        // Display the progress tracker
+        function updateProgressTrackerDisplay() {
+            const container = document.getElementById('categoryProgress');
+            container.innerHTML = '';
+
+            // Sort categories alphabetically for consistent display
+            const sortedCategories = Object.keys(categoryProgress).sort();
+
+            sortedCategories.forEach(category => {
+                const stats = categoryProgress[category];
+                const categoryElement = document.createElement('div');
+                categoryElement.className = 'category-item';
+
+                categoryElement.innerHTML = `
+                    <div class="category-name">${category}</div>
+                    <div class="category-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Goed</span>
+                            <span class="stat-value correct">${stats.correct}</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Fout</span>
+                            <span class="stat-value incorrect">${stats.incorrect}</span>
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(categoryElement);
+            });
         }
 
         // Shuffle array function (Fisher-Yates algorithm)
@@ -785,16 +943,19 @@
             currentQuestionIndex = 0;
             score = 0;
             hasAnswered = false;
-            
+
             // Create randomized questions from the current quiz data
             randomizedQuestions = createRandomizedQuestions(currentQuiz);
             totalQuestions = randomizedQuestions.length;
+
+            // Initialize category progress tracker (reset to 0)
+            initializeCategoryProgress(randomizedQuestions);
 
             document.getElementById('landingPage').style.display = 'none';
             document.getElementById('themePage').style.display = 'none';
             document.getElementById('quizPage').style.display = 'block';
             document.getElementById('resultsPage').style.display = 'none';
-            
+
             // Set quiz title
             const titles = {
                 begrijpendlezen: 'Begrijpend Lezen',
@@ -806,7 +967,7 @@
                 basisvaardigheden: 'Basisvaardigheden'
             };
             document.getElementById('quizTitle').textContent = titles[subject] || 'Quiz';
-            
+
             loadCurrentQuestion();
         }
 
@@ -966,6 +1127,9 @@
                     correctAnswerDisplay.classList.add('hidden');
                     extraInfoDisplay.classList.add('hidden'); // NIEUW: extraInfo verbergen bij correct
                     strategyAndTips.classList.add('hidden');
+
+                    // Update category progress tracker
+                    updateCategoryProgress(currentQuestion.theme, true);
                 } else {
                     options[selectedAnswer].classList.add('incorrect');
                     // Highlight correct answer if an incorrect one was selected
@@ -974,6 +1138,9 @@
                     }
                     feedbackSection.classList.add('incorrect');
                     feedbackTitle.textContent = 'Niet correct!';
+
+                    // Update category progress tracker
+                    updateCategoryProgress(currentQuestion.theme, false);
 
                     // Show error analysis if available for the selected wrong answer
                     const selectedOption = currentQuestion.options[selectedAnswer];
@@ -1051,10 +1218,16 @@
                     correctAnswerDisplay.classList.add('hidden');
                     extraInfoDisplay.classList.add('hidden'); // NIEUW: extraInfo verbergen bij correct
                     strategyAndTips.classList.add('hidden');
+
+                    // Update category progress tracker
+                    updateCategoryProgress(currentQuestion.theme, true);
                 } else {
                     feedbackSection.classList.add('incorrect');
                     feedbackTitle.textContent = 'Niet correct!';
                     feedbackMessage.textContent = 'Helaas, dat is niet helemaal correct. Hier is een voorbeeld van een goed antwoord en wat tips:';
+
+                    // Update category progress tracker
+                    updateCategoryProgress(currentQuestion.theme, false);
                     
                     correctAnswerDisplay.textContent = `Voorbeeld antwoord: "${currentQuestion.possible_answer}"`;
                     correctAnswerDisplay.classList.remove('hidden');
