@@ -16073,5 +16073,687 @@
       }
     ],
     "sub_theme": "complexe breuken en procenten"
+  },
+  {
+    "id": 257,
+    "title": "Pizzafeest met de familie",
+    "theme": "breuken",
+    "content": "Voor een familiefeest zijn er 3 pizza's besteld. Elk gezinslid krijgt ⅛ van een pizza. Van wat overblijft, eet papa nog ⅔. Er blijft nog 0,5 pizza over.",
+    "questions": [
+      {
+        "question": "Hoeveel gezinsleden zijn er (exclusief papa)?",
+        "options": [
+          {
+            "text": "8 gezinsleden",
+            "foutanalyse": "Dit zou het aantal zijn als er maar 1 pizza was. Let op: er zijn 3 pizza's besteld."
+          },
+          {
+            "text": "12 gezinsleden",
+            "foutanalyse": ""
+          },
+          {
+            "text": "16 gezinsleden",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "24 gezinsleden",
+            "foutanalyse": "Dit is te veel. Bereken hoeveel er over was voordat papa at, en werk dan terug."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een terugwaartse berekening met breuken en decimalen: werk van het eindresultaat terug naar het begin.",
+          "berekening": [
+            "Na papa: 0,5 pizza = ½ pizza",
+            "Papa at ⅔ van het restant, dus ½ is ⅓ van het restant",
+            "Restant na gezinsleden: ½ ÷ ⅓ = ½ × 3 = 1,5 pizza",
+            "Gezinsleden hebben gegeten: 3 - 1,5 = 1,5 pizza",
+            "Aantal gezinsleden: 1,5 ÷ ⅛ = 1,5 × 8 = 12 gezinsleden"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel pizza at papa?",
+        "options": [
+          {
+            "text": "0,5 pizza",
+            "foutanalyse": "Dit is wat er na papa overblijft, niet wat papa at."
+          },
+          {
+            "text": "⅔ pizza",
+            "foutanalyse": "Papa at ⅔ van het restant, niet ⅔ pizza. Bereken eerst het restant."
+          },
+          {
+            "text": "1 pizza",
+            "foutanalyse": ""
+          },
+          {
+            "text": "1,5 pizza",
+            "foutanalyse": "Dit is het restant voordat papa at, niet hoeveel papa at."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een breuk van een hoeveelheid berekening.",
+          "berekening": [
+            "Restant voor papa: 1,5 pizza",
+            "Papa at: ⅔ van 1,5 = ⅔ × 1,5 = 1 pizza"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "complexe breuken en decimalen"
+  },
+  {
+    "id": 258,
+    "title": "Appelsap productie",
+    "theme": "breuken",
+    "content": "Een boer maakt appelsap. Hij gebruikt ⅗ van zijn appeloogst. Van het gebruikte deel gaat 80% naar de sapfabriek. De rest verkoopt hij vers op de markt. Hij heeft 1.200 kg appels geoogst.",
+    "questions": [
+      {
+        "question": "Hoeveel kilogram appels gaat er naar de sapfabriek?",
+        "options": [
+          {
+            "text": "480 kg",
+            "foutanalyse": "Je hebt alleen ⅗ van 1.200 berekend. Vergeet niet dat 80% van dit deel naar de sapfabriek gaat."
+          },
+          {
+            "text": "576 kg",
+            "foutanalyse": ""
+          },
+          {
+            "text": "720 kg",
+            "foutanalyse": "Dit is ⅗ van het totaal. Je moet hier nog 80% van berekenen."
+          },
+          {
+            "text": "960 kg",
+            "foutanalyse": "Dit is te veel. Controleer je berekening stap voor stap."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een percentage van een breuk berekening: bereken eerst de breuk, dan het percentage daarvan.",
+          "berekening": [
+            "Gebruikt voor appelsap: ⅗ van 1.200 = 1.200 × 3 ÷ 5 = 720 kg",
+            "Naar sapfabriek: 80% van 720 = 0,80 × 720 = 576 kg"
+          ]
+        }
+      },
+      {
+        "question": "Welk deel van de totale oogst wordt vers op de markt verkocht?",
+        "options": [
+          {
+            "text": "3/25 van de oogst",
+            "foutanalyse": ""
+          },
+          {
+            "text": "⅕ van de oogst",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! 20% van ⅗ is niet hetzelfde als ⅕."
+          },
+          {
+            "text": "⅗ van de oogst",
+            "foutanalyse": "Dit is het totaal dat gebruikt wordt, niet alleen wat vers verkocht wordt."
+          },
+          {
+            "text": "⅖ van de oogst",
+            "foutanalyse": "Dit is het deel dat niet gebruikt wordt voor sap. De vraag vraagt naar vers verkocht."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Dit is een percentage van een breuk als breuk van het totaal.",
+          "berekening": [
+            "Gebruikt: ⅗, waarvan 20% vers verkocht wordt",
+            "Vers verkocht: 20% van ⅗ = 0,20 × ⅗ = ⅕ × ⅗ = 3/25",
+            "Check: 3/25 van 1.200 = 144 kg (klopt met 20% van 720 kg)"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "percentage van breuk"
+  },
+  {
+    "id": 259,
+    "title": "Bibliotheekboeken uitlenen",
+    "theme": "breuken",
+    "content": "De bibliotheek heeft 3.600 boeken. In januari wordt ¼ van alle boeken uitgeleend. Van de uitgeleende boeken in januari komt 0,3 niet op tijd terug. Van de te late boeken wordt ⅔ binnen een week alsnog ingeleverd.",
+    "questions": [
+      {
+        "question": "Hoeveel boeken kwamen te laat terug in januari?",
+        "options": [
+          {
+            "text": "180 boeken",
+            "foutanalyse": "Je hebt ⅔ berekend in plaats van 0,3. Let op de decimaal."
+          },
+          {
+            "text": "270 boeken",
+            "foutanalyse": ""
+          },
+          {
+            "text": "630 boeken",
+            "foutanalyse": "Dit is het totaal niet op tijd teruggebracht, niet alleen de te late boeken."
+          },
+          {
+            "text": "900 boeken",
+            "foutanalyse": "Dit is het totaal aantal uitgeleende boeken, niet hoeveel te laat terugkwam."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een decimaal van een breuk berekening: combineer breuk en decimaal.",
+          "berekening": [
+            "Uitgeleend in januari: ¼ van 3.600 = 900 boeken",
+            "Niet op tijd terug: 0,3 van 900 = 0,3 × 900 = 270 boeken"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel boeken kwamen ook na een week nog steeds niet terug?",
+        "options": [
+          {
+            "text": "30 boeken",
+            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+          },
+          {
+            "text": "90 boeken",
+            "foutanalyse": ""
+          },
+          {
+            "text": "180 boeken",
+            "foutanalyse": "Dit is het aantal dat binnen een week werd ingeleverd. De vraag vraagt naar wat niet terugkwam."
+          },
+          {
+            "text": "270 boeken",
+            "foutanalyse": "Dit is het totaal aantal te late boeken. Maar ⅔ kwam binnen een week alsnog terug."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een breuk van een resultaat berekening: bereken het restant na aftrek.",
+          "berekening": [
+            "Te laat: 270 boeken",
+            "Binnen week ingeleverd: ⅔ van 270 = 180 boeken",
+            "Nog steeds niet terug: 270 - 180 = 90 boeken",
+            "Of: ⅓ van 270 = 90 boeken"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "decimalen en breuken"
+  },
+  {
+    "id": 260,
+    "title": "Chocoladerepen verkopen",
+    "theme": "procenten",
+    "content": "Een winkel heeft 500 chocoladerepen. Op maandag wordt 0,4 van de voorraad verkocht. Op dinsdag wordt 60% van het restant verkocht. Op woensdag wordt ½ van wat er dan nog over is verkocht.",
+    "questions": [
+      {
+        "question": "Hoeveel chocoladerepen zijn er na woensdag nog over?",
+        "options": [
+          {
+            "text": "50 repen",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "60 repen",
+            "foutanalyse": ""
+          },
+          {
+            "text": "100 repen",
+            "foutanalyse": "Dit is het restant na dinsdag, niet na woensdag."
+          },
+          {
+            "text": "120 repen",
+            "foutanalyse": "Dit is het restant na maandag, niet na woensdag."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een combinatie van decimalen, procenten en breuken: werk stap voor stap.",
+          "berekening": [
+            "Maandag verkocht: 0,4 × 500 = 200 repen, rest: 300 repen",
+            "Dinsdag verkocht: 60% van 300 = 180 repen, rest: 120 repen",
+            "Woensdag verkocht: ½ van 120 = 60 repen, rest: 60 repen"
+          ]
+        }
+      },
+      {
+        "question": "Welk percentage van de oorspronkelijke voorraad is er na woensdag nog over?",
+        "options": [
+          {
+            "text": "10%",
+            "foutanalyse": "Dit is niet het juiste antwoord. Bereken hoeveel er over is en deel dat door de oorspronkelijke voorraad."
+          },
+          {
+            "text": "12%",
+            "foutanalyse": ""
+          },
+          {
+            "text": "15%",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "20%",
+            "foutanalyse": "Dit is te veel. Bereken nogmaals hoeveel er overblijft na alle drie de dagen."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een eindresultaat als percentage van het begin.",
+          "berekening": [
+            "Over na woensdag: 60 repen",
+            "Als percentage: (60 ÷ 500) × 100% = 12%"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "combinatie decimalen procenten breuken"
+  },
+  {
+    "id": 261,
+    "title": "Sporttoernooi organiseren",
+    "theme": "breuken",
+    "content": "Voor een sporttoernooi zijn 480 leerlingen ingeschreven. Daarvan doet ⅝ mee aan voetbal. Van de voetballers is 35% meisje. Van de meisjes die voetballen, zit 80% in groep 7 of 8.",
+    "questions": [
+      {
+        "question": "Hoeveel meisjes doen er mee aan voetbal?",
+        "options": [
+          {
+            "text": "84 meisjes",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "105 meisjes",
+            "foutanalyse": ""
+          },
+          {
+            "text": "168 meisjes",
+            "foutanalyse": "Dit is niet het juiste antwoord. Bereken eerst hoeveel voetballers er zijn, dan het percentage meisjes."
+          },
+          {
+            "text": "300 meisjes",
+            "foutanalyse": "Dit is het totaal aantal voetballers, niet alleen de meisjes."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een percentage van een breuk berekening.",
+          "berekening": [
+            "Voetballers: ⅝ van 480 = 480 × 5 ÷ 8 = 300 leerlingen",
+            "Meisjes voetbal: 35% van 300 = 0,35 × 300 = 105 meisjes"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel meisjes die voetballen zitten er in groep 7 of 8?",
+        "options": [
+          {
+            "text": "67 meisjes",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "84 meisjes",
+            "foutanalyse": ""
+          },
+          {
+            "text": "105 meisjes",
+            "foutanalyse": "Dit is het totaal aantal meisjes dat voetbalt, maar niet allemaal zitten in groep 7 of 8."
+          },
+          {
+            "text": "240 meisjes",
+            "foutanalyse": "Dit is te veel. Bereken 80% van het aantal meisjes dat voetbalt."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een percentage van een percentage van een breuk: werk stap voor stap.",
+          "berekening": [
+            "Meisjes voetbal: 105",
+            "In groep 7 of 8: 80% van 105 = 0,80 × 105 = 84 meisjes"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "percentage van percentage van breuk"
+  },
+  {
+    "id": 262,
+    "title": "Fruitplantage oogst",
+    "theme": "breuken",
+    "content": "Een fruitboer heeft 2.000 kg fruit geoogst. Daarvan is 0,45 appels, ⅖ is peren en de rest zijn pruimen. Van de appels is 60% geschikt voor directe verkoop. Van de peren moet ⅓ naar de conservenfabriek.",
+    "questions": [
+      {
+        "question": "Hoeveel kilogram appels is geschikt voor directe verkoop?",
+        "options": [
+          {
+            "text": "360 kg",
+            "foutanalyse": "Dit is niet het juiste antwoord. Bereken eerst hoeveel appels er zijn, dan 60% daarvan."
+          },
+          {
+            "text": "450 kg",
+            "foutanalyse": "Dit is het totaal aantal appels, niet hoeveel geschikt is voor directe verkoop."
+          },
+          {
+            "text": "540 kg",
+            "foutanalyse": ""
+          },
+          {
+            "text": "900 kg",
+            "foutanalyse": "Dit is te veel. Controleer je berekening van 60%."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een percentage van een decimaal deel.",
+          "berekening": [
+            "Appels: 0,45 van 2.000 = 0,45 × 2.000 = 900 kg",
+            "Geschikt voor verkoop: 60% van 900 = 0,60 × 900 = 540 kg"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel kilogram fruit in totaal moet er naar de conservenfabriek (appels die niet direct verkocht worden + peren die naar de fabriek moeten)?",
+        "options": [
+          {
+            "text": "360 kg",
+            "foutanalyse": "Dit is alleen de appels die niet direct verkocht worden. Tel ook de peren erbij."
+          },
+          {
+            "text": "533 kg",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "627 kg",
+            "foutanalyse": ""
+          },
+          {
+            "text": "800 kg",
+            "foutanalyse": "Dit is te veel. Bereken beide delen apart en tel ze op."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een combinatie van verschillende bewerkingen met breuken en decimalen.",
+          "berekening": [
+            "Appels niet voor verkoop: 40% van 900 = 360 kg",
+            "Peren totaal: ⅖ van 2.000 = 800 kg",
+            "Peren naar fabriek: ⅓ van 800 = 267 kg (afgerond)",
+            "Totaal naar fabriek: 360 + 267 = 627 kg"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "combinatie decimalen breuken procenten"
+  },
+  {
+    "id": 263,
+    "title": "Online spelletjes spelen",
+    "theme": "procenten",
+    "content": "Tim heeft 180 levels in een spel. Hij heeft al ⅔ van alle levels gehaald. Van de gehaalde levels heeft hij 75% met 3 sterren voltooid. Van de levels met 3 sterren was 0,4 'extra moeilijk'.",
+    "questions": [
+      {
+        "question": "Hoeveel levels heeft Tim met 3 sterren voltooid?",
+        "options": [
+          {
+            "text": "36 levels",
+            "foutanalyse": "Dit is te weinig. Bereken eerst hoeveel levels Tim heeft gehaald, dan 75% daarvan."
+          },
+          {
+            "text": "90 levels",
+            "foutanalyse": ""
+          },
+          {
+            "text": "120 levels",
+            "foutanalyse": "Dit is het totaal aantal gehaalde levels, niet alleen die met 3 sterren."
+          },
+          {
+            "text": "135 levels",
+            "foutanalyse": "Dit is te veel. Controleer je berekening van 75%."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een percentage van een breuk.",
+          "berekening": [
+            "Gehaalde levels: ⅔ van 180 = 120 levels",
+            "Met 3 sterren: 75% van 120 = 0,75 × 120 = 90 levels"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel 'extra moeilijke' levels heeft Tim met 3 sterren voltooid?",
+        "options": [
+          {
+            "text": "27 levels",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "36 levels",
+            "foutanalyse": ""
+          },
+          {
+            "text": "48 levels",
+            "foutanalyse": "Dit is te veel. Bereken 0,4 van het aantal levels met 3 sterren."
+          },
+          {
+            "text": "72 levels",
+            "foutanalyse": "Dit is niet het juiste antwoord. Let op de decimaal 0,4."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een decimaal van een percentage van een breuk: werk stap voor stap.",
+          "berekening": [
+            "Met 3 sterren: 90 levels",
+            "Extra moeilijk: 0,4 van 90 = 0,4 × 90 = 36 levels"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "decimaal van percentage van breuk"
+  },
+  {
+    "id": 264,
+    "title": "Schoolkamp budget verdelen",
+    "theme": "breuken",
+    "content": "Voor het schoolkamp is er €1.800,00 budget. Hiervan gaat 0,35 naar accommodatie. Van het overgebleven geld gaat ⅖ naar activiteiten. Van het geld voor activiteiten wordt 55% besteed aan sportactiviteiten.",
+    "questions": [
+      {
+        "question": "Hoeveel euro wordt er aan activiteiten uitgegeven?",
+        "options": [
+          {
+            "text": "€420,00",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Bereken het restant na accommodatie, dan ⅖ daarvan."
+          },
+          {
+            "text": "€468,00",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€630,00",
+            "foutanalyse": "Dit is alleen de accommodatie. De vraag vraagt naar activiteiten."
+          },
+          {
+            "text": "€720,00",
+            "foutanalyse": "Dit is het restant na accommodatie, maar daar gaat alleen ⅖ naar activiteiten."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een breuk van een restant na decimaal aftrek.",
+          "berekening": [
+            "Accommodatie: 0,35 × €1.800,00 = €630,00",
+            "Restant: €1.800,00 - €630,00 = €1.170,00",
+            "Activiteiten: ⅖ van €1.170,00 = €1.170,00 × 2 ÷ 5 = €468,00"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel euro wordt er aan sportactiviteiten besteed?",
+        "options": [
+          {
+            "text": "€210,60",
+            "foutanalyse": "Dit is niet het juiste antwoord. Bereken 55% van het activiteitenbudget."
+          },
+          {
+            "text": "€257,40",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€346,50",
+            "foutanalyse": "Je hebt waarschijnlijk 55% van het verkeerde bedrag genomen. Check je tussenstappen."
+          },
+          {
+            "text": "€468,00",
+            "foutanalyse": "Dit is het totale activiteitenbudget, niet alleen sport. Bereken 55% hiervan."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een percentage van een breuk van een restant: complexe combinatie.",
+          "berekening": [
+            "Activiteitenbudget: €468,00",
+            "Sportactiviteiten: 55% van €468,00 = 0,55 × €468,00 = €257,40"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "percentage van breuk van decimaal"
+  },
+  {
+    "id": 265,
+    "title": "Kledingwinkel uitverkoop",
+    "theme": "procenten",
+    "content": "Een jas kostte oorspronkelijk €120,00. In de uitverkoop krijgt de jas eerst 30% korting. Daarna krijgen klanten met een kortingskaart nog eens ⅕ korting op de nieuwe prijs. Ten slotte is er een speciale actie: nog eens 10% korting op de eindprijs.",
+    "questions": [
+      {
+        "question": "Wat is de prijs na de eerste twee kortingen (30% en ⅕)?",
+        "options": [
+          {
+            "text": "€54,00",
+            "foutanalyse": "Je hebt waarschijnlijk alle kortingen opgeteld. Bereken ze stap voor stap."
+          },
+          {
+            "text": "€60,00",
+            "foutanalyse": "Dit is alleen na 30% korting. Vergeet de ⅕ korting niet."
+          },
+          {
+            "text": "€67,20",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€72,00",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer de tweede korting nogmaals."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een combinatie van percentage en breuk kortingen: pas ze achter elkaar toe.",
+          "berekening": [
+            "Na 30% korting: €120,00 - (0,30 × €120,00) = €84,00",
+            "⅕ korting op €84,00: €84,00 ÷ 5 = €16,80",
+            "Na beide kortingen: €84,00 - €16,80 = €67,20"
+          ]
+        }
+      },
+      {
+        "question": "Wat is de uiteindelijke prijs na alle drie de kortingen?",
+        "options": [
+          {
+            "text": "€48,60",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "€54,00",
+            "foutanalyse": "Je hebt waarschijnlijk alle kortingspercentages opgeteld. Bereken ze stap voor stap."
+          },
+          {
+            "text": "€60,48",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€67,20",
+            "foutanalyse": "Dit is de prijs na twee kortingen. Vergeet de laatste 10% korting niet."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een complexe combinatie van meerdere kortingen achter elkaar.",
+          "berekening": [
+            "Na eerste twee kortingen: €67,20",
+            "10% korting op €67,20: 0,10 × €67,20 = €6,72",
+            "Eindprijs: €67,20 - €6,72 = €60,48"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "complexe kortingen combineren"
+  },
+  {
+    "id": 266,
+    "title": "Dierentuin bezoekers",
+    "theme": "breuken",
+    "content": "De dierentuin heeft op een dag 3.200 bezoekers. Hiervan is 0,625 volwassene. Van de volwassenen heeft ⅖ een jaarkaart. Van de mensen met een jaarkaart is 45% lid van de vereniging 'Vrienden van de dierentuin'.",
+    "questions": [
+      {
+        "question": "Hoeveel volwassenen hebben een jaarkaart?",
+        "options": [
+          {
+            "text": "720 volwassenen",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+          },
+          {
+            "text": "800 volwassenen",
+            "foutanalyse": ""
+          },
+          {
+            "text": "1.280 volwassenen",
+            "foutanalyse": "Dit is het aantal kinderen, niet de volwassenen met jaarkaart."
+          },
+          {
+            "text": "2.000 volwassenen",
+            "foutanalyse": "Dit is het totaal aantal volwassenen. Bereken hoeveel hiervan een jaarkaart heeft."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een breuk van een decimaal deel.",
+          "berekening": [
+            "Volwassenen: 0,625 van 3.200 = 0,625 × 3.200 = 2.000",
+            "Met jaarkaart: ⅖ van 2.000 = 2.000 × 2 ÷ 5 = 800 volwassenen"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel volwassenen met een jaarkaart zijn lid van 'Vrienden van de dierentuin'?",
+        "options": [
+          {
+            "text": "288 leden",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je berekening van 45%."
+          },
+          {
+            "text": "360 leden",
+            "foutanalyse": ""
+          },
+          {
+            "text": "800 leden",
+            "foutanalyse": "Dit is het aantal volwassenen met jaarkaart, niet alleen de leden."
+          },
+          {
+            "text": "900 leden",
+            "foutanalyse": "Dit is te veel. Bereken 45% van het aantal met jaarkaart."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dit is een percentage van een breuk van een decimaal: complexe combinatie.",
+          "berekening": [
+            "Met jaarkaart: 800 volwassenen",
+            "Lid vereniging: 45% van 800 = 0,45 × 800 = 360 leden"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "percentage van breuk van decimaal"
   }
 ]
