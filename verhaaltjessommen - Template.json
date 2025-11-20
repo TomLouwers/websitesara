@@ -16800,6 +16800,1031 @@
     "sub_theme": "samengestelde interest"
   },
   {
+    "id": 289,
+    "title": "Winkelkorting",
+    "theme": "procenten-rente",
+    "content": "Een winkel heeft een uitverkoop. Een laptop kost normaal €650,-. Nu krijg je 15% korting.",
+    "questions": [
+      {
+        "question": "Hoeveel euro korting krijg je op de laptop?",
+        "options": [
+          {
+            "text": "€87,50",
+            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je berekening nog eens."
+          },
+          {
+            "text": "€97,50",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€107,50",
+            "foutanalyse": "Je hebt een verkeerde berekening gemaakt. Bereken 15% van €650,-."
+          },
+          {
+            "text": "€650,-",
+            "foutanalyse": "Dit is de originele prijs, niet de korting."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Percentages berekenen: een percentage van een bedrag uitrekenen.",
+          "berekening": [
+            "15% van €650,- = 0,15 × €650,- = €97,50"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel betaal je voor de laptop na de korting?",
+        "options": [
+          {
+            "text": "€535,50",
+            "foutanalyse": "Je hebt een fout gemaakt in de berekening. Controleer je tussenstappen."
+          },
+          {
+            "text": "€542,50",
+            "foutanalyse": "Je hebt een fout gemaakt in de berekening. Controleer je tussenstappen."
+          },
+          {
+            "text": "€552,50",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€562,50",
+            "foutanalyse": "Je hebt een fout gemaakt in de berekening. Controleer je tussenstappen."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Eindprijs berekenen na korting.",
+          "berekening": [
+            "Korting: €97,50",
+            "Nieuwe prijs: €650,- - €97,50 = €552,50",
+            "Of: €650,- × 0,85 = €552,50"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "korting berekenen"
+  },
+  {
+    "id": 290,
+    "title": "BTW berekening",
+    "theme": "procenten-rente",
+    "content": "Een bedrijf verkoopt producten. De prijs exclusief BTW is €120,-. Ze moeten 21% BTW berekenen.",
+    "questions": [
+      {
+        "question": "Hoeveel BTW moet er betaald worden?",
+        "options": [
+          {
+            "text": "€21,-",
+            "foutanalyse": "Dit is het percentage, niet het bedrag. Bereken 21% van €120,-."
+          },
+          {
+            "text": "€24,-",
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening van 21% van €120,-."
+          },
+          {
+            "text": "€25,20",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€30,-",
+            "foutanalyse": "Dit is te veel. Bereken 21% van €120,- nauwkeurig."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "BTW (belasting) berekenen over een bedrag.",
+          "berekening": [
+            "21% van €120,- = 0,21 × €120,- = €25,20"
+          ]
+        }
+      },
+      {
+        "question": "Wat is de prijs inclusief BTW?",
+        "options": [
+          {
+            "text": "€141,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening."
+          },
+          {
+            "text": "€144,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Tel de BTW op bij de prijs."
+          },
+          {
+            "text": "€145,20",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€150,-",
+            "foutanalyse": "Dit is te veel. Tel €120,- en €25,20 bij elkaar op."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Prijs inclusief BTW berekenen.",
+          "berekening": [
+            "BTW: €25,20",
+            "Totaalprijs: €120,- + €25,20 = €145,20",
+            "Of: €120,- × 1,21 = €145,20"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "BTW berekeningen"
+  },
+  {
+    "id": 291,
+    "title": "Prijsverhoging benzine",
+    "theme": "procenten-rente",
+    "content": "De benzineprijs was vorige maand €1,80 per liter. Deze maand is de prijs met 8% gestegen.",
+    "questions": [
+      {
+        "question": "Hoeveel is de benzineprijs gestegen (in euro's)?",
+        "options": [
+          {
+            "text": "€0,08",
+            "foutanalyse": "Dit is het percentage als getal, niet de prijsstijging. Bereken 8% van €1,80."
+          },
+          {
+            "text": "€0,12",
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening van 8% van €1,80."
+          },
+          {
+            "text": "€0,144",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€0,18",
+            "foutanalyse": "Dit is te veel. Bereken 8% van €1,80 nauwkeurig."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Prijsstijging berekenen met percentages.",
+          "berekening": [
+            "8% van €1,80 = 0,08 × €1,80 = €0,144"
+          ]
+        }
+      },
+      {
+        "question": "Wat is de nieuwe benzineprijs per liter?",
+        "options": [
+          {
+            "text": "€1,88",
+            "foutanalyse": "Je hebt een fout gemaakt bij het optellen. Controleer je berekening."
+          },
+          {
+            "text": "€1,92",
+            "foutanalyse": "Dit is te veel. Tel €1,80 en €0,144 bij elkaar op."
+          },
+          {
+            "text": "€1,944",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€1,98",
+            "foutanalyse": "Dit is te hoog. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Nieuwe prijs berekenen na een stijging.",
+          "berekening": [
+            "Stijging: €0,144",
+            "Nieuwe prijs: €1,80 + €0,144 = €1,944",
+            "Of: €1,80 × 1,08 = €1,944"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "prijsverhoging"
+  },
+  {
+    "id": 292,
+    "title": "Spaarrekening",
+    "theme": "procenten-rente",
+    "content": "Tim zet €1.500,- op zijn spaarrekening. De bank geeft 2,5% rente per jaar.",
+    "questions": [
+      {
+        "question": "Hoeveel rente krijgt Tim na 1 jaar?",
+        "options": [
+          {
+            "text": "€25,-",
+            "foutanalyse": "Dit zou kloppen bij 2,5% maar je moet 2,5 delen door 100 voor het percentage."
+          },
+          {
+            "text": "€32,50",
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening van 2,5%."
+          },
+          {
+            "text": "€37,50",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€40,-",
+            "foutanalyse": "Dit is te veel. Bereken 2,5% van €1.500,-."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Rente berekenen over een spaarbedrag.",
+          "berekening": [
+            "2,5% van €1.500,- = 0,025 × €1.500,- = €37,50"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel geld heeft Tim in totaal na 1 jaar?",
+        "options": [
+          {
+            "text": "€1.525,-",
+            "foutanalyse": "Dit is te weinig. Tel de rente erbij op."
+          },
+          {
+            "text": "€1.532,50",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening."
+          },
+          {
+            "text": "€1.537,50",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€1.540,-",
+            "foutanalyse": "Dit is te veel. Tel €1.500,- en €37,50 bij elkaar op."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Totaalbedrag berekenen na rente.",
+          "berekening": [
+            "Rente: €37,50",
+            "Totaal: €1.500,- + €37,50 = €1.537,50",
+            "Of: €1.500,- × 1,025 = €1.537,50"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "sparen en rente"
+  },
+  {
+    "id": 293,
+    "title": "Uitverkoop kledingtstore",
+    "theme": "procenten-rente",
+    "content": "Een kledingzaak heeft een grote uitverkoop. Alle jassen hebben 35% korting. Een jas kostte oorspronkelijk €180,-.",
+    "questions": [
+      {
+        "question": "Hoeveel betaal je voor de jas tijdens de uitverkoop?",
+        "options": [
+          {
+            "text": "€63,-",
+            "foutanalyse": "Dit is de korting, niet de nieuwe prijs. Trek de korting af van €180,-."
+          },
+          {
+            "text": "€117,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€127,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken eerst de korting."
+          },
+          {
+            "text": "€145,-",
+            "foutanalyse": "Dit is niet juist. Bereken 35% korting op €180,-."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Nieuwe prijs berekenen na een percentage korting.",
+          "berekening": [
+            "Korting: 35% van €180,- = 0,35 × €180,- = €63,-",
+            "Nieuwe prijs: €180,- - €63,- = €117,-",
+            "Of: €180,- × 0,65 = €117,-"
+          ]
+        }
+      },
+      {
+        "question": "Als je 3 van deze jassen koopt, hoeveel bespaar je in totaal?",
+        "options": [
+          {
+            "text": "€63,-",
+            "foutanalyse": "Dit is de besparing op 1 jas. Je moet dit vermenigvuldigen met 3."
+          },
+          {
+            "text": "€180,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening."
+          },
+          {
+            "text": "€189,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€351,-",
+            "foutanalyse": "Dit is te veel. Bereken de besparing per jas en vermenigvuldig met 3."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Totale besparing berekenen bij meerdere artikelen.",
+          "berekening": [
+            "Besparing per jas: €63,-",
+            "Totale besparing: 3 × €63,- = €189,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "korting en besparen"
+  },
+  {
+    "id": 294,
+    "title": "Prijs van een fiets",
+    "theme": "procenten-rente",
+    "content": "Een fietsenwinkel verhoogt alle prijzen met 12%. Een mountainbike kostte eerst €450,-.",
+    "questions": [
+      {
+        "question": "Hoeveel euro wordt de mountainbike duurder?",
+        "options": [
+          {
+            "text": "€12,-",
+            "foutanalyse": "Dit is het percentage als getal, niet de prijsstijging. Bereken 12% van €450,-."
+          },
+          {
+            "text": "€48,-",
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening van 12% van €450,-."
+          },
+          {
+            "text": "€54,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€60,-",
+            "foutanalyse": "Dit is te veel. Bereken 12% van €450,- nauwkeurig."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Prijsstijging berekenen.",
+          "berekening": [
+            "12% van €450,- = 0,12 × €450,- = €54,-"
+          ]
+        }
+      },
+      {
+        "question": "Wat is de nieuwe prijs van de mountainbike?",
+        "options": [
+          {
+            "text": "€462,-",
+            "foutanalyse": "Dit is te weinig. Tel de prijsstijging op bij €450,-."
+          },
+          {
+            "text": "€498,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening."
+          },
+          {
+            "text": "€504,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€510,-",
+            "foutanalyse": "Dit is te veel. Tel €450,- en €54,- bij elkaar op."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Nieuwe prijs berekenen na verhoging.",
+          "berekening": [
+            "Prijsstijging: €54,-",
+            "Nieuwe prijs: €450,- + €54,- = €504,-",
+            "Of: €450,- × 1,12 = €504,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "prijsverhoging"
+  },
+  {
+    "id": 295,
+    "title": "Klantenkaart korting",
+    "theme": "procenten-rente",
+    "content": "In een boekwinkel krijg je met een klantenkaart 18% korting. Je koopt boeken voor in totaal €75,-.",
+    "questions": [
+      {
+        "question": "Hoeveel korting krijg je met de klantenkaart?",
+        "options": [
+          {
+            "text": "€12,50",
+            "foutanalyse": "Je hebt een fout gemaakt in de berekening. Bereken 18% van €75,-."
+          },
+          {
+            "text": "€13,50",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€14,50",
+            "foutanalyse": "Dit is te veel. Controleer je berekening van 18% van €75,-."
+          },
+          {
+            "text": "€18,-",
+            "foutanalyse": "Dit is het percentage als getal, niet de korting."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Korting berekenen met een percentage.",
+          "berekening": [
+            "18% van €75,- = 0,18 × €75,- = €13,50"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel betaal je uiteindelijk voor de boeken?",
+        "options": [
+          {
+            "text": "€57,-",
+            "foutanalyse": "Dit is te weinig. Controleer je berekening."
+          },
+          {
+            "text": "€60,50",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Trek de korting af."
+          },
+          {
+            "text": "€61,50",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€63,50",
+            "foutanalyse": "Dit is te veel. Trek €13,50 af van €75,-."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Eindprijs berekenen na korting.",
+          "berekening": [
+            "Korting: €13,50",
+            "Eindprijs: €75,- - €13,50 = €61,50",
+            "Of: €75,- × 0,82 = €61,50"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "korting berekenen"
+  },
+  {
+    "id": 296,
+    "title": "Investering met groei",
+    "theme": "procenten-rente",
+    "content": "Een bedrijf investeert €5.000,- in een project. Ze verwachten dat dit bedrag elk jaar met 6% groeit.",
+    "questions": [
+      {
+        "question": "Hoeveel is de investering waard na 1 jaar?",
+        "options": [
+          {
+            "text": "€5.060,-",
+            "foutanalyse": "Dit is te weinig. Bereken 6% van €5.000,-."
+          },
+          {
+            "text": "€5.300,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€5.360,-",
+            "foutanalyse": "Dit is te veel. Controleer je berekening."
+          },
+          {
+            "text": "€5.600,-",
+            "foutanalyse": "Dit is veel te veel. Bereken 6% van €5.000,-."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Waarde berekenen na groei met een percentage.",
+          "berekening": [
+            "Groei: 6% van €5.000,- = 0,06 × €5.000,- = €300,-",
+            "Nieuwe waarde: €5.000,- + €300,- = €5.300,-",
+            "Of: €5.000,- × 1,06 = €5.300,-"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel is de investering waard na 2 jaar?",
+        "options": [
+          {
+            "text": "€5.600,-",
+            "foutanalyse": "Dit zou kloppen bij 2 × 6% = 12% groei, maar bij samengestelde groei is het meer."
+          },
+          {
+            "text": "€5.612,-",
+            "foutanalyse": "Je zit dichtbij! Denk aan samengestelde groei."
+          },
+          {
+            "text": "€5.618,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€5.636,-",
+            "foutanalyse": "Dit is te veel. Bereken de groei over 2 jaar."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Samengestelde groei over meerdere jaren.",
+          "berekening": [
+            "Na jaar 1: €5.300,-",
+            "Groei jaar 2: 6% van €5.300,- = 0,06 × €5.300,- = €318,-",
+            "Na jaar 2: €5.300,- + €318,- = €5.618,-",
+            "Of: €5.000,- × 1,06² = €5.000,- × 1,1236 = €5.618,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "samengestelde groei"
+  },
+  {
+    "id": 297,
+    "title": "Terugrekenen vanaf eindprijs",
+    "theme": "procenten-rente",
+    "content": "Na 20% korting betaal je €96,- voor een paar schoenen.",
+    "questions": [
+      {
+        "question": "Hoeveel kostten de schoenen oorspronkelijk?",
+        "options": [
+          {
+            "text": "€115,20",
+            "foutanalyse": "Je hebt 20% bij €96,- opgeteld, maar dat is niet correct. €96,- is 80% van de originele prijs."
+          },
+          {
+            "text": "€116,-",
+            "foutanalyse": "Je zit dichtbij! €96,- is 80% van de originele prijs."
+          },
+          {
+            "text": "€120,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€125,-",
+            "foutanalyse": "Dit is te veel. Bedenk dat €96,- gelijk is aan 80% van de originele prijs."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Terugrekenen: van eindprijs naar oorspronkelijke prijs.",
+          "berekening": [
+            "Na 20% korting betaal je 80% van de originele prijs",
+            "€96,- = 80% van de originele prijs",
+            "Originele prijs = €96,- ÷ 0,80 = €120,-",
+            "Check: 20% van €120,- = €24,-, dus €120,- - €24,- = €96,-"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel korting heb je gekregen in euro's?",
+        "options": [
+          {
+            "text": "€19,20",
+            "foutanalyse": "Dit is 20% van €96,-, maar de korting wordt berekend op de oorspronkelijke prijs."
+          },
+          {
+            "text": "€20,-",
+            "foutanalyse": "Dit lijkt logisch, maar bereken 20% van de oorspronkelijke prijs."
+          },
+          {
+            "text": "€24,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€25,-",
+            "foutanalyse": "Dit is te veel. Bereken 20% van €120,-."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Korting berekenen vanaf oorspronkelijke prijs.",
+          "berekening": [
+            "Oorspronkelijke prijs: €120,-",
+            "Korting: 20% van €120,- = 0,20 × €120,- = €24,-",
+            "Of: €120,- - €96,- = €24,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "terugrekenen percentage"
+  },
+  {
+    "id": 298,
+    "title": "Dubbele korting",
+    "theme": "procenten-rente",
+    "content": "Een meubelzaak geeft eerst 10% korting op alle meubels. Daarna krijgen studenten nog eens 15% extra korting op de nieuwe prijs. Een bureau kost oorspronkelijk €200,-.",
+    "questions": [
+      {
+        "question": "Hoeveel kost het bureau na de eerste korting van 10%?",
+        "options": [
+          {
+            "text": "€170,-",
+            "foutanalyse": "Dit zou kloppen als de korting 15% was, maar de eerste korting is 10%."
+          },
+          {
+            "text": "€180,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€190,-",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 10% van €200,-."
+          },
+          {
+            "text": "€200,-",
+            "foutanalyse": "Dit is de originele prijs. Trek de korting eraf."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Eerste korting berekenen.",
+          "berekening": [
+            "10% van €200,- = 0,10 × €200,- = €20,-",
+            "Prijs na eerste korting: €200,- - €20,- = €180,-",
+            "Of: €200,- × 0,90 = €180,-"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel betaalt een student uiteindelijk voor het bureau?",
+        "options": [
+          {
+            "text": "€150,-",
+            "foutanalyse": "Dit zou kloppen als je 10% + 15% = 25% korting had, maar de kortingen worden achter elkaar toegepast."
+          },
+          {
+            "text": "€153,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€157,-",
+            "foutanalyse": "Je zit dichtbij! Bereken 15% korting op €180,-."
+          },
+          {
+            "text": "€160,-",
+            "foutanalyse": "Dit is niet juist. Pas 15% korting toe op €180,-."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Dubbele korting: kortingen achter elkaar toepassen.",
+          "berekening": [
+            "Na eerste korting: €180,-",
+            "Tweede korting: 15% van €180,- = 0,15 × €180,- = €27,-",
+            "Eindprijs: €180,- - €27,- = €153,-",
+            "Of: €200,- × 0,90 × 0,85 = €200,- × 0,765 = €153,-",
+            "Let op: Dit is NIET 25% korting! (25% zou €150,- zijn)"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "meerdere kortingen"
+  },
+  {
+    "id": 299,
+    "title": "Bevolkingsgroei",
+    "theme": "procenten-rente",
+    "content": "Een dorp heeft 2.400 inwoners. Het aantal inwoners groeit elk jaar met 5%.",
+    "questions": [
+      {
+        "question": "Hoeveel inwoners heeft het dorp na 1 jaar?",
+        "options": [
+          {
+            "text": "2.405 inwoners",
+            "foutanalyse": "Je hebt 5 inwoners erbij geteld, maar het moet 5% zijn."
+          },
+          {
+            "text": "2.420 inwoners",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken 5% van 2.400."
+          },
+          {
+            "text": "2.520 inwoners",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2.640 inwoners",
+            "foutanalyse": "Dit is te veel. Controleer je berekening van 5%."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Bevolkingsgroei met een percentage berekenen.",
+          "berekening": [
+            "Groei: 5% van 2.400 = 0,05 × 2.400 = 120 inwoners",
+            "Na 1 jaar: 2.400 + 120 = 2.520 inwoners",
+            "Of: 2.400 × 1,05 = 2.520 inwoners"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel inwoners heeft het dorp na 2 jaar?",
+        "options": [
+          {
+            "text": "2.520 inwoners",
+            "foutanalyse": "Dit is het aantal na 1 jaar. Bereken ook de groei in jaar 2."
+          },
+          {
+            "text": "2.640 inwoners",
+            "foutanalyse": "Dit zou kloppen bij 2 × 5% = 10%, maar bij samengestelde groei is het iets meer."
+          },
+          {
+            "text": "2.646 inwoners",
+            "foutanalyse": ""
+          },
+          {
+            "text": "2.760 inwoners",
+            "foutanalyse": "Dit is te veel. Bereken de samengestelde groei."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Samengestelde groei over 2 jaar.",
+          "berekening": [
+            "Na jaar 1: 2.520 inwoners",
+            "Groei jaar 2: 5% van 2.520 = 0,05 × 2.520 = 126 inwoners",
+            "Na jaar 2: 2.520 + 126 = 2.646 inwoners",
+            "Of: 2.400 × 1,05² = 2.400 × 1,1025 = 2.646 inwoners"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "samengestelde groei"
+  },
+  {
+    "id": 300,
+    "title": "Percentage van percentage",
+    "theme": "procenten-rente",
+    "content": "Van de 600 leerlingen op een school fietst 60% naar school. Van de fietsers komt 25% uit de stad.",
+    "questions": [
+      {
+        "question": "Hoeveel leerlingen fietsen naar school?",
+        "options": [
+          {
+            "text": "240 leerlingen",
+            "foutanalyse": "Dit is 40% van 600. De vraag is hoeveel er fietsen (60%)."
+          },
+          {
+            "text": "300 leerlingen",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 60% van 600."
+          },
+          {
+            "text": "360 leerlingen",
+            "foutanalyse": ""
+          },
+          {
+            "text": "420 leerlingen",
+            "foutanalyse": "Dit is te veel. Bereken 60% van 600."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Percentage van een geheel berekenen.",
+          "berekening": [
+            "60% van 600 = 0,60 × 600 = 360 leerlingen"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel fietsende leerlingen komen uit de stad?",
+        "options": [
+          {
+            "text": "60 leerlingen",
+            "foutanalyse": "Dit is te weinig. Bereken 25% van het aantal fietsers."
+          },
+          {
+            "text": "75 leerlingen",
+            "foutanalyse": "Je hebt 25% van alle leerlingen berekend, maar het moet van de fietsers."
+          },
+          {
+            "text": "90 leerlingen",
+            "foutanalyse": ""
+          },
+          {
+            "text": "150 leerlingen",
+            "foutanalyse": "Dit is te veel. Bereken 25% van 360."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Percentage van een percentage: eerst het eerste percentage berekenen, dan het tweede.",
+          "berekening": [
+            "Aantal fietsers: 360 leerlingen",
+            "Uit de stad: 25% van 360 = 0,25 × 360 = 90 leerlingen",
+            "Of: 600 × 0,60 × 0,25 = 600 × 0,15 = 90 leerlingen"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "percentage van percentage"
+  },
+  {
+    "id": 301,
+    "title": "Salarisverhoging",
+    "theme": "procenten-rente",
+    "content": "Mevrouw Jansen verdient €2.800,- per maand. Ze krijgt een salarisverhoging van 4,5%.",
+    "questions": [
+      {
+        "question": "Hoeveel euro komt er bij haar salaris bij?",
+        "options": [
+          {
+            "text": "€112,-",
+            "foutanalyse": "Dit is 4% van €2.800,-. De verhoging is 4,5%."
+          },
+          {
+            "text": "€120,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken 4,5% van €2.800,-."
+          },
+          {
+            "text": "€126,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€140,-",
+            "foutanalyse": "Dit is 5% van €2.800,-. De verhoging is 4,5%."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Verhoging berekenen met een kommagetal percentage.",
+          "berekening": [
+            "4,5% van €2.800,- = 0,045 × €2.800,- = €126,-"
+          ]
+        }
+      },
+      {
+        "question": "Wat is het nieuwe salaris van mevrouw Jansen?",
+        "options": [
+          {
+            "text": "€2.912,-",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Tel de verhoging op bij het oude salaris."
+          },
+          {
+            "text": "€2.920,-",
+            "foutanalyse": "Dit is niet juist. Tel €2.800,- en €126,- bij elkaar op."
+          },
+          {
+            "text": "€2.926,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€2.940,-",
+            "foutanalyse": "Dit is te veel. Controleer je berekening."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Nieuw bedrag berekenen na verhoging.",
+          "berekening": [
+            "Verhoging: €126,-",
+            "Nieuw salaris: €2.800,- + €126,- = €2.926,-",
+            "Of: €2.800,- × 1,045 = €2.926,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "salarisverhoging"
+  },
+  {
+    "id": 302,
+    "title": "BTW inclusief en exclusief",
+    "theme": "procenten-rente",
+    "content": "Een elektronica winkel verkoopt een laptop voor €726,- inclusief 21% BTW.",
+    "questions": [
+      {
+        "question": "Wat is de prijs exclusief BTW?",
+        "options": [
+          {
+            "text": "€573,54",
+            "foutanalyse": "Je hebt 21% van €726,- afgetrokken, maar dat is niet juist. €726,- is 121% van de prijs exclusief BTW."
+          },
+          {
+            "text": "€600,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€605,-",
+            "foutanalyse": "Je zit dichtbij! €726,- is 121% van de prijs exclusief BTW."
+          },
+          {
+            "text": "€615,-",
+            "foutanalyse": "Dit is niet juist. Deel €726,- door 1,21."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Terugrekenen van prijs inclusief BTW naar exclusief BTW.",
+          "berekening": [
+            "Prijs inclusief BTW = 121% van prijs exclusief BTW",
+            "€726,- = 121% van de prijs exclusief BTW",
+            "Prijs exclusief BTW = €726,- ÷ 1,21 = €600,-",
+            "Check: €600,- × 1,21 = €726,-"
+          ]
+        }
+      },
+      {
+        "question": "Hoeveel BTW zit er in de prijs?",
+        "options": [
+          {
+            "text": "€121,-",
+            "foutanalyse": "Dit lijkt logisch omdat 21% erin zit, maar bereken het correct."
+          },
+          {
+            "text": "€126,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€131,-",
+            "foutanalyse": "Dit is te veel. Bereken 21% van €600,-."
+          },
+          {
+            "text": "€152,46",
+            "foutanalyse": "Je hebt 21% van €726,- berekend, maar BTW wordt berekend over de prijs exclusief BTW."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "BTW bedrag berekenen.",
+          "berekening": [
+            "Prijs exclusief BTW: €600,-",
+            "BTW: 21% van €600,- = 0,21 × €600,- = €126,-",
+            "Of: €726,- - €600,- = €126,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "BTW berekeningen"
+  },
+  {
+    "id": 303,
+    "title": "Rentepercentage berekenen",
+    "theme": "procenten-rente",
+    "content": "Lisa heeft €4.000,- op een spaarrekening staan. Na 1 jaar heeft ze €4.180,- op haar rekening.",
+    "questions": [
+      {
+        "question": "Hoeveel rente heeft Lisa ontvangen?",
+        "options": [
+          {
+            "text": "€80,-",
+            "foutanalyse": "Je hebt een fout gemaakt. Bereken het verschil tussen €4.180,- en €4.000,-."
+          },
+          {
+            "text": "€180,-",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€280,-",
+            "foutanalyse": "Dit is te veel. Trek €4.000,- af van €4.180,-."
+          },
+          {
+            "text": "€380,-",
+            "foutanalyse": "Dit is veel te veel. Controleer je berekening."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Rente berekenen door het verschil te nemen.",
+          "berekening": [
+            "Rente = Eindbedrag - Startbedrag",
+            "Rente = €4.180,- - €4.000,- = €180,-"
+          ]
+        }
+      },
+      {
+        "question": "Wat was het rentepercentage?",
+        "options": [
+          {
+            "text": "4%",
+            "foutanalyse": "Je zit dichtbij! Bereken (€180,- ÷ €4.000,-) × 100%."
+          },
+          {
+            "text": "4,2%",
+            "foutanalyse": "Je hebt €180,- gedeeld door €4.180,-, maar het moet gedeeld door €4.000,-."
+          },
+          {
+            "text": "4,5%",
+            "foutanalyse": ""
+          },
+          {
+            "text": "5%",
+            "foutanalyse": "Dit is te hoog. Bereken (€180,- ÷ €4.000,-) × 100%."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Rentepercentage berekenen vanuit rente en startbedrag.",
+          "berekening": [
+            "Rente: €180,-",
+            "Startbedrag: €4.000,-",
+            "Percentage = (Rente ÷ Startbedrag) × 100%",
+            "Percentage = (€180,- ÷ €4.000,-) × 100% = 0,045 × 100% = 4,5%",
+            "Check: 4,5% van €4.000,- = 0,045 × €4.000,- = €180,-"
+          ]
+        }
+      }
+    ],
+    "sub_theme": "rentepercentage berekenen"
+  },
+  {
     "id": 239,
     "title": "Nachttrein naar Berlijn",
     "theme": "tijd-snelheid",
