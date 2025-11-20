@@ -404,20 +404,75 @@
             border-radius: var(--border-radius-card);
             padding: 20px;
             margin-bottom: 25px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .progress-tracker-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            margin-bottom: 15px;
+        }
+
+        .progress-tracker-header:hover {
+            opacity: 0.8;
         }
 
         .progress-tracker-title {
             font-size: 1.3em;
             color: var(--primary-color);
-            margin-bottom: 15px;
             font-weight: 500;
-            text-align: center;
+            margin: 0;
+        }
+
+        .progress-summary {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .summary-stat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .summary-stat.correct {
+            color: var(--color-correct);
+        }
+
+        .summary-stat.incorrect {
+            color: var(--color-incorrect);
+        }
+
+        .toggle-icon {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .progress-tracker.collapsed .toggle-icon {
+            transform: rotate(180deg);
         }
 
         .category-progress-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
+            max-height: 500px;
+            overflow-y: auto;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+        }
+
+        .progress-tracker.collapsed .category-progress-container {
+            max-height: 0;
+            opacity: 0;
+            margin-top: 0;
         }
 
         .category-item {
@@ -506,17 +561,57 @@
                 gap: 15px;
             }
 
-            /* Progress tracker responsive */
-            .category-progress-container {
-                grid-template-columns: 1fr;
+            /* Progress tracker responsive - optimized for mobile */
+            .progress-tracker {
+                padding: 12px;
+                margin-bottom: 15px;
             }
 
-            .progress-tracker {
-                padding: 15px;
+            .progress-tracker-header {
+                margin-bottom: 10px;
             }
 
             .progress-tracker-title {
-                font-size: 1.1em;
+                font-size: 1em;
+            }
+
+            .progress-summary {
+                gap: 12px;
+            }
+
+            .summary-stat {
+                font-size: 0.95em;
+            }
+
+            .toggle-icon {
+                font-size: 1.2em;
+            }
+
+            .category-progress-container {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .category-item {
+                padding: 10px;
+            }
+
+            .category-name {
+                font-size: 0.95em;
+                margin-bottom: 8px;
+            }
+
+            .stat-label {
+                font-size: 0.75em;
+            }
+
+            .stat-value {
+                font-size: 1.2em;
+            }
+
+            /* Start collapsed on mobile for better UX */
+            .progress-tracker {
+                /* Will be controlled by JS */
             }
         }
     </style>
@@ -588,7 +683,16 @@
         <div id="quizPage" class="quiz-container" style="display: none;">
             <!-- Progress Tracker Section -->
             <div id="progressTracker" class="progress-tracker">
-                <h3 class="progress-tracker-title">Voortgang per categorie</h3>
+                <div class="progress-tracker-header" onclick="toggleProgressTracker()">
+                    <h3 class="progress-tracker-title">📊 Voortgang</h3>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div class="progress-summary">
+                            <span class="summary-stat correct">✓ <span id="totalCorrect">0</span></span>
+                            <span class="summary-stat incorrect">✗ <span id="totalIncorrect">0</span></span>
+                        </div>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                </div>
                 <div id="categoryProgress" class="category-progress-container"></div>
             </div>
 
@@ -661,6 +765,24 @@
 
         // Progress tracker by category
         let categoryProgress = {};
+        let isProgressTrackerCollapsed = false;
+
+        // Toggle progress tracker visibility
+        function toggleProgressTracker() {
+            const tracker = document.getElementById('progressTracker');
+            isProgressTrackerCollapsed = !isProgressTrackerCollapsed;
+
+            if (isProgressTrackerCollapsed) {
+                tracker.classList.add('collapsed');
+            } else {
+                tracker.classList.remove('collapsed');
+            }
+        }
+
+        // Check if mobile device
+        function isMobileDevice() {
+            return window.innerWidth <= 768;
+        }
 
         // Highscore management
         function getHighscoreKey(subject, theme) {
@@ -731,11 +853,18 @@
             const container = document.getElementById('categoryProgress');
             container.innerHTML = '';
 
+            // Calculate totals
+            let totalCorrect = 0;
+            let totalIncorrect = 0;
+
             // Sort categories alphabetically for consistent display
             const sortedCategories = Object.keys(categoryProgress).sort();
 
             sortedCategories.forEach(category => {
                 const stats = categoryProgress[category];
+                totalCorrect += stats.correct;
+                totalIncorrect += stats.incorrect;
+
                 const categoryElement = document.createElement('div');
                 categoryElement.className = 'category-item';
 
@@ -755,6 +884,10 @@
 
                 container.appendChild(categoryElement);
             });
+
+            // Update summary totals
+            document.getElementById('totalCorrect').textContent = totalCorrect;
+            document.getElementById('totalIncorrect').textContent = totalIncorrect;
         }
 
         // Shuffle array function (Fisher-Yates algorithm)
@@ -967,6 +1100,16 @@
                 basisvaardigheden: 'Basisvaardigheden'
             };
             document.getElementById('quizTitle').textContent = titles[subject] || 'Quiz';
+
+            // Start collapsed on mobile for better UX
+            const tracker = document.getElementById('progressTracker');
+            if (isMobileDevice()) {
+                isProgressTrackerCollapsed = true;
+                tracker.classList.add('collapsed');
+            } else {
+                isProgressTrackerCollapsed = false;
+                tracker.classList.remove('collapsed');
+            }
 
             loadCurrentQuestion();
         }
