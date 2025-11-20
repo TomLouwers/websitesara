@@ -33,6 +33,43 @@
             "Trek dit bedrag af van het totale budget van €400,00",
             "24 × €15,50 = €372,00, dus €400,00 - €372,00 = €28,00"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["IJsjes kosten €2,50"],
+            "hoofdvraag": "Hoeveel geld blijft er over?",
+            "tussenstappen": ["Bereken totale kosten van entreekaarten", "Trek af van het budget"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Aantal leerlingen": "24",
+              "Prijs per entreekaart": "€15,50",
+              "Totaal budget": "€400,00"
+            },
+            "tool": "Vermenigvuldigen en aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totale entreekosten",
+                "berekening": "24 × €15,50",
+                "resultaat": "€372,00",
+                "uitleg": "Vermenigvuldig aantal leerlingen met prijs per persoon"
+              },
+              {
+                "stap": "Trek af van budget",
+                "berekening": "€400,00 - €372,00",
+                "resultaat": "€28,00",
+                "uitleg": "Trek de kosten af van het totale budget"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€28 is een klein bedrag, logisch na het betalen van entree voor 24 personen",
+            "antwoord": "€28,00"
+          }
         }
       },
       {
@@ -62,6 +99,42 @@
             "Deel €28,00 door €2,50: 28 ÷ 2,50 = 11,2",
             "Je kunt alleen hele ijsjes kopen, dus afgerond naar beneden: 11 ijsjes"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["24 leerlingen", "Entree: €15,50 per persoon", "Budget: €400,00"],
+            "hoofdvraag": "Hoeveel ijsjes kan de juf maximaal kopen?",
+            "tussenstappen": ["Gebruik het overgebleven geld uit de vorige vraag (€28)", "Deel door de prijs per ijsje"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Overgebleven geld": "€28,00",
+              "Prijs per ijsje": "€2,50"
+            },
+            "tool": "Delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken aantal ijsjes",
+                "berekening": "€28,00 ÷ €2,50",
+                "resultaat": "11,2",
+                "uitleg": "Deel het overgebleven geld door de prijs per ijsje"
+              },
+              {
+                "stap": "Rond af naar beneden",
+                "berekening": "11,2 → 11",
+                "resultaat": "11 ijsjes",
+                "uitleg": "Je kunt alleen hele ijsjes kopen, dus rond af naar beneden"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "ijsjes (aantal)",
+            "logica_check": "11 ijsjes is logisch voor €28, want 11 × €2,50 = €27,50 (past binnen het budget)",
+            "antwoord": "11 ijsjes"
+          }
         }
       }
     ],
@@ -100,6 +173,42 @@
             "6 teams × 5 = 30, maar dan tel je elke wedstrijd dubbel",
             "Het juiste aantal is: (6 × 5) ÷ 2 = 15 wedstrijden"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["Er zijn 12 toeschouwers aanwezig", "Een wedstrijd duurt 25 minuten"],
+            "hoofdvraag": "Hoeveel wedstrijden worden er in totaal gespeeld?",
+            "tussenstappen": ["Bereken hoeveel tegenstanders elk team heeft", "Let op: tel elke wedstrijd niet dubbel"]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Aantal teams": "6",
+              "Elk team speelt tegen elk ander team": "1 keer"
+            },
+            "tool": "Combinatoriek formule (vermenigvuldigen en delen)",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken alle mogelijke wedstrijden",
+                "berekening": "6 × 5",
+                "resultaat": "30",
+                "uitleg": "Elk van de 6 teams speelt tegen 5 andere teams"
+              },
+              {
+                "stap": "Corrigeer voor dubbeltelling",
+                "berekening": "30 ÷ 2",
+                "resultaat": "15 wedstrijden",
+                "uitleg": "Elk paar teams speelt maar 1 wedstrijd, dus deel door 2"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "wedstrijden (aantal)",
+            "logica_check": "15 wedstrijden is logisch: minder dan 30 (6×5) want we tellen niet dubbel",
+            "antwoord": "15 wedstrijden"
+          }
         }
       },
       {
