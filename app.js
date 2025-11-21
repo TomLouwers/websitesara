@@ -18,6 +18,17 @@ let wrongAnswers = []; // Track wrong answers for review
 let categoryProgress = {};
 let lovaClickCount = 0; // Track L.O.V.A. button clicks
 
+// Helper function to render verhoudingstabel widget
+function renderVerhoudingstabel(containerElement, extraInfo) {
+    // Clear the container first
+    containerElement.innerHTML = '';
+
+    // Check if verhoudingstabel data exists
+    if (extraInfo && extraInfo.verhoudingstabel) {
+        VerhoudingstabelWidget.render(containerElement, extraInfo.verhoudingstabel);
+    }
+}
+
 // Highscore management
 function getHighscoreKey(subject, theme) {
     return `${CONFIG.storageKeys.highscorePrefix}${subject}_${theme || 'all'}`;
@@ -406,6 +417,7 @@ function loadCurrentQuestion() {
     feedbackSection.classList.remove('correct', 'incorrect');
     document.getElementById('correctAnswerDisplay').classList.add('hidden');
     document.getElementById('extraInfoDisplay').classList.add('hidden');
+    document.getElementById('verhoudingstabelContainer').innerHTML = ''; // Clear verhoudingstabel
     document.getElementById('strategyAndTips').classList.add('hidden');
 
     if (currentQuestion.options) {
@@ -457,6 +469,7 @@ function submitAnswer() {
     const feedbackMessage = document.getElementById('feedbackMessage');
     const correctAnswerDisplay = document.getElementById('correctAnswerDisplay');
     const extraInfoDisplay = document.getElementById('extraInfoDisplay'); // NIEUW: extraInfoDisplay element
+    const verhoudingstabelContainer = document.getElementById('verhoudingstabelContainer'); // Container for widget
     const strategyAndTips = document.getElementById('strategyAndTips');
     const strategyText = document.getElementById('strategyText');
     const tipsList = document.getElementById('tipsList');
@@ -482,6 +495,7 @@ function submitAnswer() {
             feedbackMessage.textContent = CONFIG.feedback.correct.message;
             correctAnswerDisplay.classList.add('hidden');
             extraInfoDisplay.classList.add('hidden'); // NIEUW: extraInfo verbergen bij correct
+            verhoudingstabelContainer.innerHTML = ''; // Clear verhoudingstabel
             strategyAndTips.classList.add('hidden');
 
             // Update category progress tracker
@@ -530,6 +544,9 @@ function submitAnswer() {
 
             // NIEUW: Toon extra_info bij incorrect antwoord (meerkeuze)
             if (currentQuestion.extra_info) {
+                // Render verhoudingstabel widget if available
+                renderVerhoudingstabel(verhoudingstabelContainer, currentQuestion.extra_info);
+
                 if (typeof currentQuestion.extra_info === 'string') {
                     // Simple string format (like brandaan)
                     extraInfoDisplay.innerHTML = `<h4>Achtergrondinfo:</h4><p>${currentQuestion.extra_info}</p>`;
@@ -563,6 +580,7 @@ function submitAnswer() {
                 }
             } else {
                 extraInfoDisplay.classList.add('hidden');
+                verhoudingstabelContainer.innerHTML = ''; // Clear if no extra_info
             }
         }
     } else {
@@ -585,6 +603,7 @@ function submitAnswer() {
             feedbackMessage.textContent = CONFIG.feedback.correct.message;
             correctAnswerDisplay.classList.add('hidden');
             extraInfoDisplay.classList.add('hidden'); // NIEUW: extraInfo verbergen bij correct
+            verhoudingstabelContainer.innerHTML = ''; // Clear verhoudingstabel
             strategyAndTips.classList.add('hidden');
 
             // Update category progress tracker
@@ -629,10 +648,14 @@ function submitAnswer() {
 
             // NIEUW: Toon extra_info bij incorrect antwoord (open vraag)
             if (currentQuestion.extra_info) {
+                // Render verhoudingstabel widget if available
+                renderVerhoudingstabel(verhoudingstabelContainer, currentQuestion.extra_info);
+
                 extraInfoDisplay.textContent = `Achtergrondinfo: ${currentQuestion.extra_info}`;
                 extraInfoDisplay.classList.remove('hidden');
             } else {
                 extraInfoDisplay.classList.add('hidden');
+                verhoudingstabelContainer.innerHTML = ''; // Clear if no extra_info
             }
         }
     }
