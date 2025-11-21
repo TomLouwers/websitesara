@@ -43958,5 +43958,1747 @@
       }
     ],
     "sub_theme": "gecombineerd oppervlakte en omtrek"
+  },
+  {
+    "id": 429,
+    "title": "Zakgeld uitgeven",
+    "theme": "breuken",
+    "content": "Piet krijgt elke week €12 zakgeld. Deze week geeft hij $\\frac{1}{3}$ van zijn zakgeld uit aan snoep en $\\frac{1}{6}$ aan een stripboek.",
+    "questions": [
+      {
+        "question": "Welk deel van zijn zakgeld is Piet in totaal kwijt?",
+        "options": [
+          {
+            "text": "$\\frac{2}{9}$",
+            "foutanalyse": "Je hebt de tellers bij elkaar opgeteld en de noemers ook bij elkaar opgeteld. Dat mag niet! Je moet de breuken eerst gelijknamig maken voordat je ze kunt optellen."
+          },
+          {
+            "text": "$\\frac{1}{2}$",
+            "foutanalyse": ""
+          },
+          {
+            "text": "$\\frac{2}{6}$",
+            "foutanalyse": "Je hebt alleen de tellers bij elkaar opgeteld. Vergeet niet om de breuken eerst gelijknamig te maken!"
+          },
+          {
+            "text": "$\\frac{4}{18}$",
+            "foutanalyse": "Je hebt de breuken gelijknamig gemaakt, maar niet vereenvoudigd. Het antwoord kan eenvoudiger geschreven worden."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Bij het optellen van ongelijknamige breuken moet je ze eerst gelijknamig maken door een gemeenschappelijke noemer te vinden.",
+          "berekening": [
+            "Maak de breuken gelijknamig: $\\frac{1}{3} = \\frac{2}{6}$ en $\\frac{1}{6} = \\frac{1}{6}$",
+            "Tel de tellers op: $\\frac{2}{6} + \\frac{1}{6} = \\frac{3}{6}$",
+            "Vereenvoudig: $\\frac{3}{6} = \\frac{1}{2}$"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": ["€12 zakgeld per week"],
+            "hoofdvraag": "Welk deel van zijn zakgeld is Piet in totaal kwijt?",
+            "tussenstappen": [
+              "Bereken $\\frac{1}{3}$ + $\\frac{1}{6}$",
+              "Maak de breuken gelijknamig",
+              "Tel de tellers op"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Uitgegeven aan snoep": "$\\frac{1}{3}$",
+              "Uitgegeven aan stripboek": "$\\frac{1}{6}$"
+            },
+            "tool": "Breuken optellen met verschillende noemers",
+            "conversies": ["$\\frac{1}{3} = \\frac{2}{6}$"]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Maak gelijknamig",
+                "berekening": "$\\frac{1}{3} = \\frac{2}{6}$",
+                "resultaat": "$\\frac{2}{6}$ en $\\frac{1}{6}$",
+                "uitleg": "Vermenigvuldig teller en noemer van $\\frac{1}{3}$ met 2"
+              },
+              {
+                "stap": "Tel op",
+                "berekening": "$\\frac{2}{6} + \\frac{1}{6}$",
+                "resultaat": "$\\frac{3}{6}$",
+                "uitleg": "Tel de tellers op, houd de noemer gelijk"
+              },
+              {
+                "stap": "Vereenvoudig",
+                "berekening": "$\\frac{3}{6} = \\frac{1}{2}$",
+                "resultaat": "$\\frac{1}{2}$",
+                "uitleg": "Deel teller en noemer door 3"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "breuk",
+            "logica_check": "$\\frac{1}{2}$ is logisch: meer dan $\\frac{1}{3}$ maar minder dan 1",
+            "antwoord": "$\\frac{1}{2}$"
+          }
+        }
+      }
+    ],
+    "sub_theme": "ongelijknamige breuken optellen"
+  },
+  {
+    "id": 430,
+    "title": "Taart opdelen",
+    "theme": "breuken",
+    "content": "Op een verjaardag wordt een taart verdeeld. Lisa krijgt $\\frac{1}{4}$ van de taart en haar zusje Mia krijgt $\\frac{1}{8}$ van de taart.",
+    "questions": [
+      {
+        "question": "Welk deel van de taart hebben de zusjes samen gekregen?",
+        "options": [
+          {
+            "text": "$\\frac{2}{12}$",
+            "foutanalyse": "Je hebt de tellers bij elkaar opgeteld en de noemers ook. Dat mag niet! Maak eerst beide breuken gelijknamig."
+          },
+          {
+            "text": "$\\frac{3}{8}$",
+            "foutanalyse": ""
+          },
+          {
+            "text": "$\\frac{1}{6}$",
+            "foutanalyse": "Dit is te klein. Controleer je berekening: $\\frac{1}{4}$ is al groter dan $\\frac{1}{6}$."
+          },
+          {
+            "text": "$\\frac{2}{8}$",
+            "foutanalyse": "Je hebt alleen de tellers bij elkaar opgeteld. Vergeet niet eerst $\\frac{1}{4}$ om te schrijven naar achtsten!"
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Bij het optellen van breuken met verschillende noemers, maak je ze eerst gelijknamig.",
+          "berekening": [
+            "Maak gelijknamig: $\\frac{1}{4} = \\frac{2}{8}$ en $\\frac{1}{8} = \\frac{1}{8}$",
+            "Tel op: $\\frac{2}{8} + \\frac{1}{8} = \\frac{3}{8}$"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Welk deel van de taart hebben de zusjes samen gekregen?",
+            "tussenstappen": [
+              "Tel $\\frac{1}{4}$ en $\\frac{1}{8}$ op",
+              "Maak de breuken gelijknamig"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Lisa krijgt": "$\\frac{1}{4}$",
+              "Mia krijgt": "$\\frac{1}{8}$"
+            },
+            "tool": "Breuken optellen",
+            "conversies": ["$\\frac{1}{4} = \\frac{2}{8}$"]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Maak gelijknamig",
+                "berekening": "$\\frac{1}{4} = \\frac{2}{8}$",
+                "resultaat": "$\\frac{2}{8}$",
+                "uitleg": "Vermenigvuldig teller en noemer met 2"
+              },
+              {
+                "stap": "Tel de breuken op",
+                "berekening": "$\\frac{2}{8} + \\frac{1}{8}$",
+                "resultaat": "$\\frac{3}{8}$",
+                "uitleg": "Tel de tellers op"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "breuk",
+            "logica_check": "$\\frac{3}{8}$ is logisch: meer dan $\\frac{1}{4}$ maar minder dan $\\frac{1}{2}$",
+            "antwoord": "$\\frac{3}{8}$"
+          }
+        }
+      }
+    ],
+    "sub_theme": "ongelijknamige breuken optellen"
+  },
+  {
+    "id": 431,
+    "title": "Pizza avond",
+    "theme": "breuken",
+    "content": "Bij een pizza-avond eet vader $\\frac{2}{5}$ van een pizza en moeder $\\frac{1}{10}$ van dezelfde pizza.",
+    "questions": [
+      {
+        "question": "Welk deel van de pizza hebben de ouders samen opgegeten?",
+        "options": [
+          {
+            "text": "$\\frac{1}{2}$",
+            "foutanalyse": ""
+          },
+          {
+            "text": "$\\frac{3}{15}$",
+            "foutanalyse": "Je hebt de breuken wel gelijknamig gemaakt, maar een verkeerde gemeenschappelijke noemer gekozen. Probeer 10 als noemer."
+          },
+          {
+            "text": "$\\frac{3}{10}$",
+            "foutanalyse": "Je hebt alleen de tellers bij elkaar opgeteld. Vergeet niet om $\\frac{2}{5}$ eerst om te zetten naar tienden!"
+          },
+          {
+            "text": "$\\frac{2}{15}$",
+            "foutanalyse": "Check je berekening. Tel de tellers goed op nadat je gelijknamig hebt gemaakt."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Ongelijknamige breuken optellen: maak eerst gelijknamig, tel dan de tellers op.",
+          "berekening": [
+            "Maak gelijknamig: $\\frac{2}{5} = \\frac{4}{10}$ en $\\frac{1}{10} = \\frac{1}{10}$",
+            "Tel op: $\\frac{4}{10} + \\frac{1}{10} = \\frac{5}{10}$",
+            "Vereenvoudig: $\\frac{5}{10} = \\frac{1}{2}$"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Welk deel van de pizza hebben de ouders samen opgegeten?",
+            "tussenstappen": [
+              "Tel $\\frac{2}{5}$ en $\\frac{1}{10}$ op"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Vader eet": "$\\frac{2}{5}$",
+              "Moeder eet": "$\\frac{1}{10}$"
+            },
+            "tool": "Breuken optellen",
+            "conversies": ["$\\frac{2}{5} = \\frac{4}{10}$"]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Maak gelijknamig",
+                "berekening": "$\\frac{2}{5} = \\frac{4}{10}$",
+                "resultaat": "$\\frac{4}{10}$",
+                "uitleg": "Vermenigvuldig teller en noemer met 2"
+              },
+              {
+                "stap": "Tel op",
+                "berekening": "$\\frac{4}{10} + \\frac{1}{10}$",
+                "resultaat": "$\\frac{5}{10}$",
+                "uitleg": "Tel de tellers op"
+              },
+              {
+                "stap": "Vereenvoudig",
+                "berekening": "$\\frac{5}{10} = \\frac{1}{2}$",
+                "resultaat": "$\\frac{1}{2}$",
+                "uitleg": "Deel teller en noemer door 5"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "breuk",
+            "logica_check": "$\\frac{1}{2}$ is logisch: de helft van de pizza",
+            "antwoord": "$\\frac{1}{2}$"
+          }
+        }
+      }
+    ],
+    "sub_theme": "ongelijknamige breuken optellen"
+  },
+  {
+    "id": 432,
+    "title": "Schilderen",
+    "theme": "breuken",
+    "content": "Tom moet een muurtje schilderen. Op de eerste dag schildert hij $\\frac{3}{8}$ van het muurtje. Op de tweede dag schildert hij $\\frac{1}{4}$ van het muurtje.",
+    "questions": [
+      {
+        "question": "Welk deel van het muurtje heeft Tom nu geschilderd?",
+        "options": [
+          {
+            "text": "$\\frac{4}{12}$",
+            "foutanalyse": "Je hebt de tellers en noemers bij elkaar opgeteld. Dat is niet correct! Maak eerst de breuken gelijknamig."
+          },
+          {
+            "text": "$\\frac{5}{8}$",
+            "foutanalyse": ""
+          },
+          {
+            "text": "$\\frac{1}{2}$",
+            "foutanalyse": "Dit is te weinig. $\\frac{3}{8}$ alleen is al bijna de helft."
+          },
+          {
+            "text": "$\\frac{4}{8}$",
+            "foutanalyse": "Je bent vergeten om $\\frac{3}{8}$ mee te tellen. Controleer je berekening nog eens."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Bij ongelijknamige breuken optellen, zoek een gemeenschappelijke noemer.",
+          "berekening": [
+            "Maak gelijknamig: $\\frac{3}{8}$ blijft $\\frac{3}{8}$ en $\\frac{1}{4} = \\frac{2}{8}$",
+            "Tel op: $\\frac{3}{8} + \\frac{2}{8} = \\frac{5}{8}$"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Welk deel van het muurtje heeft Tom nu geschilderd?",
+            "tussenstappen": [
+              "Tel $\\frac{3}{8}$ en $\\frac{1}{4}$ op"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Eerste dag": "$\\frac{3}{8}$",
+              "Tweede dag": "$\\frac{1}{4}$"
+            },
+            "tool": "Breuken optellen",
+            "conversies": ["$\\frac{1}{4} = \\frac{2}{8}$"]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Maak gelijknamig",
+                "berekening": "$\\frac{1}{4} = \\frac{2}{8}$",
+                "resultaat": "$\\frac{2}{8}$",
+                "uitleg": "Vermenigvuldig teller en noemer met 2"
+              },
+              {
+                "stap": "Tel op",
+                "berekening": "$\\frac{3}{8} + \\frac{2}{8}$",
+                "resultaat": "$\\frac{5}{8}$",
+                "uitleg": "Tel de tellers op"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "breuk",
+            "logica_check": "$\\frac{5}{8}$ is logisch: meer dan de helft maar nog niet klaar",
+            "antwoord": "$\\frac{5}{8}$"
+          }
+        }
+      }
+    ],
+    "sub_theme": "ongelijknamige breuken optellen"
+  },
+  {
+    "id": 433,
+    "title": "Waterverbruik",
+    "theme": "breuken",
+    "content": "Een familie gebruikt $\\frac{2}{3}$ van hun watervoorraad voor douchen en $\\frac{1}{6}$ voor de afwas.",
+    "questions": [
+      {
+        "question": "Welk deel van de watervoorraad is nu gebruikt?",
+        "options": [
+          {
+            "text": "$\\frac{3}{9}$",
+            "foutanalyse": "Je hebt de tellers en noemers bij elkaar opgeteld. Dat is niet de juiste manier! Maak eerst de breuken gelijknamig."
+          },
+          {
+            "text": "$\\frac{2}{3}$",
+            "foutanalyse": "Je hebt de $\\frac{1}{6}$ voor de afwas vergeten mee te tellen!"
+          },
+          {
+            "text": "$\\frac{5}{6}$",
+            "foutanalyse": ""
+          },
+          {
+            "text": "$\\frac{1}{2}$",
+            "foutanalyse": "Dit is te weinig. $\\frac{2}{3}$ alleen is al meer dan de helft."
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Bij breuken optellen met verschillende noemers, maak je ze eerst gelijknamig.",
+          "berekening": [
+            "Maak gelijknamig: $\\frac{2}{3} = \\frac{4}{6}$ en $\\frac{1}{6} = \\frac{1}{6}$",
+            "Tel op: $\\frac{4}{6} + \\frac{1}{6} = \\frac{5}{6}$"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Welk deel van de watervoorraad is nu gebruikt?",
+            "tussenstappen": [
+              "Tel $\\frac{2}{3}$ en $\\frac{1}{6}$ op"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Voor douchen": "$\\frac{2}{3}$",
+              "Voor afwas": "$\\frac{1}{6}$"
+            },
+            "tool": "Breuken optellen",
+            "conversies": ["$\\frac{2}{3} = \\frac{4}{6}$"]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Maak gelijknamig",
+                "berekening": "$\\frac{2}{3} = \\frac{4}{6}$",
+                "resultaat": "$\\frac{4}{6}$",
+                "uitleg": "Vermenigvuldig teller en noemer met 2"
+              },
+              {
+                "stap": "Tel op",
+                "berekening": "$\\frac{4}{6} + \\frac{1}{6}$",
+                "resultaat": "$\\frac{5}{6}$",
+                "uitleg": "Tel de tellers op"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "breuk",
+            "logica_check": "$\\frac{5}{6}$ is logisch: bijna de hele voorraad is gebruikt",
+            "antwoord": "$\\frac{5}{6}$"
+          }
+        }
+      }
+    ],
+    "sub_theme": "ongelijknamige breuken optellen"
+  },
+  {
+    "id": 434,
+    "title": "Tuinwerk",
+    "theme": "breuken",
+    "content": "Sofie heeft een hele dag in de tuin gewerkt. Ze heeft $\\frac{3}{4}$ van de dag gewied en $\\frac{1}{12}$ van de dag gemaaid.",
+    "questions": [
+      {
+        "question": "Welk deel van de dag heeft Sofie in totaal aan tuinwerk besteed?",
+        "options": [
+          {
+            "text": "$\\frac{4}{16}$",
+            "foutanalyse": "Je hebt de tellers en noemers bij elkaar opgeteld. Dat is niet correct! Maak eerst de breuken gelijknamig."
+          },
+          {
+            "text": "$\\frac{5}{6}$",
+            "foutanalyse": "Dit is te weinig. Controleer je berekening: $\\frac{3}{4}$ is al $\\frac{9}{12}$."
+          },
+          {
+            "text": "$\\frac{10}{12}$",
+            "foutanalyse": ""
+          },
+          {
+            "text": "$\\frac{3}{4}$",
+            "foutanalyse": "Je hebt alleen het wieden geteld. Vergeet niet de $\\frac{1}{12}$ voor het maaien erbij op te tellen!"
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Ongelijknamige breuken optellen: maak gelijknamig, tel de tellers op.",
+          "berekening": [
+            "Maak gelijknamig: $\\frac{3}{4} = \\frac{9}{12}$ en $\\frac{1}{12} = \\frac{1}{12}$",
+            "Tel op: $\\frac{9}{12} + \\frac{1}{12} = \\frac{10}{12}$",
+            "Of vereenvoudigd: $\\frac{10}{12} = \\frac{5}{6}$ (beide antwoorden zijn goed)"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Welk deel van de dag heeft Sofie aan tuinwerk besteed?",
+            "tussenstappen": [
+              "Tel $\\frac{3}{4}$ en $\\frac{1}{12}$ op"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Wieden": "$\\frac{3}{4}$",
+              "Maaien": "$\\frac{1}{12}$"
+            },
+            "tool": "Breuken optellen",
+            "conversies": ["$\\frac{3}{4} = \\frac{9}{12}$"]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Maak gelijknamig",
+                "berekening": "$\\frac{3}{4} = \\frac{9}{12}$",
+                "resultaat": "$\\frac{9}{12}$",
+                "uitleg": "Vermenigvuldig teller en noemer met 3"
+              },
+              {
+                "stap": "Tel op",
+                "berekening": "$\\frac{9}{12} + \\frac{1}{12}$",
+                "resultaat": "$\\frac{10}{12}$",
+                "uitleg": "Tel de tellers op"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "breuk",
+            "logica_check": "$\\frac{10}{12}$ is logisch: bijna de hele dag",
+            "antwoord": "$\\frac{10}{12}$ of $\\frac{5}{6}$"
+          }
+        }
+      }
+    ],
+    "sub_theme": "ongelijknamige breuken optellen"
+  },
+  {
+    "id": 435,
+    "title": "Boek lezen",
+    "theme": "breuken",
+    "content": "Emma leest een boek. Op maandag leest ze $\\frac{2}{5}$ van het boek en op dinsdag leest ze $\\frac{3}{10}$ van het boek.",
+    "questions": [
+      {
+        "question": "Welk deel van het boek heeft Emma nu gelezen?",
+        "options": [
+          {
+            "text": "$\\frac{5}{15}$",
+            "foutanalyse": "Je hebt de tellers en noemers bij elkaar opgeteld. Dat is niet correct! Maak eerst de breuken gelijknamig."
+          },
+          {
+            "text": "$\\frac{7}{10}$",
+            "foutanalyse": ""
+          },
+          {
+            "text": "$\\frac{1}{2}$",
+            "foutanalyse": "Dit is te weinig. Controleer je berekening nog eens."
+          },
+          {
+            "text": "$\\frac{5}{10}$",
+            "foutanalyse": "Je hebt alleen de tellers bij elkaar opgeteld. Vergeet niet om $\\frac{2}{5}$ eerst om te zetten naar tienden!"
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Bij het optellen van ongelijknamige breuken, maak je ze eerst gelijknamig.",
+          "berekening": [
+            "Maak gelijknamig: $\\frac{2}{5} = \\frac{4}{10}$ en $\\frac{3}{10} = \\frac{3}{10}$",
+            "Tel op: $\\frac{4}{10} + \\frac{3}{10} = \\frac{7}{10}$"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Welk deel van het boek heeft Emma nu gelezen?",
+            "tussenstappen": [
+              "Tel $\\frac{2}{5}$ en $\\frac{3}{10}$ op"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Maandag": "$\\frac{2}{5}$",
+              "Dinsdag": "$\\frac{3}{10}$"
+            },
+            "tool": "Breuken optellen",
+            "conversies": ["$\\frac{2}{5} = \\frac{4}{10}$"]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Maak gelijknamig",
+                "berekening": "$\\frac{2}{5} = \\frac{4}{10}$",
+                "resultaat": "$\\frac{4}{10}$",
+                "uitleg": "Vermenigvuldig teller en noemer met 2"
+              },
+              {
+                "stap": "Tel op",
+                "berekening": "$\\frac{4}{10} + \\frac{3}{10}$",
+                "resultaat": "$\\frac{7}{10}$",
+                "uitleg": "Tel de tellers op"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "breuk",
+            "logica_check": "$\\frac{7}{10}$ is logisch: meer dan de helft van het boek",
+            "antwoord": "$\\frac{7}{10}$"
+          }
+        }
+      }
+    ],
+    "sub_theme": "ongelijknamige breuken optellen"
+  },
+  {
+    "id": 436,
+    "title": "Vrije tijd",
+    "theme": "breuken",
+    "content": "Op zaterdagmiddag speelt Jayden $\\frac{1}{2}$ van zijn vrije tijd buiten en $\\frac{1}{6}$ van zijn vrije tijd achter de computer.",
+    "questions": [
+      {
+        "question": "Welk deel van zijn vrije tijd heeft Jayden al ingevuld?",
+        "options": [
+          {
+            "text": "$\\frac{2}{3}$",
+            "foutanalyse": ""
+          },
+          {
+            "text": "$\\frac{2}{8}$",
+            "foutanalyse": "Je hebt de tellers bij elkaar opgeteld en de noemers ook. Dat is niet correct! Maak eerst de breuken gelijknamig."
+          },
+          {
+            "text": "$\\frac{1}{3}$",
+            "foutanalyse": "Dit is te weinig. $\\frac{1}{2}$ alleen is al meer dan $\\frac{1}{3}$."
+          },
+          {
+            "text": "$\\frac{3}{6}$",
+            "foutanalyse": "Dit is alleen de tijd die hij buiten speelt. Tel ook de computertijd erbij op!"
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Ongelijknamige breuken optellen: maak gelijknamig, tel de tellers op.",
+          "berekening": [
+            "Maak gelijknamig: $\\frac{1}{2} = \\frac{3}{6}$ en $\\frac{1}{6} = \\frac{1}{6}$",
+            "Tel op: $\\frac{3}{6} + \\frac{1}{6} = \\frac{4}{6}$",
+            "Vereenvoudig: $\\frac{4}{6} = \\frac{2}{3}$"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Welk deel van zijn vrije tijd heeft Jayden al ingevuld?",
+            "tussenstappen": [
+              "Tel $\\frac{1}{2}$ en $\\frac{1}{6}$ op"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Buiten spelen": "$\\frac{1}{2}$",
+              "Achter computer": "$\\frac{1}{6}$"
+            },
+            "tool": "Breuken optellen",
+            "conversies": ["$\\frac{1}{2} = \\frac{3}{6}$"]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Maak gelijknamig",
+                "berekening": "$\\frac{1}{2} = \\frac{3}{6}$",
+                "resultaat": "$\\frac{3}{6}$",
+                "uitleg": "Vermenigvuldig teller en noemer met 3"
+              },
+              {
+                "stap": "Tel op",
+                "berekening": "$\\frac{3}{6} + \\frac{1}{6}$",
+                "resultaat": "$\\frac{4}{6}$",
+                "uitleg": "Tel de tellers op"
+              },
+              {
+                "stap": "Vereenvoudig",
+                "berekening": "$\\frac{4}{6} = \\frac{2}{3}$",
+                "resultaat": "$\\frac{2}{3}$",
+                "uitleg": "Deel teller en noemer door 2"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "breuk",
+            "logica_check": "$\\frac{2}{3}$ is logisch: een groot deel maar niet alles",
+            "antwoord": "$\\frac{2}{3}$"
+          }
+        }
+      }
+    ],
+    "sub_theme": "ongelijknamige breuken optellen"
+  },
+  {
+    "id": 437,
+    "title": "Huiswerk maken",
+    "theme": "breuken",
+    "content": "Lotte moet huiswerk maken. Ze besteedt $\\frac{5}{12}$ van haar tijd aan wiskunde en $\\frac{1}{4}$ van haar tijd aan Nederlands.",
+    "questions": [
+      {
+        "question": "Welk deel van haar huiswerktijd is Lotte kwijt aan deze twee vakken?",
+        "options": [
+          {
+            "text": "$\\frac{6}{16}$",
+            "foutanalyse": "Je hebt de tellers en noemers bij elkaar opgeteld. Dat is niet correct! Maak eerst de breuken gelijknamig."
+          },
+          {
+            "text": "$\\frac{2}{3}$",
+            "foutanalyse": ""
+          },
+          {
+            "text": "$\\frac{1}{2}$",
+            "foutanalyse": "Dit is te weinig. Controleer je berekening: $\\frac{5}{12}$ alleen is al bijna de helft."
+          },
+          {
+            "text": "$\\frac{6}{12}$",
+            "foutanalyse": "Je hebt alleen de tellers bij elkaar opgeteld. Vergeet niet $\\frac{1}{4}$ eerst om te zetten naar twaalfden!"
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Bij ongelijknamige breuken optellen, maak je ze eerst gelijknamig door een gemeenschappelijke noemer te vinden.",
+          "berekening": [
+            "Maak gelijknamig: $\\frac{5}{12}$ blijft $\\frac{5}{12}$ en $\\frac{1}{4} = \\frac{3}{12}$",
+            "Tel op: $\\frac{5}{12} + \\frac{3}{12} = \\frac{8}{12}$",
+            "Vereenvoudig: $\\frac{8}{12} = \\frac{2}{3}$"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Welk deel van haar huiswerktijd is Lotte kwijt aan deze twee vakken?",
+            "tussenstappen": [
+              "Tel $\\frac{5}{12}$ en $\\frac{1}{4}$ op"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Wiskunde": "$\\frac{5}{12}$",
+              "Nederlands": "$\\frac{1}{4}$"
+            },
+            "tool": "Breuken optellen",
+            "conversies": ["$\\frac{1}{4} = \\frac{3}{12}$"]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Maak gelijknamig",
+                "berekening": "$\\frac{1}{4} = \\frac{3}{12}$",
+                "resultaat": "$\\frac{3}{12}$",
+                "uitleg": "Vermenigvuldig teller en noemer met 3"
+              },
+              {
+                "stap": "Tel op",
+                "berekening": "$\\frac{5}{12} + \\frac{3}{12}$",
+                "resultaat": "$\\frac{8}{12}$",
+                "uitleg": "Tel de tellers op"
+              },
+              {
+                "stap": "Vereenvoudig",
+                "berekening": "$\\frac{8}{12} = \\frac{2}{3}$",
+                "resultaat": "$\\frac{2}{3}$",
+                "uitleg": "Deel teller en noemer door 4"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "breuk",
+            "logica_check": "$\\frac{2}{3}$ is logisch: een groot deel van de huiswerktijd",
+            "antwoord": "$\\frac{2}{3}$"
+          }
+        }
+      }
+    ],
+    "sub_theme": "ongelijknamige breuken optellen"
+  },
+  {
+    "id": 438,
+    "title": "Wandeling in het bos",
+    "theme": "breuken",
+    "content": "Tijdens een wandeling in het bos heeft Anna $\\frac{2}{3}$ van de route gelopen. Daarna heeft ze nog $\\frac{1}{9}$ van de route gelopen.",
+    "questions": [
+      {
+        "question": "Welk deel van de route heeft Anna nu in totaal gelopen?",
+        "options": [
+          {
+            "text": "$\\frac{3}{12}$",
+            "foutanalyse": "Je hebt de tellers en noemers bij elkaar opgeteld. Dat is niet correct! Maak eerst de breuken gelijknamig."
+          },
+          {
+            "text": "$\\frac{7}{9}$",
+            "foutanalyse": ""
+          },
+          {
+            "text": "$\\frac{3}{9}$",
+            "foutanalyse": "Je hebt alleen de tellers bij elkaar opgeteld. Vergeet niet om $\\frac{2}{3}$ eerst om te zetten naar negendens!"
+          },
+          {
+            "text": "$\\frac{2}{3}$",
+            "foutanalyse": "Je hebt alleen het eerste deel geteld. Tel ook de $\\frac{1}{9}$ erbij op!"
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Ongelijknamige breuken optellen: zoek een gemeenschappelijke noemer en tel de tellers op.",
+          "berekening": [
+            "Maak gelijknamig: $\\frac{2}{3} = \\frac{6}{9}$ en $\\frac{1}{9} = \\frac{1}{9}$",
+            "Tel op: $\\frac{6}{9} + \\frac{1}{9} = \\frac{7}{9}$"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Welk deel van de route heeft Anna nu in totaal gelopen?",
+            "tussenstappen": [
+              "Tel $\\frac{2}{3}$ en $\\frac{1}{9}$ op"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Eerste deel": "$\\frac{2}{3}$",
+              "Tweede deel": "$\\frac{1}{9}$"
+            },
+            "tool": "Breuken optellen",
+            "conversies": ["$\\frac{2}{3} = \\frac{6}{9}$"]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Maak gelijknamig",
+                "berekening": "$\\frac{2}{3} = \\frac{6}{9}$",
+                "resultaat": "$\\frac{6}{9}$",
+                "uitleg": "Vermenigvuldig teller en noemer met 3"
+              },
+              {
+                "stap": "Tel op",
+                "berekening": "$\\frac{6}{9} + \\frac{1}{9}$",
+                "resultaat": "$\\frac{7}{9}$",
+                "uitleg": "Tel de tellers op"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "breuk",
+            "logica_check": "$\\frac{7}{9}$ is logisch: bijna de hele route",
+            "antwoord": "$\\frac{7}{9}$"
+          }
+        }
+      }
+    ],
+    "sub_theme": "ongelijknamige breuken optellen"
+  },
+  {
+    "id": 439,
+    "title": "Twee klassen",
+    "theme": "gemiddelde",
+    "content": "Op een school zijn twee groepen leerlingen. Klas A heeft 20 leerlingen met een gemiddeld cijfer van 7,5 voor wiskunde. Klas B heeft 10 leerlingen met een gemiddeld cijfer van 6,0 voor wiskunde.",
+    "questions": [
+      {
+        "question": "Wat is het gemiddelde cijfer van beide klassen samen?",
+        "options": [
+          {
+            "text": "6,5",
+            "foutanalyse": "Je hebt alleen het gemiddelde van de twee gemiddelden berekend (7,5 + 6,0) ÷ 2. Maar dat klopt niet! Klas A heeft meer leerlingen, dus die tellen zwaarder mee."
+          },
+          {
+            "text": "6,75",
+            "foutanalyse": "Je bent op de goede weg, maar controleer je berekening nog eens. Hoeveel punten hebben alle leerlingen samen?"
+          },
+          {
+            "text": "7,0",
+            "foutanalyse": ""
+          },
+          {
+            "text": "7,5",
+            "foutanalyse": "Dit is het gemiddelde van alleen klas A. Vergeet niet dat klas B ook mee moet tellen!"
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een gewogen gemiddelde: het aantal leerlingen (de weging) bepaalt hoe zwaar elk gemiddelde meetelt. Je kunt niet zomaar de gemiddelden optellen en delen door 2.",
+          "berekening": [
+            "Bereken totaal aantal punten klas A: 20 × 7,5 = 150 punten",
+            "Bereken totaal aantal punten klas B: 10 × 6,0 = 60 punten",
+            "Tel alle punten op: 150 + 60 = 210 punten",
+            "Totaal aantal leerlingen: 20 + 10 = 30 leerlingen",
+            "Gemiddelde: 210 ÷ 30 = 7,0"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Wat is het gemiddelde cijfer van beide klassen samen?",
+            "tussenstappen": [
+              "Bereken totaal aantal punten per klas",
+              "Tel alle punten bij elkaar op",
+              "Deel door totaal aantal leerlingen"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Klas A leerlingen": "20",
+              "Klas A gemiddelde": "7,5",
+              "Klas B leerlingen": "10",
+              "Klas B gemiddelde": "6,0"
+            },
+            "tool": "Gewogen gemiddelde berekenen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totaal klas A",
+                "berekening": "20 × 7,5",
+                "resultaat": "150 punten",
+                "uitleg": "Aantal leerlingen × gemiddelde cijfer"
+              },
+              {
+                "stap": "Bereken totaal klas B",
+                "berekening": "10 × 6,0",
+                "resultaat": "60 punten",
+                "uitleg": "Aantal leerlingen × gemiddelde cijfer"
+              },
+              {
+                "stap": "Tel alle punten op",
+                "berekening": "150 + 60",
+                "resultaat": "210 punten",
+                "uitleg": "Som van alle punten"
+              },
+              {
+                "stap": "Bereken gemiddelde",
+                "berekening": "210 ÷ 30",
+                "resultaat": "7,0",
+                "uitleg": "Totale punten gedeeld door totaal aantal leerlingen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "cijfer",
+            "logica_check": "7,0 is logisch: tussen 6,0 en 7,5, maar dichter bij 7,5 omdat klas A groter is",
+            "antwoord": "7,0"
+          }
+        }
+      }
+    ],
+    "sub_theme": "gewogen gemiddelde"
+  },
+  {
+    "id": 440,
+    "title": "Sportteams",
+    "theme": "gemiddelde",
+    "content": "Bij een sportwedstrijd zijn twee teams. Team Rood heeft 15 spelers met een gemiddelde leeftijd van 12 jaar. Team Blauw heeft 25 spelers met een gemiddelde leeftijd van 14 jaar.",
+    "questions": [
+      {
+        "question": "Wat is de gemiddelde leeftijd van alle spelers samen?",
+        "options": [
+          {
+            "text": "12,5 jaar",
+            "foutanalyse": "Je hebt team Blauw vergeten mee te tellen, of je hebt de aantallen verkeerd gebruikt."
+          },
+          {
+            "text": "13,0 jaar",
+            "foutanalyse": "Je hebt alleen het gemiddelde van de twee gemiddelden berekend: (12 + 14) ÷ 2. Maar team Blauw heeft meer spelers, dus die tellen zwaarder mee!"
+          },
+          {
+            "text": "13,25 jaar",
+            "foutanalyse": ""
+          },
+          {
+            "text": "14,0 jaar",
+            "foutanalyse": "Dit is alleen de gemiddelde leeftijd van team Blauw. Vergeet team Rood niet!"
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Dit is een gewogen gemiddelde: het aantal spelers per team bepaalt hoe zwaar elk teamgemiddelde meetelt.",
+          "berekening": [
+            "Totale leeftijd team Rood: 15 × 12 = 180 jaar",
+            "Totale leeftijd team Blauw: 25 × 14 = 350 jaar",
+            "Totale leeftijd: 180 + 350 = 530 jaar",
+            "Totaal aantal spelers: 15 + 25 = 40 spelers",
+            "Gemiddelde leeftijd: 530 ÷ 40 = 13,25 jaar"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Wat is de gemiddelde leeftijd van alle spelers samen?",
+            "tussenstappen": [
+              "Bereken totale leeftijd per team",
+              "Tel alle leeftijden op",
+              "Deel door totaal aantal spelers"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Team Rood spelers": "15",
+              "Team Rood gemiddelde": "12 jaar",
+              "Team Blauw spelers": "25",
+              "Team Blauw gemiddelde": "14 jaar"
+            },
+            "tool": "Gewogen gemiddelde",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totaal team Rood",
+                "berekening": "15 × 12",
+                "resultaat": "180 jaar",
+                "uitleg": "Aantal spelers × gemiddelde leeftijd"
+              },
+              {
+                "stap": "Bereken totaal team Blauw",
+                "berekening": "25 × 14",
+                "resultaat": "350 jaar",
+                "uitleg": "Aantal spelers × gemiddelde leeftijd"
+              },
+              {
+                "stap": "Tel alle leeftijden op",
+                "berekening": "180 + 350",
+                "resultaat": "530 jaar",
+                "uitleg": "Som van alle leeftijden"
+              },
+              {
+                "stap": "Bereken gemiddelde",
+                "berekening": "530 ÷ 40",
+                "resultaat": "13,25 jaar",
+                "uitleg": "Totale leeftijd gedeeld door totaal aantal spelers"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "jaar",
+            "logica_check": "13,25 jaar is logisch: tussen 12 en 14, dichter bij 14 omdat team Blauw groter is",
+            "antwoord": "13,25 jaar"
+          }
+        }
+      }
+    ],
+    "sub_theme": "gewogen gemiddelde"
+  },
+  {
+    "id": 441,
+    "title": "Twee schoolreizen",
+    "theme": "gemiddelde",
+    "content": "Bij een schoolreis zijn twee bussen. Bus 1 heeft 30 leerlingen die gemiddeld €45 hebben betaald. Bus 2 heeft 20 leerlingen die gemiddeld €50 hebben betaald.",
+    "questions": [
+      {
+        "question": "Wat is het gemiddelde bedrag dat alle leerlingen hebben betaald?",
+        "options": [
+          {
+            "text": "€45,00",
+            "foutanalyse": "Dit is alleen het gemiddelde van bus 1. Tel ook bus 2 mee!"
+          },
+          {
+            "text": "€47,00",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€47,50",
+            "foutanalyse": "Je hebt het gemiddelde van de twee gemiddelden berekend: (45 + 50) ÷ 2. Maar bus 1 heeft meer leerlingen, dus dat telt zwaarder mee!"
+          },
+          {
+            "text": "€50,00",
+            "foutanalyse": "Dit is alleen het gemiddelde van bus 2. Vergeet bus 1 niet!"
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Bij een gewogen gemiddelde vermenigvuldig je elk gemiddelde met het aantal, tel je alles op, en deel je door het totaal aantal.",
+          "berekening": [
+            "Totaal betaald bus 1: 30 × €45 = €1.350",
+            "Totaal betaald bus 2: 20 × €50 = €1.000",
+            "Totaal betaald: €1.350 + €1.000 = €2.350",
+            "Totaal aantal leerlingen: 30 + 20 = 50",
+            "Gemiddeld: €2.350 ÷ 50 = €47,00"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Wat is het gemiddelde bedrag dat alle leerlingen hebben betaald?",
+            "tussenstappen": [
+              "Bereken totaal betaald per bus",
+              "Tel alle bedragen op",
+              "Deel door totaal aantal leerlingen"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Bus 1 leerlingen": "30",
+              "Bus 1 gemiddelde": "€45",
+              "Bus 2 leerlingen": "20",
+              "Bus 2 gemiddelde": "€50"
+            },
+            "tool": "Gewogen gemiddelde",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totaal bus 1",
+                "berekening": "30 × €45",
+                "resultaat": "€1.350",
+                "uitleg": "Aantal leerlingen × gemiddeld bedrag"
+              },
+              {
+                "stap": "Bereken totaal bus 2",
+                "berekening": "20 × €50",
+                "resultaat": "€1.000",
+                "uitleg": "Aantal leerlingen × gemiddeld bedrag"
+              },
+              {
+                "stap": "Tel alle bedragen op",
+                "berekening": "€1.350 + €1.000",
+                "resultaat": "€2.350",
+                "uitleg": "Som van alle bedragen"
+              },
+              {
+                "stap": "Bereken gemiddelde",
+                "berekening": "€2.350 ÷ 50",
+                "resultaat": "€47,00",
+                "uitleg": "Totaal bedrag gedeeld door totaal aantal leerlingen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro",
+            "logica_check": "€47,00 is logisch: tussen €45 en €50, dichter bij €45 omdat bus 1 groter is",
+            "antwoord": "€47,00"
+          }
+        }
+      }
+    ],
+    "sub_theme": "gewogen gemiddelde"
+  },
+  {
+    "id": 442,
+    "title": "Wiskundetoetsen",
+    "theme": "gemiddelde",
+    "content": "Op een school hebben twee groepen leerlingen een wiskundetoets gemaakt. Groep 1 bestaat uit 24 leerlingen met een gemiddeld cijfer van 8,0. Groep 2 bestaat uit 16 leerlingen met een gemiddeld cijfer van 7,0.",
+    "questions": [
+      {
+        "question": "Wat is het totale gemiddelde cijfer van beide groepen?",
+        "options": [
+          {
+            "text": "7,4",
+            "foutanalyse": "Controleer je berekening. Heb je het totaal aantal punten goed berekend?"
+          },
+          {
+            "text": "7,5",
+            "foutanalyse": "Je hebt het gemiddelde van 8,0 en 7,0 berekend: (8 + 7) ÷ 2. Maar groep 1 is groter, dus die telt zwaarder mee!"
+          },
+          {
+            "text": "7,6",
+            "foutanalyse": ""
+          },
+          {
+            "text": "8,0",
+            "foutanalyse": "Dit is alleen het gemiddelde van groep 1. Vergeet groep 2 niet mee te tellen!"
+          }
+        ],
+        "correct": 2,
+        "extra_info": {
+          "concept": "Bij een gewogen gemiddelde weeg je elk gemiddelde naar het aantal observaties.",
+          "berekening": [
+            "Totaal punten groep 1: 24 × 8,0 = 192 punten",
+            "Totaal punten groep 2: 16 × 7,0 = 112 punten",
+            "Totaal punten: 192 + 112 = 304 punten",
+            "Totaal leerlingen: 24 + 16 = 40",
+            "Gemiddelde: 304 ÷ 40 = 7,6"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Wat is het totale gemiddelde cijfer van beide groepen?",
+            "tussenstappen": [
+              "Bereken totaal aantal punten per groep",
+              "Tel alle punten op",
+              "Deel door totaal aantal leerlingen"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Groep 1 leerlingen": "24",
+              "Groep 1 gemiddelde": "8,0",
+              "Groep 2 leerlingen": "16",
+              "Groep 2 gemiddelde": "7,0"
+            },
+            "tool": "Gewogen gemiddelde",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totaal groep 1",
+                "berekening": "24 × 8,0",
+                "resultaat": "192 punten",
+                "uitleg": "Aantal leerlingen × gemiddeld cijfer"
+              },
+              {
+                "stap": "Bereken totaal groep 2",
+                "berekening": "16 × 7,0",
+                "resultaat": "112 punten",
+                "uitleg": "Aantal leerlingen × gemiddeld cijfer"
+              },
+              {
+                "stap": "Tel alle punten op",
+                "berekening": "192 + 112",
+                "resultaat": "304 punten",
+                "uitleg": "Som van alle punten"
+              },
+              {
+                "stap": "Bereken gemiddelde",
+                "berekening": "304 ÷ 40",
+                "resultaat": "7,6",
+                "uitleg": "Totale punten gedeeld door totaal aantal leerlingen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "cijfer",
+            "logica_check": "7,6 is logisch: tussen 7,0 en 8,0, dichter bij 8,0 omdat groep 1 groter is",
+            "antwoord": "7,6"
+          }
+        }
+      }
+    ],
+    "sub_theme": "gewogen gemiddelde"
+  },
+  {
+    "id": 443,
+    "title": "Bibliotheekbezoekers",
+    "theme": "gemiddelde",
+    "content": "In een bibliotheek worden bezoekers geteld. Op maandag komen 40 bezoekers met een gemiddelde leeftijd van 35 jaar. Op dinsdag komen 60 bezoekers met een gemiddelde leeftijd van 25 jaar.",
+    "questions": [
+      {
+        "question": "Wat is de gemiddelde leeftijd van alle bezoekers op deze twee dagen?",
+        "options": [
+          {
+            "text": "28 jaar",
+            "foutanalyse": "Controleer je berekening. Heb je beide dagen correct meegenomen?"
+          },
+          {
+            "text": "29 jaar",
+            "foutanalyse": ""
+          },
+          {
+            "text": "30 jaar",
+            "foutanalyse": "Je hebt het gemiddelde van 35 en 25 berekend: (35 + 25) ÷ 2. Maar op dinsdag zijn er meer bezoekers, dus die dag telt zwaarder mee!"
+          },
+          {
+            "text": "32 jaar",
+            "foutanalyse": "Dit is te hoog. Controleer of je de getallen niet hebt omgedraaid."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Bij een gewogen gemiddelde moet je rekening houden met het aantal observaties per groep.",
+          "berekening": [
+            "Totale leeftijd maandag: 40 × 35 = 1.400 jaar",
+            "Totale leeftijd dinsdag: 60 × 25 = 1.500 jaar",
+            "Totale leeftijd: 1.400 + 1.500 = 2.900 jaar",
+            "Totaal bezoekers: 40 + 60 = 100",
+            "Gemiddelde: 2.900 ÷ 100 = 29 jaar"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Wat is de gemiddelde leeftijd van alle bezoekers op deze twee dagen?",
+            "tussenstappen": [
+              "Bereken totale leeftijd per dag",
+              "Tel alle leeftijden op",
+              "Deel door totaal aantal bezoekers"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Maandag bezoekers": "40",
+              "Maandag gemiddelde": "35 jaar",
+              "Dinsdag bezoekers": "60",
+              "Dinsdag gemiddelde": "25 jaar"
+            },
+            "tool": "Gewogen gemiddelde",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totaal maandag",
+                "berekening": "40 × 35",
+                "resultaat": "1.400 jaar",
+                "uitleg": "Aantal bezoekers × gemiddelde leeftijd"
+              },
+              {
+                "stap": "Bereken totaal dinsdag",
+                "berekening": "60 × 25",
+                "resultaat": "1.500 jaar",
+                "uitleg": "Aantal bezoekers × gemiddelde leeftijd"
+              },
+              {
+                "stap": "Tel alle leeftijden op",
+                "berekening": "1.400 + 1.500",
+                "resultaat": "2.900 jaar",
+                "uitleg": "Som van alle leeftijden"
+              },
+              {
+                "stap": "Bereken gemiddelde",
+                "berekening": "2.900 ÷ 100",
+                "resultaat": "29 jaar",
+                "uitleg": "Totale leeftijd gedeeld door totaal aantal bezoekers"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "jaar",
+            "logica_check": "29 jaar is logisch: tussen 25 en 35, dichter bij 25 omdat dinsdag meer bezoekers had",
+            "antwoord": "29 jaar"
+          }
+        }
+      }
+    ],
+    "sub_theme": "gewogen gemiddelde"
+  },
+  {
+    "id": 444,
+    "title": "Twee dierentuinen",
+    "theme": "gemiddelde",
+    "content": "Twee dierentuinen vergelijken hun bezoekersaantallen. Dierentuin A heeft 5 dagen gemeten met gemiddeld 800 bezoekers per dag. Dierentuin B heeft 3 dagen gemeten met gemiddeld 1.200 bezoekers per dag.",
+    "questions": [
+      {
+        "question": "Wat is het gemiddelde aantal bezoekers per dag voor beide dierentuinen samen?",
+        "options": [
+          {
+            "text": "900 bezoekers",
+            "foutanalyse": ""
+          },
+          {
+            "text": "950 bezoekers",
+            "foutanalyse": "Controleer je berekening nog eens. Heb je het totaal aantal dagen goed gebruikt?"
+          },
+          {
+            "text": "1.000 bezoekers",
+            "foutanalyse": "Je hebt het gemiddelde van 800 en 1.200 berekend: (800 + 1.200) ÷ 2. Maar dierentuin A heeft meer meetdagen, dus die telt zwaarder mee!"
+          },
+          {
+            "text": "1.100 bezoekers",
+            "foutanalyse": "Dit is te hoog. Controleer of je de getallen niet hebt omgedraaid."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Bij een gewogen gemiddelde weeg je elk gemiddelde naar het aantal meetdagen.",
+          "berekening": [
+            "Totaal bezoekers dierentuin A: 5 × 800 = 4.000 bezoekers",
+            "Totaal bezoekers dierentuin B: 3 × 1.200 = 3.600 bezoekers",
+            "Totaal bezoekers: 4.000 + 3.600 = 7.600 bezoekers",
+            "Totaal aantal dagen: 5 + 3 = 8 dagen",
+            "Gemiddeld: 7.600 ÷ 8 = 950 bezoekers per dag"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Wat is het gemiddelde aantal bezoekers per dag voor beide dierentuinen samen?",
+            "tussenstappen": [
+              "Bereken totaal aantal bezoekers per dierentuin",
+              "Tel alle bezoekers op",
+              "Deel door totaal aantal dagen"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Dierentuin A dagen": "5",
+              "Dierentuin A gemiddelde": "800 bezoekers",
+              "Dierentuin B dagen": "3",
+              "Dierentuin B gemiddelde": "1.200 bezoekers"
+            },
+            "tool": "Gewogen gemiddelde",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totaal dierentuin A",
+                "berekening": "5 × 800",
+                "resultaat": "4.000 bezoekers",
+                "uitleg": "Aantal dagen × gemiddeld aantal bezoekers"
+              },
+              {
+                "stap": "Bereken totaal dierentuin B",
+                "berekening": "3 × 1.200",
+                "resultaat": "3.600 bezoekers",
+                "uitleg": "Aantal dagen × gemiddeld aantal bezoekers"
+              },
+              {
+                "stap": "Tel alle bezoekers op",
+                "berekening": "4.000 + 3.600",
+                "resultaat": "7.600 bezoekers",
+                "uitleg": "Som van alle bezoekers"
+              },
+              {
+                "stap": "Bereken gemiddelde",
+                "berekening": "7.600 ÷ 8",
+                "resultaat": "950 bezoekers",
+                "uitleg": "Totaal bezoekers gedeeld door totaal aantal dagen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "bezoekers",
+            "logica_check": "950 is logisch: tussen 800 en 1.200, iets dichter bij 800 omdat dierentuin A meer meetdagen had",
+            "antwoord": "950 bezoekers"
+          }
+        }
+      }
+    ],
+    "sub_theme": "gewogen gemiddelde"
+  },
+  {
+    "id": 445,
+    "title": "Examencijfers",
+    "theme": "gemiddelde",
+    "content": "Bij een school hebben twee groepen leerlingen een examen gemaakt. De kleine groep heeft 12 leerlingen met een gemiddeld cijfer van 9,0. De grote groep heeft 28 leerlingen met een gemiddeld cijfer van 7,5.",
+    "questions": [
+      {
+        "question": "Wat is het totale gemiddelde examencijfer?",
+        "options": [
+          {
+            "text": "7,95",
+            "foutanalyse": ""
+          },
+          {
+            "text": "8,0",
+            "foutanalyse": "Controleer je berekening. Heb je het totaal aantal punten correct berekend?"
+          },
+          {
+            "text": "8,25",
+            "foutanalyse": "Je hebt het gemiddelde van 9,0 en 7,5 berekend: (9 + 7,5) ÷ 2. Maar de grote groep heeft meer leerlingen, dus die telt zwaarder mee!"
+          },
+          {
+            "text": "8,5",
+            "foutanalyse": "Dit is te hoog. De grote groep heeft het lagere gemiddelde, dus het totaalgemiddelde moet dichter bij 7,5 liggen."
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Bij een gewogen gemiddelde vermenigvuldig je elk gemiddelde met het aantal observaties.",
+          "berekening": [
+            "Totaal punten kleine groep: 12 × 9,0 = 108 punten",
+            "Totaal punten grote groep: 28 × 7,5 = 210 punten",
+            "Totaal punten: 108 + 210 = 318 punten",
+            "Totaal leerlingen: 12 + 28 = 40",
+            "Gemiddelde: 318 ÷ 40 = 7,95"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Wat is het totale gemiddelde examencijfer?",
+            "tussenstappen": [
+              "Bereken totaal aantal punten per groep",
+              "Tel alle punten op",
+              "Deel door totaal aantal leerlingen"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Kleine groep leerlingen": "12",
+              "Kleine groep gemiddelde": "9,0",
+              "Grote groep leerlingen": "28",
+              "Grote groep gemiddelde": "7,5"
+            },
+            "tool": "Gewogen gemiddelde",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totaal kleine groep",
+                "berekening": "12 × 9,0",
+                "resultaat": "108 punten",
+                "uitleg": "Aantal leerlingen × gemiddeld cijfer"
+              },
+              {
+                "stap": "Bereken totaal grote groep",
+                "berekening": "28 × 7,5",
+                "resultaat": "210 punten",
+                "uitleg": "Aantal leerlingen × gemiddeld cijfer"
+              },
+              {
+                "stap": "Tel alle punten op",
+                "berekening": "108 + 210",
+                "resultaat": "318 punten",
+                "uitleg": "Som van alle punten"
+              },
+              {
+                "stap": "Bereken gemiddelde",
+                "berekening": "318 ÷ 40",
+                "resultaat": "7,95",
+                "uitleg": "Totale punten gedeeld door totaal aantal leerlingen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "cijfer",
+            "logica_check": "7,95 is logisch: tussen 7,5 en 9,0, dichter bij 7,5 omdat de grote groep meer leerlingen heeft",
+            "antwoord": "7,95"
+          }
+        }
+      }
+    ],
+    "sub_theme": "gewogen gemiddelde"
+  },
+  {
+    "id": 446,
+    "title": "Restaurant beoordelingen",
+    "theme": "gemiddelde",
+    "content": "Een restaurant krijgt beoordelingen van klanten. In week 1 komen 50 klanten met een gemiddelde beoordeling van 4,2 sterren. In week 2 komen 30 klanten met een gemiddelde beoordeling van 4,8 sterren.",
+    "questions": [
+      {
+        "question": "Wat is de gemiddelde beoordeling van beide weken samen?",
+        "options": [
+          {
+            "text": "4,3 sterren",
+            "foutanalyse": "Dit is te laag. Controleer je berekening nog eens."
+          },
+          {
+            "text": "4,425 sterren",
+            "foutanalyse": ""
+          },
+          {
+            "text": "4,5 sterren",
+            "foutanalyse": "Je hebt het gemiddelde van 4,2 en 4,8 berekend: (4,2 + 4,8) ÷ 2. Maar week 1 heeft meer klanten, dus die week telt zwaarder mee!"
+          },
+          {
+            "text": "4,8 sterren",
+            "foutanalyse": "Dit is alleen de beoordeling van week 2. Vergeet week 1 niet!"
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Bij een gewogen gemiddelde weeg je elk gemiddelde naar het aantal observaties (klanten).",
+          "berekening": [
+            "Totaal sterren week 1: 50 × 4,2 = 210 sterren",
+            "Totaal sterren week 2: 30 × 4,8 = 144 sterren",
+            "Totaal sterren: 210 + 144 = 354 sterren",
+            "Totaal klanten: 50 + 30 = 80",
+            "Gemiddelde: 354 ÷ 80 = 4,425 sterren"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Wat is de gemiddelde beoordeling van beide weken samen?",
+            "tussenstappen": [
+              "Bereken totaal aantal sterren per week",
+              "Tel alle sterren op",
+              "Deel door totaal aantal klanten"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Week 1 klanten": "50",
+              "Week 1 gemiddelde": "4,2 sterren",
+              "Week 2 klanten": "30",
+              "Week 2 gemiddelde": "4,8 sterren"
+            },
+            "tool": "Gewogen gemiddelde",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totaal week 1",
+                "berekening": "50 × 4,2",
+                "resultaat": "210 sterren",
+                "uitleg": "Aantal klanten × gemiddelde beoordeling"
+              },
+              {
+                "stap": "Bereken totaal week 2",
+                "berekening": "30 × 4,8",
+                "resultaat": "144 sterren",
+                "uitleg": "Aantal klanten × gemiddelde beoordeling"
+              },
+              {
+                "stap": "Tel alle sterren op",
+                "berekening": "210 + 144",
+                "resultaat": "354 sterren",
+                "uitleg": "Som van alle sterren"
+              },
+              {
+                "stap": "Bereken gemiddelde",
+                "berekening": "354 ÷ 80",
+                "resultaat": "4,425 sterren",
+                "uitleg": "Totaal sterren gedeeld door totaal aantal klanten"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "sterren",
+            "logica_check": "4,425 sterren is logisch: tussen 4,2 en 4,8, dichter bij 4,2 omdat week 1 meer klanten had",
+            "antwoord": "4,425 sterren"
+          }
+        }
+      }
+    ],
+    "sub_theme": "gewogen gemiddelde"
+  },
+  {
+    "id": 447,
+    "title": "Twee zwemclubs",
+    "theme": "gemiddelde",
+    "content": "Twee zwemclubs vergelijken hun trainingstijden. Club Oranje heeft 18 zwemmers met een gemiddelde trainingstijd van 3,5 uur per week. Club Groen heeft 12 zwemmers met een gemiddelde trainingstijd van 4,5 uur per week.",
+    "questions": [
+      {
+        "question": "Wat is de gemiddelde trainingstijd van alle zwemmers samen?",
+        "options": [
+          {
+            "text": "3,8 uur",
+            "foutanalyse": "Controleer je berekening. Heb je het totaal aantal uren correct berekend?"
+          },
+          {
+            "text": "3,9 uur",
+            "foutanalyse": ""
+          },
+          {
+            "text": "4,0 uur",
+            "foutanalyse": "Je hebt het gemiddelde van 3,5 en 4,5 berekend: (3,5 + 4,5) ÷ 2. Maar club Oranje heeft meer zwemmers, dus die telt zwaarder mee!"
+          },
+          {
+            "text": "4,2 uur",
+            "foutanalyse": "Dit is te hoog. Club Oranje heeft meer zwemmers en een lager gemiddelde."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Bij een gewogen gemiddelde moet je rekening houden met het aantal observaties per groep.",
+          "berekening": [
+            "Totaal uren club Oranje: 18 × 3,5 = 63 uur",
+            "Totaal uren club Groen: 12 × 4,5 = 54 uur",
+            "Totaal uren: 63 + 54 = 117 uur",
+            "Totaal zwemmers: 18 + 12 = 30",
+            "Gemiddelde: 117 ÷ 30 = 3,9 uur"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Wat is de gemiddelde trainingstijd van alle zwemmers samen?",
+            "tussenstappen": [
+              "Bereken totaal aantal uren per club",
+              "Tel alle uren op",
+              "Deel door totaal aantal zwemmers"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Club Oranje zwemmers": "18",
+              "Club Oranje gemiddelde": "3,5 uur",
+              "Club Groen zwemmers": "12",
+              "Club Groen gemiddelde": "4,5 uur"
+            },
+            "tool": "Gewogen gemiddelde",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totaal club Oranje",
+                "berekening": "18 × 3,5",
+                "resultaat": "63 uur",
+                "uitleg": "Aantal zwemmers × gemiddelde trainingstijd"
+              },
+              {
+                "stap": "Bereken totaal club Groen",
+                "berekening": "12 × 4,5",
+                "resultaat": "54 uur",
+                "uitleg": "Aantal zwemmers × gemiddelde trainingstijd"
+              },
+              {
+                "stap": "Tel alle uren op",
+                "berekening": "63 + 54",
+                "resultaat": "117 uur",
+                "uitleg": "Som van alle uren"
+              },
+              {
+                "stap": "Bereken gemiddelde",
+                "berekening": "117 ÷ 30",
+                "resultaat": "3,9 uur",
+                "uitleg": "Totale uren gedeeld door totaal aantal zwemmers"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "uur",
+            "logica_check": "3,9 uur is logisch: tussen 3,5 en 4,5, dichter bij 3,5 omdat club Oranje meer zwemmers heeft",
+            "antwoord": "3,9 uur"
+          }
+        }
+      }
+    ],
+    "sub_theme": "gewogen gemiddelde"
+  },
+  {
+    "id": 448,
+    "title": "Twee winkels",
+    "theme": "gemiddelde",
+    "content": "Twee winkels vergelijken hun verkopen. Winkel A heeft 8 verkopers met een gemiddelde omzet van €2.500 per maand. Winkel B heeft 12 verkopers met een gemiddelde omzet van €2.000 per maand.",
+    "questions": [
+      {
+        "question": "Wat is de gemiddelde omzet per verkoper voor beide winkels samen?",
+        "options": [
+          {
+            "text": "€2.100",
+            "foutanalyse": "Controleer je berekening nog eens. Heb je alle bedragen correct opgeteld?"
+          },
+          {
+            "text": "€2.200",
+            "foutanalyse": ""
+          },
+          {
+            "text": "€2.250",
+            "foutanalyse": "Je hebt het gemiddelde van €2.500 en €2.000 berekend: (2.500 + 2.000) ÷ 2. Maar winkel B heeft meer verkopers, dus die telt zwaarder mee!"
+          },
+          {
+            "text": "€2.400",
+            "foutanalyse": "Dit is te hoog. Winkel B heeft meer verkopers en een lagere omzet."
+          }
+        ],
+        "correct": 1,
+        "extra_info": {
+          "concept": "Bij een gewogen gemiddelde vermenigvuldig je elk gemiddelde met het aantal observaties.",
+          "berekening": [
+            "Totaal omzet winkel A: 8 × €2.500 = €20.000",
+            "Totaal omzet winkel B: 12 × €2.000 = €24.000",
+            "Totaal omzet: €20.000 + €24.000 = €44.000",
+            "Totaal verkopers: 8 + 12 = 20",
+            "Gemiddelde: €44.000 ÷ 20 = €2.200"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Wat is de gemiddelde omzet per verkoper voor beide winkels samen?",
+            "tussenstappen": [
+              "Bereken totale omzet per winkel",
+              "Tel alle omzet op",
+              "Deel door totaal aantal verkopers"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Winkel A verkopers": "8",
+              "Winkel A gemiddelde": "€2.500",
+              "Winkel B verkopers": "12",
+              "Winkel B gemiddelde": "€2.000"
+            },
+            "tool": "Gewogen gemiddelde",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totaal winkel A",
+                "berekening": "8 × €2.500",
+                "resultaat": "€20.000",
+                "uitleg": "Aantal verkopers × gemiddelde omzet"
+              },
+              {
+                "stap": "Bereken totaal winkel B",
+                "berekening": "12 × €2.000",
+                "resultaat": "€24.000",
+                "uitleg": "Aantal verkopers × gemiddelde omzet"
+              },
+              {
+                "stap": "Tel alle omzet op",
+                "berekening": "€20.000 + €24.000",
+                "resultaat": "€44.000",
+                "uitleg": "Som van alle omzet"
+              },
+              {
+                "stap": "Bereken gemiddelde",
+                "berekening": "€44.000 ÷ 20",
+                "resultaat": "€2.200",
+                "uitleg": "Totale omzet gedeeld door totaal aantal verkopers"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro",
+            "logica_check": "€2.200 is logisch: tussen €2.000 en €2.500, dichter bij €2.000 omdat winkel B meer verkopers heeft",
+            "antwoord": "€2.200"
+          }
+        }
+      }
+    ],
+    "sub_theme": "gewogen gemiddelde"
   }
 ]
