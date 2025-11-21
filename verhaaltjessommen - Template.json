@@ -27615,7 +27615,19 @@
             "Werkelijkheid: 60 km = 60.000 meter = 6.000.000 cm",
             "Schaal: 1 : (6.000.000 ÷ 6) = 1 : 1.000.000",
             "Check: 6 cm × 1.000.000 = 6.000.000 cm = 60 km ✓"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:1.000.000",
+            "kolommen": [
+              {"waarde": 6, "eenheid": "cm", "label": "kaart"},
+              {"waarde": 6000000, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 60, "eenheid": "km", "label": "werkelijk (km)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×1.000.000", "uitleg": "Schaal 1:1.000.000"}
+            ]
+          }
         }
       },
       {
@@ -27728,7 +27740,19 @@
             "Werkelijkheid: 12 meter = 1200 cm",
             "Schaal: 1 : (1200 ÷ 30) = 1 : 40",
             "Check: 30 cm × 40 = 1200 cm = 12 meter ✓"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:40",
+            "kolommen": [
+              {"waarde": 30, "eenheid": "cm", "label": "maquette"},
+              {"waarde": 1200, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 12, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×40", "uitleg": "Schaal 1:40"}
+            ]
+          }
         }
       },
       {
@@ -27846,7 +27870,19 @@
             "Werkelijkheid: 4,5 km = 4500 meter = 450.000 cm",
             "Schaal: 1 : (450.000 ÷ 15) = 1 : 30.000",
             "Check: 15 cm × 30.000 = 450.000 cm = 4,5 km ✓"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:30.000",
+            "kolommen": [
+              {"waarde": 15, "eenheid": "cm", "label": "kaart"},
+              {"waarde": 450000, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 4.5, "eenheid": "km", "label": "werkelijk (km)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×30.000", "uitleg": "Schaal 1:30.000"}
+            ]
+          }
         }
       },
       {
@@ -31816,7 +31852,19 @@
             "Echte auto: 4 meter = 400 cm",
             "Schaal: 1 : (400 ÷ 10) = 1 : 40",
             "Check: 10 cm × 40 = 400 cm = 4 meter ✓"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:40",
+            "kolommen": [
+              {"waarde": 10, "eenheid": "cm", "label": "model"},
+              {"waarde": 400, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 4, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×40", "uitleg": "Schaal 1:40"}
+            ]
+          }
         }
       },
       {
@@ -31934,7 +31982,19 @@
             "Werkelijkheid: 210 cm",
             "Schaal: 1:50, dus delen door 50",
             "Op tekening: 210 ÷ 50 = 4,2 cm"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:50",
+            "kolommen": [
+              {"waarde": 4.2, "eenheid": "cm", "label": "tekening"},
+              {"waarde": 210, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 2.1, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×50", "uitleg": "Schaal 1:50"}
+            ]
+          }
         }
       },
       {
@@ -32003,7 +32063,19 @@
             "Op plattegrond: 12 cm",
             "Schaal: 1:25, dus vermenigvuldigen met 25",
             "Werkelijkheid: 12 × 25 = 300 cm = 3 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:25",
+            "kolommen": [
+              {"waarde": 12, "eenheid": "cm", "label": "plattegrond"},
+              {"waarde": 300, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 3, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×25", "uitleg": "Schaal 1:25"}
+            ]
+          }
         }
       },
       {
@@ -32114,7 +32186,19 @@
             "Model: 60 cm",
             "Schaal: 1 : (30.000 ÷ 60) = 1 : 500",
             "Check: 60 cm × 500 = 30.000 cm = 300 meter ✓"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:500",
+            "kolommen": [
+              {"waarde": 60, "eenheid": "cm", "label": "model"},
+              {"waarde": 30000, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 300, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×500", "uitleg": "Schaal 1:500"}
+            ]
+          }
         }
       },
       {
@@ -32183,7 +32267,19 @@
             "Op model: 15 cm",
             "Schaal: 1:87, dus vermenigvuldigen met 87",
             "Werkelijkheid: 15 × 87 = 1.305 cm = 13,05 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:87",
+            "kolommen": [
+              {"waarde": 15, "eenheid": "cm", "label": "model"},
+              {"waarde": 1305, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 13.05, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×87", "uitleg": "Schaal 1:87"}
+            ]
+          }
         }
       },
       {
@@ -32293,7 +32389,19 @@
             "Op kaart: 7 cm",
             "Schaal: 1:20.000, dus vermenigvuldigen met 20.000",
             "Werkelijkheid: 7 × 20.000 = 140.000 cm = 1.400 meter = 1,4 km"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:20000",
+            "kolommen": [
+              {"waarde": 7, "eenheid": "cm", "label": "kaart"},
+              {"waarde": 140000, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 1.4, "eenheid": "km", "label": "werkelijk (kilometers)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×20000", "uitleg": "Schaal 1:20000"}
+            ]
+          }
         }
       },
       {
@@ -32362,7 +32470,19 @@
             "Op kaart: 8 cm",
             "Schaal: 1:25.000, dus vermenigvuldigen met 25.000",
             "Werkelijkheid: 8 × 25.000 = 200.000 cm = 2.000 meter = 2 km"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:25000",
+            "kolommen": [
+              {"waarde": 8, "eenheid": "cm", "label": "kaart"},
+              {"waarde": 200000, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 2, "eenheid": "km", "label": "werkelijk (kilometers)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×25000", "uitleg": "Schaal 1:25000"}
+            ]
+          }
         }
       },
       {
@@ -32481,7 +32601,19 @@
             "In poppenhuis: 15 cm",
             "Schaal: 1:12, dus vermenigvuldigen met 12",
             "Werkelijkheid: 15 × 12 = 180 cm = 1,8 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:12",
+            "kolommen": [
+              {"waarde": 15, "eenheid": "cm", "label": "poppenhuis"},
+              {"waarde": 180, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 1.8, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×12", "uitleg": "Schaal 1:12"}
+            ]
+          }
         }
       },
       {
@@ -32551,7 +32683,19 @@
             "Op tekening: 50 cm",
             "Schaal: 1 : (2.500 ÷ 50) = 1 : 50",
             "Check: 50 cm × 50 = 2.500 cm = 25 meter ✓"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:50",
+            "kolommen": [
+              {"waarde": 50, "eenheid": "cm", "label": "tekening"},
+              {"waarde": 2500, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 25, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×50", "uitleg": "Schaal 1:50"}
+            ]
+          }
         }
       },
       {
@@ -32670,7 +32814,19 @@
             "Op model: 30 cm",
             "Schaal: 1:20, dus vermenigvuldigen met 20",
             "Werkelijkheid: 30 × 20 = 600 cm = 6 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:20",
+            "kolommen": [
+              {"waarde": 30, "eenheid": "cm", "label": "model"},
+              {"waarde": 600, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 6, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×20", "uitleg": "Schaal 1:20"}
+            ]
+          }
         }
       },
       {
@@ -32739,7 +32895,19 @@
             "Op plattegrond: 4 cm",
             "Schaal: 1:500, dus vermenigvuldigen met 500",
             "Werkelijkheid: 4 × 500 = 2.000 cm = 20 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:500",
+            "kolommen": [
+              {"waarde": 4, "eenheid": "cm", "label": "plattegrond"},
+              {"waarde": 2000, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 20, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×500", "uitleg": "Schaal 1:500"}
+            ]
+          }
         }
       },
       {
@@ -32851,7 +33019,19 @@
             "Op kaart: 9 cm",
             "Schaal: 1:50.000, dus vermenigvuldigen met 50.000",
             "Werkelijkheid: 9 × 50.000 = 450.000 cm = 4.500 meter = 4,5 km"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:50000",
+            "kolommen": [
+              {"waarde": 9, "eenheid": "cm", "label": "kaart"},
+              {"waarde": 450000, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 4.5, "eenheid": "km", "label": "werkelijk (kilometers)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×50000", "uitleg": "Schaal 1:50000"}
+            ]
+          }
         }
       },
       {
@@ -32920,7 +33100,19 @@
             "Op plattegrond: 15 cm",
             "Schaal: 1:20, dus vermenigvuldigen met 20",
             "Werkelijkheid: 15 × 20 = 300 cm = 3 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:20",
+            "kolommen": [
+              {"waarde": 15, "eenheid": "cm", "label": "plattegrond"},
+              {"waarde": 300, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 3, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×20", "uitleg": "Schaal 1:20"}
+            ]
+          }
         }
       },
       {
@@ -33032,7 +33224,19 @@
             "Op plattegrond: 5 cm",
             "Schaal: 1:400, dus vermenigvuldigen met 400",
             "Werkelijkheid: 5 × 400 = 2.000 cm = 20 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:400",
+            "kolommen": [
+              {"waarde": 5, "eenheid": "cm", "label": "plattegrond"},
+              {"waarde": 2000, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 20, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×400", "uitleg": "Schaal 1:400"}
+            ]
+          }
         }
       },
       {
@@ -33101,7 +33305,19 @@
             "Op plattegrond: 6 cm",
             "Schaal: 1:250, dus vermenigvuldigen met 250",
             "Werkelijkheid: 6 × 250 = 1.500 cm = 15 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:250",
+            "kolommen": [
+              {"waarde": 6, "eenheid": "cm", "label": "plattegrond"},
+              {"waarde": 1500, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 15, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×250", "uitleg": "Schaal 1:250"}
+            ]
+          }
         }
       },
       {
@@ -33213,7 +33429,19 @@
             "Op model: 42 cm",
             "Schaal: 1:72, dus vermenigvuldigen met 72",
             "Werkelijkheid: 42 × 72 = 3.024 cm = 30,24 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:72",
+            "kolommen": [
+              {"waarde": 42, "eenheid": "cm", "label": "model"},
+              {"waarde": 3024, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 30.24, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×72", "uitleg": "Schaal 1:72"}
+            ]
+          }
         }
       },
       {
@@ -33282,7 +33510,19 @@
             "Op foto: 2 cm",
             "Schaal: 1:5.000, dus vermenigvuldigen met 5.000",
             "Werkelijkheid: 2 × 5.000 = 10.000 cm = 100 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:5000",
+            "kolommen": [
+              {"waarde": 2, "eenheid": "cm", "label": "foto"},
+              {"waarde": 10000, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 100, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×5000", "uitleg": "Schaal 1:5000"}
+            ]
+          }
         }
       },
       {
@@ -33394,7 +33634,19 @@
             "Poppetje: 10 cm",
             "Schaal: 1:18, dus vermenigvuldigen met 18",
             "Werkelijkheid: 10 × 18 = 180 cm = 1,8 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:18",
+            "kolommen": [
+              {"waarde": 10, "eenheid": "cm", "label": "speelgoed"},
+              {"waarde": 180, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 1.8, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×18", "uitleg": "Schaal 1:18"}
+            ]
+          }
         }
       },
       {
@@ -33463,7 +33715,19 @@
             "Op kaart: 18 cm",
             "Schaal: 1:100.000, dus vermenigvuldigen met 100.000",
             "Werkelijkheid: 18 × 100.000 = 1.800.000 cm = 18.000 meter = 18 km"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:100000",
+            "kolommen": [
+              {"waarde": 18, "eenheid": "cm", "label": "kaart"},
+              {"waarde": 1800000, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 18, "eenheid": "km", "label": "werkelijk (kilometers)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×100000", "uitleg": "Schaal 1:100000"}
+            ]
+          }
         }
       },
       {
@@ -33532,7 +33796,19 @@
             "Op maquette: 50 cm",
             "Schaal: 1:60, dus vermenigvuldigen met 60",
             "Werkelijkheid: 50 × 60 = 3.000 cm = 30 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:60",
+            "kolommen": [
+              {"waarde": 50, "eenheid": "cm", "label": "maquette"},
+              {"waarde": 3000, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 30, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×60", "uitleg": "Schaal 1:60"}
+            ]
+          }
         }
       },
       {
@@ -33644,7 +33920,19 @@
             "Op plattegrond: 13 cm",
             "Schaal: 1:800, dus vermenigvuldigen met 800",
             "Werkelijkheid: 13 × 800 = 10.400 cm = 104 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:800",
+            "kolommen": [
+              {"waarde": 13, "eenheid": "cm", "label": "plattegrond"},
+              {"waarde": 10400, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 104, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×800", "uitleg": "Schaal 1:800"}
+            ]
+          }
         }
       },
       {
@@ -33713,7 +34001,19 @@
             "Op kaart: 4,5 cm",
             "Schaal: 1:10.000, dus vermenigvuldigen met 10.000",
             "Werkelijkheid: 4,5 × 10.000 = 45.000 cm = 450 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:10000",
+            "kolommen": [
+              {"waarde": 4.5, "eenheid": "cm", "label": "kaart"},
+              {"waarde": 45000, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 450, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×10000", "uitleg": "Schaal 1:10000"}
+            ]
+          }
         }
       },
       {
@@ -33831,7 +34131,19 @@
             "Op plattegrond: 10 cm",
             "Schaal: 1:200, dus vermenigvuldigen met 200",
             "Werkelijkheid: 10 × 200 = 2.000 cm = 20 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:200",
+            "kolommen": [
+              {"waarde": 10, "eenheid": "cm", "label": "plattegrond"},
+              {"waarde": 2000, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 20, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×200", "uitleg": "Schaal 1:200"}
+            ]
+          }
         }
       },
       {
@@ -33900,7 +34212,19 @@
             "Op model: 80 cm",
             "Schaal: 1:400, dus vermenigvuldigen met 400",
             "Werkelijkheid: 80 × 400 = 32.000 cm = 320 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:400",
+            "kolommen": [
+              {"waarde": 80, "eenheid": "cm", "label": "model"},
+              {"waarde": 32000, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 320, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×400", "uitleg": "Schaal 1:400"}
+            ]
+          }
         }
       },
       {
@@ -33969,7 +34293,19 @@
             "Op plattegrond: 18 cm",
             "Schaal: 1:150, dus vermenigvuldigen met 150",
             "Werkelijkheid: 18 × 150 = 2.700 cm = 27 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:150",
+            "kolommen": [
+              {"waarde": 18, "eenheid": "cm", "label": "plattegrond"},
+              {"waarde": 2700, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 27, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×150", "uitleg": "Schaal 1:150"}
+            ]
+          }
         }
       },
       {
@@ -34038,7 +34374,19 @@
             "Op racebaan: 50 cm",
             "Schaal: 1:32, dus vermenigvuldigen met 32",
             "Werkelijkheid: 50 × 32 = 1.600 cm = 16 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:32",
+            "kolommen": [
+              {"waarde": 50, "eenheid": "cm", "label": "racebaan"},
+              {"waarde": 1600, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 16, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×32", "uitleg": "Schaal 1:32"}
+            ]
+          }
         }
       },
       {
@@ -34107,7 +34455,19 @@
             "Op kaart: 6 cm",
             "Schaal: 1:15.000, dus vermenigvuldigen met 15.000",
             "Werkelijkheid: 6 × 15.000 = 90.000 cm = 900 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:15000",
+            "kolommen": [
+              {"waarde": 6, "eenheid": "cm", "label": "kaart"},
+              {"waarde": 90000, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 900, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×15000", "uitleg": "Schaal 1:15000"}
+            ]
+          }
         }
       },
       {
@@ -34176,7 +34536,19 @@
             "Op plattegrond: 70 cm",
             "Schaal: 1:600, dus vermenigvuldigen met 600",
             "Werkelijkheid: 70 × 600 = 42.000 cm = 420 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:600",
+            "kolommen": [
+              {"waarde": 70, "eenheid": "cm", "label": "plattegrond"},
+              {"waarde": 42000, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 420, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×600", "uitleg": "Schaal 1:600"}
+            ]
+          }
         }
       },
       {
@@ -34245,7 +34617,19 @@
             "Op Lego: 1,2 cm",
             "Schaal: 1:100, dus vermenigvuldigen met 100",
             "Werkelijkheid: 1,2 × 100 = 120 cm = 1,2 meter"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:100",
+            "kolommen": [
+              {"waarde": 1.2, "eenheid": "cm", "label": "Lego"},
+              {"waarde": 120, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 1.2, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×100", "uitleg": "Schaal 1:100"}
+            ]
+          }
         }
       },
       {
@@ -34314,7 +34698,19 @@
             "Op wereldbol: 30 cm",
             "Schaal: 1:42.000.000, dus vermenigvuldigen met 42.000.000",
             "Werkelijkheid: 30 × 42.000.000 = 1.260.000.000 cm = 12.600 km"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:42000000",
+            "kolommen": [
+              {"waarde": 30, "eenheid": "cm", "label": "wereldbol"},
+              {"waarde": 1260000000, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 12600, "eenheid": "km", "label": "werkelijk (kilometers)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×42000000", "uitleg": "Schaal 1:42000000"}
+            ]
+          }
         }
       },
       {
