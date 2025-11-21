@@ -21005,7 +21005,61 @@
         }
       }
     ],
-    "sub_theme": "inhoud en volume"
+    "sub_theme": "inhoud en volume",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "5 cm onder de rand"
+        ],
+        "hoofdvraag": "Hoeveel liter water past er in het aquarium?",
+        "tussenstappen": [
+          "Bepaal de werkelijke hoogte van het water (50 - 5 cm)",
+          "Bereken het volume in cm³",
+          "Converteer cm³ naar dm³ en vervolgens naar liters"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Lengte": "80 cm",
+          "Breedte": "40 cm",
+          "Hoogte aquarium": "50 cm",
+          "Ruimte boven": "5 cm",
+          "Werkelijke waterhoogte": "45 cm"
+        },
+        "tool": "Volume = lengte × breedte × hoogte",
+        "conversies": [
+          "1 liter = 1 dm³ = 1000 cm³",
+          "1 dm = 10 cm"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken waterhoogte",
+            "berekening": "50 - 5",
+            "resultaat": "45 cm",
+            "uitleg": "Trek de lege ruimte af van totale hoogte"
+          },
+          {
+            "stap": "Bereken volume in cm³",
+            "berekening": "80 × 40 × 45",
+            "resultaat": "144.000 cm³",
+            "uitleg": "Vermenigvuldig lengte × breedte × hoogte"
+          },
+          {
+            "stap": "Converteer naar dm³ (liters)",
+            "berekening": "144.000 ÷ 1000",
+            "resultaat": "144 dm³ = 144 liter",
+            "uitleg": "Deel door 1000 omdat 1 dm³ = 1000 cm³"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "liter of dm³",
+        "logica_check": "144 liter is logisch voor een aquarium van deze afmetingen",
+        "antwoord": "144 liter (= 144 dm³)"
+      }
+    }
   },
   {
     "id": 232,
@@ -21140,7 +21194,64 @@
         }
       }
     ],
-    "sub_theme": "inhoud en volume"
+    "sub_theme": "inhoud en volume",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "Het is april",
+          "De kraan is van chroom"
+        ],
+        "hoofdvraag": "Hoeveel liter verf is er nodig voor de vier muren?",
+        "tussenstappen": [
+          "Bereken de oppervlakte van elke muur",
+          "Tel alle muren bij elkaar op",
+          "Deel door dekking per liter (8 m²)"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Lengte kamer": "6 meter",
+          "Breedte kamer": "4,5 meter",
+          "Hoogte muren": "2,5 meter",
+          "Dekking per liter": "8 m²"
+        },
+        "tool": "Oppervlakte = lengte × hoogte, en optellen voor alle muren",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken oppervlakte lange muren (2 stuks)",
+            "berekening": "2 × (6 × 2,5)",
+            "resultaat": "30 m²",
+            "uitleg": "Er zijn 2 muren van 6 meter lang en 2,5 meter hoog"
+          },
+          {
+            "stap": "Bereken oppervlakte korte muren (2 stuks)",
+            "berekening": "2 × (4,5 × 2,5)",
+            "resultaat": "22,5 m²",
+            "uitleg": "Er zijn 2 muren van 4,5 meter breed en 2,5 meter hoog"
+          },
+          {
+            "stap": "Bereken totale oppervlakte",
+            "berekening": "30 + 22,5",
+            "resultaat": "52,5 m²",
+            "uitleg": "Tel alle muren bij elkaar op"
+          },
+          {
+            "stap": "Bereken benodigde liters verf",
+            "berekening": "52,5 ÷ 8",
+            "resultaat": "6,5625 liter (minimaal 7 liter)",
+            "uitleg": "Deel totale oppervlakte door dekking per liter"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "m² en liter",
+        "logica_check": "52,5 m² is logisch voor een kamer van deze afmetingen. Je kunt geen halve liter kopen, dus 7 liter",
+        "antwoord": "52,5 m² totaal, minimaal 7 liter verf nodig"
+      }
+    }
   },
   {
     "id": 234,
@@ -26183,7 +26294,65 @@
         }
       }
     ],
-    "sub_theme": "oppervlakte en eenheden"
+    "sub_theme": "oppervlakte en eenheden",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "Een pak tegels kost €45,00"
+        ],
+        "hoofdvraag": "Hoeveel tegels zijn er nodig voor het terras?",
+        "tussenstappen": [
+          "Converteer terrasafmetingen naar cm",
+          "Bereken oppervlakte terras in cm²",
+          "Bereken oppervlakte van één tegel",
+          "Deel terrasoppervlakte door tegeloppervlakte"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Lengte terras": "6 meter = 600 cm",
+          "Breedte terras": "4 meter = 400 cm",
+          "Zijde tegel": "50 cm"
+        },
+        "tool": "Oppervlakte rechthoek = lengte × breedte",
+        "conversies": [
+          "1 meter = 100 cm"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Converteer terras naar cm",
+            "berekening": "6 m = 600 cm, 4 m = 400 cm",
+            "resultaat": "600 cm × 400 cm",
+            "uitleg": "Vermenigvuldig meters met 100"
+          },
+          {
+            "stap": "Bereken oppervlakte terras in cm²",
+            "berekening": "600 × 400",
+            "resultaat": "240.000 cm²",
+            "uitleg": "Lengte × breedte in centimeters"
+          },
+          {
+            "stap": "Bereken oppervlakte van één tegel",
+            "berekening": "50 × 50",
+            "resultaat": "2500 cm²",
+            "uitleg": "Een vierkante tegel: zijde × zijde"
+          },
+          {
+            "stap": "Bereken aantal benodigde tegels",
+            "berekening": "240.000 ÷ 2500",
+            "resultaat": "96 tegels",
+            "uitleg": "Deel totale oppervlakte door oppervlakte per tegel"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "cm² en aantal tegels",
+        "logica_check": "240.000 cm² = 24 m², wat klopt met 6 × 4 meter. 96 tegels is logisch",
+        "antwoord": "240.000 cm², 96 tegels nodig"
+      }
+    }
   },
   {
     "id": 248,
@@ -26318,7 +26487,59 @@
         }
       }
     ],
-    "sub_theme": "oppervlakte en eenheden"
+    "sub_theme": "oppervlakte en eenheden",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "Een blik verf kost €28,50"
+        ],
+        "hoofdvraag": "Hoeveel m² moet er geschilderd worden en hoeveel blikken verf zijn nodig?",
+        "tussenstappen": [
+          "Converteer afmetingen naar meters",
+          "Bereken oppervlakte in m²",
+          "Deel door dekking per blik (5 m²)"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Lengte": "1500 cm = 15 meter",
+          "Breedte": "800 cm = 8 meter",
+          "Dekking per blik": "5 m²"
+        },
+        "tool": "Oppervlakte = lengte × breedte",
+        "conversies": [
+          "1 meter = 100 cm",
+          "1 cm = 0,01 meter"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Converteer cm naar m",
+            "berekening": "1500 cm ÷ 100 = 15 m, 800 cm ÷ 100 = 8 m",
+            "resultaat": "15 m × 8 m",
+            "uitleg": "Deel door 100 om van cm naar m te converteren"
+          },
+          {
+            "stap": "Bereken oppervlakte in m²",
+            "berekening": "15 × 8",
+            "resultaat": "120 m²",
+            "uitleg": "Vermenigvuldig lengte × breedte"
+          },
+          {
+            "stap": "Bereken aantal blikken verf",
+            "berekening": "120 ÷ 5",
+            "resultaat": "24 blikken",
+            "uitleg": "Deel totale oppervlakte door dekking per blik"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "m² en blikken",
+        "logica_check": "120 m² is een redelijke oppervlakte voor een speelveld. 24 blikken klopt",
+        "antwoord": "120 m² moet geschilderd worden, 24 blikken verf nodig"
+      }
+    }
   },
   {
     "id": 250,
@@ -26386,7 +26607,58 @@
         }
       }
     ],
-    "sub_theme": "volume en eenheden"
+    "sub_theme": "volume en eenheden",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Wat is de inhoud van de regenton en hoeveel liter zit er nu in (driekwart vol)?",
+        "tussenstappen": [
+          "Converteer diameter en hoogte naar dm",
+          "Bereken volume cilinder in dm³",
+          "Bereken driekwart van het volume"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Diameter": "80 cm = 8 dm",
+          "Straal": "40 cm = 4 dm",
+          "Hoogte": "120 cm = 12 dm",
+          "Vulling": "driekwart (3/4 = 0,75)"
+        },
+        "tool": "Volume cilinder = π × r² × h (vereenvoudigd: straal × straal × hoogte × 3,14)",
+        "conversies": [
+          "1 dm = 10 cm",
+          "1 dm³ = 1 liter"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Converteer naar dm",
+            "berekening": "80 cm ÷ 10 = 8 dm, 120 cm ÷ 10 = 12 dm",
+            "resultaat": "Diameter 8 dm (straal 4 dm), hoogte 12 dm",
+            "uitleg": "Deel door 10 om van cm naar dm te converteren"
+          },
+          {
+            "stap": "Bereken volume cilinder in dm³",
+            "berekening": "π × 4² × 12 ≈ 3,14 × 16 × 12",
+            "resultaat": "602,88 dm³ (afgerond 603 dm³)",
+            "uitleg": "Volume cilinder = π × straal² × hoogte"
+          },
+          {
+            "stap": "Bereken driekwart van volume",
+            "berekening": "603 × 0,75 of (603 × 3) ÷ 4",
+            "resultaat": "452,25 dm³ ≈ 452 liter",
+            "uitleg": "Vermenigvuldig totaal volume met 3/4"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "dm³ of liter",
+        "logica_check": "603 liter is een redelijke inhoud voor een regenton. Driekwart daarvan is ongeveer 450 liter",
+        "antwoord": "603 dm³ totaal, 452 liter in de ton (driekwart vol)"
+      }
+    }
   },
   {
     "id": 251,
@@ -28138,7 +28410,80 @@
         }
       }
     ],
-    "sub_theme": "oppervlakte en eenheden"
+    "sub_theme": "oppervlakte en eenheden",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "Een doos kost €32,50"
+        ],
+        "hoofdvraag": "Hoeveel cm² is de vloer en hoeveel dozen tegels zijn nodig (inclusief 10% snijverlies)?",
+        "tussenstappen": [
+          "Converteer vloer naar cm",
+          "Bereken oppervlakte in cm²",
+          "Bereken oppervlakte per tegel",
+          "Bereken aantal tegels met 10% extra",
+          "Bereken aantal dozen"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Lengte vloer": "3,5 m = 350 cm",
+          "Breedte vloer": "2,8 m = 280 cm",
+          "Tegel afmeting": "20 cm × 20 cm",
+          "Tegels per doos": "25 stuks",
+          "Extra voor snijverlies": "10%"
+        },
+        "tool": "Oppervlakte en percentage berekenen",
+        "conversies": [
+          "1 m = 100 cm"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Converteer vloer naar cm",
+            "berekening": "3,5 m = 350 cm, 2,8 m = 280 cm",
+            "resultaat": "350 cm × 280 cm",
+            "uitleg": "Vermenigvuldig meters met 100"
+          },
+          {
+            "stap": "Bereken oppervlakte vloer in cm²",
+            "berekening": "350 × 280",
+            "resultaat": "98.000 cm²",
+            "uitleg": "Lengte × breedte"
+          },
+          {
+            "stap": "Bereken oppervlakte per tegel",
+            "berekening": "20 × 20",
+            "resultaat": "400 cm²",
+            "uitleg": "Vierkante tegel: zijde × zijde"
+          },
+          {
+            "stap": "Bereken aantal tegels zonder snijverlies",
+            "berekening": "98.000 ÷ 400",
+            "resultaat": "245 tegels",
+            "uitleg": "Deel vloeroppervlakte door tegeloppervlakte"
+          },
+          {
+            "stap": "Bereken 10% extra tegels",
+            "berekening": "245 × 1,1",
+            "resultaat": "269,5 ≈ 270 tegels",
+            "uitleg": "Vermenigvuldig met 1,1 voor 10% extra"
+          },
+          {
+            "stap": "Bereken aantal dozen",
+            "berekening": "270 ÷ 25",
+            "resultaat": "10,8 → 11 dozen",
+            "uitleg": "Rond naar boven, je kunt geen losse dozen kopen"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "cm² en dozen",
+        "logica_check": "98.000 cm² = 9,8 m², wat klopt. 11 dozen is logisch met snijverlies",
+        "antwoord": "98.000 cm², minimaal 11 dozen tegels nodig"
+      }
+    }
   },
   {
     "id": 268,
@@ -28273,7 +28618,60 @@
         }
       }
     ],
-    "sub_theme": "volume en eenheden"
+    "sub_theme": "volume en eenheden",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "Een zak kost €4,80"
+        ],
+        "hoofdvraag": "Hoeveel dm³ zand past er in de zandbak en hoeveel zakken zijn nodig?",
+        "tussenstappen": [
+          "Converteer afmetingen naar dm",
+          "Bereken volume in dm³",
+          "Deel door inhoud per zak (50 dm³)"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Lengte": "3 m = 30 dm",
+          "Breedte": "2 m = 20 dm",
+          "Hoogte": "40 cm = 4 dm",
+          "Inhoud per zak": "50 dm³"
+        },
+        "tool": "Volume = lengte × breedte × hoogte",
+        "conversies": [
+          "1 m = 10 dm",
+          "1 dm = 10 cm"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Converteer naar dm",
+            "berekening": "3 m = 30 dm, 2 m = 20 dm, 40 cm = 4 dm",
+            "resultaat": "30 dm × 20 dm × 4 dm",
+            "uitleg": "1 meter = 10 dm, 10 cm = 1 dm"
+          },
+          {
+            "stap": "Bereken volume zandbak in dm³",
+            "berekening": "30 × 20 × 4",
+            "resultaat": "2400 dm³",
+            "uitleg": "Lengte × breedte × hoogte"
+          },
+          {
+            "stap": "Bereken aantal zakken",
+            "berekening": "2400 ÷ 50",
+            "resultaat": "48 zakken",
+            "uitleg": "Deel totaal volume door volume per zak"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "dm³ en zakken",
+        "logica_check": "2400 dm³ = 2400 liter = 2,4 m³, wat logisch is voor een zandbak. 48 zakken klopt",
+        "antwoord": "2400 dm³ zand, 48 zakken nodig"
+      }
+    }
   },
   {
     "id": 270,
@@ -28477,7 +28875,66 @@
         }
       }
     ],
-    "sub_theme": "volume en eenheden"
+    "sub_theme": "volume en eenheden",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Hoeveel m³ asfalt is nodig en wat zijn de totale kosten inclusief 5% extra?",
+        "tussenstappen": [
+          "Converteer dikte naar meters",
+          "Bereken volume in m³",
+          "Bereken 5% extra",
+          "Bereken totale kosten"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Lengte": "25 meter",
+          "Breedte": "18 meter",
+          "Dikte": "8 cm = 0,08 m",
+          "Prijs per m³": "€45,00",
+          "Extra asfalt": "5%"
+        },
+        "tool": "Volume = lengte × breedte × hoogte en percentage berekenen",
+        "conversies": [
+          "1 cm = 0,01 m",
+          "8 cm = 0,08 m"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Converteer dikte naar meters",
+            "berekening": "8 cm = 8 ÷ 100",
+            "resultaat": "0,08 m",
+            "uitleg": "Deel door 100 om van cm naar m te converteren"
+          },
+          {
+            "stap": "Bereken volume zonder extra",
+            "berekening": "25 × 18 × 0,08",
+            "resultaat": "36 m³",
+            "uitleg": "Lengte × breedte × dikte"
+          },
+          {
+            "stap": "Bereken 5% extra asfalt",
+            "berekening": "36 × 1,05",
+            "resultaat": "37,8 m³",
+            "uitleg": "Vermenigvuldig met 1,05 voor 5% extra"
+          },
+          {
+            "stap": "Bereken totale kosten",
+            "berekening": "37,8 × €45",
+            "resultaat": "€1.701,00",
+            "uitleg": "Vermenigvuldig volume inclusief extra met prijs per m³"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "m³ en euro (€)",
+        "logica_check": "36 m³ is logisch voor een parkeerplaats van deze afmetingen. Kosten zijn realistisch",
+        "antwoord": "36 m³ nodig (zonder extra), totale kosten €1.701,00 (inclusief 5% extra)"
+      }
+    }
   },
   {
     "id": 273,
