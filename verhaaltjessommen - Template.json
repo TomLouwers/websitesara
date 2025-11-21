@@ -27286,7 +27286,59 @@
         }
       }
     ],
-    "sub_theme": "plattegronden"
+    "sub_theme": "plattegronden",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "Er zijn 30 kinderen in de klas"
+        ],
+        "hoofdvraag": "Wat is de schaal en hoe breed is het schoolplein op de plattegrond?",
+        "tussenstappen": [
+          "Bereken de schaal: vergelijk tekening met werkelijkheid",
+          "Converteer eenheden (cm naar m)",
+          "Bereken breedte op plattegrond met de schaal"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Gymzaal op tekening": "8 cm",
+          "Gymzaal werkelijkheid": "24 meter",
+          "Schoolplein werkelijkheid": "45 meter"
+        },
+        "tool": "Schaal = tekening : werkelijkheid",
+        "conversies": [
+          "24 meter = 2400 cm",
+          "Schaal 1:n betekent: 1 cm op tekening = n cm werkelijk"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Converteer gymzaal naar cm",
+            "berekening": "24 m = 24 × 100",
+            "resultaat": "2400 cm",
+            "uitleg": "Vermenigvuldig meters met 100 voor cm"
+          },
+          {
+            "stap": "Bereken schaal",
+            "berekening": "8 cm : 2400 cm = 1 : 300",
+            "resultaat": "Schaal 1:300",
+            "uitleg": "Deel beide door 8 om 1:300 te krijgen"
+          },
+          {
+            "stap": "Bereken schoolplein op plattegrond",
+            "berekening": "4500 cm ÷ 300",
+            "resultaat": "15 cm",
+            "uitleg": "45 m = 4500 cm, deel door schaalfactor 300"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "schaal (1:n) en cm",
+        "logica_check": "Schaal 1:300 betekent 1 cm = 3 m. 15 cm × 3 m = 45 m klopt",
+        "antwoord": "Schaal 1:300, schoolplein is 15 cm op plattegrond"
+      }
+    }
   },
   {
     "id": 244,
@@ -27354,7 +27406,52 @@
         }
       }
     ],
-    "sub_theme": "kaarten en schaal"
+    "sub_theme": "kaarten en schaal",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "Het papier is wit"
+        ],
+        "hoofdvraag": "Wat is de schaal en hoe groot is de werkelijke afstand Utrecht-Den Haag?",
+        "tussenstappen": [
+          "Bereken schaal uit gegeven afstanden",
+          "Gebruik schaal om werkelijke afstand te berekenen"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Amsterdam-Rotterdam op kaart": "6 cm",
+          "Amsterdam-Rotterdam werkelijk": "60 km",
+          "Utrecht-Den Haag op kaart": "5 cm"
+        },
+        "tool": "Schaal bepalen en toepassen",
+        "conversies": [
+          "1 km = 100.000 cm",
+          "60 km = 6.000.000 cm"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken schaal",
+            "berekening": "6 cm : 60 km = 1 cm : 10 km = 1:1.000.000",
+            "resultaat": "Schaal 1:1.000.000",
+            "uitleg": "1 cm op kaart = 10 km werkelijk = 1.000.000 cm"
+          },
+          {
+            "stap": "Bereken werkelijke afstand Utrecht-Den Haag",
+            "berekening": "5 cm × 10 km/cm",
+            "resultaat": "50 km",
+            "uitleg": "Vermenigvuldig kaartafstand met 10 km per cm"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "schaal en km",
+        "logica_check": "1:1.000.000 is een gebruikelijke landkaartschaal. 50 km is logisch",
+        "antwoord": "Schaal 1:1.000.000, werkelijke afstand 50 km"
+      }
+    }
   },
   {
     "id": 245,
@@ -27422,7 +27519,57 @@
         }
       }
     ],
-    "sub_theme": "schaal berekeningen"
+    "sub_theme": "schaal berekeningen",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Wat is de schaal en hoe hoog is de voordeur op de maquette?",
+        "tussenstappen": [
+          "Converteer naar dezelfde eenheid",
+          "Bereken schaal uit hoogte huis",
+          "Bereken hoogte voordeur op maquette"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Huis werkelijk": "12 meter",
+          "Huis maquette": "30 cm",
+          "Voordeur werkelijk": "2,4 meter"
+        },
+        "tool": "Schaal berekenen en toepassen",
+        "conversies": [
+          "12 meter = 1200 cm",
+          "2,4 meter = 240 cm"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Converteer naar cm",
+            "berekening": "12 m = 1200 cm",
+            "resultaat": "1200 cm",
+            "uitleg": "Vermenigvuldig meters met 100"
+          },
+          {
+            "stap": "Bereken schaal",
+            "berekening": "30 cm : 1200 cm = 1 : 40",
+            "resultaat": "Schaal 1:40",
+            "uitleg": "Deel beide door 30 om 1:40 te krijgen"
+          },
+          {
+            "stap": "Bereken voordeur op maquette",
+            "berekening": "240 cm ÷ 40",
+            "resultaat": "6 cm",
+            "uitleg": "Deel werkelijke hoogte door schaalfactor"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "schaal en cm",
+        "logica_check": "1:40 is gebruikelijk voor architectuurmaquettes. 6 cm is logisch voor een deur",
+        "antwoord": "Schaal 1:40, voordeur is 6 cm hoog"
+      }
+    }
   },
   {
     "id": 246,
@@ -31461,7 +31608,56 @@
         }
       }
     ],
-    "sub_theme": "schaalmodellen"
+    "sub_theme": "schaalmodellen",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Wat is de schaal en hoe breed is het speelgoedautootje?",
+        "tussenstappen": [
+          "Converteer naar dezelfde eenheid",
+          "Bereken schaal uit lengte",
+          "Bereken breedte speelgoedauto"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Auto werkelijk": "4 meter = 400 cm",
+          "Auto speelgoed": "10 cm",
+          "Breedte werkelijk": "180 cm"
+        },
+        "tool": "Schaal berekenen en toepassen",
+        "conversies": [
+          "4 meter = 400 cm"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Converteer auto naar cm",
+            "berekening": "4 m = 400 cm",
+            "resultaat": "400 cm",
+            "uitleg": "Vermenigvuldig meters met 100"
+          },
+          {
+            "stap": "Bereken schaal",
+            "berekening": "10 cm : 400 cm = 1 : 40",
+            "resultaat": "Schaal 1:40",
+            "uitleg": "Deel beide door 10 om 1:40 te krijgen"
+          },
+          {
+            "stap": "Bereken breedte speelgoedauto",
+            "berekening": "180 cm ÷ 40",
+            "resultaat": "4,5 cm",
+            "uitleg": "Deel werkelijke breedte door schaalfactor"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "schaal en cm",
+        "logica_check": "1:40 is gebruikelijk voor speelgoedauto's. 4,5 cm breedte is realistisch",
+        "antwoord": "Schaal 1:40, speelgoedauto is 4,5 cm breed"
+      }
+    }
   },
   {
     "id": 350,
@@ -31599,7 +31795,48 @@
         }
       }
     ],
-    "sub_theme": "tuinontwerpen"
+    "sub_theme": "tuinontwerpen",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Hoe lang is het grasveld werkelijk en hoe breed is het terras op de plattegrond?",
+        "tussenstappen": [
+          "Gebruik gegeven schaal 1:25",
+          "Bereken werkelijke lengte grasveld (× 25)",
+          "Bereken terras op plattegrond (÷ 25)"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Schaal": "1:25",
+          "Grasveld op plattegrond": "12 cm",
+          "Terras werkelijk": "225 cm"
+        },
+        "tool": "Schaal 1:25 toepassen",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken werkelijke lengte grasveld",
+            "berekening": "12 cm × 25",
+            "resultaat": "300 cm = 3 meter",
+            "uitleg": "Schaal 1:25 betekent: vermenigvuldig met 25"
+          },
+          {
+            "stap": "Bereken terras op plattegrond",
+            "berekening": "225 cm ÷ 25",
+            "resultaat": "9 cm",
+            "uitleg": "Deel werkelijke maat door schaalfactor"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "cm of meter",
+        "logica_check": "3 meter grasveld is logisch. 9 cm op tekening klopt met schaal",
+        "antwoord": "Grasveld 300 cm (3 m) werkelijk, terras 9 cm op plattegrond"
+      }
+    }
   },
   {
     "id": 352,
@@ -31738,7 +31975,48 @@
         }
       }
     ],
-    "sub_theme": "schaalmodellen"
+    "sub_theme": "schaalmodellen",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Hoe lang is de wagon werkelijk en hoe hoog is de modeltrein?",
+        "tussenstappen": [
+          "Gebruik schaal 1:87",
+          "Bereken werkelijke lengte wagon (× 87)",
+          "Bereken hoogte model (÷ 87)"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Schaal": "1:87",
+          "Wagon model": "15 cm",
+          "Trein werkelijk": "174 cm hoog"
+        },
+        "tool": "Schaal 1:87 toepassen (HO-schaal voor treinen)",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken werkelijke lengte wagon",
+            "berekening": "15 cm × 87",
+            "resultaat": "1305 cm = 13,05 meter",
+            "uitleg": "Vermenigvuldig modellengte met schaalfactor"
+          },
+          {
+            "stap": "Bereken hoogte modeltrein",
+            "berekening": "174 cm ÷ 87",
+            "resultaat": "2 cm",
+            "uitleg": "Deel werkelijke hoogte door schaalfactor"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "cm of meter",
+        "logica_check": "13 meter is een realistische wagonlengte. 2 cm modelhoogte klopt",
+        "antwoord": "Wagon 1305 cm (13,05 m) werkelijk, modeltrein 2 cm hoog"
+      }
+    }
   },
   {
     "id": 354,
@@ -31876,7 +32154,57 @@
         }
       }
     ],
-    "sub_theme": "kaarten en schaal"
+    "sub_theme": "kaarten en schaal",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Hoe lang is de wandelroute werkelijk en hoe lang is de andere route op de kaart?",
+        "tussenstappen": [
+          "Gebruik schaal 1:25.000",
+          "Bereken werkelijke lengte (× 25.000)",
+          "Converteer km naar cm en bereken kaartlengte"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Schaal": "1:25.000",
+          "Route 1 op kaart": "8 cm",
+          "Route 2 werkelijk": "3,5 km"
+        },
+        "tool": "Schaal 1:25.000 toepassen",
+        "conversies": [
+          "1 km = 100.000 cm",
+          "1 cm op kaart = 25.000 cm = 250 m = 0,25 km"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken werkelijke lengte route 1",
+            "berekening": "8 cm × 25.000 = 200.000 cm",
+            "resultaat": "2 km",
+            "uitleg": "200.000 cm = 2000 m = 2 km"
+          },
+          {
+            "stap": "Converteer route 2 naar cm",
+            "berekening": "3,5 km = 350.000 cm",
+            "resultaat": "350.000 cm",
+            "uitleg": "Vermenigvuldig km met 100.000"
+          },
+          {
+            "stap": "Bereken lengte op kaart",
+            "berekening": "350.000 ÷ 25.000",
+            "resultaat": "14 cm",
+            "uitleg": "Deel door schaalfactor"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "km en cm",
+        "logica_check": "2 km is een goede wandeling. 14 cm op kaart is handig formaat",
+        "antwoord": "Route 1 is 2 km werkelijk, route 2 is 14 cm op kaart"
+      }
+    }
   },
   {
     "id": 356,
@@ -32015,7 +32343,57 @@
         }
       }
     ],
-    "sub_theme": "bouwtekeningen"
+    "sub_theme": "bouwtekeningen",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Wat is de schaal en hoe breed is het zwembad op de tekening?",
+        "tussenstappen": [
+          "Converteer naar dezelfde eenheid",
+          "Bereken schaal uit lengte zwembad",
+          "Bereken breedte op tekening"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Zwembad werkelijk": "25 meter lang",
+          "Zwembad op tekening": "50 cm lang",
+          "Breedte werkelijk": "10 meter"
+        },
+        "tool": "Schaal berekenen en toepassen",
+        "conversies": [
+          "25 meter = 2500 cm",
+          "10 meter = 1000 cm"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Converteer naar cm",
+            "berekening": "25 m = 2500 cm",
+            "resultaat": "2500 cm",
+            "uitleg": "Vermenigvuldig meters met 100"
+          },
+          {
+            "stap": "Bereken schaal",
+            "berekening": "50 cm : 2500 cm = 1 : 50",
+            "resultaat": "Schaal 1:50",
+            "uitleg": "Deel beide door 50 om 1:50 te krijgen"
+          },
+          {
+            "stap": "Bereken breedte op tekening",
+            "berekening": "1000 cm ÷ 50",
+            "resultaat": "20 cm",
+            "uitleg": "Deel werkelijke breedte door schaalfactor"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "schaal en cm",
+        "logica_check": "1:50 is gebruikelijk voor architectuurtekeningen. 20 cm klopt",
+        "antwoord": "Schaal 1:50, zwembad is 20 cm breed op tekening"
+      }
+    }
   },
   {
     "id": 358,
@@ -32153,7 +32531,50 @@
         }
       }
     ],
-    "sub_theme": "plattegronden"
+    "sub_theme": "plattegronden",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Hoe ver lopen naar apenrots en hoe groot is afstand op plattegrond?",
+        "tussenstappen": [
+          "Gebruik schaal 1:500",
+          "Bereken werkelijke afstand (× 500)",
+          "Bereken afstand op plattegrond (÷ 500)"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Schaal": "1:500",
+          "Ingang-apenrots op plattegrond": "4 cm",
+          "Apenrots-leeuw werkelijk": "35 meter"
+        },
+        "tool": "Schaal 1:500 toepassen",
+        "conversies": [
+          "35 meter = 3500 cm"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken werkelijke afstand naar apenrots",
+            "berekening": "4 cm × 500",
+            "resultaat": "2000 cm = 20 meter",
+            "uitleg": "Vermenigvuldig met schaalfactor"
+          },
+          {
+            "stap": "Bereken afstand apenrots-leeuw op plattegrond",
+            "berekening": "3500 cm ÷ 500",
+            "resultaat": "7 cm",
+            "uitleg": "Deel werkelijke afstand door schaalfactor"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "meter en cm",
+        "logica_check": "20 meter lopen is logisch in een dierentuin. 7 cm op kaart is handig",
+        "antwoord": "20 meter naar apenrots, 7 cm op plattegrond"
+      }
+    }
   },
   {
     "id": 360,
@@ -32291,7 +32712,50 @@
         }
       }
     ],
-    "sub_theme": "plattegronden"
+    "sub_theme": "plattegronden",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "In de kamer staat een bureau"
+        ],
+        "hoofdvraag": "Hoe lang is de kamer werkelijk en hoe breed is het bureau op plattegrond?",
+        "tussenstappen": [
+          "Gebruik schaal 1:20",
+          "Bereken werkelijke lengte kamer (× 20)",
+          "Bereken bureau op plattegrond (÷ 20)"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Schaal": "1:20",
+          "Kamer op plattegrond": "15 cm",
+          "Bureau werkelijk": "120 cm"
+        },
+        "tool": "Schaal 1:20 toepassen",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken werkelijke lengte kamer",
+            "berekening": "15 cm × 20",
+            "resultaat": "300 cm = 3 meter",
+            "uitleg": "Vermenigvuldig met schaalfactor"
+          },
+          {
+            "stap": "Bereken bureau op plattegrond",
+            "berekening": "120 cm ÷ 20",
+            "resultaat": "6 cm",
+            "uitleg": "Deel werkelijke breedte door schaalfactor"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "meter en cm",
+        "logica_check": "3 meter is een normale kamerlengte. 6 cm bureau op tekening klopt",
+        "antwoord": "Kamer 300 cm (3 m) lang, bureau 6 cm op plattegrond"
+      }
+    }
   },
   {
     "id": 362,
@@ -32429,7 +32893,50 @@
         }
       }
     ],
-    "sub_theme": "plattegronden"
+    "sub_theme": "plattegronden",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Hoe lang is de Egyptische zaal en hoe breed is de winkel op plattegrond?",
+        "tussenstappen": [
+          "Gebruik schaal 1:250",
+          "Bereken werkelijke lengte zaal (× 250)",
+          "Bereken winkel op plattegrond (÷ 250)"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Schaal": "1:250",
+          "Egyptische zaal op plattegrond": "6 cm",
+          "Winkel werkelijk": "10 meter"
+        },
+        "tool": "Schaal 1:250 toepassen",
+        "conversies": [
+          "10 meter = 1000 cm"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken werkelijke lengte zaal",
+            "berekening": "6 cm × 250",
+            "resultaat": "1500 cm = 15 meter",
+            "uitleg": "Vermenigvuldig met schaalfactor"
+          },
+          {
+            "stap": "Bereken winkel op plattegrond",
+            "berekening": "1000 cm ÷ 250",
+            "resultaat": "4 cm",
+            "uitleg": "Deel werkelijke breedte door schaalfactor"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "meter en cm",
+        "logica_check": "15 meter is een grote museumzaal. 4 cm op plattegrond is handig",
+        "antwoord": "Egyptische zaal 15 meter lang, winkel 4 cm op plattegrond"
+      }
+    }
   },
   {
     "id": 364,
@@ -32567,7 +33074,50 @@
         }
       }
     ],
-    "sub_theme": "kaarten en schaal"
+    "sub_theme": "kaarten en schaal",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Hoe lang is het voetbalveld en hoe breed is de school op de foto?",
+        "tussenstappen": [
+          "Gebruik schaal 1:5.000",
+          "Bereken werkelijke lengte veld (× 5000)",
+          "Bereken school op foto (÷ 5000)"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Schaal": "1:5.000",
+          "Voetbalveld op foto": "2 cm",
+          "School werkelijk": "40 meter"
+        },
+        "tool": "Schaal 1:5.000 toepassen",
+        "conversies": [
+          "40 meter = 4000 cm"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken werkelijke lengte voetbalveld",
+            "berekening": "2 cm × 5000",
+            "resultaat": "10.000 cm = 100 meter",
+            "uitleg": "Vermenigvuldig met schaalfactor"
+          },
+          {
+            "stap": "Bereken school op foto",
+            "berekening": "4000 cm ÷ 5000",
+            "resultaat": "0,8 cm = 8 mm",
+            "uitleg": "Deel werkelijke breedte door schaalfactor"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "meter en cm",
+        "logica_check": "100 meter is een standaard voetbalveld. 0,8 cm is klein maar klopt voor luchtfoto",
+        "antwoord": "Voetbalveld 100 meter lang, school 0,8 cm op foto"
+      }
+    }
   },
   {
     "id": 366,
@@ -32774,7 +33324,50 @@
         }
       }
     ],
-    "sub_theme": "schaalmodellen"
+    "sub_theme": "schaalmodellen",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Hoe hoog is de echte toren en hoe breed is de slotgracht op maquette?",
+        "tussenstappen": [
+          "Gebruik schaal 1:60",
+          "Bereken werkelijke hoogte toren (× 60)",
+          "Bereken slotgracht op maquette (÷ 60)"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Schaal": "1:60",
+          "Toren op maquette": "50 cm",
+          "Slotgracht werkelijk": "12 meter"
+        },
+        "tool": "Schaal 1:60 toepassen",
+        "conversies": [
+          "12 meter = 1200 cm"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken werkelijke hoogte toren",
+            "berekening": "50 cm × 60",
+            "resultaat": "3000 cm = 30 meter",
+            "uitleg": "Vermenigvuldig met schaalfactor"
+          },
+          {
+            "stap": "Bereken slotgracht op maquette",
+            "berekening": "1200 cm ÷ 60",
+            "resultaat": "20 cm",
+            "uitleg": "Deel werkelijke breedte door schaalfactor"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "meter en cm",
+        "logica_check": "30 meter is een indrukwekkende kasteeltoren. 20 cm slotgracht op maquette klopt",
+        "antwoord": "Toren 30 meter hoog, slotgracht 20 cm op maquette"
+      }
+    }
   },
   {
     "id": 369,
@@ -32912,7 +33505,56 @@
         }
       }
     ],
-    "sub_theme": "kaarten en schaal"
+    "sub_theme": "kaarten en schaal",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Hoe lang is het rechte stuk en hoe lang is het hele circuit op de kaart?",
+        "tussenstappen": [
+          "Gebruik schaal 1:10.000",
+          "Bereken werkelijke lengte recht stuk (× 10.000)",
+          "Converteer circuit naar cm en bereken op kaart (÷ 10.000)"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Schaal": "1:10.000",
+          "Recht stuk op kaart": "4,5 cm",
+          "Circuit werkelijk": "4,2 km"
+        },
+        "tool": "Schaal 1:10.000 toepassen",
+        "conversies": [
+          "4,2 km = 420.000 cm"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken werkelijke lengte recht stuk",
+            "berekening": "4,5 cm × 10.000",
+            "resultaat": "45.000 cm = 450 meter",
+            "uitleg": "Vermenigvuldig met schaalfactor"
+          },
+          {
+            "stap": "Converteer circuit naar cm",
+            "berekening": "4,2 km = 420.000 cm",
+            "resultaat": "420.000 cm",
+            "uitleg": "Vermenigvuldig km met 100.000"
+          },
+          {
+            "stap": "Bereken circuit op kaart",
+            "berekening": "420.000 cm ÷ 10.000",
+            "resultaat": "42 cm",
+            "uitleg": "Deel werkelijke lengte door schaalfactor"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "meter/km en cm",
+        "logica_check": "450 meter recht stuk is realistisch voor circuit. 42 cm op kaart is handig formaat",
+        "antwoord": "Recht stuk 450 meter lang, circuit 42 cm op kaart"
+      }
+    }
   },
   {
     "id": 371,
