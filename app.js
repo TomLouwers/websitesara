@@ -766,13 +766,19 @@ function generateProgressTrackerTable() {
     let totalIncorrect = 0;
     let totalLovaClicks = 0;
 
-    sortedCategories.forEach((category, index) => {
+    let visibleRowIndex = 0;
+    sortedCategories.forEach((category) => {
         const stats = categoryProgress[category];
         totalCorrect += stats.correct;
         totalIncorrect += stats.incorrect;
         totalLovaClicks += stats.lovaClicks;
 
-        const bgColor = index % 2 === 0 ? '#f8f8f8' : '#ffffff';
+        // Skip rows where no questions were practiced (all values are 0)
+        if (stats.correct === 0 && stats.incorrect === 0 && stats.lovaClicks === 0) {
+            return;
+        }
+
+        const bgColor = visibleRowIndex % 2 === 0 ? '#f8f8f8' : '#ffffff';
         tableHtml += `
             <tr style="background-color: ${bgColor};">
                 <td style="padding: 10px; border: 1px solid #ddd; font-weight: 500;">${category}</td>
@@ -781,6 +787,7 @@ function generateProgressTrackerTable() {
                 <td style="padding: 10px; border: 1px solid #ddd; text-align: center; color: var(--secondary-color); font-weight: bold;">${stats.lovaClicks}</td>
             </tr>
         `;
+        visibleRowIndex++;
     });
 
     // Add totals row
