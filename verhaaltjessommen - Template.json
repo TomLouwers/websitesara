@@ -24308,7 +24308,53 @@
         }
       }
     ],
-    "sub_theme": "tijden over middernacht"
+    "sub_theme": "tijden over middernacht",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "In de trein kun je slapen"
+        ],
+        "hoofdvraag": "Hoe laat komt de trein aan en hoeveel minuten na middernacht?",
+        "tussenstappen": [
+          "Tel 6 uur en 40 minuten op bij 23:45 uur",
+          "Houd rekening met de overgang naar de volgende dag (middernacht)",
+          "Bereken hoeveel minuten na middernacht"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Vertrektijd": "23:45 uur",
+          "Reisduur": "6 uur en 40 minuten",
+          "Middernacht": "00:00 uur (24:00 uur)"
+        },
+        "tool": "Tijd optellen en overgaan naar nieuwe dag",
+        "conversies": [
+          "6 uur en 40 minuten = 400 minuten",
+          "23:45 + 0:15 = 24:00 (00:00)"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Tel 6 uur en 40 minuten bij 23:45 op",
+            "berekening": "23:45 + 6:40",
+            "resultaat": "06:25 uur (de volgende dag)",
+            "uitleg": "23:45 + 15 min = 00:00, dan nog 6:25 erbij"
+          },
+          {
+            "stap": "Bereken minuten na middernacht",
+            "berekening": "6 uur × 60 + 25 minuten",
+            "resultaat": "385 minuten na middernacht",
+            "uitleg": "Van 00:00 tot 06:25 zijn 6 uur en 25 minuten = 385 minuten"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "tijd (uur:minuten) en minuten",
+        "logica_check": "06:25 is logisch voor een nachttrein. 385 minuten = 6u25m klopt",
+        "antwoord": "06:25 uur aankomst, 385 minuten na middernacht"
+      }
+    }
   },
   {
     "id": 240,
@@ -24382,7 +24428,56 @@
         }
       }
     ],
-    "sub_theme": "tijd en snelheid"
+    "sub_theme": "tijd en snelheid",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "Elk uur wordt er 15 minuten muziek gedraaid"
+        ],
+        "hoofdvraag": "Hoe lang duurt het feest en hoeveel minuten muziek?",
+        "tussenstappen": [
+          "Bereken tijdsduur van 22:30 tot 02:15",
+          "Bepaal aantal hele uren",
+          "Vermenigvuldig aantal uren met 15 minuten muziek"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Start": "31 december 22:30 uur",
+          "Einde": "1 januari 02:15 uur",
+          "Muziek per uur": "15 minuten"
+        },
+        "tool": "Tijdsduur berekenen over middernacht",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken duur van het feest",
+            "berekening": "Van 22:30 tot 00:00 = 1u30m, van 00:00 tot 02:15 = 2u15m",
+            "resultaat": "3 uur en 45 minuten",
+            "uitleg": "1u30m + 2u15m = 3u45m"
+          },
+          {
+            "stap": "Bepaal aantal hele uren",
+            "berekening": "Van 22:30 tot 02:15 = 4 overgangen (23:00, 00:00, 01:00, 02:00)",
+            "resultaat": "4 uur met muziek",
+            "uitleg": "Er zijn 4 hele uren waarin muziek wordt gedraaid"
+          },
+          {
+            "stap": "Bereken totale muziektijd",
+            "berekening": "4 × 15 minuten",
+            "resultaat": "60 minuten muziek",
+            "uitleg": "4 uur × 15 minuten per uur"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "uren en minuten",
+        "logica_check": "3u45m is logisch voor een nieuwjaarsfeest. 60 minuten = 1 uur muziek totaal",
+        "antwoord": "3 uur en 45 minuten, 60 minuten muziek"
+      }
+    }
   },
   {
     "id": 241,
@@ -24453,7 +24548,57 @@
         }
       }
     ],
-    "sub_theme": "tijd en snelheid"
+    "sub_theme": "tijd en snelheid",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Hoeveel km heeft Lisa afgelegd als Tom vertrekt en hoe laat haalt Tom Lisa in?",
+        "tussenstappen": [
+          "Bereken afstand Lisa in eerste 30 minuten",
+          "Bepaal wanneer Tom Lisa inhaalt (voorsprong / snelheidsverschil)",
+          "Bereken tijdstip van inhalen"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Afstand totaal": "45 km",
+          "Lisa vertrekt": "09:00 uur, 15 km/u",
+          "Tom vertrekt": "09:30 uur, 20 km/u",
+          "Tijdsverschil": "30 minuten = 0,5 uur"
+        },
+        "tool": "Afstand = snelheid × tijd, Inhalen: voorsprong ÷ snelheidsverschil",
+        "conversies": [
+          "30 minuten = 0,5 uur"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken afstand Lisa na 30 minuten",
+            "berekening": "15 km/u × 0,5 uur",
+            "resultaat": "7,5 km",
+            "uitleg": "Lisa fietst een half uur voordat Tom start"
+          },
+          {
+            "stap": "Bereken tijd tot inhalen",
+            "berekening": "7,5 km ÷ (20 - 15) km/u = 7,5 ÷ 5",
+            "resultaat": "1,5 uur",
+            "uitleg": "Tom haalt per uur 5 km in. Voor 7,5 km voorsprong duurt dat 1,5 uur"
+          },
+          {
+            "stap": "Bereken tijdstip van inhalen",
+            "berekening": "09:30 + 1,5 uur",
+            "resultaat": "11:00 uur",
+            "uitleg": "Tom start om 09:30 en haalt na 1,5 uur in"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "kilometer en tijd",
+        "logica_check": "7,5 km is logisch voor 30 min fietsen. 11:00 uur is realistisch voor inhalen",
+        "antwoord": "7,5 km afgelegd, Tom haalt in om 11:00 uur"
+      }
+    }
   },
   {
     "id": 242,
@@ -24587,7 +24732,56 @@
         }
       }
     ],
-    "sub_theme": "snelheid en afstand"
+    "sub_theme": "snelheid en afstand",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Hoeveel minuten doet Lisa erover en hoe laat is ze op school?",
+        "tussenstappen": [
+          "Bereken tijd = afstand ÷ snelheid",
+          "Converteer uren naar minuten",
+          "Tel minuten bij vertrektijd op"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Afstand": "4 km",
+          "Snelheid": "12 km/u",
+          "Vertrektijd": "08:10 uur"
+        },
+        "tool": "Tijd = afstand ÷ snelheid",
+        "conversies": [
+          "1 uur = 60 minuten"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken tijd in uren",
+            "berekening": "4 km ÷ 12 km/u",
+            "resultaat": "1/3 uur",
+            "uitleg": "Tijd = afstand gedeeld door snelheid"
+          },
+          {
+            "stap": "Converteer naar minuten",
+            "berekening": "1/3 uur × 60 minuten",
+            "resultaat": "20 minuten",
+            "uitleg": "1/3 van een uur is 20 minuten"
+          },
+          {
+            "stap": "Bereken aankomsttijd",
+            "berekening": "08:10 + 20 minuten",
+            "resultaat": "08:30 uur",
+            "uitleg": "Tel 20 minuten bij vertrektijd op"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "minuten en tijd",
+        "logica_check": "20 minuten is logisch voor 4 km fietsen op 12 km/u. 08:30 klopt",
+        "antwoord": "20 minuten fietsen, 08:30 uur aankomst"
+      }
+    }
   },
   {
     "id": 320,
@@ -24721,7 +24915,56 @@
         }
       }
     ],
-    "sub_theme": "snelheid berekenen"
+    "sub_theme": "snelheid berekenen",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Wat is de snelheid in km/u en hoe lang voor 2 rondjes?",
+        "tussenstappen": [
+          "Converteer 24 minuten naar uren",
+          "Bereken snelheid = afstand ÷ tijd",
+          "Bereken tijd voor 2 rondjes"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Afstand per rondje": "3 km",
+          "Tijd per rondje": "24 minuten",
+          "Aantal rondjes": "2"
+        },
+        "tool": "Snelheid = afstand ÷ tijd",
+        "conversies": [
+          "24 minuten = 24/60 uur = 0,4 uur"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Converteer tijd naar uren",
+            "berekening": "24 minuten ÷ 60",
+            "resultaat": "0,4 uur",
+            "uitleg": "24 minuten is 24/60 = 0,4 uur"
+          },
+          {
+            "stap": "Bereken snelheid",
+            "berekening": "3 km ÷ 0,4 uur",
+            "resultaat": "7,5 km/u",
+            "uitleg": "Snelheid = afstand gedeeld door tijd"
+          },
+          {
+            "stap": "Bereken tijd voor 2 rondjes",
+            "berekening": "2 × 24 minuten",
+            "resultaat": "48 minuten",
+            "uitleg": "Bij gelijke snelheid duurt 2 rondjes 2× zo lang"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "km/u en minuten",
+        "logica_check": "7,5 km/u is een redelijke hardloopsnelheid. 48 minuten = 2 × 24 klopt",
+        "antwoord": "7,5 km/u gemiddelde snelheid, 48 minuten voor 2 rondjes"
+      }
+    }
   },
   {
     "id": 322,
@@ -24858,7 +25101,55 @@
         }
       }
     ],
-    "sub_theme": "tijd en pauzes"
+    "sub_theme": "tijd en pauzes",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Hoeveel uur duurt de wandeling en hoe laat zijn ze klaar (met pauze)?",
+        "tussenstappen": [
+          "Bereken tijd = afstand ÷ snelheid",
+          "Tel wandeltijd en pauzetijd op",
+          "Tel totale tijd bij starttijd op"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Afstand": "15 km",
+          "Snelheid": "5 km/u",
+          "Starttijd": "10:30 uur",
+          "Pauze": "30 minuten"
+        },
+        "tool": "Tijd = afstand ÷ snelheid",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken wandeltijd",
+            "berekening": "15 km ÷ 5 km/u",
+            "resultaat": "3 uur",
+            "uitleg": "Tijd = afstand gedeeld door snelheid"
+          },
+          {
+            "stap": "Bereken totale tijd inclusief pauze",
+            "berekening": "3 uur + 30 minuten",
+            "resultaat": "3 uur en 30 minuten",
+            "uitleg": "Tel wandeltijd en pauze bij elkaar op"
+          },
+          {
+            "stap": "Bereken eindtijd",
+            "berekening": "10:30 + 3u30m",
+            "resultaat": "14:00 uur",
+            "uitleg": "Tel totale tijd bij starttijd op"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "uren en tijd",
+        "logica_check": "3 uur wandelen is logisch voor 15 km. 14:00 uur eindtijd klopt",
+        "antwoord": "3 uur wandeltijd, klaar om 14:00 uur"
+      }
+    }
   },
   {
     "id": 324,
@@ -24994,7 +25285,54 @@
         }
       }
     ],
-    "sub_theme": "gemiddelde snelheid"
+    "sub_theme": "gemiddelde snelheid",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Wat is de gemiddelde snelheid op dag 1 en over beide dagen?",
+        "tussenstappen": [
+          "Bereken snelheid dag 1 = afstand ÷ tijd",
+          "Bereken totale afstand en totale tijd",
+          "Bereken gemiddelde snelheid over beide dagen"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Dag 1": "45 km in 3 uur",
+          "Dag 2": "60 km in 4 uur",
+          "Totaal": "105 km in 7 uur"
+        },
+        "tool": "Gemiddelde snelheid = totale afstand ÷ totale tijd",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken snelheid dag 1",
+            "berekening": "45 km ÷ 3 uur",
+            "resultaat": "15 km/u",
+            "uitleg": "Snelheid = afstand gedeeld door tijd"
+          },
+          {
+            "stap": "Bereken totalen",
+            "berekening": "45 + 60 = 105 km, 3 + 4 = 7 uur",
+            "resultaat": "105 km in 7 uur",
+            "uitleg": "Tel afstanden en tijden bij elkaar op"
+          },
+          {
+            "stap": "Bereken gemiddelde snelheid over beide dagen",
+            "berekening": "105 km ÷ 7 uur",
+            "resultaat": "15 km/u",
+            "uitleg": "Totale afstand gedeeld door totale tijd"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "km/u",
+        "logica_check": "15 km/u beide keren is toevallig gelijk. Dag 2: 60÷4 = 15 km/u ook",
+        "antwoord": "15 km/u op dag 1, 15 km/u gemiddeld over beide dagen"
+      }
+    }
   },
   {
     "id": 326,
@@ -25128,7 +25466,47 @@
         }
       }
     ],
-    "sub_theme": "grote snelheden"
+    "sub_theme": "grote snelheden",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Hoeveel uur duurt de vlucht en hoe laat landt het vliegtuig?",
+        "tussenstappen": [
+          "Bereken tijd = afstand ÷ snelheid",
+          "Tel vliegtijd bij vertrektijd op"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Afstand": "1200 km",
+          "Snelheid": "600 km/u",
+          "Vertrektijd": "11:30 uur"
+        },
+        "tool": "Tijd = afstand ÷ snelheid",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken vliegtijd",
+            "berekening": "1200 km ÷ 600 km/u",
+            "resultaat": "2 uur",
+            "uitleg": "Tijd = afstand gedeeld door snelheid"
+          },
+          {
+            "stap": "Bereken landingstijd",
+            "berekening": "11:30 + 2 uur",
+            "resultaat": "13:30 uur",
+            "uitleg": "Tel vliegtijd bij vertrektijd op"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "uren en tijd",
+        "logica_check": "2 uur is logisch voor een vlucht naar Barcelona. 13:30 klopt",
+        "antwoord": "2 uur vlucht, landing om 13:30 uur"
+      }
+    }
   },
   {
     "id": 328,
@@ -25263,7 +25641,56 @@
         }
       }
     ],
-    "sub_theme": "meerdere trajecten"
+    "sub_theme": "meerdere trajecten",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "Vanwege files"
+        ],
+        "hoofdvraag": "Hoeveel uur duurt het eerste deel en de gehele reis?",
+        "tussenstappen": [
+          "Bereken tijd eerste deel (140 km op 70 km/u)",
+          "Bereken tijd tweede deel (70 km op 50 km/u)",
+          "Tel beide tijden bij elkaar op"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Totale afstand": "210 km",
+          "Eerste deel": "140 km op 70 km/u",
+          "Tweede deel": "70 km op 50 km/u"
+        },
+        "tool": "Tijd = afstand ÷ snelheid voor elk deel",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken tijd eerste deel",
+            "berekening": "140 km ÷ 70 km/u",
+            "resultaat": "2 uur",
+            "uitleg": "Tijd = afstand gedeeld door snelheid"
+          },
+          {
+            "stap": "Bereken tijd tweede deel",
+            "berekening": "70 km ÷ 50 km/u",
+            "resultaat": "1,4 uur = 1 uur en 24 minuten",
+            "uitleg": "0,4 uur = 0,4 × 60 = 24 minuten"
+          },
+          {
+            "stap": "Bereken totale reistijd",
+            "berekening": "2 uur + 1,4 uur",
+            "resultaat": "3,4 uur = 3 uur en 24 minuten",
+            "uitleg": "Tel beide tijden bij elkaar op"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "uren",
+        "logica_check": "2 uur voor eerste deel is logisch. Totaal 3,4 uur klopt",
+        "antwoord": "2 uur eerste deel, 3,4 uur (3u24m) totale reis"
+      }
+    }
   },
   {
     "id": 330,
@@ -25398,7 +25825,56 @@
         }
       }
     ],
-    "sub_theme": "snelheidsvergelijking"
+    "sub_theme": "snelheidsvergelijking",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Hoeveel minuten doet de sneltrein erover en hoeveel sneller is deze?",
+        "tussenstappen": [
+          "Bereken tijd sneltrein in uren",
+          "Bereken tijd stoptrein in uren",
+          "Converteer naar minuten en bereken verschil"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Afstand": "90 km",
+          "Sneltrein": "120 km/u",
+          "Stoptrein": "60 km/u"
+        },
+        "tool": "Tijd = afstand ÷ snelheid",
+        "conversies": [
+          "1 uur = 60 minuten"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken tijd sneltrein",
+            "berekening": "90 km ÷ 120 km/u = 0,75 uur",
+            "resultaat": "45 minuten",
+            "uitleg": "0,75 uur × 60 = 45 minuten"
+          },
+          {
+            "stap": "Bereken tijd stoptrein",
+            "berekening": "90 km ÷ 60 km/u = 1,5 uur",
+            "resultaat": "90 minuten",
+            "uitleg": "1,5 uur × 60 = 90 minuten"
+          },
+          {
+            "stap": "Bereken tijdsverschil",
+            "berekening": "90 - 45",
+            "resultaat": "45 minuten sneller",
+            "uitleg": "Sneltrein is 45 minuten sneller dan stoptrein"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "minuten",
+        "logica_check": "45 minuten voor sneltrein is logisch. 2× zo snel = helft van de tijd",
+        "antwoord": "45 minuten sneltrein, 45 minuten sneller dan stoptrein"
+      }
+    }
   },
   {
     "id": 332,
@@ -25534,7 +26010,57 @@
         }
       }
     ],
-    "sub_theme": "meerdere stops"
+    "sub_theme": "meerdere stops",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "Elke rit is 3 kilometer"
+        ],
+        "hoofdvraag": "Hoeveel minuten fietsen en hoeveel totaal inclusief aflevertijd?",
+        "tussenstappen": [
+          "Bereken totale fietstijd (4 ritten × 12 minuten)",
+          "Bereken totale aflevertijd (3 stops × 3 minuten)",
+          "Tel fiets- en aflevertijd bij elkaar op"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Aantal ritten": "4",
+          "Tijd per rit": "12 minuten fietsen",
+          "Aflevertijd per stop": "3 minuten",
+          "Aantal stops": "3 (tussen de 4 ritten)"
+        },
+        "tool": "Vermenigvuldigen en optellen",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken totale fietstijd",
+            "berekening": "4 × 12 minuten",
+            "resultaat": "48 minuten fietsen",
+            "uitleg": "4 ritten van elk 12 minuten"
+          },
+          {
+            "stap": "Bereken totale aflevertijd",
+            "berekening": "4 × 3 minuten",
+            "resultaat": "12 minuten afleveren",
+            "uitleg": "Bij elke bestemming 3 minuten aflever tijd"
+          },
+          {
+            "stap": "Bereken totale tijd",
+            "berekening": "48 + 12",
+            "resultaat": "60 minuten totaal",
+            "uitleg": "Tel fietstijd en aflevertijd bij elkaar op"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "minuten",
+        "logica_check": "48 minuten fietsen + 12 minuten afleveren = 60 minuten (1 uur) totaal",
+        "antwoord": "48 minuten fietsen, 60 minuten totale bezorgronde"
+      }
+    }
   },
   {
     "id": 334,
@@ -25737,7 +26263,55 @@
         }
       }
     ],
-    "sub_theme": "route met pauze"
+    "sub_theme": "route met pauze",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Hoeveel uur is de postbode onderweg en hoe laat is hij klaar?",
+        "tussenstappen": [
+          "Bereken tijd = afstand ÷ snelheid",
+          "Converteer naar uren en minuten",
+          "Tel fietstijd en pauze bij starttijd op"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Afstand": "24 km",
+          "Snelheid": "16 km/u",
+          "Starttijd": "08:00 uur",
+          "Pauze": "15 minuten"
+        },
+        "tool": "Tijd = afstand ÷ snelheid",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken fietstijd",
+            "berekening": "24 km ÷ 16 km/u",
+            "resultaat": "1,5 uur = 1 uur en 30 minuten",
+            "uitleg": "Tijd = afstand gedeeld door snelheid"
+          },
+          {
+            "stap": "Bereken totale tijd inclusief pauze",
+            "berekening": "1u30m + 15 minuten",
+            "resultaat": "1 uur en 45 minuten",
+            "uitleg": "Tel fietstijd en pauze bij elkaar op"
+          },
+          {
+            "stap": "Bereken eindtijd",
+            "berekening": "08:00 + 1u45m",
+            "resultaat": "09:45 uur",
+            "uitleg": "Tel totale tijd bij starttijd op"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "uren en tijd",
+        "logica_check": "1,5 uur fietsen is logisch voor 24 km. 09:45 klopt met pauze",
+        "antwoord": "1,5 uur onderweg, klaar om 09:45 uur"
+      }
+    }
   },
   {
     "id": 337,
@@ -25941,7 +26515,51 @@
         }
       }
     ],
-    "sub_theme": "eenheden omrekenen"
+    "sub_theme": "eenheden omrekenen",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "In de bergen"
+        ],
+        "hoofdvraag": "Hoeveel meter per minuut en wat is de snelheid in km/u?",
+        "tussenstappen": [
+          "Bereken snelheid in m/min = afstand ÷ tijd",
+          "Converteer naar km/u"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Afstand": "3600 meter",
+          "Tijd": "9 minuten"
+        },
+        "tool": "Snelheid = afstand ÷ tijd",
+        "conversies": [
+          "1 km = 1000 meter",
+          "1 uur = 60 minuten"
+        ]
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken snelheid in m/min",
+            "berekening": "3600 meter ÷ 9 minuten",
+            "resultaat": "400 meter per minuut",
+            "uitleg": "Snelheid = afstand gedeeld door tijd"
+          },
+          {
+            "stap": "Converteer naar km/u",
+            "berekening": "400 m/min × 60 min/uur ÷ 1000 m/km",
+            "resultaat": "24 km/u",
+            "uitleg": "400 × 60 = 24.000 meter/uur = 24 km/u"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "meter per minuut en km/u",
+        "logica_check": "400 m/min is logisch voor een kabelbaan. 24 km/u klopt",
+        "antwoord": "400 meter per minuut, 24 km/u"
+      }
+    }
   },
   {
     "id": 340,
@@ -26144,7 +26762,54 @@
         }
       }
     ],
-    "sub_theme": "bergop en bergaf"
+    "sub_theme": "bergop en bergaf",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Hoeveel uur duurt het bergop deel en de hele route?",
+        "tussenstappen": [
+          "Bereken tijd bergop (28 km op 14 km/u)",
+          "Bereken tijd bergaf (14 km op 28 km/u)",
+          "Tel beide tijden bij elkaar op"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Totale afstand": "42 km",
+          "Bergop": "28 km op 14 km/u",
+          "Bergaf": "14 km op 28 km/u"
+        },
+        "tool": "Tijd = afstand ÷ snelheid voor elk deel",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken tijd bergop",
+            "berekening": "28 km ÷ 14 km/u",
+            "resultaat": "2 uur",
+            "uitleg": "Tijd = afstand gedeeld door snelheid"
+          },
+          {
+            "stap": "Bereken tijd bergaf",
+            "berekening": "14 km ÷ 28 km/u",
+            "resultaat": "0,5 uur = 30 minuten",
+            "uitleg": "14 gedeeld door 28 = 0,5 uur"
+          },
+          {
+            "stap": "Bereken totale tijd",
+            "berekening": "2 uur + 0,5 uur",
+            "resultaat": "2,5 uur = 2 uur en 30 minuten",
+            "uitleg": "Tel beide tijden bij elkaar op"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "uren",
+        "logica_check": "2 uur bergop is logisch (langzaam). 30 min bergaf (snel). Totaal 2,5u klopt",
+        "antwoord": "2 uur bergop, 2,5 uur totale route"
+      }
+    }
   },
   {
     "id": 343,
