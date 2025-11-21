@@ -292,9 +292,30 @@
         "extra_info": {
           "concept": "Dit is een verhoudingsprobleem: de verhouding tussen de ingrediënten blijft hetzelfde, maar je moet alles met dezelfde factor vermenigvuldigen.",
           "berekening": [
-            "De verhouding is 12:8, wat vereenvoudigd 3:2 is (of 1,5 keer zoveel)",
-            "200 gram × 1,5 = 300 gram bloem"
-          ]
+            "VERHOUDINGSTABEL Recept opschalen",
+            "",
+            "               ×1,5",
+            "  personen │   8   →   12",
+            "     bloem │  200g →  300g",
+            "",
+            "Uitleg:",
+            "• Schaalfactor = 12 ÷ 8 = 1,5 keer zoveel",
+            "• Alle ingrediënten × 1,5",
+            "• Bloem: 200 gram × 1,5 = 300 gram"
+          ],
+          "verhoudingstabel": {
+            "type": "schaalfactor",
+            "factor": 1.5,
+            "kolommen": [
+              {"waarde": 8, "eenheid": "personen", "label": "origineel"},
+              {"waarde": 12, "eenheid": "personen", "label": "nieuw"},
+              {"waarde": 200, "eenheid": "gram", "label": "bloem origineel"},
+              {"waarde": 300, "eenheid": "gram", "label": "bloem nieuw", "berekening": "200 × 1,5"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×1,5", "uitleg": "12 personen is 1,5× zoveel als 8"}
+            ]
+          }
         },
         "lova": {
           "stap1_lezen": {
@@ -606,10 +627,31 @@
         "extra_info": {
           "concept": "Dit is een berekenprobleem waarbij je stap voor stap moet werken.",
           "berekening": [
-            "Bereken eerst welk percentage stripboeken zijn: 100% - 35% - 45% = 20%",
-            "Bereken 20% van 800: 0,20 × 800 = 160 stripboeken",
-            "Of: (20 ÷ 100) × 800 = 160 stripboeken"
-          ]
+            "VERHOUDINGSTABEL Verdeling 800 boeken",
+            "",
+            "                35%     45%     20%   = 100%",
+            "              ─────   ─────   ─────",
+            " kinderboek │  280",
+            "      roman │          360",
+            " stripboek │                  160",
+            "              ─────   ─────   ─────",
+            "   totaal   │  280  +  360  +  160  =  800",
+            "",
+            "Uitleg:",
+            "• Eerst restpercentage: 100% - 35% - 45% = 20%",
+            "• Dan berekenen: 20% van 800 = 0,20 × 800 = 160",
+            "• Of: (20 ÷ 100) × 800 = 160 stripboeken"
+          ],
+          "verhoudingstabel": {
+            "type": "percentage_verdeling",
+            "totaal": 800,
+            "eenheid": "boeken",
+            "categorieën": [
+              {"label": "kinderboek", "percentage": 35, "aantal": 280, "berekening": "35% van 800"},
+              {"label": "roman", "percentage": 45, "aantal": 360, "berekening": "45% van 800"},
+              {"label": "stripboek", "percentage": 20, "aantal": 160, "berekening": "20% van 800"}
+            ]
+          }
         },
         "lova": {
           "stap1_lezen": {
@@ -9043,10 +9085,36 @@
         "extra_info": {
           "concept": "Dit is een verhoudingsprobleem: de verhouding tussen de ingrediënten blijft hetzelfde, maar je moet alles met dezelfde factor vermenigvuldigen.",
           "berekening": [
-            "Je hebt 300 ml melk, dat is 3 delen",
-            "1 deel = 300 ÷ 3 = 100",
-            "Bloem is 2 delen: 2 × 100 = 200 gram"
-          ]
+            "VERHOUDINGSTABEL melk:bloem = 3:2",
+            "",
+            "          ÷3        ×2",
+            "  melk │  300  →  100  →  bloem",
+            " delen │   3   →   1   →   2",
+            "  gram │           ↓",
+            "       │         200 gram",
+            "",
+            "Uitleg:",
+            "• Melk heeft 3 delen = 300 ml",
+            "• 1 deel = 300 ÷ 3 = 100",
+            "• Bloem heeft 2 delen = 2 × 100 = 200 gram"
+          ],
+          "verhoudingstabel": {
+            "type": "verhouding",
+            "ratio": "3:2",
+            "labels": ["melk", "delen", "bloem"],
+            "kolommen": [
+              {"waarde": 300, "eenheid": "ml", "label": "gegeven", "rij": "melk"},
+              {"waarde": 3, "eenheid": "delen", "label": "verhouding", "rij": "delen"},
+              {"waarde": 100, "eenheid": "ml", "label": "1 deel", "rij": "melk", "berekening": "300 ÷ 3"},
+              {"waarde": 1, "eenheid": "deel", "label": "1 deel", "rij": "delen"},
+              {"waarde": 200, "eenheid": "gram", "label": "antwoord", "rij": "bloem", "berekening": "2 × 100"},
+              {"waarde": 2, "eenheid": "delen", "label": "verhouding", "rij": "delen"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 2, "operatie": "÷3", "uitleg": "Bereken 1 deel"},
+              {"van": 2, "naar": 4, "operatie": "×2", "uitleg": "Bloem is 2 delen"}
+            ]
+          }
         }
       },
       {
@@ -27250,10 +27318,30 @@
         "extra_info": {
           "concept": "Dit is een schaalberekening: de schaal 1:100 betekent dat 1 cm op de tekening gelijk is aan 100 cm in werkelijkheid.",
           "berekening": [
-            "In werkelijkheid: 24 meter = 2400 cm",
-            "Schaal: 1 : (2400 ÷ 8) = 1 : 300",
-            "Check: 8 cm × 300 = 2400 cm = 24 meter ✓"
-          ]
+            "VERHOUDINGSTABEL Schaal 1:300",
+            "",
+            "              ×300",
+            "  tekening │  8 cm  →  2400 cm",
+            "werkelijk │            24 m",
+            "",
+            "Uitleg:",
+            "• Eerst omrekenen: 24 meter = 2400 cm",
+            "• Schaal berekenen: 2400 ÷ 8 = 300",
+            "• Dus schaal 1:300 (1 cm op tekening = 300 cm werkelijk)",
+            "• Check: 8 cm × 300 = 2400 cm ✓"
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:300",
+            "kolommen": [
+              {"waarde": 8, "eenheid": "cm", "label": "tekening"},
+              {"waarde": 2400, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 24, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×300", "uitleg": "Schaal 1:300"}
+            ]
+          }
         }
       },
       {
