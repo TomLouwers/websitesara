@@ -871,11 +871,35 @@
         ],
         "correct": 2,
         "extra_info": {
-          "concept": "Dit is een breukberekening: deel het aantal op in gelijke delen en bereken welk deel je nodig hebt. Vereenvoudig waar mogelijk.",
+          "concept": "Dit is een terugrekenen met percentages: als je weet dat een bedrag al een korting heeft, moet je terugrekenen naar 100% door te delen door het percentage.",
           "berekening": [
             "Bereken: als 75% = €125,00, dan is 100% = ?",
-            "(€125,00 ÷ 75) × 100 = €166,67 (afgerond)"
-          ]
+            "(€125,00 ÷ 75) × 100 = €166,67 (afgerond)",
+            "",
+            "Of met decimalen:",
+            "€125,00 ÷ 0,75 = €166,67"
+          ],
+          "verhoudingstabel": {
+            "type": "percentage_verdeling",
+            "totaal": 166.67,
+            "eenheid": "euro",
+            "categorieën": [
+              {
+                "label": "korting (25%)",
+                "percentage": 25,
+                "aantal": 41.67,
+                "kleur": "#ef4444",
+                "berekening": "25% van €166,67"
+              },
+              {
+                "label": "te betalen (75%)",
+                "percentage": 75,
+                "aantal": 125.00,
+                "kleur": "#22c55e",
+                "berekening": "75% van €166,67 = €125"
+              }
+            ]
+          }
         },
         "lova": {
           "stap1_lezen": {
@@ -10257,12 +10281,77 @@
         ],
         "correct": 2,
         "extra_info": {
-          "concept": "Dit is een schaalberekening: de schaal 1:100 betekent dat 1 cm op de tekening gelijk is aan 100 cm in werkelijkheid.",
+          "concept": "Dit is een verhoudingsprobleem met 3 categorieën. Je moet eerst uitrekenen hoeveel 1 deel is, en dan vermenigvuldigen voor elk onderdeel.",
           "berekening": [
             "Appels: 24 = 6 delen",
             "1 deel = 24 ÷ 6 = 4 stuks fruit",
             "Peren: 4 delen = 4 × 4 = 16 peren"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "verhouding",
+            "ratio": "6:4:5",
+            "labels": ["appels", "delen", "peren", "sinaasappels"],
+            "kolommen": [
+              {
+                "waarde": 24,
+                "eenheid": "stuks",
+                "label": "gegeven",
+                "rij": "appels",
+                "kleur": "#ef4444"
+              },
+              {
+                "waarde": 6,
+                "eenheid": "delen",
+                "label": "verhouding",
+                "rij": "delen",
+                "kleur": "#f59e0b"
+              },
+              {
+                "waarde": 4,
+                "eenheid": "stuks",
+                "label": "1 deel",
+                "rij": "appels",
+                "kleur": "#ef4444",
+                "berekening": "24 ÷ 6"
+              },
+              {
+                "waarde": 1,
+                "eenheid": "deel",
+                "label": "1 deel",
+                "rij": "delen",
+                "kleur": "#f59e0b"
+              },
+              {
+                "waarde": 16,
+                "eenheid": "stuks",
+                "label": "antwoord",
+                "rij": "peren",
+                "kleur": "#22c55e",
+                "berekening": "4 × 4"
+              },
+              {
+                "waarde": 4,
+                "eenheid": "delen",
+                "label": "verhouding",
+                "rij": "delen",
+                "kleur": "#f59e0b"
+              }
+            ],
+            "operaties": [
+              {
+                "van": 0,
+                "naar": 2,
+                "operatie": "÷6",
+                "uitleg": "Bereken 1 deel door te delen door 6"
+              },
+              {
+                "van": 2,
+                "naar": 4,
+                "operatie": "×4",
+                "uitleg": "Peren zijn 4 delen, dus vermenigvuldig met 4"
+              }
+            ]
+          }
         }
       },
       {
@@ -10287,11 +10376,76 @@
         ],
         "correct": 2,
         "extra_info": {
-          "concept": "Dit is een schaalberekening: de schaal 1:100 betekent dat 1 cm op de tekening gelijk is aan 100 cm in werkelijkheid.",
+          "concept": "Dit is een verhoudingsprobleem met 3 categorieën. Je moet eerst uitrekenen hoeveel 1 deel is, en dan vermenigvuldigen voor elk onderdeel.",
           "berekening": [
             "1 deel = 4 stuks fruit",
             "Sinaasappels: 5 delen = 5 × 4 = 20 sinaasappels"
-          ]
+          ],
+          "verhoudingstabel": {
+            "type": "verhouding",
+            "ratio": "6:4:5",
+            "labels": ["appels", "delen", "sinaasappels"],
+            "kolommen": [
+              {
+                "waarde": 24,
+                "eenheid": "stuks",
+                "label": "gegeven",
+                "rij": "appels",
+                "kleur": "#ef4444"
+              },
+              {
+                "waarde": 6,
+                "eenheid": "delen",
+                "label": "verhouding",
+                "rij": "delen",
+                "kleur": "#f59e0b"
+              },
+              {
+                "waarde": 4,
+                "eenheid": "stuks",
+                "label": "1 deel",
+                "rij": "appels",
+                "kleur": "#ef4444",
+                "berekening": "24 ÷ 6"
+              },
+              {
+                "waarde": 1,
+                "eenheid": "deel",
+                "label": "1 deel",
+                "rij": "delen",
+                "kleur": "#f59e0b"
+              },
+              {
+                "waarde": 20,
+                "eenheid": "stuks",
+                "label": "antwoord",
+                "rij": "sinaasappels",
+                "kleur": "#f97316",
+                "berekening": "4 × 5"
+              },
+              {
+                "waarde": 5,
+                "eenheid": "delen",
+                "label": "verhouding",
+                "rij": "delen",
+                "kleur": "#f59e0b"
+              }
+            ],
+            "operaties": [
+              {
+                "van": 0,
+                "naar": 2,
+                "operatie": "÷6",
+                "uitleg": "Bereken 1 deel door te delen door 6"
+              },
+              {
+                "van": 2,
+                "naar": 4,
+                "operatie": "×5",
+                "uitleg": "Sinaasappels zijn 5 delen, dus vermenigvuldig met 5"
+              }
+            ]
+          }
         }
       },
       {

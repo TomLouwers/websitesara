@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verhoudingstabellen voor Sara 🎨</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 15px 30px;
+            background: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .tab:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        .tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .visualization {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: none;
+        }
+
+        .visualization.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .viz-title {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+        }
+
+        /* RATIO TABLE STYLES */
+        .ratio-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .ratio-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .ratio-label {
+            min-width: 120px;
+            font-size: 1.3em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ratio-values {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex: 1;
+        }
+
+        .value-box {
+            padding: 20px;
+            border-radius: 12px;
+            border: 3px solid;
+            text-align: center;
+            min-width: 120px;
+            transition: all 0.5s ease;
+            opacity: 0.3;
+        }
+
+        .value-box.active {
+            opacity: 1;
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .value-box.answer {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        .value-number {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .value-unit {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .value-calc {
+            margin-top: 8px;
+            padding: 5px 10px;
+            background: #e3f2fd;
+            border-radius: 8px;
+            font-size: 0.85em;
+            color: #1976d2;
+        }
+
+        .arrow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .arrow.visible {
+            opacity: 1;
+        }
+
+        .arrow-label {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .arrow-symbol {
+            font-size: 2em;
+        }
+
+        /* SCALE FACTOR STYLES */
+        .scale-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .scale-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .scale-box {
+            padding: 30px;
+            border-radius: 15px;
+            border: 3px solid;
+            text-align: center;
+            min-width: 150px;
+            transition: all 0.6s ease;
+        }
+
+        .scale-box.new {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        .persons-icons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        .ingredient-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        /* PERCENTAGE STYLES */
+        .percentage-container {
+            display: flex;
+            gap: 40px;
+        }
+
+        .pie-container {
+            flex: 1;
+            position: relative;
+            min-height: 400px;
+        }
+
+        #pieChart {
+            width: 100%;
+            height: 400px;
+        }
+
+        .legend-container {
+            flex: 1;
+        }
+
+        .legend-item {
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            border: 2px solid #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .legend-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .legend-item.selected {
+            border-width: 3px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .legend-color {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+
+        .legend-label {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .legend-value {
+            color: #666;
+            margin-top: 8px;
+        }
+
+        .legend-calc {
+            margin-top: 8px;
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            font-size: 0.9em;
+            font-style: italic;
+            display: none;
+        }
+
+        .legend-item.selected .legend-calc {
+            display: block;
+        }
+
+        .percentage-badge {
+            float: right;
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .total-bar-container {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+
+        .total-bar {
+            height: 50px;
+            display: flex;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+
+        .total-bar-segment {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            transition: flex 1.5s ease;
+        }
+
+        .total-sum {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 15px;
+        }
+
+        /* CONTROLS */
+        .controls {
+            text-align: center;
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .step-explanation {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+            border-left: 5px solid;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .ratio-row, .scale-row {
+                flex-direction: column;
+            }
+
+            .percentage-container {
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .visualization {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Verhoudingstabellen voor Sara</h1>
+
+        <div class="tabs">
+            <button class="tab active" onclick="showViz('ratio')">🥛 Verhouding 3:2</button>
+            <button class="tab" onclick="showViz('scale')">🎂 Recept ×1,5</button>
+            <button class="tab" onclick="showViz('percentage')">📚 Percentages</button>
+        </div>
+
+        <!-- RATIO VISUALIZATION -->
+        <div id="ratioViz" class="visualization active">
+            <div class="viz-title">🥛 Melk en Bloem Verhouding 3:2</div>
+
+            <div class="ratio-container" id="ratioContainer"></div>
+
+            <div id="ratioExplanation" class="step-explanation" style="display:none;"></div>
+
+            <div class="controls">
+                <button class="btn btn-secondary" id="ratioReset" onclick="resetRatio()" style="display:none;">
+                    ↻ Opnieuw
+                </button>
+                <button class="btn btn-primary" id="ratioNext" onclick="nextRatioStep()">
+                    Volgende Stap →
+                </button>
+                <button class="btn btn-success" id="ratioDone" style="display:none;">
+                    ✓ Klaar!
+                </button>
+            </div>
+        </div>
+
+        <!-- SCALE VISUALIZATION -->
+        <div id="scaleViz" class="visualization">
+            <div class="viz-title">🎂 Recept Opschalen ×1,5</div>
+
+            <div class="scale-container" id="scaleContainer"></div>
+
+            <div class="controls">
+                <button class="btn btn-secondary" id="scaleReset" onclick="resetScale()" style="display:none;">
+                    ↻ Opnieuw
+                </button>
+                <button class="btn btn-primary" id="scaleStart" onclick="startScaleAnimation()">
+                    ▶ Start Animatie
+                </button>
+            </div>
+        </div>
+
+        <!-- PERCENTAGE VISUALIZATION -->
+        <div id="percentageViz" class="visualization">
+            <div class="viz-title">📚 800 Boeken Verdelen</div>
+
+            <div class="percentage-container">
+                <div class="pie-container">
+                    <canvas id="pieChart"></canvas>
+                </div>
+                <div class="legend-container" id="legendContainer"></div>
+            </div>
+
+            <div class="total-bar-container">
+                <h3>Totaal = 100%</h3>
+                <div class="total-bar" id="totalBar"></div>
+                <div class="total-sum" id="totalSum"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // =============== DATA ===============
+        const ratioData = {
+            type: "verhouding",
+            ratio: "3:2",
+            kolommen: [
+                {waarde: 300, eenheid: "ml", label: "gegeven", rij: "melk"},
+                {waarde: 3, eenheid: "delen", label: "verhouding", rij: "delen"},
+                {waarde: 100, eenheid: "ml", label: "1 deel", rij: "melk", berekening: "300 ÷ 3"},
+                {waarde: 1, eenheid: "deel", label: "1 deel", rij: "delen"},
+                {waarde: 200, eenheid: "gram", label: "antwoord", rij: "bloem", berekening: "2 × 100"},
+                {waarde: 2, eenheid: "delen", label: "verhouding", rij: "delen"}
+            ],
+            operaties: [
+                {van: 0, naar: 2, operatie: "÷3", uitleg: "Bereken 1 deel"},
+                {van: 2, naar: 4, operatie: "×2", uitleg: "Bloem is 2 delen"}
+            ]
+        };
+
+        const scaleData = {
+            type: "schaalfactor",
+            factor: 1.5,
+            kolommen: [
+                {waarde: 8, eenheid: "personen", label: "origineel"},
+                {waarde: 12, eenheid: "personen", label: "nieuw"},
+                {waarde: 200, eenheid: "gram", label: "bloem origineel"},
+                {waarde: 300, eenheid: "gram", label: "bloem nieuw", berekening: "200 × 1,5"}
+            ]
+        };
+
+        const percentageData = {
+            type: "percentage_verdeling",
+            totaal: 800,
+            eenheid: "boeken",
+            categorieën: [
+                {label: "kinderboek", percentage: 35, aantal: 280, berekening: "35% van 800"},
+                {label: "roman", percentage: 45, aantal: 360, berekening: "45% van 800"},
+                {label: "stripboek", percentage: 20, aantal: 160, berekening: "20% van 800"}
+            ]
+        };
+
+        const colors = {
+            melk: '#2196F3',
+            delen: '#FF9800',
+            bloem: '#795548'
+        };
+
+        const categoryColors = ['#2196F3', '#9C27B0', '#FF9800'];
+
+        // =============== TAB SWITCHING ===============
+        function showViz(vizName) {
+            document.querySelectorAll('.visualization').forEach(v => v.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+
+            document.getElementById(vizName + 'Viz').classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // =============== RATIO TABLE ===============
+        let currentRatioStep = 0;
+        const maxRatioSteps = 3;
+
+        function initRatio() {
+            const container = document.getElementById('ratioContainer');
+            const rows = ['melk', 'delen', 'bloem'];
+            const icons = {melk: '🥛', delen: '📊', bloem: '🌾'};
+
+            container.innerHTML = '';
+
+            rows.forEach(rowName => {
+                const rowData = ratioData.kolommen.filter(k => k.rij === rowName);
+                if (rowData.length === 0) return;
+
+                const rowDiv = document.createElement('div');
+                rowDiv.className = 'ratio-row';
+
+                const label = document.createElement('div');
+                label.className = 'ratio-label';
+                label.style.color = colors[rowName];
+                label.innerHTML = `<span>${icons[rowName]}</span> ${rowName.charAt(0).toUpperCase() + rowName.slice(1)}`;
+                rowDiv.appendChild(label);
+
+                const valuesDiv = document.createElement('div');
+                valuesDiv.className = 'ratio-values';
+
+                // Kolom 1: Gegeven
+                if (rowData[0]) {
+                    valuesDiv.appendChild(createValueBox(rowData[0], rowName, 0));
+                }
+
+                // Pijl 1
+                if (currentRatioStep >= 1) {
+                    valuesDiv.appendChild(createArrow(ratioData.operaties[0], rowName));
+                }
+
+                // Kolom 2: 1 deel
+                if (rowData[1] && currentRatioStep >= 1) {
+                    valuesDiv.appendChild(createValueBox(rowData[1], rowName, 1));
+                }
+
+                // Pijl 2
+                if (currentRatioStep >= 2 && rowData[2] && ratioData.operaties[1]) {
+                    valuesDiv.appendChild(createArrow(ratioData.operaties[1], rowName));
+                }
+
+                // Kolom 3: Antwoord
+                if (rowData[2] && currentRatioStep >= 2) {
+                    valuesDiv.appendChild(createValueBox(rowData[2], rowName, 2));
+                }
+
+                rowDiv.appendChild(valuesDiv);
+                container.appendChild(rowDiv);
+            });
+
+            updateRatioExplanation();
+            updateRatioButtons();
+        }
+
+        function createValueBox(kolom, rowName, stepIndex) {
+            const box = document.createElement('div');
+            box.className = 'value-box';
+            box.style.borderColor = colors[rowName];
+            box.style.backgroundColor = 'white';
+
+            if (currentRatioStep >= stepIndex) {
+                box.classList.add('active');
+            }
+
+            if (kolom.label === 'antwoord') {
+                box.classList.add('answer');
+            }
+
+            box.innerHTML = `
+                <div class="value-number" style="color: ${colors[rowName]}">${kolom.waarde}</div>
+                <div class="value-unit">${kolom.eenheid}</div>
+                ${kolom.berekening ? `<div class="value-calc">${kolom.berekening}</div>` : ''}
+            `;
+
+            return box;
+        }
+
+        function createArrow(operatie, rowName) {
+            const arrow = document.createElement('div');
+            arrow.className = 'arrow visible';
+            arrow.innerHTML = `
+                <div class="arrow-label" style="color: ${colors[rowName]}">${operatie.operatie}</div>
+                <div class="arrow-symbol">→</div>
+            `;
+            return arrow;
+        }
+
+        function updateRatioExplanation() {
+            const explanations = [
+                {text: '👀 Stap 1: Hier beginnen we! We hebben 300 ml melk.', color: '#2196F3'},
+                {text: '🧮 Stap 2: Bereken 1 deel. Deel 300 door 3 = 100. Nu weten we wat 1 deel is!', color: '#FF9800'},
+                {text: '🎯 Stap 3: Bloem is 2 delen. 2 × 100 = 200 gram. Klaar!', color: '#28a745'}
+            ];
+
+            const expDiv = document.getElementById('ratioExplanation');
+            if (currentRatioStep < explanations.length) {
+                const exp = explanations[currentRatioStep];
+                expDiv.style.display = 'block';
+                expDiv.style.borderColor = exp.color;
+                expDiv.style.backgroundColor = exp.color + '20';
+                expDiv.innerHTML = `<strong>${exp.text}</strong>`;
+            } else {
+                expDiv.style.display = 'none';
+            }
+        }
+
+        function updateRatioButtons() {
+            document.getElementById('ratioReset').style.display = currentRatioStep > 0 ? 'inline-block' : 'none';
+            document.getElementById('ratioNext').style.display = currentRatioStep < maxRatioSteps - 1 ? 'inline-block' : 'none';
+            document.getElementById('ratioDone').style.display = currentRatioStep === maxRatioSteps - 1 ? 'inline-block' : 'none';
+        }
+
+        function nextRatioStep() {
+            if (currentRatioStep < maxRatioSteps - 1) {
+                currentRatioStep++;
+                initRatio();
+            }
+        }
+
+        function resetRatio() {
+            currentRatioStep = 0;
+            initRatio();
+        }
+
+        // =============== SCALE FACTOR ===============
+        function initScale() {
+            const container = document.getElementById('scaleContainer');
+            container.innerHTML = `
+                <div class="scale-row">
+                    <div class="scale-box" id="scalePersonsOld" style="border-color: #FF9800;">
+                        <div class="persons-icons">👥👥👥👥</div>
+                        <div style="font-size: 1.5em; font-weight: bold;">8 personen</div>
+                    </div>
+                    <div class="arrow visible">
+                        <div class="arrow-label" style="color: #FF9800;">×1,5</div>
+                        <div class="arrow-symbol">→</div>
+                    </div>
+                    <div class="scale-box new" id="scalePersonsNew" style="border-color: #28a745;">
+                        <div class="persons-icons">👥👥👥👥👥👥</div>
+                        <div style="font-size: 1.5em; font-weight: bold;">12 personen</div>
+                    </div>
+                </div>
+                <div class="scale-row">
+                    <div class="scale-box" id="scaleBloemOld" style="border-color: #795548;">
+                        <div class="ingredient-icon">🌾</div>
+                        <div style="font-size: 1.8em; font-weight: bold;" id="bloemOldValue">200 gram</div>
+                        <div style="color: #666;">bloem</div>
+                    </div>
+                    <div class="arrow visible">
+                        <div class="arrow-label" style="color: #795548;">×1,5</div>
+                        <div class="arrow-symbol">→</div>
+                    </div>
+                    <div class="scale-box new" id="scaleBloemNew" style="border-color: #28a745;">
+                        <div class="ingredient-icon">🌾</div>
+                        <div style="font-size: 1.8em; font-weight: bold;" id="bloemNewValue">200 gram</div>
+                        <div style="color: #666;">bloem</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function startScaleAnimation() {
+            const newValueDiv = document.getElementById('bloemNewValue');
+            const startValue = 200;
+            const endValue = 300;
+            const duration = 1500;
+            const startTime = Date.now();
+
+            document.getElementById('scaleStart').style.display = 'none';
+
+            function animate() {
+                const now = Date.now();
+                const elapsed = now - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+
+                const easeProgress = progress < 0.5
+                    ? 2 * progress * progress
+                    : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+                const currentValue = startValue + (endValue - startValue) * easeProgress;
+                newValueDiv.textContent = Math.round(currentValue) + ' gram';
+
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                } else {
+                    document.getElementById('scaleReset').style.display = 'inline-block';
+                    document.getElementById('scaleBloemNew').style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        document.getElementById('scaleBloemNew').style.transform = 'scale(1)';
+                    }, 300);
+                }
+            }
+
+            animate();
+        }
+
+        function resetScale() {
+            document.getElementById('bloemNewValue').textContent = '200 gram';
+            document.getElementById('scaleStart').style.display = 'inline-block';
+            document.getElementById('scaleReset').style.display = 'none';
+        }
+
+        // =============== PERCENTAGE ===============
+        let selectedCategory = null;
+
+        function initPercentage() {
+            initPieChart();
+            initLegend();
+            initTotalBar();
+        }
+
+        function initPieChart() {
+            const canvas = document.getElementById('pieChart');
+            const ctx = canvas.getContext('2d');
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = rect.width;
+            canvas.height = rect.height;
+
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const radius = Math.min(centerX, centerY) * 0.7;
+
+            let currentAngle = -Math.PI / 2;
+
+            percentageData.categorieën.forEach((cat, index) => {
+                const sliceAngle = (cat.percentage / 100) * 2 * Math.PI;
+
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.arc(centerX, centerY, radius, currentAngle, currentAngle + sliceAngle);
+                ctx.closePath();
+
+                ctx.fillStyle = categoryColors[index];
+                ctx.fill();
+
+                ctx.strokeStyle = 'white';
+                ctx.lineWidth = 3;
+                ctx.stroke();
+
+                currentAngle += sliceAngle;
+            });
+
+            // Center circle
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius * 0.35, 0, 2 * Math.PI);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+
+            // Center text
+            ctx.fillStyle = '#333';
+            ctx.font = 'bold 32px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('100%', centerX, centerY);
+        }
+
+        function initLegend() {
+            const container = document.getElementById('legendContainer');
+            container.innerHTML = '<h3>Verdeling:</h3>';
+
+            percentageData.categorieën.forEach((cat, index) => {
+                const item = document.createElement('div');
+                item.className = 'legend-item';
+                item.onclick = () => toggleCategory(index);
+
+                item.innerHTML = `
+                    <div>
+                        <span class="legend-color" style="background: ${categoryColors[index]};"></span>
+                        <span class="legend-label">${cat.label.toUpperCase()}</span>
+                        <span class="percentage-badge" style="background: ${categoryColors[index]};">${cat.percentage}%</span>
+                    </div>
+                    <div class="legend-value">${cat.percentage}% = ${cat.aantal} ${percentageData.eenheid}</div>
+                    <div class="legend-calc">📝 ${cat.berekening}</div>
+                `;
+
+                container.appendChild(item);
+            });
+        }
+
+        function toggleCategory(index) {
+            const items = document.querySelectorAll('.legend-item');
+            if (selectedCategory === index) {
+                selectedCategory = null;
+                items[index].classList.remove('selected');
+            } else {
+                items.forEach(item => item.classList.remove('selected'));
+                selectedCategory = index;
+                items[index].classList.add('selected');
+            }
+        }
+
+        function initTotalBar() {
+            const barDiv = document.getElementById('totalBar');
+            const sumDiv = document.getElementById('totalSum');
+
+            barDiv.innerHTML = '';
+            percentageData.categorieën.forEach((cat, index) => {
+                const segment = document.createElement('div');
+                segment.className = 'total-bar-segment';
+                segment.style.flex = cat.percentage;
+                segment.style.background = categoryColors[index];
+                segment.textContent = cat.percentage + '%';
+                barDiv.appendChild(segment);
+            });
+
+            const sumParts = percentageData.categorieën
+                .map(c => c.aantal)
+                .join(' + ');
+            sumDiv.innerHTML = `${sumParts} = <strong>${percentageData.totaal} ${percentageData.eenheid}</strong>`;
+        }
+
+        // =============== INIT ===============
+        window.onload = function() {
+            initRatio();
+            initScale();
+            initPercentage();
+        };
+    </script>
+</body>
+</html>
