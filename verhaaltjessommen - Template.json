@@ -443,6 +443,56 @@
             "Voeg de pauze toe: 1 uur 30 minuten + 15 minuten = 1 uur 45 minuten",
             "14:00 uur + 1 uur 45 minuten = 15:45 uur"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoe laat komt Jamal bij zijn oma aan?",
+            "tussenstappen": [
+              "Bereken de fietstijd met formule Tijd = Afstand ÷ Snelheid",
+              "Tel de pauzetijd op bij de fietstijd",
+              "Tel de totale tijd op bij de vertrektijd"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Afstand": "18 km",
+              "Snelheid": "12 km/uur",
+              "Vertrektijd": "14:00 uur",
+              "Pauze": "15 minuten"
+            },
+            "tool": "Formule: Tijd = Afstand ÷ Snelheid",
+            "conversies": [
+              "1,5 uur = 1 uur en 30 minuten"
+            ]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken de fietstijd",
+                "berekening": "18 km ÷ 12 km/uur",
+                "resultaat": "1,5 uur = 1 uur en 30 minuten",
+                "uitleg": "Tijd = Afstand ÷ Snelheid, dus 18 ÷ 12 = 1,5 uur"
+              },
+              {
+                "stap": "Tel pauze op bij fietstijd",
+                "berekening": "1 uur 30 min + 15 min",
+                "resultaat": "1 uur en 45 minuten",
+                "uitleg": "Totale tijd onderweg = fietstijd + pauze"
+              },
+              {
+                "stap": "Bereken aankomsttijd",
+                "berekening": "14:00 + 1:45",
+                "resultaat": "15:45 uur",
+                "uitleg": "Vertrektijd + reistijd = aankomsttijd"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "tijdstip (uur:minuten)",
+            "logica_check": "15:45 uur is logisch: bijna 2 uur later dan 14:00 uur",
+            "antwoord": "15:45 uur"
+          }
         }
       },
       {
@@ -471,6 +521,56 @@
           "berekening": [
             "Halverwege van 18 kilometer is: 18 ÷ 2 = 9 kilometer"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoe laat komt Jamal bij zijn oma aan?",
+            "tussenstappen": [
+              "Bereken de fietstijd met formule Tijd = Afstand ÷ Snelheid",
+              "Tel de pauzetijd op bij de fietstijd",
+              "Tel de totale tijd op bij de vertrektijd"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Afstand": "18 km",
+              "Snelheid": "12 km/uur",
+              "Vertrektijd": "14:00 uur",
+              "Pauze": "15 minuten"
+            },
+            "tool": "Formule: Tijd = Afstand ÷ Snelheid",
+            "conversies": [
+              "1,5 uur = 1 uur en 30 minuten"
+            ]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken de fietstijd",
+                "berekening": "18 km ÷ 12 km/uur",
+                "resultaat": "1,5 uur = 1 uur en 30 minuten",
+                "uitleg": "Tijd = Afstand ÷ Snelheid, dus 18 ÷ 12 = 1,5 uur"
+              },
+              {
+                "stap": "Tel pauze op bij fietstijd",
+                "berekening": "1 uur 30 min + 15 min",
+                "resultaat": "1 uur en 45 minuten",
+                "uitleg": "Totale tijd onderweg = fietstijd + pauze"
+              },
+              {
+                "stap": "Bereken aankomsttijd",
+                "berekening": "14:00 + 1:45",
+                "resultaat": "15:45 uur",
+                "uitleg": "Vertrektijd + reistijd = aankomsttijd"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "tijdstip (uur:minuten)",
+            "logica_check": "15:45 uur is logisch: bijna 2 uur later dan 14:00 uur",
+            "antwoord": "15:45 uur"
+          }
         }
       }
     ],
@@ -1902,6 +2002,39 @@
             "Tijd = afstand ÷ snelheid",
             "180 ÷ 90 = 2 uur"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoe lang doen ze over het eerste deel van de reis?",
+            "tussenstappen": [
+              "Identificeer afstand en snelheid van het eerste deel",
+              "Gebruik formule Tijd = Afstand ÷ Snelheid"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Eerste deel afstand": "180 km",
+              "Eerste deel snelheid": "90 km/uur"
+            },
+            "tool": "Formule: Tijd = Afstand ÷ Snelheid",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken tijd eerste deel",
+                "berekening": "180 km ÷ 90 km/uur",
+                "resultaat": "2 uur",
+                "uitleg": "Tijd = Afstand ÷ Snelheid, dus 180 ÷ 90 = 2 uur"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "uur",
+            "logica_check": "2 uur is logisch: bij 90 km/uur leg je in 2 uur 180 km af",
+            "antwoord": "2 uur"
+          }
         }
       },
       {
@@ -1932,6 +2065,39 @@
             "Snelheid: 80 km/uur",
             "Tijd: 240 ÷ 80 = 3 uur"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoe lang doen ze over het eerste deel van de reis?",
+            "tussenstappen": [
+              "Identificeer afstand en snelheid van het eerste deel",
+              "Gebruik formule Tijd = Afstand ÷ Snelheid"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Eerste deel afstand": "180 km",
+              "Eerste deel snelheid": "90 km/uur"
+            },
+            "tool": "Formule: Tijd = Afstand ÷ Snelheid",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken tijd eerste deel",
+                "berekening": "180 km ÷ 90 km/uur",
+                "resultaat": "2 uur",
+                "uitleg": "Tijd = Afstand ÷ Snelheid, dus 180 ÷ 90 = 2 uur"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "uur",
+            "logica_check": "2 uur is logisch: bij 90 km/uur leg je in 2 uur 180 km af",
+            "antwoord": "2 uur"
+          }
         }
       },
       {
@@ -1961,6 +2127,39 @@
             "Tweede deel: 3 uur",
             "Totaal: 2 + 3 = 5 uur"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoe lang doen ze over het eerste deel van de reis?",
+            "tussenstappen": [
+              "Identificeer afstand en snelheid van het eerste deel",
+              "Gebruik formule Tijd = Afstand ÷ Snelheid"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Eerste deel afstand": "180 km",
+              "Eerste deel snelheid": "90 km/uur"
+            },
+            "tool": "Formule: Tijd = Afstand ÷ Snelheid",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken tijd eerste deel",
+                "berekening": "180 km ÷ 90 km/uur",
+                "resultaat": "2 uur",
+                "uitleg": "Tijd = Afstand ÷ Snelheid, dus 180 ÷ 90 = 2 uur"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "uur",
+            "logica_check": "2 uur is logisch: bij 90 km/uur leg je in 2 uur 180 km af",
+            "antwoord": "2 uur"
+          }
         }
       }
     ],
@@ -12005,6 +12204,47 @@
             "Tijd = 18 ÷ 12 = 1,5 uur",
             "1,5 uur = 1 uur en 30 minuten"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoe lang doet Lisa erover om bij oma aan te komen?",
+            "tussenstappen": [
+              "Gebruik formule Tijd = Afstand ÷ Snelheid",
+              "Converteer decimale uren naar uren en minuten"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Afstand": "18 km",
+              "Snelheid": "12 km/uur"
+            },
+            "tool": "Formule: Tijd = Afstand ÷ Snelheid",
+            "conversies": [
+              "1,5 uur = 1 uur en 30 minuten"
+            ]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken de fietstijd",
+                "berekening": "18 km ÷ 12 km/uur",
+                "resultaat": "1,5 uur",
+                "uitleg": "Tijd = Afstand ÷ Snelheid, dus 18 ÷ 12 = 1,5 uur"
+              },
+              {
+                "stap": "Converteer naar uren en minuten",
+                "berekening": "1,5 uur = 1 uur + 0,5 uur",
+                "resultaat": "1 uur en 30 minuten",
+                "uitleg": "0,5 uur = 0,5 × 60 minuten = 30 minuten"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "uur en minuten",
+            "logica_check": "1 uur en 30 minuten is logisch: 18 km is niet ver op fiets met 12 km/uur",
+            "antwoord": "1 uur en 30 minuten"
+          }
         }
       }
     ],
@@ -12044,6 +12284,47 @@
             "30 minuten = 0,5 uur",
             "Snelheid = 45 ÷ 0,5 = 90 km/uur"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Wat is de gemiddelde snelheid van de trein in km/uur?",
+            "tussenstappen": [
+              "Converteer 30 minuten naar uren",
+              "Gebruik formule Snelheid = Afstand ÷ Tijd"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Afstand": "45 km",
+              "Tijd": "30 minuten"
+            },
+            "tool": "Formule: Snelheid = Afstand ÷ Tijd",
+            "conversies": [
+              "30 minuten = 0,5 uur"
+            ]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Converteer tijd naar uren",
+                "berekening": "30 minuten ÷ 60",
+                "resultaat": "0,5 uur",
+                "uitleg": "30 minuten = 30/60 uur = 0,5 uur"
+              },
+              {
+                "stap": "Bereken snelheid",
+                "berekening": "45 km ÷ 0,5 uur",
+                "resultaat": "90 km/uur",
+                "uitleg": "Snelheid = Afstand ÷ Tijd, dus 45 ÷ 0,5 = 90 km/uur"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "kilometer per uur (km/uur)",
+            "logica_check": "90 km/uur is logisch: een realistische treinsnelheid",
+            "antwoord": "90 km/uur"
+          }
         }
       }
     ],
@@ -12083,6 +12364,47 @@
             "Tijd = 5 ÷ 10 = 0,5 uur",
             "0,5 uur = 30 minuten"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoe lang doet Tim erover om de 5 kilometer te rennen?",
+            "tussenstappen": [
+              "Gebruik formule Tijd = Afstand ÷ Snelheid",
+              "Converteer decimale uren naar minuten"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Afstand": "5 km",
+              "Snelheid": "10 km/uur"
+            },
+            "tool": "Formule: Tijd = Afstand ÷ Snelheid",
+            "conversies": [
+              "0,5 uur = 30 minuten"
+            ]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken de tijd",
+                "berekening": "5 km ÷ 10 km/uur",
+                "resultaat": "0,5 uur",
+                "uitleg": "Tijd = Afstand ÷ Snelheid, dus 5 ÷ 10 = 0,5 uur"
+              },
+              {
+                "stap": "Converteer naar minuten",
+                "berekening": "0,5 × 60 minuten",
+                "resultaat": "30 minuten",
+                "uitleg": "0,5 uur = 0,5 × 60 = 30 minuten"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "minuten",
+            "logica_check": "30 minuten is logisch: een half uur hardlopen voor 5 km",
+            "antwoord": "30 minuten"
+          }
         }
       }
     ],
@@ -12121,6 +12443,38 @@
             "Afstand = Snelheid × Tijd",
             "Afstand = 80 × 2 = 160 kilometer"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoe ver hebben ze gereden?",
+            "tussenstappen": [
+              "Gebruik formule Afstand = Snelheid × Tijd"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Snelheid": "80 km/uur",
+              "Tijd": "2 uur"
+            },
+            "tool": "Formule: Afstand = Snelheid × Tijd",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken afstand",
+                "berekening": "80 km/uur × 2 uur",
+                "resultaat": "160 kilometer",
+                "uitleg": "Afstand = Snelheid × Tijd, dus 80 × 2 = 160 km"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "kilometer (km)",
+            "logica_check": "160 km is logisch: 2 uur rijden met 80 km/uur",
+            "antwoord": "160 kilometer"
+          }
         }
       }
     ],
@@ -12160,6 +12514,47 @@
             "Tijd = 6 ÷ 4 = 1,5 uur",
             "1,5 uur = 1 uur en 30 minuten"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoe lang duurt Sophie's wandeling?",
+            "tussenstappen": [
+              "Gebruik formule Tijd = Afstand ÷ Snelheid",
+              "Converteer decimale uren naar uren en minuten"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Afstand": "6 km",
+              "Snelheid": "4 km/uur"
+            },
+            "tool": "Formule: Tijd = Afstand ÷ Snelheid",
+            "conversies": [
+              "1,5 uur = 1 uur en 30 minuten"
+            ]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken de tijd",
+                "berekening": "6 km ÷ 4 km/uur",
+                "resultaat": "1,5 uur",
+                "uitleg": "Tijd = Afstand ÷ Snelheid, dus 6 ÷ 4 = 1,5 uur"
+              },
+              {
+                "stap": "Converteer naar uren en minuten",
+                "berekening": "1,5 uur = 1 uur + 0,5 uur",
+                "resultaat": "1 uur en 30 minuten",
+                "uitleg": "0,5 uur = 0,5 × 60 minuten = 30 minuten"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "uur en minuten",
+            "logica_check": "1 uur en 30 minuten is logisch: rustige wandeltijd voor 6 km",
+            "antwoord": "1 uur en 30 minuten"
+          }
         }
       }
     ],
@@ -13728,6 +14123,47 @@
             "3 uur en 30 minuten = 3,5 uur",
             "Snelheid = 42 ÷ 3,5 = 12 km/uur"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Wat is papa's gemiddelde loopsnelheid?",
+            "tussenstappen": [
+              "Converteer 3 uur en 30 minuten naar decimale uren",
+              "Gebruik formule Snelheid = Afstand ÷ Tijd"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Afstand": "42 km",
+              "Tijd": "3 uur en 30 minuten"
+            },
+            "tool": "Formule: Snelheid = Afstand ÷ Tijd",
+            "conversies": [
+              "3 uur en 30 minuten = 3,5 uur"
+            ]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Converteer tijd naar decimale uren",
+                "berekening": "3 uur 30 min = 3,5 uur",
+                "resultaat": "3,5 uur",
+                "uitleg": "30 minuten = 0,5 uur, dus 3 uur 30 min = 3,5 uur"
+              },
+              {
+                "stap": "Bereken snelheid",
+                "berekening": "42 km ÷ 3,5 uur",
+                "resultaat": "12 km/uur",
+                "uitleg": "Snelheid = Afstand ÷ Tijd, dus 42 ÷ 3,5 = 12 km/uur"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "kilometer per uur (km/uur)",
+            "logica_check": "12 km/uur is logisch: een goede marathonsnelheid",
+            "antwoord": "12 km/uur"
+          }
         }
       }
     ],
@@ -13805,6 +14241,40 @@
             "Tijd = Afstand ÷ Snelheid",
             "Tijd = 120 ÷ 30 = 4 uur"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [
+              "Het is 's ochtends"
+            ],
+            "hoofdvraag": "Hoe lang is de wielrenner onderweg?",
+            "tussenstappen": [
+              "Gebruik formule Tijd = Afstand ÷ Snelheid"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Afstand": "120 km",
+              "Snelheid": "30 km/uur"
+            },
+            "tool": "Formule: Tijd = Afstand ÷ Snelheid",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken de tijd",
+                "berekening": "120 km ÷ 30 km/uur",
+                "resultaat": "4 uur",
+                "uitleg": "Tijd = Afstand ÷ Snelheid, dus 120 ÷ 30 = 4 uur"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "uur",
+            "logica_check": "4 uur is logisch: een flinke wielertocht van 120 km",
+            "antwoord": "4 uur"
+          }
         }
       }
     ],
@@ -13883,6 +14353,47 @@
             "Tijd = 27 ÷ 108 = 0,25 uur",
             "0,25 uur = 0,25 × 60 = 15 minuten"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoe lang doet de trein erover?",
+            "tussenstappen": [
+              "Gebruik formule Tijd = Afstand ÷ Snelheid",
+              "Converteer decimale uren naar minuten"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Afstand": "27 km",
+              "Snelheid": "108 km/uur"
+            },
+            "tool": "Formule: Tijd = Afstand ÷ Snelheid",
+            "conversies": [
+              "0,25 uur = 15 minuten"
+            ]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken de tijd",
+                "berekening": "27 km ÷ 108 km/uur",
+                "resultaat": "0,25 uur",
+                "uitleg": "Tijd = Afstand ÷ Snelheid, dus 27 ÷ 108 = 0,25 uur"
+              },
+              {
+                "stap": "Converteer naar minuten",
+                "berekening": "0,25 × 60 minuten",
+                "resultaat": "15 minuten",
+                "uitleg": "0,25 uur = 0,25 × 60 = 15 minuten"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "minuten",
+            "logica_check": "15 minuten is logisch: een korte sneltreinrit",
+            "antwoord": "15 minuten"
+          }
         }
       }
     ],
@@ -14037,6 +14548,38 @@
             "Snelheid = Afstand ÷ Tijd",
             "Snelheid = 360 ÷ 3 = 120 km/uur"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Wat is de gemiddelde snelheid van de auto?",
+            "tussenstappen": [
+              "Gebruik formule Snelheid = Afstand ÷ Tijd"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Afstand": "360 km",
+              "Tijd": "3 uur"
+            },
+            "tool": "Formule: Snelheid = Afstand ÷ Tijd",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken snelheid",
+                "berekening": "360 km ÷ 3 uur",
+                "resultaat": "120 km/uur",
+                "uitleg": "Snelheid = Afstand ÷ Tijd, dus 360 ÷ 3 = 120 km/uur"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "kilometer per uur (km/uur)",
+            "logica_check": "120 km/uur is logisch: een typische snelwegsnelheid",
+            "antwoord": "120 km/uur"
+          }
         }
       }
     ],
@@ -14231,6 +14774,49 @@
             "Tijd = 75 ÷ 50 = 1,5 uur",
             "1,5 uur = 1 uur en 30 minuten"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [
+              "De fiets is blauw"
+            ],
+            "hoofdvraag": "Hoe lang duurt de busreis?",
+            "tussenstappen": [
+              "Gebruik formule Tijd = Afstand ÷ Snelheid",
+              "Converteer decimale uren naar uren en minuten"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Afstand": "75 km",
+              "Snelheid": "50 km/uur"
+            },
+            "tool": "Formule: Tijd = Afstand ÷ Snelheid",
+            "conversies": [
+              "1,5 uur = 1 uur en 30 minuten"
+            ]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken de tijd",
+                "berekening": "75 km ÷ 50 km/uur",
+                "resultaat": "1,5 uur",
+                "uitleg": "Tijd = Afstand ÷ Snelheid, dus 75 ÷ 50 = 1,5 uur"
+              },
+              {
+                "stap": "Converteer naar uren en minuten",
+                "berekening": "1,5 uur = 1 uur + 0,5 uur",
+                "resultaat": "1 uur en 30 minuten",
+                "uitleg": "0,5 uur = 0,5 × 60 minuten = 30 minuten"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "uur en minuten",
+            "logica_check": "1 uur en 30 minuten is logisch: schoolreisje naar dierentuin",
+            "antwoord": "1 uur en 30 minuten"
+          }
         }
       }
     ],
@@ -17571,6 +18157,49 @@
             "Bas vertrekt om 10:30 uur (half uur later)",
             "In dat half uur fietst Anna: 0,5 uur × 15 km/uur = 7,5 kilometer"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel kilometer heeft Anna afgelegd als Bas vertrekt?",
+            "tussenstappen": [
+              "Bereken hoeveel tijd Anna heeft gefietst voordat Bas vertrekt",
+              "Gebruik formule Afstand = Snelheid × Tijd"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Anna vertrekt": "10:00 uur",
+              "Bas vertrekt": "10:30 uur",
+              "Anna's snelheid": "15 km/uur",
+              "Tijdsverschil": "30 minuten = 0,5 uur"
+            },
+            "tool": "Formule: Afstand = Snelheid × Tijd",
+            "conversies": [
+              "30 minuten = 0,5 uur"
+            ]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken tijdsverschil",
+                "berekening": "10:30 - 10:00",
+                "resultaat": "30 minuten = 0,5 uur",
+                "uitleg": "Bas vertrekt een half uur later dan Anna"
+              },
+              {
+                "stap": "Bereken Anna's afgelegde afstand",
+                "berekening": "15 km/uur × 0,5 uur",
+                "resultaat": "7,5 kilometer",
+                "uitleg": "Afstand = Snelheid × Tijd, dus 15 × 0,5 = 7,5 km"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "kilometer (km)",
+            "logica_check": "7,5 km is logisch: in een half uur fietst Anna met 15 km/uur precies 7,5 km",
+            "antwoord": "7,5 kilometer"
+          }
         }
       },
       {
@@ -17604,6 +18233,49 @@
             "Controle: 52,5 ÷ 35 = 1,5 uur, dus 10:30 + 1:30 = 12:00 uur? Nee...",
             "Wacht: 52,5 ÷ 35 = 1,5 uur. 10:30 + 1 uur = 11:30 uur ✓"
           ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel kilometer heeft Anna afgelegd als Bas vertrekt?",
+            "tussenstappen": [
+              "Bereken hoeveel tijd Anna heeft gefietst voordat Bas vertrekt",
+              "Gebruik formule Afstand = Snelheid × Tijd"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Anna vertrekt": "10:00 uur",
+              "Bas vertrekt": "10:30 uur",
+              "Anna's snelheid": "15 km/uur",
+              "Tijdsverschil": "30 minuten = 0,5 uur"
+            },
+            "tool": "Formule: Afstand = Snelheid × Tijd",
+            "conversies": [
+              "30 minuten = 0,5 uur"
+            ]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken tijdsverschil",
+                "berekening": "10:30 - 10:00",
+                "resultaat": "30 minuten = 0,5 uur",
+                "uitleg": "Bas vertrekt een half uur later dan Anna"
+              },
+              {
+                "stap": "Bereken Anna's afgelegde afstand",
+                "berekening": "15 km/uur × 0,5 uur",
+                "resultaat": "7,5 kilometer",
+                "uitleg": "Afstand = Snelheid × Tijd, dus 15 × 0,5 = 7,5 km"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "kilometer (km)",
+            "logica_check": "7,5 km is logisch: in een half uur fietst Anna met 15 km/uur precies 7,5 km",
+            "antwoord": "7,5 kilometer"
+          }
         }
       }
     ],
