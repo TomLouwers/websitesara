@@ -2243,7 +2243,63 @@
         }
       }
     ],
-    "sub_theme": "tabellen lezen"
+    "sub_theme": "tabellen lezen",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Vragen over het aantal uitgeleende boeken in de schoolbibliotheek",
+        "tussenstappen": [
+          "Lees de getallen uit de tabel",
+          "Bepaal per vraag welke berekening nodig is",
+          "Bereken totaal, gemiddelde en vergelijking met gemiddelde"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Maandag": "18 boeken",
+          "Dinsdag": "24 boeken",
+          "Woensdag": "15 boeken",
+          "Donderdag": "21 boeken",
+          "Vrijdag": "27 boeken",
+          "Aantal dagen": "5"
+        },
+        "tool": "Tabel aflezen en rekenen met gemiddelden",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken totaal aantal uitgeleende boeken",
+            "berekening": "18 + 24 + 15 + 21 + 27",
+            "resultaat": "105 boeken",
+            "uitleg": "Tel alle waarden uit de tabel bij elkaar op"
+          },
+          {
+            "stap": "Bereken het gemiddelde per dag",
+            "berekening": "105 ÷ 5",
+            "resultaat": "21 boeken per dag",
+            "uitleg": "Deel het totaal door het aantal dagen"
+          },
+          {
+            "stap": "Bepaal op welke dag het meeste werd uitgeleend",
+            "berekening": "Vergelijk alle waarden",
+            "resultaat": "Vrijdag (27 boeken)",
+            "uitleg": "27 is de hoogste waarde in de tabel"
+          },
+          {
+            "stap": "Bereken hoeveel meer dan gemiddelde",
+            "berekening": "27 - 21",
+            "resultaat": "6 boeken meer",
+            "uitleg": "Trek het gemiddelde af van het maximum"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "boeken",
+        "logica_check": "Totaal (105) moet groter zijn dan elk apart getal. Gemiddelde (21) ligt tussen minimum en maximum",
+        "antwoord": "105 boeken totaal, 21 boeken gemiddeld, vrijdag 6 boeken meer"
+      }
+    }
   },
   {
     "id": 17,
@@ -3105,7 +3161,59 @@
         }
       }
     ],
-    "sub_theme": "tabellen lezen"
+    "sub_theme": "tabellen lezen",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "Om 12:00 uur gemeten"
+        ],
+        "hoofdvraag": "Wat is de gemiddelde temperatuur en hoeveel dagen was het warmer?",
+        "tussenstappen": [
+          "Haal de temperaturen uit de tabel",
+          "Bereken het gemiddelde",
+          "Tel hoeveel dagen boven het gemiddelde lagen"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Maandag": "18°C",
+          "Dinsdag": "21°C",
+          "Woensdag": "19°C",
+          "Donderdag": "23°C",
+          "Vrijdag": "20°C",
+          "Aantal dagen": "5"
+        },
+        "tool": "Gemiddelde berekenen en vergelijken",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken totaal van alle temperaturen",
+            "berekening": "18 + 21 + 19 + 23 + 20",
+            "resultaat": "101°C",
+            "uitleg": "Tel alle temperaturen bij elkaar op"
+          },
+          {
+            "stap": "Bereken het gemiddelde",
+            "berekening": "101 ÷ 5",
+            "resultaat": "20,2°C",
+            "uitleg": "Deel het totaal door het aantal dagen"
+          },
+          {
+            "stap": "Tel dagen warmer dan gemiddelde",
+            "berekening": "Vergelijk elke dag met 20,2°C",
+            "resultaat": "2 dagen",
+            "uitleg": "Dinsdag (21°C) en donderdag (23°C) zijn beide > 20,2°C"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "graden Celsius (°C) en aantal dagen",
+        "logica_check": "Gemiddelde ligt tussen 18 en 23. Niet alle dagen kunnen boven gemiddelde liggen",
+        "antwoord": "20,2°C gemiddeld, 2 dagen warmer dan gemiddelde"
+      }
+    }
   },
   {
     "id": 23,
@@ -3329,7 +3437,66 @@
         }
       }
     ],
-    "sub_theme": "tabellen lezen"
+    "sub_theme": "tabellen lezen",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "5 klassen doen mee"
+        ],
+        "hoofdvraag": "Bereken totaal views, gemiddelde en percentage van populairste video",
+        "tussenstappen": [
+          "Tel alle views bij elkaar op",
+          "Bereken het gemiddelde",
+          "Bepaal welke video de meeste views had",
+          "Bereken het percentage"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Video 1": "240 views",
+          "Video 2": "385 views",
+          "Video 3": "192 views",
+          "Video 4": "411 views",
+          "Video 5": "302 views",
+          "Aantal videos": "5"
+        },
+        "tool": "Optellen, gemiddelde en percentage berekenen",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken totaal aantal views",
+            "berekening": "240 + 385 + 192 + 411 + 302",
+            "resultaat": "1530 views",
+            "uitleg": "Tel alle views bij elkaar op"
+          },
+          {
+            "stap": "Bereken gemiddelde per video",
+            "berekening": "1530 ÷ 5",
+            "resultaat": "306 views per video",
+            "uitleg": "Deel totaal door aantal videos"
+          },
+          {
+            "stap": "Bepaal populairste video",
+            "berekening": "Vergelijk alle waardes",
+            "resultaat": "Video 4 met 411 views",
+            "uitleg": "411 is de hoogste waarde"
+          },
+          {
+            "stap": "Bereken percentage van totaal",
+            "berekening": "(411 ÷ 1530) × 100",
+            "resultaat": "26,9% (afgerond 27%)",
+            "uitleg": "Deel views populairste door totaal en vermenigvuldig met 100"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "views en procenten (%)",
+        "logica_check": "Percentage moet tussen 0 en 100 liggen. 27% is logisch voor 1 van 5 videos",
+        "antwoord": "1530 views totaal, 306 gemiddeld, 27% van populairste video"
+      }
+    }
   },
   {
     "id": 25,
@@ -3549,7 +3716,55 @@
         }
       }
     ],
-    "sub_theme": "tabellen lezen"
+    "sub_theme": "tabellen lezen",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Wat is de mediaan en hoeveel boeken werden er in totaal gelezen?",
+        "tussenstappen": [
+          "Zet de getallen op volgorde voor de mediaan",
+          "Tel alle boeken bij elkaar op voor het totaal"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Lars": "4 boeken",
+          "Emma": "7 boeken",
+          "Noah": "3 boeken",
+          "Sophie": "6 boeken",
+          "Lucas": "5 boeken"
+        },
+        "tool": "Mediaan bepalen (rangschikken) en optellen",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Zet alle getallen op volgorde",
+            "berekening": "3, 4, 5, 6, 7",
+            "resultaat": "Geordende rij",
+            "uitleg": "Van laag naar hoog rangschikken"
+          },
+          {
+            "stap": "Bepaal de mediaan",
+            "berekening": "Het middelste getal van 5 getallen",
+            "resultaat": "5 boeken",
+            "uitleg": "Bij 5 getallen is het 3e getal de mediaan"
+          },
+          {
+            "stap": "Bereken totaal aantal gelezen boeken",
+            "berekening": "4 + 7 + 3 + 6 + 5",
+            "resultaat": "25 boeken",
+            "uitleg": "Tel alle waarden bij elkaar op"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "boeken",
+        "logica_check": "Mediaan (5) ligt tussen minimum (3) en maximum (7). Totaal moet kloppen met optelling",
+        "antwoord": "Mediaan is 5 boeken, totaal 25 boeken"
+      }
+    }
   },
   {
     "id": 27,
@@ -3767,7 +3982,65 @@
         }
       }
     ],
-    "sub_theme": "tabellen lezen"
+    "sub_theme": "tabellen lezen",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "Tussen 8:00 en 9:00 uur"
+        ],
+        "hoofdvraag": "Bereken gemiddelde, bepaal minste dag en verschil vrijdag-woensdag",
+        "tussenstappen": [
+          "Bereken het gemiddeld aantal voertuigen",
+          "Zoek de laagste waarde in de tabel",
+          "Bereken het verschil tussen twee dagen"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Maandag": "156 voertuigen",
+          "Dinsdag": "178 voertuigen",
+          "Woensdag": "142 voertuigen",
+          "Donderdag": "165 voertuigen",
+          "Vrijdag": "189 voertuigen",
+          "Aantal dagen": "5"
+        },
+        "tool": "Gemiddelde, minimum bepalen en aftrekken",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken totaal aantal voertuigen",
+            "berekening": "156 + 178 + 142 + 165 + 189",
+            "resultaat": "830 voertuigen",
+            "uitleg": "Tel alle waarden bij elkaar op"
+          },
+          {
+            "stap": "Bereken het gemiddelde",
+            "berekening": "830 ÷ 5",
+            "resultaat": "166 voertuigen per dag",
+            "uitleg": "Deel totaal door aantal dagen"
+          },
+          {
+            "stap": "Bepaal dag met minste voertuigen",
+            "berekening": "Vergelijk alle waarden",
+            "resultaat": "Woensdag (142 voertuigen)",
+            "uitleg": "142 is de laagste waarde"
+          },
+          {
+            "stap": "Bereken verschil vrijdag - woensdag",
+            "berekening": "189 - 142",
+            "resultaat": "47 voertuigen meer",
+            "uitleg": "Trek woensdag af van vrijdag"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "voertuigen",
+        "logica_check": "Gemiddelde ligt tussen minimum en maximum. Verschil moet positief zijn",
+        "antwoord": "166 voertuigen gemiddeld, woensdag het minst, 47 meer op vrijdag"
+      }
+    }
   },
   {
     "id": 29,
@@ -4020,7 +4293,67 @@
         }
       }
     ],
-    "sub_theme": "tabellen lezen"
+    "sub_theme": "tabellen lezen",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "50 meter vrije slag",
+          "Finalisten"
+        ],
+        "hoofdvraag": "Bepaal snelste tijd, verschil en aantal sneller dan 35 seconden",
+        "tussenstappen": [
+          "Zoek de laagste tijd (= snelste)",
+          "Bepaal ook de hoogste tijd (= langzaamste)",
+          "Bereken het verschil",
+          "Tel hoeveel tijden onder 35 seconden liggen"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Zwemmer 1": "34,2 seconden",
+          "Zwemmer 2": "35,8 seconden",
+          "Zwemmer 3": "33,9 seconden",
+          "Zwemmer 4": "36,1 seconden",
+          "Zwemmer 5": "34,7 seconden",
+          "Grens": "35 seconden"
+        },
+        "tool": "Minimum/maximum bepalen en vergelijken",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bepaal de snelste tijd (laagste getal)",
+            "berekening": "Vergelijk alle tijden",
+            "resultaat": "33,9 seconden (Zwemmer 3)",
+            "uitleg": "De laagste tijd is de snelste prestatie"
+          },
+          {
+            "stap": "Bepaal de langzaamste tijd (hoogste getal)",
+            "berekening": "Vergelijk alle tijden",
+            "resultaat": "36,1 seconden (Zwemmer 4)",
+            "uitleg": "De hoogste tijd is de langzaamste prestatie"
+          },
+          {
+            "stap": "Bereken het verschil",
+            "berekening": "36,1 - 33,9",
+            "resultaat": "2,2 seconden",
+            "uitleg": "Trek de snelste tijd af van de langzaamste"
+          },
+          {
+            "stap": "Tel zwemmers sneller dan 35 seconden",
+            "berekening": "33,9 < 35 ✓, 34,2 < 35 ✓, 34,7 < 35 ✓",
+            "resultaat": "3 zwemmers",
+            "uitleg": "Zwemmers 1, 3 en 5 zijn sneller dan 35 seconden"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "seconden",
+        "logica_check": "Snelste tijd moet de laagste zijn. Verschil moet positief zijn",
+        "antwoord": "33,9 sec snelst, 2,2 sec verschil, 3 zwemmers sneller dan 35 sec"
+      }
+    }
   },
   {
     "id": 31,
@@ -4267,7 +4600,58 @@
         }
       }
     ],
-    "sub_theme": "tabellen lezen"
+    "sub_theme": "tabellen lezen",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "School heeft 300 leerlingen"
+        ],
+        "hoofdvraag": "Bepaal hoogste score, aantal kinderen en meest voorkomende score",
+        "tussenstappen": [
+          "Zoek de hoogste score in de tabel",
+          "Tel alle kinderen bij elkaar op",
+          "Bepaal welke score het vaakst voorkomt (modus)"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "6 punten": "3 keer",
+          "7 punten": "5 keer",
+          "8 punten": "8 keer",
+          "9 punten": "4 keer",
+          "10 punten": "2 keer"
+        },
+        "tool": "Maximum bepalen, optellen en modus",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bepaal de hoogste score",
+            "berekening": "Vergelijk alle scores",
+            "resultaat": "10 punten",
+            "uitleg": "10 is het hoogste aantal punten in de tabel"
+          },
+          {
+            "stap": "Tel totaal aantal kinderen",
+            "berekening": "3 + 5 + 8 + 4 + 2",
+            "resultaat": "22 kinderen",
+            "uitleg": "Tel alle frequenties bij elkaar op"
+          },
+          {
+            "stap": "Bepaal meest voorkomende score (modus)",
+            "berekening": "Vergelijk alle frequenties",
+            "resultaat": "8 punten",
+            "uitleg": "8 punten kwam 8 keer voor, dat is het meest"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "punten en aantal kinderen",
+        "logica_check": "Hoogste score is 10. Totaal aantal (22) klopt met som van alle frequenties",
+        "antwoord": "10 punten hoogst, 22 kinderen totaal, 8 punten kwam vaakst voor"
+      }
+    }
   },
   {
     "id": 33,
@@ -4593,7 +4977,56 @@
         }
       }
     ],
-    "sub_theme": "tabellen lezen"
+    "sub_theme": "tabellen lezen",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Wat werd het meest gegeten, hoeveel procent at wrap en wat is het verschil boterham-broodje?",
+        "tussenstappen": [
+          "Zoek de hoogste waarde in de tabel",
+          "Bereken percentage wrap van totaal",
+          "Bereken verschil tussen boterham en broodje"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Boterham": "45 leerlingen",
+          "Broodje": "28 leerlingen",
+          "Wrap": "15 leerlingen",
+          "Salade": "12 leerlingen",
+          "Totaal": "100 leerlingen"
+        },
+        "tool": "Maximum bepalen, percentage en aftrekken",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bepaal wat het meest werd gegeten",
+            "berekening": "Vergelijk alle waarden",
+            "resultaat": "Boterham (45 leerlingen)",
+            "uitleg": "45 is de hoogste waarde in de tabel"
+          },
+          {
+            "stap": "Bereken percentage wrap",
+            "berekening": "(15 ÷ 100) × 100",
+            "resultaat": "15%",
+            "uitleg": "Deel aantal wrap door totaal en vermenigvuldig met 100"
+          },
+          {
+            "stap": "Bereken verschil boterham - broodje",
+            "berekening": "45 - 28",
+            "resultaat": "17 leerlingen meer",
+            "uitleg": "Trek aantal broodje af van aantal boterham"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "leerlingen en procenten",
+        "logica_check": "Percentages moeten optellen tot 100%. Verschil moet positief zijn",
+        "antwoord": "Boterham meest gegeten, 15% at wrap, 17 leerlingen meer voor boterham"
+      }
+    }
   },
   {
     "id": 36,
@@ -4845,7 +5278,59 @@
         }
       }
     ],
-    "sub_theme": "tabellen lezen"
+    "sub_theme": "tabellen lezen",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [],
+        "hoofdvraag": "Bereken totaal bezoekers, bepaal dag met minste bezoekers en het gemiddelde",
+        "tussenstappen": [
+          "Tel alle bezoekers bij elkaar op",
+          "Zoek de laagste waarde",
+          "Bereken het gemiddelde"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Maandag": "234 bezoekers",
+          "Dinsdag": "189 bezoekers",
+          "Woensdag": "356 bezoekers",
+          "Donderdag": "298 bezoekers",
+          "Vrijdag": "412 bezoekers",
+          "Zaterdag": "587 bezoekers",
+          "Zondag": "623 bezoekers",
+          "Aantal dagen": "7"
+        },
+        "tool": "Optellen, minimum en gemiddelde",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Bereken totaal aantal bezoekers",
+            "berekening": "234 + 189 + 356 + 298 + 412 + 587 + 623",
+            "resultaat": "2699 bezoekers",
+            "uitleg": "Tel alle waarden bij elkaar op"
+          },
+          {
+            "stap": "Bepaal dag met minste bezoekers",
+            "berekening": "Vergelijk alle waarden",
+            "resultaat": "Dinsdag (189 bezoekers)",
+            "uitleg": "189 is de laagste waarde"
+          },
+          {
+            "stap": "Bereken het gemiddelde",
+            "berekening": "2699 ÷ 7",
+            "resultaat": "385,6 bezoekers per dag (afgerond 386)",
+            "uitleg": "Deel totaal door aantal dagen"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "bezoekers",
+        "logica_check": "Gemiddelde ligt tussen minimum en maximum. Weekend heeft logischerwijs meer bezoekers",
+        "antwoord": "2699 bezoekers totaal, dinsdag het minst, 386 gemiddeld per dag"
+      }
+    }
   },
   {
     "id": 38,
@@ -19655,7 +20140,52 @@
         }
       }
     ],
-    "sub_theme": "gegevens verwerken"
+    "sub_theme": "gegevens verwerken",
+    "lova": {
+      "stap1_lezen": {
+        "ruis": [
+          "Groep 8"
+        ],
+        "hoofdvraag": "Hoeveel op hockey en hoeveel meer op voetbal dan zwemmen?",
+        "tussenstappen": [
+          "Zoek het aantal stemmen voor hockey in de tabel",
+          "Zoek de aantallen voor voetbal en zwemmen",
+          "Bereken het verschil"
+        ]
+      },
+      "stap2_ordenen": {
+        "relevante_getallen": {
+          "Voetbal": "12 leerlingen",
+          "Hockey": "7 leerlingen",
+          "Basketbal": "5 leerlingen",
+          "Zwemmen": "8 leerlingen",
+          "Tennis": "3 leerlingen"
+        },
+        "tool": "Tabel aflezen en aftrekken",
+        "conversies": []
+      },
+      "stap3_vormen": {
+        "bewerkingen": [
+          {
+            "stap": "Lees aantal stemmen voor hockey",
+            "berekening": "Zoek hockey in tabel",
+            "resultaat": "7 leerlingen",
+            "uitleg": "Direct aflezen uit de tabel"
+          },
+          {
+            "stap": "Bereken verschil voetbal - zwemmen",
+            "berekening": "12 - 8",
+            "resultaat": "4 leerlingen meer",
+            "uitleg": "Trek aantal zwemmen af van aantal voetbal"
+          }
+        ]
+      },
+      "stap4_antwoorden": {
+        "verwachte_eenheid": "leerlingen",
+        "logica_check": "Alle aantallen moeten optellen tot het totaal aantal leerlingen in de klas",
+        "antwoord": "7 leerlingen op hockey, 4 leerlingen meer op voetbal dan zwemmen"
+      }
+    }
   },
   {
     "id": 222,
