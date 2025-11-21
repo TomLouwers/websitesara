@@ -16,25 +16,7 @@ let wrongAnswers = []; // Track wrong answers for review
 
 // Progress tracker by category
 let categoryProgress = {};
-let isProgressTrackerCollapsed = false;
 let lovaClickCount = 0; // Track L.O.V.A. button clicks
-
-// Toggle progress tracker visibility
-function toggleProgressTracker() {
-    const tracker = document.getElementById('progressTracker');
-    isProgressTrackerCollapsed = !isProgressTrackerCollapsed;
-
-    if (isProgressTrackerCollapsed) {
-        tracker.classList.add('collapsed');
-    } else {
-        tracker.classList.remove('collapsed');
-    }
-}
-
-// Check if mobile device
-function isMobileDevice() {
-    return window.innerWidth <= CONFIG.mobileBreakpoint;
-}
 
 // Highscore management
 function getHighscoreKey(subject, theme) {
@@ -78,7 +60,8 @@ function initializeCategoryProgress(questions) {
     categories.forEach(category => {
         categoryProgress[category] = {
             correct: 0,
-            incorrect: 0
+            incorrect: 0,
+            lovaClicks: 0
         };
     });
 
@@ -102,9 +85,6 @@ function updateCategoryProgress(theme, isCorrect) {
 
 // Display the progress tracker
 function updateProgressTrackerDisplay() {
-    const container = document.getElementById('categoryProgress');
-    container.innerHTML = '';
-
     // Calculate totals
     let totalCorrect = 0;
     let totalIncorrect = 0;
@@ -116,28 +96,9 @@ function updateProgressTrackerDisplay() {
         const stats = categoryProgress[category];
         totalCorrect += stats.correct;
         totalIncorrect += stats.incorrect;
-
-        const categoryElement = document.createElement('div');
-        categoryElement.className = 'category-item';
-
-        categoryElement.innerHTML = `
-            <div class="category-name">${category}</div>
-            <div class="category-stats">
-                <div class="stat-item">
-                    <span class="stat-label">Goed</span>
-                    <span class="stat-value correct">${stats.correct}</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-label">Fout</span>
-                    <span class="stat-value incorrect">${stats.incorrect}</span>
-                </div>
-            </div>
-        `;
-
-        container.appendChild(categoryElement);
     });
 
-    // Update summary totals
+    // Update summary totals only (compact display)
     document.getElementById('totalCorrect').textContent = totalCorrect;
     document.getElementById('totalIncorrect').textContent = totalIncorrect;
     document.getElementById('lovaClicks').textContent = lovaClickCount;
@@ -340,16 +301,6 @@ function startQuizWithData(subject) {
     document.getElementById('quizTitle').textContent = CONFIG.subjectTitles[subject] || 'Quiz';
 
     // L.O.V.A. help button will be shown/hidden automatically per question based on lova data
-
-    // Start collapsed on mobile for better UX
-    const tracker = document.getElementById('progressTracker');
-    if (isMobileDevice()) {
-        isProgressTrackerCollapsed = true;
-        tracker.classList.add('collapsed');
-    } else {
-        isProgressTrackerCollapsed = false;
-        tracker.classList.remove('collapsed');
-    }
 
     loadCurrentQuestion();
 }
@@ -766,6 +717,66 @@ function stopQuiz() {
     showReviewPage(questionsAnswered);
 }
 
+// Generate compact progress tracker table
+function generateProgressTrackerTable() {
+    let tableHtml = `
+        <div style="margin: 20px 0; padding: 20px; background-color: #f8f9fa; border-radius: 8px;">
+            <h3 style="color: var(--primary-color); margin-bottom: 15px; font-size: 1.2em;">📊 Voortgang Overzicht</h3>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <thead>
+                        <tr style="background-color: var(--primary-color); color: white;">
+                            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Categorie</th>
+                            <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">✓ Goed</th>
+                            <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">✗ Fout</th>
+                            <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">📋 L.O.V.A.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+    `;
+
+    // Sort categories alphabetically
+    const sortedCategories = Object.keys(categoryProgress).sort();
+
+    // Calculate totals
+    let totalCorrect = 0;
+    let totalIncorrect = 0;
+    let totalLovaClicks = 0;
+
+    sortedCategories.forEach((category, index) => {
+        const stats = categoryProgress[category];
+        totalCorrect += stats.correct;
+        totalIncorrect += stats.incorrect;
+        totalLovaClicks += stats.lovaClicks;
+
+        const bgColor = index % 2 === 0 ? '#f8f8f8' : '#ffffff';
+        tableHtml += `
+            <tr style="background-color: ${bgColor};">
+                <td style="padding: 10px; border: 1px solid #ddd; font-weight: 500;">${category}</td>
+                <td style="padding: 10px; border: 1px solid #ddd; text-align: center; color: #28a745; font-weight: bold;">${stats.correct}</td>
+                <td style="padding: 10px; border: 1px solid #ddd; text-align: center; color: #dc3545; font-weight: bold;">${stats.incorrect}</td>
+                <td style="padding: 10px; border: 1px solid #ddd; text-align: center; color: var(--secondary-color); font-weight: bold;">${stats.lovaClicks}</td>
+            </tr>
+        `;
+    });
+
+    // Add totals row
+    tableHtml += `
+                        <tr style="background-color: var(--primary-color); color: white; font-weight: bold;">
+                            <td style="padding: 12px; border: 1px solid #ddd;">Totaal</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">${totalCorrect}</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">${totalIncorrect}</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; text-align: center;">${totalLovaClicks}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    `;
+
+    return tableHtml;
+}
+
 // Display review page with wrong answers
 function showReviewPage(questionsAnswered) {
     document.getElementById('quizPage').style.display = 'none';
@@ -785,6 +796,11 @@ function showReviewPage(questionsAnswered) {
     // Display wrong answers
     const container = document.getElementById('wrongAnswersContainer');
     container.innerHTML = '';
+
+    // Add progress tracker table at the top
+    const progressTableDiv = document.createElement('div');
+    progressTableDiv.innerHTML = generateProgressTrackerTable();
+    container.appendChild(progressTableDiv);
 
     wrongAnswers.forEach((item, index) => {
         const reviewItem = document.createElement('div');
@@ -894,9 +910,15 @@ function toggleLovaPanel() {
         panel.classList.remove('hidden');
         icon.textContent = '▲';
 
-        // Increment L.O.V.A. click counter
+        // Increment L.O.V.A. click counter (global)
         lovaClickCount++;
         document.getElementById('lovaClicks').textContent = lovaClickCount;
+
+        // Increment L.O.V.A. click counter per category
+        const currentQuestion = randomizedQuestions[currentQuestionIndex];
+        if (currentQuestion && currentQuestion.theme && categoryProgress[currentQuestion.theme]) {
+            categoryProgress[currentQuestion.theme].lovaClicks++;
+        }
     } else {
         panel.classList.remove('expanded');
         setTimeout(() => {
