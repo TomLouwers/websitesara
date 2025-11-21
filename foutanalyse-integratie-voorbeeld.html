@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foutanalyse met Verhoudingstabel - Integratie Voorbeeld</title>
+
+    <!-- Widget styling -->
+    <link rel="stylesheet" href="verhoudingstabel-widget.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .app-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .question-header {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .option-button {
+            padding: 16px 20px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .option-button:hover {
+            background: #f8f9fa;
+            border-color: #667eea;
+            transform: translateX(5px);
+        }
+
+        .option-button.selected {
+            background: #fee;
+            border-color: #f44;
+        }
+
+        .option-button.correct {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        /* Feedback section */
+        .feedback-section {
+            margin-top: 30px;
+            padding: 25px;
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .feedback-section.show {
+            display: block;
+            animation: slideIn 0.4s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .feedback-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .feedback-icon {
+            font-size: 2em;
+        }
+
+        .feedback-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #856404;
+        }
+
+        .feedback-text {
+            font-size: 1.05em;
+            line-height: 1.7;
+            color: #856404;
+            margin-bottom: 20px;
+        }
+
+        .visualization-container {
+            margin-top: 20px;
+        }
+
+        .concept-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .concept-title {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        .reset-button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .reset-button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .info-box strong {
+            color: #1976d2;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <div class="info-box">
+            <strong>💡 Integratie Voorbeeld</strong><br>
+            Dit toont hoe de verhoudingstabel widget geïntegreerd wordt in de foutanalyse flow.
+            Klik op een fout antwoord om de verhoudingstabel visualisatie te zien!
+        </div>
+
+        <div class="question-card">
+            <div class="question-header" id="question-text"></div>
+
+            <div class="options" id="options-container"></div>
+
+            <!-- Feedback section (shown after wrong answer) -->
+            <div class="feedback-section" id="feedback-section">
+                <div class="feedback-header">
+                    <span class="feedback-icon">🤔</span>
+                    <div class="feedback-title">Foutanalyse</div>
+                </div>
+
+                <div class="feedback-text" id="feedback-text"></div>
+
+                <!-- Verhoudingstabel visualization container -->
+                <div class="visualization-container" id="visualization-container"></div>
+
+                <!-- Concept explanation -->
+                <div class="concept-section" id="concept-section" style="display: none;">
+                    <div class="concept-title">📚 Concept</div>
+                    <div id="concept-text"></div>
+                </div>
+
+                <button class="reset-button" onclick="resetQuestion()">Opnieuw Proberen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Widget library -->
+    <script src="verhoudingstabel-widget.js"></script>
+
+    <script>
+        // Example question data from verhaaltjessommen - Template.json
+        const vraagData = {
+            "id": 1,
+            "vraag": "Sara maakt pannenkoeken. Het recept zegt: gebruik 300 ml melk en bloem in de verhouding melk:bloem = 3:2. Hoeveel gram bloem heeft Sara nodig?",
+            "opties": [
+                {
+                    "tekst": "150 gram",
+                    "correct": false,
+                    "foutanalyse": "Je hebt waarschijnlijk 300 ÷ 2 gerekend. Maar let op: de verhouding is 3:2, niet 1:2. Je moet eerst uitrekenen hoeveel 1 deel is (300 ÷ 3 = 100), en dan vermenigvuldigen met 2 voor de bloem."
+                },
+                {
+                    "tekst": "200 gram",
+                    "correct": true,
+                    "uitleg": "Correct! 300 ml melk = 3 delen. Dus 1 deel = 100. Bloem is 2 delen = 200 gram."
+                },
+                {
+                    "tekst": "450 gram",
+                    "correct": false,
+                    "foutanalyse": "Je hebt waarschijnlijk 300 + 150 gerekend (of 300 × 1,5). Dit zou kloppen als de verhouding 2:3 was. Maar nu is het 3:2, dus bloem moet MINDER zijn dan melk."
+                },
+                {
+                    "tekst": "600 gram",
+                    "correct": false,
+                    "foutanalyse": "Je hebt waarschijnlijk 300 × 2 gerekend. Maar de verhouding 3:2 betekent niet 'keer 2'. Het betekent dat voor elke 3 delen melk, je 2 delen bloem nodig hebt. Bereken eerst 1 deel."
+                }
+            ],
+            "extra_info": {
+                "concept": "Dit is een verhoudingsprobleem. Bij verhoudingen moet je altijd eerst uitrekenen hoeveel 1 deel is, door te delen door het aantal delen. Daarna kun je vermenigvuldigen om het andere deel te vinden.",
+                "berekening": [
+                    "Stap 1: Bereken 1 deel",
+                    "300 ml ÷ 3 delen = 100 ml per deel",
+                    "",
+                    "Stap 2: Bereken bloem (2 delen)",
+                    "100 ml × 2 = 200 gram bloem"
+                ],
+                "verhoudingstabel": {
+                    "type": "verhouding",
+                    "ratio": "3:2",
+                    "labels": ["melk", "delen", "bloem"],
+                    "kolommen": [
+                        {
+                            "waarde": 300,
+                            "eenheid": "ml",
+                            "label": "gegeven",
+                            "rij": "melk",
+                            "kleur": "#3b82f6"
+                        },
+                        {
+                            "waarde": 3,
+                            "eenheid": "delen",
+                            "label": "verhouding",
+                            "rij": "delen",
+                            "kleur": "#f59e0b"
+                        },
+                        {
+                            "waarde": 100,
+                            "eenheid": "ml",
+                            "label": "1 deel",
+                            "rij": "melk",
+                            "kleur": "#3b82f6",
+                            "berekening": "300 ÷ 3"
+                        },
+                        {
+                            "waarde": 1,
+                            "eenheid": "deel",
+                            "label": "1 deel",
+                            "rij": "delen",
+                            "kleur": "#f59e0b"
+                        },
+                        {
+                            "waarde": 200,
+                            "eenheid": "gram",
+                            "label": "antwoord",
+                            "rij": "bloem",
+                            "kleur": "#8b5cf6",
+                            "berekening": "100 × 2"
+                        },
+                        {
+                            "waarde": 2,
+                            "eenheid": "delen",
+                            "label": "verhouding",
+                            "rij": "delen",
+                            "kleur": "#f59e0b"
+                        }
+                    ],
+                    "operaties": [
+                        {
+                            "van": 0,
+                            "naar": 2,
+                            "operatie": "÷3",
+                            "uitleg": "Bereken 1 deel door te delen door 3"
+                        },
+                        {
+                            "van": 2,
+                            "naar": 4,
+                            "operatie": "×2",
+                            "uitleg": "Bloem is 2 delen, dus vermenigvuldig met 2"
+                        }
+                    ]
+                }
+            }
+        };
+
+        // Initialize question
+        function initQuestion() {
+            document.getElementById('question-text').textContent = vraagData.vraag;
+
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+
+            vraagData.opties.forEach((optie, index) => {
+                const button = document.createElement('button');
+                button.className = 'option-button';
+                button.textContent = optie.tekst;
+                button.onclick = () => selectAnswer(index, optie);
+                optionsContainer.appendChild(button);
+            });
+        }
+
+        // Handle answer selection
+        function selectAnswer(index, optie) {
+            // Mark selected answer
+            const buttons = document.querySelectorAll('.option-button');
+            buttons.forEach(btn => btn.classList.remove('selected', 'correct'));
+            buttons[index].classList.add(optie.correct ? 'correct' : 'selected');
+
+            // Show feedback
+            const feedbackSection = document.getElementById('feedback-section');
+            const feedbackText = document.getElementById('feedback-text');
+            const visualizationContainer = document.getElementById('visualization-container');
+            const conceptSection = document.getElementById('concept-section');
+            const conceptText = document.getElementById('concept-text');
+
+            if (optie.correct) {
+                // Correct answer
+                feedbackSection.style.background = '#d4edda';
+                feedbackSection.style.borderColor = '#28a745';
+                document.querySelector('.feedback-icon').textContent = '✅';
+                document.querySelector('.feedback-title').textContent = 'Correct!';
+                document.querySelector('.feedback-title').style.color = '#155724';
+                feedbackText.textContent = optie.uitleg;
+                feedbackText.style.color = '#155724';
+                visualizationContainer.innerHTML = '';
+                conceptSection.style.display = 'none';
+            } else {
+                // Wrong answer - show foutanalyse with verhoudingstabel
+                feedbackSection.style.background = '#fff3cd';
+                feedbackSection.style.borderColor = '#ffc107';
+                document.querySelector('.feedback-icon').textContent = '🤔';
+                document.querySelector('.feedback-title').textContent = 'Foutanalyse';
+                document.querySelector('.feedback-title').style.color = '#856404';
+                feedbackText.textContent = optie.foutanalyse;
+                feedbackText.style.color = '#856404';
+
+                // ===== KEY INTEGRATION: Render verhoudingstabel if available =====
+                visualizationContainer.innerHTML = ''; // Clear previous
+                if (vraagData.extra_info && vraagData.extra_info.verhoudingstabel) {
+                    VerhoudingstabelWidget.render(
+                        visualizationContainer,
+                        vraagData.extra_info.verhoudingstabel
+                    );
+                }
+
+                // Show concept
+                if (vraagData.extra_info && vraagData.extra_info.concept) {
+                    conceptSection.style.display = 'block';
+                    conceptText.textContent = vraagData.extra_info.concept;
+                }
+            }
+
+            feedbackSection.classList.add('show');
+        }
+
+        // Reset question
+        function resetQuestion() {
+            const buttons = document.querySelectorAll('.option-button');
+            buttons.forEach(btn => btn.classList.remove('selected', 'correct'));
+
+            const feedbackSection = document.getElementById('feedback-section');
+            feedbackSection.classList.remove('show');
+        }
+
+        // Initialize on load
+        initQuestion();
+    </script>
+</body>
+</html>
