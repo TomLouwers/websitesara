@@ -14,15 +14,15 @@
           },
           {
             "text": "€32,00",
-            "foutanalyse": "Je hebt te veel afgetrokken of het verkeerde bedrag gebruikt. Controleer welk bedrag je moet aftrekken."
+            "foutanalyse": "Controleer je eerste stap (de totale kosten van de entreekaarten: 24 × €15,50). Je hebt daar waarschijnlijk een fout gemaakt, waardoor de rest van je som niet klopt."
           },
           {
             "text": "€372,00",
-            "foutanalyse": "Je hebt het totale bedrag genoteerd in plaats van wat er overblijft. Trek de kosten af van het budget."
+            "foutanalyse": "Dit zijn de totale kosten van de entreekaarten, niet wat er overblijft. Je bent vergeten deze kosten af te trekken van het budget van €400,00."
           },
           {
             "text": "€400,00",
-            "foutanalyse": "Je hebt het totale bedrag genoteerd in plaats van wat er overblijft. Trek de kosten af van het budget."
+            "foutanalyse": "Dit is het startbudget. Je bent vergeten de kosten af te trekken. Bereken eerst: 24 × €15,50, en trek dit dan af van €400,00."
           }
         ],
         "correct": 0,
@@ -82,7 +82,7 @@
         "options": [
           {
             "text": "10 ijsjes",
-            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+            "foutanalyse": "Je zit dichtbij! Heb je het overgebleven geld uit vraag 1 correct gebruikt? Controleer: €28,00 ÷ €2,50 = ?"
           },
           {
             "text": "11 ijsjes",
@@ -90,11 +90,11 @@
           },
           {
             "text": "12 ijsjes",
-            "foutanalyse": "Je hebt te veel afgetrokken of het verkeerde bedrag gebruikt. Controleer welk bedrag je moet aftrekken."
+            "foutanalyse": "Controleer eerst hoeveel geld er overbleef na de entreekaarten (vraag 1). Je hebt waarschijnlijk een verkeerd bedrag gebruikt voor deze berekening."
           },
           {
             "text": "14 ijsjes",
-            "foutanalyse": "Je hebt te veel afgetrokken of het verkeerde bedrag gebruikt. Controleer welk bedrag je moet aftrekken."
+            "foutanalyse": "Controleer eerst hoeveel geld er overbleef na de entreekaarten (vraag 1). Je hebt waarschijnlijk een verkeerd bedrag gebruikt voor deze berekening."
           }
         ],
         "correct": 1,
@@ -273,7 +273,7 @@
         "options": [
           {
             "text": "250 gram",
-            "foutanalyse": "Check of je de breuk correct hebt berekend en vereenvoudigd tot de kleinste vorm."
+            "foutanalyse": "Je hebt het verschil gebruikt (12-8=4 meer personen) in plaats van de VERHOUDING. Bij recepten werk je met verhoudingen! Bereken hoeveel KEER zoveel: 12 ÷ 8 = 1,5. Dus ALLE ingrediënten × 1,5."
           },
           {
             "text": "300 gram",
@@ -281,20 +281,41 @@
           },
           {
             "text": "350 gram",
-            "foutanalyse": "Check of je de breuk correct hebt berekend en vereenvoudigd tot de kleinste vorm."
+            "foutanalyse": "Controleer je berekening. Je moet de verhouding 12 ÷ 8 = 1,5 gebruiken. Vermenigvuldig alleen de bloem (200 gram) met 1,5, niet verschillende ingrediënten bij elkaar optellen."
           },
           {
             "text": "400 gram",
-            "foutanalyse": "Check of je de breuk correct hebt berekend en vereenvoudigd tot de kleinste vorm."
+            "foutanalyse": "Je hebt de hoeveelheid verdubbeld (× 2), maar 12 personen is NIET 2 keer zoveel als 8 personen! Bereken: 12 ÷ 8 = 1,5. Dus: 200 gram × 1,5 = ?"
           }
         ],
         "correct": 1,
         "extra_info": {
           "concept": "Dit is een verhoudingsprobleem: de verhouding tussen de ingrediënten blijft hetzelfde, maar je moet alles met dezelfde factor vermenigvuldigen.",
           "berekening": [
-            "De verhouding is 12:8, wat vereenvoudigd 3:2 is (of 1,5 keer zoveel)",
-            "200 gram × 1,5 = 300 gram bloem"
-          ]
+            "VERHOUDINGSTABEL Recept opschalen",
+            "",
+            "               ×1,5",
+            "  personen │   8   →   12",
+            "     bloem │  200g →  300g",
+            "",
+            "Uitleg:",
+            "• Schaalfactor = 12 ÷ 8 = 1,5 keer zoveel",
+            "• Alle ingrediënten × 1,5",
+            "• Bloem: 200 gram × 1,5 = 300 gram"
+          ],
+          "verhoudingstabel": {
+            "type": "schaalfactor",
+            "factor": 1.5,
+            "kolommen": [
+              {"waarde": 8, "eenheid": "personen", "label": "origineel"},
+              {"waarde": 12, "eenheid": "personen", "label": "nieuw"},
+              {"waarde": 200, "eenheid": "gram", "label": "bloem origineel"},
+              {"waarde": 300, "eenheid": "gram", "label": "bloem nieuw", "berekening": "200 × 1,5"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×1,5", "uitleg": "12 personen is 1,5× zoveel als 8"}
+            ]
+          }
         },
         "lova": {
           "stap1_lezen": {
@@ -420,7 +441,7 @@
         "options": [
           {
             "text": "15:30 uur",
-            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen van tijd. Let op: 1 uur = 60 minuten, niet 100."
+            "foutanalyse": "Je hebt 1,5 uur fietstijd berekend, maar bent de pauze van 15 minuten vergeten! Totale tijd = fietstijd (1,5 uur = 1u 30min) + pauze (15 min) = ?"
           },
           {
             "text": "15:45 uur",
@@ -428,11 +449,11 @@
           },
           {
             "text": "16:00 uur",
-            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen van tijd. Let op: 1 uur = 60 minuten, niet 100."
+            "foutanalyse": "Controleer je tijd-berekening. 18 km ÷ 12 km/u = 1,5 uur (NIET 2 uur!). Reken 1,5 uur om naar minuten: 1,5 × 60 = 90 minuten = 1 uur en 30 minuten."
           },
           {
             "text": "16:15 uur",
-            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen van tijd. Let op: 1 uur = 60 minuten, niet 100."
+            "foutanalyse": "Je hebt 1,5 uur verkeerd omgerekend. Let op: 1,5 uur = 1 uur + 0,5 uur. En 0,5 uur = 0,5 × 60 = 30 minuten (NIET 50 minuten!). Plus 15 min pauze = 1u 45min totaal."
           }
         ],
         "correct": 1,
@@ -587,7 +608,7 @@
         "options": [
           {
             "text": "120 stripboeken",
-            "foutanalyse": "Let op: heb je het percentage correct omgerekend (delen door 100 of vermenigvuldigen met 0,01)?"
+            "foutanalyse": "Je hebt vergeten eerst het percentage stripboeken te berekenen. Kinderboek + roman = 35% + 45% = 80%. Hoeveel procent blijft er dan over voor stripboeken? Bereken eerst: 100% - 80% = ?"
           },
           {
             "text": "160 stripboeken",
@@ -595,21 +616,42 @@
           },
           {
             "text": "200 stripboeken",
-            "foutanalyse": "Let op: heb je het percentage correct omgerekend (delen door 100 of vermenigvuldigen met 0,01)?"
+            "foutanalyse": "Je hebt het verkeerde percentage gebruikt. Bereken eerst: 100% - 35% - 45% = ? procent zijn stripboeken. Pas daarna dit percentage toe op 800 boeken."
           },
           {
             "text": "280 stripboeken",
-            "foutanalyse": "Let op: heb je het percentage correct omgerekend (delen door 100 of vermenigvuldigen met 0,01)?"
+            "foutanalyse": "Je hebt waarschijnlijk alleen het percentage kinderboeken (35%) gebruikt. Maar stripboeken zijn het RESTPERCENTAGE: 100% - 35% - 45% = ? Bereken daarna dit percentage van 800."
           }
         ],
         "correct": 1,
         "extra_info": {
           "concept": "Dit is een berekenprobleem waarbij je stap voor stap moet werken.",
           "berekening": [
-            "Bereken eerst welk percentage stripboeken zijn: 100% - 35% - 45% = 20%",
-            "Bereken 20% van 800: 0,20 × 800 = 160 stripboeken",
-            "Of: (20 ÷ 100) × 800 = 160 stripboeken"
-          ]
+            "VERHOUDINGSTABEL Verdeling 800 boeken",
+            "",
+            "                35%     45%     20%   = 100%",
+            "              ─────   ─────   ─────",
+            " kinderboek │  280",
+            "      roman │          360",
+            " stripboek │                  160",
+            "              ─────   ─────   ─────",
+            "   totaal   │  280  +  360  +  160  =  800",
+            "",
+            "Uitleg:",
+            "• Eerst restpercentage: 100% - 35% - 45% = 20%",
+            "• Dan berekenen: 20% van 800 = 0,20 × 800 = 160",
+            "• Of: (20 ÷ 100) × 800 = 160 stripboeken"
+          ],
+          "verhoudingstabel": {
+            "type": "percentage_verdeling",
+            "totaal": 800,
+            "eenheid": "boeken",
+            "categorieën": [
+              {"label": "kinderboek", "percentage": 35, "aantal": 280, "berekening": "35% van 800"},
+              {"label": "roman", "percentage": 45, "aantal": 360, "berekening": "45% van 800"},
+              {"label": "stripboek", "percentage": 20, "aantal": 160, "berekening": "20% van 800"}
+            ]
+          }
         },
         "lova": {
           "stap1_lezen": {
@@ -812,11 +854,11 @@
         "options": [
           {
             "text": "€150,00",
-            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+            "foutanalyse": "Je hebt waarschijnlijk €125 + €25 gerekend (25% van €100). Maar let op: €125 is al 75% van de normale prijs (100% - 25% korting). Je moet terugrekenen: €125 ÷ 0,75."
           },
           {
             "text": "€156,20",
-            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+            "foutanalyse": "Je zit heel dichtbij! Je hebt waarschijnlijk de juiste formule gebruikt (€125 ÷ 0,75), maar een rekenfout gemaakt of verkeerd afgerond. Controleer je berekening: €125,00 ÷ 0,75 = ?"
           },
           {
             "text": "€166,70",
@@ -824,7 +866,7 @@
           },
           {
             "text": "€175,00",
-            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+            "foutanalyse": "Je hebt waarschijnlijk 25% van €125 erbij opgeteld (€125 + €31,25 = €156,25). Maar €125 is al 75% van het totaal. Je moet delen door 0,75, niet optellen!"
           }
         ],
         "correct": 2,
@@ -1209,7 +1251,7 @@
         "options": [
           {
             "text": "68 seconden",
-            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+            "foutanalyse": "68 seconden is één van de tijden, maar niet het gemiddelde! Voor een gemiddelde moet je ALLE tijden optellen (68+72+64+76) en delen door het aantal rondes (4). Bereken: ? ÷ 4 = ?"
           },
           {
             "text": "70 seconden",
@@ -1217,11 +1259,11 @@
           },
           {
             "text": "72 seconden",
-            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+            "foutanalyse": "72 seconden is één van de tijden, maar niet het gemiddelde! Bereken: (68+72+64+76) ÷ 4 = ? Heb je alle tijden meegeteld?"
           },
           {
             "text": "75 seconden",
-            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+            "foutanalyse": "Controleer je berekening. Tel alle tijden op: 68+72+64+76 = 280 seconden. Deel door 4 rondes: 280 ÷ 4 = ? (niet 75)."
           }
         ],
         "correct": 1,
@@ -1361,7 +1403,7 @@
         "options": [
           {
             "text": "7 leerlingen",
-            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+            "foutanalyse": "Je zit dichtbij! Controleer je rest-percentage: 100% - 40% - 28% = ? Is dit 28% of 32%? Bereken daarna dit percentage van 25 leerlingen."
           },
           {
             "text": "8 leerlingen",
@@ -1369,11 +1411,11 @@
           },
           {
             "text": "9 leerlingen",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je kunt geen 0,9 leerling hebben! Bij hele personen rond je naar beneden af. Controleer ook of je het juiste rest-percentage hebt gebruikt (100% - 40% - 28% = 32%)."
           },
           {
             "text": "10 leerlingen",
-            "foutanalyse": "Let op: heb je het percentage correct omgerekend (delen door 100 of vermenigvuldigen met 0,01)?"
+            "foutanalyse": "Je hebt het verkeerde percentage gebruikt. 10 leerlingen = 40% van 25 (bioscoop). Maar de vraag is over lasergamen! Bereken eerst: 100% - 40% - 28% = ? procent wil lasergamen."
           }
         ],
         "correct": 1,
@@ -1724,11 +1766,11 @@
         "options": [
           {
             "text": "20 m²",
-            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+            "foutanalyse": "Je hebt lengte en breedte opgeteld (12+8=20), maar dat geeft de OMTREK, niet de oppervlakte! Voor oppervlakte moet je VERMENIGVULDIGEN: lengte × breedte. Bereken: 12 × 8 = ?"
           },
           {
             "text": "48 m²",
-            "foutanalyse": "Je hebt de helft berekend. Controleer of je niet bent vergeten te vermenigvuldigen met 2."
+            "foutanalyse": "Let op de vraag! Er wordt gevraagd naar de oppervlakte van de HELE tuin, niet alleen het deel dat betegeld wordt. Bereken: 12 × 8 = ? m² voor de hele tuin."
           },
           {
             "text": "96 m²",
@@ -1736,7 +1778,7 @@
           },
           {
             "text": "192 m²",
-            "foutanalyse": "Je hebt dubbel gerekend. Controleer of je niet per ongeluk twee keer hebt vermenigvuldigd."
+            "foutanalyse": "Je hebt te veel vermenigvuldigd. Oppervlakte = lengte × breedte = 12 × 8 = 96 m². Heb je per ongeluk twee bewerkingen gedaan? Controleer je stappen."
           }
         ],
         "correct": 2,
@@ -9024,7 +9066,7 @@
         "options": [
           {
             "text": "150 gram",
-            "foutanalyse": "Check of je de verhouding correct hebt toegepast op beide getallen."
+            "foutanalyse": "Je hebt de verhouding andersom toegepast! Melk:bloem = 3:2 betekent dat melk 3 delen is en bloem 2 delen. Je hebt 300ml melk (=3 delen), dus 1 deel = 300÷3 = 100. Bloem is 2 delen: 2 × 100 = ?"
           },
           {
             "text": "200 gram",
@@ -9032,21 +9074,47 @@
           },
           {
             "text": "250 gram",
-            "foutanalyse": "Check of je de verhouding correct hebt toegepast op beide getallen."
+            "foutanalyse": "Controleer het aantal delen! Melk:bloem = 3:2. Bereken eerst 1 deel: 300 ml ÷ 3 = 100. Bloem is 2 delen (NIET 2,5 delen!): 2 × 100 = ?"
           },
           {
             "text": "300 gram",
-            "foutanalyse": "Check of je de verhouding correct hebt toegepast op beide getallen."
+            "foutanalyse": "Let op de verhouding 3:2! Dit betekent NIET evenveel melk als bloem. Melk (300ml) is 3 delen, bloem is 2 delen. Bereken: 300 ÷ 3 = 100 per deel. Dus bloem = 2 × 100 = ?"
           }
         ],
         "correct": 1,
         "extra_info": {
           "concept": "Dit is een verhoudingsprobleem: de verhouding tussen de ingrediënten blijft hetzelfde, maar je moet alles met dezelfde factor vermenigvuldigen.",
           "berekening": [
-            "Je hebt 300 ml melk, dat is 3 delen",
-            "1 deel = 300 ÷ 3 = 100",
-            "Bloem is 2 delen: 2 × 100 = 200 gram"
-          ]
+            "VERHOUDINGSTABEL melk:bloem = 3:2",
+            "",
+            "          ÷3        ×2",
+            "  melk │  300  →  100  →  bloem",
+            " delen │   3   →   1   →   2",
+            "  gram │           ↓",
+            "       │         200 gram",
+            "",
+            "Uitleg:",
+            "• Melk heeft 3 delen = 300 ml",
+            "• 1 deel = 300 ÷ 3 = 100",
+            "• Bloem heeft 2 delen = 2 × 100 = 200 gram"
+          ],
+          "verhoudingstabel": {
+            "type": "verhouding",
+            "ratio": "3:2",
+            "labels": ["melk", "delen", "bloem"],
+            "kolommen": [
+              {"waarde": 300, "eenheid": "ml", "label": "gegeven", "rij": "melk"},
+              {"waarde": 3, "eenheid": "delen", "label": "verhouding", "rij": "delen"},
+              {"waarde": 100, "eenheid": "ml", "label": "1 deel", "rij": "melk", "berekening": "300 ÷ 3"},
+              {"waarde": 1, "eenheid": "deel", "label": "1 deel", "rij": "delen"},
+              {"waarde": 200, "eenheid": "gram", "label": "antwoord", "rij": "bloem", "berekening": "2 × 100"},
+              {"waarde": 2, "eenheid": "delen", "label": "verhouding", "rij": "delen"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 2, "operatie": "÷3", "uitleg": "Bereken 1 deel"},
+              {"van": 2, "naar": 4, "operatie": "×2", "uitleg": "Bloem is 2 delen"}
+            ]
+          }
         }
       },
       {
@@ -27231,15 +27299,15 @@
         "options": [
           {
             "text": "1:100",
-            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen van tijd. Let op: 1 uur = 60 minuten, niet 100."
+            "foutanalyse": "Controleer eerst je eenheden! Je hebt waarschijnlijk meters niet omgezet naar centimeters. 24 meter = 2400 cm, niet 24 cm. Bereken opnieuw: 8 cm op tekening = 2400 cm werkelijk."
           },
           {
             "text": "1:200",
-            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen van tijd. Let op: 1 uur = 60 minuten, niet 100."
+            "foutanalyse": "Bijna goed! Je hebt meters omgezet, maar een rekenfout gemaakt. Controleer: 2400 cm ÷ 8 cm = ?"
           },
           {
             "text": "1:250",
-            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen van tijd. Let op: 1 uur = 60 minuten, niet 100."
+            "foutanalyse": "Je zit dichtbij! Controleer je deling nog eens: 2400 cm ÷ 8 cm = ? Let op afrondingsfouten."
           },
           {
             "text": "1:300",
@@ -27250,10 +27318,30 @@
         "extra_info": {
           "concept": "Dit is een schaalberekening: de schaal 1:100 betekent dat 1 cm op de tekening gelijk is aan 100 cm in werkelijkheid.",
           "berekening": [
-            "In werkelijkheid: 24 meter = 2400 cm",
-            "Schaal: 1 : (2400 ÷ 8) = 1 : 300",
-            "Check: 8 cm × 300 = 2400 cm = 24 meter ✓"
-          ]
+            "VERHOUDINGSTABEL Schaal 1:300",
+            "",
+            "              ×300",
+            "  tekening │  8 cm  →  2400 cm",
+            "werkelijk │            24 m",
+            "",
+            "Uitleg:",
+            "• Eerst omrekenen: 24 meter = 2400 cm",
+            "• Schaal berekenen: 2400 ÷ 8 = 300",
+            "• Dus schaal 1:300 (1 cm op tekening = 300 cm werkelijk)",
+            "• Check: 8 cm × 300 = 2400 cm ✓"
+          ],
+          "verhoudingstabel": {
+            "type": "schaal",
+            "schaal": "1:300",
+            "kolommen": [
+              {"waarde": 8, "eenheid": "cm", "label": "tekening"},
+              {"waarde": 2400, "eenheid": "cm", "label": "werkelijk"},
+              {"waarde": 24, "eenheid": "m", "label": "werkelijk (meters)"}
+            ],
+            "operaties": [
+              {"van": 0, "naar": 1, "operatie": "×300", "uitleg": "Schaal 1:300"}
+            ]
+          }
         }
       },
       {
@@ -27261,11 +27349,11 @@
         "options": [
           {
             "text": "12 cm",
-            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+            "foutanalyse": "Controleer of je de juiste schaal gebruikt (1:300 uit vraag 1). Heb je 45 meter omgezet naar cm (4500 cm) en gedeeld door 300?"
           },
           {
             "text": "13,5 cm",
-            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening: 45 meter = 4500 cm, dan 4500 ÷ 300 = ?"
           },
           {
             "text": "15 cm",
@@ -27273,7 +27361,7 @@
           },
           {
             "text": "18 cm",
-            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+            "foutanalyse": "Heb je per ongeluk vermenigvuldigd in plaats van gedeeld? Voor tekeningen deel je door de schaalfactor, niet vermenigvuldigen."
           }
         ],
         "correct": 2,
@@ -27351,11 +27439,11 @@
         "options": [
           {
             "text": "1:100.000",
-            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen van tijd. Let op: 1 uur = 60 minuten, niet 100."
+            "foutanalyse": "Controleer eerst je eenheden! Je moet kilometers omzetten naar centimeters. 60 km = 60.000 meter = 6.000.000 cm (niet 6.000 cm). Bereken opnieuw."
           },
           {
             "text": "1:500.000",
-            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen van tijd. Let op: 1 uur = 60 minuten, niet 100."
+            "foutanalyse": "Je bent vergeten kilometers volledig om te rekenen. 1 km = 100.000 cm, dus 60 km = 6.000.000 cm. Controleer je berekening: 6.000.000 ÷ 6 = ?"
           },
           {
             "text": "1:1.000.000",
@@ -27363,7 +27451,7 @@
           },
           {
             "text": "1:10.000.000",
-            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen van tijd. Let op: 1 uur = 60 minuten, niet 100."
+            "foutanalyse": "Je hebt een nul te veel. Controleer je conversie: 60 km = 6.000.000 cm (niet 60.000.000 cm). Bereken opnieuw: 6.000.000 ÷ 6 = ?"
           }
         ],
         "correct": 2,
@@ -27381,11 +27469,11 @@
         "options": [
           {
             "text": "40 km",
-            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+            "foutanalyse": "Controleer de schaal uit vraag 1 (1:1.000.000). Heb je 5 cm vermenigvuldigd met de juiste factor? 5 × 1.000.000 cm = ? km"
           },
           {
             "text": "45 km",
-            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening: 5 cm × 1.000.000 = 5.000.000 cm. Reken dit om naar km: 5.000.000 cm ÷ 100.000 = ?"
           },
           {
             "text": "50 km",
@@ -27393,7 +27481,7 @@
           },
           {
             "text": "55 km",
-            "foutanalyse": "Je zit dichtbij het juiste antwoord! Controleer je tussenstappen nog eens nauwkeurig."
+            "foutanalyse": "Bijna goed! Controleer je vermenigvuldiging en omrekening: 5 cm × 1.000.000 = 5.000.000 cm = 50 km (niet 55 km)."
           }
         ],
         "correct": 2,
@@ -27464,11 +27552,11 @@
         "options": [
           {
             "text": "1:25",
-            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen van tijd. Let op: 1 uur = 60 minuten, niet 100."
+            "foutanalyse": "Controleer je conversie! Heb je meters naar centimeters omgerekend? 12 meter = 1200 cm (niet 120 cm). Bereken opnieuw: 1200 ÷ 30 = ?"
           },
           {
             "text": "1:30",
-            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen van tijd. Let op: 1 uur = 60 minuten, niet 100."
+            "foutanalyse": "Je hebt waarschijnlijk gedacht: 12 meter en 30 cm, dus 12 ÷ 30? Maar je moet eerst beide in dezelfde eenheid hebben: 12 m = 1200 cm."
           },
           {
             "text": "1:40",
@@ -27476,7 +27564,7 @@
           },
           {
             "text": "1:50",
-            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen van tijd. Let op: 1 uur = 60 minuten, niet 100."
+            "foutanalyse": "Controleer je berekening. Je hebt meters omgerekend (goed!), maar een rekenfout gemaakt: 1200 cm ÷ 30 cm = ?"
           }
         ],
         "correct": 2,
@@ -27494,11 +27582,11 @@
         "options": [
           {
             "text": "4 cm",
-            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+            "foutanalyse": "Controleer eerst je eenheden en schaal (1:40 uit vraag 1). Heb je 2,4 meter omgezet naar cm? 2,4 m = 240 cm. Dan: 240 ÷ 40 = ?"
           },
           {
             "text": "5 cm",
-            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+            "foutanalyse": "Je zit dichtbij! Controleer je conversie: 2,4 meter = 240 cm (niet 200 cm). Deel door de schaal: 240 ÷ 40 = ?"
           },
           {
             "text": "6 cm",
@@ -27506,7 +27594,7 @@
           },
           {
             "text": "8 cm",
-            "foutanalyse": "Dit is niet het juiste antwoord. Lees de vraag nog eens goed en controleer je berekening stap voor stap."
+            "foutanalyse": "Heb je per ongeluk vermenigvuldigd in plaats van gedeeld? Voor maquettes deel je door de schaalfactor (40), je vermenigvuldigt niet."
           }
         ],
         "correct": 2,
