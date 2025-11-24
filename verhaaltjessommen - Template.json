@@ -6323,7 +6323,7 @@
     "id": 41,
     "title": "Supermarkt boodschappen",
     "theme": "geld",
-    "content": "Mama gaat boodschappen doen bij de supermarkt. Ze koopt: brood €2,45, melk €1,89, kaas €3,75, appels €2,20 en koekjes €1,95. Er zijn 30 kinderen in de klas. Ze betaalt met een briefje van €20,00.",
+    "content": "Mama gaat boodschappen doen bij de supermarkt. Ze koopt: brood €2,45, melk €1,89, kaas €3,75, appels €2,20 en koekjes €1,91. Er zijn 30 kinderen in de klas. Ze betaalt met een briefje van €20,00.",
     "questions": [
       {
         "question": "Hoeveel kosten alle boodschappen samen?",
@@ -6349,8 +6349,8 @@
         "extra_info": {
           "concept": "Tel alle bedragen bij elkaar op",
           "berekening": [
-            "€2,45 + €1,89 + €3,75 + €2,20 + €1,95",
-            "= €12,24"
+            "€2,45 + €1,89 + €3,75 + €2,20 + €1,91",
+            "= €12,20"
           ]
         },
         "lova": {
@@ -6367,7 +6367,7 @@
               "Melk": "€1,89",
               "Kaas": "€3,75",
               "Appels": "€2,20",
-              "Koekjes": "€1,95"
+              "Koekjes": "€1,91"
             },
             "tool": "Optellen",
             "conversies": []
@@ -6376,15 +6376,15 @@
             "bewerkingen": [
               {
                 "stap": "Tel alle bedragen op",
-                "berekening": "€2,45 + €1,89 + €3,75 + €2,20 + €1,95",
-                "resultaat": "€12,24",
+                "berekening": "€2,45 + €1,89 + €3,75 + €2,20 + €1,91",
+                "resultaat": "€12,20",
                 "uitleg": "Tel alle prijzen bij elkaar op om het totaal te krijgen"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "euro (€)",
-            "logica_check": "€12,24 is logisch voor 5 producten met prijzen tussen €1,89 en €3,75",
+            "logica_check": "€12,20 is logisch voor 5 producten met prijzen tussen €1,91 en €3,75",
             "antwoord": "€12,20"
           }
         }
@@ -6414,7 +6414,7 @@
           "concept": "Breuk van getal berekenen: vermenigvuldig getal met breuk, of deel door noemer en vermenigvuldig met teller.",
           "berekening": [
             "Betaald met: €20,00",
-            "Wisselgeld: €20,00 - €12,24 = €7,76"
+            "Wisselgeld: €20,00 - €12,20 = €7,80"
           ]
         },
         "lova": {
@@ -6429,7 +6429,7 @@
           "stap2_ordenen": {
             "relevante_getallen": {
               "Betaald met": "€20,00",
-              "Totale kosten": "€12,24"
+              "Totale kosten": "€12,20"
             },
             "tool": "Aftrekken",
             "conversies": []
@@ -6438,15 +6438,15 @@
             "bewerkingen": [
               {
                 "stap": "Bereken wisselgeld",
-                "berekening": "€20,00 - €12,24",
-                "resultaat": "€7,76",
+                "berekening": "€20,00 - €12,20",
+                "resultaat": "€7,80",
                 "uitleg": "Trek de totale kosten af van het betaalde bedrag"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "euro (€)",
-            "logica_check": "€7,76 is logisch als wisselgeld van €20 na het betalen van €12,24",
+            "logica_check": "€7,80 is logisch als wisselgeld van €20 na het betalen van €12,20",
             "antwoord": "€7,80"
           }
         }
@@ -45243,11 +45243,11 @@
         "options": [
           {
             "text": "950 bezoekers",
-            "foutanalyse": "Controleer je berekening nog eens. Heb je het totaal aantal dagen goed gebruikt?"
+            "foutanalyse": ""
           },
           {
             "text": "900 bezoekers",
-            "foutanalyse": ""
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening nog eens. Het totaal aantal bezoekers is 7.600, gedeeld door 8 dagen."
           },
           {
             "text": "1.000 bezoekers",
@@ -45258,7 +45258,7 @@
             "foutanalyse": "Dit is te hoog. Controleer of je de getallen niet hebt omgedraaid."
           }
         ],
-        "correct": 1,
+        "correct": 0,
         "extra_info": {
           "concept": "Bij een gewogen gemiddelde weeg je elk gemiddelde naar het aantal meetdagen.",
           "berekening": [
