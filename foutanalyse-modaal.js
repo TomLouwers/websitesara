@@ -158,11 +158,18 @@ function closeFoutanalyseModaal() {
   modaal.classList.remove('show');
 
   // Check if we should show hint after closing (first attempt only)
+  // Use setTimeout to ensure hint appears after modal is fully hidden
   if (modaal.dataset.showHintAfterClose === 'true' && modaal.dataset.hintText) {
-    showHintButton(modaal.dataset.hintText);
-    // Clear the data attributes
+    const hintText = modaal.dataset.hintText; // Store before clearing
+
+    // Clear the data attributes first
     modaal.dataset.showHintAfterClose = 'false';
     modaal.dataset.hintText = '';
+
+    // Show hint after a small delay to ensure modal is closed
+    setTimeout(() => {
+      showHintButton(hintText);
+    }, 100);
   }
 }
 
@@ -631,6 +638,23 @@ function resetAttemptTracking() {
   attemptCount = 0;
   // currentQuestionErrors is reset in loadCurrentQuestion() in app.js
 }
+
+// ============================================
+// MODAAL OVERLAY CLICK HANDLER
+// ============================================
+
+// Close modaal when clicking on overlay (not on content)
+document.addEventListener('DOMContentLoaded', () => {
+  const foutanalyseModaal = document.getElementById('foutanalyseModaal');
+  if (foutanalyseModaal) {
+    foutanalyseModaal.addEventListener('click', (e) => {
+      // Only close if clicking directly on overlay (not on content inside)
+      if (e.target === foutanalyseModaal) {
+        closeFoutanalyseModaal();
+      }
+    });
+  }
+});
 
 // ============================================
 // CONSOLE INFO
