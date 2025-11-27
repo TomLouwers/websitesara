@@ -274,6 +274,9 @@ body {
     color: var(--color-incorrect);
     font-weight: bold;
     box-shadow: var(--shadow-elevation-1);
+    opacity: 0.6; /* Make it clear this option is disabled */
+    cursor: not-allowed; /* Show disabled cursor */
+    pointer-events: none; /* Disable all pointer events */
 }
 
 .textarea-answer {
