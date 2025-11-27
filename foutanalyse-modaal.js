@@ -140,25 +140,12 @@ function showFoutanalyseModaal(selectedOption, extraInfo, attemptNumber = 1, cur
   modaal.classList.add('show');
 
   // After first attempt: show hint button when modaal is closed
-  console.log('🔍 DEBUG: isFirstAttempt:', isFirstAttempt);
-  console.log('🔍 DEBUG: currentQuestion:', currentQuestion);
-  console.log('🔍 DEBUG: currentQuestion.hint:', currentQuestion?.hint);
-
   if (isFirstAttempt && currentQuestion && currentQuestion.hint) {
     // Store hint text in a data attribute so we can access it when closing
     modaal.dataset.showHintAfterClose = 'true';
     modaal.dataset.hintText = currentQuestion.hint;
-    console.log('✅ DEBUG: Hint data attributes set:', {
-      showHintAfterClose: modaal.dataset.showHintAfterClose,
-      hintText: modaal.dataset.hintText
-    });
   } else {
     modaal.dataset.showHintAfterClose = 'false';
-    console.log('❌ DEBUG: Hint NOT set. Reasons:', {
-      isFirstAttempt,
-      hasCurrentQuestion: !!currentQuestion,
-      hasHint: !!currentQuestion?.hint
-    });
   }
 }
 
@@ -168,19 +155,12 @@ function showFoutanalyseModaal(selectedOption, extraInfo, attemptNumber = 1, cur
 
 function closeFoutanalyseModaal() {
   const modaal = document.getElementById('foutanalyseModaal');
-  console.log('🔍 DEBUG: closeFoutanalyseModaal called');
-  console.log('🔍 DEBUG: modaal.dataset:', {
-    showHintAfterClose: modaal.dataset.showHintAfterClose,
-    hintText: modaal.dataset.hintText
-  });
-
   modaal.classList.remove('show');
 
   // Check if we should show hint after closing (first attempt only)
   // Use setTimeout to ensure hint appears after modal is fully hidden
   if (modaal.dataset.showHintAfterClose === 'true' && modaal.dataset.hintText) {
     const hintText = modaal.dataset.hintText; // Store before clearing
-    console.log('✅ DEBUG: Will show hint after 100ms:', hintText);
 
     // Clear the data attributes first
     modaal.dataset.showHintAfterClose = 'false';
@@ -188,11 +168,8 @@ function closeFoutanalyseModaal() {
 
     // Show hint after a small delay to ensure modal is closed
     setTimeout(() => {
-      console.log('🎯 DEBUG: Calling showHintButton now');
       showHintButton(hintText);
     }, 100);
-  } else {
-    console.log('❌ DEBUG: Not showing hint. Check failed.');
   }
 }
 
@@ -629,32 +606,19 @@ function navigateToExercise(remedialId) {
 // ============================================
 
 function showHintButton(hintText) {
-  console.log('🎯 DEBUG: showHintButton called with:', hintText);
-
-  if (!hintText) {
-    console.log('❌ DEBUG: No hintText provided');
-    return;
-  }
+  if (!hintText) return;
 
   // Check if hint is already shown
   const hintContainer = document.getElementById('hintContainer');
-  console.log('🔍 DEBUG: hintContainer:', hintContainer);
-  console.log('🔍 DEBUG: hintContainer.innerHTML:', hintContainer?.innerHTML);
-
   if (hintContainer && hintContainer.innerHTML.trim() === '') {
-    console.log('✅ DEBUG: Creating hint button HTML');
     hintContainer.innerHTML = `
       <button class="hint-toggle" onclick="toggleHint()">
         💡 Hulp nodig?
       </button>
       <div id="hintBox" class="hint-box" style="display: none;">
-        <span class="hint-icon">💡</span>
         ${hintText}
       </div>
     `;
-    console.log('✅ DEBUG: Hint button created!');
-  } else {
-    console.log('❌ DEBUG: Container not empty or not found');
   }
 }
 
