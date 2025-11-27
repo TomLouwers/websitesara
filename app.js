@@ -515,12 +515,6 @@ function submitAnswer() {
                 strategyAndTips.classList.add('hidden');
             }
         } else {
-            options[selectedAnswer].classList.add('incorrect');
-            // Highlight correct answer if an incorrect one was selected
-            if (options[correctIndex]) {
-                options[correctIndex].classList.add('correct');
-            }
-
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, false);
 
@@ -534,6 +528,10 @@ function submitAnswer() {
                                      currentQuestion.extra_info;
 
             if (isVerhaaltjessom) {
+                // For verhaaltjessommen: mark selected answer as incorrect but DON'T reveal correct answer
+                // This allows the user to try again after seeing the error modal
+                options[selectedAnswer].classList.add('incorrect');
+
                 // Show foutanalyse modaal for verhaaltjessommen
                 feedbackSection.classList.add('hidden'); // Hide old feedback
                 showFoutanalyseModaal(selectedOption, currentQuestion.extra_info);
@@ -542,7 +540,17 @@ function submitAnswer() {
                 if (!hintShown && currentQuestion.hint) {
                     showHintButton(currentQuestion.hint);
                 }
+
+                // DON'T set hasAnswered to true here - allow retry
+                // Return early to skip setting hasAnswered at the end
+                return;
             } else {
+                // For other subjects: mark incorrect and reveal correct answer immediately
+                options[selectedAnswer].classList.add('incorrect');
+                // Highlight correct answer if an incorrect one was selected
+                if (options[correctIndex]) {
+                    options[correctIndex].classList.add('correct');
+                }
                 // Old feedback for other subjects
                 feedbackSection.classList.add('incorrect');
                 feedbackTitle.textContent = CONFIG.feedback.incorrect.title;
