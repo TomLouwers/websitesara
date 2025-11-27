@@ -149,7 +149,8 @@ function createRandomizedQuestions(data) {
                     tips: question.tips,
                     possible_answer: question.possible_answer, // Add possible_answer for open questions
                     extra_info: question.extra_info, // NIEUW: extra_info toevoegen
-                    lova: question.lova // L.O.V.A. data
+                    lova: question.lova, // L.O.V.A. data
+                    hint: question.hint // Pre-feedback hint
                 });
             });
         } else if (item.question) {
@@ -168,7 +169,8 @@ function createRandomizedQuestions(data) {
                 tips: item.tips,
                 possible_answer: item.possible_answer, // Add possible_answer for open questions
                 extra_info: item.extra_info, // NIEUW: extra_info toevoegen
-                lova: item.lova // L.O.V.A. data
+                lova: item.lova, // L.O.V.A. data
+                hint: item.hint // Pre-feedback hint
             });
         }
     });
