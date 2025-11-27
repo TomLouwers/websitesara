@@ -41,7 +41,6 @@ const exerciseTitles = {
 
 // Track attempt count per question
 let attemptCount = 0;
-let hintShown = false;
 
 // ============================================
 // SHOW FOUTANALYSE MODAAL
@@ -506,9 +505,9 @@ function navigateToExercise(remedialId) {
 function showHintButton(hintText) {
   if (!hintText) return;
 
-  // Voeg hint button toe aan je vraag UI
+  // Check if hint is already shown
   const hintContainer = document.getElementById('hintContainer');
-  if (hintContainer) {
+  if (hintContainer && hintContainer.innerHTML.trim() === '') {
     hintContainer.innerHTML = `
       <button class="hint-toggle" onclick="toggleHint()">
         💡 Hulp nodig?
@@ -518,7 +517,6 @@ function showHintButton(hintText) {
         ${hintText}
       </div>
     `;
-    hintShown = true;
   }
 }
 
@@ -535,7 +533,7 @@ function toggleHint() {
 
 function resetAttemptTracking() {
   attemptCount = 0;
-  hintShown = false;
+  // currentQuestionErrors is reset in loadCurrentQuestion() in app.js
 }
 
 // ============================================

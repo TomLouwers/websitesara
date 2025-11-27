@@ -13,6 +13,7 @@ let totalQuestions = 0;
 let selectedAnswer = null;
 let hasAnswered = false;
 let wrongAnswers = []; // Track wrong answers for review
+let currentQuestionErrors = 0; // Track errors for current question (for hint display)
 
 // Progress tracker by category
 let categoryProgress = {};
@@ -357,6 +358,15 @@ function loadCurrentQuestion() {
 
     const currentQuestion = randomizedQuestions[currentQuestionIndex];
 
+    // Reset error tracking for new question
+    currentQuestionErrors = 0;
+
+    // Clear hint container for new question
+    const hintContainer = document.getElementById('hintContainer');
+    if (hintContainer) {
+        hintContainer.innerHTML = '';
+    }
+
     // Update progress
     const progress = (currentQuestionIndex / totalQuestions) * 100;
     document.getElementById('progressBar').style.width = progress + '%';
@@ -515,6 +525,9 @@ function submitAnswer() {
                 strategyAndTips.classList.add('hidden');
             }
         } else {
+            // Increment error count for this question
+            currentQuestionErrors++;
+
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, false);
 
@@ -536,8 +549,8 @@ function submitAnswer() {
                 feedbackSection.classList.add('hidden'); // Hide old feedback
                 showFoutanalyseModaal(selectedOption, currentQuestion.extra_info);
 
-                // Show hint after first mistake
-                if (!hintShown && currentQuestion.hint) {
+                // Show hint button after first mistake (if hint exists)
+                if (currentQuestionErrors === 1 && currentQuestion.hint) {
                     showHintButton(currentQuestion.hint);
                 }
 
@@ -652,12 +665,20 @@ function submitAnswer() {
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, true);
         } else {
+            // Increment error count for this question
+            currentQuestionErrors++;
+
             feedbackSection.classList.add('incorrect');
             feedbackTitle.textContent = CONFIG.feedback.incorrect.title;
             feedbackMessage.textContent = CONFIG.feedback.incorrect.messageWithTips;
 
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, false);
+
+            // Show hint button after first mistake (if hint exists)
+            if (currentQuestionErrors === 1 && currentQuestion.hint) {
+                showHintButton(currentQuestion.hint);
+            }
 
             correctAnswerDisplay.textContent = `Voorbeeld antwoord: "${currentQuestion.possible_answer}"`;
             correctAnswerDisplay.classList.remove('hidden');
