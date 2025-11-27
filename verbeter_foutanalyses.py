@@ -94,6 +94,62 @@ def verbeter_foutanalyses():
                 3: "Je hebt waarschijnlijk (2/9) × 81 = 18 berekend, maar er zijn NIET 81 witte schapen! Er zijn 63 witte schapen. Als 9 delen = 63, dan zwart (2 delen) = ?\n\n🤔 **Reflectievraag:** Hoeveel witte schapen zijn er volgens de opgave?"
             }
         },
+        73: {  # Aquarium vissen - Omgekeerde verhouding
+            0: {  # Vraag 1 - Guppy's
+                0: "Je hebt waarschijnlijk een rekenfout gemaakt. Als 3 delen = 24 goudvissen, dan is 1 deel = 8. Guppy's (8 delen) = 8 × 8 = ?\n\n🤔 **Reflectievraag:** Als 3 delen = 24 goudvissen, hoeveel is dan 1 deel?",
+                1: "Je hebt het aantal GOUDVISSEN gegeven! De vraag vraagt naar GUPPY'S. Als 1 deel = 8, dan guppy's (8 delen) = 8 × 8 = ?\n\n🤔 **Reflectievraag:** Vraagt de vraag naar goudvissen of naar guppy's?",
+                2: "Controleer je berekening. Als 1 deel = 8, dan guppy's (8 delen) = 8 × 8 = ?\n\n🤔 **Reflectievraag:** Hoeveel delen heeft guppy's in de verhouding goudvissen:guppy's = 3:8?"
+                # Optie 3 is correct (64)
+            },
+            1: {  # Vraag 2 - Totaal
+                0: "Je hebt niet alle vissen geteld. Tel op: 24 goudvissen + 64 guppy's = ?\n\n🤔 **Reflectievraag:** Heb je beide soorten vissen bij elkaar opgeteld?",
+                1: "Controleer je optelling. Totaal = 24 + 64 = ?\n\n🤔 **Reflectievraag:** Welke twee getallen moet je bij elkaar optellen?",
+                2: "Je hebt te veel of te weinig geteld. Het totaal is: 24 goudvissen + 64 guppy's = ?\n\n🤔 **Reflectievraag:** Heb je het juiste aantal guppy's gebruikt (64)?"
+                # Optie 3 is correct (88)
+            }
+        },
+        74: {  # Speeltuin toestellen - Omgekeerde verhouding
+            0: {  # Vraag 1 - Schommels
+                0: "Je hebt waarschijnlijk een rekenfout gemaakt. Als 2 delen = 6 wippen, dan is 1 deel = 3. Schommels (4 delen) = 4 × 3 = ?\n\n🤔 **Reflectievraag:** Als 2 delen = 6 wippen, hoeveel is dan 1 deel?",
+                1: "Je hebt waarschijnlijk glijbanen en schommels verwisseld. Schommels heeft 4 delen (niet 3). Als 1 deel = 3, dan schommels = 4 × 3 = ?\n\n🤔 **Reflectievraag:** Hoeveel delen heeft schommels in de verhouding 4:3:2?",
+                2: "Controleer je berekening. Als 1 deel = 3, dan schommels (4 delen) = 4 × 3 = ?\n\n🤔 **Reflectievraag:** Als 1 deel = 3, wat is dan 4 × 3?"
+                # Optie 3 is correct (12)
+            },
+            1: {  # Vraag 2 - Glijbanen
+                0: "Je hebt het aantal WIPPEN gegeven! De vraag vraagt naar GLIJBANEN. Als 1 deel = 3, dan glijbanen (3 delen) = 3 × 3 = ?\n\n🤔 **Reflectievraag:** Vraagt de vraag naar wippen of naar glijbanen?",
+                1: "Controleer je berekening. Als 1 deel = 3, dan glijbanen (3 delen) = 3 × 3 = ?\n\n🤔 **Reflectievraag:** Hoeveel delen heeft glijbanen in de verhouding schommels:glijbanen:wippen = 4:3:2?",
+                2: "Je hebt waarschijnlijk een rekenfout gemaakt. Glijbanen heeft 3 delen: 3 × 3 = ?\n\n🤔 **Reflectievraag:** Als 1 deel = 3, wat is dan 3 × 3?"
+                # Optie 3 is correct (9)
+            }
+        },
+        75: {  # Theemelange samenstellen - Omgekeerde verhouding
+            0: {  # Vraag 1 - Kruidenthee
+                0: "Je hebt waarschijnlijk de verhouding verkeerd toegepast. Als 5 delen = 40 gram groene thee, dan is 1 deel = 8. Kruidenthee (3 delen) = 3 × 8 = ?\n\n🤔 **Reflectievraag:** Als 5 delen = 40 gram, hoeveel is dan 1 deel?",
+                1: "Je hebt waarschijnlijk 40 ÷ 2 = 20 berekend, maar de verhouding is 5:3 (NIET 1:1)! Als 1 deel = 8, dan kruidenthee (3 delen) = 3 × 8 = ?\n\n🤔 **Reflectievraag:** Is de verhouding groene:kruiden gelijk aan 1:1, of is het 5:3?",
+                2: "Controleer je berekening. Als 1 deel = 8, dan kruidenthee (3 delen) = 3 × 8 = ?\n\n🤔 **Reflectievraag:** Hoeveel delen heeft kruidenthee in de verhouding 5:3?"
+                # Optie 3 is correct (24)
+            },
+            1: {  # Vraag 2 - Totaal
+                0: "Je hebt alleen de groene thee geteld! Tel ook de kruidenthee mee: 40 + 24 = ?\n\n🤔 **Reflectievraag:** Heb je beide soorten thee bij elkaar opgeteld?",
+                1: "Controleer je optelling. Totaal = 40 gram groene thee + 24 gram kruidenthee = ?\n\n🤔 **Reflectievraag:** Welke twee getallen moet je optellen voor het totaal?",
+                2: "Je hebt te veel of te weinig geteld. Het totaal is: 40 + 24 = ?\n\n🤔 **Reflectievraag:** Heb je het juiste aantal gram kruidenthee gebruikt (24)?"
+                # Optie 3 is correct (64)
+            }
+        },
+        72: {  # Trailmix maken - Verhouding met totaal gegeven
+            0: {  # Vraag 1 - Noten
+                # Optie 0 is correct (200)
+                1: "Je hebt waarschijnlijk een rekenfout gemaakt. De verhouding noten:rozijnen:chocolade = 4:2:1 heeft 4+2+1=7 delen. Noten = (4/7) × 350 = ?\n\n🤔 **Reflectievraag:** Hoeveel delen zijn er in totaal bij de verhouding 4:2:1?",
+                2: "Je hebt waarschijnlijk (3/7) × 350 = 150 berekend. Maar noten heeft 4 delen (niet 3)! Bereken: (4/7) × 350 = ?\n\n🤔 **Reflectievraag:** Hoeveel delen heeft noten in de verhouding 4:2:1?",
+                3: "Controleer je berekening. Bij verhouding 4:2:1 (totaal 7 delen), noten = (4/7) × 350 = ?\n\n🤔 **Reflectievraag:** Welke breuk gebruik je voor noten: 4/7 of een andere breuk?"
+            },
+            1: {  # Vraag 2 - Chocolade
+                0: "Je hebt waarschijnlijk een rekenfout gemaakt. Chocolade heeft 1 deel uit 7 totaal: (1/7) × 350 = ?\n\n🤔 **Reflectievraag:** Als 1 deel = 50, wat is dan het antwoord voor chocolade (1 deel)?",
+                1: "Controleer je berekening. Chocolade is het kleinste deel (1 uit 7): (1/7) × 350 = ?\n\n🤔 **Reflectievraag:** Hoeveel delen heeft chocolade in de verhouding noten:rozijnen:chocolade = 4:2:1?",
+                # Optie 2 is correct (50)
+                3: "Je hebt waarschijnlijk een verkeerde breuk gebruikt. Chocolade heeft 1 deel (niet 2): (1/7) × 350 = ?\n\n🤔 **Reflectievraag:** Welk getal staat voor chocolade in de verhouding 4:2:1?"
+            }
+        },
         80: {  # Bibliotheek boeken - Omgekeerde verhouding
             0: {  # Vraag 1 - Fictie
                 # Optie 0 is correct (200)
