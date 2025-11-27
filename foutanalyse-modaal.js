@@ -199,6 +199,7 @@ function renderVisualAid(visualAidQuery) {
     "Tijdlijn met rustpauze": renderTimelineWithBreak,
     "Puntentabel raak vs mis": renderPointsTable,
     "Verhoudingstabel positieve en negatieve punten": renderRatioTable,
+    "Geld uitgeven visualisatie": renderMoneySpendingVisualization,
   };
 
   const renderFunction = visualAids[visualAidQuery];
@@ -305,6 +306,44 @@ function renderRatioTable(container) {
           <div style="font-size: 32px;">➖</div>
           <div style="font-weight: bold; margin-top: 8px;">Negatief</div>
           <div style="font-size: 14px; color: #721c24;">Trek het verlies af</div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderMoneySpendingVisualization(container) {
+  container.innerHTML = `
+    <div style="text-align: center; padding: 20px;">
+      <p style="font-size: 16px; margin-bottom: 20px; font-weight: 600;">
+        Geld uitgeven betekent <strong>aftrekken</strong>!
+      </p>
+      <div style="display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;">
+        <div style="background: #d4edda; padding: 20px; border-radius: 12px; min-width: 140px; border: 3px solid #28a745;">
+          <div style="font-size: 40px; margin-bottom: 8px;">💰</div>
+          <div style="font-weight: bold; font-size: 18px; color: #155724;">Start Budget</div>
+          <div style="font-size: 24px; color: #28a745; margin-top: 5px;">€400</div>
+        </div>
+
+        <div style="font-size: 40px; color: #dc3545;">➖</div>
+
+        <div style="background: #f8d7da; padding: 20px; border-radius: 12px; min-width: 140px; border: 3px solid #dc3545;">
+          <div style="font-size: 40px; margin-bottom: 8px;">💸</div>
+          <div style="font-weight: bold; font-size: 18px; color: #721c24;">Uitgegeven</div>
+          <div style="font-size: 24px; color: #dc3545; margin-top: 5px;">€372</div>
+        </div>
+
+        <div style="font-size: 40px; color: #28a745;">=</div>
+
+        <div style="background: #fff3cd; padding: 20px; border-radius: 12px; min-width: 140px; border: 3px solid #ffc107;">
+          <div style="font-size: 40px; margin-bottom: 8px;">✨</div>
+          <div style="font-weight: bold; font-size: 18px; color: #856404;">Overblijft</div>
+          <div style="font-size: 24px; color: #ffc107; margin-top: 5px;">€28</div>
+        </div>
+      </div>
+      <div style="margin-top: 20px; padding: 15px; background: #e7f3ff; border-radius: 8px; border-left: 4px solid #007bff;">
+        <div style="font-size: 14px; color: #004085; font-weight: 600;">
+          💡 Rekenregel: Budget - Uitgaven = Overblijft
         </div>
       </div>
     </div>
