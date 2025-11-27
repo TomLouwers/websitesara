@@ -7,21 +7,35 @@
     "questions": [
       {
         "question": "Hoeveel geld blijft er over na het betalen van de entreekaarten?",
+        "hint": "💡 Let op: Je moet TWEE stappen doen - eerst vermenigvuldigen, dan aftrekken!",
         "options": [
           {
             "text": "€400,00",
-            "foutanalyse": "Dit is het startbudget. Je bent vergeten de kosten af te trekken. Bereken eerst: 24 × €15,50, en trek dit dan af van €400,00."
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Dit is het startbudget. Je bent vergeten de kosten af te trekken. Bereken eerst: 24 × €15,50, en trek dit dan af van €400,00.\n\n🤔 **Reflectievraag:** Wat betekent het woord 'overblijft' in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
           },
           {
             "text": "€32,00",
-            "foutanalyse": "Controleer je eerste stap (de totale kosten van de entreekaarten: 24 × €15,50). Je hebt daar waarschijnlijk een fout gemaakt, waardoor de rest van je som niet klopt."
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Controleer je eerste stap (de totale kosten van de entreekaarten: 24 × €15,50). Je hebt daar waarschijnlijk een fout gemaakt, waardoor de rest van je som niet klopt.\n\n🤔 **Reflectievraag:** Wat is 24 × 15?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€372,00",
-            "foutanalyse": "Dit zijn de totale kosten van de entreekaarten, niet wat er overblijft. Je bent vergeten deze kosten af te trekken van het budget van €400,00."
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit zijn de totale kosten van de entreekaarten, niet wat er overblijft. Je bent vergeten deze kosten af te trekken van het budget van €400,00.\n\n🤔 **Reflectievraag:** Als je €400 hebt en €372 uitgeeft, houd je dan €372 over of moet je iets anders doen?",
+            "visual_aid_query": "Geld uitgeven visualisatie",
+            "remedial_basis_id": null
           },
           {
             "text": "€28,00",
+            "is_correct": true,
             "foutanalyse": ""
           }
         ],
@@ -32,6 +46,12 @@
             "Bereken eerst de totale kosten van alle entreekaarten: 24 × €15,50",
             "Trek dit bedrag af van het totale budget van €400,00",
             "24 × €15,50 = €372,00, dus €400,00 - €372,00 = €28,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Bereken entreekosten | 24 × €15,50 | €372,00 |",
+            "| 2. Trek af van budget | €400,00 - €372,00 | **€28,00** ⭐ |"
           ]
         },
         "lova": {
@@ -79,21 +99,35 @@
       },
       {
         "question": "Hoeveel ijsjes kan de juf maximaal kopen van het overgebleven geld?",
+        "hint": "💡 Tip: Je moet eerst weten hoeveel geld er over is (uit vraag 1) en dan delen door de prijs van 1 ijsje!",
         "options": [
           {
             "text": "10 ijsjes",
-            "foutanalyse": "Je zit dichtbij! Heb je het overgebleven geld uit vraag 1 correct gebruikt? Controleer: €28,00 ÷ €2,50 = ?"
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Heb je het overgebleven geld uit vraag 1 correct gebruikt? Controleer: €28,00 ÷ €2,50 = ?\n\n🤔 **Reflectievraag:** Wat is 28 gedeeld door 2,5?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
           },
           {
             "text": "14 ijsjes",
-            "foutanalyse": "Controleer eerst hoeveel geld er overbleef na de entreekaarten (vraag 1). Je hebt waarschijnlijk een verkeerd bedrag gebruikt voor deze berekening."
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Controleer eerst hoeveel geld er overbleef na de entreekaarten (vraag 1). Je hebt waarschijnlijk een verkeerd bedrag gebruikt voor deze berekening.\n\n🤔 **Reflectievraag:** Hoeveel geld bleef er over volgens je antwoord bij vraag 1?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
           },
           {
             "text": "12 ijsjes",
-            "foutanalyse": "Controleer eerst hoeveel geld er overbleef na de entreekaarten (vraag 1). Je hebt waarschijnlijk een verkeerd bedrag gebruikt voor deze berekening."
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Controleer eerst hoeveel geld er overbleef na de entreekaarten (vraag 1). Je hebt waarschijnlijk een verkeerd bedrag gebruikt voor deze berekening.\n\n🤔 **Reflectievraag:** Heb je het juiste overgebleven bedrag gebruikt uit de vorige vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
           },
           {
             "text": "11 ijsjes",
+            "is_correct": true,
             "foutanalyse": ""
           }
         ],
@@ -103,6 +137,12 @@
           "berekening": [
             "Deel €28,00 door €2,50: 28 ÷ 2,50 = 11,2",
             "Je kunt alleen hele ijsjes kopen, dus afgerond naar beneden: 11 ijsjes"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Deel overgebleven geld | €28,00 ÷ €2,50 | 11,2 ijsjes |",
+            "| 2. Rond af naar beneden | 11,2 → 11 | **11 ijsjes** ⭐ |"
           ]
         },
         "lova": {
@@ -1039,19 +1079,32 @@
         "options": [
           {
             "text": "€150,00",
-            "foutanalyse": "Je hebt waarschijnlijk €125 + €25 gerekend (25% van €100). Maar let op: €125 is al 75% van de normale prijs (100% - 25% korting). Je moet terugrekenen: €125 ÷ 0,75."
+            "foutanalyse": "Je hebt waarschijnlijk €125 + €25 gerekend (25% van €100). Maar let op: €125 is al 75% van de normale prijs (100% - 25% korting). Je moet terugrekenen: €125 ÷ 0,75.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€156,20",
-            "foutanalyse": "Je zit heel dichtbij! Je hebt waarschijnlijk de juiste formule gebruikt (€125 ÷ 0,75), maar een rekenfout gemaakt of verkeerd afgerond. Controleer je berekening: €125,00 ÷ 0,75 = ?"
+            "foutanalyse": "Je zit heel dichtbij! Je hebt waarschijnlijk de juiste formule gebruikt (€125 ÷ 0,75), maar een rekenfout gemaakt of verkeerd afgerond. Controleer je berekening: €125,00 ÷ 0,75 = ?\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€175,00",
-            "foutanalyse": "Je hebt waarschijnlijk 25% van €125 erbij opgeteld (€125 + €31,25 = €156,25). Maar €125 is al 75% van het totaal. Je moet delen door 0,75, niet optellen!"
+            "foutanalyse": "Je hebt waarschijnlijk 25% van €125 erbij opgeteld (€125 + €31,25 = €156,25). Maar €125 is al 75% van het totaal. Je moet delen door 0,75, niet optellen!\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€166,70",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           }
         ],
         "correct": 3,
@@ -1084,7 +1137,16 @@
                 "berekening": "75% van €166,67 = €125"
               }
             ]
-          }
+          },
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Bereken: als 75% = €125,00, dan is 100% = ? |",
+            "| 2 | (€125,00 ÷ 75) × 100 = €166,67 (afgerond) |",
+            "| 3 |  |",
+            "| 4 | Of met decimalen: |",
+            "| 5 | €125,00 ÷ 0,75 = €166,67 |"
+          ]
         },
         "lova": {
           "stap1_lezen": {
@@ -1130,26 +1192,40 @@
             "logica_check": "€166,70 is logisch hoger dan €125 omdat er korting gegeven is",
             "antwoord": "€166,70"
           }
-        }
+        },
+        "hint": "💡 Denk aan: Korting betekent aftrekken van de prijs!"
       },
       {
         "question": "Hoeveel weken moet Sarah nog sparen om genoeg geld te hebben?",
         "options": [
           {
             "text": "5 weken",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "6 weken",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "7 weken",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "8 weken",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 1,
@@ -1159,6 +1235,13 @@
             "Sarah heeft nog nodig: €125,00 - €80,00 = €45,00",
             "Ze krijgt €7,50 per week",
             "€45,00 ÷ €7,50 = 6 weken"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Sarah heeft nog nodig: €125,00 - €80,00 = €45,00 |",
+            "| 2 | Ze krijgt €7,50 per week |",
+            "| 3 | €45,00 ÷ €7,50 = 6 weken |"
           ]
         },
         "lova": {
@@ -1204,7 +1287,8 @@
             "logica_check": "6 weken is logisch: 6 × €7,50 = €45,00 wat precies genoeg is",
             "antwoord": "6 weken"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       }
     ],
     "sub_theme": "korting en aanbiedingen"
@@ -1886,19 +1970,32 @@
         "options": [
           {
             "text": "€26,85",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€35,80",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€39,20",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€44,75",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 1,
@@ -1907,6 +2004,12 @@
           "berekening": [
             "4 boeken × €8,95 = €35,80",
             "Dit is het bedrag zonder korting"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | 4 boeken × €8,95 = €35,80 |",
+            "| 2 | Dit is het bedrag zonder korting |"
           ]
         },
         "lova": {
@@ -1943,26 +2046,40 @@
             "logica_check": "€35,80 is logisch voor 4 boeken van bijna €9 elk",
             "antwoord": "€35,80"
           }
-        }
+        },
+        "hint": "💡 Denk aan: Korting betekent aftrekken van de prijs!"
       },
       {
         "question": "Hoeveel moet Emma betalen mét de korting?",
         "options": [
           {
             "text": "€32,30",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€30,60",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€30,43",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€35,80",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -1972,6 +2089,13 @@
             "15% korting betekent dat je 85% van de prijs betaalt",
             "€35,80 × 0,85 = €30,43",
             "Of: 15% van €35,80 = €5,37 korting, dus €35,80 - €5,37 = €30,43"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | 15% korting betekent dat je 85% van de prijs betaalt |",
+            "| 2 | €35,80 × 0,85 = €30,43 |",
+            "| 3 | Of: 15% van €35,80 = €5,37 korting, dus €35,80 - €5,37 = €30,43 |"
           ]
         },
         "lova": {
@@ -2010,7 +2134,8 @@
             "logica_check": "€30,43 is logisch lager dan €35,80 door de 15% korting",
             "antwoord": "€30,43"
           }
-        }
+        },
+        "hint": "💡 Denk aan: Korting betekent aftrekken van de prijs!"
       }
     ],
     "sub_theme": "korting en aanbiedingen"
@@ -3440,19 +3565,32 @@
         "options": [
           {
             "text": "€25,00",
-            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal."
+            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€32,50",
-            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal."
+            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€40,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€47,50",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -3463,6 +3601,14 @@
             "2 kinderen (Sanne en Tim): 2 × €7,50 = €15,00",
             "Baby Max is gratis (onder de 4 jaar)",
             "Totaal: €25,00 + €15,00 = €40,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | 2 volwassenen: 2 × €12,50 = €25,00 |",
+            "| 2 | 2 kinderen (Sanne en Tim): 2 × €7,50 = €15,00 |",
+            "| 3 | Baby Max is gratis (onder de 4 jaar) |",
+            "| 4 | Totaal: €25,00 + €15,00 = €40,00 |"
           ]
         },
         "lova": {
@@ -3513,26 +3659,40 @@
             "logica_check": "€40 is logisch voor een gezin met 2 volwassenen en 2 betalende kinderen",
             "antwoord": "€40,00"
           }
-        }
+        },
+        "hint": "💡 Denk aan: Moet je optellen of vermenigvuldigen?"
       },
       {
         "question": "Het museum heeft een gezinsarrangement voor €35,00 (maximaal 2 volwassenen en 3 kinderen). Hoeveel besparen ze met dit arrangement?",
         "options": [
           {
             "text": "€2,50",
-            "foutanalyse": "Je hebt de helft berekend. Controleer of je niet bent vergeten te vermenigvuldigen met 2."
+            "foutanalyse": "Je hebt de helft berekend. Controleer of je niet bent vergeten te vermenigvuldigen met 2.\n\n🤔 **Reflectievraag:** Welke informatie in de tekst is belangrijk voor deze vraag?",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
           },
           {
             "text": "€7,50",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€5,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€10,00",
-            "foutanalyse": "Je hebt dubbel gerekend. Controleer je berekening."
+            "foutanalyse": "Je hebt dubbel gerekend. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -3541,6 +3701,12 @@
           "berekening": [
             "Gezinsarrangement: €35,00",
             "Besparing: €40,00 - €35,00 = €5,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Gezinsarrangement: €35,00 |",
+            "| 2 | Besparing: €40,00 - €35,00 = €5,00 |"
           ]
         },
         "lova": {
@@ -3575,7 +3741,8 @@
             "logica_check": "€5 besparing is logisch als verschil tussen €40 en €35",
             "antwoord": "€5,00"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       }
     ],
     "sub_theme": "rekenen met geld"
@@ -6330,19 +6497,32 @@
         "options": [
           {
             "text": "€11,20",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€13,20",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€12,40",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€12,20",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           }
         ],
         "correct": 3,
@@ -6351,6 +6531,12 @@
           "berekening": [
             "€2,45 + €1,89 + €3,75 + €2,20 + €1,91",
             "= €12,20"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | €2,45 + €1,89 + €3,75 + €2,20 + €1,91 |",
+            "| 2 | = €12,20 |"
           ]
         },
         "lova": {
@@ -6387,26 +6573,40 @@
             "logica_check": "€12,20 is logisch voor 5 producten met prijzen tussen €1,91 en €3,75",
             "antwoord": "€12,20"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       },
       {
         "question": "Hoeveel wisselgeld krijgt mama terug?",
         "options": [
           {
             "text": "€7,70",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€7,80",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€8,80",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€9,80",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 1,
@@ -6415,6 +6615,12 @@
           "berekening": [
             "Betaald met: €20,00",
             "Wisselgeld: €20,00 - €12,20 = €7,80"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Betaald met: €20,00 |",
+            "| 2 | Wisselgeld: €20,00 - €12,20 = €7,80 |"
           ]
         },
         "lova": {
@@ -6449,7 +6655,8 @@
             "logica_check": "€7,80 is logisch als wisselgeld van €20 na het betalen van €12,20",
             "antwoord": "€7,80"
           }
-        }
+        },
+        "hint": "💡 Let op: Wisselgeld krijg je terug, dus trek af!"
       }
     ],
     "sub_theme": "rekenen met geld"
@@ -6465,19 +6672,32 @@
         "options": [
           {
             "text": "€15,50",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€16,50",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€17,50",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€18,50",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 1,
@@ -6486,6 +6706,12 @@
           "berekening": [
             "Al gespaard: €28,50",
             "Nog nodig: €45,00 - €28,50 = €16,50"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Al gespaard: €28,50 |",
+            "| 2 | Nog nodig: €45,00 - €28,50 = €16,50 |"
           ]
         },
         "lova": {
@@ -6521,26 +6747,40 @@
             "logica_check": "€16,50 is logisch als verschil tussen €45 en €28,50",
             "antwoord": "€16,50"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       },
       {
         "question": "Hoeveel weken moet Daan nog sparen voordat hij de voetbal kan kopen?",
         "options": [
           {
             "text": "4 weken",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "7 weken",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "6 weken",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "5 weken",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           }
         ],
         "correct": 3,
@@ -6550,6 +6790,13 @@
             "Zakgeld per week: €3,50",
             "Aantal weken: €16,50 ÷ €3,50 = 4,7... weken",
             "Hij moet 5 hele weken sparen (na 4 weken heeft hij nog niet genoeg)"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Zakgeld per week: €3,50 |",
+            "| 2 | Aantal weken: €16,50 ÷ €3,50 = 4,7... weken |",
+            "| 3 | Hij moet 5 hele weken sparen (na 4 weken heeft hij nog niet genoeg) |"
           ]
         },
         "lova": {
@@ -6591,7 +6838,8 @@
             "logica_check": "5 weken is logisch: 5 × €3,50 = €17,50 wat net genoeg is",
             "antwoord": "5 weken"
           }
-        }
+        },
+        "hint": "💡 Tip: Deel het totale bedrag door de prijs van 1 stuk!"
       }
     ],
     "sub_theme": "rekenen met geld"
@@ -6607,19 +6855,32 @@
         "options": [
           {
             "text": "€0,40",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€0,60",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€0,50",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€0,80",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -6627,6 +6888,11 @@
           "concept": "Breuk van getal berekenen: vermenigvuldig getal met breuk, of deel door noemer en vermenigvuldig met teller.",
           "berekening": [
             "Prijs per strip: €25,00 ÷ 50 = €0,50 per strip"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Prijs per strip: €25,00 ÷ 50 = €0,50 per strip |"
           ]
         },
         "lova": {
@@ -6663,26 +6929,40 @@
             "logica_check": "€0,50 per strip is logisch voor een kaart van €25 met 50 strippen",
             "antwoord": "€0,50"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       },
       {
         "question": "Hoeveel bespaar je per strip door een strippenkaart te kopen in plaats van losse strippen?",
         "options": [
           {
             "text": "€0,10",
-            "foutanalyse": "Je hebt de helft berekend. Controleer of je niet bent vergeten te vermenigvuldigen met 2."
+            "foutanalyse": "Je hebt de helft berekend. Controleer of je niet bent vergeten te vermenigvuldigen met 2.\n\n🤔 **Reflectievraag:** Welke informatie in de tekst is belangrijk voor deze vraag?",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
           },
           {
             "text": "€0,15",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€0,20",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€0,25",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -6691,6 +6971,12 @@
           "berekening": [
             "Strip op kaart: €0,50",
             "Besparing: €0,75 - €0,50 = €0,25 per strip"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Strip op kaart: €0,50 |",
+            "| 2 | Besparing: €0,75 - €0,50 = €0,25 per strip |"
           ]
         },
         "lova": {
@@ -6727,26 +7013,40 @@
             "logica_check": "€0,20-€0,25 besparing is logisch bij prijsverschil tussen €0,75 en €0,50",
             "antwoord": "€0,20"
           }
-        }
+        },
+        "hint": "💡 Tip: Deel het totale bedrag door de prijs van 1 stuk!"
       },
       {
         "question": "Hoeveel kost het om 1× achtbaan en 1× botsauto's te doen met de strippenkaart?",
         "options": [
           {
             "text": "€6,50",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€6,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€7,00",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€7,50",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 0,
@@ -6755,6 +7055,12 @@
           "berekening": [
             "Totaal: 8 + 5 = 13 strippen",
             "Kosten: 13 × €0,50 = €6,50"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Totaal: 8 + 5 = 13 strippen |",
+            "| 2 | Kosten: 13 × €0,50 = €6,50 |"
           ]
         },
         "lova": {
@@ -6798,7 +7104,8 @@
             "logica_check": "€6,50 is logisch voor 13 strippen à €0,50",
             "antwoord": "€6,50"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       }
     ],
     "sub_theme": "rekenen met geld"
@@ -6814,19 +7121,32 @@
         "options": [
           {
             "text": "€55,20",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€57,20",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€56,20",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€58,20",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -6834,6 +7154,11 @@
           "concept": "Tel alle prijzen bij elkaar op",
           "berekening": [
             "€18,95 + €14,50 + €22,75 = €56,20"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | €18,95 + €14,50 + €22,75 = €56,20 |"
           ]
         },
         "lova": {
@@ -6870,26 +7195,40 @@
             "logica_check": "€56,20 is logisch voor 3 cadeaus met prijzen tussen €14,50 en €22,75",
             "antwoord": "€56,20"
           }
-        }
+        },
+        "hint": "💡 Denk aan: Korting betekent aftrekken van de prijs!"
       },
       {
         "question": "Hoeveel moet Sophie in totaal betalen?",
         "options": [
           {
             "text": "€50,20",
-            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal."
+            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€56,20",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€52,20",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€51,20",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           }
         ],
         "correct": 3,
@@ -6898,6 +7237,12 @@
           "berekening": [
             "Dit is meer dan €50,00, dus ze krijgt €5,00 korting",
             "Totaal met korting: €56,20 - €5,00 = €51,20"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Dit is meer dan €50,00, dus ze krijgt €5,00 korting |",
+            "| 2 | Totaal met korting: €56,20 - €5,00 = €51,20 |"
           ]
         },
         "lova": {
@@ -6939,7 +7284,8 @@
             "logica_check": "€51,20 is logisch: €56,20 min €5 korting",
             "antwoord": "€51,20"
           }
-        }
+        },
+        "hint": "💡 Denk aan: Moet je optellen of vermenigvuldigen?"
       }
     ],
     "sub_theme": "korting en aanbiedingen"
@@ -6955,19 +7301,32 @@
         "options": [
           {
             "text": "€100,00",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€110,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€120,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€130,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -6976,6 +7335,12 @@
           "berekening": [
             "Aantal flesjes: 100",
             "Totaal: 100 × €1,20 = €120,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Aantal flesjes: 100 |",
+            "| 2 | Totaal: 100 × €1,20 = €120,00 |"
           ]
         },
         "lova": {
@@ -7011,26 +7376,40 @@
             "logica_check": "€120 is logisch voor 100 flesjes à €1,20",
             "antwoord": "€120,00"
           }
-        }
+        },
+        "hint": "💡 Let op: 'Per' betekent vaak vermenigvuldigen!"
       },
       {
         "question": "Hoeveel pakketten moet de school bij de groothandel kopen voor 100 flesjes?",
         "options": [
           {
             "text": "4 pakketten",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "6 pakketten",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "5 pakketten",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "7 pakketten",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -7039,6 +7418,12 @@
           "berekening": [
             "100 ÷ 24 = 4,17... pakketten",
             "Je kunt alleen hele pakketten kopen, dus 5 pakketten (dat geeft 120 flesjes)"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | 100 ÷ 24 = 4,17... pakketten |",
+            "| 2 | Je kunt alleen hele pakketten kopen, dus 5 pakketten (dat geeft 120 flesjes) |"
           ]
         },
         "lova": {
@@ -7081,26 +7466,40 @@
             "logica_check": "5 pakketten is logisch: 5 × 24 = 120 flesjes (genoeg voor 100)",
             "antwoord": "5 pakketten"
           }
-        }
+        },
+        "hint": "💡 Tip: Deel het totale bedrag door de prijs van 1 stuk!"
       },
       {
         "question": "Hoeveel besparen ze door bij de groothandel te kopen (voor 5 pakketten)?",
         "options": [
           {
             "text": "€10,00",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€14,00",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€12,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€16,00",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -7114,6 +7513,17 @@
             "100 flesjes bij supermarkt: €120,00",
             "5 pakketten groothandel: €108,00",
             "Besparing: €120,00 - €108,00 = €12,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | 5 pakketten bij groothandel: 5 × €21,60 = €108,00 |",
+            "| 2 | Dit geeft 120 flesjes (5 × 24) |",
+            "| 3 | 120 flesjes bij supermarkt: 120 × €1,20 = €144,00 |",
+            "| 4 | Besparing: €144,00 - €108,00 = €36,00... maar voor 100 flesjes: |",
+            "| 5 | 100 flesjes bij supermarkt: €120,00 |",
+            "| 6 | 5 pakketten groothandel: €108,00 |",
+            "| 7 | Besparing: €120,00 - €108,00 = €12,00 |"
           ]
         },
         "lova": {
@@ -7156,7 +7566,8 @@
             "logica_check": "€12 besparing is logisch bij verschil tussen €120 en €108",
             "antwoord": "€12,00"
           }
-        }
+        },
+        "hint": "💡 Tip: Deel het totale bedrag door de prijs van 1 stuk!"
       }
     ],
     "sub_theme": "rekenen met geld"
@@ -7172,19 +7583,32 @@
         "options": [
           {
             "text": "€20,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€18,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€15,00",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€25,00",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 0,
@@ -7193,6 +7617,12 @@
           "berekening": [
             "Aantal kinderen: 4",
             "Per kind: €80,00 ÷ 4 = €20,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Aantal kinderen: 4 |",
+            "| 2 | Per kind: €80,00 ÷ 4 = €20,00 |"
           ]
         },
         "lova": {
@@ -7228,26 +7658,40 @@
             "logica_check": "€20 per kind is logisch: 4 × €20 = €80",
             "antwoord": "€20,00"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       },
       {
         "question": "Hoeveel geld houdt elk kind over na het kopen van een ijsje?",
         "options": [
           {
             "text": "€16,50",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€17,50",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€17,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€18,00",
-            "foutanalyse": "Je hebt het verkeerde bedrag afgetrokken. Controleer je berekening."
+            "foutanalyse": "Je hebt het verkeerde bedrag afgetrokken. Controleer je berekening.\n\n🤔 **Reflectievraag:** Welke rekenregel hoort bij dit type vraag?",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
           }
         ],
         "correct": 1,
@@ -7256,6 +7700,12 @@
           "berekening": [
             "Ijsje kost: €2,50",
             "Over: €20,00 - €2,50 = €17,50"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Ijsje kost: €2,50 |",
+            "| 2 | Over: €20,00 - €2,50 = €17,50 |"
           ]
         },
         "lova": {
@@ -7290,7 +7740,8 @@
             "logica_check": "€17,50 is logisch: €20 min €2,50 voor ijsje",
             "antwoord": "€17,50"
           }
-        }
+        },
+        "hint": "💡 Let op: 'Overblijven' betekent aftrekken!"
       }
     ],
     "sub_theme": "geld verdelen"
@@ -7306,19 +7757,32 @@
         "options": [
           {
             "text": "€10,00",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€12,00",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€18,00",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€15,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           }
         ],
         "correct": 3,
@@ -7327,6 +7791,12 @@
           "berekening": [
             "Nieuwe prijs broek: €35,00",
             "Besparing: €50,00 - €35,00 = €15,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Nieuwe prijs broek: €35,00 |",
+            "| 2 | Besparing: €50,00 - €35,00 = €15,00 |"
           ]
         },
         "lova": {
@@ -7363,26 +7833,40 @@
             "logica_check": "€15 besparing is logisch bij prijsverschil tussen €50 en €35",
             "antwoord": "€15,00"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       },
       {
         "question": "Hoeveel betaalt Kevin in totaal?",
         "options": [
           {
             "text": "€118,00",
-            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal."
+            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€125,00",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€124,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€150,00",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -7392,6 +7876,13 @@
             "2 broeken: 2 × €35,00 = €70,00",
             "3 shirts: 3 × €18,00 = €54,00",
             "Totaal: €70,00 + €54,00 = €124,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | 2 broeken: 2 × €35,00 = €70,00 |",
+            "| 2 | 3 shirts: 3 × €18,00 = €54,00 |",
+            "| 3 | Totaal: €70,00 + €54,00 = €124,00 |"
           ]
         },
         "lova": {
@@ -7444,26 +7935,40 @@
             "logica_check": "€124 is logisch voor 2 broeken en 3 shirts in de uitverkoop",
             "antwoord": "€124,00"
           }
-        }
+        },
+        "hint": "💡 Denk aan: Moet je optellen of vermenigvuldigen?"
       },
       {
         "question": "Hoeveel zou Kevin betaald hebben zonder uitverkoop?",
         "options": [
           {
             "text": "€150,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€175,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€165,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€200,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 1,
@@ -7473,6 +7978,13 @@
             "2 broeken à €50,00: 2 × €50,00 = €100,00",
             "3 shirts à €25,00: 3 × €25,00 = €75,00",
             "Totaal: €100,00 + €75,00 = €175,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | 2 broeken à €50,00: 2 × €50,00 = €100,00 |",
+            "| 2 | 3 shirts à €25,00: 3 × €25,00 = €75,00 |",
+            "| 3 | Totaal: €100,00 + €75,00 = €175,00 |"
           ]
         },
         "lova": {
@@ -7522,7 +8034,8 @@
             "logica_check": "€175 is logisch voor 2 broeken en 3 shirts tegen oude prijzen",
             "antwoord": "€175,00"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       }
     ],
     "sub_theme": "rekenen met geld"
@@ -7538,19 +8051,32 @@
         "options": [
           {
             "text": "€7,50",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€8,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€8,50",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€9,00",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -7559,6 +8085,12 @@
           "berekening": [
             "Naar spaarrekening: €4,00",
             "Mag uitgeven: €12,50 - €4,00 = €8,50"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Naar spaarrekening: €4,00 |",
+            "| 2 | Mag uitgeven: €12,50 - €4,00 = €8,50 |"
           ]
         },
         "lova": {
@@ -7594,26 +8126,40 @@
             "logica_check": "€8,50 is logisch: €12,50 min €4 sparen",
             "antwoord": "€8,50"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       },
       {
         "question": "Hoeveel heeft Lisa na 8 weken gespaard?",
         "options": [
           {
             "text": "€28,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€30,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€32,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€36,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -7622,6 +8168,12 @@
           "berekening": [
             "Aantal weken: 8",
             "Totaal gespaard: 8 × €4,00 = €32,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Aantal weken: 8 |",
+            "| 2 | Totaal gespaard: 8 × €4,00 = €32,00 |"
           ]
         },
         "lova": {
@@ -7655,26 +8207,40 @@
             "logica_check": "€32 is logisch: 8 weken × €4 per week",
             "antwoord": "€32,00"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       },
       {
         "question": "Hoeveel heeft Lisa in totaal verdiend na 8 weken?",
         "options": [
           {
             "text": "€96,00",
-            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal."
+            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€104,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€100,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€108,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -7683,6 +8249,12 @@
           "berekening": [
             "Aantal weken: 8",
             "Totaal verdiend: 8 × €12,50 = €100,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Aantal weken: 8 |",
+            "| 2 | Totaal verdiend: 8 × €12,50 = €100,00 |"
           ]
         },
         "lova": {
@@ -7716,7 +8288,8 @@
             "logica_check": "€100 is logisch: 8 weken × €12,50 per week",
             "antwoord": "€100,00"
           }
-        }
+        },
+        "hint": "💡 Denk aan: Moet je optellen of vermenigvuldigen?"
       }
     ],
     "sub_theme": "rekenen met geld"
@@ -7732,19 +8305,32 @@
         "options": [
           {
             "text": "€36,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€40,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€38,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€42,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -7753,6 +8339,12 @@
           "berekening": [
             "Aantal personen: 4",
             "Totaal kaartjes: 4 × €9,50 = €38,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Aantal personen: 4 |",
+            "| 2 | Totaal kaartjes: 4 × €9,50 = €38,00 |"
           ]
         },
         "lova": {
@@ -7788,26 +8380,40 @@
             "logica_check": "€38 is logisch voor 4 kaartjes à €9,50",
             "antwoord": "€38,00"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       },
       {
         "question": "Hoeveel moet elk persoon betalen?",
         "options": [
           {
             "text": "€11,50",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€12,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€12,50",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€13,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           }
         ],
         "correct": 3,
@@ -7817,6 +8423,13 @@
             "2 bakken popcorn: 2 × €6,50 = €13,00",
             "Totaal: €38,00 + €13,00 = €51,00",
             "Per persoon: €51,00 ÷ 4 = €12,75 ≈ €13,00 (afgerond)"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | 2 bakken popcorn: 2 × €6,50 = €13,00 |",
+            "| 2 | Totaal: €38,00 + €13,00 = €51,00 |",
+            "| 3 | Per persoon: €51,00 ÷ 4 = €12,75 ≈ €13,00 (afgerond) |"
           ]
         },
         "lova": {
@@ -7866,7 +8479,8 @@
             "logica_check": "€13 per persoon is logisch voor totaal €51 gedeeld door 4",
             "antwoord": "€13,00"
           }
-        }
+        },
+        "hint": "💡 Let op: 'Per' betekent vaak vermenigvuldigen!"
       }
     ],
     "sub_theme": "geld verdelen"
@@ -7882,19 +8496,32 @@
         "options": [
           {
             "text": "€7,20",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€6,40",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€7,60",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€8,00",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 0,
@@ -7903,6 +8530,12 @@
           "berekening": [
             "Aantal kilo: 3",
             "Totaal appels: 3 × €2,40 = €7,20"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Aantal kilo: 3 |",
+            "| 2 | Totaal appels: 3 × €2,40 = €7,20 |"
           ]
         },
         "lova": {
@@ -7940,26 +8573,40 @@
             "logica_check": "€7,20 is logisch voor 3 kilo à €2,40",
             "antwoord": "€7,20"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       },
       {
         "question": "Hoeveel wisselgeld krijgt moeder terug?",
         "options": [
           {
             "text": "€6,20",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€6,60",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€6,40",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€7,00",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -7970,6 +8617,14 @@
             "Peren: 2 × €3,20 = €6,40",
             "Totaal: €7,20 + €6,40 = €13,60",
             "Wisselgeld: €20,00 - €13,60 = €6,40"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Appels: 3 × €2,40 = €7,20 |",
+            "| 2 | Peren: 2 × €3,20 = €6,40 |",
+            "| 3 | Totaal: €7,20 + €6,40 = €13,60 |",
+            "| 4 | Wisselgeld: €20,00 - €13,60 = €6,40 |"
           ]
         },
         "lova": {
@@ -8020,7 +8675,8 @@
             "logica_check": "€6,40 wisselgeld is logisch bij €20 betaald en €13,60 kosten",
             "antwoord": "€6,40"
           }
-        }
+        },
+        "hint": "💡 Let op: Wisselgeld krijg je terug, dus trek af!"
       }
     ],
     "sub_theme": "rekenen met geld"
@@ -8036,19 +8692,32 @@
         "options": [
           {
             "text": "€40,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€39,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€38,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€41,00",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 0,
@@ -8057,6 +8726,12 @@
           "berekening": [
             "Kaart: €2,50",
             "Totaal: €37,50 + €2,50 = €40,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Kaart: €2,50 |",
+            "| 2 | Totaal: €37,50 + €2,50 = €40,00 |"
           ]
         },
         "lova": {
@@ -8093,26 +8768,40 @@
             "logica_check": "€40 is logisch als som van €37,50 en €2,50",
             "antwoord": "€40,00"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       },
       {
         "question": "Hoeveel moet elk kind betalen?",
         "options": [
           {
             "text": "€7,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€8,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€7,50",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€8,50",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 1,
@@ -8121,6 +8810,12 @@
           "berekening": [
             "Aantal kinderen: 5",
             "Per kind: €40,00 ÷ 5 = €8,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Aantal kinderen: 5 |",
+            "| 2 | Per kind: €40,00 ÷ 5 = €8,00 |"
           ]
         },
         "lova": {
@@ -8158,7 +8853,8 @@
             "logica_check": "€8 per kind is logisch: 5 × €8 = €40",
             "antwoord": "€8,00"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       }
     ],
     "sub_theme": "geld verdelen"
@@ -8174,19 +8870,32 @@
         "options": [
           {
             "text": "€7,50",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€5,00",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€10,00",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€15,00",
-            "foutanalyse": "Je hebt dubbel gerekend. Controleer je berekening."
+            "foutanalyse": "Je hebt dubbel gerekend. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 0,
@@ -8195,6 +8904,12 @@
           "berekening": [
             "Het derde figuur kost de helft",
             "€15,00 ÷ 2 = €7,50"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Het derde figuur kost de helft |",
+            "| 2 | €15,00 ÷ 2 = €7,50 |"
           ]
         },
         "lova": {
@@ -8228,26 +8943,40 @@
             "logica_check": "€7,50 is logisch: de helft van €15,00",
             "antwoord": "€7,50"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       },
       {
         "question": "Hoeveel betaalt Robin in totaal voor de 3 figuren?",
         "options": [
           {
             "text": "€37,50",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€35,00",
-            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal."
+            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€40,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€45,00",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 0,
@@ -8257,6 +8986,13 @@
             "Tweede figuur: €15,00",
             "Derde figuur: €7,50",
             "Totaal: €15,00 + €15,00 + €7,50 = €37,50"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Tweede figuur: €15,00 |",
+            "| 2 | Derde figuur: €7,50 |",
+            "| 3 | Totaal: €15,00 + €15,00 + €7,50 = €37,50 |"
           ]
         },
         "lova": {
@@ -8312,26 +9048,40 @@
             "logica_check": "€37,50 is logisch: minder dan 3 × €15,00 (€45,00) door de korting op het derde figuur",
             "antwoord": "€37,50"
           }
-        }
+        },
+        "hint": "💡 Denk aan: Moet je optellen of vermenigvuldigen?"
       },
       {
         "question": "Hoeveel bespaart Robin door de actie?",
         "options": [
           {
             "text": "€7,50",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€5,00",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€10,00",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€12,50",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 0,
@@ -8341,6 +9091,13 @@
             "Zonder actie: 3 × €15,00 = €45,00",
             "Met actie: €37,50",
             "Besparing: €45,00 - €37,50 = €7,50"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Zonder actie: 3 × €15,00 = €45,00 |",
+            "| 2 | Met actie: €37,50 |",
+            "| 3 | Besparing: €45,00 - €37,50 = €7,50 |"
           ]
         },
         "lova": {
@@ -8383,7 +9140,8 @@
             "logica_check": "€7,50 besparing is logisch: precies de helft van €15,00 (korting op het derde figuur)",
             "antwoord": "€7,50"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       }
     ],
     "sub_theme": "korting en aanbiedingen"
@@ -8399,19 +9157,32 @@
         "options": [
           {
             "text": "€42,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€48,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€45,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€50,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 1,
@@ -8420,6 +9191,12 @@
           "berekening": [
             "Aantal bezoeken: 8",
             "Totaal: 8 × €6,00 = €48,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Aantal bezoeken: 8 |",
+            "| 2 | Totaal: 8 × €6,00 = €48,00 |"
           ]
         },
         "lova": {
@@ -8455,26 +9232,40 @@
             "logica_check": "€48,00 is logisch: 8 bezoeken × €6,00 per bezoek",
             "antwoord": "€48,00"
           }
-        }
+        },
+        "hint": "💡 Let op: 'Per' betekent vaak vermenigvuldigen!"
       },
       {
         "question": "Hoeveel bespaart Fatima per maand met een abonnement?",
         "options": [
           {
             "text": "€11,00",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€12,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€14,00",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€13,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           }
         ],
         "correct": 3,
@@ -8483,6 +9274,12 @@
           "berekening": [
             "Met abonnement: €35,00",
             "Besparing: €48,00 - €35,00 = €13,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Met abonnement: €35,00 |",
+            "| 2 | Besparing: €48,00 - €35,00 = €13,00 |"
           ]
         },
         "lova": {
@@ -8517,26 +9314,40 @@
             "logica_check": "€13,00 besparing is logisch: verschil tussen €48,00 en €35,00",
             "antwoord": "€13,00"
           }
-        }
+        },
+        "hint": "💡 Let op: 'Per' betekent vaak vermenigvuldigen!"
       },
       {
         "question": "Vanaf hoeveel bezoeken per maand is een abonnement voordeliger?",
         "options": [
           {
             "text": "5 bezoeken",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "6 bezoeken",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "7 bezoeken",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "8 bezoeken",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 1,
@@ -8546,6 +9357,13 @@
             "Losse toegang kost €6,00 per keer",
             "€35,00 ÷ €6,00 = 5,83... bezoeken",
             "Vanaf 6 bezoeken is het abonnement voordeliger (6 × €6,00 = €36,00 > €35,00)"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Losse toegang kost €6,00 per keer |",
+            "| 2 | €35,00 ÷ €6,00 = 5,83... bezoeken |",
+            "| 3 | Vanaf 6 bezoeken is het abonnement voordeliger (6 × €6,00 = €36,00 > €35,00) |"
           ]
         },
         "lova": {
@@ -8588,7 +9406,8 @@
             "logica_check": "6 bezoeken is logisch: 5 bezoeken kost €30,00 (goedkoper dan abonnement), 6 bezoeken kost €36,00 (duurder dan abonnement)",
             "antwoord": "6 bezoeken"
           }
-        }
+        },
+        "hint": "💡 Let op: 'Per' betekent vaak vermenigvuldigen!"
       }
     ],
     "sub_theme": "rekenen met geld"
@@ -8604,19 +9423,32 @@
         "options": [
           {
             "text": "€4,80",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€6,00",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€5,40",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€5,10",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           }
         ],
         "correct": 3,
@@ -8625,6 +9457,12 @@
           "berekening": [
             "Aantal schriften: 6",
             "Totaal: 6 × €0,85 = €5,10"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Aantal schriften: 6 |",
+            "| 2 | Totaal: 6 × €0,85 = €5,10 |"
           ]
         },
         "lova": {
@@ -8661,26 +9499,40 @@
             "logica_check": "€5,10 is logisch: 6 schriften van minder dan €1 per stuk",
             "antwoord": "€5,10"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       },
       {
         "question": "Hoeveel kosten alle schoolspullen samen?",
         "options": [
           {
             "text": "€25,60",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€26,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€26,60",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€27,00",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -8690,6 +9542,13 @@
             "Schriften: €5,10",
             "Rekenmachine: €12,50",
             "Totaal: €8,95 + €5,10 + €12,50 = €26,55"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Schriften: €5,10 |",
+            "| 2 | Rekenmachine: €12,50 |",
+            "| 3 | Totaal: €8,95 + €5,10 + €12,50 = €26,55 |"
           ]
         },
         "lova": {
@@ -8724,7 +9583,8 @@
             "logica_check": "€26,55 is logisch: alle drie artikelen opgeteld",
             "antwoord": "€26,60"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       }
     ],
     "sub_theme": "rekenen met geld"
@@ -8740,19 +9600,32 @@
         "options": [
           {
             "text": "€11,50",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€11,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€12,00",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€12,50",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 0,
@@ -8763,6 +9636,14 @@
             "1 patat: €3,00",
             "1 milkshake: €3,50",
             "Totaal: €5,00 + €3,00 + €3,50 = €11,50"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | 2 frikandellen: 2 × €2,50 = €5,00 |",
+            "| 2 | 1 patat: €3,00 |",
+            "| 3 | 1 milkshake: €3,50 |",
+            "| 4 | Totaal: €5,00 + €3,00 + €3,50 = €11,50 |"
           ]
         },
         "lova": {
@@ -8807,26 +9688,40 @@
             "logica_check": "€11,50 is logisch: totaal van alle bestelde items",
             "antwoord": "€11,50"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       },
       {
         "question": "Hoeveel wisselgeld krijgt Thomas?",
         "options": [
           {
             "text": "€8,50",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€8,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€7,50",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€9,00",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 0,
@@ -8835,6 +9730,12 @@
           "berekening": [
             "Kosten: €11,50",
             "Wisselgeld: €20,00 - €11,50 = €8,50"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Kosten: €11,50 |",
+            "| 2 | Wisselgeld: €20,00 - €11,50 = €8,50 |"
           ]
         },
         "lova": {
@@ -8869,7 +9770,8 @@
             "logica_check": "€8,50 wisselgeld is logisch: ongeveer de helft van €20,00 voor bestelling van €11,50",
             "antwoord": "€8,50"
           }
-        }
+        },
+        "hint": "💡 Let op: Wisselgeld krijg je terug, dus trek af!"
       }
     ],
     "sub_theme": "rekenen met geld"
@@ -8885,19 +9787,32 @@
         "options": [
           {
             "text": "€3,20",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€3,50",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€4,00",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€3,80",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           }
         ],
         "correct": 3,
@@ -8906,6 +9821,12 @@
           "berekening": [
             "€0,50 + €0,75 + €1,00 + €1,00 + €0,50",
             "= €3,75 per ronde"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | €0,50 + €0,75 + €1,00 + €1,00 + €0,50 |",
+            "| 2 | = €3,75 per ronde |"
           ]
         },
         "lova": {
@@ -8945,26 +9866,40 @@
             "logica_check": "€3,75 per ronde is logisch: 5 sponsoren geven bedragen tussen €0,50 en €1,00",
             "antwoord": "€3,75"
           }
-        }
+        },
+        "hint": "💡 Let op: 'Per' betekent vaak vermenigvuldigen!"
       },
       {
         "question": "Hoeveel geld haalt Amira in totaal op?",
         "options": [
           {
             "text": "€42,00",
-            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal."
+            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€45,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€44,00",
-            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal."
+            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€43,00",
-            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal."
+            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 1,
@@ -8973,6 +9908,12 @@
           "berekening": [
             "Aantal rondes: 12",
             "Totaal: 12 × €3,75 = €45,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Aantal rondes: 12 |",
+            "| 2 | Totaal: 12 × €3,75 = €45,00 |"
           ]
         },
         "lova": {
@@ -9009,7 +9950,8 @@
             "logica_check": "€45,00 is logisch: 12 rondes × ongeveer €4 per ronde",
             "antwoord": "€45,00"
           }
-        }
+        },
+        "hint": "💡 Denk aan: Moet je optellen of vermenigvuldigen?"
       }
     ],
     "sub_theme": "rekenen met geld"
@@ -9025,19 +9967,32 @@
         "options": [
           {
             "text": "€6,40",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€4,80",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€6,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€3,20",
-            "foutanalyse": "Je hebt de helft berekend. Controleer of je niet bent vergeten te vermenigvuldigen met 2."
+            "foutanalyse": "Je hebt de helft berekend. Controleer of je niet bent vergeten te vermenigvuldigen met 2.\n\n🤔 **Reflectievraag:** Welke informatie in de tekst is belangrijk voor deze vraag?",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
           }
         ],
         "correct": 0,
@@ -9046,6 +10001,12 @@
           "berekening": [
             "Aantal ritten per dag: 2",
             "Per dag: 2 × €3,20 = €6,40"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Aantal ritten per dag: 2 |",
+            "| 2 | Per dag: 2 × €3,20 = €6,40 |"
           ]
         },
         "lova": {
@@ -9084,26 +10045,40 @@
             "logica_check": "€6,40 is logisch: 2 ritten × €3,20 per rit",
             "antwoord": "€6,40"
           }
-        }
+        },
+        "hint": "💡 Let op: 'Per' betekent vaak vermenigvuldigen!"
       },
       {
         "question": "Wat is de goedkoopste optie voor Omar per week?",
         "options": [
           {
             "text": "Losse kaartjes (€32,0)",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "Dagkaarten (€40,0)",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "Weekkaart (€25,0)",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "Alles kost hetzelfde",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -9114,6 +10089,14 @@
             "Dagkaarten: 5 × €8,00 = €40,00",
             "Weekkaart: €25,00",
             "Weekkaart is het goedkoopst"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Losse kaartjes: 5 dagen × €6,40 = €32,00 |",
+            "| 2 | Dagkaarten: 5 × €8,00 = €40,00 |",
+            "| 3 | Weekkaart: €25,00 |",
+            "| 4 | Weekkaart is het goedkoopst |"
           ]
         },
         "lova": {
@@ -9165,7 +10148,8 @@
             "logica_check": "Weekkaart €25,00 is logisch: goedkoper dan losse kaartjes (€32,00) en dagkaarten (€40,00)",
             "antwoord": "Weekkaart (€25,0)"
           }
-        }
+        },
+        "hint": "💡 Let op: 'Per' betekent vaak vermenigvuldigen!"
       }
     ],
     "sub_theme": "rekenen met geld"
@@ -9181,19 +10165,32 @@
         "options": [
           {
             "text": "€33,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€36,00",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€35,00",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€34,50",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           }
         ],
         "correct": 3,
@@ -9202,6 +10199,12 @@
           "berekening": [
             "Aantal pizza's: 3",
             "Totaal: 3 × €11,50 = €34,50"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Aantal pizza's: 3 |",
+            "| 2 | Totaal: 3 × €11,50 = €34,50 |"
           ]
         },
         "lova": {
@@ -9241,26 +10244,40 @@
             "logica_check": "€34,50 is logisch: 3 pizza's × ongeveer €12 per pizza",
             "antwoord": "€34,50"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       },
       {
         "question": "Hoeveel moet elk persoon betalen inclusief bezorgkosten?",
         "options": [
           {
             "text": "€6,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€6,50",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€6,30",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€7,00",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -9270,6 +10287,13 @@
             "Bezorgkosten: €3,50",
             "Totaal: €34,50 + €3,50 = €38,00",
             "Per persoon: €38,00 ÷ 6 = €6,33..."
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Bezorgkosten: €3,50 |",
+            "| 2 | Totaal: €34,50 + €3,50 = €38,00 |",
+            "| 3 | Per persoon: €38,00 ÷ 6 = €6,33... |"
           ]
         },
         "lova": {
@@ -9314,7 +10338,8 @@
             "logica_check": "€6,33 per persoon is logisch: €38,00 gedeeld door 6 personen",
             "antwoord": "€6,30"
           }
-        }
+        },
+        "hint": "💡 Let op: 'Per' betekent vaak vermenigvuldigen!"
       }
     ],
     "sub_theme": "rekenen met geld"
@@ -9330,19 +10355,32 @@
         "options": [
           {
             "text": "€5,20",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€5,40",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€5,60",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€5,80",
-            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden."
+            "foutanalyse": "Je hebt naar boven afgerond, maar je kunt alleen hele stuks kopen dus moet je naar beneden afronden.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -9353,6 +10391,14 @@
             "3 lolly's: 3 × €0,45 = €1,35",
             "2 chocoladerepen: 2 × €1,20 = €2,40",
             "Totaal: €1,80 + €1,35 + €2,40 = €5,55"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | 3 dropveters: 3 × €0,60 = €1,80 |",
+            "| 2 | 3 lolly's: 3 × €0,45 = €1,35 |",
+            "| 3 | 2 chocoladerepen: 2 × €1,20 = €2,40 |",
+            "| 4 | Totaal: €1,80 + €1,35 + €2,40 = €5,55 |"
           ]
         },
         "lova": {
@@ -9413,26 +10459,40 @@
             "logica_check": "€5,55 is logisch: ongeveer €2 aan dropveters, €1,50 aan lolly's en €2,50 aan chocoladerepen",
             "antwoord": "€5,60"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       },
       {
         "question": "Heeft Mike genoeg geld?",
         "options": [
           {
             "text": "Ja, en hij houdt €0,40 over",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "Ja, maar hij heeft precies genoeg",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "Nee, hij komt €0,60 tekort",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "Nee, hij komt €1,00 tekort",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -9441,6 +10501,12 @@
           "berekening": [
             "Totale kosten: €5,55",
             "Tekort: €5,55 - €5,00 = €0,55"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Totale kosten: €5,55 |",
+            "| 2 | Tekort: €5,55 - €5,00 = €0,55 |"
           ]
         },
         "lova": {
@@ -9481,7 +10547,8 @@
             "logica_check": "€0,55 tekort is logisch: kosten (€5,55) zijn hoger dan budget (€5,00)",
             "antwoord": "Nee, hij komt €0,60 tekort"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       }
     ],
     "sub_theme": "budget beheer"
@@ -9497,19 +10564,32 @@
         "options": [
           {
             "text": "12 muntjes",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "13 muntjes",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "15 muntjes",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "14 muntjes",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 2,
@@ -9518,6 +10598,12 @@
           "berekening": [
             "Aantal keer spelen: 5",
             "Totaal: 5 × 3 = 15 muntjes"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Aantal keer spelen: 5 |",
+            "| 2 | Totaal: 5 × 3 = 15 muntjes |"
           ]
         },
         "lova": {
@@ -9555,26 +10641,40 @@
             "logica_check": "15 muntjes is logisch: 5 keer spelen × 3 muntjes per keer",
             "antwoord": "15 muntjes"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       },
       {
         "question": "Wat is de goedkoopste manier om genoeg muntjes te kopen?",
         "options": [
           {
             "text": "1× pakket van 25 muntjes (€18,0)",
-            "foutanalyse": "Je hebt de helft berekend. Controleer of je niet bent vergeten te vermenigvuldigen met 2."
+            "foutanalyse": "Je hebt de helft berekend. Controleer of je niet bent vergeten te vermenigvuldigen met 2.\n\n🤔 **Reflectievraag:** Welke informatie in de tekst is belangrijk voor deze vraag?",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
           },
           {
             "text": "2× pakket van 10 muntjes (€16,0)",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "1× pakket van 10 en 1× pakket van 25 (€26,0)",
-            "foutanalyse": "Je hebt de helft berekend. Controleer of je niet bent vergeten te vermenigvuldigen met 2."
+            "foutanalyse": "Je hebt de helft berekend. Controleer of je niet bent vergeten te vermenigvuldigen met 2.\n\n🤔 **Reflectievraag:** Welke informatie in de tekst is belangrijk voor deze vraag?",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
           },
           {
             "text": "3× pakket van 10 (€24,0)",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 1,
@@ -9585,6 +10685,14 @@
             "2× 10 muntjes = 20 muntjes voor €16,00 (voldoende)",
             "1× 25 muntjes = 25 muntjes voor €18,00 (voldoende maar duurder)",
             "Goedkoopst: 2× 10 muntjes voor €16,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | 10 muntjes = €8,00 (niet genoeg) |",
+            "| 2 | 2× 10 muntjes = 20 muntjes voor €16,00 (voldoende) |",
+            "| 3 | 1× 25 muntjes = 25 muntjes voor €18,00 (voldoende maar duurder) |",
+            "| 4 | Goedkoopst: 2× 10 muntjes voor €16,00 |"
           ]
         },
         "lova": {
@@ -9642,7 +10750,8 @@
             "logica_check": "2× pakket van 10 muntjes (€16,00) is logisch: goedkoper dan 1× pakket van 25 (€18,00)",
             "antwoord": "2× pakket van 10 muntjes (€16,0)"
           }
-        }
+        },
+        "hint": "💡 Tip: Deel het totale bedrag door de prijs van 1 stuk!"
       }
     ],
     "sub_theme": "rekenen met geld"
@@ -24255,19 +25364,32 @@
         "options": [
           {
             "text": "€192,00",
-            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal."
+            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€208,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€198,00",
-            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal."
+            "foutanalyse": "Je hebt maar een deel berekend. Tel alle delen op voor het totaal.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€216,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 1,
@@ -24276,6 +25398,12 @@
           "berekening": [
             "Aantal leerlingen: 32",
             "Totaal lunches: 32 × €6,50 = €208,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Aantal leerlingen: 32 |",
+            "| 2 | Totaal lunches: 32 × €6,50 = €208,00 |"
           ]
         },
         "lova": {
@@ -24314,26 +25442,40 @@
             "logica_check": "€208,00 is logisch: 32 leerlingen × ongeveer €6,50 per lunch",
             "antwoord": "€208,00"
           }
-        }
+        },
+        "hint": "💡 Denk aan: Moet je optellen of vermenigvuldigen?"
       },
       {
         "question": "Hoeveel betaalt één leerling voor het hele schoolkamp?",
         "options": [
           {
             "text": "€25,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€27,00",
-            "foutanalyse": ""
+            "foutanalyse": "",
+            "is_correct": true
           },
           {
             "text": "€29,00",
-            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap."
+            "foutanalyse": "Dit antwoord klopt niet. Controleer je berekening stap voor stap.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           },
           {
             "text": "€32,00",
-            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening."
+            "foutanalyse": "Je hebt niet alle kosten meegenomen. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer je basisrekenwerk nog eens - klopt dit?",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
           }
         ],
         "correct": 1,
@@ -24342,6 +25484,12 @@
           "berekening": [
             "Aantal leerlingen: 32",
             "Prijs per leerling: €864,00 ÷ 32 = €27,00"
+          ],
+          "berekening_tabel": [
+            "| Stap | Berekening |",
+            "|------|------------|",
+            "| 1 | Aantal leerlingen: 32 |",
+            "| 2 | Prijs per leerling: €864,00 ÷ 32 = €27,00 |"
           ]
         },
         "lova": {
@@ -24378,7 +25526,8 @@
             "logica_check": "€27,00 per leerling is logisch: €8,50 (bus) + €12,00 (activiteiten) + €6,50 (lunch) = €27,00",
             "antwoord": "€27,00"
           }
-        }
+        },
+        "hint": "💡 Let op: Lees de vraag goed en bepaal welke bewerking je nodig hebt!"
       }
     ],
     "sub_theme": "rekenen met geld"
