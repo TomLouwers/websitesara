@@ -1,0 +1,218 @@
+[
+  {
+    "id": 99,
+    "title": "Jamals fietstocht naar oma",
+    "theme": "tijd",
+    "content": "Jamal fietst 1 uur en 45 minuten naar zijn oma. Halverwege stopt hij 15 minuten om uit te rusten. Zijn gemiddelde snelheid is 12 km/u.",
+    "questions": [
+      {
+        "question": "Hoeveel minuten fietste Jamal netto (dus zonder rustpauze)?",
+        "hint": "💡 Let op: Je moet eerst de uren omrekenen naar minuten voordat je gaat optellen of aftrekken!",
+        "options": [
+          {
+            "text": "90 minuten",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "105 minuten",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Je bent vergeten om de rustpauze af te trekken! Jamal heeft 1 uur en 45 minuten gefietst, maar hij heeft 15 minuten gerust. De totale fitstijd is dus: (1 uur × 60 minuten) + 45 minuten - 15 minuten = 90 minuten.\n\n🤔 **Reflectievraag:** Wat deed Jamal halverwege de rit nog 15 minuten lang?",
+            "visual_aid_query": "Tijdlijn met rustpauze",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "1,75 minuten",
+            "is_correct": false,
+            "error_type": "conversiefout",
+            "foutanalyse": "Je hebt de uren en minuten door elkaar gehaald! 1 uur en 45 minuten is NIET hetzelfde als 1,75 minuten. Je moet eerst alles omrekenen naar minuten: 1 uur = 60 minuten, dus 1 uur en 45 minuten = 60 + 45 = 105 minuten. Trek daar de rustpauze van 15 minuten vanaf: 105 - 15 = 90 minuten.\n\n🤔 **Reflectievraag:** Hoeveel minuten zitten er in 1 heel uur?",
+            "visual_aid_query": "Conversietabel uren naar minuten",
+            "remedial_basis_id": 301
+          },
+          {
+            "text": "60 minuten",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Je hebt alleen naar het eerste uur gekeken en de 45 extra minuten vergeten! Lees de vraag nog eens goed: Jamal fietst 1 uur **en 45 minuten**. Dat is samen 60 + 45 = 105 minuten. Trek daar de rustpauze van 15 minuten vanaf.\n\n🤔 **Reflectievraag:** Welke getallen in de tekst gaan over tijd?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Bij tijdberekeningen moet je altijd eerst alles naar dezelfde eenheid omrekenen (bijv. alles naar minuten). Trek daarna relevante pauzes of onderbrekingen af.",
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Omrekenen | 1 uur → minuten | 60 min |",
+            "| 2. Optellen | 60 min + 45 min | 105 min |",
+            "| 3. Aftrekken rustpauze | 105 min - 15 min | **90 min** ⭐ |"
+          ],
+          "video_uitleg": {
+            "titel": "Tijd omrekenen: uren naar minuten",
+            "url": "https://example.com/tijd-omrekenen"
+          }
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [
+              "Gemiddelde snelheid is 12 km/u"
+            ],
+            "hoofdvraag": "Hoeveel minuten fietste Jamal netto?",
+            "tussenstappen": [
+              "Reken de totale tijd om naar minuten",
+              "Trek de rustpauze af"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Fietstijd (uren)": "1 uur",
+              "Fietstijd (extra minuten)": "45 minuten",
+              "Rustpauze": "15 minuten"
+            },
+            "tool": "Omrekenen + Aftrekken",
+            "conversies": [
+              "1 uur = 60 minuten"
+            ]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Omrekenen uren naar minuten",
+                "berekening": "1 uur × 60",
+                "resultaat": "60 minuten",
+                "uitleg": "1 uur is altijd 60 minuten"
+              },
+              {
+                "stap": "Tel de extra minuten bij op",
+                "berekening": "60 + 45",
+                "resultaat": "105 minuten",
+                "uitleg": "Totale fitstijd inclusief rustpauze"
+              },
+              {
+                "stap": "Trek de rustpauze af",
+                "berekening": "105 - 15",
+                "resultaat": "90 minuten",
+                "uitleg": "Netto fitstijd zonder rust"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "minuten",
+            "logica_check": "90 minuten (= 1,5 uur) is logisch voor een fietstocht naar oma",
+            "antwoord": "90 minuten"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "title": "VOORBEELD 2: Kermis gooien met ballen",
+    "theme": "verhoudingen",
+    "content": "Op de kermis kun je met ballen gooien naar blikken. Voor elke bal die raak is, krijg je 3 punten. Voor elke bal die mis is, gaat er 1 punt af. Lisa gooit 15 ballen: 9 raak en 6 mis.",
+    "questions": [
+      {
+        "question": "Hoeveel punten heeft Lisa in totaal?",
+        "hint": "💡 Let op: Je moet TWEE dingen berekenen: punten erbij EN punten eraf!",
+        "options": [
+          {
+            "text": "21 punten",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "27 punten",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Je hebt alleen de punten van de **raak** geworpen ballen geteld (9 × 3 = 27). Maar vergeet niet: voor elke **mis** geworpen bal gaat er 1 punt af! Je moet dus nog 6 punten aftrekken: 27 - 6 = 21 punten.\n\n🤔 **Reflectievraag:** Wat gebeurt er met je score als je een bal **mis** gooit?",
+            "visual_aid_query": "Puntentabel raak vs mis",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "45 punten",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt alle 15 ballen vermenigvuldigd met 3 (15 × 3 = 45), maar dat is niet correct! Alleen de **raak** geworpen ballen (9 stuks) tellen voor +3 punten. De **mis** geworpen ballen (6 stuks) tellen voor -1 punt. Je moet dus twee bewerkingen doen: (9 × 3) - (6 × 1) = 27 - 6 = 21 punten.\n\n🤔 **Reflectievraag:** Hoeveel ballen heeft Lisa **raak** gegooid?",
+            "visual_aid_query": "Verhoudingstabel positieve en negatieve punten",
+            "remedial_basis_id": 205
+          },
+          {
+            "text": "33 punten",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je bent op de goede weg! Je hebt begrepen dat je de punten van raak EN mis moet combineren. Maar er zit een rekenfout in je bewerking. Controleer: 9 × 3 = ? en 6 × 1 = ?. Dan trek je die af: 27 - 6 = 21.\n\n🤔 **Reflectievraag:** Wat is 9 × 3?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          }
+        ],
+        "correct": 0,
+        "extra_info": {
+          "concept": "Bij positieve en negatieve punten moet je twee bewerkingen uitvoeren: eerst de positieve punten optellen, daarna de negatieve punten aftrekken.",
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Raak | 9 ballen × 3 punten | +27 punten 👇 |",
+            "| 2. Mis | 6 ballen × 1 punt | -6 punten 👇 |",
+            "| 3. Totaal | 27 - 6 | **21 punten** ⭐ |"
+          ],
+          "video_uitleg": {
+            "titel": "Positieve en negatieve punten combineren",
+            "url": "https://example.com/punten-combineren"
+          }
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [
+              "Lisa gooit 15 ballen (totaal)"
+            ],
+            "hoofdvraag": "Hoeveel punten heeft Lisa in totaal?",
+            "tussenstappen": [
+              "Bereken punten voor raak (9 ballen × 3)",
+              "Bereken aftrek voor mis (6 ballen × 1)",
+              "Trek af"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Ballen raak": "9",
+              "Ballen mis": "6",
+              "Punten per raak": "+3",
+              "Punten per mis": "-1"
+            },
+            "tool": "Vermenigvuldigen + Aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken punten raak",
+                "berekening": "9 × 3",
+                "resultaat": "+27 punten",
+                "uitleg": "9 raak geworpen ballen leveren elk 3 punten op"
+              },
+              {
+                "stap": "Bereken punten mis",
+                "berekening": "6 × 1",
+                "resultaat": "-6 punten",
+                "uitleg": "6 mis geworpen ballen kosten elk 1 punt"
+              },
+              {
+                "stap": "Tel bij elkaar op",
+                "berekening": "27 - 6",
+                "resultaat": "21 punten",
+                "uitleg": "Trek de negatieve punten af van de positieve punten"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "punten",
+            "logica_check": "21 punten is logisch: meer raak (9) dan mis (6), dus positief totaal",
+            "antwoord": "21 punten"
+          }
+        }
+      }
+    ]
+  }
+]
