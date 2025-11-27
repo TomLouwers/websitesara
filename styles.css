@@ -925,3 +925,558 @@ body {
         width: 100%;
     }
 }
+
+/* ============================================
+   FOUTANALYSE MODAAL STYLING
+   ============================================ */
+
+/* Modaal Overlay */
+.modaal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow-y: auto;
+    animation: fadeIn 0.3s ease;
+}
+
+.modaal-overlay.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Modaal Content */
+.modaal-content {
+    background: white;
+    border-radius: 20px;
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modaal Header */
+.modaal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 30px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.modaal-header h2 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 24px;
+}
+
+.modaal-close {
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #6b7280;
+    line-height: 1;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    transition: color 0.2s;
+}
+
+.modaal-close:hover {
+    color: #ef4444;
+}
+
+/* Error Badge */
+.error-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 30px;
+    background-color: #fef2f2;
+    border-left: 6px solid #ef4444;
+    margin: 0;
+}
+
+.error-badge.conversiefout {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
+
+.error-badge.leesfout_ruis {
+    border-color: #f59e0b;
+    background-color: #fffbea;
+}
+
+.error-badge.conceptfout {
+    border-color: #8b5cf6;
+    background-color: #f5f3ff;
+}
+
+.error-badge.rekenfout_basis {
+    border-color: #3b82f6;
+    background-color: #eff6ff;
+}
+
+.error-emoji {
+    font-size: 32px;
+}
+
+.error-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+/* Fault Analysis Section */
+.fault-analysis-section {
+    padding: 30px;
+}
+
+.fault-analysis-section h3 {
+    color: #374151;
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+
+.main-explanation {
+    color: #4b5563;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Reflection Box */
+.reflection-box {
+    background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+    border: 2px solid #3b82f6;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+}
+
+.reflection-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    color: #1e40af;
+    font-weight: 700;
+}
+
+.reflection-icon {
+    font-size: 24px;
+}
+
+.reflection-text {
+    color: #1e3a8a;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Visual Aid Section */
+.visual-aid-section {
+    background-color: #f9fafb;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px 30px;
+    margin: 20px 30px;
+}
+
+.visual-aid-section h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #374151;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.visual-content {
+    margin: 16px 0;
+}
+
+.conversion-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+}
+
+.conversion-table th,
+.conversion-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.conversion-table th {
+    background-color: #f3f4f6;
+    font-weight: 700;
+    color: #374151;
+}
+
+.conversion-table .highlight {
+    background-color: #fef3c7;
+    font-weight: 600;
+}
+
+.video-button {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    transition: background-color 0.2s;
+}
+
+.video-button:hover {
+    background-color: #b91c1c;
+}
+
+/* Remedial Section */
+.remedial-section {
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    border: 3px solid #dc2626;
+    border-radius: 16px;
+    padding: 24px 30px;
+    margin: 20px 30px;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+}
+
+.remedial-alert {
+    background-color: #dc2626;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.remedial-explanation {
+    color: #7f1d1d;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.remedial-cta {
+    width: 100%;
+    background-color: #16a34a;
+    color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(22, 163, 74, 0.3);
+}
+
+.remedial-cta:hover {
+    background-color: #15803d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(22, 163, 74, 0.4);
+}
+
+.cta-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.cta-text {
+    text-align: left;
+    line-height: 1.5;
+}
+
+.exercise-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    color: #7f1d1d;
+    font-size: 14px;
+    justify-content: center;
+}
+
+.info-icon {
+    font-size: 16px;
+}
+
+/* L.O.V.A. Accordion */
+.lova-accordion {
+    margin: 20px 30px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.accordion-toggle {
+    width: 100%;
+    background-color: #f9fafb;
+    border: none;
+    padding: 16px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.accordion-toggle:hover {
+    background-color: #f3f4f6;
+}
+
+.accordion-content {
+    display: none;
+    padding: 20px;
+    background-color: white;
+}
+
+.accordion-content.open {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 2000px;
+    }
+}
+
+.lova-step {
+    background-color: #f9fafb;
+    border-left: 4px solid #3b82f6;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+
+.lova-step h4 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.lova-step ul {
+    margin-left: 20px;
+    color: #4b5563;
+    line-height: 1.8;
+}
+
+.calculation-step {
+    background-color: #e0f2fe;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    line-height: 1.8;
+}
+
+.calculation-step code {
+    background-color: #1e293b;
+    color: #fbbf24;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+}
+
+.final-answer {
+    background-color: #fbbf24;
+    color: #1f2937;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* Berekening Section */
+.berekening-section {
+    background-color: #f0fdf4;
+    border: 2px solid #16a34a;
+    border-radius: 12px;
+    padding: 20px 30px;
+    margin: 20px 30px;
+}
+
+.berekening-section h3 {
+    color: #15803d;
+    margin-bottom: 16px;
+}
+
+.berekening-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.berekening-section th,
+.berekening-section td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.berekening-section th {
+    background-color: #16a34a;
+    color: white;
+    font-weight: 700;
+}
+
+.berekening-section td:last-child {
+    font-weight: 600;
+}
+
+/* Concept Box */
+.concept-box {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border: 3px solid #f59e0b;
+    border-radius: 12px;
+    padding: 20px 30px;
+    margin: 20px 30px;
+    box-shadow: 0 4px 8px rgba(245, 158, 11, 0.2);
+}
+
+.concept-box h3 {
+    color: #92400e;
+    margin-bottom: 12px;
+}
+
+.concept-box p {
+    color: #78350f;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Modaal Actions */
+.modaal-actions {
+    padding: 20px 30px;
+    border-top: 2px solid #e5e7eb;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Hint Styles */
+.hint-toggle {
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 2px solid #f59e0b;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 10px;
+}
+
+.hint-toggle:hover {
+    background-color: #fde68a;
+    transform: translateY(-2px);
+}
+
+.hint-box {
+    background-color: #fffbea;
+    border-left: 4px solid #f59e0b;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #92400e;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.hint-icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* Responsive Design for Modaal */
+@media (max-width: 768px) {
+    .modaal-content {
+        border-radius: 0;
+        max-height: 100vh;
+    }
+
+    .error-badge {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .remedial-cta {
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .cta-icon {
+        font-size: 28px;
+    }
+
+    .cta-text {
+        text-align: center;
+    }
+
+    .conversion-table {
+        font-size: 14px;
+    }
+
+    .conversion-table th,
+    .conversion-table td {
+        padding: 8px;
+    }
+
+    .fault-analysis-section,
+    .visual-aid-section,
+    .remedial-section,
+    .berekening-section,
+    .concept-box,
+    .lova-accordion {
+        margin: 15px;
+        padding: 15px;
+    }
+}

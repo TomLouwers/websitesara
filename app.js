@@ -490,24 +490,36 @@ function submitAnswer() {
         if (selectedAnswer === correctIndex) {
             options[selectedAnswer].classList.add('correct');
             score++;
-            feedbackSection.classList.add('correct');
-            feedbackTitle.textContent = CONFIG.feedback.correct.title;
-            feedbackMessage.textContent = CONFIG.feedback.correct.message;
-            correctAnswerDisplay.classList.add('hidden');
-            extraInfoDisplay.classList.add('hidden'); // NIEUW: extraInfo verbergen bij correct
-            verhoudingstabelContainer.innerHTML = ''; // Clear verhoudingstabel
-            strategyAndTips.classList.add('hidden');
 
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, true);
+
+            // Check if this is a verhaaltjessom with new error analysis fields
+            const selectedOption = currentQuestion.options[selectedAnswer];
+            const isVerhaaltjessom = currentSubject === 'verhaaltjessommen' &&
+                                     currentQuestion.lova &&
+                                     currentQuestion.extra_info;
+
+            if (isVerhaaltjessom) {
+                // Show success modaal for verhaaltjessommen
+                feedbackSection.classList.add('hidden'); // Hide old feedback
+                showSuccessModaal(currentQuestion, currentQuestion.extra_info);
+            } else {
+                // Old feedback for other subjects
+                feedbackSection.classList.add('correct');
+                feedbackTitle.textContent = CONFIG.feedback.correct.title;
+                feedbackMessage.textContent = CONFIG.feedback.correct.message;
+                correctAnswerDisplay.classList.add('hidden');
+                extraInfoDisplay.classList.add('hidden'); // NIEUW: extraInfo verbergen bij correct
+                verhoudingstabelContainer.innerHTML = ''; // Clear verhoudingstabel
+                strategyAndTips.classList.add('hidden');
+            }
         } else {
             options[selectedAnswer].classList.add('incorrect');
             // Highlight correct answer if an incorrect one was selected
             if (options[correctIndex]) {
                 options[correctIndex].classList.add('correct');
             }
-            feedbackSection.classList.add('incorrect');
-            feedbackTitle.textContent = CONFIG.feedback.incorrect.title;
 
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, false);
@@ -516,24 +528,47 @@ function submitAnswer() {
             const selectedOption = currentQuestion.options[selectedAnswer];
             const errorAnalysis = (typeof selectedOption === 'object' && selectedOption.foutanalyse) ? selectedOption.foutanalyse : '';
 
-            if (errorAnalysis) {
-                feedbackMessage.textContent = errorAnalysis;
-            } else {
-                feedbackMessage.textContent = CONFIG.feedback.incorrect.messageDefault;
-            }
+            // Check if this is a verhaaltjessom with new error analysis fields
+            const isVerhaaltjessom = currentSubject === 'verhaaltjessommen' &&
+                                     selectedOption.error_type &&
+                                     currentQuestion.extra_info;
 
-            // Show correct answer - handle both string and object format
-            const correctAnswerText = typeof currentQuestion.options[correctIndex] === 'string'
-                ? currentQuestion.options[correctIndex]
-                : currentQuestion.options[correctIndex].text;
-            correctAnswerDisplay.textContent = `Het juiste antwoord was: "${correctAnswerText}"`;
-            correctAnswerDisplay.classList.remove('hidden');
-            strategyAndTips.classList.add('hidden'); // No strategy/tips for MC by default
+            if (isVerhaaltjessom) {
+                // Show foutanalyse modaal for verhaaltjessommen
+                feedbackSection.classList.add('hidden'); // Hide old feedback
+                showFoutanalyseModaal(selectedOption, currentQuestion.extra_info);
+
+                // Show hint after first mistake
+                if (!hintShown && currentQuestion.hint) {
+                    showHintButton(currentQuestion.hint);
+                }
+            } else {
+                // Old feedback for other subjects
+                feedbackSection.classList.add('incorrect');
+                feedbackTitle.textContent = CONFIG.feedback.incorrect.title;
+
+                if (errorAnalysis) {
+                    feedbackMessage.textContent = errorAnalysis;
+                } else {
+                    feedbackMessage.textContent = CONFIG.feedback.incorrect.messageDefault;
+                }
+
+                // Show correct answer - handle both string and object format
+                const correctAnswerText = typeof currentQuestion.options[correctIndex] === 'string'
+                    ? currentQuestion.options[correctIndex]
+                    : currentQuestion.options[correctIndex].text;
+                correctAnswerDisplay.textContent = `Het juiste antwoord was: "${correctAnswerText}"`;
+                correctAnswerDisplay.classList.remove('hidden');
+                strategyAndTips.classList.add('hidden'); // No strategy/tips for MC by default
+            }
 
             // Track wrong answer for review
             const userAnswerText = typeof selectedOption === 'string'
                 ? selectedOption
                 : selectedOption.text;
+            const correctAnswerText = typeof currentQuestion.options[correctIndex] === 'string'
+                ? currentQuestion.options[correctIndex]
+                : currentQuestion.options[correctIndex].text;
             wrongAnswers.push({
                 question: currentQuestion,
                 userAnswer: userAnswerText,
@@ -666,6 +701,21 @@ function submitAnswer() {
 }
 
 function nextQuestion() {
+    // Close modals if they are open
+    closeSuccessModaal();
+    closeFoutanalyseModaal();
+
+    // Reset attempt tracking for new question
+    if (typeof resetAttemptTracking === 'function') {
+        resetAttemptTracking();
+    }
+
+    // Clear hint container
+    const hintContainer = document.getElementById('hintContainer');
+    if (hintContainer) {
+        hintContainer.innerHTML = '';
+    }
+
     currentQuestionIndex++;
 
     if (currentQuestionIndex >= randomizedQuestions.length) {
