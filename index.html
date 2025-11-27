@@ -108,6 +108,9 @@
                 <div id="readingContent" class="reading-content hidden"></div>
                 <div class="question-text" id="questionText"></div>
 
+                <!-- Hint Container (voor scaffolding hints) -->
+                <div id="hintContainer" style="text-align: center; margin: 20px 0;"></div>
+
                 <!-- L.O.V.A. Help Panel (collapsible guidance) -->
                 <div id="lovaHelpPanel" class="lova-help-panel hidden">
                     <div class="lova-help-content">
@@ -222,8 +225,111 @@
         </div>
     </div>
 
+    <!-- Foutanalyse Modaal (Fout Antwoord) -->
+    <div id="foutanalyseModaal" class="modaal-overlay">
+        <div class="modaal-content">
+            <div class="modaal-header">
+                <h2 id="modaalTitle">🛑 Oeps! Dit is niet juist</h2>
+                <button class="modaal-close" onclick="closeFoutanalyseModaal()">✕</button>
+            </div>
+
+            <!-- Error Type Badge -->
+            <div id="errorBadge" class="error-badge"></div>
+
+            <!-- Foutanalyse Section -->
+            <div class="fault-analysis-section">
+                <h3>Wat ging er mis?</h3>
+                <p id="mainExplanation" class="main-explanation"></p>
+
+                <!-- Reflection Question -->
+                <div id="reflectionBox" class="reflection-box" style="display: none;">
+                    <div class="reflection-header">
+                        <span class="reflection-icon">🤔</span>
+                        <strong>REFLECTIEVRAAG:</strong>
+                    </div>
+                    <p id="reflectionText" class="reflection-text"></p>
+                </div>
+            </div>
+
+            <!-- Visual Aid Section -->
+            <div id="visualAidSection" class="visual-aid-section" style="display: none;">
+                <h4>
+                    <span class="visual-icon">📊</span>
+                    <span id="visualAidTitle"></span>
+                </h4>
+                <div id="visualAidContent" class="visual-content"></div>
+                <button id="videoButton" class="video-button" style="display: none;">
+                    ▶️ Bekijk Uitleg: <span id="videoTitle"></span>
+                </button>
+            </div>
+
+            <!-- Remedial Section -->
+            <div id="remedialSection" class="remedial-section" style="display: none;">
+                <div class="remedial-alert">
+                    🚨 Eerst de Basis Herstellen!
+                </div>
+                <p id="remedialExplanation" class="remedial-explanation"></p>
+                <button id="remedialCta" class="remedial-cta">
+                    <span class="cta-icon">🎯</span>
+                    <span id="remedialCtaText" class="cta-text"></span>
+                </button>
+                <div class="exercise-info">
+                    <span class="info-icon">ℹ️</span>
+                    <span>5 eenvoudige oefenopgaven</span>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="modaal-actions">
+                <button class="btn btn-primary" onclick="closeFoutanalyseModaal()">
+                    Probeer Opnieuw
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modaal (na juist antwoord) -->
+    <div id="successModaal" class="modaal-overlay">
+        <div class="modaal-content">
+            <div class="modaal-header">
+                <h2>✅ Goed gedaan! Hier is de uitleg</h2>
+                <button class="modaal-close" onclick="closeSuccessModaal()">✕</button>
+            </div>
+
+            <!-- L.O.V.A. Accordion -->
+            <div class="lova-accordion">
+                <button class="accordion-toggle" onclick="toggleLovaAccordion()">
+                    <span id="lovaToggleIcon">▼</span>
+                    📚 L.O.V.A. Stappenplan (klik om uit te klappen)
+                </button>
+                <div id="lovaContent" class="accordion-content">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Berekening Tabel -->
+            <div class="berekening-section">
+                <h3>🧮 Berekening Stap voor Stap</h3>
+                <div id="berekeningTable"></div>
+            </div>
+
+            <!-- Concept Box -->
+            <div class="concept-box">
+                <h3>💡 Onthoud dit Concept</h3>
+                <p id="conceptText"></p>
+            </div>
+
+            <div class="modaal-actions">
+                <button class="btn btn-primary" onclick="nextQuestion()">
+                    Volgende Vraag
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script src="config.js"></script>
     <script src="verhoudingstabel-widget.js"></script>
+    <script src="foutanalyse-modaal.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
