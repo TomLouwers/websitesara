@@ -13,6 +13,35 @@ def verbeter_foutanalyses():
 
     # Verbeteringen per ID
     verbeteringen = {
+        6: {  # Zwembad vullen - Optellen debiet
+            0: {  # Vraag 1
+                0: "Je hebt waarschijnlijk 240 - 180 = 60 berekend (aftrekken in plaats van optellen). Als beide kranen TEGELIJK open staan, moet je de hoeveelheden OPTELLEN: 240 + 180 = ?\n\n🤔 **Reflectievraag:** Als er 240 liter uit kraan A komt en 180 liter uit kraan B, hoeveel liter komt er dan in totaal in het zwembad?",
+                # Optie 1 is correct
+                2: "Je hebt alleen kraan A genomen (240 L/min) en kraan B vergeten! De vraag zegt 'beide kranen tegelijk'. Je moet beide debietsnelheden optellen: 240 + 180 = ?\n\n🤔 **Reflectievraag:** Hoeveel kranen staan er open volgens de vraag?",
+                3: "Je hebt waarschijnlijk 240 × 2 = 480 berekend (verdubbeld), maar kraan B stroomt NIET even snel als kraan A! Kraan B = 180 L/min. Je moet OPTELLEN, niet verdubbelen: 240 + 180 = ?\n\n🤔 **Reflectievraag:** Zijn beide kranen even snel, of hebben ze verschillende snelheden?"
+            },
+            1: {  # Vraag 2
+                0: "Je hebt een rekenfout gemaakt. Controleer je deling: 84.000 ÷ 420 = ? (niet 420). Let op dat je de juiste deler gebruikt (het antwoord uit vraag 1).\n\n🤔 **Reflectievraag:** Hoeveel liter per minuut stroomt er in het zwembad volgens vraag 1?",
+                1: "Je hebt waarschijnlijk 84.000 ÷ 240 = 350 gerekend (alleen kraan A). Maar beide kranen staan open! Gebruik het juiste debiet uit vraag 1: 84.000 ÷ 420 = ?\n\n🤔 **Reflectievraag:** Heb je het antwoord uit vraag 1 (420 L/min) gebruikt voor deze berekening?",
+                # Optie 2 is correct
+                3: "Controleer je berekening. Je moet de totale inhoud (84.000 L) delen door het debiet per minuut uit vraag 1 (420 L/min). Bereken: 84.000 ÷ 420 = ?\n\n🤔 **Reflectievraag:** Welke rekenregel gebruik je om tijd te berekenen: delen of vermenigvuldigen?"
+            }
+        },
+        9: {  # Groentekwekerij - Breuk van totaal
+            0: {  # Vraag 1
+                1: "Dit is de opbrengst van VORIG jaar! Je hebt je laten afleiden door ruis in de tekst. De vraag gaat over DIT seizoen. Je moet berekenen: als 45 kg = ⅓, dan is het totaal = 45 × 3.\n\n🤔 **Reflectievraag:** Gaat de vraag over vorig jaar of dit seizoen?",
+                2: "Je hebt 45 × 2 = 90 berekend, maar 45 kg is ⅓ van het totaal, niet de helft! Om het totaal te vinden: 45 × 3 = ?\n\n🤔 **Reflectievraag:** Als 45 kg = ⅓ is, met hoeveel moet je dan vermenigvuldigen voor het hele totaal?",
+                3: "Controleer je berekening. Als 45 kg = ⅓ van het totaal is, dan bereken je het totaal zo: 45 × 3 = ?\n\n🤔 **Reflectievraag:** Hoeveel keer past ⅓ in een heel (1)?"
+            }
+        },
+        19: {  # Fruit verkopen - Verhoudingen
+            0: {  # Vraag 1
+                0: "Je hebt het aantal PEREN berekend in plaats van appels! De verhouding is 5:3 (appels:peren). Je berekende (3/8) × 64 = 24 peren. Voor appels moet je (5/8) × 64 berekenen.\n\n🤔 **Reflectievraag:** Staat het getal 5 voor appels of voor peren in de verhouding 5:3?",
+                1: "Je hebt 64 ÷ 2 = 32 berekend (gehalveerd), maar vergeten dat de verhouding 5:3 is (NIET 1:1)! Je moet eerst de verhouding optellen: 5 + 3 = 8 delen. Appels = (5/8) × 64 = ?\n\n🤔 **Reflectievraag:** Zijn er evenveel appels als peren, of is de verhouding anders?",
+                # Optie 2 is correct
+                3: "Controleer je berekening met verhoudingen. Eerst bereken je het totaal aantal delen: 5 + 3 = 8. Dan bereken je appels: (5/8) × 64 = ?\n\n🤔 **Reflectievraag:** Hoeveel delen zijn er in totaal bij de verhouding 5:3?"
+            }
+        },
         2: {  # Voetbaltoernooi - Combinatoriek
             0: {  # Vraag 1
                 0: "Je hebt waarschijnlijk 6 + 6 gerekend of een andere verkeerde berekening gemaakt. Bij 'elk team speelt tegen elk ander team' moet je bedenken: elk team speelt tegen 5 andere teams (niet tegen zichzelf). Dat is 6 × 5 = 30, maar dan tel je elke wedstrijd dubbel!\n\n🤔 **Reflectievraag:** Als team A tegen team B speelt, is dat dan 1 wedstrijd of 2 wedstrijden?",
