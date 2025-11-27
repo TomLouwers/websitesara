@@ -1,3 +1,24 @@
+/**
+ * QUIZ APPLICATION - MAIN LOGIC
+ *
+ * This application supports multiple question formats and subjects:
+ *
+ * 1. ANSWER FORMATS:
+ *    - Legacy format: currentQuestion.correct holds the answer index (integer)
+ *    - New format: Each option has is_correct boolean field (used by verhaaltjessommen)
+ *
+ * 2. SUBJECTS:
+ *    - verhaaltjessommen: Story problems with layered error analysis and L.O.V.A. framework
+ *    - Other subjects: Traditional quiz with immediate feedback
+ *
+ * 3. VERHAALTJESSOMMEN FEATURES:
+ *    - Error classification (conversiefout, leesfout_ruis, conceptfout, rekenfout_basis)
+ *    - Layered feedback protocol (attempt 1: error analysis, attempt 2: visual aids, attempt 3: full solution)
+ *    - Pre-feedback hints shown after first error
+ *    - Retry mechanism (incorrect options are disabled, but user can try other options)
+ *    - Success modal with L.O.V.A. 4-step breakdown for correct answers
+ */
+
 // Quiz data will be loaded from JSON files
 let quizData = {};
 const jsonPath = CONFIG.jsonPath;
@@ -137,40 +158,38 @@ function createRandomizedQuestions(data) {
             item.questions.forEach(question => {
                 flatQuestions.push({
                     content: item.content,
-                    visual: item.visual, // Add visual data
+                    visual: item.visual, // Visual data (tables, etc.)
                     question: question.question,
-                    options: question.options,
-                    correct: question.correct,
+                    options: question.options, // Options array; each option can be string (old) or object with is_correct (new)
+                    correct: question.correct, // Legacy field for old format (index-based); new format uses is_correct in options
                     originalId: item.id,
                     theme: item.theme,
                     title: item.title,
-                    // Add strategy and tips here if they are directly on the sub-question object
                     strategy: question.strategy,
                     tips: question.tips,
-                    possible_answer: question.possible_answer, // Add possible_answer for open questions
-                    extra_info: question.extra_info, // NIEUW: extra_info toevoegen
-                    lova: question.lova, // L.O.V.A. data
-                    hint: question.hint // Pre-feedback hint
+                    possible_answer: question.possible_answer, // For open-ended questions
+                    extra_info: question.extra_info, // Additional learning content (concept, berekening, etc.)
+                    lova: question.lova, // L.O.V.A. 4-step framework data
+                    hint: question.hint // Pre-feedback hint shown after first error
                 });
             });
         } else if (item.question) {
             // For items with single question (like samenvatten)
             flatQuestions.push({
                 content: item.content,
-                visual: item.visual, // Add visual data
+                visual: item.visual, // Visual data (tables, etc.)
                 question: item.question,
-                options: item.options,
-                correct: item.correct, // For multiple choice, this is the index. For open, this might be the answer text.
+                options: item.options, // Options array; each option can be string (old) or object with is_correct (new)
+                correct: item.correct, // Legacy field for old format (index-based); new format uses is_correct in options
                 originalId: item.id,
                 theme: item.theme,
                 title: item.title,
-                // Add strategy and tips here if they are directly on the main item object
                 strategy: item.strategy,
                 tips: item.tips,
-                possible_answer: item.possible_answer, // Add possible_answer for open questions
-                extra_info: item.extra_info, // NIEUW: extra_info toevoegen
-                lova: item.lova, // L.O.V.A. data
-                hint: item.hint // Pre-feedback hint
+                possible_answer: item.possible_answer, // For open-ended questions
+                extra_info: item.extra_info, // Additional learning content (concept, berekening, etc.)
+                lova: item.lova, // L.O.V.A. 4-step framework data
+                hint: item.hint // Pre-feedback hint shown after first error
             });
         }
     });
@@ -479,6 +498,21 @@ function selectOption(index) {
     selectedAnswer = index;
 }
 
+/**
+ * Submit and validate the user's answer
+ *
+ * Answer Validation Logic:
+ * - New format (verhaaltjessommen): Options have is_correct boolean field
+ * - Old format (other subjects): currentQuestion.correct stores the index
+ *
+ * Verhaaltjessommen Flow:
+ * - Correct answer → Show success modal with L.O.V.A. breakdown
+ * - Incorrect answer → Show error analysis modal, allow retry (doesn't set hasAnswered)
+ *
+ * Other Subjects Flow:
+ * - Correct answer → Traditional feedback
+ * - Incorrect answer → Traditional feedback with correct answer revealed
+ */
 function submitAnswer() {
     if (hasAnswered) return;
 
@@ -504,7 +538,31 @@ function submitAnswer() {
         }
 
         const options = document.querySelectorAll('.option');
-        const correctIndex = currentQuestion.correct; // Assuming `correct` stores the index for MC
+        // Find the correct answer index - supports both old and new format
+        let correctIndex = currentQuestion.options.findIndex(opt => {
+            // New format: object with is_correct field (verhaaltjessommen)
+            if (typeof opt === 'object' && opt.hasOwnProperty('is_correct')) {
+                return opt.is_correct === true;
+            }
+            return false;
+        });
+
+        // If no is_correct found, fall back to old format (other subjects)
+        if (correctIndex === -1 && currentQuestion.correct !== null && currentQuestion.correct !== undefined) {
+            correctIndex = currentQuestion.correct;
+        }
+
+        // Validate correctIndex and selectedAnswer
+        if (correctIndex === -1 || correctIndex >= options.length) {
+            console.error('Error: Could not determine correct answer index', {
+                correctIndex,
+                optionsLength: options.length,
+                questionId: currentQuestion.originalId
+            });
+            alert('Er is een fout opgetreden bij het controleren van het antwoord. Probeer opnieuw of neem contact op met de beheerder.');
+            feedbackSection.classList.add('hidden');
+            return;
+        }
 
         if (selectedAnswer === correctIndex) {
             options[selectedAnswer].classList.add('correct');
