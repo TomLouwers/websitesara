@@ -41,13 +41,23 @@ const exerciseTitles = {
 
 // Track attempt count per question
 let attemptCount = 0;
-let hintShown = false;
 
 // ============================================
 // SHOW FOUTANALYSE MODAAL
 // ============================================
 
-function showFoutanalyseModaal(selectedOption, extraInfo) {
+function showFoutanalyseModaal(selectedOption, extraInfo, attemptNumber = 1, currentQuestion = null) {
+  // Gelaagd protocol: verschillende content per poging
+  const isFirstAttempt = attemptNumber === 1;
+  const isSecondAttempt = attemptNumber === 2;
+  const isThirdOrMoreAttempt = attemptNumber >= 3;
+
+  // Na 3 pogingen: toon volledige L.O.V.A. oplossing in success modaal
+  if (isThirdOrMoreAttempt && currentQuestion) {
+    showFullSolution(currentQuestion, extraInfo);
+    return;
+  }
+
   const modaal = document.getElementById('foutanalyseModaal');
   if (!modaal) {
     console.error('Foutanalyse modaal element niet gevonden. Voeg de HTML toe aan index.html');
@@ -77,9 +87,9 @@ function showFoutanalyseModaal(selectedOption, extraInfo) {
     reflectionBox.style.display = 'none';
   }
 
-  // Show visual aid if exists
+  // Show visual aid - ONLY from 2nd attempt onwards OR if it exists
   const visualAidSection = document.getElementById('visualAidSection');
-  if (selectedOption.visual_aid_query) {
+  if (!isFirstAttempt && selectedOption.visual_aid_query) {
     document.getElementById('visualAidTitle').textContent = selectedOption.visual_aid_query;
     renderVisualAid(selectedOption.visual_aid_query);
 
@@ -98,9 +108,15 @@ function showFoutanalyseModaal(selectedOption, extraInfo) {
     visualAidSection.style.display = 'none';
   }
 
-  // Show remedial section if remedial_basis_id exists
+  // Show remedial section ONLY from 2nd attempt onwards AND if remedial_basis_id exists
+  // AND only for specific error types (conversiefout or rekenfout_basis)
   const remedialSection = document.getElementById('remedialSection');
-  if (selectedOption.remedial_basis_id) {
+  const shouldShowRemedial = !isFirstAttempt &&
+                             selectedOption.remedial_basis_id &&
+                             (selectedOption.error_type === 'conversiefout' ||
+                              selectedOption.error_type === 'rekenfout_basis');
+
+  if (shouldShowRemedial) {
     const exerciseTitle = exerciseTitles[selectedOption.remedial_basis_id] || `Oefening ${selectedOption.remedial_basis_id}`;
 
     document.getElementById('remedialExplanation').textContent =
@@ -122,6 +138,15 @@ function showFoutanalyseModaal(selectedOption, extraInfo) {
 
   // Show modaal
   modaal.classList.add('show');
+
+  // After first attempt: show hint button when modaal is closed
+  if (isFirstAttempt && currentQuestion && currentQuestion.hint) {
+    // Store hint text in a data attribute so we can access it when closing
+    modaal.dataset.showHintAfterClose = 'true';
+    modaal.dataset.hintText = currentQuestion.hint;
+  } else {
+    modaal.dataset.showHintAfterClose = 'false';
+  }
 }
 
 // ============================================
@@ -131,6 +156,63 @@ function showFoutanalyseModaal(selectedOption, extraInfo) {
 function closeFoutanalyseModaal() {
   const modaal = document.getElementById('foutanalyseModaal');
   modaal.classList.remove('show');
+
+  // Check if we should show hint after closing (first attempt only)
+  if (modaal.dataset.showHintAfterClose === 'true' && modaal.dataset.hintText) {
+    showHintButton(modaal.dataset.hintText);
+    // Clear the data attributes
+    modaal.dataset.showHintAfterClose = 'false';
+    modaal.dataset.hintText = '';
+  }
+}
+
+// ============================================
+// SHOW FULL SOLUTION (na 3 foute pogingen)
+// ============================================
+
+function showFullSolution(question, extraInfo) {
+  const modaal = document.getElementById('successModaal');
+  if (!modaal) {
+    console.error('Success modaal element niet gevonden.');
+    return;
+  }
+
+  // Change title to reflect this is after errors
+  const header = modaal.querySelector('.modaal-header h2');
+  if (header) {
+    header.textContent = '📖 Hier is de volledige oplossing';
+  }
+
+  // Render L.O.V.A. content if exists
+  if (question.lova) {
+    renderLovaContent(question.lova);
+  }
+
+  // Render berekening tabel
+  if (extraInfo && extraInfo.berekening_tabel) {
+    renderBerekeningTabel(extraInfo.berekening_tabel);
+  }
+
+  // Show concept
+  if (extraInfo && extraInfo.concept) {
+    document.getElementById('conceptText').textContent = extraInfo.concept;
+  }
+
+  // Change button text to "Volgende Vraag" and mark as wrong
+  const nextButton = modaal.querySelector('.modaal-actions button');
+  if (nextButton) {
+    nextButton.textContent = 'Volgende Vraag';
+    nextButton.onclick = () => {
+      closeSuccessModaal();
+      // Mark question as wrong and move to next
+      if (typeof nextQuestion === 'function') {
+        nextQuestion();
+      }
+    };
+  }
+
+  // Show modaal
+  modaal.classList.add('show');
 }
 
 // ============================================
@@ -142,6 +224,19 @@ function showSuccessModaal(question, extraInfo) {
   if (!modaal) {
     console.error('Success modaal element niet gevonden. Voeg de HTML toe aan index.html');
     return;
+  }
+
+  // Reset title for correct answers
+  const header = modaal.querySelector('.modaal-header h2');
+  if (header) {
+    header.textContent = '✅ Goed gedaan! Hier is de uitleg';
+  }
+
+  // Reset button text to default
+  const nextButton = modaal.querySelector('.modaal-actions button');
+  if (nextButton) {
+    nextButton.textContent = 'Volgende Vraag';
+    nextButton.onclick = () => nextQuestion();
   }
 
   // Render L.O.V.A. content if exists
@@ -506,9 +601,9 @@ function navigateToExercise(remedialId) {
 function showHintButton(hintText) {
   if (!hintText) return;
 
-  // Voeg hint button toe aan je vraag UI
+  // Check if hint is already shown
   const hintContainer = document.getElementById('hintContainer');
-  if (hintContainer) {
+  if (hintContainer && hintContainer.innerHTML.trim() === '') {
     hintContainer.innerHTML = `
       <button class="hint-toggle" onclick="toggleHint()">
         💡 Hulp nodig?
@@ -518,7 +613,6 @@ function showHintButton(hintText) {
         ${hintText}
       </div>
     `;
-    hintShown = true;
   }
 }
 
@@ -535,7 +629,7 @@ function toggleHint() {
 
 function resetAttemptTracking() {
   attemptCount = 0;
-  hintShown = false;
+  // currentQuestionErrors is reset in loadCurrentQuestion() in app.js
 }
 
 // ============================================

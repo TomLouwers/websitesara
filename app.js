@@ -13,6 +13,8 @@ let totalQuestions = 0;
 let selectedAnswer = null;
 let hasAnswered = false;
 let wrongAnswers = []; // Track wrong answers for review
+let currentQuestionErrors = 0; // Track errors for current question (for hint display)
+let incorrectOptions = new Set(); // Track which options were already tried (to disable them)
 
 // Progress tracker by category
 let categoryProgress = {};
@@ -357,6 +359,16 @@ function loadCurrentQuestion() {
 
     const currentQuestion = randomizedQuestions[currentQuestionIndex];
 
+    // Reset error tracking for new question
+    currentQuestionErrors = 0;
+    incorrectOptions.clear(); // Clear disabled options
+
+    // Clear hint container for new question
+    const hintContainer = document.getElementById('hintContainer');
+    if (hintContainer) {
+        hintContainer.innerHTML = '';
+    }
+
     // Update progress
     const progress = (currentQuestionIndex / totalQuestions) * 100;
     document.getElementById('progressBar').style.width = progress + '%';
@@ -450,9 +462,14 @@ function loadCurrentQuestion() {
 function selectOption(index) {
     if (hasAnswered) return;
 
+    // Don't allow selecting an option that was already marked incorrect
+    if (incorrectOptions.has(index)) {
+        return; // Silently ignore clicks on disabled options
+    }
+
     // Remove previous selection
     document.querySelectorAll('.option').forEach(opt => {
-        opt.classList.remove('selected', 'correct', 'incorrect'); // Also remove feedback classes
+        opt.classList.remove('selected'); // Don't remove 'incorrect' class - keep disabled options marked
     });
 
     // Select new option
@@ -515,6 +532,9 @@ function submitAnswer() {
                 strategyAndTips.classList.add('hidden');
             }
         } else {
+            // Increment error count for this question
+            currentQuestionErrors++;
+
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, false);
 
@@ -531,15 +551,11 @@ function submitAnswer() {
                 // For verhaaltjessommen: mark selected answer as incorrect but DON'T reveal correct answer
                 // This allows the user to try again after seeing the error modal
                 options[selectedAnswer].classList.add('incorrect');
+                incorrectOptions.add(selectedAnswer); // Disable this option for future attempts
 
-                // Show foutanalyse modaal for verhaaltjessommen
+                // Show foutanalyse modaal with attempt number
                 feedbackSection.classList.add('hidden'); // Hide old feedback
-                showFoutanalyseModaal(selectedOption, currentQuestion.extra_info);
-
-                // Show hint after first mistake
-                if (!hintShown && currentQuestion.hint) {
-                    showHintButton(currentQuestion.hint);
-                }
+                showFoutanalyseModaal(selectedOption, currentQuestion.extra_info, currentQuestionErrors, currentQuestion);
 
                 // DON'T set hasAnswered to true here - allow retry
                 // Return early to skip setting hasAnswered at the end
@@ -652,12 +668,20 @@ function submitAnswer() {
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, true);
         } else {
+            // Increment error count for this question
+            currentQuestionErrors++;
+
             feedbackSection.classList.add('incorrect');
             feedbackTitle.textContent = CONFIG.feedback.incorrect.title;
             feedbackMessage.textContent = CONFIG.feedback.incorrect.messageWithTips;
 
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, false);
+
+            // Show hint button after first mistake (if hint exists)
+            if (currentQuestionErrors === 1 && currentQuestion.hint) {
+                showHintButton(currentQuestion.hint);
+            }
 
             correctAnswerDisplay.textContent = `Voorbeeld antwoord: "${currentQuestion.possible_answer}"`;
             correctAnswerDisplay.classList.remove('hidden');
