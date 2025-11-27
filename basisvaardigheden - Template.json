@@ -441,16 +441,47 @@
       {
         "question": "Als 3 kg appels €6 kost, hoeveel kost 5 kg?",
         "options": [
-          "€9",
-          "€10",
-          "€12",
-          "€15"
+          {
+            "text": "€9",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt niet via 1 gerekend. Bereken eerst wat 1 eenheid kost door te delen, en vermenigvuldig dan.\n\n🤔 **Reflectievraag:** Wat is de eerste stap bij 'via 1' methode?",
+            "visual_aid_query": "Verhoudingstabel visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "€10",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "€12",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je methode is goed (via 1), maar er zit een rekenfout in je berekening. Controleer beide stappen!\n\n🤔 **Reflectievraag:** Heb je eerst correct gedeeld om 1 eenheid te vinden?",
+            "visual_aid_query": "Verhoudingstabel visualisatie",
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "€15",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": "Verhoudingstabel visualisatie",
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
           "tips": [
             "Stap 1: 3 kg = €6, dus 1 kg = €6 ÷ 3 = €2",
             "Stap 2: 1 kg = €2, dus 5 kg = 5 × €2 = €10"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Bereken prijs van 1 kg | €6 ÷ 3 | €2 per kg |",
+            "| 2. Bereken prijs van 5 kg | €2 × 5 | **€10** ⭐ |"
           ]
         },
         "lova": {
@@ -491,7 +522,8 @@
             "logica_check": "€10 is logisch: meer dan €6 want je koopt meer appels",
             "antwoord": "€10"
           }
-        }
+        },
+        "hint": "💡 Tip: Bereken eerst wat 1 eenheid (1 kg, 1 broodje, etc.) kost!"
       }
     ]
   },
@@ -504,16 +536,47 @@
       {
         "question": "Als 4 broodjes €8 kosten, hoeveel kosten 7 broodjes?",
         "options": [
-          "€12",
-          "€14",
-          "€16",
-          "€18"
+          {
+            "text": "€12",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt niet via 1 gerekend. Bereken eerst wat 1 eenheid kost door te delen, en vermenigvuldig dan.\n\n🤔 **Reflectievraag:** Wat is de eerste stap bij 'via 1' methode?",
+            "visual_aid_query": "Verhoudingstabel visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "€14",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "€16",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je methode is goed (via 1), maar er zit een rekenfout in je berekening. Controleer beide stappen!\n\n🤔 **Reflectievraag:** Heb je eerst correct gedeeld om 1 eenheid te vinden?",
+            "visual_aid_query": "Verhoudingstabel visualisatie",
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "€18",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": "Verhoudingstabel visualisatie",
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
           "tips": [
             "Stap 1: 4 broodjes = €8, dus 1 broodje = €8 ÷ 4 = €2",
             "Stap 2: 1 broodje = €2, dus 7 broodjes = 7 × €2 = €14"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Bereken prijs van 1 broodje | €8 ÷ 4 | €2 per broodje |",
+            "| 2. Bereken prijs van 7 broodjes | €2 × 7 | **€14** ⭐ |"
           ]
         },
         "lova": {
@@ -554,7 +617,8 @@
             "logica_check": "€14 is logisch: bijna 2 keer zoveel als €8 (want 7 is bijna 2× 4)",
             "antwoord": "€14"
           }
-        }
+        },
+        "hint": "💡 Tip: Bereken eerst wat 1 eenheid (1 kg, 1 broodje, etc.) kost!"
       }
     ]
   },
@@ -822,10 +886,35 @@
       {
         "question": "Als 2 liter verf €10 kost, hoeveel kost 8 liter?",
         "options": [
-          "€20",
-          "€30",
-          "€40",
-          "€50"
+          {
+            "text": "€20",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt de verkeerde factor gebruikt. Let op: dubbelen betekent keer 2!\n\n🤔 **Reflectievraag:** Als iets 2 keer zo groot wordt, wordt de prijs dan ook 2 keer zo groot?",
+            "visual_aid_query": "Verhoudingstabel visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "€30",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": "Verhoudingstabel visualisatie",
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "€40",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "€50",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": "Verhoudingstabel visualisatie",
+            "remedial_basis_id": null
+          }
         ],
         "correct": 2,
         "extra_info": {
@@ -833,6 +922,12 @@
             "8 liter is 4 keer zoveel als 2 liter",
             "Dus 4 × €10 = €40",
             "Of: 2L = €10, 4L = €20, 8L = €40"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Bepaal hoeveel keer groter | 8 ÷ 2 | 4 keer zoveel |",
+            "| 2. Bereken de prijs | €10 × 4 | **€40** ⭐ |"
           ]
         },
         "lova": {
@@ -873,7 +968,8 @@
             "logica_check": "€40 is logisch: 2L→€10, 4L→€20 (dubbel), 8L→€40 (nog een keer dubbel)",
             "antwoord": "€40"
           }
-        }
+        },
+        "hint": "💡 Tip: Kijk of je kunt dubbelen - dat is vaak makkelijker dan via 1!"
       }
     ]
   },
@@ -886,16 +982,47 @@
       {
         "question": "Als 6 pennen €12 kosten, hoeveel kosten 3 pennen?",
         "options": [
-          "€4",
-          "€6",
-          "€8",
-          "€10"
+          {
+            "text": "€4",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt de verkeerde factor gebruikt. Let op: halveren betekent delen door 2!\n\n🤔 **Reflectievraag:** Als je de helft koopt, betaal je dan de helft?",
+            "visual_aid_query": "Verhoudingstabel visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "€6",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "€8",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": "Verhoudingstabel visualisatie",
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "€10",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": "Verhoudingstabel visualisatie",
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
           "tips": [
             "3 pennen is de helft van 6 pennen",
             "Dus €12 ÷ 2 = €6"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Herken de verhouding | 3 = 6 ÷ 2 | 3 is de helft van 6 |",
+            "| 2. Halveer de prijs | €12 ÷ 2 | **€6** ⭐ |"
           ]
         },
         "lova": {
@@ -936,7 +1063,8 @@
             "logica_check": "€6 is logisch: precies de helft van €12 want je koopt de helft",
             "antwoord": "€6"
           }
-        }
+        },
+        "hint": "💡 Tip: Herken je dat het nieuwe aantal precies de helft is? Dan kan je ook de prijs halveren!"
       }
     ]
   },
@@ -1093,10 +1221,35 @@
       {
         "question": "Als 5 kg rijst €12,50 kost, hoeveel kost 8 kg?",
         "options": [
-          "€18",
-          "€20",
-          "€22",
-          "€24"
+          {
+            "text": "€18",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": "Verhoudingstabel visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "€20",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "€22",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": "Verhoudingstabel visualisatie",
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "€24",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": "Verhoudingstabel visualisatie",
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -1104,7 +1257,8 @@
             "Stap 1: 5 kg = €12,50, dus 1 kg = €12,50 ÷ 5 = €2,50",
             "Stap 2: 1 kg = €2,50, dus 8 kg = 8 × €2,50 = €20"
           ]
-        }
+        },
+        "hint": "💡 Tip: Ga altijd via 1 - dat is de veiligste methode bij kommagetallen!"
       }
     ]
   },
@@ -1117,10 +1271,35 @@
       {
         "question": "Voor €15 krijg je 3 potloden. Hoeveel potloden krijg je voor €25?",
         "options": [
-          "4 potloden",
-          "5 potloden",
-          "6 potloden",
-          "7 potloden"
+          {
+            "text": "4 potloden",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": "Verhoudingstabel visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "5 potloden",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "6 potloden",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": "Verhoudingstabel visualisatie",
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "7 potloden",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": "Verhoudingstabel visualisatie",
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -1128,7 +1307,8 @@
             "Stap 1: 3 potloden = €15, dus 1 potlood = €15 ÷ 3 = €5",
             "Stap 2: 1 potlood = €5, dus €25 = €25 ÷ €5 = 5 potloden"
           ]
-        }
+        },
+        "hint": "💡 Tip: Let op de eenheden - wat is gegeven en wat moet je berekenen?"
       }
     ]
   },
@@ -4401,10 +4581,35 @@
       {
         "question": "12 : 8 = ?",
         "options": [
-          "2 : 1",
-          "3 : 2",
-          "4 : 3",
-          "6 : 4"
+          {
+            "text": "2 : 1",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt de verhouding omgedraaid! Bij vereenvoudigen moet je beide getallen door hetzelfde getal delen.\n\n🤔 **Reflectievraag:** Wat betekent het om een verhouding te vereenvoudigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "3 : 2",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "4 : 3",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je berekening klopt niet helemaal. Controleer of je beide getallen door hetzelfde getal hebt gedeeld.\n\n🤔 **Reflectievraag:** Door welk getal heb je beide kanten gedeeld?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "6 : 4",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Dit is niet de vereenvoudigde vorm. Je hebt de verhouding niet volledig vereenvoudigd.\n\n🤔 **Reflectievraag:** Kun je beide getallen nog verder delen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -4413,6 +4618,12 @@
             "GGD van 12 en 8 is 4",
             "12 ÷ 4 = 3 en 8 ÷ 4 = 2",
             "Dus 12 : 8 = 3 : 2"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Bepaal de GGD | GGD(12, 8) | 4 |",
+            "| 2. Deel beide getallen door GGD | 12 ÷ 4 : 8 ÷ 4 | **3 : 2** ⭐ |"
           ]
         },
         "lova": {
@@ -4453,7 +4664,8 @@
             "logica_check": "3 : 2 is logisch: kan niet verder vereenvoudigd worden (GGD van 3 en 2 is 1)",
             "antwoord": "3 : 2"
           }
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -4466,10 +4678,35 @@
       {
         "question": "18 : 24 = ?",
         "options": [
-          "2 : 3",
-          "3 : 4",
-          "4 : 5",
-          "6 : 8"
+          {
+            "text": "2 : 3",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt de verhouding omgedraaid! Bij vereenvoudigen moet je beide getallen door hetzelfde getal delen.\n\n🤔 **Reflectievraag:** Wat betekent het om een verhouding te vereenvoudigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "3 : 4",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "4 : 5",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je berekening klopt niet helemaal. Controleer of je beide getallen door hetzelfde getal hebt gedeeld.\n\n🤔 **Reflectievraag:** Door welk getal heb je beide kanten gedeeld?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "6 : 8",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Dit is niet de vereenvoudigde vorm. Je hebt de verhouding niet volledig vereenvoudigd.\n\n🤔 **Reflectievraag:** Kun je beide getallen nog verder delen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -4478,7 +4715,8 @@
             "18 ÷ 6 = 3 en 24 ÷ 6 = 4",
             "Dus 18 : 24 = 3 : 4"
           ]
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -4491,10 +4729,35 @@
       {
         "question": "Een model van een auto is op schaal 1:50 gemaakt. Het echte auto is 4 meter lang. Hoe lang is het model?",
         "options": [
-          "4 cm",
-          "8 cm",
-          "10 cm",
-          "20 cm"
+          {
+            "text": "4 cm",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "8 cm",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "10 cm",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "20 cm",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -4502,6 +4765,12 @@
             "Schaal 1:50 betekent 50 keer kleiner",
             "4 meter = 400 cm",
             "400 cm ÷ 50 = 8 cm"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Converteer naar centimeters | 4 meter × 100 | 400 cm |",
+            "| 2. Pas de schaal toe | 400 cm ÷ 50 | **8 cm** ⭐ |"
           ]
         },
         "lova": {
@@ -4544,7 +4813,8 @@
             "logica_check": "8 cm is logisch: model is veel kleiner dan het echte object",
             "antwoord": "8 cm"
           }
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -4557,16 +4827,47 @@
       {
         "question": "Op een kaart met schaal 1:100.000 is de afstand 5 cm. Hoe groot is de echte afstand?",
         "options": [
-          "500 m",
-          "5 km",
-          "50 km",
-          "500 km"
+          {
+            "text": "500 m",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "5 km",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "50 km",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "500 km",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
           "tips": [
             "Schaal 1:100.000 betekent 100.000 keer groter",
             "5 cm × 100.000 = 500.000 cm = 5.000 m = 5 km"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Pas de schaal toe | 5 cm × 100.000 | 500.000 cm |",
+            "| 2. Converteer naar kilometers | 500.000 cm ÷ 100.000 | **5 km** ⭐ |"
           ]
         },
         "lova": {
@@ -4609,7 +4910,8 @@
             "logica_check": "5 km is logisch: een realistische afstand voor 5 cm op een kaart",
             "antwoord": "5 km"
           }
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -4622,10 +4924,35 @@
       {
         "question": "Een recept voor 4 personen vraagt 300 gram bloem. Hoeveel bloem heb je nodig voor 6 personen?",
         "options": [
-          "400 gram",
-          "425 gram",
-          "450 gram",
-          "500 gram"
+          {
+            "text": "400 gram",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "425 gram",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "450 gram",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "500 gram",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 2,
         "extra_info": {
@@ -4633,6 +4960,12 @@
             "4 personen → 300 gram",
             "1 persoon → 300 ÷ 4 = 75 gram",
             "6 personen → 6 × 75 = 450 gram"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Bereken per persoon | 300 gram ÷ 4 | 75 gram per persoon |",
+            "| 2. Bereken voor 6 personen | 75 gram × 6 | **450 gram** ⭐ |"
           ]
         },
         "lova": {
@@ -4673,7 +5006,8 @@
             "logica_check": "450 gram is logisch: 6 is 1,5× zo groot als 4, dus 450 is 1,5× 300",
             "antwoord": "450 gram"
           }
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -4686,10 +5020,35 @@
       {
         "question": "Een recept voor 8 personen vraagt 400 ml melk. Hoeveel melk heb je nodig voor 3 personen?",
         "options": [
-          "125 ml",
-          "150 ml",
-          "175 ml",
-          "200 ml"
+          {
+            "text": "125 ml",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "150 ml",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "175 ml",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "200 ml",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -4698,7 +5057,8 @@
             "1 persoon → 400 ÷ 8 = 50 ml",
             "3 personen → 3 × 50 = 150 ml"
           ]
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -4711,10 +5071,35 @@
       {
         "question": "Je fietst 12 km in 30 minuten. Hoeveel km fiets je per uur?",
         "options": [
-          "20 km/u",
-          "24 km/u",
-          "28 km/u",
-          "30 km/u"
+          {
+            "text": "20 km/u",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "24 km/u",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "28 km/u",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "30 km/u",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -4722,6 +5107,12 @@
             "30 minuten = half uur",
             "In half uur fiets je 12 km",
             "In 1 uur fiets je 2 × 12 = 24 km"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Herken de tijdsverhouding | 30 minuten = half uur | 30 min = 0,5 uur |",
+            "| 2. Bereken snelheid per uur | 12 km × 2 | **24 km/u** ⭐ |"
           ]
         },
         "lova": {
@@ -4764,7 +5155,8 @@
             "logica_check": "24 km/u is logisch: een realistische fietssnelheid",
             "antwoord": "24 km/u"
           }
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -4777,10 +5169,35 @@
       {
         "question": "Je rijdt met een snelheid van 60 km/u. Hoe lang doe je over 90 km?",
         "options": [
-          "1 uur",
-          "1,5 uur",
-          "2 uur",
-          "2,5 uur"
+          {
+            "text": "1 uur",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "1,5 uur",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "2 uur",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "2,5 uur",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -4789,7 +5206,8 @@
             "90 km = 1,5 × 60 km",
             "Dus 90 km duurt 1,5 uur"
           ]
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -4802,10 +5220,35 @@
       {
         "question": "Winkel A: 2 kg appels voor €3,60. Winkel B: 3 kg appels voor €5,10. Waar zijn appels goedkoper?",
         "options": [
-          "Winkel A",
-          "Winkel B",
-          "Even duur",
-          "Kan niet bepaald worden"
+          {
+            "text": "Winkel A",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "Winkel B",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "Even duur",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "Kan niet bepaald worden",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 2,
         "extra_info": {
@@ -4813,6 +5256,13 @@
             "Winkel A: €3,60 ÷ 2 = €1,80 per kg",
             "Winkel B: €5,10 ÷ 3 = €1,70 per kg",
             "Winkel B is goedkoper"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Bereken prijs per kg bij winkel A | €3,60 ÷ 2 | €1,80 per kg |",
+            "| 2. Bereken prijs per kg bij winkel B | €5,10 ÷ 3 | €1,70 per kg |",
+            "| 3. Vergelijk de prijzen | €1,70 < €1,80 | **Winkel B is goedkoper** ⭐ |"
           ]
         },
         "lova": {
@@ -4860,7 +5310,8 @@
             "logica_check": "Winkel B is logisch goedkoper: €1,70 < €1,80 per kilogram",
             "antwoord": "Winkel B"
           }
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -4873,10 +5324,35 @@
       {
         "question": "Pak A: 1,5 liter voor €2,40. Pak B: 2 liter voor €3,00. Welk pak is goedkoper per liter?",
         "options": [
-          "Pak A",
-          "Pak B",
-          "Even duur",
-          "Kan niet bepaald worden"
+          {
+            "text": "Pak A",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "Pak B",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "Even duur",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "Kan niet bepaald worden",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -4885,7 +5361,8 @@
             "Pak B: €3,00 ÷ 2 = €1,50 per liter",
             "Pak B is goedkoper"
           ]
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -4898,10 +5375,35 @@
       {
         "question": "Drie kinderen verdelen 60 euro in de verhouding 2:3:5. Hoeveel krijgt het kind met het grootste deel?",
         "options": [
-          "€20",
-          "€24",
-          "€30",
-          "€36"
+          {
+            "text": "€20",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "€24",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "€30",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "€36",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 2,
         "extra_info": {
@@ -4909,6 +5411,13 @@
             "2 + 3 + 5 = 10 delen",
             "1 deel = €60 ÷ 10 = €6",
             "Grootste deel = 5 × €6 = €30"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Tel de delen op | 2 + 3 + 5 | 10 delen |",
+            "| 2. Bereken waarde van 1 deel | €60 ÷ 10 | €6 per deel |",
+            "| 3. Bereken grootste deel | 5 × €6 | **€30** ⭐ |"
           ]
         },
         "lova": {
@@ -4956,7 +5465,8 @@
             "logica_check": "€30 is logisch: controle 2×€6 + 3×€6 + 5×€6 = €12 + €18 + €30 = €60 ✓",
             "antwoord": "€30"
           }
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -4969,10 +5479,35 @@
       {
         "question": "Een klas met 24 leerlingen bestaat uit jongens en meisjes in de verhouding 5:3. Hoeveel jongens zitten er in de klas?",
         "options": [
-          "12",
-          "15",
-          "16",
-          "18"
+          {
+            "text": "12",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "15",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "16",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "18",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -4981,7 +5516,8 @@
             "1 deel = 24 ÷ 8 = 3 leerlingen",
             "Jongens = 5 × 3 = 15"
           ]
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -4994,10 +5530,35 @@
       {
         "question": "Voor limonade meng je siroop en water in de verhouding 1:4. Je hebt 200 ml siroop. Hoeveel water heb je nodig?",
         "options": [
-          "400 ml",
-          "600 ml",
-          "800 ml",
-          "1000 ml"
+          {
+            "text": "400 ml",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "600 ml",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "800 ml",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "1000 ml",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 2,
         "extra_info": {
@@ -5005,6 +5566,12 @@
             "Verhouding siroop : water = 1 : 4",
             "Voor 1 deel siroop heb je 4 delen water nodig",
             "200 ml siroop → 4 × 200 = 800 ml water"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Begrijp de verhouding | 1 : 4 | Voor elk deel siroop 4 delen water |",
+            "| 2. Bereken hoeveelheid water | 200 ml × 4 | **800 ml** ⭐ |"
           ]
         },
         "lova": {
@@ -5045,7 +5612,8 @@
             "logica_check": "800 ml is logisch: verhouding 200:800 = 1:4 ✓",
             "antwoord": "800 ml"
           }
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -5058,10 +5626,35 @@
       {
         "question": "In een doos zitten 10 rode en 15 blauwe knikkers. Wat is de verhouding rood : blauw in eenvoudigste vorm?",
         "options": [
-          "1 : 2",
-          "2 : 3",
-          "3 : 5",
-          "10 : 15"
+          {
+            "text": "1 : 2",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "2 : 3",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "3 : 5",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "10 : 15",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -5071,7 +5664,8 @@
             "10 ÷ 5 = 2 en 15 ÷ 5 = 3",
             "Dus 2 : 3"
           ]
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -5084,10 +5678,35 @@
       {
         "question": "Je fietst 20 km in 40 minuten. Wat is je gemiddelde snelheid in km/u?",
         "options": [
-          "25 km/u",
-          "30 km/u",
-          "35 km/u",
-          "40 km/u"
+          {
+            "text": "25 km/u",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "30 km/u",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "35 km/u",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "40 km/u",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -5095,6 +5714,12 @@
             "40 minuten = 40/60 uur = 2/3 uur",
             "20 km in 2/3 uur",
             "In 1 uur: 20 ÷ 2/3 = 20 × 3/2 = 30 km/u"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Converteer tijd naar uren | 40 minuten = 40/60 uur | 2/3 uur |",
+            "| 2. Bereken snelheid | 20 km ÷ (2/3) uur = 20 × 3/2 | **30 km/u** ⭐ |"
           ]
         },
         "lova": {
@@ -5137,7 +5762,8 @@
             "logica_check": "30 km/u is logisch: in 40 min fiets je 20 km, in 60 min (1,5× zo lang) fiets je 30 km",
             "antwoord": "30 km/u"
           }
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -5150,10 +5776,35 @@
       {
         "question": "Voor €18 kun je 6 stroopwafels kopen. Hoeveel stroopwafels kun je kopen voor €27?",
         "options": [
-          "8 stroopwafels",
-          "9 stroopwafels",
-          "10 stroopwafels",
-          "12 stroopwafels"
+          {
+            "text": "8 stroopwafels",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "9 stroopwafels",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "10 stroopwafels",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "12 stroopwafels",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -5161,7 +5812,8 @@
             "6 stroopwafels = €18, dus 1 stroopwafel = €18 ÷ 6 = €3",
             "€27 ÷ €3 = 9 stroopwafels"
           ]
-        }
+        },
+        "hint": "💡 Tip: Let op de eenheden - wat is gegeven en wat moet je berekenen?"
       }
     ]
   },
@@ -5174,10 +5826,35 @@
       {
         "question": "Een maquette van een gebouw is op schaal 1:200. Het echte gebouw is 40 meter hoog. Hoe hoog is de maquette?",
         "options": [
-          "10 cm",
-          "20 cm",
-          "30 cm",
-          "40 cm"
+          {
+            "text": "10 cm",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "20 cm",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "30 cm",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "40 cm",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -5185,6 +5862,12 @@
             "40 meter = 4000 cm",
             "Schaal 1:200 betekent 200 keer kleiner",
             "4000 cm ÷ 200 = 20 cm"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Converteer naar centimeters | 40 meter × 100 | 4000 cm |",
+            "| 2. Pas de schaal toe | 4000 cm ÷ 200 | **20 cm** ⭐ |"
           ]
         },
         "lova": {
@@ -5227,7 +5910,8 @@
             "logica_check": "20 cm is logisch: maquette is veel kleiner dan het echte gebouw (40m = 4000cm)",
             "antwoord": "20 cm"
           }
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -5240,16 +5924,47 @@
       {
         "question": "4 arbeiders bouwen een muur in 6 dagen. Hoeveel dagen doen 3 arbeiders over hetzelfde werk?",
         "options": [
-          "4,5 dagen",
-          "6 dagen",
-          "8 dagen",
-          "9 dagen"
+          {
+            "text": "4,5 dagen",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "6 dagen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "8 dagen",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "9 dagen",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 2,
         "extra_info": {
           "tips": [
             "4 arbeiders × 6 dagen = 24 arbeidsdagen totaal",
             "3 arbeiders doen 24 arbeidsdagen ÷ 3 = 8 dagen"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Bereken totaal werk | 4 arbeiders × 6 dagen | 24 arbeidsdagen |",
+            "| 2. Bereken tijd voor 3 arbeiders | 24 arbeidsdagen ÷ 3 arbeiders | **8 dagen** ⭐ |"
           ]
         },
         "lova": {
@@ -5290,7 +6005,8 @@
             "logica_check": "8 dagen is logisch: minder arbeiders → meer tijd (8 > 6). Controle: 3×8 = 24 = 4×6 ✓",
             "antwoord": "8 dagen"
           }
-        }
+        },
+        "hint": "💡 Tip: Let op de eenheden - wat is gegeven en wat moet je berekenen?"
       }
     ]
   },
@@ -5303,10 +6019,35 @@
       {
         "question": "Een auto verbruikt 6 liter benzine per 100 km. Hoeveel liter verbruikt de auto op 250 km?",
         "options": [
-          "12 liter",
-          "15 liter",
-          "18 liter",
-          "20 liter"
+          {
+            "text": "12 liter",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "15 liter",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "18 liter",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "20 liter",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -5315,7 +6056,8 @@
             "250 km = 2,5 × 100 km",
             "2,5 × 6 liter = 15 liter"
           ]
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -5328,10 +6070,35 @@
       {
         "question": "2 : 3 = ? : 12. Wat is het ontbrekende getal?",
         "options": [
-          "6",
-          "8",
-          "9",
-          "10"
+          {
+            "text": "6",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "8",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "9",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "10",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -5340,7 +6107,8 @@
             "Ook het linker getal × 4",
             "2 × 4 = 8"
           ]
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -5353,10 +6121,35 @@
       {
         "question": "5 : 8 = 15 : ?. Wat is het ontbrekende getal?",
         "options": [
-          "20",
-          "24",
-          "28",
-          "30"
+          {
+            "text": "20",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "24",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "28",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "30",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -5365,7 +6158,8 @@
             "Ook het rechter getal × 3",
             "8 × 3 = 24"
           ]
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -5378,10 +6172,35 @@
       {
         "question": "Een schoonmaakmiddel moet je verdunnen met water in de verhouding 1:9 (1 deel middel, 9 delen water). Hoeveel ml middel heb je nodig voor 1 liter (1000 ml) oplossing?",
         "options": [
-          "90 ml",
-          "100 ml",
-          "110 ml",
-          "150 ml"
+          {
+            "text": "90 ml",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "100 ml",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "110 ml",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "150 ml",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -5390,7 +6209,8 @@
             "1000 ml ÷ 10 = 100 ml per deel",
             "Middel = 1 deel = 100 ml"
           ]
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -5403,10 +6223,35 @@
       {
         "question": "Op een plattegrond met schaal 1:250 is een kamer 6 cm lang. Hoe lang is de echte kamer?",
         "options": [
-          "12 m",
-          "15 m",
-          "18 m",
-          "20 m"
+          {
+            "text": "12 m",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "15 m",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "18 m",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "20 m",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -5414,7 +6259,8 @@
             "6 cm × 250 = 1500 cm",
             "1500 cm = 15 meter"
           ]
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -5427,10 +6273,35 @@
       {
         "question": "Printer A print 60 pagina's in 3 minuten. Printer B print 100 pagina's in 4 minuten. Welke printer is sneller?",
         "options": [
-          "Printer A",
-          "Printer B",
-          "Beide even snel",
-          "Kan niet bepaald worden"
+          {
+            "text": "Printer A",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "Printer B",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "Beide even snel",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "Kan niet bepaald worden",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -5439,7 +6310,8 @@
             "Printer B: 100 ÷ 4 = 25 pagina's per minuut",
             "Printer B is sneller"
           ]
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -5452,10 +6324,35 @@
       {
         "question": "Voor €100 krijg je 120 dollar. Hoeveel dollar krijg je voor €250?",
         "options": [
-          "280 dollar",
-          "300 dollar",
-          "320 dollar",
-          "350 dollar"
+          {
+            "text": "280 dollar",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "300 dollar",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "320 dollar",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "350 dollar",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -5464,7 +6361,8 @@
             "€1 → 1,20 dollar",
             "€250 → 250 × 1,20 = 300 dollar"
           ]
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -5477,10 +6375,35 @@
       {
         "question": "Een rechthoek van 4 cm bij 6 cm wordt vergroot met factor 2 (beide zijden × 2). Hoe groot is de nieuwe oppervlakte?",
         "options": [
-          "48 cm²",
-          "60 cm²",
-          "96 cm²",
-          "120 cm²"
+          {
+            "text": "48 cm²",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "60 cm²",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "96 cm²",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "120 cm²",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 2,
         "extra_info": {
@@ -5490,7 +6413,8 @@
             "Nieuwe oppervlakte: 8 × 12 = 96 cm²",
             "Let op: oppervlakte wordt 4 keer zo groot (2²)!"
           ]
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -5503,10 +6427,35 @@
       {
         "question": "Je koopt 5 kg appels voor €7,50 en 3 kg appels voor €5,10. Wat is de gemiddelde prijs per kg?",
         "options": [
-          "€1,50",
-          "€1,55",
-          "€1,58",
-          "€1,60"
+          {
+            "text": "€1,50",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "€1,55",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "€1,58",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "€1,60",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 2,
         "extra_info": {
@@ -5515,7 +6464,8 @@
             "Totale prijs: €7,50 + €5,10 = €12,60",
             "€12,60 ÷ 8 = €1,575 ≈ €1,58 per kg"
           ]
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -5528,10 +6478,35 @@
       {
         "question": "Met 80 km/u doe je 2 uur over een afstand. Hoe lang doe je met 100 km/u over dezelfde afstand?",
         "options": [
-          "1,5 uur",
-          "1,6 uur",
-          "1,8 uur",
-          "2,5 uur"
+          {
+            "text": "1,5 uur",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "1,6 uur",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "1,8 uur",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "2,5 uur",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -5540,7 +6515,8 @@
             "Met 100 km/u: 160 ÷ 100 = 1,6 uur",
             "1,6 uur = 1 uur en 36 minuten"
           ]
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -5553,10 +6529,35 @@
       {
         "question": "Twee kinderen verdelen snoep in de verhouding 3:5. Het ene kind krijgt 15 snoepjes. Hoeveel krijgt het andere kind?",
         "options": [
-          "9 snoepjes",
-          "20 snoepjes",
-          "25 snoepjes",
-          "30 snoepjes"
+          {
+            "text": "9 snoepjes",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "20 snoepjes",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "25 snoepjes",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "30 snoepjes",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 2,
         "extra_info": {
@@ -5565,7 +6566,8 @@
             "Als 3 delen = 15 snoepjes, dan 1 deel = 5 snoepjes",
             "5 delen = 5 × 5 = 25 snoepjes"
           ]
-        }
+        },
+        "hint": "💡 Tip: Maak een verhoudingstabel om het overzichtelijk te houden!"
       }
     ]
   },
@@ -5578,10 +6580,35 @@
       {
         "question": "Op een kaart met schaal 1:50.000 is de afstand tussen twee steden 8 cm. Je fietst met 20 km/u. Hoe lang doe je over deze afstand?",
         "options": [
-          "10 minuten",
-          "12 minuten",
-          "15 minuten",
-          "20 minuten"
+          {
+            "text": "10 minuten",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit is niet de juiste aanpak voor deze verhouding. Gebruik de verhoudingsmethode: als het aantal groter wordt, wordt de prijs ook groter.\n\n🤔 **Reflectievraag:** Welke rekenbewerking gebruik je bij verhoudingen: optellen of vermenigvuldigen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "12 minuten",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "15 minuten",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Er zit waarschijnlijk een kleine rekenfout in je vermenigvuldiging of deling.\n\n🤔 **Reflectievraag:** Heb je de juiste vermenigvuldigingsfactor gebruikt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "20 minuten",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Let goed op de getallen in de vraag! Je hebt waarschijnlijk de verkeerde getallen gebruikt of de vraag verkeerd gelezen.\n\n🤔 **Reflectievraag:** Wat wordt er precies gevraagd in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
         ],
         "correct": 1,
         "extra_info": {
@@ -5590,7 +6617,8 @@
             "Snelheid 20 km/u = 20 km in 60 minuten",
             "4 km duurt: 4 ÷ 20 × 60 = 12 minuten"
           ]
-        }
+        },
+        "hint": "💡 Tip: Ga altijd via 1 - dat is de veiligste methode bij kommagetallen!"
       }
     ]
   }
