@@ -18185,134 +18185,110 @@
   },
   {
     "id": 131,
-    "title": "Vloer betegelen",
+    "title": "Badkamer betegelen (1S)",
     "theme": "oppervlakte",
-    "content": "Een badkamer heeft een rechthoekige vloer van 4 meter lang en 3 meter breed.",
+    "content": "De badkamer is 3,5 meter lang en 2,4 meter breed. De tegels zijn 30 bij 30 cm. In een pak zitten 10 tegels.",
     "questions": [
       {
-        "question": "Wat is de oppervlakte van de vloer?",
+        "question": "Hoeveel pakken moet je minimaal kopen als je rekening houdt met 10% snijverlies?",
         "options": [
           {
-            "text": "10 m²",
-            "foutanalyse": "Dit is niet het juiste antwoord. Loop je berekening stap voor stap na: begin bij het aflezen van de juiste gegevens en controleer daarna elke tussenstap."
+            "text": "9 pakken",
+            "foutanalyse": "Je hebt het snijverlies niet meegenomen. Je moet 10% extra tegels kopen voor het snijverlies."
           },
           {
-            "text": "16 m²",
-            "foutanalyse": "Dit is niet het juiste antwoord. Loop je berekening stap voor stap na: begin bij het aflezen van de juiste gegevens en controleer daarna elke tussenstap."
+            "text": "10 pakken",
+            "foutanalyse": "Je bent vergeten om naar boven af te ronden. Je hebt 10,27 pakken nodig, dus je moet 11 pakken kopen."
           },
           {
-            "text": "14 m²",
-            "foutanalyse": "Dit is niet het juiste antwoord. Loop je berekening stap voor stap na: begin bij het aflezen van de juiste gegevens en controleer daarna elke tussenstap."
-          },
-          {
-            "text": "12 m²",
+            "text": "11 pakken",
             "foutanalyse": "Dit is het juiste antwoord."
+          },
+          {
+            "text": "84 pakken",
+            "foutanalyse": "Je hebt vergeten om te delen door het aantal tegels per pak. Je hebt nu het totaal aantal tegels in plaats van het aantal pakken."
           }
         ],
-        "correct": 3,
+        "correct": 2,
         "extra_info": {
-          "concept": "Dit is een oppervlakte berekening: oppervlakte = lengte × breedte. Voor samengestelde figuren: verdeel in rechthoeken.",
+          "concept": "Dit is een meerstaps-opgave (1S-niveau): oppervlakte berekenen met decimalen, eenheden omrekenen (m² naar cm²), percentage berekenen, en afronden naar hele pakken.",
           "berekening": [
-            "Oppervlakte rechthoek = lengte × breedte",
-            "Oppervlakte = 4 × 3 = 12 m²"
+            "Stap 1: Oppervlakte badkamer = 3,5 × 2,4 = 8,4 m²",
+            "Stap 2: Oppervlakte per tegel = 30 × 30 = 900 cm² = 0,09 m²",
+            "Stap 3: Aantal tegels nodig = 8,4 ÷ 0,09 = 93,33 tegels",
+            "Stap 4: Met 10% snijverlies = 93,33 × 1,10 = 102,67 tegels",
+            "Stap 5: Aantal pakken = 102,67 ÷ 10 = 10,27 pakken",
+            "Stap 6: Afronden naar boven (je kunt geen halve pak kopen) = 11 pakken"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
-            "hoofdvraag": "Wat is de oppervlakte van de vloer?",
+            "hoofdvraag": "Hoeveel pakken tegels moet je minimaal kopen?",
             "tussenstappen": [
-              "Gebruik de formule: oppervlakte = lengte × breedte"
+              "Bereken de oppervlakte van de badkamer",
+              "Bereken hoeveel tegels er nodig zijn",
+              "Bereken het snijverlies (10% erbij)",
+              "Bereken hoeveel pakken nodig zijn (afgerond naar boven)"
             ]
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Lengte": "4 meter",
-              "Breedte": "3 meter"
+              "Lengte badkamer": "3,5 meter",
+              "Breedte badkamer": "2,4 meter",
+              "Tegelgrootte": "30 × 30 cm",
+              "Tegels per pak": "10 stuks",
+              "Snijverlies": "10%"
             },
-            "tool": "Oppervlakte rechthoek: lengte × breedte",
-            "conversies": []
+            "tool": "Oppervlakte, eenheidsconversie, percentage berekening",
+            "conversies": [
+              "m² naar cm² of cm² naar m²",
+              "aantal tegels naar aantal pakken"
+            ]
           },
           "stap3_vormen": {
             "bewerkingen": [
               {
-                "stap": "Bereken oppervlakte",
-                "berekening": "4 meter × 3 meter",
-                "resultaat": "12 m²",
-                "uitleg": "Oppervlakte rechthoek = lengte × breedte, dus 4 × 3 = 12 m²"
-              }
-            ]
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "vierkante meter (m²)",
-            "logica_check": "12 m² is logisch: 4 × 3 = 12",
-            "antwoord": "12 m²"
-          }
-        }
-      },
-      {
-        "question": "Wat is de omtrek van de vloer?",
-        "options": [
-          {
-            "text": "12 meter",
-            "foutanalyse": "Je zit dichtbij het juiste antwoord. Controleer vooral of je de bewerkingen in de juiste volgorde hebt uitgevoerd en alle gegeven informatie hebt gebruikt."
-          },
-          {
-            "text": "18 meter",
-            "foutanalyse": "Dit is niet het juiste antwoord. Loop je berekening stap voor stap na: begin bij het aflezen van de juiste gegevens en controleer daarna elke tussenstap."
-          },
-          {
-            "text": "16 meter",
-            "foutanalyse": "Je zit dichtbij het juiste antwoord. Controleer vooral of je de bewerkingen in de juiste volgorde hebt uitgevoerd en alle gegeven informatie hebt gebruikt."
-          },
-          {
-            "text": "14 meter",
-            "foutanalyse": "Dit is het juiste antwoord."
-          }
-        ],
-        "correct": 3,
-        "extra_info": {
-          "concept": "Lees de vraag goed en bepaal welke gegevens je nodig hebt. Werk stap voor stap en controleer je antwoord.",
-          "berekening": [
-            "Omtrek rechthoek = 2 × (lengte + breedte)",
-            "Omtrek = 2 × (4 + 3) = 2 × 7 = 14 meter"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Wat is de oppervlakte van de vloer?",
-            "tussenstappen": [
-              "Gebruik de formule: oppervlakte = lengte × breedte"
-            ]
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {
-              "Lengte": "4 meter",
-              "Breedte": "3 meter"
-            },
-            "tool": "Oppervlakte rechthoek: lengte × breedte",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": [
+                "stap": "Bereken oppervlakte badkamer",
+                "berekening": "3,5 m × 2,4 m",
+                "resultaat": "8,4 m²",
+                "uitleg": "Oppervlakte rechthoek = lengte × breedte"
+              },
               {
-                "stap": "Bereken oppervlakte",
-                "berekening": "4 meter × 3 meter",
-                "resultaat": "12 m²",
-                "uitleg": "Oppervlakte rechthoek = lengte × breedte, dus 4 × 3 = 12 m²"
+                "stap": "Bereken oppervlakte per tegel",
+                "berekening": "30 cm × 30 cm = 900 cm² = 0,09 m²",
+                "resultaat": "0,09 m²",
+                "uitleg": "Reken om: 900 cm² = 900 ÷ 10.000 = 0,09 m²"
+              },
+              {
+                "stap": "Bereken aantal tegels (basis)",
+                "berekening": "8,4 m² ÷ 0,09 m²",
+                "resultaat": "93,33 tegels",
+                "uitleg": "Deel totale oppervlakte door oppervlakte per tegel"
+              },
+              {
+                "stap": "Tel 10% snijverlies erbij",
+                "berekening": "93,33 × 1,10",
+                "resultaat": "102,67 tegels",
+                "uitleg": "10% erbij betekent × 1,10"
+              },
+              {
+                "stap": "Bereken aantal pakken",
+                "berekening": "102,67 ÷ 10 = 10,27",
+                "resultaat": "11 pakken (afgerond naar boven)",
+                "uitleg": "Je kunt geen gedeelte van een pak kopen, dus rond naar boven af"
               }
             ]
           },
           "stap4_antwoorden": {
-            "verwachte_eenheid": "vierkante meter (m²)",
-            "logica_check": "12 m² is logisch: 4 × 3 = 12",
-            "antwoord": "12 m²"
+            "verwachte_eenheid": "pakken (stuks)",
+            "logica_check": "11 pakken = 110 tegels. Dat is ruim voldoende voor 8,4 m² met snijverlies",
+            "antwoord": "11 pakken"
           }
         }
       }
     ],
-    "sub_theme": "oppervlakte rechthoek"
+    "sub_theme": "oppervlakte en eenheidsconversie (1S-niveau)"
   },
   {
     "id": 132,
@@ -25558,71 +25534,44 @@
   },
   {
     "id": 293,
-    "title": "Uitverkoop kledingtstore",
+    "title": "Uitverkoop - Terugrekenen (1S)",
     "theme": "procenten-rente",
-    "content": "Een kledingzaak heeft een grote uitverkoop. Alle jassen hebben 35% korting. Een jas kostte oorspronkelijk €180,-.",
+    "content": "In de uitverkoop kost een jas nu €117,00. Dit is de prijs nadat er 35% korting is afgegaan.",
     "questions": [
       {
-        "question": "Hoeveel betaal je voor de jas tijdens de uitverkoop?",
+        "question": "Wat kostte de jas oorspronkelijk (voor de korting)?",
         "options": [
           {
-            "text": "€117,-",
+            "text": "€180,-",
             "foutanalyse": "Dit is het juiste antwoord."
           },
           {
-            "text": "€63,-",
-            "foutanalyse": "Dit is de korting, niet de nieuwe prijs. Trek de korting af van €180,-."
+            "text": "€152,-",
+            "foutanalyse": "Je hebt 35% bij €117 opgeteld, maar dat klopt niet. €117 is al 65% van de oorspronkelijke prijs."
           },
           {
-            "text": "€127,-",
-            "foutanalyse": "Je hebt een rekenfout gemaakt. Bereken eerst de korting."
+            "text": "€158,05",
+            "foutanalyse": "Je hebt 35% van €117 berekend en opgeteld. Dat is niet juist, want €117 is 65% van het totaal, niet 100%."
           },
           {
-            "text": "€145,-",
-            "foutanalyse": "Dit is niet juist. Bereken 35% korting op €180,-."
+            "text": "€82,-",
+            "foutanalyse": "Je hebt 35% afgetrokken in plaats van teruggerekend. €117 is de prijs ná korting."
           }
         ],
         "correct": 0,
         "extra_info": {
-          "concept": "Nieuwe prijs berekenen na een percentage korting.",
+          "concept": "Dit is een terugrekenen-opgave (1S-niveau): je moet begrijpen dat €117 gelijk staat aan 65% (100% - 35%) en van daaruit terugrekenen naar 100%.",
           "berekening": [
-            "Korting: 35% van €180,- = 0,35 × €180,- = €63,-",
-            "Nieuwe prijs: €180,- - €63,- = €117,-",
-            "Of: €180,- × 0,65 = €117,-"
-          ]
-        }
-      },
-      {
-        "question": "Als je 3 van deze jassen koopt, hoeveel bespaar je in totaal?",
-        "options": [
-          {
-            "text": "€63,-",
-            "foutanalyse": "Dit is de besparing op 1 jas. Je moet dit vermenigvuldigen met 3."
-          },
-          {
-            "text": "€189,-",
-            "foutanalyse": "Dit is het juiste antwoord."
-          },
-          {
-            "text": "€180,-",
-            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening."
-          },
-          {
-            "text": "€351,-",
-            "foutanalyse": "Dit is te veel. Bereken de besparing per jas en vermenigvuldig met 3."
-          }
-        ],
-        "correct": 1,
-        "extra_info": {
-          "concept": "Totale besparing berekenen bij meerdere artikelen.",
-          "berekening": [
-            "Besparing per jas: €63,-",
-            "Totale besparing: 3 × €63,- = €189,-"
+            "Stap 1: Na 35% korting blijft er over: 100% - 35% = 65%",
+            "Stap 2: €117 is dus 65% van de oorspronkelijke prijs",
+            "Stap 3: 1% is dan: €117 ÷ 65 = €1,80",
+            "Stap 4: 100% is dan: €1,80 × 100 = €180",
+            "Of via vermenigvuldiging: €117 ÷ 0,65 = €180"
           ]
         }
       }
     ],
-    "sub_theme": "korting en besparen"
+    "sub_theme": "terugrekenen met procenten (1S-niveau)"
   },
   {
     "id": 294,
@@ -37364,130 +37313,90 @@
   },
   {
     "id": 362,
-    "title": "Stadspark plattegrond",
+    "title": "Park - Oppervlakte en Schaal (1S)",
     "theme": "schaal",
-    "content": "Een stadspark heeft een plattegrond op schaal 1:400. De vijver is op de plattegrond 5 cm breed.",
+    "content": "Een vierkant park staat op de kaart met zijden van 4 cm. De schaal is 1:5.000.",
     "questions": [
       {
-        "question": "Hoe breed is de vijver in werkelijkheid?",
+        "question": "Hoeveel hectare is het park in werkelijkheid?",
         "options": [
           {
-            "text": "20 meter",
+            "text": "4 hectare",
             "foutanalyse": "Dit is het juiste antwoord."
           },
           {
-            "text": "18 meter",
-            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen."
+            "text": "0,4 hectare",
+            "foutanalyse": "Je hebt een fout gemaakt bij het omrekenen van m² naar hectare. 1 hectare = 10.000 m²."
           },
           {
-            "text": "22 meter",
-            "foutanalyse": "Dit is te breed. Bereken 5 × 400 en reken om naar meters."
+            "text": "40 hectare",
+            "foutanalyse": "Dit is te groot. Controleer je berekening van de oppervlakte en de omrekening naar hectare."
           },
           {
-            "text": "25 meter",
-            "foutanalyse": "Je hebt verkeerd vermenigvuldigd."
+            "text": "200 hectare",
+            "foutanalyse": "Je hebt waarschijnlijk alleen de lengte geschaald, niet de oppervlakte. Let op: bij oppervlakte moet je kwadrateren!"
           }
         ],
         "correct": 0,
         "extra_info": {
-          "concept": "Van plattegrond naar werkelijkheid met schaal 1:400.",
+          "concept": "Dit is een meerstaps-opgave (1S-niveau): schaal toepassen op lengte, oppervlakte berekenen, en omrekenen naar hectare.",
           "berekening": [
-            "Op plattegrond: 5 cm",
-            "Schaal: 1:400, dus vermenigvuldigen met 400",
-            "Werkelijkheid: 5 × 400 = 2.000 cm = 20 meter"
+            "Stap 1: Zijde op kaart = 4 cm",
+            "Stap 2: Schaal 1:5.000, dus werkelijke zijde = 4 × 5.000 = 20.000 cm = 200 meter",
+            "Stap 3: Oppervlakte vierkant = 200 × 200 = 40.000 m²",
+            "Stap 4: Omrekenen naar hectare: 40.000 m² ÷ 10.000 m²/ha = 4 hectare",
+            "Let op: 1 hectare = 10.000 m² = 100 × 100 meter"
           ],
           "verhoudingstabel": {
-            "type": "schaal",
-            "schaal": "1:400",
+            "type": "schaal en oppervlakte",
+            "schaal": "1:5.000",
             "kolommen": [
               {
-                "waarde": 5,
+                "waarde": 4,
                 "eenheid": "cm",
-                "label": "plattegrond"
+                "label": "zijde op kaart"
               },
               {
-                "waarde": 2000,
-                "eenheid": "cm",
-                "label": "werkelijk"
-              },
-              {
-                "waarde": 20,
+                "waarde": 200,
                 "eenheid": "m",
-                "label": "werkelijk (meters)"
+                "label": "zijde werkelijk"
+              },
+              {
+                "waarde": 40000,
+                "eenheid": "m²",
+                "label": "oppervlakte"
+              },
+              {
+                "waarde": 4,
+                "eenheid": "hectare",
+                "label": "oppervlakte (ha)"
               }
             ],
             "operaties": [
               {
                 "van": 0,
                 "naar": 1,
-                "operatie": "×400",
-                "uitleg": "Schaal 1:400"
-              }
-            ]
-          }
-        }
-      },
-      {
-        "question": "Een speeltuin in het park is 32 meter lang. Hoe lang is de speeltuin op de plattegrond?",
-        "options": [
-          {
-            "text": "6 cm",
-            "foutanalyse": "Je hebt een fout gemaakt. Deel 3.200 door 400."
-          },
-          {
-            "text": "7 cm",
-            "foutanalyse": "Dit is niet helemaal juist. Controleer je berekening."
-          },
-          {
-            "text": "8 cm",
-            "foutanalyse": "Dit is het juiste antwoord."
-          },
-          {
-            "text": "9 cm",
-            "foutanalyse": "Dit is te lang. Bereken 32 meter ÷ 400."
-          }
-        ],
-        "correct": 2,
-        "extra_info": {
-          "concept": "Van werkelijkheid naar plattegrond: omrekenen en delen.",
-          "berekening": [
-            "Werkelijkheid: 32 meter = 3.200 cm",
-            "Schaal: 1:400, dus delen door 400",
-            "Op plattegrond: 3.200 ÷ 400 = 8 cm"
-          ],
-          "verhoudingstabel": {
-            "type": "schaal",
-            "schaal": "1:400",
-            "kolommen": [
-              {
-                "waarde": 8.0,
-                "eenheid": "cm",
-                "label": "plattegrond"
+                "operatie": "×5.000 en omrekenen",
+                "uitleg": "Schaal 1:5.000"
               },
               {
-                "waarde": 3200,
-                "eenheid": "cm",
-                "label": "werkelijk"
+                "van": 1,
+                "naar": 2,
+                "operatie": "200 × 200",
+                "uitleg": "Oppervlakte vierkant"
               },
               {
-                "waarde": 32.0,
-                "eenheid": "m",
-                "label": "werkelijk (meters)"
-              }
-            ],
-            "operaties": [
-              {
-                "van": 0,
-                "naar": 1,
-                "operatie": "×400",
-                "uitleg": "Schaal 1:400"
+                "van": 2,
+                "naar": 3,
+                "operatie": "÷10.000",
+                "uitleg": "1 hectare = 10.000 m²"
               }
             ]
           }
         }
       }
     ],
-    "sub_theme": "plattegronden"
+    "sub_theme": "schaal, oppervlakte en eenheidsconversie (1S-niveau)"
   },
   {
     "id": 363,
@@ -43970,92 +43879,100 @@
   },
   {
     "id": 429,
-    "title": "Zakgeld uitgeven",
+    "title": "Zakgeld - Van het restant (1S)",
     "theme": "breuken",
-    "content": "Piet krijgt elke week €12 zakgeld. Deze week geeft hij $\\frac{1}{3}$ van zijn zakgeld uit aan snoep en $\\frac{1}{6}$ aan een stripboek.",
+    "content": "Piet geeft $\\frac{1}{3}$ van zijn zakgeld uit aan snoep. Van het resterende bedrag geeft hij $\\frac{1}{4}$ uit aan een stripboek.",
     "questions": [
       {
-        "question": "Welk deel van zijn zakgeld is Piet in totaal kwijt?",
+        "question": "Welk deel van zijn oorspronkelijke bedrag heeft hij nu nog over?",
         "options": [
-          {
-            "text": "$\\frac{2}{9}$",
-            "foutanalyse": "Je hebt de tellers bij elkaar opgeteld en de noemers ook bij elkaar opgeteld. Dat mag niet! Je moet de breuken eerst gelijknamig maken voordat je ze kunt optellen."
-          },
           {
             "text": "$\\frac{1}{2}$",
             "foutanalyse": "Dit is het juiste antwoord."
           },
           {
-            "text": "$\\frac{2}{6}$",
-            "foutanalyse": "Je hebt alleen de tellers bij elkaar opgeteld. Vergeet niet om de breuken eerst gelijknamig te maken!"
+            "text": "$\\frac{5}{12}$",
+            "foutanalyse": "Je hebt $\\frac{1}{3}$ en $\\frac{1}{4}$ bij elkaar opgeteld. Maar let op: $\\frac{1}{4}$ gaat over het restant, niet over het totaal!"
           },
           {
-            "text": "$\\frac{4}{18}$",
-            "foutanalyse": "Je hebt de breuken gelijknamig gemaakt, maar niet vereenvoudigd. Het antwoord kan eenvoudiger geschreven worden."
+            "text": "$\\frac{7}{12}$",
+            "foutanalyse": "Je hebt waarschijnlijk alleen de snoep afgetrokken. Vergeet het stripboek niet!"
+          },
+          {
+            "text": "$\\frac{1}{6}$",
+            "foutanalyse": "Dit is het bedrag dat aan stripboek is uitgegeven, niet wat er overblijft."
           }
         ],
-        "correct": 1,
+        "correct": 0,
         "extra_info": {
-          "concept": "Bij het optellen van ongelijknamige breuken moet je ze eerst gelijknamig maken door een gemeenschappelijke noemer te vinden.",
+          "concept": "Dit is een meerstaps-opgave (1S-niveau): je moet begrijpen dat het tweede deel over het restant gaat, niet over het totaal. Dit vereist serieus inzicht in breuken.",
           "berekening": [
-            "Maak de breuken gelijknamig: $\\frac{1}{3} = \\frac{2}{6}$ en $\\frac{1}{6} = \\frac{1}{6}$",
-            "Tel de tellers op: $\\frac{2}{6} + \\frac{1}{6} = \\frac{3}{6}$",
-            "Vereenvoudig: $\\frac{3}{6} = \\frac{1}{2}$"
+            "Stap 1: Uitgegeven aan snoep = $\\frac{1}{3}$",
+            "Stap 2: Restant na snoep = $1 - \\frac{1}{3} = \\frac{2}{3}$",
+            "Stap 3: Uitgegeven aan stripboek = $\\frac{1}{4}$ van het restant = $\\frac{1}{4} \\times \\frac{2}{3} = \\frac{2}{12} = \\frac{1}{6}$",
+            "Stap 4: Totaal uitgegeven = $\\frac{1}{3} + \\frac{1}{6} = \\frac{2}{6} + \\frac{1}{6} = \\frac{3}{6} = \\frac{1}{2}$",
+            "Stap 5: Over = $1 - \\frac{1}{2} = \\frac{1}{2}$",
+            "Of korter: Restant na snoep = $\\frac{2}{3}$, daarvan uitgegeven = $\\frac{1}{4}$, dus over = $\\frac{3}{4} \\times \\frac{2}{3} = \\frac{6}{12} = \\frac{1}{2}$"
           ]
         },
         "lova": {
           "stap1_lezen": {
-            "ruis": [
-              "€12 zakgeld per week"
-            ],
-            "hoofdvraag": "Welk deel van zijn zakgeld is Piet in totaal kwijt?",
+            "ruis": [],
+            "hoofdvraag": "Welk deel van zijn oorspronkelijke bedrag heeft hij nu nog over?",
             "tussenstappen": [
-              "Bereken $\\frac{1}{3}$ + $\\frac{1}{6}$",
-              "Maak de breuken gelijknamig",
-              "Tel de tellers op"
+              "Bereken hoeveel overblijft na snoep",
+              "Bereken $\\frac{1}{4}$ van dat restant voor stripboek",
+              "Tel alles bij elkaar op om te zien wat er over is"
             ]
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Uitgegeven aan snoep": "$\\frac{1}{3}$",
-              "Uitgegeven aan stripboek": "$\\frac{1}{6}$"
+              "Uitgegeven aan snoep": "$\\frac{1}{3}$ van totaal",
+              "Uitgegeven aan stripboek": "$\\frac{1}{4}$ van restant (niet van totaal!)"
             },
-            "tool": "Breuken optellen met verschillende noemers",
+            "tool": "Breuken van breuken berekenen",
             "conversies": [
-              "$\\frac{1}{3} = \\frac{2}{6}$"
+              "Restant na snoep = $\\frac{2}{3}$",
+              "$\\frac{1}{4} \\times \\frac{2}{3} = \\frac{2}{12} = \\frac{1}{6}$"
             ]
           },
           "stap3_vormen": {
             "bewerkingen": [
               {
-                "stap": "Maak gelijknamig",
-                "berekening": "$\\frac{1}{3} = \\frac{2}{6}$",
-                "resultaat": "$\\frac{2}{6}$ en $\\frac{1}{6}$",
-                "uitleg": "Vermenigvuldig teller en noemer van $\\frac{1}{3}$ met 2"
+                "stap": "Bereken restant na snoep",
+                "berekening": "$1 - \\frac{1}{3}$",
+                "resultaat": "$\\frac{2}{3}$",
+                "uitleg": "Van het totaal is $\\frac{2}{3}$ over na de snoep"
               },
               {
-                "stap": "Tel op",
-                "berekening": "$\\frac{2}{6} + \\frac{1}{6}$",
-                "resultaat": "$\\frac{3}{6}$",
-                "uitleg": "Tel de tellers op, houd de noemer gelijk"
+                "stap": "Bereken uitgave stripboek",
+                "berekening": "$\\frac{1}{4} \\times \\frac{2}{3}$",
+                "resultaat": "$\\frac{2}{12} = \\frac{1}{6}$",
+                "uitleg": "Het stripboek kost $\\frac{1}{4}$ van het restant"
               },
               {
-                "stap": "Vereenvoudig",
-                "berekening": "$\\frac{3}{6} = \\frac{1}{2}$",
+                "stap": "Bereken totaal uitgegeven",
+                "berekening": "$\\frac{1}{3} + \\frac{1}{6} = \\frac{2}{6} + \\frac{1}{6}$",
+                "resultaat": "$\\frac{3}{6} = \\frac{1}{2}$",
+                "uitleg": "Tel snoep en stripboek bij elkaar op"
+              },
+              {
+                "stap": "Bereken wat er overblijft",
+                "berekening": "$1 - \\frac{1}{2}$",
                 "resultaat": "$\\frac{1}{2}$",
-                "uitleg": "Deel teller en noemer door 3"
+                "uitleg": "Trek uitgaven af van het totaal"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "breuk",
-            "logica_check": "$\\frac{1}{2}$ is logisch: meer dan $\\frac{1}{3}$ maar minder dan 1",
+            "logica_check": "$\\frac{1}{2}$ is logisch: de helft blijft over",
             "antwoord": "$\\frac{1}{2}$"
           }
         }
       }
     ],
-    "sub_theme": "ongelijknamige breuken optellen"
+    "sub_theme": "breuken van breuken (1S-niveau)"
   },
   {
     "id": 430,
