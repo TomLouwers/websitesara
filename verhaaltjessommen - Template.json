@@ -330,9 +330,9 @@
   },
   {
     "id": 3,
-    "title": "Taart bakken",
+    "title": "Taart bakken - Niet-lineaire verhouding (1S)",
     "theme": "breuken",
-    "content": "Lisa bakt een taart voor 12 personen. Het recept is voor 8 personen: 200 gram bloem, 150 gram suiker, 3 eieren, 100 ml melk.",
+    "content": "Lisa bakt een taart voor 14 personen. Het recept is voor 8 personen: 200 gram bloem, 150 gram suiker, 3 eieren, 100 ml melk. Ze heeft 600 gram bloem beschikbaar.",
     "questions": [
       {
         "question": "Hoeveel gram bloem heeft Lisa nodig voor 12 personen?",
@@ -2223,9 +2223,9 @@
   },
   {
     "id": 14,
-    "title": "Tuinieren",
+    "title": "Tuinieren - Oppervlakte met snijverlies (1S)",
     "theme": "oppervlakte",
-    "content": "De tuin van Tom is rechthoekig en is 12 meter lang en 8 meter breed. Hij wil de helft van de tuin betegelen met tegels van 50 cm × 50 cm. Elke tegel kost €4,50.",
+    "content": "De tuin van Tom is rechthoekig en is 8,5 meter lang en 6,4 meter breed. Hij wil de helft van de tuin betegelen met tegels van 40 cm × 40 cm. Door snijden en breken moet hij 12% extra tegels kopen. Tegels kosten €3,75 per stuk.",
     "questions": [
       {
         "question": "Wat is de oppervlakte van de hele tuin?",
@@ -28752,9 +28752,9 @@
   },
   {
     "id": 235,
-    "title": "Spaarrekening met rente",
+    "title": "Spaarrekening - Terugrekenen startbedrag (1S)",
     "theme": "procenten-rente",
-    "content": "Emma zet €2000,- op een spaarrekening met 3% rente per jaar. De rente wordt elk jaar bij het bedrag opgeteld (samengestelde interest).",
+    "content": "Emma heeft na 2 jaar sparen €2.121,80 op haar spaarrekening staan. De spaarrekening heeft 3% rente per jaar met samengestelde interest (rente wordt elk jaar bij het bedrag opgeteld).",
     "questions": [
       {
         "question": "Hoeveel geld heeft Emma na 1 jaar?",
@@ -29016,9 +29016,9 @@
   },
   {
     "id": 237,
-    "title": "Korting op korting",
+    "title": "Korting op korting - Terugrekenen (1S)",
     "theme": "procenten-rente",
-    "content": "Een winkel geeft eerst 20% korting op alle artikelen. Daarna krijg je als klantenkaarthouder nog eens 10% extra korting op de nieuwe prijs. De winkel heeft 200 verschillende artikelen. Een jas kost oorspronkelijk €150,-.",
+    "content": "Een winkel geeft eerst 20% korting op alle artikelen. Daarna krijg je als klantenkaarthouder nog eens 10% extra korting op de nieuwe prijs. Een jas kost na beide kortingen €108,00.",
     "questions": [
       {
         "question": "Hoeveel kost de jas na de eerste korting van 20%?",
@@ -37423,40 +37423,41 @@
   },
   {
     "id": 244,
-    "title": "Kaart van Nederland",
+    "title": "Kaart van Nederland - Schaal en oppervlakte (1S)",
     "theme": "schaal",
-    "content": "Op een kaart meet de afstand tussen Amsterdam en Rotterdam 6 cm. Het papier is wit. De werkelijke afstand is ongeveer 60 km.",
+    "content": "Op een kaart met schaal 1:2.000.000 meet een natuurgebied 3 cm bij 4 cm (rechthoek). De gemeente wil weten hoeveel vierkante kilometer dit gebied is.",
     "questions": [
       {
-        "question": "Wat is de schaal van deze kaart?",
+        "question": "Wat zijn de werkelijke afmetingen van het natuurgebied? (lengte × breedte in kilometers)",
         "options": [
           {
-            "text": "1:1.000.000",
-            "foutanalyse": "",
-            "is_correct": true
+            "text": "6 km × 8 km",
+            "is_correct": true,
+            "error_type": null,
+            "foutanalyse": ""
           },
           {
-            "text": "1:500.000",
-            "foutanalyse": "Je bent vergeten kilometers volledig om te rekenen. 1 km = 100.000 cm, dus 60 km = 6.000.000 cm. Controleer je berekening: 6.000.000 ÷ 6 = ?\n\n🤔 **Reflectievraag:** Wat is de schaal op de kaart of tekening?",
+            "text": "3 km × 4 km",
             "is_correct": false,
-            "error_type": "leesfout_ruis",
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit zijn de afmetingen op de kaart, niet de werkelijke afmetingen. Je moet vermenigvuldigen met de schaal: 3 cm × 2.000.000 = 6.000.000 cm = 60 km. Maar let op: de schaal is 1:2.000.000, dus 1 cm = 20 km!\n\n🤔 **Reflectievraag:** Als de schaal 1:2.000.000 is, hoeveel meter is 1 cm in werkelijkheid?",
             "visual_aid_query": null,
             "remedial_basis_id": null
           },
           {
-            "text": "1:100.000",
-            "foutanalyse": "Controleer eerst je eenheden! Je moet kilometers omzetten naar centimeters. 60 km = 60.000 meter = 6.000.000 cm (niet 6.000 cm). Bereken opnieuw.\n\n🤔 **Reflectievraag:** Controleer je vermenigvuldiging of deling nog eens!",
+            "text": "60 km × 80 km",
             "is_correct": false,
             "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt waarschijnlijk 3 cm × 2.000.000 cm gedaan en dat omgerekend naar 60 km. Maar vergeet niet: 2.000.000 cm = 20 km, niet 20.000 km. Check: 3 cm × 20 km/cm = 60 km? Nee! 3 cm betekent 3 × 20 km = 60? Dat klopt ook niet. Correct: 2.000.000 cm = 20.000 m = 20 km, dus 3 cm = 6 km.\n\n🤔 **Reflectievraag:** Hoeveel kilometer is 2.000.000 cm?",
             "visual_aid_query": null,
-            "remedial_basis_id": 102
+            "remedial_basis_id": null
           },
           {
-            "text": "1:10.000.000",
-            "foutanalyse": "Je hebt een nul te veel. Controleer je conversie: 60 km = 6.000.000 cm (niet 60.000.000 cm). Bereken opnieuw: 6.000.000 ÷ 6 = ?\n\n🤔 **Reflectievraag:** Welke schaal moet je gebruiken: 1:100, 1:1000 of anders?",
+            "text": "600 m × 800 m",
             "is_correct": false,
-            "error_type": "conversiefout",
-            "visual_aid_query": null,
+            "error_type": "conversie_fout",
+            "foutanalyse": "Je bent vergeten om te rekenen naar kilometers. Je hebt 6.000.000 cm en 8.000.000 cm, en dat is 60.000 m en 80.000 m, dus 60 km en 80 km. Maar wacht, dat klopt ook niet helemaal. Check: 1 cm = 20 km (want 2.000.000 cm = 20 km), dus 3 cm = 6 km.\n\n🤔 **Reflectievraag:** Hoeveel meter is 1 kilometer?",
+            "visual_aid_query": "Eenheidsconversie",
             "remedial_basis_id": null
           }
         ],
@@ -37478,36 +37479,37 @@
         "hint": "💡 Tip: Denk aan de relatie tussen schaal en werkelijkheid"
       },
       {
-        "question": "De afstand tussen Utrecht en Den Haag is op de kaart 5 cm. Hoe groot is de werkelijke afstand?",
+        "question": "Hoeveel vierkante kilometer (km²) is de oppervlakte van het natuurgebied?",
         "options": [
           {
-            "text": "50 km",
-            "foutanalyse": "",
-            "is_correct": true
+            "text": "48 km²",
+            "is_correct": true,
+            "error_type": null,
+            "foutanalyse": ""
           },
           {
-            "text": "45 km",
-            "foutanalyse": "Je hebt verkeerd omgerekend. 5 cm × 1.000.000 = 5.000.000 cm = 50 km.\n\n🤔 **Reflectievraag:** Controleer je vermenigvuldiging of deling nog eens!",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "visual_aid_query": null,
-            "remedial_basis_id": 102
-          },
-          {
-            "text": "40 km",
-            "foutanalyse": "Je hebt gedeeld i.p.v. vermenigvuldigd. Van tekening naar werkelijkheid: vermenigvuldigen met 1.000.000.\n\n🤔 **Reflectievraag:** Hoe reken je om met een schaal: delen of vermenigvuldigen?",
+            "text": "12 km²",
             "is_correct": false,
             "error_type": "conceptfout",
+            "foutanalyse": "Je hebt waarschijnlijk de oppervlakte op de kaart berekend (3 × 4 = 12 cm²) en dat direct overgenomen. Maar je moet eerst de werkelijke afmetingen berekenen (6 km × 8 km) en dan pas de oppervlakte: 6 × 8 = 48 km².\n\n🤔 **Reflectievraag:** Moet je de oppervlakte berekenen van de kaartafmetingen of van de werkelijke afmetingen?",
             "visual_aid_query": null,
             "remedial_basis_id": null
           },
           {
-            "text": "55 km",
-            "foutanalyse": "Bijna goed! Controleer je vermenigvuldiging en omrekening: 5 cm × 1.000.000 = 5.000.000 cm = 50 km (niet 55 km).\n\n🤔 **Reflectievraag:** Controleer je vermenigvuldiging of deling nog eens!",
+            "text": "24 km²",
             "is_correct": false,
             "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt waarschijnlijk (6 + 8) × 2 gedaan of een andere rekenfout gemaakt. Voor oppervlakte moet je de zijden vermenigvuldigen: 6 km × 8 km = 48 km².\n\n🤔 **Reflectievraag:** Bereken je oppervlakte door lengtes op te tellen of te vermenigvuldigen?",
+            "visual_aid_query": "Oppervlakte rechthoek",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "4.800 km²",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt waarschijnlijk de schaalfactor verkeerd toegepast op de oppervlakte. Bij oppervlakte moet je kwadrateren, maar je hebt al de werkelijke lengtes (6 km en 8 km). Gewoon: 6 × 8 = 48 km².\n\n🤔 **Reflectievraag:** Als de lengte en breedte al in kilometers zijn, moet je dan nog iets omrekenen voor de oppervlakte?",
             "visual_aid_query": null,
-            "remedial_basis_id": 102
+            "remedial_basis_id": null
           }
         ],
         "extra_info": {
