@@ -632,6 +632,13 @@ function submitAnswer() {
                                      selectedOption.error_type &&
                                      currentQuestion.extra_info;
 
+            console.log('Incorrect answer check:', {
+                currentSubject,
+                hasErrorType: !!selectedOption.error_type,
+                hasExtraInfo: !!currentQuestion.extra_info,
+                isVerhaaltjessom
+            });
+
             if (isVerhaaltjessom) {
                 // For verhaaltjessommen: mark selected answer as incorrect but DON'T reveal correct answer
                 // This allows the user to try again after seeing the error modal
@@ -653,6 +660,9 @@ function submitAnswer() {
                         explanation: errorAnalysis || 'Zie foutanalyse voor uitleg',
                         questionType: 'verhaaltjessom'
                     });
+                    console.log('✓ Tracked wrong answer. Total wrongAnswers:', wrongAnswers.length, wrongAnswers);
+                } else {
+                    console.log('Already tracked this question');
                 }
 
                 // Show foutanalyse modaal with attempt number
@@ -912,6 +922,7 @@ function goToLanding() {
 
 // Stop quiz early and show review of wrong answers
 function stopQuiz() {
+    console.log('Stop button clicked. wrongAnswers:', wrongAnswers.length, wrongAnswers);
     if (wrongAnswers.length === 0) {
         alert(CONFIG.feedback.noWrongAnswers);
         return;
