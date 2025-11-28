@@ -538,6 +538,7 @@ function submitAnswer() {
         }
 
         const options = document.querySelectorAll('.option');
+
         // Find the correct answer index - supports both old and new format
         let correctIndex = currentQuestion.options.findIndex(opt => {
             // New format: object with is_correct field (verhaaltjessommen)
@@ -552,15 +553,33 @@ function submitAnswer() {
             correctIndex = currentQuestion.correct;
         }
 
-        // Validate correctIndex and selectedAnswer
+        // Validate correctIndex - check if question data is incomplete
         if (correctIndex === -1 || correctIndex >= options.length) {
-            console.error('Error: Could not determine correct answer index', {
-                correctIndex,
-                optionsLength: options.length,
-                questionId: currentQuestion.originalId
-            });
-            alert('Er is een fout opgetreden bij het controleren van het antwoord. Probeer opnieuw of neem contact op met de beheerder.');
+            // Check if this is an incomplete question (has object options but no is_correct field)
+            const hasObjectOptions = currentQuestion.options.some(opt => typeof opt === 'object' && opt.text);
+            const hasIsCorrectField = currentQuestion.options.some(opt => typeof opt === 'object' && 'is_correct' in opt);
+
+            if (hasObjectOptions && !hasIsCorrectField) {
+                console.error('Incomplete question data - missing is_correct field', {
+                    questionId: currentQuestion.originalId,
+                    title: currentQuestion.title,
+                    question: currentQuestion.question
+                });
+                alert(`Deze vraag is nog niet compleet bijgewerkt in het systeem (ID: ${currentQuestion.originalId}).\n\nGa door naar de volgende vraag.`);
+            } else {
+                console.error('Error: Could not determine correct answer index', {
+                    correctIndex,
+                    optionsLength: options.length,
+                    questionId: currentQuestion.originalId
+                });
+                alert('Er is een fout opgetreden bij het controleren van het antwoord. Probeer opnieuw of neem contact op met de beheerder.');
+            }
             feedbackSection.classList.add('hidden');
+
+            // Allow moving to next question
+            hasAnswered = true;
+            document.getElementById('submitBtn').classList.add('hidden');
+            document.getElementById('nextBtn').classList.remove('hidden');
             return;
         }
 
