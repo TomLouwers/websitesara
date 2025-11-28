@@ -597,6 +597,12 @@ function submitAnswer() {
                                      currentQuestion.extra_info;
 
             if (isVerhaaltjessom) {
+                // Remove from wrongAnswers if they eventually got it correct (after retry)
+                const wrongAnswerIndex = wrongAnswers.findIndex(wa => wa.question.originalId === currentQuestion.originalId);
+                if (wrongAnswerIndex !== -1) {
+                    wrongAnswers.splice(wrongAnswerIndex, 1);
+                }
+
                 // Show success modaal for verhaaltjessommen
                 feedbackSection.classList.add('hidden'); // Hide old feedback
                 showSuccessModaal(currentQuestion, currentQuestion.extra_info);
@@ -626,11 +632,38 @@ function submitAnswer() {
                                      selectedOption.error_type &&
                                      currentQuestion.extra_info;
 
+            console.log('Incorrect answer check:', {
+                currentSubject,
+                hasErrorType: !!selectedOption.error_type,
+                hasExtraInfo: !!currentQuestion.extra_info,
+                isVerhaaltjessom
+            });
+
             if (isVerhaaltjessom) {
                 // For verhaaltjessommen: mark selected answer as incorrect but DON'T reveal correct answer
                 // This allows the user to try again after seeing the error modal
                 options[selectedAnswer].classList.add('incorrect');
                 incorrectOptions.add(selectedAnswer); // Disable this option for future attempts
+
+                // Track wrong answer for review (only add once per question)
+                const alreadyTracked = wrongAnswers.some(wa => wa.question.originalId === currentQuestion.originalId);
+                if (!alreadyTracked) {
+                    const userAnswerText = typeof selectedOption === 'string' ? selectedOption : selectedOption.text;
+                    const correctAnswerText = typeof currentQuestion.options[correctIndex] === 'string'
+                        ? currentQuestion.options[correctIndex]
+                        : currentQuestion.options[correctIndex].text;
+
+                    wrongAnswers.push({
+                        question: currentQuestion,
+                        userAnswer: userAnswerText,
+                        correctAnswer: correctAnswerText,
+                        explanation: errorAnalysis || 'Zie foutanalyse voor uitleg',
+                        questionType: 'verhaaltjessom'
+                    });
+                    console.log('✓ Tracked wrong answer. Total wrongAnswers:', wrongAnswers.length, wrongAnswers);
+                } else {
+                    console.log('Already tracked this question');
+                }
 
                 // Show foutanalyse modaal with attempt number
                 feedbackSection.classList.add('hidden'); // Hide old feedback
@@ -889,6 +922,7 @@ function goToLanding() {
 
 // Stop quiz early and show review of wrong answers
 function stopQuiz() {
+    console.log('Stop button clicked. wrongAnswers:', wrongAnswers.length, wrongAnswers);
     if (wrongAnswers.length === 0) {
         alert(CONFIG.feedback.noWrongAnswers);
         return;
