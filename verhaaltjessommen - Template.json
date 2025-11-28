@@ -28620,16 +28620,20 @@
         "extra_info": {
           "concept": "Dit is een meeteenheid probleem: let goed op de eenheden (gram, liter, meter) en reken ze om waar nodig.",
           "berekening": [
+            "Totale muuroppervlakte: 52,5 m²",
+            "Trek de ramen af: 52,5 - (2 × 2) = 52,5 - 4 = 48,5 m²",
             "1 liter dekt 8 m²",
-            "Benodigde verf: 52,5 ÷ 8 = 6,5625 liter",
+            "Benodigde verf: 48,5 ÷ 8 = 6,0625 liter",
             "Je kunt alleen hele liters kopen, dus afgerond naar boven: 7 liter"
           ],
           "berekening_tabel": [
             "| Stap | Berekening |",
             "|------|------------|",
-            "| 1 | 1 liter dekt 8 m² |",
-            "| 2 | Benodigde verf: 52,5 ÷ 8 = 6,5625 liter |",
-            "| 3 | Je kunt alleen hele liters kopen, dus afgerond naar boven: 7 liter |"
+            "| 1 | Totale muuroppervlakte: 52,5 m² |",
+            "| 2 | Trek de ramen af: 52,5 - (2 × 2) = 52,5 - 4 = 48,5 m² |",
+            "| 3 | 1 liter dekt 8 m² |",
+            "| 4 | Benodigde verf: 48,5 ÷ 8 = 6,0625 liter |",
+            "| 5 | Je kunt alleen hele liters kopen, dus afgerond naar boven: 7 liter |"
           ]
         },
         "hint": "💡 Let op: 1 liter = 1 dm³ = 1000 cm³!"
@@ -28639,13 +28643,13 @@
     "lova": {
       "stap1_lezen": {
         "ruis": [
-          "De verf kost €18,50 per liter",
-          "De kamer heeft 2 ramen van elk 2 m²"
+          "De verf kost €18,50 per liter"
         ],
         "hoofdvraag": "Hoeveel liter verf is er nodig voor de vier muren?",
         "tussenstappen": [
           "Bereken de oppervlakte van elke muur",
           "Tel alle muren bij elkaar op",
+          "Trek de ramen af",
           "Deel door dekking per liter (8 m²)"
         ]
       },
@@ -28654,6 +28658,7 @@
           "Lengte kamer": "6 meter",
           "Breedte kamer": "4,5 meter",
           "Hoogte muren": "2,5 meter",
+          "Ramen": "2 stuks van elk 2 m²",
           "Dekking per liter": "8 m²"
         },
         "tool": "Oppervlakte = lengte × hoogte, en optellen voor alle muren",
@@ -28680,17 +28685,23 @@
             "uitleg": "Tel alle muren bij elkaar op"
           },
           {
+            "stap": "Trek de ramen af",
+            "berekening": "52,5 - (2 × 2) = 52,5 - 4",
+            "resultaat": "48,5 m²",
+            "uitleg": "Je verft geen ramen, dus trek die af"
+          },
+          {
             "stap": "Bereken benodigde liters verf",
-            "berekening": "52,5 ÷ 8",
-            "resultaat": "6,5625 liter (minimaal 7 liter)",
-            "uitleg": "Deel totale oppervlakte door dekking per liter"
+            "berekening": "48,5 ÷ 8",
+            "resultaat": "6,0625 liter (minimaal 7 liter)",
+            "uitleg": "Deel netto oppervlakte door dekking per liter"
           }
         ]
       },
       "stap4_antwoorden": {
         "verwachte_eenheid": "m² en liter",
-        "logica_check": "52,5 m² is logisch voor een kamer van deze afmetingen. Je kunt geen halve liter kopen, dus 7 liter",
-        "antwoord": "52,5 m² totaal, minimaal 7 liter verf nodig"
+        "logica_check": "52,5 m² bruto, 48,5 m² netto (na aftrek ramen). Je kunt geen halve liter kopen, dus 7 liter",
+        "antwoord": "52,5 m² bruto muuroppervlakte, 48,5 m² te verven, minimaal 7 liter verf nodig"
       }
     }
   },
@@ -38545,7 +38556,7 @@
     "id": 251,
     "title": "Behang plakken",
     "theme": "metriek-stelsel",
-    "content": "Een muur is 450 cm breed en 275 cm hoog. Er zitten twee ramen in de muur die elk 120 cm breed en 80 cm hoog zijn. Een rol behang dekt 5,2 m².",
+    "content": "Een muur is 450 cm breed en 275 cm hoog. Er zitten twee ramen in de muur die elk 120 cm breed en 80 cm hoog zijn. Een rol behang dekt 5,3 m².",
     "questions": [
       {
         "question": "Hoeveel vierkante meter (m²) muur moet er behangen worden (na aftrek van de ramen)?",
@@ -38638,15 +38649,15 @@
           "concept": "Dit is een deelberekening: deel het totaal door hoeveel één rol dekt. Bij rest rond je naar boven af.",
           "berekening": [
             "Te behangen: 10,45 m²",
-            "Aantal rollen: 10,45 ÷ 5,2 ≈ 2,01",
-            "Je kunt geen 0,01 rol kopen, dus je hebt 2 rollen nodig (eerste rol dekt 5,2 m², tweede rol dekt de resterende 5,25 m²)"
+            "Aantal rollen: 10,45 ÷ 5,3 ≈ 1,97",
+            "Je kunt geen 0,97 rol kopen, dus je hebt 2 rollen nodig (twee rollen dekken samen 10,6 m², wat voldoende is)"
           ],
           "berekening_tabel": [
             "| Stap | Berekening |",
             "|------|------------|",
             "| 1 | Te behangen: 10,45 m² |",
-            "| 2 | Aantal rollen: 10,45 ÷ 5,2 ≈ 2,01 |",
-            "| 3 | Je kunt geen 0,01 rol kopen, dus je hebt 2 rollen nodig (eerste rol dekt 5,2 m², tweede rol dekt de resterende 5,25 m²) |"
+            "| 2 | Aantal rollen: 10,45 ÷ 5,3 ≈ 1,97 |",
+            "| 3 | Je kunt geen 0,97 rol kopen, dus je hebt 2 rollen nodig (twee rollen dekken samen 10,6 m², wat voldoende is) |"
           ]
         },
         "hint": "💡 Let op: Zorg dat alle maten in dezelfde eenheid staan voordat je gaat rekenen!"
@@ -51958,36 +51969,36 @@
         }
       },
       {
-        "question": "Hoeveel mm² is deze oppervlakte?",
+        "question": "Hoeveel cm² is deze oppervlakte?",
         "options": [
           {
-            "text": "600.000 mm²",
-            "foutanalyse": "Je hebt met 100.000 vermenigvuldigd. Voor oppervlakte: 1 m² = 1.000.000 mm².",
+            "text": "600 cm²",
+            "foutanalyse": "Je hebt met 100 vermenigvuldigd. Voor oppervlakte: 1 m² = 10.000 cm².",
             "is_correct": false,
             "error_type": "rekenfout_basis"
           },
           {
-            "text": "6.000.000 mm²",
+            "text": "60.000 cm²",
             "foutanalyse": "",
             "is_correct": true
           },
           {
-            "text": "60.000 mm²",
-            "foutanalyse": "Dit is te weinig. 1 m = 1.000 mm, dus 1 m² = 1.000 × 1.000 = 1.000.000 mm².",
+            "text": "6.000 cm²",
+            "foutanalyse": "Dit is te weinig. 1 m = 100 cm, dus 1 m² = 100 × 100 = 10.000 cm².",
             "is_correct": false,
             "error_type": "rekenfout_basis"
           },
           {
-            "text": "60.000.000 mm²",
-            "foutanalyse": "Dit is te veel. 1 m² = 1.000.000 mm², niet 10.000.000 mm².",
+            "text": "600.000 cm²",
+            "foutanalyse": "Dit is te veel. 1 m² = 10.000 cm², niet 100.000 cm².",
             "is_correct": false,
             "error_type": "rekenfout_basis"
           }
         ],
         "extra_info": {
-          "concept": "1 m² = 1.000.000 mm² (want 1 m = 1.000 mm, dus 1.000 × 1.000 = 1.000.000)",
+          "concept": "1 m² = 10.000 cm² (want 1 m = 100 cm, dus 100 × 100 = 10.000)",
           "berekening": [
-            "6 m² × 1.000.000 = 6.000.000 mm²"
+            "6 m² × 10.000 = 60.000 cm²"
           ]
         },
         "sub_theme": "oppervlakte conversie"
