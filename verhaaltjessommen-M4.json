@@ -1,0 +1,890 @@
+[
+  {
+    "id": 1,
+    "title": "Snoepjes delen",
+    "theme": "delen",
+    "content": "Juf heeft 20 snoepjes. Ze wil ze eerlijk verdelen over 4 kinderen.",
+    "questions": [
+      {
+        "question": "Hoeveel snoepjes krijgt elk kind?",
+        "hint": "💡 Tip: Je moet 20 snoepjes verdelen over 4 kinderen. Dat doe je door te delen!",
+        "options": [
+          {
+            "text": "4 snoepjes",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt het aantal kinderen gegeven als antwoord, niet het aantal snoepjes per kind. Je moet 20 delen door 4.\n\n🤔 **Reflectievraag:** Als je 20 snoepjes hebt en 4 kinderen, hoeveel krijgt dan elk kind?",
+            "visual_aid_query": "Delen visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "16 snoepjes",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Je hebt afgetrokken in plaats van gedeeld. 20 - 4 = 16, maar dat is niet wat de vraag vraagt. Je moet delen: 20 ÷ 4.\n\n🤔 **Reflectievraag:** Wat betekent 'eerlijk verdelen' in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "6 snoepjes",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij, maar de deling klopt niet helemaal. Controleer: 20 ÷ 4 = ?\n\n🤔 **Reflectievraag:** Wat is 4 × 6? Past dat bij 20?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "5 snoepjes",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een deelsom: je moet het totaal aantal snoepjes eerlijk verdelen over de kinderen.",
+          "berekening": [
+            "Deel 20 door 4: 20 ÷ 4 = 5",
+            "Elk kind krijgt 5 snoepjes"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Deel snoepjes | 20 ÷ 4 | **5 snoepjes** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel snoepjes krijgt elk kind?",
+            "tussenstappen": [
+              "Verdeel 20 over 4"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Totaal aantal snoepjes": "20",
+              "Aantal kinderen": "4"
+            },
+            "tool": "Delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Verdeel de snoepjes",
+                "berekening": "20 ÷ 4",
+                "resultaat": "5",
+                "uitleg": "Deel het totaal aantal snoepjes door het aantal kinderen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "snoepjes (aantal)",
+            "logica_check": "5 snoepjes per kind is logisch: 4 kinderen × 5 = 20 snoepjes totaal",
+            "antwoord": "5 snoepjes"
+          }
+        }
+      }
+    ],
+    "sub_theme": "eerlijk verdelen"
+  },
+  {
+    "id": 2,
+    "title": "Bloemen plukken",
+    "theme": "optellen",
+    "content": "Lisa plukt 12 bloemen in de tuin. Haar vriendin Emma plukt 8 bloemen.",
+    "questions": [
+      {
+        "question": "Hoeveel bloemen hebben ze samen?",
+        "hint": "💡 Tip: Je moet de bloemen van Lisa en Emma bij elkaar optellen!",
+        "options": [
+          {
+            "text": "4 bloemen",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt afgetrokken in plaats van opgeteld. 12 - 8 = 4, maar de vraag vraagt hoeveel bloemen ze samen hebben. Dan moet je optellen: 12 + 8.\n\n🤔 **Reflectievraag:** Wat betekent het woord 'samen' in de vraag?",
+            "visual_aid_query": "Optellen visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "19 bloemen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Controleer je som nog eens: 12 + 8 = ?\n\n🤔 **Reflectievraag:** Wat is 10 + 10?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 101
+          },
+          {
+            "text": "21 bloemen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna goed! Controleer je optelling nog eens zorgvuldig: 12 + 8 = ?\n\n🤔 **Reflectievraag:** Tel stap voor stap: 12 + 8 = 12 + __ + __ = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 101
+          },
+          {
+            "text": "20 bloemen",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een optelsom: je moet de bloemen van beide meisjes bij elkaar optellen.",
+          "berekening": [
+            "Tel de bloemen bij elkaar op: 12 + 8",
+            "12 + 8 = 20 bloemen"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Tel bloemen op | 12 + 8 | **20 bloemen** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel bloemen hebben ze samen?",
+            "tussenstappen": [
+              "Tel de bloemen van Lisa en Emma bij elkaar op"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Bloemen van Lisa": "12",
+              "Bloemen van Emma": "8"
+            },
+            "tool": "Optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Tel bloemen op",
+                "berekening": "12 + 8",
+                "resultaat": "20",
+                "uitleg": "Tel de bloemen van beide meisjes bij elkaar op"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "bloemen (aantal)",
+            "logica_check": "20 bloemen is logisch: meer dan 12 en meer dan 8",
+            "antwoord": "20 bloemen"
+          }
+        }
+      }
+    ],
+    "sub_theme": "optellen tot 100"
+  },
+  {
+    "id": 3,
+    "title": "Knikkers",
+    "theme": "aftrekken",
+    "content": "Tom heeft 35 knikkers. Hij geeft 12 knikkers aan zijn broer.",
+    "questions": [
+      {
+        "question": "Hoeveel knikkers heeft Tom nu nog?",
+        "hint": "💡 Tip: Tom had 35 knikkers, maar geeft er een aantal weg. Je moet aftrekken!",
+        "options": [
+          {
+            "text": "47 knikkers",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt opgeteld in plaats van afgetrokken. 35 + 12 = 47, maar Tom geeft knikkers weg, dus hij heeft er minder over. Je moet aftrekken: 35 - 12.\n\n🤔 **Reflectievraag:** Als je iets weggeeft, heb je dan meer of minder over?",
+            "visual_aid_query": "Aftrekken visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "27 knikkers",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Controleer je aftreksom nog eens: 35 - 12 = ?\n\n🤔 **Reflectievraag:** Wat is 35 - 10?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "22 knikkers",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je berekening nog eens zorgvuldig: 35 - 12 = ?\n\n🤔 **Reflectievraag:** Trek eerst 10 af van 35, en dan nog 2. Wat krijg je dan?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "23 knikkers",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een aftreksom: je moet het aantal knikkers dat Tom weggeeft aftrekken van wat hij had.",
+          "berekening": [
+            "Trek 12 af van 35: 35 - 12",
+            "35 - 12 = 23 knikkers"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Trek knikkers af | 35 - 12 | **23 knikkers** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel knikkers heeft Tom nu nog?",
+            "tussenstappen": [
+              "Trek de weggegeven knikkers af van wat Tom had"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Knikkers die Tom had": "35",
+              "Knikkers weggegeven": "12"
+            },
+            "tool": "Aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Trek knikkers af",
+                "berekening": "35 - 12",
+                "resultaat": "23",
+                "uitleg": "Trek het aantal weggegeven knikkers af van het totaal"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "knikkers (aantal)",
+            "logica_check": "23 knikkers is logisch: minder dan 35 maar meer dan de helft",
+            "antwoord": "23 knikkers"
+          }
+        }
+      }
+    ],
+    "sub_theme": "aftrekken tot 100"
+  },
+  {
+    "id": 4,
+    "title": "Appels kopen",
+    "theme": "vermenigvuldigen",
+    "content": "In de winkel kosten appels €2 per kilo. Mama koopt 3 kilo appels.",
+    "questions": [
+      {
+        "question": "Hoeveel betaalt mama voor de appels?",
+        "hint": "💡 Tip: Elke kilo kost €2, en mama koopt 3 kilo. Je moet vermenigvuldigen!",
+        "options": [
+          {
+            "text": "€5",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt opgeteld in plaats van vermenigvuldigd. 2 + 3 = 5, maar je moet berekenen: 3 kilo × €2 per kilo.\n\n🤔 **Reflectievraag:** Als 1 kilo €2 kost, hoeveel kosten dan 3 kilo?",
+            "visual_aid_query": "Vermenigvuldigen visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "€1",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt afgetrokken, maar dat klopt niet. Je moet berekenen hoeveel 3 kilo appels kosten als elke kilo €2 kost: 3 × 2.\n\n🤔 **Reflectievraag:** Wat moet je doen als je wilt weten hoeveel 3 keer iets kost?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "€8",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je vermenigvuldiging: 3 × 2 = ?\n\n🤔 **Reflectievraag:** Wat is 3 × 2 in de tafel van 2?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 104
+          },
+          {
+            "text": "€6",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een vermenigvuldigsom: je moet de prijs per kilo vermenigvuldigen met het aantal kilo.",
+          "berekening": [
+            "Vermenigvuldig 3 kilo met €2 per kilo: 3 × 2",
+            "3 × 2 = €6"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Vermenigvuldig | 3 × €2 | **€6** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel betaalt mama voor de appels?",
+            "tussenstappen": [
+              "Vermenigvuldig het aantal kilo met de prijs per kilo"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Prijs per kilo": "€2",
+              "Aantal kilo": "3"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totale prijs",
+                "berekening": "3 × €2",
+                "resultaat": "€6",
+                "uitleg": "Vermenigvuldig het aantal kilo met de prijs per kilo"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€6 is logisch: 3 kilo × €2 = €6",
+            "antwoord": "€6"
+          }
+        }
+      }
+    ],
+    "sub_theme": "vermenigvuldigen met geld"
+  },
+  {
+    "id": 5,
+    "title": "Verjaardagstaart",
+    "theme": "verhoudingen",
+    "content": "Oma bakt een taart met 16 stukken. Ze geeft de helft van de taart aan de kinderen.",
+    "questions": [
+      {
+        "question": "Hoeveel stukken taart krijgen de kinderen?",
+        "hint": "💡 Tip: De helft betekent dat je door 2 moet delen!",
+        "options": [
+          {
+            "text": "14 stukken",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt 2 afgetrokken in plaats van gedeeld door 2. De helft van 16 is niet 16 - 2, maar 16 ÷ 2.\n\n🤔 **Reflectievraag:** Wat betekent 'de helft' van iets?",
+            "visual_aid_query": "Delen door 2 visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "6 stukken",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! De helft van 16 is niet 6. Controleer: 16 ÷ 2 = ?\n\n🤔 **Reflectievraag:** Wat is de helft van 10?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "32 stukken",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt vermenigvuldigd in plaats van gedeeld. 16 × 2 = 32, maar de helft van 16 is 16 ÷ 2.\n\n🤔 **Reflectievraag:** Wordt de helft meer of minder dan het geheel?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "8 stukken",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een deelsom: de helft betekent delen door 2.",
+          "berekening": [
+            "Deel 16 door 2 om de helft te berekenen: 16 ÷ 2",
+            "16 ÷ 2 = 8 stukken"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Bereken de helft | 16 ÷ 2 | **8 stukken** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel stukken taart krijgen de kinderen?",
+            "tussenstappen": [
+              "Bereken de helft van 16"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Totaal aantal stukken": "16",
+              "Deel voor kinderen": "de helft"
+            },
+            "tool": "Delen door 2",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken de helft",
+                "berekening": "16 ÷ 2",
+                "resultaat": "8",
+                "uitleg": "Deel het totaal aantal stukken door 2"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "stukken (aantal)",
+            "logica_check": "8 stukken is logisch: de helft van 16",
+            "antwoord": "8 stukken"
+          }
+        }
+      }
+    ],
+    "sub_theme": "de helft berekenen"
+  },
+  {
+    "id": 6,
+    "title": "Potloden in de klas",
+    "theme": "vermenigvuldigen",
+    "content": "In de klas zitten 5 tafels. Aan elke tafel zitten 4 kinderen.",
+    "questions": [
+      {
+        "question": "Hoeveel kinderen zitten er in totaal in de klas?",
+        "hint": "💡 Tip: Je hebt 5 tafels en aan elke tafel zitten 4 kinderen. Vermenigvuldig!",
+        "options": [
+          {
+            "text": "9 kinderen",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt opgeteld in plaats van vermenigvuldigd. 5 + 4 = 9, maar je moet berekenen: 5 tafels × 4 kinderen per tafel.\n\n🤔 **Reflectievraag:** Als aan 1 tafel 4 kinderen zitten, hoeveel zitten er dan aan 5 tafels?",
+            "visual_aid_query": "Vermenigvuldigen visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "15 kinderen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je vermenigvuldiging: 5 × 4 = ?\n\n🤔 **Reflectievraag:** Wat is 5 × 4 in de tafel van 4?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 104
+          },
+          {
+            "text": "1 kind",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt gedeeld in plaats van vermenigvuldigd. Je moet berekenen hoeveel kinderen er totaal zijn: 5 × 4.\n\n🤔 **Reflectievraag:** Worden er meer of minder kinderen als je 5 tafels met elk 4 kinderen hebt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "20 kinderen",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een vermenigvuldigsom: je moet het aantal tafels vermenigvuldigen met het aantal kinderen per tafel.",
+          "berekening": [
+            "Vermenigvuldig 5 tafels met 4 kinderen per tafel: 5 × 4",
+            "5 × 4 = 20 kinderen"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Vermenigvuldig | 5 × 4 | **20 kinderen** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel kinderen zitten er in totaal in de klas?",
+            "tussenstappen": [
+              "Vermenigvuldig het aantal tafels met het aantal kinderen per tafel"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Aantal tafels": "5",
+              "Kinderen per tafel": "4"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totaal aantal kinderen",
+                "berekening": "5 × 4",
+                "resultaat": "20",
+                "uitleg": "Vermenigvuldig het aantal tafels met het aantal kinderen per tafel"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "kinderen (aantal)",
+            "logica_check": "20 kinderen is logisch: 5 tafels × 4 kinderen = 20 kinderen",
+            "antwoord": "20 kinderen"
+          }
+        }
+      }
+    ],
+    "sub_theme": "tafel van 5"
+  },
+  {
+    "id": 7,
+    "title": "Stripboeken verzamelen",
+    "theme": "optellen",
+    "content": "Jan heeft 15 stripboeken. Hij krijgt 7 nieuwe stripboeken voor zijn verjaardag.",
+    "questions": [
+      {
+        "question": "Hoeveel stripboeken heeft Jan nu?",
+        "hint": "💡 Tip: Jan had al stripboeken en krijgt er meer bij. Je moet optellen!",
+        "options": [
+          {
+            "text": "8 stripboeken",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt afgetrokken in plaats van opgeteld. 15 - 7 = 8, maar Jan krijgt stripboeken erbij, dus je moet optellen: 15 + 7.\n\n🤔 **Reflectievraag:** Als je iets erbij krijgt, heb je dan meer of minder?",
+            "visual_aid_query": "Optellen visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "21 stripboeken",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je optelling nog eens: 15 + 7 = ?\n\n🤔 **Reflectievraag:** Wat is 15 + 5?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 101
+          },
+          {
+            "text": "23 stripboeken",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening zorgvuldig: 15 + 7 = ?\n\n🤔 **Reflectievraag:** Tel stap voor stap: 15 + 7 = 15 + 5 + __ = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 101
+          },
+          {
+            "text": "22 stripboeken",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een optelsom: je moet de stripboeken die Jan al had optellen bij de nieuwe stripboeken.",
+          "berekening": [
+            "Tel de stripboeken bij elkaar op: 15 + 7",
+            "15 + 7 = 22 stripboeken"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Tel stripboeken op | 15 + 7 | **22 stripboeken** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel stripboeken heeft Jan nu?",
+            "tussenstappen": [
+              "Tel de oude en nieuwe stripboeken bij elkaar op"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Stripboeken die Jan had": "15",
+              "Nieuwe stripboeken": "7"
+            },
+            "tool": "Optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Tel stripboeken op",
+                "berekening": "15 + 7",
+                "resultaat": "22",
+                "uitleg": "Tel de oude en nieuwe stripboeken bij elkaar op"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "stripboeken (aantal)",
+            "logica_check": "22 stripboeken is logisch: meer dan 15",
+            "antwoord": "22 stripboeken"
+          }
+        }
+      }
+    ],
+    "sub_theme": "optellen tot 100"
+  },
+  {
+    "id": 8,
+    "title": "Koekjes bakken",
+    "theme": "aftrekken",
+    "content": "Moeder bakt 24 koekjes. De kinderen eten er 9 op.",
+    "questions": [
+      {
+        "question": "Hoeveel koekjes zijn er nog over?",
+        "hint": "💡 Tip: Er waren koekjes, maar een aantal is opgegeten. Je moet aftrekken!",
+        "options": [
+          {
+            "text": "33 koekjes",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt opgeteld in plaats van afgetrokken. 24 + 9 = 33, maar koekjes zijn opgegeten, dus er zijn er minder over. Je moet aftrekken: 24 - 9.\n\n🤔 **Reflectievraag:** Als er koekjes opgegeten worden, zijn er dan meer of minder over?",
+            "visual_aid_query": "Aftrekken visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "16 koekjes",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je aftreksom nog eens: 24 - 9 = ?\n\n🤔 **Reflectievraag:** Wat is 24 - 10?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "14 koekjes",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Controleer je berekening zorgvuldig: 24 - 9 = ?\n\n🤔 **Reflectievraag:** Trek eerst 10 af van 24, en tel dan 1 erbij. Wat krijg je?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "15 koekjes",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een aftreksom: je moet het aantal opgegeten koekjes aftrekken van het totaal.",
+          "berekening": [
+            "Trek 9 af van 24: 24 - 9",
+            "24 - 9 = 15 koekjes"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Trek koekjes af | 24 - 9 | **15 koekjes** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel koekjes zijn er nog over?",
+            "tussenstappen": [
+              "Trek de opgegeten koekjes af van het totaal"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Gebakken koekjes": "24",
+              "Opgegeten koekjes": "9"
+            },
+            "tool": "Aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Trek koekjes af",
+                "berekening": "24 - 9",
+                "resultaat": "15",
+                "uitleg": "Trek het aantal opgegeten koekjes af van het totaal"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "koekjes (aantal)",
+            "logica_check": "15 koekjes is logisch: minder dan 24",
+            "antwoord": "15 koekjes"
+          }
+        }
+      }
+    ],
+    "sub_theme": "aftrekken tot 100"
+  },
+  {
+    "id": 9,
+    "title": "Auto's parkeren",
+    "theme": "optellen_meerstappen",
+    "content": "Op de parkeerplaats staan 8 blauwe auto's en 6 rode auto's. Er komen nog 5 groene auto's bij.",
+    "questions": [
+      {
+        "question": "Hoeveel auto's staan er nu op de parkeerplaats?",
+        "hint": "💡 Tip: Je moet alle auto's bij elkaar optellen: blauw + rood + groen!",
+        "options": [
+          {
+            "text": "14 auto's",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Je hebt alleen de blauwe en rode auto's opgeteld en de groene vergeten. Je moet alle drie de soorten optellen: 8 + 6 + 5.\n\n🤔 **Reflectievraag:** Hoeveel verschillende kleuren auto's zijn er?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "11 auto's",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Je hebt een soort auto vergeten. Controleer of je alle auto's hebt meegeteld: 8 blauwe + 6 rode + 5 groene.\n\n🤔 **Reflectievraag:** Welke kleuren auto's staan er allemaal?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "18 auto's",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je optelling: 8 + 6 + 5 = ?\n\n🤔 **Reflectievraag:** Wat is 8 + 6? En dan nog + 5?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 101
+          },
+          {
+            "text": "19 auto's",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een meerstappen-optelsom: je moet drie getallen bij elkaar optellen.",
+          "berekening": [
+            "Tel alle auto's bij elkaar op: 8 + 6 + 5",
+            "8 + 6 = 14, dan 14 + 5 = 19 auto's"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Tel blauw en rood | 8 + 6 | 14 |",
+            "| 2. Tel groen erbij | 14 + 5 | **19 auto's** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel auto's staan er nu op de parkeerplaats?",
+            "tussenstappen": [
+              "Tel alle auto's bij elkaar op: blauw + rood + groen"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Blauwe auto's": "8",
+              "Rode auto's": "6",
+              "Groene auto's": "5"
+            },
+            "tool": "Optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Tel blauw en rood",
+                "berekening": "8 + 6",
+                "resultaat": "14",
+                "uitleg": "Tel eerst de blauwe en rode auto's bij elkaar"
+              },
+              {
+                "stap": "Tel groen erbij",
+                "berekening": "14 + 5",
+                "resultaat": "19",
+                "uitleg": "Tel de groene auto's bij het tussentotaal"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "auto's (aantal)",
+            "logica_check": "19 auto's is logisch: meer dan elk afzonderlijk aantal",
+            "antwoord": "19 auto's"
+          }
+        }
+      }
+    ],
+    "sub_theme": "meerdere getallen optellen"
+  },
+  {
+    "id": 10,
+    "title": "Zakgeld sparen",
+    "theme": "geld",
+    "content": "Sara krijgt elke week €3 zakgeld. Ze spaart 4 weken.",
+    "questions": [
+      {
+        "question": "Hoeveel euro heeft Sara gespaard?",
+        "hint": "💡 Tip: Sara krijgt elke week €3 en spaart 4 weken. Je moet vermenigvuldigen!",
+        "options": [
+          {
+            "text": "€7",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt opgeteld in plaats van vermenigvuldigd. 3 + 4 = 7, maar je moet berekenen: 4 weken × €3 per week.\n\n🤔 **Reflectievraag:** Als je elke week €3 krijgt, hoeveel krijg je dan in 4 weken?",
+            "visual_aid_query": "Vermenigvuldigen visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "€1",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt afgetrokken, maar dat is niet de juiste bewerking. Je moet berekenen hoeveel Sara in totaal krijgt: 4 × 3.\n\n🤔 **Reflectievraag:** Wordt het gespaarde bedrag meer of minder als je meerdere weken spaart?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "€10",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je vermenigvuldiging: 4 × 3 = ?\n\n🤔 **Reflectievraag:** Wat is 4 × 3 in de tafel van 3?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 104
+          },
+          {
+            "text": "€12",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een vermenigvuldigsom met geld: je moet het aantal weken vermenigvuldigen met het bedrag per week.",
+          "berekening": [
+            "Vermenigvuldig 4 weken met €3 per week: 4 × 3",
+            "4 × 3 = €12"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Vermenigvuldig | 4 × €3 | **€12** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel euro heeft Sara gespaard?",
+            "tussenstappen": [
+              "Vermenigvuldig het aantal weken met het bedrag per week"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Zakgeld per week": "€3",
+              "Aantal weken": "4"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totaal gespaard",
+                "berekening": "4 × €3",
+                "resultaat": "€12",
+                "uitleg": "Vermenigvuldig het aantal weken met het bedrag per week"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€12 is logisch: 4 weken × €3 = €12",
+            "antwoord": "€12"
+          }
+        }
+      }
+    ],
+    "sub_theme": "vermenigvuldigen met geld"
+  }
+]
