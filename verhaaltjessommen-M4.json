@@ -1465,5 +1465,354 @@
       }
     ],
     "sub_theme": "wisselgeld berekenen"
+  },
+  {
+    "id": 17,
+    "title": "Snoep verdelen",
+    "theme": "delen",
+    "content": "De juf heeft 30 potloden. Ze verdeelt ze eerlijk over 5 groepjes.",
+    "questions": [
+      {
+        "question": "Hoeveel potloden krijgt elk groepje?",
+        "hint": "💡 Tip: Je moet 30 potloden verdelen over 5 groepjes. Deel 30 door 5!",
+        "options": [
+          {
+            "text": "5 potloden",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt het aantal groepjes gegeven, niet het aantal potloden per groepje. Bereken: 30 ÷ 5.\n\n🤔 **Reflectievraag:** Als je 30 potloden hebt voor 5 groepjes, hoeveel krijgt elk groepje?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "25 potloden",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt afgetrokken in plaats van gedeeld. Je moet verdelen: 30 ÷ 5.\n\n🤔 **Reflectievraag:** Wat betekent 'eerlijk verdelen'?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "7 potloden",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Controleer je deling: 30 ÷ 5 = ?\n\n🤔 **Reflectievraag:** Wat is 5 × 7? Past dat bij 30?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "6 potloden",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een deelsom: je moet het totaal verdelen over het aantal groepjes.",
+          "berekening": [
+            "Deel 30 door 5: 30 ÷ 5 = 6",
+            "Elk groepje krijgt 6 potloden"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Deel potloden | 30 ÷ 5 | **6 potloden** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel potloden krijgt elk groepje?",
+            "tussenstappen": [
+              "Verdeel 30 over 5"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Totaal potloden": "30",
+              "Aantal groepjes": "5"
+            },
+            "tool": "Delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Verdeel potloden",
+                "berekening": "30 ÷ 5",
+                "resultaat": "6",
+                "uitleg": "Deel het totaal door het aantal groepjes"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "potloden (aantal)",
+            "logica_check": "6 potloden per groepje: 5 × 6 = 30",
+            "antwoord": "6 potloden"
+          }
+        }
+      }
+    ],
+    "sub_theme": "delen binnen 100"
+  },
+  {
+    "id": 18,
+    "title": "Plakjes kaas",
+    "theme": "delen",
+    "content": "Moeder heeft 18 plakjes kaas. Ze verdeelt ze over 3 boterhammen.",
+    "questions": [
+      {
+        "question": "Hoeveel plakjes kaas komen er op elke boterham?",
+        "hint": "💡 Tip: Verdeel 18 plakjes over 3 boterhammen door te delen!",
+        "options": [
+          {
+            "text": "15 plakjes",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt afgetrokken. Je moet delen: 18 ÷ 3.\n\n🤔 **Reflectievraag:** Worden er meer of minder plakjes per boterham als je verdeelt?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "5 plakjes",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer: 18 ÷ 3 = ?\n\n🤔 **Reflectievraag:** Wat is 3 × 5? Past dat bij 18?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "9 plakjes",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt door 2 gedeeld in plaats van door 3. Controleer: 18 ÷ 3 = ?\n\n🤔 **Reflectievraag:** Hoeveel boterhammen zijn er?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "6 plakjes",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een deelsom: verdeel het totaal over het aantal delen.",
+          "berekening": [
+            "18 ÷ 3 = 6 plakjes per boterham"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Deel plakjes | 18 ÷ 3 | **6 plakjes** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel plakjes kaas komen er op elke boterham?",
+            "tussenstappen": [
+              "Deel 18 door 3"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Totaal plakjes": "18",
+              "Aantal boterhammen": "3"
+            },
+            "tool": "Delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Verdeel plakjes",
+                "berekening": "18 ÷ 3",
+                "resultaat": "6",
+                "uitleg": "Deel het totaal aantal plakjes door het aantal boterhammen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "plakjes (aantal)",
+            "logica_check": "6 plakjes is logisch: 3 × 6 = 18",
+            "antwoord": "6 plakjes"
+          }
+        }
+      }
+    ],
+    "sub_theme": "delen tafel van 3"
+  },
+  {
+    "id": 19,
+    "title": "Stickers verdelen",
+    "theme": "delen",
+    "content": "Mia heeft 24 stickers. Ze geeft ze eerlijk aan 6 vriendinnen.",
+    "questions": [
+      {
+        "question": "Hoeveel stickers krijgt elke vriendin?",
+        "hint": "💡 Tip: Deel 24 stickers door 6 vriendinnen!",
+        "options": [
+          {
+            "text": "6 stickers",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dat is het aantal vriendinnen, niet het aantal stickers per vriendin. Bereken: 24 ÷ 6.\n\n🤔 **Reflectievraag:** Als je 24 stickers verdeelt over 6 vriendinnen, hoeveel krijgt elk?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "3 stickers",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer: 24 ÷ 6 = ?\n\n🤔 **Reflectievraag:** Wat is 6 × 3?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "5 stickers",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Te veel! Controleer je berekening: 24 ÷ 6 = ?\n\n🤔 **Reflectievraag:** Wat is 6 × 5? Past dat bij 24?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "4 stickers",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een deelsom: verdeel het totaal eerlijk.",
+          "berekening": [
+            "24 ÷ 6 = 4 stickers per vriendin"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Deel stickers | 24 ÷ 6 | **4 stickers** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel stickers krijgt elke vriendin?",
+            "tussenstappen": [
+              "Deel 24 door 6"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Totaal stickers": "24",
+              "Aantal vriendinnen": "6"
+            },
+            "tool": "Delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Verdeel stickers",
+                "berekening": "24 ÷ 6",
+                "resultaat": "4",
+                "uitleg": "Deel het totaal door het aantal vriendinnen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "stickers (aantal)",
+            "logica_check": "4 stickers is logisch: 6 × 4 = 24",
+            "antwoord": "4 stickers"
+          }
+        }
+      }
+    ],
+    "sub_theme": "delen tafel van 6"
+  },
+  {
+    "id": 20,
+    "title": "Rijen stoelen",
+    "theme": "delen",
+    "content": "In de zaal staan 40 stoelen. Ze worden verdeeld over 8 rijen.",
+    "questions": [
+      {
+        "question": "Hoeveel stoelen staan er in elke rij?",
+        "hint": "💡 Tip: Verdeel 40 stoelen over 8 rijen!",
+        "options": [
+          {
+            "text": "8 stoelen",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dat is het aantal rijen. Je moet berekenen: 40 ÷ 8.\n\n🤔 **Reflectievraag:** Hoeveel stoelen zijn er in totaal?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "6 stoelen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer: 40 ÷ 8 = ?\n\n🤔 **Reflectievraag:** Wat is 8 × 6?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "4 stoelen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Te weinig! Controleer: 40 ÷ 8 = ?\n\n🤔 **Reflectievraag:** Wat is 8 × 4?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "5 stoelen",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een deelsom: verdeel het totaal over het aantal rijen.",
+          "berekening": [
+            "40 ÷ 8 = 5 stoelen per rij"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Deel stoelen | 40 ÷ 8 | **5 stoelen** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel stoelen staan er in elke rij?",
+            "tussenstappen": [
+              "Deel 40 door 8"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Totaal stoelen": "40",
+              "Aantal rijen": "8"
+            },
+            "tool": "Delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Verdeel stoelen",
+                "berekening": "40 ÷ 8",
+                "resultaat": "5",
+                "uitleg": "Deel het totaal aantal stoelen door het aantal rijen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "stoelen (aantal)",
+            "logica_check": "5 stoelen is logisch: 8 × 5 = 40",
+            "antwoord": "5 stoelen"
+          }
+        }
+      }
+    ],
+    "sub_theme": "delen tafel van 8"
   }
 ]
