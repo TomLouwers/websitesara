@@ -886,5 +886,584 @@
       }
     ],
     "sub_theme": "vermenigvuldigen met geld"
+  },
+  {
+    "id": 11,
+    "title": "Klokkijken",
+    "theme": "tijd",
+    "content": "De schooldag begint om 8 uur. De pauze is om half 11.",
+    "questions": [
+      {
+        "question": "Hoeveel uur zit er tussen het begin van school en de pauze?",
+        "hint": "💡 Tip: Tel hoeveel uur er zit tussen 8 uur en half 11 (dat is 10:30 uur).",
+        "options": [
+          {
+            "text": "3 uur",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt niet goed opgelet dat 'half 11' half elf betekent, dus 10:30 uur. Van 8:00 tot 10:30 is geen 3 uur.\n\n🤔 **Reflectievraag:** Hoe laat is half 11? Is dat voor of na 11 uur?",
+            "visual_aid_query": "Klok half 11 visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "1 uur",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Van 8:00 tot 10:30 is meer dan 1 uur. Tel zorgvuldig hoeveel uur ertussen zit.\n\n🤔 **Reflectievraag:** Van 8:00 tot 10:00 is hoeveel uur? En dan nog tot 10:30?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "2 uur",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Je vergeet de halve uur! Van 8:00 tot 10:30 is 2 uur én 30 minuten, dus 2,5 uur of 2 uur en een half uur.\n\n🤔 **Reflectievraag:** Hoeveel minuten is een half uur?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "2,5 uur (2 uur en een half uur)",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een tijdsom: je moet het verschil berekenen tussen twee tijdstippen.",
+          "berekening": [
+            "Van 8:00 naar 10:00 = 2 uur",
+            "Van 10:00 naar 10:30 = nog 30 minuten (een half uur)",
+            "Totaal: 2,5 uur of 2 uur en een half uur"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Tel hele uren | 8:00 → 10:00 | 2 uur |",
+            "| 2. Tel halve uur erbij | 10:00 → 10:30 | 0,5 uur |",
+            "| 3. Tel op | 2 + 0,5 | **2,5 uur** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel uur zit er tussen het begin van school en de pauze?",
+            "tussenstappen": [
+              "Bereken het verschil tussen 8:00 en 10:30"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Begintijd": "8:00",
+              "Pauzetijd": "10:30 (half 11)"
+            },
+            "tool": "Tijd berekenen",
+            "conversies": [
+              "Half 11 = 10:30"
+            ]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Tel hele uren",
+                "berekening": "8:00 → 10:00",
+                "resultaat": "2 uur",
+                "uitleg": "Tel eerst de hele uren"
+              },
+              {
+                "stap": "Tel halve uur erbij",
+                "berekening": "10:00 → 10:30",
+                "resultaat": "0,5 uur",
+                "uitleg": "Tel de resterende minuten erbij"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "uur",
+            "logica_check": "2,5 uur is logisch: van ochtend tot bijna middag",
+            "antwoord": "2,5 uur"
+          }
+        }
+      }
+    ],
+    "sub_theme": "klokkijken en tijdsduur"
+  },
+  {
+    "id": 12,
+    "title": "Linten meten",
+    "theme": "lengte",
+    "content": "Emma heeft een lint van 50 centimeter. Haar zus heeft een lint van 1 meter.",
+    "questions": [
+      {
+        "question": "Wie heeft het langste lint?",
+        "hint": "💡 Tip: 1 meter = 100 centimeter. Vergelijk 50 cm met 100 cm!",
+        "options": [
+          {
+            "text": "Emma",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt de maten niet goed vergeleken. 1 meter is 100 centimeter, dus langer dan 50 centimeter.\n\n🤔 **Reflectievraag:** Hoeveel centimeter is 1 meter?",
+            "visual_aid_query": "Meter en centimeter visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "Ze zijn even lang",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Nee, ze zijn niet even lang. 1 meter = 100 cm en 50 cm is de helft daarvan.\n\n🤔 **Reflectievraag:** Is 50 hetzelfde als 100?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "Haar zus",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "Kan je niet vergelijken",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je kunt ze wel vergelijken! Je moet de eenheden omrekenen: 1 meter = 100 centimeter.\n\n🤔 **Reflectievraag:** Kun je meters omrekenen naar centimeters?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een lengte-vergelijking: je moet meters omrekenen naar centimeters om te vergelijken.",
+          "berekening": [
+            "1 meter = 100 centimeter",
+            "Emma: 50 cm, Zus: 100 cm",
+            "100 cm > 50 cm, dus de zus heeft het langste lint"
+          ],
+          "berekening_tabel": [
+            "| Persoon | Lengte lint | In centimeters |",
+            "|---------|-------------|----------------|",
+            "| Emma | 50 cm | 50 cm |",
+            "| Zus | 1 meter | **100 cm** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Wie heeft het langste lint?",
+            "tussenstappen": [
+              "Reken 1 meter om naar centimeters",
+              "Vergelijk de lengtes"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Emma's lint": "50 centimeter",
+              "Zus's lint": "1 meter"
+            },
+            "tool": "Vergelijken",
+            "conversies": [
+              "1 meter = 100 centimeter"
+            ]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Reken om naar centimeters",
+                "berekening": "1 meter = 100 cm",
+                "resultaat": "100 cm",
+                "uitleg": "Reken de meter om naar centimeters"
+              },
+              {
+                "stap": "Vergelijk",
+                "berekening": "50 cm < 100 cm",
+                "resultaat": "Zus heeft langste lint",
+                "uitleg": "100 is meer dan 50"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "persoon",
+            "logica_check": "De zus heeft het langste lint: 100 cm > 50 cm",
+            "antwoord": "Haar zus"
+          }
+        }
+      }
+    ],
+    "sub_theme": "lengte meten en vergelijken"
+  },
+  {
+    "id": 13,
+    "title": "Fruit wegen",
+    "theme": "gewicht",
+    "content": "Een appel weegt 200 gram. Een melon weegt 2 kilogram.",
+    "questions": [
+      {
+        "question": "Hoeveel appels wegen samen ongeveer even veel als de melon?",
+        "hint": "💡 Tip: 1 kilogram = 1000 gram. Bereken eerst hoeveel gram de melon weegt!",
+        "options": [
+          {
+            "text": "2 appels",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt niet omgerekend. 2 appels wegen 400 gram, maar de melon weegt 2 kilogram = 2000 gram.\n\n🤔 **Reflectievraag:** Hoeveel gram is 1 kilogram?",
+            "visual_aid_query": "Kilogram en gram visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "5 appels",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je berekening: 2000 gram ÷ 200 gram = ?\n\n🤔 **Reflectievraag:** Wat is 2000 gedeeld door 200?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "20 appels",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Te veel! Je hebt waarschijnlijk 2000 door 100 gedeeld in plaats van door 200.\n\n🤔 **Reflectievraag:** Hoeveel gram weegt één appel?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "10 appels",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een gewichtssom: je moet kilogram omrekenen naar gram en dan delen.",
+          "berekening": [
+            "2 kilogram = 2 × 1000 = 2000 gram",
+            "2000 gram ÷ 200 gram per appel = 10 appels"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Reken om naar gram | 2 kg × 1000 | 2000 gram |",
+            "| 2. Deel door gewicht appel | 2000 ÷ 200 | **10 appels** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel appels wegen samen even veel als de melon?",
+            "tussenstappen": [
+              "Reken 2 kilogram om naar gram",
+              "Deel door het gewicht van 1 appel"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Gewicht appel": "200 gram",
+              "Gewicht melon": "2 kilogram"
+            },
+            "tool": "Delen",
+            "conversies": [
+              "1 kilogram = 1000 gram"
+            ]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Reken kilogram om naar gram",
+                "berekening": "2 × 1000",
+                "resultaat": "2000 gram",
+                "uitleg": "Vermenigvuldig kilogram met 1000"
+              },
+              {
+                "stap": "Deel door gewicht appel",
+                "berekening": "2000 ÷ 200",
+                "resultaat": "10",
+                "uitleg": "Deel het totale gewicht door het gewicht per appel"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "appels (aantal)",
+            "logica_check": "10 appels is logisch: 10 × 200 gram = 2000 gram = 2 kg",
+            "antwoord": "10 appels"
+          }
+        }
+      }
+    ],
+    "sub_theme": "gewicht meten en omrekenen"
+  },
+  {
+    "id": 14,
+    "title": "Limonade schenken",
+    "theme": "inhoud",
+    "content": "In een fles zit 1 liter limonade. Een glas bevat 200 milliliter.",
+    "questions": [
+      {
+        "question": "Hoeveel glazen kun je vullen met 1 fles?",
+        "hint": "💡 Tip: 1 liter = 1000 milliliter. Bereken hoeveel keer 200 ml in 1000 ml past!",
+        "options": [
+          {
+            "text": "2 glazen",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt niet omgerekend. 1 liter = 1000 milliliter, niet 400 milliliter.\n\n🤔 **Reflectievraag:** Hoeveel milliliter is 1 liter?",
+            "visual_aid_query": "Liter en milliliter visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "4 glazen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je berekening: 1000 ml ÷ 200 ml = ?\n\n🤔 **Reflectievraag:** Wat is 1000 gedeeld door 200?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "10 glazen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Te veel! Je hebt waarschijnlijk 1000 door 100 gedeeld in plaats van door 200.\n\n🤔 **Reflectievraag:** Hoeveel milliliter past er in één glas?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "5 glazen",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een inhoudsom: je moet liter omrekenen naar milliliter en dan delen.",
+          "berekening": [
+            "1 liter = 1000 milliliter",
+            "1000 ml ÷ 200 ml per glas = 5 glazen"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Reken om naar milliliter | 1 liter × 1000 | 1000 ml |",
+            "| 2. Deel door inhoud glas | 1000 ÷ 200 | **5 glazen** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel glazen kun je vullen met 1 fles?",
+            "tussenstappen": [
+              "Reken 1 liter om naar milliliter",
+              "Deel door de inhoud van 1 glas"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Inhoud fles": "1 liter",
+              "Inhoud glas": "200 milliliter"
+            },
+            "tool": "Delen",
+            "conversies": [
+              "1 liter = 1000 milliliter"
+            ]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Reken liter om naar milliliter",
+                "berekening": "1 × 1000",
+                "resultaat": "1000 ml",
+                "uitleg": "Vermenigvuldig liter met 1000"
+              },
+              {
+                "stap": "Deel door inhoud glas",
+                "berekening": "1000 ÷ 200",
+                "resultaat": "5",
+                "uitleg": "Deel de totale inhoud door de inhoud per glas"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "glazen (aantal)",
+            "logica_check": "5 glazen is logisch: 5 × 200 ml = 1000 ml = 1 liter",
+            "antwoord": "5 glazen"
+          }
+        }
+      }
+    ],
+    "sub_theme": "inhoud meten en omrekenen"
+  },
+  {
+    "id": 15,
+    "title": "Vormen tekenen",
+    "theme": "meetkunde",
+    "content": "Jamal tekent een vierkant. Elk zijde is 4 centimeter lang.",
+    "questions": [
+      {
+        "question": "Hoeveel centimeter is de omtrek van het vierkant?",
+        "hint": "💡 Tip: Een vierkant heeft 4 even lange zijden. Tel alle zijden bij elkaar op!",
+        "options": [
+          {
+            "text": "8 cm",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Je hebt maar 2 zijden geteld. Een vierkant heeft 4 zijden van elk 4 cm.\n\n🤔 **Reflectievraag:** Hoeveel zijden heeft een vierkant?",
+            "visual_aid_query": "Vierkant visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "12 cm",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je berekening: 4 zijden × 4 cm = ?\n\n🤔 **Reflectievraag:** Wat is 4 × 4?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 104
+          },
+          {
+            "text": "4 cm",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dat is maar 1 zijde! De omtrek is alle zijden bij elkaar: 4 + 4 + 4 + 4.\n\n🤔 **Reflectievraag:** Wat betekent 'omtrek'?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "16 cm",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een meetkunde-som: de omtrek van een vierkant is 4 keer de lengte van één zijde.",
+          "berekening": [
+            "Een vierkant heeft 4 even lange zijden",
+            "Omtrek = 4 × 4 cm = 16 cm"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Vermenigvuldig zijden | 4 zijden × 4 cm | **16 cm** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel centimeter is de omtrek van het vierkant?",
+            "tussenstappen": [
+              "Tel alle 4 zijden bij elkaar op"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Lengte zijde": "4 cm",
+              "Aantal zijden": "4"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken omtrek",
+                "berekening": "4 × 4",
+                "resultaat": "16 cm",
+                "uitleg": "Vermenigvuldig het aantal zijden met de lengte per zijde"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "centimeter (cm)",
+            "logica_check": "16 cm is logisch: 4 zijden van elk 4 cm",
+            "antwoord": "16 cm"
+          }
+        }
+      }
+    ],
+    "sub_theme": "omtrek berekenen"
+  },
+  {
+    "id": 16,
+    "title": "Boodschappen met wisselgeld",
+    "theme": "geld",
+    "content": "Tim koopt een brood voor €2 en melk voor €1. Hij geeft de kassamevrouw een briefje van €5.",
+    "questions": [
+      {
+        "question": "Hoeveel wisselgeld krijgt Tim terug?",
+        "hint": "💡 Tip: Bereken eerst wat Tim in totaal uitgeeft, en trek dat af van €5!",
+        "options": [
+          {
+            "text": "€3",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Je hebt alleen het brood afgetrokken. Tim koopt ook melk voor €1. Totaal: €2 + €1 = €3, dus €5 - €3 = €2.\n\n🤔 **Reflectievraag:** Hoeveel dingen koopt Tim?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "€4",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt alleen de melk afgetrokken. Bereken eerst de totale kosten: €2 + €1 = €3, dan €5 - €3.\n\n🤔 **Reflectievraag:** Hoeveel kost brood en melk samen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "€1",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je berekening: €2 + €1 = €3, dan €5 - €3 = ?\n\n🤔 **Reflectievraag:** Wat is 5 - 3?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "€2",
+            "is_correct": true,
+            "foutanalyse": ""
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een wisselgeld-som: je moet eerst optellen wat het kost, dan aftrekken van het betaalde bedrag.",
+          "berekening": [
+            "Totale kosten: €2 + €1 = €3",
+            "Wisselgeld: €5 - €3 = €2"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Bereken totale kosten | €2 + €1 | €3 |",
+            "| 2. Trek af van betaald bedrag | €5 - €3 | **€2** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel wisselgeld krijgt Tim terug?",
+            "tussenstappen": [
+              "Bereken totale kosten van brood en melk",
+              "Trek af van €5"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Prijs brood": "€2",
+              "Prijs melk": "€1",
+              "Betaald bedrag": "€5"
+            },
+            "tool": "Optellen en aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Bereken totale kosten",
+                "berekening": "€2 + €1",
+                "resultaat": "€3",
+                "uitleg": "Tel de prijzen van brood en melk bij elkaar op"
+              },
+              {
+                "stap": "Bereken wisselgeld",
+                "berekening": "€5 - €3",
+                "resultaat": "€2",
+                "uitleg": "Trek de totale kosten af van het betaalde bedrag"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (€)",
+            "logica_check": "€2 wisselgeld is logisch: €5 betaald - €3 kosten = €2",
+            "antwoord": "€2"
+          }
+        }
+      }
+    ],
+    "sub_theme": "wisselgeld berekenen"
   }
 ]
