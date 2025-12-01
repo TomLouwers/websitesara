@@ -13,6 +13,7 @@ const CONFIG = {
         woordenschat: 'Woordenschat',
         verhaaltjessommen: 'Verhaaltjessommen',
         'verhaaltjessommen-emma': 'Verhaaltjessommen Emma',
+        'verhaaltjessommen-kate': 'Verhaaltjessommen Kate',
         basisvaardigheden: 'Basisvaardigheden'
     },
 
@@ -25,6 +26,7 @@ const CONFIG = {
         woordenschat: '📚',
         verhaaltjessommen: '🔢',
         'verhaaltjessommen-emma': '🧒',
+        'verhaaltjessommen-kate': '🎓',
         basisvaardigheden: '🧮'
     },
 
@@ -37,6 +39,7 @@ const CONFIG = {
         woordenschat: 'Vergroot je vocabulaire',
         verhaaltjessommen: 'Reken mee met CITO-niveau verhaaltjes',
         'verhaaltjessommen-emma': 'M4 verhaaltjessommen voor Groep 4',
+        'verhaaltjessommen-kate': 'M5 verhaaltjessommen voor Groep 5',
         basisvaardigheden: 'Oefen de rekenkundige basisvaardigheden'
     },
 
