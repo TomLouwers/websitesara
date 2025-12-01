@@ -898,10 +898,10 @@
         "hint": "💡 Tip: Tel hoeveel uur er zit tussen 8 uur en half 11 (dat is 10:30 uur).",
         "options": [
           {
-            "text": "3 uur",
+            "text": "3,5 uur (3 uur en een half uur)",
             "is_correct": false,
-            "error_type": "conceptfout",
-            "foutanalyse": "Je hebt niet goed opgelet dat 'half 11' half elf betekent, dus 10:30 uur. Van 8:00 tot 10:30 is geen 3 uur.\n\n🤔 **Reflectievraag:** Hoe laat is half 11? Is dat voor of na 11 uur?",
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "⚠️ Let op! Je hebt 'half 11' gelezen als 11:30 uur, maar dat klopt niet!\n\n'Half 11' betekent half elf, dus 10:30 uur (een half uur vóór 11 uur).\n\nAls je rekent met 8:00 tot 11:30, dan kom je uit op 3,5 uur. Maar de pauze is om 10:30!\n\n🤔 **Reflectievraag:** Is half 11 vóór of ná 11 uur? Hoe laat is half 11 precies?",
             "visual_aid_query": "Klok half 11 visualisatie",
             "remedial_basis_id": null
           },
@@ -4699,6 +4699,264 @@
             "verwachte_eenheid": "getal",
             "logica_check": "9 is logisch: 18 ÷ 2 = 9",
             "antwoord": "9"
+          }
+        }
+      }
+    ],
+    "sub_theme": "kale som"
+  },
+  {
+    "id": 54,
+    "title": "Kale som: vermenigvuldigen (tafel 4)",
+    "theme": "vermenigvuldigen",
+    "content": "Bereken:",
+    "questions": [
+      {
+        "question": "4 × 7 = ?",
+        "hint": "💡 Tip: Denk aan de tafel van 4. Bereken 4 × 7.",
+        "options": [
+          {
+            "text": "28",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "24",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt 4 × 6 uitgerekend. Let op: 4 × 7 is één stap verder in de tafel van 4.",
+            "visual_aid_query": "Tafel van 4",
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "32",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt 4 × 8 uitgerekend. Let op: je moet 4 × 7 berekenen.",
+            "visual_aid_query": "Tafel van 4",
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "35",
+            "is_correct": false,
+            "error_type": "verkeerde_bewerking",
+            "foutanalyse": "Dit is 5 × 7 = 35. Let op dat je de tafel van 4 gebruikt, niet de tafel van 5!\n\n🤔 **Reflectievraag:** Wat is het verschil tussen 4 × 7 en 5 × 7?",
+            "visual_aid_query": "Tafel van 4",
+            "remedial_basis_id": 102
+          }
+        ],
+        "extra_info": {
+          "concept": "Vermenigvuldigen: tafel van 4.",
+          "berekening": [
+            "4 × 7 = 28",
+            "Of: 7 × 4 = 28"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Vermenigvuldig | 4 × 7 | **28** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "4 × 7 = ?",
+            "tussenstappen": []
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Getal 1": "4",
+              "Getal 2": "7"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Vermenigvuldig",
+                "berekening": "4 × 7",
+                "resultaat": "28",
+                "uitleg": "Tafel van 4: 4 × 7 = 28"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "getal",
+            "logica_check": "28 is logisch: 4 × 7 = 28",
+            "antwoord": "28"
+          }
+        }
+      }
+    ],
+    "sub_theme": "kale som"
+  },
+  {
+    "id": 55,
+    "title": "Kale som: vermenigvuldigen (tafel 5)",
+    "theme": "vermenigvuldigen",
+    "content": "Bereken:",
+    "questions": [
+      {
+        "question": "5 × 8 = ?",
+        "hint": "💡 Tip: Denk aan de tafel van 5. Bereken 5 × 8.",
+        "options": [
+          {
+            "text": "40",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "35",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt 5 × 7 uitgerekend. Let op: 5 × 8 is één stap verder in de tafel van 5.",
+            "visual_aid_query": "Tafel van 5",
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "45",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt 5 × 9 uitgerekend. Let op: je moet 5 × 8 berekenen.",
+            "visual_aid_query": "Tafel van 5",
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "32",
+            "is_correct": false,
+            "error_type": "verkeerde_bewerking",
+            "foutanalyse": "Dit is 4 × 8 = 32. Let op dat je de tafel van 5 gebruikt, niet de tafel van 4!\n\n🤔 **Reflectievraag:** Wat is het verschil tussen 5 × 8 en 4 × 8?",
+            "visual_aid_query": "Tafel van 5",
+            "remedial_basis_id": 102
+          }
+        ],
+        "extra_info": {
+          "concept": "Vermenigvuldigen: tafel van 5.",
+          "berekening": [
+            "5 × 8 = 40",
+            "Of: 8 × 5 = 40"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Vermenigvuldig | 5 × 8 | **40** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "5 × 8 = ?",
+            "tussenstappen": []
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Getal 1": "5",
+              "Getal 2": "8"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Vermenigvuldig",
+                "berekening": "5 × 8",
+                "resultaat": "40",
+                "uitleg": "Tafel van 5: 5 × 8 = 40"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "getal",
+            "logica_check": "40 is logisch: 5 × 8 = 40",
+            "antwoord": "40"
+          }
+        }
+      }
+    ],
+    "sub_theme": "kale som"
+  },
+  {
+    "id": 56,
+    "title": "Kale som: delen (tafel 4)",
+    "theme": "delen",
+    "content": "Bereken:",
+    "questions": [
+      {
+        "question": "28 ÷ 4 = ?",
+        "hint": "💡 Tip: Denk aan de tafel van 4. Hoeveel keer past 4 in 28?",
+        "options": [
+          {
+            "text": "7",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "6",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Maar 4 × 6 = 24, niet 28. Controleer: 4 × ? = 28",
+            "visual_aid_query": "Tafel van 4",
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "8",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit te hoog. 4 × 8 = 32, niet 28. Controleer: 4 × ? = 28",
+            "visual_aid_query": "Tafel van 4",
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "4",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt het getal waar je door deelt gegeven. Je moet berekenen: hoeveel keer past 4 in 28?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          }
+        ],
+        "extra_info": {
+          "concept": "Delen met behulp van de tafel van 4.",
+          "berekening": [
+            "28 ÷ 4 = 7",
+            "Controle: 4 × 7 = 28"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Deel | 28 ÷ 4 | **7** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "28 ÷ 4 = ?",
+            "tussenstappen": []
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Getal 1": "28",
+              "Getal 2": "4"
+            },
+            "tool": "Delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Deel",
+                "berekening": "28 ÷ 4",
+                "resultaat": "7",
+                "uitleg": "Deel 28 door 4 (tafel van 4)"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "getal",
+            "logica_check": "7 is logisch: 28 ÷ 4 = 7",
+            "antwoord": "7"
           }
         }
       }
