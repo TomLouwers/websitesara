@@ -3355,93 +3355,91 @@
   },
   {
     "id": 39,
-    "title": "Snoep verdelen met rest",
+    "title": "Snoep verdelen",
     "theme": "delen",
-    "content": "Meester Tim heeft 47 snoepjes. Hij wil ze eerlijk verdelen over 6 kinderen.",
+    "content": "Meester Tim heeft 40 snoepjes. Hij wil ze eerlijk verdelen over 5 kinderen.",
     "questions": [
       {
-        "question": "Hoeveel snoepjes krijgt elk kind, en hoeveel blijven er over?",
-        "hint": "💡 Tip: Denk aan hoe vaak 6 in 47 past, en bereken de rest!",
+        "question": "Hoeveel snoepjes krijgt elk kind?",
+        "hint": "💡 Tip: Denk aan de tafel van 5. Hoeveel keer past 5 in 40?",
         "options": [
           {
-            "text": "7 snoepjes per kind, 5 over",
+            "text": "8 snoepjes",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "8 snoepjes per kind, 1 over",
+            "text": "5 snoepjes",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt het aantal kinderen gegeven als antwoord, niet het aantal snoepjes per kind. Je moet 40 delen door 5.\n\n🤔 **Reflectievraag:** Als je 40 snoepjes hebt en 5 kinderen, hoeveel krijgt dan elk kind?",
+            "visual_aid_query": "Delen visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "35 snoepjes",
+            "is_correct": false,
+            "error_type": "verkeerde_bewerking",
+            "foutanalyse": "Je hebt afgetrokken in plaats van gedeeld. 40 - 5 = 35, maar dat is niet wat de vraag vraagt. Je moet delen: 40 ÷ 5.\n\n🤔 **Reflectievraag:** Wat betekent 'eerlijk verdelen' in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "10 snoepjes",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna! Maar 8 × 6 = 48, dat is meer dan de 47 snoepjes die meester Tim heeft.\n\n🤔 **Reflectievraag:** Hoeveel is 6 × 8? Past dat in 47?",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer: 40 ÷ 5 = ?\n\n🤔 **Reflectievraag:** Wat is 5 × 10? Past dat bij 40?",
             "visual_aid_query": null,
             "remedial_basis_id": 103
-          },
-          {
-            "text": "7 snoepjes per kind, 0 over",
-            "is_correct": false,
-            "error_type": "conceptfout",
-            "foutanalyse": "Je hebt het goede aantal per kind, maar vergeten de rest te berekenen. 6 × 7 = 42, dus er blijven nog snoepjes over.\n\n🤔 **Reflectievraag:** Als je 42 van de 47 snoepjes uitdeelt, hoeveel blijven er dan over?",
-            "visual_aid_query": "Delen met rest visualisatie",
-            "remedial_basis_id": null
-          },
-          {
-            "text": "6 snoepjes per kind, 11 over",
-            "is_correct": false,
-            "error_type": "conceptfout",
-            "foutanalyse": "Je hebt het aantal kinderen als antwoord gegeven in plaats van uit te rekenen hoeveel elk kind krijgt.\n\n🤔 **Reflectievraag:** Hoeveel keer past 6 in 47?",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
           }
         ],
         "extra_info": {
-          "concept": "Dit is delen met rest: het totaal gaat niet precies op in gelijke delen.",
+          "concept": "Dit is een deelsom: je moet het totaal aantal snoepjes eerlijk verdelen over de kinderen.",
           "berekening": [
-            "47 ÷ 6 = 7 rest 5",
-            "Controle: 6 × 7 = 42, en 47 - 42 = 5"
+            "40 ÷ 5 = 8",
+            "Controle: 5 × 8 = 40"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Deel snoepjes | 47 ÷ 6 | 7 per kind |",
-            "| 2. Bereken rest | 47 - (6 × 7) = 47 - 42 | **5 over** ⭐ |"
+            "| 1. Deel snoepjes | 40 ÷ 5 | **8 snoepjes** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
-            "hoofdvraag": "Hoeveel snoepjes krijgt elk kind, en hoeveel blijven er over?",
+            "hoofdvraag": "Hoeveel snoepjes krijgt elk kind?",
             "tussenstappen": [
-              "Deel 47 door 6",
-              "Bereken de rest"
+              "Verdeel 40 over 5"
             ]
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Totaal aantal snoepjes": "47",
-              "Aantal kinderen": "6"
+              "Totaal aantal snoepjes": "40",
+              "Aantal kinderen": "5"
             },
-            "tool": "Delen met rest",
+            "tool": "Delen",
             "conversies": []
           },
           "stap3_vormen": {
             "bewerkingen": [
               {
-                "stap": "Deel de snoepjes",
-                "berekening": "47 ÷ 6",
-                "resultaat": "7 rest 5",
-                "uitleg": "Deel het totaal aantal snoepjes door het aantal kinderen en bereken de rest"
+                "stap": "Verdeel de snoepjes",
+                "berekening": "40 ÷ 5",
+                "resultaat": "8",
+                "uitleg": "Deel het totaal aantal snoepjes door het aantal kinderen"
               }
             ]
           },
           "stap4_antwoorden": {
-            "verwachte_eenheid": "snoepjes (aantal) en rest",
-            "logica_check": "7 snoepjes per kind met 5 over: 6 × 7 + 5 = 42 + 5 = 47 ✓",
-            "antwoord": "7 snoepjes per kind, 5 over"
+            "verwachte_eenheid": "snoepjes (aantal)",
+            "logica_check": "8 snoepjes per kind is logisch: 5 kinderen × 8 = 40 snoepjes totaal",
+            "antwoord": "8 snoepjes"
           }
         }
       }
     ],
-    "sub_theme": "delen met rest"
+    "sub_theme": "delen zonder rest"
   },
   {
     "id": 40,
