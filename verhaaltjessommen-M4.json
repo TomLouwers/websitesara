@@ -4363,5 +4363,346 @@
       }
     ],
     "sub_theme": "kale som"
+  },
+  {
+    "id": 50,
+    "title": "Kale som: optellen",
+    "theme": "optellen",
+    "content": "Bereken:",
+    "questions": [
+      {
+        "question": "15 + 23 = ?",
+        "hint": "💡 Tip: Tel de tientallen en eentallen apart op!",
+        "options": [
+          {
+            "text": "38",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "37",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je optelling: 15 + 23 = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 101
+          },
+          {
+            "text": "28",
+            "is_correct": false,
+            "error_type": "rekenfout_tiental",
+            "foutanalyse": "Je hebt een fout gemaakt bij de tientallen. 10 + 20 = 30, en 5 + 3 = 8, dus 30 + 8 = 38.",
+            "visual_aid_query": null,
+            "remedial_basis_id": 101
+          },
+          {
+            "text": "8",
+            "is_correct": false,
+            "error_type": "verkeerde_bewerking",
+            "foutanalyse": "Je hebt afgetrokken in plaats van opgeteld. Let op het plusteken!",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
+        ],
+        "extra_info": {
+          "concept": "Optellen: tel tientallen en eentallen apart.",
+          "berekening": [
+            "15 + 23 = 38"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Tel op | 15 + 23 | **38** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "15 + 23 = ?",
+            "tussenstappen": []
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Getal 1": "15",
+              "Getal 2": "23"
+            },
+            "tool": "Optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Tel op",
+                "berekening": "15 + 23",
+                "resultaat": "38",
+                "uitleg": "Tel 23 op bij 15"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "getal",
+            "logica_check": "38 is logisch: 15 + 23 = 38",
+            "antwoord": "38"
+          }
+        }
+      }
+    ],
+    "sub_theme": "kale som"
+  },
+  {
+    "id": 51,
+    "title": "Kale som: aftrekken",
+    "theme": "aftrekken",
+    "content": "Bereken:",
+    "questions": [
+      {
+        "question": "38 - 12 = ?",
+        "hint": "💡 Tip: Trek eerst 10 af, dan nog 2!",
+        "options": [
+          {
+            "text": "26",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "36",
+            "is_correct": false,
+            "error_type": "rekenfout_tiental",
+            "foutanalyse": "Je hebt alleen de eentallen afgetrokken (8 - 2 = 6), maar niet de tientallen. Je moet 38 - 12 = 26.",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "24",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je aftrekken: 38 - 12 = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "50",
+            "is_correct": false,
+            "error_type": "verkeerde_bewerking",
+            "foutanalyse": "Je hebt opgeteld in plaats van afgetrokken (38 + 12 = 50). Let op het minteken!",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
+        ],
+        "extra_info": {
+          "concept": "Aftrekken: trek tientallen en eentallen apart af.",
+          "berekening": [
+            "38 - 12 = 26"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Trek af | 38 - 12 | **26** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "38 - 12 = ?",
+            "tussenstappen": []
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Getal 1": "38",
+              "Getal 2": "12"
+            },
+            "tool": "Aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Trek af",
+                "berekening": "38 - 12",
+                "resultaat": "26",
+                "uitleg": "Trek 12 af van 38"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "getal",
+            "logica_check": "26 is logisch: 38 - 12 = 26",
+            "antwoord": "26"
+          }
+        }
+      }
+    ],
+    "sub_theme": "kale som"
+  },
+  {
+    "id": 52,
+    "title": "Kale som: vermenigvuldigen",
+    "theme": "vermenigvuldigen",
+    "content": "Bereken:",
+    "questions": [
+      {
+        "question": "7 × 10 = ?",
+        "hint": "💡 Tip: Alles × 10 is makkelijk: zet er een 0 achter!",
+        "options": [
+          {
+            "text": "70",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "17",
+            "is_correct": false,
+            "error_type": "verkeerde_bewerking",
+            "foutanalyse": "Je hebt opgeteld in plaats van vermenigvuldigd (7 + 10 = 17). Let op het kruisje (×)!",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "60",
+            "is_correct": false,
+            "error_type": "verwarring_tafel",
+            "foutanalyse": "Dat is 6 × 10, niet 7 × 10. Controleer de tafel van 10.",
+            "visual_aid_query": "Tafel van 10",
+            "remedial_basis_id": 104
+          },
+          {
+            "text": "80",
+            "is_correct": false,
+            "error_type": "verwarring_tafel",
+            "foutanalyse": "Dat is 8 × 10, niet 7 × 10. Controleer de tafel van 10.",
+            "visual_aid_query": "Tafel van 10",
+            "remedial_basis_id": 104
+          }
+        ],
+        "extra_info": {
+          "concept": "Vermenigvuldigen met 10: zet er een 0 achter.",
+          "berekening": [
+            "7 × 10 = 70"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Vermenigvuldig | 7 × 10 | **70** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "7 × 10 = ?",
+            "tussenstappen": []
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Getal 1": "7",
+              "Getal 2": "10"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Vermenigvuldig",
+                "berekening": "7 × 10",
+                "resultaat": "70",
+                "uitleg": "Vermenigvuldig 7 met 10"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "getal",
+            "logica_check": "70 is logisch: 7 × 10 = 70",
+            "antwoord": "70"
+          }
+        }
+      }
+    ],
+    "sub_theme": "kale som"
+  },
+  {
+    "id": 53,
+    "title": "Kale som: delen",
+    "theme": "delen",
+    "content": "Bereken:",
+    "questions": [
+      {
+        "question": "18 ÷ 2 = ?",
+        "hint": "💡 Tip: Denk aan halveren. De helft van 18 is...?",
+        "options": [
+          {
+            "text": "9",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "8",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Maar 2 × 8 = 16, niet 18. Controleer: 2 × ? = 18",
+            "visual_aid_query": "Tafel van 2",
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "2",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt het getal waar je door deelt gegeven. Je moet berekenen: hoeveel keer past 2 in 18?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "10",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit te hoog. 2 × 10 = 20, niet 18. Controleer: 2 × ? = 18",
+            "visual_aid_query": "Tafel van 2",
+            "remedial_basis_id": 103
+          }
+        ],
+        "extra_info": {
+          "concept": "Delen door 2 is halveren.",
+          "berekening": [
+            "18 ÷ 2 = 9",
+            "Controle: 2 × 9 = 18"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Deel | 18 ÷ 2 | **9** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "18 ÷ 2 = ?",
+            "tussenstappen": []
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Getal 1": "18",
+              "Getal 2": "2"
+            },
+            "tool": "Delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Deel",
+                "berekening": "18 ÷ 2",
+                "resultaat": "9",
+                "uitleg": "Deel 18 door 2 (halveren)"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "getal",
+            "logica_check": "9 is logisch: 18 ÷ 2 = 9",
+            "antwoord": "9"
+          }
+        }
+      }
+    ],
+    "sub_theme": "kale som"
   }
 ]
