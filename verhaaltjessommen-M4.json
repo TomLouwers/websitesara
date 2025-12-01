@@ -2937,33 +2937,45 @@
           }
         ],
         "extra_info": {
-          "concept": "Tijd",
+          "concept": "Dit is een tijdsduur berekening: bereken het verschil tussen twee tijdstippen.",
           "berekening": [
-            "Tijd berekenen"
+            "14:45 - 14:00 = 45 minuten"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Bereken | Tijd | **45 minuten** ⭐ |"
+            "| 1. Bereken tijdsduur | 14:45 - 14:00 | **45 minuten** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
             "hoofdvraag": "Hoelang heeft Jamal aan zijn huiswerk gewerkt?",
-            "tussenstappen": []
+            "tussenstappen": [
+              "Bereken de tijdsduur tussen 14:00 en 14:45"
+            ]
           },
           "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "Tijd",
+            "relevante_getallen": {
+              "Begintijd": "14:00 uur",
+              "Eindtijd": "14:45 uur"
+            },
+            "tool": "Tijdsduur berekenen",
             "conversies": []
           },
           "stap3_vormen": {
-            "bewerkingen": []
+            "bewerkingen": [
+              {
+                "stap": "Bereken tijdsduur",
+                "berekening": "14:45 - 14:00",
+                "resultaat": "45 minuten",
+                "uitleg": "Tel de minuten vanaf 14:00 tot 14:45"
+              }
+            ]
           },
           "stap4_antwoorden": {
-            "verwachte_eenheid": "tijd",
-            "logica_check": "Logisch",
+            "verwachte_eenheid": "minuten",
+            "logica_check": "45 minuten is logisch: minder dan 1 uur",
             "antwoord": "45 minuten"
           }
         }
@@ -3012,33 +3024,55 @@
           }
         ],
         "extra_info": {
-          "concept": "Tijd",
+          "concept": "Dit is een optelling van tijdsduren: tel twee tijden bij elkaar op.",
           "berekening": [
-            "Tijd berekenen"
+            "30 minuten + 30 minuten = 60 minuten = 1 uur"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Bereken | Tijd | **1 uur** ⭐ |"
+            "| 1. Tel lestijden op | 30 + 30 | **60 minuten** |",
+            "| 2. Reken om naar uren | 60 minuten | **1 uur** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
             "hoofdvraag": "Hoelang duren beide lessen samen?",
-            "tussenstappen": []
+            "tussenstappen": [
+              "Tel beide lestijden bij elkaar op",
+              "Reken eventueel om naar uren"
+            ]
           },
           "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "Tijd",
-            "conversies": []
+            "relevante_getallen": {
+              "Duur per les": "30 minuten",
+              "Aantal lessen": "2"
+            },
+            "tool": "Optellen",
+            "conversies": [
+              "60 minuten = 1 uur"
+            ]
           },
           "stap3_vormen": {
-            "bewerkingen": []
+            "bewerkingen": [
+              {
+                "stap": "Tel lestijden op",
+                "berekening": "30 + 30",
+                "resultaat": "60 minuten",
+                "uitleg": "Tel de twee lessen bij elkaar op"
+              },
+              {
+                "stap": "Reken om naar uren",
+                "berekening": "60 minuten = 1 uur",
+                "resultaat": "1 uur",
+                "uitleg": "60 minuten is hetzelfde als 1 uur"
+              }
+            ]
           },
           "stap4_antwoorden": {
-            "verwachte_eenheid": "tijd",
-            "logica_check": "Logisch",
+            "verwachte_eenheid": "uur",
+            "logica_check": "1 uur is logisch: 2 × 30 minuten = 60 minuten = 1 uur",
             "antwoord": "1 uur"
           }
         }
@@ -3087,33 +3121,46 @@
           }
         ],
         "extra_info": {
-          "concept": "Tijd",
+          "concept": "Dit is een omrekening van minuten naar uren.",
           "berekening": [
-            "Tijd berekenen"
+            "120 minuten ÷ 60 = 2 uur"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Bereken | Tijd | **2 uur** ⭐ |"
+            "| 1. Reken om naar uren | 120 ÷ 60 | **2 uur** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
             "hoofdvraag": "Hoeveel uur duurt de film?",
-            "tussenstappen": []
+            "tussenstappen": [
+              "Reken 120 minuten om naar uren"
+            ]
           },
           "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "Tijd",
-            "conversies": []
+            "relevante_getallen": {
+              "Duur in minuten": "120 minuten"
+            },
+            "tool": "Omrekenen (minuten naar uren)",
+            "conversies": [
+              "60 minuten = 1 uur"
+            ]
           },
           "stap3_vormen": {
-            "bewerkingen": []
+            "bewerkingen": [
+              {
+                "stap": "Reken om naar uren",
+                "berekening": "120 ÷ 60",
+                "resultaat": "2 uur",
+                "uitleg": "Deel het aantal minuten door 60 om uren te krijgen"
+              }
+            ]
           },
           "stap4_antwoorden": {
-            "verwachte_eenheid": "tijd",
-            "logica_check": "Logisch",
+            "verwachte_eenheid": "uur",
+            "logica_check": "2 uur is logisch: 2 × 60 minuten = 120 minuten",
             "antwoord": "2 uur"
           }
         }
@@ -3162,33 +3209,45 @@
           }
         ],
         "extra_info": {
-          "concept": "Tijd",
+          "concept": "Dit is een optelling van tijdsduren: tel heenreis en terugreis bij elkaar op.",
           "berekening": [
-            "Tijd berekenen"
+            "15 minuten + 15 minuten = 30 minuten"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Bereken | Tijd | **30 minuten** ⭐ |"
+            "| 1. Tel heen en terug op | 15 + 15 | **30 minuten** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
             "hoofdvraag": "Hoelang fietst ze per dag in totaal?",
-            "tussenstappen": []
+            "tussenstappen": [
+              "Tel de tijd van heenreis en terugreis bij elkaar op"
+            ]
           },
           "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "Tijd",
+            "relevante_getallen": {
+              "Tijd naar school": "15 minuten",
+              "Tijd terug": "15 minuten"
+            },
+            "tool": "Optellen",
             "conversies": []
           },
           "stap3_vormen": {
-            "bewerkingen": []
+            "bewerkingen": [
+              {
+                "stap": "Tel heen en terug op",
+                "berekening": "15 + 15",
+                "resultaat": "30 minuten",
+                "uitleg": "Tel de tijd naar school en de tijd terug bij elkaar op"
+              }
+            ]
           },
           "stap4_antwoorden": {
-            "verwachte_eenheid": "tijd",
-            "logica_check": "Logisch",
+            "verwachte_eenheid": "minuten",
+            "logica_check": "30 minuten is logisch: 2 × 15 minuten",
             "antwoord": "30 minuten"
           }
         }
