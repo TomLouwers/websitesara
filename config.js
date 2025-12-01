@@ -12,6 +12,7 @@ const CONFIG = {
         wereldorientatie: 'Wereldoriëntatie',
         woordenschat: 'Woordenschat',
         verhaaltjessommen: 'Verhaaltjessommen',
+        'verhaaltjessommen-emma': 'Verhaaltjessommen Emma',
         basisvaardigheden: 'Basisvaardigheden'
     },
 
@@ -23,6 +24,7 @@ const CONFIG = {
         wereldorientatie: '🌍',
         woordenschat: '📚',
         verhaaltjessommen: '🔢',
+        'verhaaltjessommen-emma': '🧒',
         basisvaardigheden: '🧮'
     },
 
@@ -34,6 +36,7 @@ const CONFIG = {
         wereldorientatie: 'Algemene kennis over de wereld',
         woordenschat: 'Vergroot je vocabulaire',
         verhaaltjessommen: 'Reken mee met CITO-niveau verhaaltjes',
+        'verhaaltjessommen-emma': 'M4 verhaaltjessommen voor Groep 4',
         basisvaardigheden: 'Oefen de rekenkundige basisvaardigheden'
     },
 
