@@ -4031,60 +4031,60 @@
     "content": "Bereken:",
     "questions": [
       {
-        "question": "7 × 8 = ?",
-        "hint": "💡 Tip: Denk aan de tafel van 7 of de tafel van 8!",
+        "question": "6 × 4 = ?",
+        "hint": "💡 Tip: Denk aan de tafel van 4 of de tafel van 6!",
         "options": [
           {
-            "text": "56",
+            "text": "24",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "54",
+            "text": "20",
             "is_correct": false,
             "error_type": "verwarring_tafel",
-            "foutanalyse": "Dat is 6 × 9, niet 7 × 8. Controleer de tafel van 7 of 8.",
-            "visual_aid_query": "Tafel van 7 en 8",
+            "foutanalyse": "Dat is 5 × 4, niet 6 × 4. Je bent één stapje te weinig.",
+            "visual_aid_query": "Tafel van 4",
             "remedial_basis_id": 104
           },
           {
-            "text": "49",
+            "text": "28",
             "is_correct": false,
             "error_type": "verwarring_tafel",
-            "foutanalyse": "Dat is 7 × 7, niet 7 × 8. Je bent één stapje te weinig.",
-            "visual_aid_query": "Tafel van 7",
+            "foutanalyse": "Dat is 7 × 4, niet 6 × 4. Je bent één stapje te ver.",
+            "visual_aid_query": "Tafel van 4",
             "remedial_basis_id": 104
           },
           {
-            "text": "64",
+            "text": "18",
             "is_correct": false,
             "error_type": "verwarring_tafel",
-            "foutanalyse": "Dat is 8 × 8, niet 7 × 8. Je hebt 8 × 8 gedaan in plaats van 7 × 8.",
-            "visual_aid_query": "Tafel van 8",
+            "foutanalyse": "Dat is 6 × 3, niet 6 × 4. Controleer de tafel van 6.",
+            "visual_aid_query": "Tafel van 6",
             "remedial_basis_id": 104
           }
         ],
         "extra_info": {
-          "concept": "Vermenigvuldigen: de tafel van 7 en 8.",
+          "concept": "Vermenigvuldigen: de tafel van 4 en 6.",
           "berekening": [
-            "7 × 8 = 56"
+            "6 × 4 = 24"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldig | 7 × 8 | **56** ⭐ |"
+            "| 1. Vermenigvuldig | 6 × 4 | **24** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
-            "hoofdvraag": "7 × 8 = ?",
+            "hoofdvraag": "6 × 4 = ?",
             "tussenstappen": []
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Getal 1": "7",
-              "Getal 2": "8"
+              "Getal 1": "6",
+              "Getal 2": "4"
             },
             "tool": "Vermenigvuldigen",
             "conversies": []
@@ -4093,16 +4093,16 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldig",
-                "berekening": "7 × 8",
-                "resultaat": "56",
-                "uitleg": "Vermenigvuldig 7 met 8"
+                "berekening": "6 × 4",
+                "resultaat": "24",
+                "uitleg": "Vermenigvuldig 6 met 4"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "getal",
-            "logica_check": "56 is logisch: 7 × 8 = 56",
-            "antwoord": "56"
+            "logica_check": "24 is logisch: 6 × 4 = 24",
+            "antwoord": "24"
           }
         }
       }
@@ -4116,61 +4116,61 @@
     "content": "Bereken:",
     "questions": [
       {
-        "question": "48 ÷ 6 = ?",
-        "hint": "💡 Tip: Denk aan de tafel van 6. Hoeveel keer past 6 in 48?",
+        "question": "35 ÷ 5 = ?",
+        "hint": "💡 Tip: Denk aan de tafel van 5. Hoeveel keer past 5 in 35?",
         "options": [
           {
-            "text": "8",
+            "text": "7",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "7",
+            "text": "6",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna! Maar 6 × 7 = 42, niet 48. Controleer: 6 × ? = 48",
-            "visual_aid_query": "Tafel van 6",
+            "foutanalyse": "Bijna! Maar 5 × 6 = 30, niet 35. Controleer: 5 × ? = 35",
+            "visual_aid_query": "Tafel van 5",
             "remedial_basis_id": 103
           },
           {
-            "text": "6",
+            "text": "5",
             "is_correct": false,
             "error_type": "conceptfout",
-            "foutanalyse": "Je hebt het getal waar je door deelt gegeven. Je moet berekenen: hoeveel keer past 6 in 48?",
+            "foutanalyse": "Je hebt het getal waar je door deelt gegeven. Je moet berekenen: hoeveel keer past 5 in 35?",
             "visual_aid_query": null,
             "remedial_basis_id": 103
           },
           {
-            "text": "9",
+            "text": "8",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna! Maar 6 × 9 = 54, niet 48. Controleer: 6 × ? = 48",
-            "visual_aid_query": "Tafel van 6",
+            "foutanalyse": "Je zit te hoog. 5 × 8 = 40, niet 35. Controleer: 5 × ? = 35",
+            "visual_aid_query": "Tafel van 5",
             "remedial_basis_id": 103
           }
         ],
         "extra_info": {
-          "concept": "Delen: hoeveel keer past 6 in 48?",
+          "concept": "Delen: hoeveel keer past 5 in 35?",
           "berekening": [
-            "48 ÷ 6 = 8",
-            "Controle: 6 × 8 = 48"
+            "35 ÷ 5 = 7",
+            "Controle: 5 × 7 = 35"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Deel | 48 ÷ 6 | **8** ⭐ |"
+            "| 1. Deel | 35 ÷ 5 | **7** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
-            "hoofdvraag": "48 ÷ 6 = ?",
+            "hoofdvraag": "35 ÷ 5 = ?",
             "tussenstappen": []
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Getal 1": "48",
-              "Getal 2": "6"
+              "Getal 1": "35",
+              "Getal 2": "5"
             },
             "tool": "Delen",
             "conversies": []
@@ -4179,16 +4179,16 @@
             "bewerkingen": [
               {
                 "stap": "Deel",
-                "berekening": "48 ÷ 6",
-                "resultaat": "8",
-                "uitleg": "Deel 48 door 6"
+                "berekening": "35 ÷ 5",
+                "resultaat": "7",
+                "uitleg": "Deel 35 door 5"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "getal",
-            "logica_check": "8 is logisch: 48 ÷ 6 = 8",
-            "antwoord": "8"
+            "logica_check": "7 is logisch: 35 ÷ 5 = 7",
+            "antwoord": "7"
           }
         }
       }
@@ -4202,60 +4202,60 @@
     "content": "Bereken:",
     "questions": [
       {
-        "question": "9 × 6 = ?",
-        "hint": "💡 Tip: Denk aan de tafel van 9 of de tafel van 6!",
+        "question": "8 × 5 = ?",
+        "hint": "💡 Tip: Denk aan de tafel van 5 of de tafel van 8!",
         "options": [
           {
-            "text": "54",
+            "text": "40",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "56",
+            "text": "35",
             "is_correct": false,
             "error_type": "verwarring_tafel",
-            "foutanalyse": "Dat is 7 × 8, niet 9 × 6. Controleer de tafel van 9 of 6.",
-            "visual_aid_query": "Tafel van 9 en 6",
+            "foutanalyse": "Dat is 7 × 5, niet 8 × 5. Je bent één stapje te weinig.",
+            "visual_aid_query": "Tafel van 5",
             "remedial_basis_id": 104
           },
           {
             "text": "45",
             "is_correct": false,
             "error_type": "verwarring_tafel",
-            "foutanalyse": "Dat is 9 × 5, niet 9 × 6. Je bent één stapje te weinig.",
-            "visual_aid_query": "Tafel van 9",
+            "foutanalyse": "Dat is 9 × 5, niet 8 × 5. Je bent één stapje te ver.",
+            "visual_aid_query": "Tafel van 5",
             "remedial_basis_id": 104
           },
           {
-            "text": "63",
+            "text": "32",
             "is_correct": false,
             "error_type": "verwarring_tafel",
-            "foutanalyse": "Dat is 9 × 7, niet 9 × 6. Je bent één stapje te ver.",
-            "visual_aid_query": "Tafel van 9",
+            "foutanalyse": "Dat is 8 × 4, niet 8 × 5. Controleer de tafel van 8.",
+            "visual_aid_query": "Tafel van 8",
             "remedial_basis_id": 104
           }
         ],
         "extra_info": {
-          "concept": "Vermenigvuldigen: de tafel van 9 en 6.",
+          "concept": "Vermenigvuldigen: de tafel van 5 en 8.",
           "berekening": [
-            "9 × 6 = 54"
+            "8 × 5 = 40"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldig | 9 × 6 | **54** ⭐ |"
+            "| 1. Vermenigvuldig | 8 × 5 | **40** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
-            "hoofdvraag": "9 × 6 = ?",
+            "hoofdvraag": "8 × 5 = ?",
             "tussenstappen": []
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Getal 1": "9",
-              "Getal 2": "6"
+              "Getal 1": "8",
+              "Getal 2": "5"
             },
             "tool": "Vermenigvuldigen",
             "conversies": []
@@ -4264,16 +4264,16 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldig",
-                "berekening": "9 × 6",
-                "resultaat": "54",
-                "uitleg": "Vermenigvuldig 9 met 6"
+                "berekening": "8 × 5",
+                "resultaat": "40",
+                "uitleg": "Vermenigvuldig 8 met 5"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "getal",
-            "logica_check": "54 is logisch: 9 × 6 = 54",
-            "antwoord": "54"
+            "logica_check": "40 is logisch: 8 × 5 = 40",
+            "antwoord": "40"
           }
         }
       }
@@ -4287,61 +4287,61 @@
     "content": "Bereken:",
     "questions": [
       {
-        "question": "72 ÷ 8 = ?",
-        "hint": "💡 Tip: Denk aan de tafel van 8. Hoeveel keer past 8 in 72?",
+        "question": "24 ÷ 3 = ?",
+        "hint": "💡 Tip: Denk aan de tafel van 3. Hoeveel keer past 3 in 24?",
         "options": [
           {
-            "text": "9",
+            "text": "8",
             "is_correct": true,
             "foutanalyse": ""
-          },
-          {
-            "text": "8",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna! Maar 8 × 8 = 64, niet 72. Controleer: 8 × ? = 72",
-            "visual_aid_query": "Tafel van 8",
-            "remedial_basis_id": 103
           },
           {
             "text": "7",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Je zit te laag. 8 × 7 = 56, niet 72. Controleer: 8 × ? = 72",
-            "visual_aid_query": "Tafel van 8",
+            "foutanalyse": "Bijna! Maar 3 × 7 = 21, niet 24. Controleer: 3 × ? = 24",
+            "visual_aid_query": "Tafel van 3",
             "remedial_basis_id": 103
           },
           {
-            "text": "10",
+            "text": "3",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt het getal waar je door deelt gegeven. Je moet berekenen: hoeveel keer past 3 in 24?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "9",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Je zit te hoog. 8 × 10 = 80, niet 72. Controleer: 8 × ? = 72",
-            "visual_aid_query": "Tafel van 8",
+            "foutanalyse": "Je zit te hoog. 3 × 9 = 27, niet 24. Controleer: 3 × ? = 24",
+            "visual_aid_query": "Tafel van 3",
             "remedial_basis_id": 103
           }
         ],
         "extra_info": {
-          "concept": "Delen: hoeveel keer past 8 in 72?",
+          "concept": "Delen: hoeveel keer past 3 in 24?",
           "berekening": [
-            "72 ÷ 8 = 9",
-            "Controle: 8 × 9 = 72"
+            "24 ÷ 3 = 8",
+            "Controle: 3 × 8 = 24"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Deel | 72 ÷ 8 | **9** ⭐ |"
+            "| 1. Deel | 24 ÷ 3 | **8** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
-            "hoofdvraag": "72 ÷ 8 = ?",
+            "hoofdvraag": "24 ÷ 3 = ?",
             "tussenstappen": []
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Getal 1": "72",
-              "Getal 2": "8"
+              "Getal 1": "24",
+              "Getal 2": "3"
             },
             "tool": "Delen",
             "conversies": []
@@ -4350,16 +4350,16 @@
             "bewerkingen": [
               {
                 "stap": "Deel",
-                "berekening": "72 ÷ 8",
-                "resultaat": "9",
-                "uitleg": "Deel 72 door 8"
+                "berekening": "24 ÷ 3",
+                "resultaat": "8",
+                "uitleg": "Deel 24 door 3"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "getal",
-            "logica_check": "9 is logisch: 72 ÷ 8 = 9",
-            "antwoord": "9"
+            "logica_check": "8 is logisch: 24 ÷ 3 = 8",
+            "antwoord": "8"
           }
         }
       }
