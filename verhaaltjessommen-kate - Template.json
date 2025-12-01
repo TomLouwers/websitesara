@@ -1,0 +1,1347 @@
+[
+  {
+    "id": 1,
+    "title": "Verre Reisafstanden",
+    "theme": "optellen",
+    "content": "Een bus rijdt op maandag een afstand van 375 km. Op dinsdag rijdt de bus 460 km.",
+    "questions": [
+      {
+        "question": "Hoeveel kilometer heeft de bus in totaal gereden?",
+        "hint": "💡 Tip: Je moet de afstanden van maandag en dinsdag bij elkaar optellen!",
+        "options": [
+          {
+            "text": "735 km",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt een rekenfout gemaakt bij het optellen. Controleer je berekening stap voor stap: 375 + 460 = ?\n\n🤔 **Reflectievraag:** Tel eerst de honderden, dan de tientallen, en dan de enen. Wat krijg je dan?",
+            "visual_aid_query": "Optellen tot 1000",
+            "remedial_basis_id": 101
+          },
+          {
+            "text": "845 km",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna goed! Je hebt waarschijnlijk een fout gemaakt bij het optellen van de tientallen. Controleer: 375 + 460 = ?\n\n🤔 **Reflectievraag:** 70 + 60 = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 101
+          },
+          {
+            "text": "835 km",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "785 km",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt een fout gemaakt bij het optellen. Misschien heb je de getallen niet goed onder elkaar gezet? Probeer nog eens: 375 + 460 = ?\n\n🤔 **Reflectievraag:** Controleer je berekening met een andere methode.",
+            "visual_aid_query": null,
+            "remedial_basis_id": 101
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een optelsom met grotere getallen tot 1000. Je moet de kilometers van beide dagen bij elkaar optellen.",
+          "berekening": [
+            "Tel de afstanden bij elkaar op: 375 + 460",
+            "375 + 460 = 835 km"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Optellen | 375 + 460 | **835 km** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel kilometer heeft de bus in totaal gereden?",
+            "tussenstappen": [
+              "Tel de afstanden van maandag en dinsdag bij elkaar op"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Afstand maandag": "375 km",
+              "Afstand dinsdag": "460 km"
+            },
+            "tool": "Optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Tel de afstanden op",
+                "berekening": "375 + 460",
+                "resultaat": "835",
+                "uitleg": "Tel de kilometers van beide dagen bij elkaar op"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "kilometer (km)",
+            "logica_check": "835 km is logisch: beide afstanden bij elkaar opgeteld",
+            "antwoord": "835 km"
+          }
+        }
+      }
+    ],
+    "sub_theme": "optellen tot 1000"
+  },
+  {
+    "id": 2,
+    "title": "Bibliotheek Boeken",
+    "theme": "aftrekken",
+    "content": "De schoolbibliotheek heeft in totaal 820 boeken. Er zijn 245 boeken uitgeleend.",
+    "questions": [
+      {
+        "question": "Hoeveel boeken zijn er nog over in de bibliotheek?",
+        "hint": "💡 Tip: Je moet het aantal uitgeleende boeken aftrekken van het totaal!",
+        "options": [
+          {
+            "text": "1065 boeken",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt opgeteld in plaats van afgetrokken. 820 + 245 = 1065, maar de vraag vraagt hoeveel boeken er nog over zijn. Dan moet je aftrekken: 820 - 245.\n\n🤔 **Reflectievraag:** Wat betekent 'nog over' in de vraag?",
+            "visual_aid_query": "Aftrekken visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "575 boeken",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "675 boeken",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij! Je hebt waarschijnlijk een fout gemaakt bij het aftrekken van de honderden. Controleer: 820 - 245 = ?\n\n🤔 **Reflectievraag:** Wat is 800 - 200?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "585 boeken",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna goed! Controleer je aftrekking nog eens zorgvuldig: 820 - 245 = ?\n\n🤔 **Reflectievraag:** Controleer de tientallen: 20 - 40 kan niet, dus je moet lenen van de honderden.",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een aftreksom met grotere getallen tot 1000. Je moet het aantal uitgeleende boeken aftrekken van het totaal.",
+          "berekening": [
+            "Trek het aantal uitgeleende boeken af: 820 - 245",
+            "820 - 245 = 575 boeken"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Aftrekken | 820 - 245 | **575 boeken** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel boeken zijn er nog over in de bibliotheek?",
+            "tussenstappen": [
+              "Trek het aantal uitgeleende boeken af van het totaal"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Totaal aantal boeken": "820",
+              "Uitgeleend": "245"
+            },
+            "tool": "Aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Trek uitgeleende boeken af",
+                "berekening": "820 - 245",
+                "resultaat": "575",
+                "uitleg": "Trek het aantal uitgeleende boeken af van het totaal"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "boeken (aantal)",
+            "logica_check": "575 boeken is logisch: minder dan het oorspronkelijke aantal",
+            "antwoord": "575 boeken"
+          }
+        }
+      }
+    ],
+    "sub_theme": "aftrekken tot 1000"
+  },
+  {
+    "id": 3,
+    "title": "Tijdsduur van een Film",
+    "theme": "tijd",
+    "content": "Een spannende film duurt 1 uur en 45 minuten. De film begint om 14:30 uur.",
+    "questions": [
+      {
+        "question": "Hoe laat is de film afgelopen?",
+        "hint": "💡 Tip: Tel de tijd van de film op bij de starttijd. Let op: 1 uur = 60 minuten!",
+        "options": [
+          {
+            "text": "15:15 uur",
+            "is_correct": false,
+            "error_type": "rekenfout_tijd",
+            "foutanalyse": "Je hebt alleen het uur erbij opgeteld, maar de 45 minuten vergeten! 14:30 + 1 uur = 15:30, maar je moet er ook nog 45 minuten bij optellen.\n\n🤔 **Reflectievraag:** Hoeveel minuten moet je in totaal optellen bij 14:30?",
+            "visual_aid_query": "Tijd berekenen",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "16:05 uur",
+            "is_correct": false,
+            "error_type": "rekenfout_tijd",
+            "foutanalyse": "Je hebt een fout gemaakt bij het optellen van de minuten. Van 14:30 naar 15:30 is 1 uur. Dan moet je er nog 45 minuten bij optellen: 15:30 + 45 minuten = ?\n\n🤔 **Reflectievraag:** Wat is 30 + 45?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "16:15 uur",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "15:75 uur",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Let op! Er kunnen maar 60 minuten in een uur zitten. 75 minuten bestaat niet op de klok. Je moet 60 minuten omzetten naar 1 uur.\n\n🤔 **Reflectievraag:** Als je bij 30 minuten nog 45 minuten optelt, hoeveel minuten is dat? Hoeveel uur en minuten is dat?",
+            "visual_aid_query": "Tijd omrekenen",
+            "remedial_basis_id": null
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een tijdberekening. Je moet de duur van de film optellen bij de starttijd. Let op dat 60 minuten gelijk is aan 1 uur.",
+          "berekening": [
+            "Starttijd: 14:30 uur",
+            "Duur film: 1 uur en 45 minuten",
+            "14:30 + 1 uur = 15:30",
+            "15:30 + 45 minuten = 16:15 uur"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Plus 1 uur | 14:30 + 1 uur | 15:30 |",
+            "| 2. Plus 45 min | 15:30 + 45 min | **16:15 uur** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoe laat is de film afgelopen?",
+            "tussenstappen": [
+              "Tel de duur van de film op bij de starttijd"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Starttijd": "14:30 uur",
+              "Duur film": "1 uur en 45 minuten"
+            },
+            "tool": "Tijd optellen",
+            "conversies": [
+              "1 uur = 60 minuten"
+            ]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Tel het uur erbij op",
+                "berekening": "14:30 + 1 uur",
+                "resultaat": "15:30",
+                "uitleg": "Tel eerst het hele uur erbij op"
+              },
+              {
+                "stap": "Tel de minuten erbij op",
+                "berekening": "15:30 + 45 minuten",
+                "resultaat": "16:15",
+                "uitleg": "Tel de 45 minuten erbij op (30 + 45 = 75 minuten = 1 uur en 15 minuten)"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "tijd (uur:minuten)",
+            "logica_check": "16:15 uur is logisch: bijna 2 uur later dan 14:30",
+            "antwoord": "16:15 uur"
+          }
+        }
+      }
+    ],
+    "sub_theme": "tijd berekenen"
+  },
+  {
+    "id": 4,
+    "title": "Grote Voorraad Pennen",
+    "theme": "vermenigvuldigen",
+    "content": "Een school koopt een nieuwe voorraad pennen. Ze bestellen 6 dozen. In elke doos zitten 150 pennen.",
+    "questions": [
+      {
+        "question": "Hoeveel pennen zijn er in totaal besteld?",
+        "hint": "💡 Tip: Je moet 6 keer 150 rekenen. Denk aan de tafel van 6!",
+        "options": [
+          {
+            "text": "750 pennen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen. Controleer: 6 × 150 = ? Denk aan de tafel van 6: 6 × 15 = 90, dus 6 × 150 = 900.\n\n🤔 **Reflectievraag:** Wat is 6 × 15?",
+            "visual_aid_query": "Vermenigvuldigen visualisatie",
+            "remedial_basis_id": 104
+          },
+          {
+            "text": "850 pennen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je vermenigvuldiging nog eens: 6 × 150 = ?\n\n🤔 **Reflectievraag:** Ken je de tafel van 6 goed?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 104
+          },
+          {
+            "text": "900 pennen",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "950 pennen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt te veel gerekend. Controleer je vermenigvuldiging: 6 × 150 = ?\n\n🤔 **Reflectievraag:** 6 × 100 = 600 en 6 × 50 = 300. Samen is dat 600 + 300 = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 104
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een vermenigvuldigingssom met honderdtallen. Je moet het aantal dozen vermenigvuldigen met het aantal pennen per doos.",
+          "berekening": [
+            "Vermenigvuldig het aantal dozen met pennen per doos: 6 × 150",
+            "6 × 150 = 6 × 100 + 6 × 50 = 600 + 300 = 900 pennen"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Vermenigvuldig | 6 × 150 | **900 pennen** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel pennen zijn er in totaal besteld?",
+            "tussenstappen": [
+              "Vermenigvuldig het aantal dozen met het aantal pennen per doos"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Aantal dozen": "6",
+              "Pennen per doos": "150"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Vermenigvuldig dozen met pennen",
+                "berekening": "6 × 150",
+                "resultaat": "900",
+                "uitleg": "6 dozen van elk 150 pennen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "pennen (aantal)",
+            "logica_check": "900 pennen is logisch: 6 × 150 = 900",
+            "antwoord": "900 pennen"
+          }
+        }
+      }
+    ],
+    "sub_theme": "vermenigvuldigen met honderdtallen"
+  },
+  {
+    "id": 5,
+    "title": "Verdelen van Stickers",
+    "theme": "delen",
+    "content": "Juf Lisa heeft 150 stickers die ze wil verdelen over 5 groepen kinderen voor een project.",
+    "questions": [
+      {
+        "question": "Hoeveel stickers krijgt elke groep?",
+        "hint": "💡 Tip: Je moet 150 stickers eerlijk verdelen over 5 groepen. Dat doe je door te delen!",
+        "options": [
+          {
+            "text": "3 stickers",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dit antwoord is veel te klein! Je hebt misschien iets verkeerd begrepen. Je moet 150 delen door 5, niet andersom.\n\n🤔 **Reflectievraag:** Als 5 groepen elk 3 stickers krijgen, hoeveel is dat in totaal?",
+            "visual_aid_query": "Delen visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "145 stickers",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt afgetrokken in plaats van gedeeld. 150 - 5 = 145, maar dat is niet wat de vraag vraagt. Je moet delen: 150 ÷ 5.\n\n🤔 **Reflectievraag:** Wat beteket 'verdelen over' in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "30 stickers",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "35 stickers",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna goed! Controleer je deling nog eens: 150 ÷ 5 = ? Denk aan de tafel van 5: 15 ÷ 5 = 3, dus 150 ÷ 5 = 30.\n\n🤔 **Reflectievraag:** Wat is 15 ÷ 5?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een deelsom met tientallen. Je moet het totaal aantal stickers eerlijk verdelen over de groepen.",
+          "berekening": [
+            "Deel 150 door 5: 150 ÷ 5",
+            "150 ÷ 5 = 30 stickers per groep"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Deel stickers | 150 ÷ 5 | **30 stickers** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel stickers krijgt elke groep?",
+            "tussenstappen": [
+              "Verdeel 150 over 5 groepen"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Totaal aantal stickers": "150",
+              "Aantal groepen": "5"
+            },
+            "tool": "Delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Verdeel de stickers",
+                "berekening": "150 ÷ 5",
+                "resultaat": "30",
+                "uitleg": "Deel het totaal aantal stickers door het aantal groepen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "stickers (aantal)",
+            "logica_check": "30 stickers per groep is logisch: 5 groepen × 30 = 150 stickers totaal",
+            "antwoord": "30 stickers"
+          }
+        }
+      }
+    ],
+    "sub_theme": "delen met tientallen"
+  },
+  {
+    "id": 6,
+    "title": "Voetbalwedstrijd Bezoekers",
+    "theme": "optellen",
+    "content": "Bij een voetbalwedstrijd komen 538 volwassenen en 287 kinderen kijken.",
+    "questions": [
+      {
+        "question": "Hoeveel bezoekers zijn er in totaal?",
+        "hint": "💡 Tip: Tel het aantal volwassenen en kinderen bij elkaar op!",
+        "options": [
+          {
+            "text": "715 bezoekers",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt een fout gemaakt bij het optellen. Controleer je berekening stap voor stap: 538 + 287 = ?\n\n🤔 **Reflectievraag:** Controleer of je alle cijfers goed onder elkaar hebt gezet.",
+            "visual_aid_query": null,
+            "remedial_basis_id": 101
+          },
+          {
+            "text": "815 bezoekers",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna goed! Je hebt waarschijnlijk een fout gemaakt bij het optellen. Controleer: 538 + 287 = ?\n\n🤔 **Reflectievraag:** 30 + 80 = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 101
+          },
+          {
+            "text": "825 bezoekers",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "835 bezoekers",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit er vlakbij! Controleer je optelling nog eens heel zorgvuldig: 538 + 287 = ?\n\n🤔 **Reflectievraag:** Controleer de enen: 8 + 7 = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 101
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een optelsom met getallen tot 1000. Je moet het aantal volwassenen en kinderen bij elkaar optellen.",
+          "berekening": [
+            "Tel volwassenen en kinderen op: 538 + 287",
+            "538 + 287 = 825 bezoekers"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Optellen | 538 + 287 | **825 bezoekers** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel bezoekers zijn er in totaal?",
+            "tussenstappen": [
+              "Tel het aantal volwassenen en kinderen bij elkaar op"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Aantal volwassenen": "538",
+              "Aantal kinderen": "287"
+            },
+            "tool": "Optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Tel bezoekers op",
+                "berekening": "538 + 287",
+                "resultaat": "825",
+                "uitleg": "Tel het aantal volwassenen en kinderen bij elkaar op"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "bezoekers (aantal)",
+            "logica_check": "825 bezoekers is logisch: ongeveer 500 + 300 = 800",
+            "antwoord": "825 bezoekers"
+          }
+        }
+      }
+    ],
+    "sub_theme": "optellen tot 1000"
+  },
+  {
+    "id": 7,
+    "title": "Zwemles Tijden",
+    "theme": "tijd",
+    "content": "De zwemles begint om 15:45 uur en duurt 50 minuten.",
+    "questions": [
+      {
+        "question": "Hoe laat is de zwemles afgelopen?",
+        "hint": "💡 Tip: Tel 50 minuten op bij 15:45. Als je over de 60 minuten heen gaat, wordt het een uur later!",
+        "options": [
+          {
+            "text": "16:25 uur",
+            "is_correct": false,
+            "error_type": "rekenfout_tijd",
+            "foutanalyse": "Je hebt niet goed gerekend met de minuten. Van 15:45 naar 16:00 is 15 minuten. Je moet er dan nog 35 minuten bij optellen.\n\n🤔 **Reflectievraag:** 45 + 50 = ? Hoeveel uur en minuten is dat?",
+            "visual_aid_query": "Tijd berekenen",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "16:35 uur",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "16:45 uur",
+            "is_correct": false,
+            "error_type": "rekenfout_tijd",
+            "foutanalyse": "Je hebt precies 1 uur erbij opgeteld in plaats van 50 minuten. 15:45 + 50 minuten = ?\n\n🤔 **Reflectievraag:** Hoeveel minuten is 50 minuten? Dat is 10 minuten minder dan een uur!",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "15:95 uur",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Let op! Er kunnen maar 60 minuten in een uur zitten. 95 minuten bestaat niet op de klok. 45 + 50 = 95 minuten, maar dat moet je omzetten naar uren en minuten.\n\n🤔 **Reflectievraag:** 95 minuten = 60 minuten + hoeveel minuten?",
+            "visual_aid_query": "Tijd omrekenen",
+            "remedial_basis_id": null
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een tijdberekening. Je moet minuten optellen bij een tijd. Let op dat als je over de 60 minuten komt, het een uur later wordt.",
+          "berekening": [
+            "Starttijd: 15:45 uur",
+            "Duur: 50 minuten",
+            "15:45 + 15 minuten = 16:00 uur (naar het hele uur)",
+            "16:00 + 35 minuten = 16:35 uur (rest van de 50 minuten)"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Naar heel uur | 15:45 + 15 min | 16:00 |",
+            "| 2. Rest erbij | 16:00 + 35 min | **16:35 uur** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoe laat is de zwemles afgelopen?",
+            "tussenstappen": [
+              "Tel 50 minuten op bij 15:45 uur"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Starttijd": "15:45 uur",
+              "Duur": "50 minuten"
+            },
+            "tool": "Tijd optellen",
+            "conversies": [
+              "60 minuten = 1 uur"
+            ]
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Tel minuten op",
+                "berekening": "15:45 + 50 minuten",
+                "resultaat": "16:35",
+                "uitleg": "45 + 50 = 95 minuten = 1 uur en 35 minuten, dus 16:35"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "tijd (uur:minuten)",
+            "logica_check": "16:35 uur is logisch: iets minder dan 1 uur later",
+            "antwoord": "16:35 uur"
+          }
+        }
+      }
+    ],
+    "sub_theme": "tijd berekenen"
+  },
+  {
+    "id": 8,
+    "title": "Chocoladerepen Verkopen",
+    "theme": "vermenigvuldigen",
+    "content": "Een winkel verkoopt dozen met chocoladerepen. Er worden 8 dozen verkocht. In elke doos zitten 120 chocoladerepen.",
+    "questions": [
+      {
+        "question": "Hoeveel chocoladerepen zijn er in totaal verkocht?",
+        "hint": "💡 Tip: Je moet 8 keer 120 rekenen. Denk aan de tafel van 8!",
+        "options": [
+          {
+            "text": "860 chocoladerepen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen. Controleer: 8 × 120 = ?\n\n🤔 **Reflectievraag:** 8 × 12 = 96, dus 8 × 120 = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 104
+          },
+          {
+            "text": "920 chocoladerepen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je vermenigvuldiging nog eens: 8 × 120 = ?\n\n🤔 **Reflectievraag:** Ken je de tafel van 8 goed? 8 × 12 = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 104
+          },
+          {
+            "text": "960 chocoladerepen",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "1000 chocoladerepen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt te veel gerekend. Controleer je vermenigvuldiging: 8 × 120 = ?\n\n🤔 **Reflectievraag:** 8 × 100 = 800 en 8 × 20 = 160. Samen is dat?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 104
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een vermenigvuldigingssom met honderdtallen. Je moet het aantal dozen vermenigvuldigen met het aantal chocoladerepen per doos.",
+          "berekening": [
+            "Vermenigvuldig: 8 × 120",
+            "8 × 120 = 8 × 100 + 8 × 20 = 800 + 160 = 960 chocoladerepen"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Vermenigvuldig | 8 × 120 | **960 chocoladerepen** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel chocoladerepen zijn er in totaal verkocht?",
+            "tussenstappen": [
+              "Vermenigvuldig het aantal dozen met het aantal repen per doos"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Aantal dozen": "8",
+              "Repen per doos": "120"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Vermenigvuldig",
+                "berekening": "8 × 120",
+                "resultaat": "960",
+                "uitleg": "8 dozen van elk 120 repen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "chocoladerepen (aantal)",
+            "logica_check": "960 chocoladerepen is logisch: 8 × 120 = 960",
+            "antwoord": "960 chocoladerepen"
+          }
+        }
+      }
+    ],
+    "sub_theme": "vermenigvuldigen met honderdtallen"
+  },
+  {
+    "id": 9,
+    "title": "Parkeerplaatsen Verdelen",
+    "theme": "delen",
+    "content": "Op een groot parkeerterrein zijn 280 parkeerplaatsen. Deze worden eerlijk verdeeld over 7 vakken.",
+    "questions": [
+      {
+        "question": "Hoeveel parkeerplaatsen komen er in elk vak?",
+        "hint": "💡 Tip: Je moet 280 parkeerplaatsen verdelen over 7 vakken. Dat doe je door te delen!",
+        "options": [
+          {
+            "text": "30 parkeerplaatsen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt een fout gemaakt bij het delen. Controleer: 280 ÷ 7 = ? Denk aan de tafel van 7: 28 ÷ 7 = 4, dus 280 ÷ 7 = 40.\n\n🤔 **Reflectievraag:** Wat is 28 ÷ 7?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "35 parkeerplaatsen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je deling nog eens: 280 ÷ 7 = ?\n\n🤔 **Reflectievraag:** 7 × 35 = 245, niet 280. Ken je de tafel van 7?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "40 parkeerplaatsen",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "45 parkeerplaatsen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt te veel gerekend. Controleer: 280 ÷ 7 = ?\n\n🤔 **Reflectievraag:** Controleer met vermenigvuldigen: 7 × 45 = 315, dat is meer dan 280!",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een deelsom met honderdtallen. Je moet het totaal aantal parkeerplaatsen eerlijk verdelen over de vakken.",
+          "berekening": [
+            "Deel 280 door 7: 280 ÷ 7",
+            "280 ÷ 7 = 40 parkeerplaatsen per vak"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Deel plaatsen | 280 ÷ 7 | **40 parkeerplaatsen** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel parkeerplaatsen komen er in elk vak?",
+            "tussenstappen": [
+              "Verdeel 280 over 7 vakken"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Totaal parkeerplaatsen": "280",
+              "Aantal vakken": "7"
+            },
+            "tool": "Delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Verdeel de parkeerplaatsen",
+                "berekening": "280 ÷ 7",
+                "resultaat": "40",
+                "uitleg": "Deel het totaal aantal parkeerplaatsen door het aantal vakken"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "parkeerplaatsen (aantal)",
+            "logica_check": "40 parkeerplaatsen per vak is logisch: 7 vakken × 40 = 280 plaatsen totaal",
+            "antwoord": "40 parkeerplaatsen"
+          }
+        }
+      }
+    ],
+    "sub_theme": "delen met honderdtallen"
+  },
+  {
+    "id": 10,
+    "title": "Museumbezoek Budget",
+    "theme": "aftrekken",
+    "content": "Een school heeft een budget van 650 euro voor een museumbezoek. Ze geven 385 euro uit aan entreegeld.",
+    "questions": [
+      {
+        "question": "Hoeveel euro blijft er over voor andere dingen?",
+        "hint": "💡 Tip: Je moet het uitgegeven bedrag aftrekken van het totale budget!",
+        "options": [
+          {
+            "text": "1035 euro",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt opgeteld in plaats van afgetrokken. 650 + 385 = 1035, maar de vraag vraagt hoeveel er nog over blijft. Dan moet je aftrekken: 650 - 385.\n\n🤔 **Reflectievraag:** Wat betekent 'blijft er over' in de vraag?",
+            "visual_aid_query": "Aftrekken visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "265 euro",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "275 euro",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna goed! Je hebt waarschijnlijk een fout gemaakt bij het aftrekken. Controleer: 650 - 385 = ?\n\n🤔 **Reflectievraag:** Controleer de tientallen: 50 - 80 kan niet, dus je moet lenen.",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "365 euro",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt een fout gemaakt bij het aftrekken. Controleer: 650 - 385 = ?\n\n🤔 **Reflectievraag:** Controleer je berekening stap voor stap.",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een aftreksom met getallen tot 1000. Je moet het uitgegeven bedrag aftrekken van het totale budget.",
+          "berekening": [
+            "Trek het uitgegeven bedrag af: 650 - 385",
+            "650 - 385 = 265 euro"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Aftrekken | 650 - 385 | **265 euro** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel euro blijft er over voor andere dingen?",
+            "tussenstappen": [
+              "Trek het uitgegeven bedrag af van het totale budget"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Totaal budget": "650 euro",
+              "Uitgegeven": "385 euro"
+            },
+            "tool": "Aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Trek uitgaven af",
+                "berekening": "650 - 385",
+                "resultaat": "265",
+                "uitleg": "Trek het uitgegeven bedrag af van het totale budget"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "euro (geld)",
+            "logica_check": "265 euro is logisch: minder dan het oorspronkelijke budget",
+            "antwoord": "265 euro"
+          }
+        }
+      }
+    ],
+    "sub_theme": "aftrekken tot 1000"
+  },
+  {
+    "id": 11,
+    "title": "Sportwedstrijd Begintijd",
+    "theme": "tijd",
+    "content": "Een sportwedstrijd is om 17:20 uur afgelopen. De wedstrijd duurde 1 uur en 35 minuten.",
+    "questions": [
+      {
+        "question": "Hoe laat is de wedstrijd begonnen?",
+        "hint": "💡 Tip: Nu moet je tijd terugtellen! Trek de duur af van de eindtijd.",
+        "options": [
+          {
+            "text": "15:45 uur",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "15:55 uur",
+            "is_correct": false,
+            "error_type": "rekenfout_tijd",
+            "foutanalyse": "Je hebt niet goed gerekend. Van 17:20 moet je 1 uur en 35 minuten aftrekken.\n\n🤔 **Reflectievraag:** 17:20 - 1 uur = 16:20. Dan moet je er nog 35 minuten afhalen.",
+            "visual_aid_query": "Tijd terugtellen",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "16:45 uur",
+            "is_correct": false,
+            "error_type": "rekenfout_tijd",
+            "foutanalyse": "Je hebt alleen het uur afgetrokken, maar de 35 minuten vergeten! 17:20 - 1 uur = 16:20, maar je moet er ook nog 35 minuten afhalen.\n\n🤔 **Reflectievraag:** 16:20 - 35 minuten = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "18:55 uur",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt de tijd opgeteld in plaats van afgetrokken. De wedstrijd is om 17:20 afgelopen, dus de begintijd was eerder, niet later!\n\n🤔 **Reflectievraag:** Als iets om 17:20 afgelopen is, is het dan eerder of later begonnen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een tijdberekening waarbij je terug moet rekenen. Je moet de duur aftrekken van de eindtijd om de begintijd te vinden.",
+          "berekening": [
+            "Eindtijd: 17:20 uur",
+            "Duur: 1 uur en 35 minuten",
+            "17:20 - 1 uur = 16:20",
+            "16:20 - 35 minuten = 15:45 uur"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Min 1 uur | 17:20 - 1 uur | 16:20 |",
+            "| 2. Min 35 min | 16:20 - 35 min | **15:45 uur** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoe laat is de wedstrijd begonnen?",
+            "tussenstappen": [
+              "Trek de duur af van de eindtijd"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Eindtijd": "17:20 uur",
+              "Duur": "1 uur en 35 minuten"
+            },
+            "tool": "Tijd aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Trek het uur af",
+                "berekening": "17:20 - 1 uur",
+                "resultaat": "16:20",
+                "uitleg": "Trek eerst het hele uur af"
+              },
+              {
+                "stap": "Trek de minuten af",
+                "berekening": "16:20 - 35 minuten",
+                "resultaat": "15:45",
+                "uitleg": "Trek de 35 minuten af (20 - 35 = -15, lenen van uur: 60 + 20 - 35 = 45)"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "tijd (uur:minuten)",
+            "logica_check": "15:45 uur is logisch: ongeveer 1,5 uur eerder dan 17:20",
+            "antwoord": "15:45 uur"
+          }
+        }
+      }
+    ],
+    "sub_theme": "tijd terugrekenen"
+  },
+  {
+    "id": 12,
+    "title": "Fruit Inpakken",
+    "theme": "vermenigvuldigen",
+    "content": "In een fruitstal worden appels in kratjes verpakt. Er worden 9 kratjes gevuld. In elk kratje passen 180 appels.",
+    "questions": [
+      {
+        "question": "Hoeveel appels worden er in totaal verpakt?",
+        "hint": "💡 Tip: Je moet 9 keer 180 rekenen. Denk aan de tafel van 9!",
+        "options": [
+          {
+            "text": "1520 appels",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen. Controleer: 9 × 180 = ?\n\n🤔 **Reflectievraag:** 9 × 18 = 162, dus 9 × 180 = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 104
+          },
+          {
+            "text": "1620 appels",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "1720 appels",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je vermenigvuldiging nog eens: 9 × 180 = ?\n\n🤔 **Reflectievraag:** Ken je de tafel van 9 goed? 9 × 18 = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 104
+          },
+          {
+            "text": "1800 appels",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Let op! Je hebt 9 × 200 gerekend in plaats van 9 × 180. Controleer: 9 × 180 = ?\n\n🤔 **Reflectievraag:** 9 × 100 = 900 en 9 × 80 = 720. Samen is dat?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 104
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een vermenigvuldigingssom met honderdtallen. Je moet het aantal kratjes vermenigvuldigen met het aantal appels per kratje.",
+          "berekening": [
+            "Vermenigvuldig: 9 × 180",
+            "9 × 180 = 9 × 100 + 9 × 80 = 900 + 720 = 1620 appels"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Vermenigvuldig | 9 × 180 | **1620 appels** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel appels worden er in totaal verpakt?",
+            "tussenstappen": [
+              "Vermenigvuldig het aantal kratjes met het aantal appels per kratje"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Aantal kratjes": "9",
+              "Appels per kratje": "180"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Vermenigvuldig",
+                "berekening": "9 × 180",
+                "resultaat": "1620",
+                "uitleg": "9 kratjes van elk 180 appels"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "appels (aantal)",
+            "logica_check": "1620 appels is logisch: 9 × 180 = 1620",
+            "antwoord": "1620 appels"
+          }
+        }
+      }
+    ],
+    "sub_theme": "vermenigvuldigen met honderdtallen"
+  },
+  {
+    "id": 13,
+    "title": "Schaatswedstrijd Rondes",
+    "theme": "optellen",
+    "content": "Bij een schaatswedstrijd schaatst Lars de eerste ronde in 124 seconden. De tweede ronde doet hij in 138 seconden.",
+    "questions": [
+      {
+        "question": "Hoeveel seconden heeft Lars in totaal geschaatst?",
+        "hint": "💡 Tip: Tel de tijden van beide rondes bij elkaar op!",
+        "options": [
+          {
+            "text": "252 seconden",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt een fout gemaakt bij het optellen. Controleer: 124 + 138 = ?\n\n🤔 **Reflectievraag:** Controleer de enen: 4 + 8 = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 101
+          },
+          {
+            "text": "262 seconden",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "272 seconden",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna goed! Controleer je optelling nog eens: 124 + 138 = ?\n\n🤔 **Reflectievraag:** 20 + 30 = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 101
+          },
+          {
+            "text": "14 seconden",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt afgetrokken in plaats van opgeteld. 138 - 124 = 14, maar de vraag vraagt naar de totale tijd. Dan moet je optellen: 124 + 138.\n\n🤔 **Reflectievraag:** Wat betekent 'in totaal' in de vraag?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een optelsom met getallen tot 1000. Je moet de tijden van beide rondes bij elkaar optellen.",
+          "berekening": [
+            "Tel de tijden op: 124 + 138",
+            "124 + 138 = 262 seconden"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Optellen | 124 + 138 | **262 seconden** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel seconden heeft Lars in totaal geschaatst?",
+            "tussenstappen": [
+              "Tel de tijden van beide rondes bij elkaar op"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Eerste ronde": "124 seconden",
+              "Tweede ronde": "138 seconden"
+            },
+            "tool": "Optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Tel tijden op",
+                "berekening": "124 + 138",
+                "resultaat": "262",
+                "uitleg": "Tel de tijden van beide rondes bij elkaar op"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "seconden (tijd)",
+            "logica_check": "262 seconden is logisch: ongeveer 120 + 140 = 260",
+            "antwoord": "262 seconden"
+          }
+        }
+      }
+    ],
+    "sub_theme": "optellen tot 1000"
+  },
+  {
+    "id": 14,
+    "title": "Ballenvoorraad School",
+    "theme": "delen",
+    "content": "De school heeft 360 ballen gekocht voor de gymles. Deze moeten eerlijk verdeeld worden over 9 klassen.",
+    "questions": [
+      {
+        "question": "Hoeveel ballen krijgt elke klas?",
+        "hint": "💡 Tip: Je moet 360 ballen verdelen over 9 klassen. Dat doe je door te delen!",
+        "options": [
+          {
+            "text": "30 ballen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt een fout gemaakt bij het delen. Controleer: 360 ÷ 9 = ? Denk aan de tafel van 9: 36 ÷ 9 = 4, dus 360 ÷ 9 = 40.\n\n🤔 **Reflectievraag:** Wat is 36 ÷ 9?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "35 ballen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je deling nog eens: 360 ÷ 9 = ?\n\n🤔 **Reflectievraag:** 9 × 35 = 315, niet 360. Probeer nog eens!",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "40 ballen",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "45 ballen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt te veel gerekend. Controleer: 360 ÷ 9 = ?\n\n🤔 **Reflectievraag:** Controleer met vermenigvuldigen: 9 × 45 = 405, dat is meer dan 360!",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een deelsom met honderdtallen. Je moet het totaal aantal ballen eerlijk verdelen over de klassen.",
+          "berekening": [
+            "Deel 360 door 9: 360 ÷ 9",
+            "360 ÷ 9 = 40 ballen per klas"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Deel ballen | 360 ÷ 9 | **40 ballen** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel ballen krijgt elke klas?",
+            "tussenstappen": [
+              "Verdeel 360 over 9 klassen"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Totaal aantal ballen": "360",
+              "Aantal klassen": "9"
+            },
+            "tool": "Delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Verdeel de ballen",
+                "berekening": "360 ÷ 9",
+                "resultaat": "40",
+                "uitleg": "Deel het totaal aantal ballen door het aantal klassen"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "ballen (aantal)",
+            "logica_check": "40 ballen per klas is logisch: 9 klassen × 40 = 360 ballen totaal",
+            "antwoord": "40 ballen"
+          }
+        }
+      }
+    ],
+    "sub_theme": "delen met honderdtallen"
+  },
+  {
+    "id": 15,
+    "title": "Concert Kaartverkoop",
+    "theme": "aftrekken",
+    "content": "Voor een schoolconcert zijn 750 kaarten beschikbaar. Er zijn al 482 kaarten verkocht.",
+    "questions": [
+      {
+        "question": "Hoeveel kaarten zijn er nog te koop?",
+        "hint": "💡 Tip: Je moet het aantal verkochte kaarten aftrekken van het totaal!",
+        "options": [
+          {
+            "text": "1232 kaarten",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt opgeteld in plaats van afgetrokken. 750 + 482 = 1232, maar de vraag vraagt hoeveel kaarten er nog te koop zijn. Dan moet je aftrekken: 750 - 482.\n\n🤔 **Reflectievraag:** Wat betekent 'nog te koop' in de vraag?",
+            "visual_aid_query": "Aftrekken visualisatie",
+            "remedial_basis_id": null
+          },
+          {
+            "text": "268 kaarten",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "278 kaarten",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna goed! Je hebt waarschijnlijk een fout gemaakt bij het aftrekken. Controleer: 750 - 482 = ?\n\n🤔 **Reflectievraag:** Controleer de tientallen goed.",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "368 kaarten",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt een fout gemaakt bij het aftrekken. Controleer: 750 - 482 = ?\n\n🤔 **Reflectievraag:** Controleer de honderden: 700 - 400 = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          }
+        ],
+        "extra_info": {
+          "concept": "Dit is een aftreksom met getallen tot 1000. Je moet het aantal verkochte kaarten aftrekken van het totaal.",
+          "berekening": [
+            "Trek het aantal verkochte kaarten af: 750 - 482",
+            "750 - 482 = 268 kaarten"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Aftrekken | 750 - 482 | **268 kaarten** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "Hoeveel kaarten zijn er nog te koop?",
+            "tussenstappen": [
+              "Trek het aantal verkochte kaarten af van het totaal"
+            ]
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Totaal kaarten": "750",
+              "Verkocht": "482"
+            },
+            "tool": "Aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Trek verkochte kaarten af",
+                "berekening": "750 - 482",
+                "resultaat": "268",
+                "uitleg": "Trek het aantal verkochte kaarten af van het totaal"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "kaarten (aantal)",
+            "logica_check": "268 kaarten is logisch: minder dan het oorspronkelijke aantal",
+            "antwoord": "268 kaarten"
+          }
+        }
+      }
+    ],
+    "sub_theme": "aftrekken tot 1000"
+  }
+]
