@@ -3847,5 +3847,523 @@
       }
     ],
     "sub_theme": "meerstaps vermenigvuldigen"
+  },
+  {
+    "id": 44,
+    "title": "Kale som: aftrekken",
+    "theme": "aftrekken",
+    "content": "Bereken:",
+    "questions": [
+      {
+        "question": "46 - 18 = ?",
+        "hint": "💡 Tip: Je kunt eerst 46 - 10 = 36 doen, en dan nog 36 - 8 = 28",
+        "options": [
+          {
+            "text": "28",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "32",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt een rekenfout gemaakt bij het aftrekken. Controleer: 46 - 18 = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "38",
+            "is_correct": false,
+            "error_type": "rekenfout_tiental",
+            "foutanalyse": "Je hebt alleen het tiental afgetrokken (46 - 10 = 36), maar niet de 8. Je moet 46 - 18 berekenen.",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "64",
+            "is_correct": false,
+            "error_type": "verkeerde_bewerking",
+            "foutanalyse": "Je hebt opgeteld in plaats van afgetrokken (46 + 18 = 64). Let op het minteken!",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
+        ],
+        "extra_info": {
+          "concept": "Aftrekken met overschrijding: je trekt een getal af dat groter is dan het eental.",
+          "berekening": [
+            "46 - 18 = 28",
+            "Of stap voor stap:",
+            "46 - 10 = 36",
+            "36 - 8 = 28"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Trek af | 46 - 18 | **28** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "46 - 18 = ?",
+            "tussenstappen": []
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Getal 1": "46",
+              "Getal 2": "18"
+            },
+            "tool": "Aftrekken",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Trek af",
+                "berekening": "46 - 18",
+                "resultaat": "28",
+                "uitleg": "Trek 18 af van 46"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "getal",
+            "logica_check": "28 is logisch: 46 - 18 = 28",
+            "antwoord": "28"
+          }
+        }
+      }
+    ],
+    "sub_theme": "kale som"
+  },
+  {
+    "id": 45,
+    "title": "Kale som: optellen",
+    "theme": "optellen",
+    "content": "Bereken:",
+    "questions": [
+      {
+        "question": "67 + 25 = ?",
+        "hint": "💡 Tip: Je kunt eerst 67 + 20 = 87 doen, en dan nog 87 + 5 = 92",
+        "options": [
+          {
+            "text": "92",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "82",
+            "is_correct": false,
+            "error_type": "rekenfout_tiental",
+            "foutanalyse": "Je hebt een fout gemaakt bij het optellen van de tientallen. Controleer: 60 + 20 = 80, en 7 + 5 = 12, dus 80 + 12 = 92.",
+            "visual_aid_query": null,
+            "remedial_basis_id": 101
+          },
+          {
+            "text": "89",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit dichtbij, maar er is een rekenfout. Controleer: 67 + 25 = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 101
+          },
+          {
+            "text": "42",
+            "is_correct": false,
+            "error_type": "verkeerde_bewerking",
+            "foutanalyse": "Je hebt afgetrokken in plaats van opgeteld (67 - 25 = 42). Let op het plusteken!",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          }
+        ],
+        "extra_info": {
+          "concept": "Optellen met overschrijding: de eentallen geven samen meer dan 10.",
+          "berekening": [
+            "67 + 25 = 92",
+            "Of stap voor stap:",
+            "67 + 20 = 87",
+            "87 + 5 = 92"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Tel op | 67 + 25 | **92** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "67 + 25 = ?",
+            "tussenstappen": []
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Getal 1": "67",
+              "Getal 2": "25"
+            },
+            "tool": "Optellen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Tel op",
+                "berekening": "67 + 25",
+                "resultaat": "92",
+                "uitleg": "Tel 25 op bij 67"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "getal",
+            "logica_check": "92 is logisch: 67 + 25 = 92",
+            "antwoord": "92"
+          }
+        }
+      }
+    ],
+    "sub_theme": "kale som"
+  },
+  {
+    "id": 46,
+    "title": "Kale som: vermenigvuldigen",
+    "theme": "vermenigvuldigen",
+    "content": "Bereken:",
+    "questions": [
+      {
+        "question": "7 × 8 = ?",
+        "hint": "💡 Tip: Denk aan de tafel van 7 of de tafel van 8!",
+        "options": [
+          {
+            "text": "56",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "54",
+            "is_correct": false,
+            "error_type": "verwarring_tafel",
+            "foutanalyse": "Dat is 6 × 9, niet 7 × 8. Controleer de tafel van 7 of 8.",
+            "visual_aid_query": "Tafel van 7 en 8",
+            "remedial_basis_id": 104
+          },
+          {
+            "text": "49",
+            "is_correct": false,
+            "error_type": "verwarring_tafel",
+            "foutanalyse": "Dat is 7 × 7, niet 7 × 8. Je bent één stapje te weinig.",
+            "visual_aid_query": "Tafel van 7",
+            "remedial_basis_id": 104
+          },
+          {
+            "text": "64",
+            "is_correct": false,
+            "error_type": "verwarring_tafel",
+            "foutanalyse": "Dat is 8 × 8, niet 7 × 8. Je hebt 8 × 8 gedaan in plaats van 7 × 8.",
+            "visual_aid_query": "Tafel van 8",
+            "remedial_basis_id": 104
+          }
+        ],
+        "extra_info": {
+          "concept": "Vermenigvuldigen: de tafel van 7 en 8.",
+          "berekening": [
+            "7 × 8 = 56"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Vermenigvuldig | 7 × 8 | **56** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "7 × 8 = ?",
+            "tussenstappen": []
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Getal 1": "7",
+              "Getal 2": "8"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Vermenigvuldig",
+                "berekening": "7 × 8",
+                "resultaat": "56",
+                "uitleg": "Vermenigvuldig 7 met 8"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "getal",
+            "logica_check": "56 is logisch: 7 × 8 = 56",
+            "antwoord": "56"
+          }
+        }
+      }
+    ],
+    "sub_theme": "kale som"
+  },
+  {
+    "id": 47,
+    "title": "Kale som: delen",
+    "theme": "delen",
+    "content": "Bereken:",
+    "questions": [
+      {
+        "question": "48 ÷ 6 = ?",
+        "hint": "💡 Tip: Denk aan de tafel van 6. Hoeveel keer past 6 in 48?",
+        "options": [
+          {
+            "text": "8",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "7",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Maar 6 × 7 = 42, niet 48. Controleer: 6 × ? = 48",
+            "visual_aid_query": "Tafel van 6",
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "6",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt het getal waar je door deelt gegeven. Je moet berekenen: hoeveel keer past 6 in 48?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "9",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Maar 6 × 9 = 54, niet 48. Controleer: 6 × ? = 48",
+            "visual_aid_query": "Tafel van 6",
+            "remedial_basis_id": 103
+          }
+        ],
+        "extra_info": {
+          "concept": "Delen: hoeveel keer past 6 in 48?",
+          "berekening": [
+            "48 ÷ 6 = 8",
+            "Controle: 6 × 8 = 48"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Deel | 48 ÷ 6 | **8** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "48 ÷ 6 = ?",
+            "tussenstappen": []
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Getal 1": "48",
+              "Getal 2": "6"
+            },
+            "tool": "Delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Deel",
+                "berekening": "48 ÷ 6",
+                "resultaat": "8",
+                "uitleg": "Deel 48 door 6"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "getal",
+            "logica_check": "8 is logisch: 48 ÷ 6 = 8",
+            "antwoord": "8"
+          }
+        }
+      }
+    ],
+    "sub_theme": "kale som"
+  },
+  {
+    "id": 48,
+    "title": "Kale som: vermenigvuldigen",
+    "theme": "vermenigvuldigen",
+    "content": "Bereken:",
+    "questions": [
+      {
+        "question": "9 × 6 = ?",
+        "hint": "💡 Tip: Denk aan de tafel van 9 of de tafel van 6!",
+        "options": [
+          {
+            "text": "54",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "56",
+            "is_correct": false,
+            "error_type": "verwarring_tafel",
+            "foutanalyse": "Dat is 7 × 8, niet 9 × 6. Controleer de tafel van 9 of 6.",
+            "visual_aid_query": "Tafel van 9 en 6",
+            "remedial_basis_id": 104
+          },
+          {
+            "text": "45",
+            "is_correct": false,
+            "error_type": "verwarring_tafel",
+            "foutanalyse": "Dat is 9 × 5, niet 9 × 6. Je bent één stapje te weinig.",
+            "visual_aid_query": "Tafel van 9",
+            "remedial_basis_id": 104
+          },
+          {
+            "text": "63",
+            "is_correct": false,
+            "error_type": "verwarring_tafel",
+            "foutanalyse": "Dat is 9 × 7, niet 9 × 6. Je bent één stapje te ver.",
+            "visual_aid_query": "Tafel van 9",
+            "remedial_basis_id": 104
+          }
+        ],
+        "extra_info": {
+          "concept": "Vermenigvuldigen: de tafel van 9 en 6.",
+          "berekening": [
+            "9 × 6 = 54"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Vermenigvuldig | 9 × 6 | **54** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "9 × 6 = ?",
+            "tussenstappen": []
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Getal 1": "9",
+              "Getal 2": "6"
+            },
+            "tool": "Vermenigvuldigen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Vermenigvuldig",
+                "berekening": "9 × 6",
+                "resultaat": "54",
+                "uitleg": "Vermenigvuldig 9 met 6"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "getal",
+            "logica_check": "54 is logisch: 9 × 6 = 54",
+            "antwoord": "54"
+          }
+        }
+      }
+    ],
+    "sub_theme": "kale som"
+  },
+  {
+    "id": 49,
+    "title": "Kale som: delen",
+    "theme": "delen",
+    "content": "Bereken:",
+    "questions": [
+      {
+        "question": "72 ÷ 8 = ?",
+        "hint": "💡 Tip: Denk aan de tafel van 8. Hoeveel keer past 8 in 72?",
+        "options": [
+          {
+            "text": "9",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "8",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Maar 8 × 8 = 64, niet 72. Controleer: 8 × ? = 72",
+            "visual_aid_query": "Tafel van 8",
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "7",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit te laag. 8 × 7 = 56, niet 72. Controleer: 8 × ? = 72",
+            "visual_aid_query": "Tafel van 8",
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "10",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit te hoog. 8 × 10 = 80, niet 72. Controleer: 8 × ? = 72",
+            "visual_aid_query": "Tafel van 8",
+            "remedial_basis_id": 103
+          }
+        ],
+        "extra_info": {
+          "concept": "Delen: hoeveel keer past 8 in 72?",
+          "berekening": [
+            "72 ÷ 8 = 9",
+            "Controle: 8 × 9 = 72"
+          ],
+          "berekening_tabel": [
+            "| Stap | Bewerking | Uitkomst |",
+            "|------|-----------|----------|",
+            "| 1. Deel | 72 ÷ 8 | **9** ⭐ |"
+          ]
+        },
+        "lova": {
+          "stap1_lezen": {
+            "ruis": [],
+            "hoofdvraag": "72 ÷ 8 = ?",
+            "tussenstappen": []
+          },
+          "stap2_ordenen": {
+            "relevante_getallen": {
+              "Getal 1": "72",
+              "Getal 2": "8"
+            },
+            "tool": "Delen",
+            "conversies": []
+          },
+          "stap3_vormen": {
+            "bewerkingen": [
+              {
+                "stap": "Deel",
+                "berekening": "72 ÷ 8",
+                "resultaat": "9",
+                "uitleg": "Deel 72 door 8"
+              }
+            ]
+          },
+          "stap4_antwoorden": {
+            "verwachte_eenheid": "getal",
+            "logica_check": "9 is logisch: 72 ÷ 8 = 9",
+            "antwoord": "9"
+          }
+        }
+      }
+    ],
+    "sub_theme": "kale som"
   }
 ]
