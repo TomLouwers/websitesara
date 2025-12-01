@@ -1089,197 +1089,175 @@
     "id": 13,
     "title": "Fruit wegen",
     "theme": "gewicht",
-    "content": "Een appel weegt 200 gram. Een melon weegt 2 kilogram.",
+    "content": "Een appel weegt 100 gram. Een peer weegt 150 gram.",
     "questions": [
       {
-        "question": "Hoeveel appels wegen samen ongeveer even veel als de melon?",
-        "hint": "💡 Tip: 1 kilogram = 1000 gram. Bereken eerst hoeveel gram de melon weegt!",
+        "question": "Hoeveel gram wegen de appel en de peer samen?",
+        "hint": "💡 Tip: Tel de grammen bij elkaar op!",
         "options": [
           {
-            "text": "2 appels",
+            "text": "50 gram",
             "is_correct": false,
             "error_type": "conceptfout",
-            "foutanalyse": "Je hebt niet omgerekend. 2 appels wegen 400 gram, maar de melon weegt 2 kilogram = 2000 gram.\n\n🤔 **Reflectievraag:** Hoeveel gram is 1 kilogram?",
-            "visual_aid_query": "Kilogram en gram visualisatie",
-            "remedial_basis_id": null
-          },
-          {
-            "text": "5 appels",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna! Controleer je berekening: 2000 gram ÷ 200 gram = ?\n\n🤔 **Reflectievraag:** Wat is 2000 gedeeld door 200?",
-            "visual_aid_query": null,
-            "remedial_basis_id": 103
-          },
-          {
-            "text": "20 appels",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Te veel! Je hebt waarschijnlijk 2000 door 100 gedeeld in plaats van door 200.\n\n🤔 **Reflectievraag:** Hoeveel gram weegt één appel?",
+            "foutanalyse": "Je hebt afgetrokken in plaats van opgeteld. Tel de grammen bij elkaar op: 100 + 150.\n\n🤔 **Reflectievraag:** Als je twee dingen weegt, wordt het totaal dan meer of minder?",
             "visual_aid_query": null,
             "remedial_basis_id": null
           },
           {
-            "text": "10 appels",
+            "text": "200 gram",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je optelling: 100 + 150 = ?\n\n🤔 **Reflectievraag:** Wat is 100 + 100?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 101
+          },
+          {
+            "text": "150 gram",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Dat is alleen het gewicht van de peer. Je moet beide vruchten optellen: 100 + 150.\n\n🤔 **Reflectievraag:** Hoeveel weegt de appel?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "250 gram",
             "is_correct": true,
             "foutanalyse": ""
           }
         ],
         "extra_info": {
-          "concept": "Dit is een gewichtssom: je moet kilogram omrekenen naar gram en dan delen.",
+          "concept": "Dit is een optelsom met gewicht: tel de grammen bij elkaar op.",
           "berekening": [
-            "2 kilogram = 2 × 1000 = 2000 gram",
-            "2000 gram ÷ 200 gram per appel = 10 appels"
+            "100 gram + 150 gram = 250 gram"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Reken om naar gram | 2 kg × 1000 | 2000 gram |",
-            "| 2. Deel door gewicht appel | 2000 ÷ 200 | **10 appels** ⭐ |"
+            "| 1. Tel gewichten op | 100 + 150 | **250 gram** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
-            "hoofdvraag": "Hoeveel appels wegen samen even veel als de melon?",
+            "hoofdvraag": "Hoeveel gram wegen ze samen?",
             "tussenstappen": [
-              "Reken 2 kilogram om naar gram",
-              "Deel door het gewicht van 1 appel"
+              "Tel 100 gram en 150 gram op"
             ]
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Gewicht appel": "200 gram",
-              "Gewicht melon": "2 kilogram"
+              "Appel": "100 gram",
+              "Peer": "150 gram"
             },
-            "tool": "Delen",
-            "conversies": [
-              "1 kilogram = 1000 gram"
-            ]
+            "tool": "Optellen",
+            "conversies": []
           },
           "stap3_vormen": {
             "bewerkingen": [
               {
-                "stap": "Reken kilogram om naar gram",
-                "berekening": "2 × 1000",
-                "resultaat": "2000 gram",
-                "uitleg": "Vermenigvuldig kilogram met 1000"
-              },
-              {
-                "stap": "Deel door gewicht appel",
-                "berekening": "2000 ÷ 200",
-                "resultaat": "10",
-                "uitleg": "Deel het totale gewicht door het gewicht per appel"
+                "stap": "Tel gewichten op",
+                "berekening": "100 + 150",
+                "resultaat": "250",
+                "uitleg": "Tel de grammen van beide vruchten bij elkaar"
               }
             ]
           },
           "stap4_antwoorden": {
-            "verwachte_eenheid": "appels (aantal)",
-            "logica_check": "10 appels is logisch: 10 × 200 gram = 2000 gram = 2 kg",
-            "antwoord": "10 appels"
+            "verwachte_eenheid": "gram",
+            "logica_check": "250 gram is logisch: meer dan 100 en meer dan 150",
+            "antwoord": "250 gram"
           }
         }
       }
     ],
-    "sub_theme": "gewicht meten en omrekenen"
+    "sub_theme": "gewicht optellen"
   },
   {
     "id": 14,
     "title": "Limonade schenken",
     "theme": "inhoud",
-    "content": "In een fles zit 1 liter limonade. Een glas bevat 200 milliliter.",
+    "content": "In een grote fles zitten 10 glazen limonade. Papa schenkt 4 glazen in.",
     "questions": [
       {
-        "question": "Hoeveel glazen kun je vullen met 1 fles?",
-        "hint": "💡 Tip: 1 liter = 1000 milliliter. Bereken hoeveel keer 200 ml in 1000 ml past!",
+        "question": "Hoeveel glazen zitten er nog in de fles?",
+        "hint": "💡 Tip: Trek de ingeschonken glazen af van het totaal!",
         "options": [
           {
-            "text": "2 glazen",
+            "text": "14 glazen",
             "is_correct": false,
             "error_type": "conceptfout",
-            "foutanalyse": "Je hebt niet omgerekend. 1 liter = 1000 milliliter, niet 400 milliliter.\n\n🤔 **Reflectievraag:** Hoeveel milliliter is 1 liter?",
-            "visual_aid_query": "Liter en milliliter visualisatie",
+            "foutanalyse": "Je hebt opgeteld. Papa schenkt glazen UIT, dus er blijven er minder over. Trek af: 10 - 4.\n\n🤔 **Reflectievraag:** Als je iets uit een fles schenkt, zit er dan meer of minder in?",
+            "visual_aid_query": null,
             "remedial_basis_id": null
           },
           {
             "text": "4 glazen",
             "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna! Controleer je berekening: 1000 ml ÷ 200 ml = ?\n\n🤔 **Reflectievraag:** Wat is 1000 gedeeld door 200?",
-            "visual_aid_query": null,
-            "remedial_basis_id": 103
-          },
-          {
-            "text": "10 glazen",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Te veel! Je hebt waarschijnlijk 1000 door 100 gedeeld in plaats van door 200.\n\n🤔 **Reflectievraag:** Hoeveel milliliter past er in één glas?",
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Dat is het aantal glazen dat papa INschenkt. Je moet berekenen hoeveel er nog IN de fles zitten: 10 - 4.\n\n🤔 **Reflectievraag:** Hoeveel glazen zaten er eerst in de fles?",
             "visual_aid_query": null,
             "remedial_basis_id": null
           },
           {
-            "text": "5 glazen",
+            "text": "7 glazen",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Bijna! Controleer je aftrekking: 10 - 4 = ?\n\n🤔 **Reflectievraag:** Wat is 10 - 5?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 102
+          },
+          {
+            "text": "6 glazen",
             "is_correct": true,
             "foutanalyse": ""
           }
         ],
         "extra_info": {
-          "concept": "Dit is een inhoudsom: je moet liter omrekenen naar milliliter en dan delen.",
+          "concept": "Dit is een aftreksom met inhoud: trek af wat eruit is geschonken.",
           "berekening": [
-            "1 liter = 1000 milliliter",
-            "1000 ml ÷ 200 ml per glas = 5 glazen"
+            "10 glazen - 4 glazen = 6 glazen"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Reken om naar milliliter | 1 liter × 1000 | 1000 ml |",
-            "| 2. Deel door inhoud glas | 1000 ÷ 200 | **5 glazen** ⭐ |"
+            "| 1. Trek glazen af | 10 - 4 | **6 glazen** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
-            "hoofdvraag": "Hoeveel glazen kun je vullen met 1 fles?",
+            "hoofdvraag": "Hoeveel glazen zitten er nog in de fles?",
             "tussenstappen": [
-              "Reken 1 liter om naar milliliter",
-              "Deel door de inhoud van 1 glas"
+              "Trek 4 af van 10"
             ]
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Inhoud fles": "1 liter",
-              "Inhoud glas": "200 milliliter"
+              "Glazen in fles": "10",
+              "Ingeschonken glazen": "4"
             },
-            "tool": "Delen",
-            "conversies": [
-              "1 liter = 1000 milliliter"
-            ]
+            "tool": "Aftrekken",
+            "conversies": []
           },
           "stap3_vormen": {
             "bewerkingen": [
               {
-                "stap": "Reken liter om naar milliliter",
-                "berekening": "1 × 1000",
-                "resultaat": "1000 ml",
-                "uitleg": "Vermenigvuldig liter met 1000"
-              },
-              {
-                "stap": "Deel door inhoud glas",
-                "berekening": "1000 ÷ 200",
-                "resultaat": "5",
-                "uitleg": "Deel de totale inhoud door de inhoud per glas"
+                "stap": "Trek glazen af",
+                "berekening": "10 - 4",
+                "resultaat": "6",
+                "uitleg": "Trek de ingeschonken glazen af van het totaal"
               }
             ]
           },
           "stap4_antwoorden": {
-            "verwachte_eenheid": "glazen (aantal)",
-            "logica_check": "5 glazen is logisch: 5 × 200 ml = 1000 ml = 1 liter",
-            "antwoord": "5 glazen"
+            "verwachte_eenheid": "glazen",
+            "logica_check": "6 glazen is logisch: minder dan 10",
+            "antwoord": "6 glazen"
           }
         }
       }
     ],
-    "sub_theme": "inhoud meten en omrekenen"
+    "sub_theme": "inhoud aftrekken"
   },
   {
     "id": 15,
@@ -1645,11 +1623,11 @@
     "id": 19,
     "title": "Stickers verdelen",
     "theme": "delen",
-    "content": "Mia heeft 24 stickers. Ze geeft ze eerlijk aan 6 vriendinnen.",
+    "content": "Mia heeft 20 stickers. Ze geeft ze eerlijk aan 4 vriendinnen.",
     "questions": [
       {
         "question": "Hoeveel stickers krijgt elke vriendin?",
-        "hint": "💡 Tip: Deel 24 stickers door 6 vriendinnen!",
+        "hint": "💡 Tip: Deel 20 stickers door 4 vriendinnen!",
         "options": [
           {
             "text": "6 stickers",
@@ -1676,7 +1654,7 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "4 stickers",
+            "text": "5 stickers",
             "is_correct": true,
             "foutanalyse": ""
           }
@@ -1726,17 +1704,17 @@
         }
       }
     ],
-    "sub_theme": "delen tafel van 6"
+    "sub_theme": "delen tafel van 4"
   },
   {
     "id": 20,
     "title": "Rijen stoelen",
     "theme": "delen",
-    "content": "In de zaal staan 40 stoelen. Ze worden verdeeld over 8 rijen.",
+    "content": "In de zaal staan 50 stoelen. Ze worden verdeeld over 10 rijen.",
     "questions": [
       {
         "question": "Hoeveel stoelen staan er in elke rij?",
-        "hint": "💡 Tip: Verdeel 40 stoelen over 8 rijen!",
+        "hint": "💡 Tip: Verdeel 50 stoelen over 10 rijen!",
         "options": [
           {
             "text": "8 stoelen",
@@ -1813,7 +1791,7 @@
         }
       }
     ],
-    "sub_theme": "delen tafel van 8"
+    "sub_theme": "delen tafel van 10"
   },
   {
     "id": 21,
@@ -2239,7 +2217,7 @@
     "id": 26,
     "title": "Eieren in dozen",
     "theme": "vermenigvuldigen",
-    "content": "In een doos zitten 6 eieren. De boer heeft 7 dozen.",
+    "content": "In een doos zitten 6 eieren. De boer heeft 3 dozen.",
     "questions": [
       {
         "question": "Hoeveel eieren heeft de boer in totaal?",
@@ -2270,7 +2248,7 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "42 eieren",
+            "text": "18 eieren",
             "is_correct": true,
             "foutanalyse": ""
           }
@@ -2320,7 +2298,7 @@
         }
       }
     ],
-    "sub_theme": "tafel van 7"
+    "sub_theme": "tafel van 3"
   },
   {
     "id": 27,
@@ -3226,1205 +3204,5 @@
       }
     ],
     "sub_theme": "tijd berekenen"
-  },
-  {
-    "id": 38,
-    "title": "Touw meten",
-    "theme": "lengte",
-    "content": "Een som over lengte.",
-    "questions": [
-      {
-        "question": "Bereken de lengte.",
-        "hint": "💡 Tip: Gebruik de juiste eenheid!",
-        "options": [
-          {
-            "text": "10",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "100",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "50",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "25",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Check nog eens!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "lengte",
-          "berekening": [
-            "Berekening"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken | Som | **100** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Bereken lengte",
-            "tussenstappen": []
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "lengte",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": []
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "lengte",
-            "logica_check": "Logisch",
-            "antwoord": "100"
-          }
-        }
-      }
-    ],
-    "sub_theme": "lengte berekenen"
-  },
-  {
-    "id": 39,
-    "title": "Springen",
-    "theme": "lengte",
-    "content": "Een som over lengte.",
-    "questions": [
-      {
-        "question": "Bereken de lengte.",
-        "hint": "💡 Tip: Gebruik de juiste eenheid!",
-        "options": [
-          {
-            "text": "10",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "100",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "50",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "25",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Check nog eens!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "lengte",
-          "berekening": [
-            "Berekening"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken | Som | **100** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Bereken lengte",
-            "tussenstappen": []
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "lengte",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": []
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "lengte",
-            "logica_check": "Logisch",
-            "antwoord": "100"
-          }
-        }
-      }
-    ],
-    "sub_theme": "lengte berekenen"
-  },
-  {
-    "id": 40,
-    "title": "Potlood meten",
-    "theme": "lengte",
-    "content": "Een som over lengte.",
-    "questions": [
-      {
-        "question": "Bereken de lengte.",
-        "hint": "💡 Tip: Gebruik de juiste eenheid!",
-        "options": [
-          {
-            "text": "10",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "100",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "50",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "25",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Check nog eens!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "lengte",
-          "berekening": [
-            "Berekening"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken | Som | **100** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Bereken lengte",
-            "tussenstappen": []
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "lengte",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": []
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "lengte",
-            "logica_check": "Logisch",
-            "antwoord": "100"
-          }
-        }
-      }
-    ],
-    "sub_theme": "lengte berekenen"
-  },
-  {
-    "id": 41,
-    "title": "Boom hoogte",
-    "theme": "lengte",
-    "content": "Een som over lengte.",
-    "questions": [
-      {
-        "question": "Bereken de lengte.",
-        "hint": "💡 Tip: Gebruik de juiste eenheid!",
-        "options": [
-          {
-            "text": "10",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "100",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "50",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "25",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Check nog eens!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "lengte",
-          "berekening": [
-            "Berekening"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken | Som | **100** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Bereken lengte",
-            "tussenstappen": []
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "lengte",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": []
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "lengte",
-            "logica_check": "Logisch",
-            "antwoord": "100"
-          }
-        }
-      }
-    ],
-    "sub_theme": "lengte berekenen"
-  },
-  {
-    "id": 42,
-    "title": "Rugzak wegen",
-    "theme": "gewicht",
-    "content": "Een som over gewicht.",
-    "questions": [
-      {
-        "question": "Bereken de gewicht.",
-        "hint": "💡 Tip: Gebruik de juiste eenheid!",
-        "options": [
-          {
-            "text": "10",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "100",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "50",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "25",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Check nog eens!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "gewicht",
-          "berekening": [
-            "Berekening"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken | Som | **100** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Bereken gewicht",
-            "tussenstappen": []
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "gewicht",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": []
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "gewicht",
-            "logica_check": "Logisch",
-            "antwoord": "100"
-          }
-        }
-      }
-    ],
-    "sub_theme": "gewicht berekenen"
-  },
-  {
-    "id": 43,
-    "title": "Fruit wegen",
-    "theme": "gewicht",
-    "content": "Een som over gewicht.",
-    "questions": [
-      {
-        "question": "Bereken de gewicht.",
-        "hint": "💡 Tip: Gebruik de juiste eenheid!",
-        "options": [
-          {
-            "text": "10",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "100",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "50",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "25",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Check nog eens!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "gewicht",
-          "berekening": [
-            "Berekening"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken | Som | **100** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Bereken gewicht",
-            "tussenstappen": []
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "gewicht",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": []
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "gewicht",
-            "logica_check": "Logisch",
-            "antwoord": "100"
-          }
-        }
-      }
-    ],
-    "sub_theme": "gewicht berekenen"
-  },
-  {
-    "id": 44,
-    "title": "Zware tas",
-    "theme": "gewicht",
-    "content": "Een som over gewicht.",
-    "questions": [
-      {
-        "question": "Bereken de gewicht.",
-        "hint": "💡 Tip: Gebruik de juiste eenheid!",
-        "options": [
-          {
-            "text": "10",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "100",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "50",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "25",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Check nog eens!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "gewicht",
-          "berekening": [
-            "Berekening"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken | Som | **100** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Bereken gewicht",
-            "tussenstappen": []
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "gewicht",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": []
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "gewicht",
-            "logica_check": "Logisch",
-            "antwoord": "100"
-          }
-        }
-      }
-    ],
-    "sub_theme": "gewicht berekenen"
-  },
-  {
-    "id": 45,
-    "title": "Pakket",
-    "theme": "gewicht",
-    "content": "Een som over gewicht.",
-    "questions": [
-      {
-        "question": "Bereken de gewicht.",
-        "hint": "💡 Tip: Gebruik de juiste eenheid!",
-        "options": [
-          {
-            "text": "10",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "100",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "50",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "25",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Check nog eens!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "gewicht",
-          "berekening": [
-            "Berekening"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken | Som | **100** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Bereken gewicht",
-            "tussenstappen": []
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "gewicht",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": []
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "gewicht",
-            "logica_check": "Logisch",
-            "antwoord": "100"
-          }
-        }
-      }
-    ],
-    "sub_theme": "gewicht berekenen"
-  },
-  {
-    "id": 46,
-    "title": "Regenton",
-    "theme": "inhoud",
-    "content": "Een som over inhoud.",
-    "questions": [
-      {
-        "question": "Bereken de inhoud.",
-        "hint": "💡 Tip: Gebruik de juiste eenheid!",
-        "options": [
-          {
-            "text": "10",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "100",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "50",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "25",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Check nog eens!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "inhoud",
-          "berekening": [
-            "Berekening"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken | Som | **100** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Bereken inhoud",
-            "tussenstappen": []
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "inhoud",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": []
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "inhoud",
-            "logica_check": "Logisch",
-            "antwoord": "100"
-          }
-        }
-      }
-    ],
-    "sub_theme": "inhoud berekenen"
-  },
-  {
-    "id": 47,
-    "title": "Emmer vullen",
-    "theme": "inhoud",
-    "content": "Een som over inhoud.",
-    "questions": [
-      {
-        "question": "Bereken de inhoud.",
-        "hint": "💡 Tip: Gebruik de juiste eenheid!",
-        "options": [
-          {
-            "text": "10",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "100",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "50",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "25",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Check nog eens!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "inhoud",
-          "berekening": [
-            "Berekening"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken | Som | **100** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Bereken inhoud",
-            "tussenstappen": []
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "inhoud",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": []
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "inhoud",
-            "logica_check": "Logisch",
-            "antwoord": "100"
-          }
-        }
-      }
-    ],
-    "sub_theme": "inhoud berekenen"
-  },
-  {
-    "id": 48,
-    "title": "Sap drinken",
-    "theme": "inhoud",
-    "content": "Een som over inhoud.",
-    "questions": [
-      {
-        "question": "Bereken de inhoud.",
-        "hint": "💡 Tip: Gebruik de juiste eenheid!",
-        "options": [
-          {
-            "text": "10",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "100",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "50",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "25",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Check nog eens!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "inhoud",
-          "berekening": [
-            "Berekening"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken | Som | **100** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Bereken inhoud",
-            "tussenstappen": []
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "inhoud",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": []
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "inhoud",
-            "logica_check": "Logisch",
-            "antwoord": "100"
-          }
-        }
-      }
-    ],
-    "sub_theme": "inhoud berekenen"
-  },
-  {
-    "id": 49,
-    "title": "Aquarium",
-    "theme": "inhoud",
-    "content": "Een som over inhoud.",
-    "questions": [
-      {
-        "question": "Bereken de inhoud.",
-        "hint": "💡 Tip: Gebruik de juiste eenheid!",
-        "options": [
-          {
-            "text": "10",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "100",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "50",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "25",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Check nog eens!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "inhoud",
-          "berekening": [
-            "Berekening"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken | Som | **100** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Bereken inhoud",
-            "tussenstappen": []
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "inhoud",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": []
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "inhoud",
-            "logica_check": "Logisch",
-            "antwoord": "100"
-          }
-        }
-      }
-    ],
-    "sub_theme": "inhoud berekenen"
-  },
-  {
-    "id": 50,
-    "title": "Driehoek",
-    "theme": "meetkunde",
-    "content": "Een som over meetkunde.",
-    "questions": [
-      {
-        "question": "Bereken de meetkunde.",
-        "hint": "💡 Tip: Gebruik de juiste eenheid!",
-        "options": [
-          {
-            "text": "10",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "100",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "50",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "25",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Check nog eens!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "meetkunde",
-          "berekening": [
-            "Berekening"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken | Som | **100** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Bereken meetkunde",
-            "tussenstappen": []
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "meetkunde",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": []
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "meetkunde",
-            "logica_check": "Logisch",
-            "antwoord": "100"
-          }
-        }
-      }
-    ],
-    "sub_theme": "meetkunde berekenen"
-  },
-  {
-    "id": 51,
-    "title": "Rechthoek",
-    "theme": "meetkunde",
-    "content": "Een som over meetkunde.",
-    "questions": [
-      {
-        "question": "Bereken de meetkunde.",
-        "hint": "💡 Tip: Gebruik de juiste eenheid!",
-        "options": [
-          {
-            "text": "10",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "100",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "50",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "25",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Check nog eens!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "meetkunde",
-          "berekening": [
-            "Berekening"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken | Som | **100** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Bereken meetkunde",
-            "tussenstappen": []
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "meetkunde",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": []
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "meetkunde",
-            "logica_check": "Logisch",
-            "antwoord": "100"
-          }
-        }
-      }
-    ],
-    "sub_theme": "meetkunde berekenen"
-  },
-  {
-    "id": 52,
-    "title": "Hek rond tuin",
-    "theme": "meetkunde",
-    "content": "Een som over meetkunde.",
-    "questions": [
-      {
-        "question": "Bereken de meetkunde.",
-        "hint": "💡 Tip: Gebruik de juiste eenheid!",
-        "options": [
-          {
-            "text": "10",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "100",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "50",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "25",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Check nog eens!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "meetkunde",
-          "berekening": [
-            "Berekening"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken | Som | **100** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Bereken meetkunde",
-            "tussenstappen": []
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "meetkunde",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": []
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "meetkunde",
-            "logica_check": "Logisch",
-            "antwoord": "100"
-          }
-        }
-      }
-    ],
-    "sub_theme": "meetkunde berekenen"
-  },
-  {
-    "id": 53,
-    "title": "Raam",
-    "theme": "meetkunde",
-    "content": "Een som over meetkunde.",
-    "questions": [
-      {
-        "question": "Bereken de meetkunde.",
-        "hint": "💡 Tip: Gebruik de juiste eenheid!",
-        "options": [
-          {
-            "text": "10",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "100",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "50",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "25",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Check nog eens!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "meetkunde",
-          "berekening": [
-            "Berekening"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken | Som | **100** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Bereken meetkunde",
-            "tussenstappen": []
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {},
-            "tool": "meetkunde",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": []
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "meetkunde",
-            "logica_check": "Logisch",
-            "antwoord": "100"
-          }
-        }
-      }
-    ],
-    "sub_theme": "meetkunde berekenen"
   }
 ]
