@@ -179,14 +179,14 @@
     "id": 3,
     "title": "Tijdsduur van een Film",
     "theme": "tijd",
-    "content": "Een spannende film duurt 1 uur en 45 minuten. De film begint om 14:30 uur.",
+    "content": "Een spannende film duurt 40 minuten. De film begint om 14:30 uur.",
     "questions": [
       {
         "question": "Hoe laat is de film afgelopen?",
-        "hint": "💡 Tip: Tel de tijd van de film op bij de starttijd. Let op: 1 uur = 60 minuten!",
+        "hint": "💡 Tip: Tel de tijd op bij de starttijd. Let op: 60 minuten = 1 uur!",
         "options": [
           {
-            "text": "15:15 uur",
+            "text": "15:00 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Je hebt alleen het uur erbij opgeteld, maar de 45 minuten vergeten! 14:30 + 1 uur = 15:30, maar je moet er ook nog 45 minuten bij optellen.\n\n🤔 **Reflectievraag:** Hoeveel minuten moet je in totaal optellen bij 14:30?",
@@ -194,7 +194,7 @@
             "remedial_basis_id": null
           },
           {
-            "text": "16:05 uur",
+            "text": "15:10 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Je hebt een fout gemaakt bij het optellen van de minuten. Van 14:30 naar 15:30 is 1 uur. Dan moet je er nog 45 minuten bij optellen: 15:30 + 45 minuten = ?\n\n🤔 **Reflectievraag:** Wat is 30 + 45?",
@@ -202,12 +202,12 @@
             "remedial_basis_id": null
           },
           {
-            "text": "16:15 uur",
+            "text": "15:20 uur",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "15:75 uur",
+            "text": "14:70 uur",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Er kunnen maar 60 minuten in een uur zitten. 75 minuten bestaat niet op de klok. Je moet 60 minuten omzetten naar 1 uur.\n\n🤔 **Reflectievraag:** Als je bij 30 minuten nog 45 minuten optelt, hoeveel minuten is dat? Hoeveel uur en minuten is dat?",
@@ -218,15 +218,12 @@
         "extra_info": {
           "concept": "Dit is een tijdberekening. Je moet de duur van de film optellen bij de starttijd. Let op dat 60 minuten gelijk is aan 1 uur.",
           "berekening": [
-            "Starttijd: 14:30 uur",
-            "Duur film: 1 uur en 45 minuten",
-            "14:30 + 1 uur = 15:30",
-            "15:30 + 45 minuten = 16:15 uur"
+            "14:30 + 40 minuten = 15:10 uur"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Plus 1 uur | 14:30 + 1 uur | 15:30 |",
+            "| 1. Tijdberekening | 14:30 + 40 minuten | **15:10 uur** ⭐ |",
             "| 2. Plus 45 min | 15:30 + 45 min | **16:15 uur** ⭐ |"
           ]
         },
@@ -241,7 +238,7 @@
           "stap2_ordenen": {
             "relevante_getallen": {
               "Starttijd": "14:30 uur",
-              "Duur film": "1 uur en 45 minuten"
+              "Duur": "40 minuten"
             },
             "tool": "Tijd optellen",
             "conversies": [
@@ -252,8 +249,8 @@
             "bewerkingen": [
               {
                 "stap": "Tel het uur erbij op",
-                "berekening": "14:30 + 1 uur",
-                "resultaat": "15:30",
+                "berekening": "14:30 + 40 minuten",
+                "resultaat": "15:10 uur",
                 "uitleg": "Tel eerst het hele uur erbij op"
               },
               {
@@ -267,7 +264,7 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "tijd (uur:minuten)",
             "logica_check": "16:15 uur is logisch: bijna 2 uur later dan 14:30",
-            "antwoord": "16:15 uur"
+            "antwoord": "15:10 uur"
           }
         }
       }
@@ -278,14 +275,14 @@
     "id": 4,
     "title": "Grote Voorraad Pennen",
     "theme": "vermenigvuldigen",
-    "content": "Een school koopt een nieuwe voorraad pennen. Ze bestellen 6 dozen. In elke doos zitten 150 pennen.",
+    "content": "Een school koopt een nieuwe voorraad pennen. Ze bestellen 6 dozen. In elke doos zitten 50 pennen.",
     "questions": [
       {
         "question": "Hoeveel pennen zijn er in totaal besteld?",
         "hint": "💡 Tip: Je moet 6 keer 150 rekenen. Denk aan de tafel van 6!",
         "options": [
           {
-            "text": "750 pennen",
+            "text": "250 pennen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen. Controleer: 6 × 150 = ? Denk aan de tafel van 6: 6 × 15 = 90, dus 6 × 150 = 900.\n\n🤔 **Reflectievraag:** Wat is 6 × 15?",
@@ -293,7 +290,7 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "850 pennen",
+            "text": "300 pennen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna! Controleer je vermenigvuldiging nog eens: 6 × 150 = ?\n\n🤔 **Reflectievraag:** Ken je de tafel van 6 goed?",
@@ -301,12 +298,12 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "900 pennen",
+            "text": "350 pennen",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "950 pennen",
+            "text": "56 pennen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt te veel gerekend. Controleer je vermenigvuldiging: 6 × 150 = ?\n\n🤔 **Reflectievraag:** 6 × 100 = 600 en 6 × 50 = 300. Samen is dat 600 + 300 = ?",
@@ -317,13 +314,12 @@
         "extra_info": {
           "concept": "Dit is een vermenigvuldigingssom met honderdtallen. Je moet het aantal dozen vermenigvuldigen met het aantal pennen per doos.",
           "berekening": [
-            "Vermenigvuldig het aantal dozen met pennen per doos: 6 × 150",
-            "6 × 150 = 6 × 100 + 6 × 50 = 600 + 300 = 900 pennen"
+            "6 × 50 = 300 pennen"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldig | 6 × 150 | **900 pennen** ⭐ |"
+            "| 1. Vermenigvuldigen | 6 × 50 | **300 pennen** ⭐ |"
           ]
         },
         "lova": {
@@ -337,7 +333,7 @@
           "stap2_ordenen": {
             "relevante_getallen": {
               "Aantal dozen": "6",
-              "Pennen per doos": "150"
+              "Pennen per doos": "50"
             },
             "tool": "Vermenigvuldigen",
             "conversies": []
@@ -346,8 +342,8 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldig dozen met pennen",
-                "berekening": "6 × 150",
-                "resultaat": "900",
+                "berekening": "6 × 50",
+                "resultaat": "300",
                 "uitleg": "6 dozen van elk 150 pennen"
               }
             ]
@@ -355,12 +351,12 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "pennen (aantal)",
             "logica_check": "900 pennen is logisch: 6 × 150 = 900",
-            "antwoord": "900 pennen"
+            "antwoord": "300 pennen"
           }
         }
       }
     ],
-    "sub_theme": "vermenigvuldigen met honderdtallen"
+    "sub_theme": "vermenigvuldigen met tientallen"
   },
   {
     "id": 5,
@@ -635,14 +631,14 @@
     "id": 8,
     "title": "Chocoladerepen Verkopen",
     "theme": "vermenigvuldigen",
-    "content": "Een winkel verkoopt dozen met chocoladerepen. Er worden 8 dozen verkocht. In elke doos zitten 120 chocoladerepen.",
+    "content": "Een winkel verkoopt dozen met chocoladerepen. Er worden 8 dozen verkocht. In elke doos zitten 40 chocoladerepen.",
     "questions": [
       {
         "question": "Hoeveel chocoladerepen zijn er in totaal verkocht?",
         "hint": "💡 Tip: Je moet 8 keer 120 rekenen. Denk aan de tafel van 8!",
         "options": [
           {
-            "text": "860 chocoladerepen",
+            "text": "280 chocoladerepen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen. Controleer: 8 × 120 = ?\n\n🤔 **Reflectievraag:** 8 × 12 = 96, dus 8 × 120 = ?",
@@ -650,7 +646,7 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "920 chocoladerepen",
+            "text": "320 chocoladerepen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna! Controleer je vermenigvuldiging nog eens: 8 × 120 = ?\n\n🤔 **Reflectievraag:** Ken je de tafel van 8 goed? 8 × 12 = ?",
@@ -658,12 +654,12 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "960 chocoladerepen",
+            "text": "360 chocoladerepen",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "1000 chocoladerepen",
+            "text": "48 chocoladerepen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt te veel gerekend. Controleer je vermenigvuldiging: 8 × 120 = ?\n\n🤔 **Reflectievraag:** 8 × 100 = 800 en 8 × 20 = 160. Samen is dat?",
@@ -674,13 +670,12 @@
         "extra_info": {
           "concept": "Dit is een vermenigvuldigingssom met honderdtallen. Je moet het aantal dozen vermenigvuldigen met het aantal chocoladerepen per doos.",
           "berekening": [
-            "Vermenigvuldig: 8 × 120",
-            "8 × 120 = 8 × 100 + 8 × 20 = 800 + 160 = 960 chocoladerepen"
+            "8 × 40 = 320 chocoladerepen"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldig | 8 × 120 | **960 chocoladerepen** ⭐ |"
+            "| 1. Vermenigvuldigen | 8 × 40 | **320 chocoladerepen** ⭐ |"
           ]
         },
         "lova": {
@@ -694,7 +689,7 @@
           "stap2_ordenen": {
             "relevante_getallen": {
               "Aantal dozen": "8",
-              "Repen per doos": "120"
+              "Repen per doos": "40"
             },
             "tool": "Vermenigvuldigen",
             "conversies": []
@@ -703,8 +698,8 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldig",
-                "berekening": "8 × 120",
-                "resultaat": "960",
+                "berekening": "8 × 40",
+                "resultaat": "320",
                 "uitleg": "8 dozen van elk 120 repen"
               }
             ]
@@ -712,25 +707,25 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "chocoladerepen (aantal)",
             "logica_check": "960 chocoladerepen is logisch: 8 × 120 = 960",
-            "antwoord": "960 chocoladerepen"
+            "antwoord": "320 chocoladerepen"
           }
         }
       }
     ],
-    "sub_theme": "vermenigvuldigen met honderdtallen"
+    "sub_theme": "vermenigvuldigen met tientallen"
   },
   {
     "id": 9,
     "title": "Parkeerplaatsen Verdelen",
     "theme": "delen",
-    "content": "Op een groot parkeerterrein zijn 280 parkeerplaatsen. Deze worden eerlijk verdeeld over 7 vakken.",
+    "content": "Op een parkeerterrein zijn 56 parkeerplaatsen. Deze worden eerlijk verdeeld over 7 vakken.",
     "questions": [
       {
         "question": "Hoeveel parkeerplaatsen komen er in elk vak?",
         "hint": "💡 Tip: Je moet 280 parkeerplaatsen verdelen over 7 vakken. Dat doe je door te delen!",
         "options": [
           {
-            "text": "30 parkeerplaatsen",
+            "text": "7 parkeerplaatsen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een fout gemaakt bij het delen. Controleer: 280 ÷ 7 = ? Denk aan de tafel van 7: 28 ÷ 7 = 4, dus 280 ÷ 7 = 40.\n\n🤔 **Reflectievraag:** Wat is 28 ÷ 7?",
@@ -738,7 +733,7 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "35 parkeerplaatsen",
+            "text": "8 parkeerplaatsen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna! Controleer je deling nog eens: 280 ÷ 7 = ?\n\n🤔 **Reflectievraag:** 7 × 35 = 245, niet 280. Ken je de tafel van 7?",
@@ -746,12 +741,12 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "40 parkeerplaatsen",
+            "text": "9 parkeerplaatsen",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "45 parkeerplaatsen",
+            "text": "49 parkeerplaatsen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt te veel gerekend. Controleer: 280 ÷ 7 = ?\n\n🤔 **Reflectievraag:** Controleer met vermenigvuldigen: 7 × 45 = 315, dat is meer dan 280!",
@@ -762,13 +757,12 @@
         "extra_info": {
           "concept": "Dit is een deelsom met honderdtallen. Je moet het totaal aantal parkeerplaatsen eerlijk verdelen over de vakken.",
           "berekening": [
-            "Deel 280 door 7: 280 ÷ 7",
-            "280 ÷ 7 = 40 parkeerplaatsen per vak"
+            "56 ÷ 7 = 8 parkeerplaatsen"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Deel plaatsen | 280 ÷ 7 | **40 parkeerplaatsen** ⭐ |"
+            "| 1. Delen | 56 ÷ 7 | **8 parkeerplaatsen** ⭐ |"
           ]
         },
         "lova": {
@@ -781,7 +775,7 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Totaal parkeerplaatsen": "280",
+              "Totaal parkeerplaatsen": "56",
               "Aantal vakken": "7"
             },
             "tool": "Delen",
@@ -791,21 +785,21 @@
             "bewerkingen": [
               {
                 "stap": "Verdeel de parkeerplaatsen",
-                "berekening": "280 ÷ 7",
-                "resultaat": "40",
+                "berekening": "56 ÷ 7",
+                "resultaat": "8",
                 "uitleg": "Deel het totaal aantal parkeerplaatsen door het aantal vakken"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "parkeerplaatsen (aantal)",
-            "logica_check": "40 parkeerplaatsen per vak is logisch: 7 vakken × 40 = 280 plaatsen totaal",
-            "antwoord": "40 parkeerplaatsen"
+            "logica_check": "8 parkeerplaatsen is logisch: 7 vakken × 8 = 56 parkeerplaatsen totaal",
+            "antwoord": "8 parkeerplaatsen"
           }
         }
       }
     ],
-    "sub_theme": "delen met honderdtallen"
+    "sub_theme": "delen met tientallen"
   },
   {
     "id": 10,
@@ -899,11 +893,11 @@
     "id": 11,
     "title": "Sportwedstrijd Begintijd",
     "theme": "tijd",
-    "content": "Een sportwedstrijd is om 17:20 uur afgelopen. De wedstrijd duurde 1 uur en 35 minuten.",
+    "content": "Een sportwedstrijd begint om 15:20 uur en duurt 35 minuten.",
     "questions": [
       {
-        "question": "Hoe laat is de wedstrijd begonnen?",
-        "hint": "💡 Tip: Nu moet je tijd terugtellen! Trek de duur af van de eindtijd.",
+        "question": "Hoe laat is de wedstrijd afgelopen?",
+        "hint": "💡 Tip: Tel de tijd op bij de starttijd. Let op: 60 minuten = 1 uur!",
         "options": [
           {
             "text": "15:45 uur",
@@ -919,7 +913,7 @@
             "remedial_basis_id": null
           },
           {
-            "text": "16:45 uur",
+            "text": "16:05 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Je hebt alleen het uur afgetrokken, maar de 35 minuten vergeten! 17:20 - 1 uur = 16:20, maar je moet er ook nog 35 minuten afhalen.\n\n🤔 **Reflectievraag:** 16:20 - 35 minuten = ?",
@@ -927,7 +921,7 @@
             "remedial_basis_id": null
           },
           {
-            "text": "18:55 uur",
+            "text": "15:65 uur",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Je hebt de tijd opgeteld in plaats van afgetrokken. De wedstrijd is om 17:20 afgelopen, dus de begintijd was eerder, niet later!\n\n🤔 **Reflectievraag:** Als iets om 17:20 afgelopen is, is het dan eerder of later begonnen?",
@@ -938,15 +932,12 @@
         "extra_info": {
           "concept": "Dit is een tijdberekening waarbij je terug moet rekenen. Je moet de duur aftrekken van de eindtijd om de begintijd te vinden.",
           "berekening": [
-            "Eindtijd: 17:20 uur",
-            "Duur: 1 uur en 35 minuten",
-            "17:20 - 1 uur = 16:20",
-            "16:20 - 35 minuten = 15:45 uur"
+            "15:20 + 35 minuten = 15:55 uur"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Min 1 uur | 17:20 - 1 uur | 16:20 |",
+            "| 1. Tijdberekening | 15:20 + 35 minuten | **15:55 uur** ⭐ |",
             "| 2. Min 35 min | 16:20 - 35 min | **15:45 uur** ⭐ |"
           ]
         },
@@ -960,8 +951,8 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Eindtijd": "17:20 uur",
-              "Duur": "1 uur en 35 minuten"
+              "Starttijd": "15:20 uur",
+              "Duur": "35 minuten"
             },
             "tool": "Tijd aftrekken",
             "conversies": []
@@ -970,8 +961,8 @@
             "bewerkingen": [
               {
                 "stap": "Trek het uur af",
-                "berekening": "17:20 - 1 uur",
-                "resultaat": "16:20",
+                "berekening": "15:20 + 35 minuten",
+                "resultaat": "15:55 uur",
                 "uitleg": "Trek eerst het hele uur af"
               },
               {
@@ -985,25 +976,25 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "tijd (uur:minuten)",
             "logica_check": "15:45 uur is logisch: ongeveer 1,5 uur eerder dan 17:20",
-            "antwoord": "15:45 uur"
+            "antwoord": "15:55 uur"
           }
         }
       }
     ],
-    "sub_theme": "tijd terugrekenen"
+    "sub_theme": "tijd berekenen"
   },
   {
     "id": 12,
     "title": "Fruit Inpakken",
     "theme": "vermenigvuldigen",
-    "content": "In een fruitstal worden appels in kratjes verpakt. Er worden 9 kratjes gevuld. In elk kratje passen 180 appels.",
+    "content": "In een fruitstal worden appels in kratjes verpakt. Er worden 9 kratjes gevuld. In elk kratje passen 20 appels.",
     "questions": [
       {
         "question": "Hoeveel appels worden er in totaal verpakt?",
         "hint": "💡 Tip: Je moet 9 keer 180 rekenen. Denk aan de tafel van 9!",
         "options": [
           {
-            "text": "1520 appels",
+            "text": "160 appels",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen. Controleer: 9 × 180 = ?\n\n🤔 **Reflectievraag:** 9 × 18 = 162, dus 9 × 180 = ?",
@@ -1011,12 +1002,12 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "1620 appels",
+            "text": "180 appels",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "1720 appels",
+            "text": "200 appels",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna! Controleer je vermenigvuldiging nog eens: 9 × 180 = ?\n\n🤔 **Reflectievraag:** Ken je de tafel van 9 goed? 9 × 18 = ?",
@@ -1024,7 +1015,7 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "1800 appels",
+            "text": "29 appels",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Je hebt 9 × 200 gerekend in plaats van 9 × 180. Controleer: 9 × 180 = ?\n\n🤔 **Reflectievraag:** 9 × 100 = 900 en 9 × 80 = 720. Samen is dat?",
@@ -1035,13 +1026,12 @@
         "extra_info": {
           "concept": "Dit is een vermenigvuldigingssom met honderdtallen. Je moet het aantal kratjes vermenigvuldigen met het aantal appels per kratje.",
           "berekening": [
-            "Vermenigvuldig: 9 × 180",
-            "9 × 180 = 9 × 100 + 9 × 80 = 900 + 720 = 1620 appels"
+            "9 × 20 = 180 appels"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldig | 9 × 180 | **1620 appels** ⭐ |"
+            "| 1. Vermenigvuldigen | 9 × 20 | **180 appels** ⭐ |"
           ]
         },
         "lova": {
@@ -1054,8 +1044,8 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Aantal kratjes": "9",
-              "Appels per kratje": "180"
+              "Aantal kratjes": "20",
+              "Appels per kratje": "20"
             },
             "tool": "Vermenigvuldigen",
             "conversies": []
@@ -1064,8 +1054,8 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldig",
-                "berekening": "9 × 180",
-                "resultaat": "1620",
+                "berekening": "9 × 20",
+                "resultaat": "180",
                 "uitleg": "9 kratjes van elk 180 appels"
               }
             ]
@@ -1073,12 +1063,12 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "appels (aantal)",
             "logica_check": "1620 appels is logisch: 9 × 180 = 1620",
-            "antwoord": "1620 appels"
+            "antwoord": "180 appels"
           }
         }
       }
     ],
-    "sub_theme": "vermenigvuldigen met honderdtallen"
+    "sub_theme": "vermenigvuldigen met tientallen"
   },
   {
     "id": 13,
@@ -1172,14 +1162,14 @@
     "id": 14,
     "title": "Ballenvoorraad School",
     "theme": "delen",
-    "content": "De school heeft 360 ballen gekocht voor de gymles. Deze moeten eerlijk verdeeld worden over 9 klassen.",
+    "content": "De school heeft 72 ballen gekocht voor de gymles. Deze moeten eerlijk verdeeld worden over 9 klassen.",
     "questions": [
       {
         "question": "Hoeveel ballen krijgt elke klas?",
         "hint": "💡 Tip: Je moet 360 ballen verdelen over 9 klassen. Dat doe je door te delen!",
         "options": [
           {
-            "text": "30 ballen",
+            "text": "7 ballen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een fout gemaakt bij het delen. Controleer: 360 ÷ 9 = ? Denk aan de tafel van 9: 36 ÷ 9 = 4, dus 360 ÷ 9 = 40.\n\n🤔 **Reflectievraag:** Wat is 36 ÷ 9?",
@@ -1187,7 +1177,7 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "35 ballen",
+            "text": "8 ballen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna! Controleer je deling nog eens: 360 ÷ 9 = ?\n\n🤔 **Reflectievraag:** 9 × 35 = 315, niet 360. Probeer nog eens!",
@@ -1195,12 +1185,12 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "40 ballen",
+            "text": "9 ballen",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "45 ballen",
+            "text": "63 ballen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt te veel gerekend. Controleer: 360 ÷ 9 = ?\n\n🤔 **Reflectievraag:** Controleer met vermenigvuldigen: 9 × 45 = 405, dat is meer dan 360!",
@@ -1211,13 +1201,12 @@
         "extra_info": {
           "concept": "Dit is een deelsom met honderdtallen. Je moet het totaal aantal ballen eerlijk verdelen over de klassen.",
           "berekening": [
-            "Deel 360 door 9: 360 ÷ 9",
-            "360 ÷ 9 = 40 ballen per klas"
+            "72 ÷ 9 = 8 ballen"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Deel ballen | 360 ÷ 9 | **40 ballen** ⭐ |"
+            "| 1. Delen | 72 ÷ 9 | **8 ballen** ⭐ |"
           ]
         },
         "lova": {
@@ -1230,7 +1219,7 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Totaal aantal ballen": "360",
+              "Totaal aantal ballen": "72",
               "Aantal klassen": "9"
             },
             "tool": "Delen",
@@ -1240,21 +1229,21 @@
             "bewerkingen": [
               {
                 "stap": "Verdeel de ballen",
-                "berekening": "360 ÷ 9",
-                "resultaat": "40",
+                "berekening": "72 ÷ 9",
+                "resultaat": "8",
                 "uitleg": "Deel het totaal aantal ballen door het aantal klassen"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "ballen (aantal)",
-            "logica_check": "40 ballen per klas is logisch: 9 klassen × 40 = 360 ballen totaal",
-            "antwoord": "40 ballen"
+            "logica_check": "8 ballen is logisch: 9 klassen × 8 = 72 ballen totaal",
+            "antwoord": "8 ballen"
           }
         }
       }
     ],
-    "sub_theme": "delen met honderdtallen"
+    "sub_theme": "delen met tientallen"
   },
   {
     "id": 15,
@@ -3089,14 +3078,14 @@
     "id": 36,
     "title": "Bioscoopfilm",
     "theme": "tijd",
-    "content": "Een film begint om 13:25 uur en duurt 2 uur en 15 minuten.",
+    "content": "Een film begint om 13:25 uur en duurt 45 minuten.",
     "questions": [
       {
         "question": "Hoe laat is de film afgelopen?",
-        "hint": "💡 Tip: Tel de duur op bij de starttijd!",
+        "hint": "💡 Tip: Tel de tijd op bij de starttijd. Let op: 60 minuten = 1 uur!",
         "options": [
           {
-            "text": "15:30 uur",
+            "text": "14:00 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Je hebt een fout gemaakt met de tijd. Controleer je berekening.\n\n🤔 **Reflectievraag:** Let op: 1 uur = 60 minuten!",
@@ -3104,12 +3093,12 @@
             "remedial_basis_id": null
           },
           {
-            "text": "15:40 uur",
+            "text": "14:10 uur",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "15:50 uur",
+            "text": "14:20 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Bijna! Controleer je berekening met uren en minuten.\n\n🤔 **Reflectievraag:** Heb je de minuten goed omgerekend?",
@@ -3117,7 +3106,7 @@
             "remedial_basis_id": null
           },
           {
-            "text": "13:40 uur",
+            "text": "13:70 uur",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Er zitten maar 60 minuten in een uur.\n\n🤔 **Reflectievraag:** Moet je minuten omzetten naar uren?",
@@ -3128,12 +3117,12 @@
         "extra_info": {
           "concept": "Dit is een tijdberekening. Let op dat 60 minuten gelijk is aan 1 uur.",
           "berekening": [
-            "13:25 + 2:15 = 15:40 uur"
+            "13:25 + 45 minuten = 14:10 uur (over het hele uur)"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Tijdberekening | 13:25 + 2:15 = 15:40 uur | **15:40 uur** ⭐ |"
+            "| 1. Tijdberekening | 13:25 + 45 minuten | **14:10 uur** ⭐ |"
           ]
         },
         "lova": {
@@ -3147,7 +3136,7 @@
           "stap2_ordenen": {
             "relevante_getallen": {
               "Starttijd": "13:25 uur",
-              "Duur": "2 uur 15 min"
+              "Duur": "45 minuten"
             },
             "tool": "Tijd rekenen",
             "conversies": [
@@ -3158,8 +3147,8 @@
             "bewerkingen": [
               {
                 "stap": "Tijdberekening",
-                "berekening": "13:25 + 2:15 = 15:40 uur",
-                "resultaat": "15:40 uur",
+                "berekening": "13:25 + 45 minuten",
+                "resultaat": "14:10 uur",
                 "uitleg": "Reken met uren en minuten"
               }
             ]
@@ -3167,7 +3156,7 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "tijd (uur:minuten)",
             "logica_check": "15:40 uur is logisch",
-            "antwoord": "15:40 uur"
+            "antwoord": "14:10 uur"
           }
         }
       }
@@ -3178,14 +3167,14 @@
     "id": 37,
     "title": "Treinreis",
     "theme": "tijd",
-    "content": "Een trein vertrekt om 10:50 uur en rijdt 1 uur en 35 minuten.",
+    "content": "Een trein vertrekt om 10:50 uur en rijdt 50 minuten.",
     "questions": [
       {
         "question": "Hoe laat komt de trein aan?",
-        "hint": "💡 Tip: Tel de reistijd op bij de vertrektijd!",
+        "hint": "💡 Tip: Tel de tijd op bij de starttijd. Let op: 60 minuten = 1 uur!",
         "options": [
           {
-            "text": "12:15 uur",
+            "text": "11:30 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Je hebt een fout gemaakt met de tijd. Controleer je berekening.\n\n🤔 **Reflectievraag:** Let op: 1 uur = 60 minuten!",
@@ -3193,12 +3182,12 @@
             "remedial_basis_id": null
           },
           {
-            "text": "12:25 uur",
+            "text": "11:40 uur",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "12:35 uur",
+            "text": "11:50 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Bijna! Controleer je berekening met uren en minuten.\n\n🤔 **Reflectievraag:** Heb je de minuten goed omgerekend?",
@@ -3206,7 +3195,7 @@
             "remedial_basis_id": null
           },
           {
-            "text": "11:25 uur",
+            "text": "11:00 uur",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Er zitten maar 60 minuten in een uur.\n\n🤔 **Reflectievraag:** Moet je minuten omzetten naar uren?",
@@ -3217,12 +3206,12 @@
         "extra_info": {
           "concept": "Dit is een tijdberekening. Let op dat 60 minuten gelijk is aan 1 uur.",
           "berekening": [
-            "10:50 + 1:35 = 12:25 uur"
+            "10:50 + 50 minuten = 11:40 uur"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Tijdberekening | 10:50 + 1:35 = 12:25 uur | **12:25 uur** ⭐ |"
+            "| 1. Tijdberekening | 10:50 + 50 minuten | **11:40 uur** ⭐ |"
           ]
         },
         "lova": {
@@ -3236,7 +3225,7 @@
           "stap2_ordenen": {
             "relevante_getallen": {
               "Starttijd": "10:50 uur",
-              "Duur": "1 uur 35 min"
+              "Duur": "50 minuten"
             },
             "tool": "Tijd rekenen",
             "conversies": [
@@ -3247,8 +3236,8 @@
             "bewerkingen": [
               {
                 "stap": "Tijdberekening",
-                "berekening": "10:50 + 1:35 = 12:25 uur",
-                "resultaat": "12:25 uur",
+                "berekening": "10:50 + 50 minuten",
+                "resultaat": "11:40 uur",
                 "uitleg": "Reken met uren en minuten"
               }
             ]
@@ -3256,7 +3245,7 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "tijd (uur:minuten)",
             "logica_check": "12:25 uur is logisch",
-            "antwoord": "12:25 uur"
+            "antwoord": "11:40 uur"
           }
         }
       }
@@ -3267,14 +3256,14 @@
     "id": 38,
     "title": "Kookles",
     "theme": "tijd",
-    "content": "Een kookles is om 16:45 uur afgelopen. De les duurde 1 uur en 20 minuten.",
+    "content": "Een kookles begint om 15:25 uur en duurt 30 minuten.",
     "questions": [
       {
-        "question": "Hoe laat begon de les?",
-        "hint": "💡 Tip: Trek de duur af van de eindtijd!",
+        "question": "Hoe laat is de les afgelopen?",
+        "hint": "💡 Tip: Tel de tijd op bij de starttijd. Let op: 60 minuten = 1 uur!",
         "options": [
           {
-            "text": "15:15 uur",
+            "text": "15:45 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Je hebt een fout gemaakt met de tijd. Controleer je berekening.\n\n🤔 **Reflectievraag:** Let op: 1 uur = 60 minuten!",
@@ -3282,12 +3271,12 @@
             "remedial_basis_id": null
           },
           {
-            "text": "15:25 uur",
+            "text": "15:55 uur",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "15:35 uur",
+            "text": "16:05 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Bijna! Controleer je berekening met uren en minuten.\n\n🤔 **Reflectievraag:** Heb je de minuten goed omgerekend?",
@@ -3295,7 +3284,7 @@
             "remedial_basis_id": null
           },
           {
-            "text": "18:05 uur",
+            "text": "15:65 uur",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Er zitten maar 60 minuten in een uur.\n\n🤔 **Reflectievraag:** Moet je minuten omzetten naar uren?",
@@ -3306,12 +3295,12 @@
         "extra_info": {
           "concept": "Dit is een tijdberekening. Let op dat 60 minuten gelijk is aan 1 uur.",
           "berekening": [
-            "16:45 - 1:20 = 15:25 uur"
+            "15:25 + 30 minuten = 15:55 uur"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Tijdberekening | 16:45 - 1:20 = 15:25 uur | **15:25 uur** ⭐ |"
+            "| 1. Tijdberekening | 15:25 + 30 minuten | **15:55 uur** ⭐ |"
           ]
         },
         "lova": {
@@ -3324,8 +3313,8 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Starttijd": "16:45 uur",
-              "Duur": "1 uur 20 min"
+              "Starttijd": "15:25 uur",
+              "Duur": "30 minuten"
             },
             "tool": "Tijd rekenen",
             "conversies": [
@@ -3336,8 +3325,8 @@
             "bewerkingen": [
               {
                 "stap": "Tijdberekening",
-                "berekening": "16:45 - 1:20 = 15:25 uur",
-                "resultaat": "15:25 uur",
+                "berekening": "15:25 + 30 minuten",
+                "resultaat": "15:55 uur",
                 "uitleg": "Reken met uren en minuten"
               }
             ]
@@ -3345,7 +3334,7 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "tijd (uur:minuten)",
             "logica_check": "15:25 uur is logisch",
-            "antwoord": "15:25 uur"
+            "antwoord": "15:55 uur"
           }
         }
       }
@@ -3356,14 +3345,14 @@
     "id": 39,
     "title": "Voetbalwedstrijd",
     "theme": "tijd",
-    "content": "Een wedstrijd begint om 14:15 uur en duurt 1 uur en 50 minuten.",
+    "content": "Een wedstrijd begint om 14:15 uur en duurt 55 minuten.",
     "questions": [
       {
         "question": "Hoe laat is de wedstrijd klaar?",
-        "hint": "💡 Tip: Tel de speeltijd op bij de starttijd!",
+        "hint": "💡 Tip: Tel de tijd op bij de starttijd. Let op: 60 minuten = 1 uur!",
         "options": [
           {
-            "text": "15:55 uur",
+            "text": "15:00 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Je hebt een fout gemaakt met de tijd. Controleer je berekening.\n\n🤔 **Reflectievraag:** Let op: 1 uur = 60 minuten!",
@@ -3371,12 +3360,12 @@
             "remedial_basis_id": null
           },
           {
-            "text": "16:05 uur",
+            "text": "15:10 uur",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "16:15 uur",
+            "text": "15:20 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Bijna! Controleer je berekening met uren en minuten.\n\n🤔 **Reflectievraag:** Heb je de minuten goed omgerekend?",
@@ -3384,7 +3373,7 @@
             "remedial_basis_id": null
           },
           {
-            "text": "14:65 uur",
+            "text": "14:70 uur",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Er zitten maar 60 minuten in een uur.\n\n🤔 **Reflectievraag:** Moet je minuten omzetten naar uren?",
@@ -3395,12 +3384,12 @@
         "extra_info": {
           "concept": "Dit is een tijdberekening. Let op dat 60 minuten gelijk is aan 1 uur.",
           "berekening": [
-            "14:15 + 1:50 = 16:05 uur"
+            "14:15 + 55 minuten = 15:10 uur"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Tijdberekening | 14:15 + 1:50 = 16:05 uur | **16:05 uur** ⭐ |"
+            "| 1. Tijdberekening | 14:15 + 55 minuten | **15:10 uur** ⭐ |"
           ]
         },
         "lova": {
@@ -3414,7 +3403,7 @@
           "stap2_ordenen": {
             "relevante_getallen": {
               "Starttijd": "14:15 uur",
-              "Duur": "1 uur 50 min"
+              "Duur": "55 minuten"
             },
             "tool": "Tijd rekenen",
             "conversies": [
@@ -3425,8 +3414,8 @@
             "bewerkingen": [
               {
                 "stap": "Tijdberekening",
-                "berekening": "14:15 + 1:50 = 16:05 uur",
-                "resultaat": "16:05 uur",
+                "berekening": "14:15 + 55 minuten",
+                "resultaat": "15:10 uur",
                 "uitleg": "Reken met uren en minuten"
               }
             ]
@@ -3434,7 +3423,7 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "tijd (uur:minuten)",
             "logica_check": "16:05 uur is logisch",
-            "antwoord": "16:05 uur"
+            "antwoord": "15:10 uur"
           }
         }
       }
@@ -3445,14 +3434,14 @@
     "id": 40,
     "title": "Autorit",
     "theme": "tijd",
-    "content": "Lisa vertrekt om 09:20 uur en rijdt 2 uur en 45 minuten.",
+    "content": "Lisa vertrekt om 09:20 uur en rijdt 40 minuten.",
     "questions": [
       {
         "question": "Hoe laat komt Lisa aan?",
-        "hint": "💡 Tip: Tel de rijtijd op!",
+        "hint": "💡 Tip: Tel de tijd op bij de starttijd. Let op: 60 minuten = 1 uur!",
         "options": [
           {
-            "text": "11:55 uur",
+            "text": "09:50 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Je hebt een fout gemaakt met de tijd. Controleer je berekening.\n\n🤔 **Reflectievraag:** Let op: 1 uur = 60 minuten!",
@@ -3460,12 +3449,12 @@
             "remedial_basis_id": null
           },
           {
-            "text": "12:05 uur",
+            "text": "10:00 uur",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "12:15 uur",
+            "text": "10:10 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Bijna! Controleer je berekening met uren en minuten.\n\n🤔 **Reflectievraag:** Heb je de minuten goed omgerekend?",
@@ -3473,7 +3462,7 @@
             "remedial_basis_id": null
           },
           {
-            "text": "11:65 uur",
+            "text": "09:60 uur",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Er zitten maar 60 minuten in een uur.\n\n🤔 **Reflectievraag:** Moet je minuten omzetten naar uren?",
@@ -3484,12 +3473,12 @@
         "extra_info": {
           "concept": "Dit is een tijdberekening. Let op dat 60 minuten gelijk is aan 1 uur.",
           "berekening": [
-            "09:20 + 2:45 = 12:05 uur"
+            "09:20 + 40 minuten = 10:00 uur"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Tijdberekening | 09:20 + 2:45 = 12:05 uur | **12:05 uur** ⭐ |"
+            "| 1. Tijdberekening | 09:20 + 40 minuten | **10:00 uur** ⭐ |"
           ]
         },
         "lova": {
@@ -3503,7 +3492,7 @@
           "stap2_ordenen": {
             "relevante_getallen": {
               "Starttijd": "09:20 uur",
-              "Duur": "2 uur 45 min"
+              "Duur": "40 minuten"
             },
             "tool": "Tijd rekenen",
             "conversies": [
@@ -3514,8 +3503,8 @@
             "bewerkingen": [
               {
                 "stap": "Tijdberekening",
-                "berekening": "09:20 + 2:45 = 12:05 uur",
-                "resultaat": "12:05 uur",
+                "berekening": "09:20 + 40 minuten",
+                "resultaat": "10:00 uur",
                 "uitleg": "Reken met uren en minuten"
               }
             ]
@@ -3523,7 +3512,7 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "tijd (uur:minuten)",
             "logica_check": "12:05 uur is logisch",
-            "antwoord": "12:05 uur"
+            "antwoord": "10:00 uur"
           }
         }
       }
@@ -3534,14 +3523,14 @@
     "id": 41,
     "title": "Muziekoptreden",
     "theme": "tijd",
-    "content": "Een optreden is om 20:30 uur afgelopen. Het duurde 1 uur en 55 minuten.",
+    "content": "Een muziekoptreden begint om 18:35 uur en duurt 45 minuten.",
     "questions": [
       {
-        "question": "Hoe laat begon het?",
-        "hint": "💡 Tip: Trek de duur af van de eindtijd!",
+        "question": "Hoe laat is het optreden afgelopen?",
+        "hint": "💡 Tip: Tel de tijd op bij de starttijd. Let op: 60 minuten = 1 uur!",
         "options": [
           {
-            "text": "18:25 uur",
+            "text": "19:10 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Je hebt een fout gemaakt met de tijd. Controleer je berekening.\n\n🤔 **Reflectievraag:** Let op: 1 uur = 60 minuten!",
@@ -3549,12 +3538,12 @@
             "remedial_basis_id": null
           },
           {
-            "text": "18:35 uur",
+            "text": "19:20 uur",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "18:45 uur",
+            "text": "19:30 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Bijna! Controleer je berekening met uren en minuten.\n\n🤔 **Reflectievraag:** Heb je de minuten goed omgerekend?",
@@ -3562,7 +3551,7 @@
             "remedial_basis_id": null
           },
           {
-            "text": "22:25 uur",
+            "text": "18:80 uur",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Er zitten maar 60 minuten in een uur.\n\n🤔 **Reflectievraag:** Moet je minuten omzetten naar uren?",
@@ -3573,12 +3562,12 @@
         "extra_info": {
           "concept": "Dit is een tijdberekening. Let op dat 60 minuten gelijk is aan 1 uur.",
           "berekening": [
-            "20:30 - 1:55 = 18:35 uur"
+            "18:35 + 45 minuten = 19:20 uur"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Tijdberekening | 20:30 - 1:55 = 18:35 uur | **18:35 uur** ⭐ |"
+            "| 1. Tijdberekening | 18:35 + 45 minuten | **19:20 uur** ⭐ |"
           ]
         },
         "lova": {
@@ -3591,8 +3580,8 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Starttijd": "20:30 uur",
-              "Duur": "1 uur 55 min"
+              "Starttijd": "18:35 uur",
+              "Duur": "45 minuten"
             },
             "tool": "Tijd rekenen",
             "conversies": [
@@ -3603,8 +3592,8 @@
             "bewerkingen": [
               {
                 "stap": "Tijdberekening",
-                "berekening": "20:30 - 1:55 = 18:35 uur",
-                "resultaat": "18:35 uur",
+                "berekening": "18:35 + 45 minuten",
+                "resultaat": "19:20 uur",
                 "uitleg": "Reken met uren en minuten"
               }
             ]
@@ -3612,7 +3601,7 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "tijd (uur:minuten)",
             "logica_check": "18:35 uur is logisch",
-            "antwoord": "18:35 uur"
+            "antwoord": "19:20 uur"
           }
         }
       }
@@ -3623,14 +3612,14 @@
     "id": 42,
     "title": "Fietstocht",
     "theme": "tijd",
-    "content": "Tim fietst om 11:40 uur weg en fietst 1 uur en 25 minuten.",
+    "content": "Tim fietst om 11:40 uur weg en fietst 35 minuten.",
     "questions": [
       {
         "question": "Hoe laat is Tim terug?",
-        "hint": "💡 Tip: Tel de fitstijd op!",
+        "hint": "💡 Tip: Tel de tijd op bij de starttijd. Let op: 60 minuten = 1 uur!",
         "options": [
           {
-            "text": "12:55 uur",
+            "text": "12:05 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Je hebt een fout gemaakt met de tijd. Controleer je berekening.\n\n🤔 **Reflectievraag:** Let op: 1 uur = 60 minuten!",
@@ -3638,12 +3627,12 @@
             "remedial_basis_id": null
           },
           {
-            "text": "13:05 uur",
+            "text": "12:15 uur",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "13:15 uur",
+            "text": "12:25 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Bijna! Controleer je berekening met uren en minuten.\n\n🤔 **Reflectievraag:** Heb je de minuten goed omgerekend?",
@@ -3651,7 +3640,7 @@
             "remedial_basis_id": null
           },
           {
-            "text": "12:65 uur",
+            "text": "11:75 uur",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Er zitten maar 60 minuten in een uur.\n\n🤔 **Reflectievraag:** Moet je minuten omzetten naar uren?",
@@ -3662,12 +3651,12 @@
         "extra_info": {
           "concept": "Dit is een tijdberekening. Let op dat 60 minuten gelijk is aan 1 uur.",
           "berekening": [
-            "11:40 + 1:25 = 13:05 uur"
+            "11:40 + 35 minuten = 12:15 uur"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Tijdberekening | 11:40 + 1:25 = 13:05 uur | **13:05 uur** ⭐ |"
+            "| 1. Tijdberekening | 11:40 + 35 minuten | **12:15 uur** ⭐ |"
           ]
         },
         "lova": {
@@ -3681,7 +3670,7 @@
           "stap2_ordenen": {
             "relevante_getallen": {
               "Starttijd": "11:40 uur",
-              "Duur": "1 uur 25 min"
+              "Duur": "35 minuten"
             },
             "tool": "Tijd rekenen",
             "conversies": [
@@ -3692,8 +3681,8 @@
             "bewerkingen": [
               {
                 "stap": "Tijdberekening",
-                "berekening": "11:40 + 1:25 = 13:05 uur",
-                "resultaat": "13:05 uur",
+                "berekening": "11:40 + 35 minuten",
+                "resultaat": "12:15 uur",
                 "uitleg": "Reken met uren en minuten"
               }
             ]
@@ -3701,7 +3690,7 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "tijd (uur:minuten)",
             "logica_check": "13:05 uur is logisch",
-            "antwoord": "13:05 uur"
+            "antwoord": "12:15 uur"
           }
         }
       }
@@ -3712,14 +3701,14 @@
     "id": 43,
     "title": "Speeltuin Bezoek",
     "theme": "tijd",
-    "content": "De speeltuin sluit om 17:15 uur. Lisa is er 2 uur en 30 minuten geweest.",
+    "content": "Lisa gaat om 14:45 uur naar de speeltuin. Ze blijft er 50 minuten.",
     "questions": [
       {
-        "question": "Hoe laat kwam Lisa?",
-        "hint": "💡 Tip: Trek de speeltijd af!",
+        "question": "Hoe laat verlaat Lisa de speeltuin?",
+        "hint": "💡 Tip: Tel de tijd op bij de starttijd. Let op: 60 minuten = 1 uur!",
         "options": [
           {
-            "text": "14:35 uur",
+            "text": "15:25 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Je hebt een fout gemaakt met de tijd. Controleer je berekening.\n\n🤔 **Reflectievraag:** Let op: 1 uur = 60 minuten!",
@@ -3727,12 +3716,12 @@
             "remedial_basis_id": null
           },
           {
-            "text": "14:45 uur",
+            "text": "15:35 uur",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "14:55 uur",
+            "text": "15:45 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Bijna! Controleer je berekening met uren en minuten.\n\n🤔 **Reflectievraag:** Heb je de minuten goed omgerekend?",
@@ -3740,7 +3729,7 @@
             "remedial_basis_id": null
           },
           {
-            "text": "19:45 uur",
+            "text": "14:95 uur",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Er zitten maar 60 minuten in een uur.\n\n🤔 **Reflectievraag:** Moet je minuten omzetten naar uren?",
@@ -3751,12 +3740,12 @@
         "extra_info": {
           "concept": "Dit is een tijdberekening. Let op dat 60 minuten gelijk is aan 1 uur.",
           "berekening": [
-            "17:15 - 2:30 = 14:45 uur"
+            "14:45 + 50 minuten = 15:35 uur"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Tijdberekening | 17:15 - 2:30 = 14:45 uur | **14:45 uur** ⭐ |"
+            "| 1. Tijdberekening | 14:45 + 50 minuten | **15:35 uur** ⭐ |"
           ]
         },
         "lova": {
@@ -3769,8 +3758,8 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Starttijd": "17:15 uur",
-              "Duur": "2 uur 30 min"
+              "Starttijd": "14:45 uur",
+              "Duur": "50 minuten"
             },
             "tool": "Tijd rekenen",
             "conversies": [
@@ -3781,8 +3770,8 @@
             "bewerkingen": [
               {
                 "stap": "Tijdberekening",
-                "berekening": "17:15 - 2:30 = 14:45 uur",
-                "resultaat": "14:45 uur",
+                "berekening": "14:45 + 50 minuten",
+                "resultaat": "15:35 uur",
                 "uitleg": "Reken met uren en minuten"
               }
             ]
@@ -3790,7 +3779,7 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "tijd (uur:minuten)",
             "logica_check": "14:45 uur is logisch",
-            "antwoord": "14:45 uur"
+            "antwoord": "15:35 uur"
           }
         }
       }
@@ -3801,14 +3790,14 @@
     "id": 44,
     "title": "Sporttraining",
     "theme": "tijd",
-    "content": "De training begint om 15:35 uur en duurt 1 uur en 40 minuten.",
+    "content": "De training begint om 15:35 uur en duurt 40 minuten.",
     "questions": [
       {
         "question": "Hoe laat is de training klaar?",
-        "hint": "💡 Tip: Tel de trainingstijd op!",
+        "hint": "💡 Tip: Tel de tijd op bij de starttijd. Let op: 60 minuten = 1 uur!",
         "options": [
           {
-            "text": "17:05 uur",
+            "text": "16:05 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Je hebt een fout gemaakt met de tijd. Controleer je berekening.\n\n🤔 **Reflectievraag:** Let op: 1 uur = 60 minuten!",
@@ -3816,12 +3805,12 @@
             "remedial_basis_id": null
           },
           {
-            "text": "17:15 uur",
+            "text": "16:15 uur",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "17:25 uur",
+            "text": "16:25 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Bijna! Controleer je berekening met uren en minuten.\n\n🤔 **Reflectievraag:** Heb je de minuten goed omgerekend?",
@@ -3829,7 +3818,7 @@
             "remedial_basis_id": null
           },
           {
-            "text": "16:75 uur",
+            "text": "15:75 uur",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Er zitten maar 60 minuten in een uur.\n\n🤔 **Reflectievraag:** Moet je minuten omzetten naar uren?",
@@ -3840,12 +3829,12 @@
         "extra_info": {
           "concept": "Dit is een tijdberekening. Let op dat 60 minuten gelijk is aan 1 uur.",
           "berekening": [
-            "15:35 + 1:40 = 17:15 uur"
+            "15:35 + 40 minuten = 16:15 uur"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Tijdberekening | 15:35 + 1:40 = 17:15 uur | **17:15 uur** ⭐ |"
+            "| 1. Tijdberekening | 15:35 + 40 minuten | **16:15 uur** ⭐ |"
           ]
         },
         "lova": {
@@ -3859,7 +3848,7 @@
           "stap2_ordenen": {
             "relevante_getallen": {
               "Starttijd": "15:35 uur",
-              "Duur": "1 uur 40 min"
+              "Duur": "40 minuten"
             },
             "tool": "Tijd rekenen",
             "conversies": [
@@ -3870,8 +3859,8 @@
             "bewerkingen": [
               {
                 "stap": "Tijdberekening",
-                "berekening": "15:35 + 1:40 = 17:15 uur",
-                "resultaat": "17:15 uur",
+                "berekening": "15:35 + 40 minuten",
+                "resultaat": "16:15 uur",
                 "uitleg": "Reken met uren en minuten"
               }
             ]
@@ -3879,7 +3868,7 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "tijd (uur:minuten)",
             "logica_check": "17:15 uur is logisch",
-            "antwoord": "17:15 uur"
+            "antwoord": "16:15 uur"
           }
         }
       }
@@ -3890,14 +3879,14 @@
     "id": 45,
     "title": "Museumbezoek",
     "theme": "tijd",
-    "content": "Het museum sluit om 18:00 uur. De familie was er 2 uur en 15 minuten.",
+    "content": "De familie gaat om 15:45 uur naar het museum. Ze blijven er 55 minuten.",
     "questions": [
       {
-        "question": "Hoe laat kwamen ze aan?",
-        "hint": "💡 Tip: Trek de bezoektijd af!",
+        "question": "Hoe laat verlaten ze het museum?",
+        "hint": "💡 Tip: Tel de tijd op bij de starttijd. Let op: 60 minuten = 1 uur!",
         "options": [
           {
-            "text": "15:35 uur",
+            "text": "16:30 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Je hebt een fout gemaakt met de tijd. Controleer je berekening.\n\n🤔 **Reflectievraag:** Let op: 1 uur = 60 minuten!",
@@ -3905,12 +3894,12 @@
             "remedial_basis_id": null
           },
           {
-            "text": "15:45 uur",
+            "text": "16:40 uur",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "15:55 uur",
+            "text": "16:50 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Bijna! Controleer je berekening met uren en minuten.\n\n🤔 **Reflectievraag:** Heb je de minuten goed omgerekend?",
@@ -3918,7 +3907,7 @@
             "remedial_basis_id": null
           },
           {
-            "text": "20:15 uur",
+            "text": "16:00 uur",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Er zitten maar 60 minuten in een uur.\n\n🤔 **Reflectievraag:** Moet je minuten omzetten naar uren?",
@@ -3929,12 +3918,12 @@
         "extra_info": {
           "concept": "Dit is een tijdberekening. Let op dat 60 minuten gelijk is aan 1 uur.",
           "berekening": [
-            "18:00 - 2:15 = 15:45 uur"
+            "15:45 + 55 minuten = 16:40 uur"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Tijdberekening | 18:00 - 2:15 = 15:45 uur | **15:45 uur** ⭐ |"
+            "| 1. Tijdberekening | 15:45 + 55 minuten | **16:40 uur** ⭐ |"
           ]
         },
         "lova": {
@@ -3947,8 +3936,8 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Starttijd": "18:00 uur",
-              "Duur": "2 uur 15 min"
+              "Starttijd": "15:45 uur",
+              "Duur": "55 minuten"
             },
             "tool": "Tijd rekenen",
             "conversies": [
@@ -3959,8 +3948,8 @@
             "bewerkingen": [
               {
                 "stap": "Tijdberekening",
-                "berekening": "18:00 - 2:15 = 15:45 uur",
-                "resultaat": "15:45 uur",
+                "berekening": "15:45 + 55 minuten",
+                "resultaat": "16:40 uur",
                 "uitleg": "Reken met uren en minuten"
               }
             ]
@@ -3968,7 +3957,7 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "tijd (uur:minuten)",
             "logica_check": "15:45 uur is logisch",
-            "antwoord": "15:45 uur"
+            "antwoord": "16:40 uur"
           }
         }
       }
@@ -3979,14 +3968,14 @@
     "id": 46,
     "title": "Bakkerij Broodjes",
     "theme": "vermenigvuldigen",
-    "content": "Een bakkerij bakt 7 ovens vol broodjes. In elke oven passen 140 broodjes.",
+    "content": "Een bakkerij bakt 7 ovens vol broodjes. In elke oven passen 30 broodjes.",
     "questions": [
       {
         "question": "Hoeveel broodjes in totaal?",
         "hint": "💡 Tip: Vermenigvuldig 7 × 140!",
         "options": [
           {
-            "text": "880 broodjes",
+            "text": "200 broodjes",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -3994,12 +3983,12 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "980 broodjes",
+            "text": "210 broodjes",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "1080 broodjes",
+            "text": "220 broodjes",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer nog eens zorgvuldig.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -4007,7 +3996,7 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "20 broodjes",
+            "text": "37 broodjes",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op de rekenbewerking!\n\n🤔 **Reflectievraag:** Moet je vermenigvuldigen of delen?",
@@ -4018,12 +4007,12 @@
         "extra_info": {
           "concept": "Dit is een vermenigvuldigensom met honderdtallen.",
           "berekening": [
-            "7 × 140 = 980 broodjes"
+            "7 × 30 = 210 broodjes"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldigen | 7 × 140 | **980 broodjes** ⭐ |"
+            "| 1. Vermenigvuldigen | 7 × 30 | **210 broodjes** ⭐ |"
           ]
         },
         "lova": {
@@ -4036,8 +4025,8 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Aantal ovens": "7",
-              "Broodjes per oven": "140"
+              "Aantal ovens": "30",
+              "Broodjes per oven": "30"
             },
             "tool": "Vermenigvuldigen",
             "conversies": []
@@ -4046,8 +4035,8 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldigen",
-                "berekening": "7 × 140",
-                "resultaat": "980",
+                "berekening": "7 × 30",
+                "resultaat": "210",
                 "uitleg": "Vermenigvuldigen uitvoeren"
               }
             ]
@@ -4055,25 +4044,25 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "broodjes",
             "logica_check": "980 broodjes is logisch",
-            "antwoord": "980 broodjes"
+            "antwoord": "210 broodjes"
           }
         }
       }
     ],
-    "sub_theme": "vermenigvuldigen met honderdtallen"
+    "sub_theme": "vermenigvuldigen met tientallen"
   },
   {
     "id": 47,
     "title": "Plantenkwekerij",
     "theme": "vermenigvuldigen",
-    "content": "Een kwekerij verkoopt planten in trays. Er zijn 8 trays van 160 planten.",
+    "content": "Een kwekerij verkoopt planten in trays. Er zijn 8 trays van 30 planten.",
     "questions": [
       {
         "question": "Hoeveel planten totaal?",
         "hint": "💡 Tip: Reken 8 × 160!",
         "options": [
           {
-            "text": "1180 planten",
+            "text": "230 planten",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -4081,12 +4070,12 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "1280 planten",
+            "text": "240 planten",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "1380 planten",
+            "text": "250 planten",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer nog eens zorgvuldig.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -4094,7 +4083,7 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "20 planten",
+            "text": "38 planten",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op de rekenbewerking!\n\n🤔 **Reflectievraag:** Moet je vermenigvuldigen of delen?",
@@ -4105,12 +4094,12 @@
         "extra_info": {
           "concept": "Dit is een vermenigvuldigensom met honderdtallen.",
           "berekening": [
-            "8 × 160 = 1280 planten"
+            "8 × 30 = 240 planten"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldigen | 8 × 160 | **1280 planten** ⭐ |"
+            "| 1. Vermenigvuldigen | 8 × 30 | **240 planten** ⭐ |"
           ]
         },
         "lova": {
@@ -4123,8 +4112,8 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Aantal trays": "8",
-              "Planten per tray": "160"
+              "Aantal trays": "30",
+              "Planten per tray": "30"
             },
             "tool": "Vermenigvuldigen",
             "conversies": []
@@ -4133,8 +4122,8 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldigen",
-                "berekening": "8 × 160",
-                "resultaat": "1280",
+                "berekening": "8 × 30",
+                "resultaat": "240",
                 "uitleg": "Vermenigvuldigen uitvoeren"
               }
             ]
@@ -4142,25 +4131,25 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "planten",
             "logica_check": "1280 planten is logisch",
-            "antwoord": "1280 planten"
+            "antwoord": "240 planten"
           }
         }
       }
     ],
-    "sub_theme": "vermenigvuldigen met honderdtallen"
+    "sub_theme": "vermenigvuldigen met tientallen"
   },
   {
     "id": 48,
     "title": "Boeken Drukkerij",
     "theme": "vermenigvuldigen",
-    "content": "Een drukkerij drukt 9 series boeken. Elke serie heeft 170 boeken.",
+    "content": "Een drukkerij drukt 9 series boeken. Elke serie heeft 30 boeken.",
     "questions": [
       {
         "question": "Hoeveel boeken totaal?",
         "hint": "💡 Tip: Vermenigvuldig 9 × 170!",
         "options": [
           {
-            "text": "1430 boeken",
+            "text": "260 boeken",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -4168,12 +4157,12 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "1530 boeken",
+            "text": "270 boeken",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "1630 boeken",
+            "text": "280 boeken",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer nog eens zorgvuldig.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -4181,7 +4170,7 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "19 boeken",
+            "text": "39 boeken",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op de rekenbewerking!\n\n🤔 **Reflectievraag:** Moet je vermenigvuldigen of delen?",
@@ -4192,12 +4181,12 @@
         "extra_info": {
           "concept": "Dit is een vermenigvuldigensom met honderdtallen.",
           "berekening": [
-            "9 × 170 = 1530 boeken"
+            "9 × 30 = 270 boeken"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldigen | 9 × 170 | **1530 boeken** ⭐ |"
+            "| 1. Vermenigvuldigen | 9 × 30 | **270 boeken** ⭐ |"
           ]
         },
         "lova": {
@@ -4210,8 +4199,8 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Aantal series": "9",
-              "Boeken per serie": "170"
+              "Aantal series": "30",
+              "Boeken per serie": "30"
             },
             "tool": "Vermenigvuldigen",
             "conversies": []
@@ -4220,8 +4209,8 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldigen",
-                "berekening": "9 × 170",
-                "resultaat": "1530",
+                "berekening": "9 × 30",
+                "resultaat": "270",
                 "uitleg": "Vermenigvuldigen uitvoeren"
               }
             ]
@@ -4229,25 +4218,25 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "boeken",
             "logica_check": "1530 boeken is logisch",
-            "antwoord": "1530 boeken"
+            "antwoord": "270 boeken"
           }
         }
       }
     ],
-    "sub_theme": "vermenigvuldigen met honderdtallen"
+    "sub_theme": "vermenigvuldigen met tientallen"
   },
   {
     "id": 49,
     "title": "Kaas Pakken",
     "theme": "vermenigvuldigen",
-    "content": "Een kaasboer verkoopt kaas in pakken. Er zijn 6 dozen met elk 130 pakken kaas.",
+    "content": "Een kaasboer verkoopt kaas in pakken. Er zijn 6 dozen met elk 25 pakken kaas.",
     "questions": [
       {
         "question": "Hoeveel pakken kaas?",
         "hint": "💡 Tip: Reken 6 × 130!",
         "options": [
           {
-            "text": "680 pakken",
+            "text": "140 pakken",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -4255,12 +4244,12 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "780 pakken",
+            "text": "150 pakken",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "880 pakken",
+            "text": "160 pakken",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer nog eens zorgvuldig.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -4268,7 +4257,7 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "22 pakken",
+            "text": "31 pakken",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op de rekenbewerking!\n\n🤔 **Reflectievraag:** Moet je vermenigvuldigen of delen?",
@@ -4279,12 +4268,12 @@
         "extra_info": {
           "concept": "Dit is een vermenigvuldigensom met honderdtallen.",
           "berekening": [
-            "6 × 130 = 780 pakken"
+            "6 × 25 = 150 pakken"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldigen | 6 × 130 | **780 pakken** ⭐ |"
+            "| 1. Vermenigvuldigen | 6 × 25 | **150 pakken** ⭐ |"
           ]
         },
         "lova": {
@@ -4298,7 +4287,7 @@
           "stap2_ordenen": {
             "relevante_getallen": {
               "Aantal dozen": "6",
-              "Pakken per doos": "130"
+              "Pakken per doos": "25"
             },
             "tool": "Vermenigvuldigen",
             "conversies": []
@@ -4307,8 +4296,8 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldigen",
-                "berekening": "6 × 130",
-                "resultaat": "780",
+                "berekening": "6 × 25",
+                "resultaat": "150",
                 "uitleg": "Vermenigvuldigen uitvoeren"
               }
             ]
@@ -4316,25 +4305,25 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "pakken",
             "logica_check": "780 pakken is logisch",
-            "antwoord": "780 pakken"
+            "antwoord": "150 pakken"
           }
         }
       }
     ],
-    "sub_theme": "vermenigvuldigen met honderdtallen"
+    "sub_theme": "vermenigvuldigen met tientallen"
   },
   {
     "id": 50,
     "title": "Tegels Badkamer",
     "theme": "vermenigvuldigen",
-    "content": "Een tegel zetter heeft 7 dozen tegels. In elke doos zitten 125 tegels.",
+    "content": "Een tegelzetter heeft 7 dozen tegels. In elke doos zitten 25 tegels.",
     "questions": [
       {
         "question": "Hoeveel tegels totaal?",
         "hint": "💡 Tip: Vermenigvuldig 7 × 125!",
         "options": [
           {
-            "text": "775 tegels",
+            "text": "165 tegels",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -4342,12 +4331,12 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "875 tegels",
+            "text": "175 tegels",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "975 tegels",
+            "text": "185 tegels",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer nog eens zorgvuldig.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -4355,7 +4344,7 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "18 tegels",
+            "text": "32 tegels",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op de rekenbewerking!\n\n🤔 **Reflectievraag:** Moet je vermenigvuldigen of delen?",
@@ -4366,12 +4355,12 @@
         "extra_info": {
           "concept": "Dit is een vermenigvuldigensom met honderdtallen.",
           "berekening": [
-            "7 × 125 = 875 tegels"
+            "7 × 25 = 175 tegels"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldigen | 7 × 125 | **875 tegels** ⭐ |"
+            "| 1. Vermenigvuldigen | 7 × 25 | **175 tegels** ⭐ |"
           ]
         },
         "lova": {
@@ -4385,7 +4374,7 @@
           "stap2_ordenen": {
             "relevante_getallen": {
               "Aantal dozen": "7",
-              "Tegels per doos": "125"
+              "Tegels per doos": "25"
             },
             "tool": "Vermenigvuldigen",
             "conversies": []
@@ -4394,8 +4383,8 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldigen",
-                "berekening": "7 × 125",
-                "resultaat": "875",
+                "berekening": "7 × 25",
+                "resultaat": "175",
                 "uitleg": "Vermenigvuldigen uitvoeren"
               }
             ]
@@ -4403,25 +4392,25 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "tegels",
             "logica_check": "875 tegels is logisch",
-            "antwoord": "875 tegels"
+            "antwoord": "175 tegels"
           }
         }
       }
     ],
-    "sub_theme": "vermenigvuldigen met honderdtallen"
+    "sub_theme": "vermenigvuldigen met tientallen"
   },
   {
     "id": 51,
     "title": "Koffiebekers",
     "theme": "vermenigvuldigen",
-    "content": "Een bedrijf koopt koffiebekers. Ze bestellen 8 dozen van 145 bekers.",
+    "content": "Een bedrijf koopt koffiebekers. Ze bestellen 8 dozen van 25 bekers.",
     "questions": [
       {
         "question": "Hoeveel bekers totaal?",
         "hint": "💡 Tip: Reken 8 × 145!",
         "options": [
           {
-            "text": "1060 bekers",
+            "text": "190 bekers",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -4429,12 +4418,12 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "1160 bekers",
+            "text": "200 bekers",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "1260 bekers",
+            "text": "210 bekers",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer nog eens zorgvuldig.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -4442,7 +4431,7 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "18 bekers",
+            "text": "33 bekers",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op de rekenbewerking!\n\n🤔 **Reflectievraag:** Moet je vermenigvuldigen of delen?",
@@ -4453,12 +4442,12 @@
         "extra_info": {
           "concept": "Dit is een vermenigvuldigensom met honderdtallen.",
           "berekening": [
-            "8 × 145 = 1160 bekers"
+            "8 × 25 = 200 bekers"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldigen | 8 × 145 | **1160 bekers** ⭐ |"
+            "| 1. Vermenigvuldigen | 8 × 25 | **200 bekers** ⭐ |"
           ]
         },
         "lova": {
@@ -4472,7 +4461,7 @@
           "stap2_ordenen": {
             "relevante_getallen": {
               "Aantal dozen": "8",
-              "Bekers per doos": "145"
+              "Bekers per doos": "25"
             },
             "tool": "Vermenigvuldigen",
             "conversies": []
@@ -4481,8 +4470,8 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldigen",
-                "berekening": "8 × 145",
-                "resultaat": "1160",
+                "berekening": "8 × 25",
+                "resultaat": "200",
                 "uitleg": "Vermenigvuldigen uitvoeren"
               }
             ]
@@ -4490,25 +4479,25 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "bekers",
             "logica_check": "1160 bekers is logisch",
-            "antwoord": "1160 bekers"
+            "antwoord": "200 bekers"
           }
         }
       }
     ],
-    "sub_theme": "vermenigvuldigen met honderdtallen"
+    "sub_theme": "vermenigvuldigen met tientallen"
   },
   {
     "id": 52,
     "title": "Puzzels Speelgoedwinkel",
     "theme": "vermenigvuldigen",
-    "content": "Een winkel krijgt puzzels binnen. Er zijn 9 pallets met 135 puzzels per pallet.",
+    "content": "Een winkel krijgt puzzels binnen. Er zijn 9 pallets met 15 puzzels per pallet.",
     "questions": [
       {
         "question": "Hoeveel puzzels?",
         "hint": "💡 Tip: Vermenigvuldig 9 × 135!",
         "options": [
           {
-            "text": "1115 puzzels",
+            "text": "125 puzzels",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -4516,12 +4505,12 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "1215 puzzels",
+            "text": "135 puzzels",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "1315 puzzels",
+            "text": "145 puzzels",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer nog eens zorgvuldig.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -4529,7 +4518,7 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "15 puzzels",
+            "text": "24 puzzels",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op de rekenbewerking!\n\n🤔 **Reflectievraag:** Moet je vermenigvuldigen of delen?",
@@ -4540,12 +4529,12 @@
         "extra_info": {
           "concept": "Dit is een vermenigvuldigensom met honderdtallen.",
           "berekening": [
-            "9 × 135 = 1215 puzzels"
+            "9 × 15 = 135 puzzels"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldigen | 9 × 135 | **1215 puzzels** ⭐ |"
+            "| 1. Vermenigvuldigen | 9 × 15 | **135 puzzels** ⭐ |"
           ]
         },
         "lova": {
@@ -4558,8 +4547,8 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Aantal pallets": "9",
-              "Puzzels per pallet": "135"
+              "Aantal pallets": "15",
+              "Puzzels per pallet": "15"
             },
             "tool": "Vermenigvuldigen",
             "conversies": []
@@ -4568,8 +4557,8 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldigen",
-                "berekening": "9 × 135",
-                "resultaat": "1215",
+                "berekening": "9 × 15",
+                "resultaat": "135",
                 "uitleg": "Vermenigvuldigen uitvoeren"
               }
             ]
@@ -4577,25 +4566,25 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "puzzels",
             "logica_check": "1215 puzzels is logisch",
-            "antwoord": "1215 puzzels"
+            "antwoord": "135 puzzels"
           }
         }
       }
     ],
-    "sub_theme": "vermenigvuldigen met honderdtallen"
+    "sub_theme": "vermenigvuldigen met tientallen"
   },
   {
     "id": 53,
     "title": "Tennisballen",
     "theme": "vermenigvuldigen",
-    "content": "Een sportwinkel heeft 6 kratten tennisballen. In elk krat zitten 165 ballen.",
+    "content": "Een sportwinkel heeft 6 kratten tennisballen. In elk krat zitten 30 ballen.",
     "questions": [
       {
         "question": "Hoeveel tennisballen?",
         "hint": "💡 Tip: Reken 6 × 165!",
         "options": [
           {
-            "text": "890 tennisballen",
+            "text": "170 tennisballen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -4603,12 +4592,12 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "990 tennisballen",
+            "text": "180 tennisballen",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "1090 tennisballen",
+            "text": "190 tennisballen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer nog eens zorgvuldig.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -4616,7 +4605,7 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "28 tennisballen",
+            "text": "36 tennisballen",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op de rekenbewerking!\n\n🤔 **Reflectievraag:** Moet je vermenigvuldigen of delen?",
@@ -4627,12 +4616,12 @@
         "extra_info": {
           "concept": "Dit is een vermenigvuldigensom met honderdtallen.",
           "berekening": [
-            "6 × 165 = 990 tennisballen"
+            "6 × 30 = 180 tennisballen"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldigen | 6 × 165 | **990 tennisballen** ⭐ |"
+            "| 1. Vermenigvuldigen | 6 × 30 | **180 tennisballen** ⭐ |"
           ]
         },
         "lova": {
@@ -4645,8 +4634,8 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Aantal kratten": "6",
-              "Ballen per krat": "165"
+              "Aantal kratten": "30",
+              "Ballen per krat": "30"
             },
             "tool": "Vermenigvuldigen",
             "conversies": []
@@ -4655,8 +4644,8 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldigen",
-                "berekening": "6 × 165",
-                "resultaat": "990",
+                "berekening": "6 × 30",
+                "resultaat": "180",
                 "uitleg": "Vermenigvuldigen uitvoeren"
               }
             ]
@@ -4664,25 +4653,25 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "tennisballen",
             "logica_check": "990 tennisballen is logisch",
-            "antwoord": "990 tennisballen"
+            "antwoord": "180 tennisballen"
           }
         }
       }
     ],
-    "sub_theme": "vermenigvuldigen met honderdtallen"
+    "sub_theme": "vermenigvuldigen met tientallen"
   },
   {
     "id": 54,
     "title": "Potplanten",
     "theme": "vermenigvuldigen",
-    "content": "Een tuincentrum heeft 7 karren met potplanten. Elke kar bevat 155 planten.",
+    "content": "Een tuincentrum heeft 7 karren met potplanten. Elke kar bevat 20 planten.",
     "questions": [
       {
         "question": "Hoeveel potplanten?",
         "hint": "💡 Tip: Vermenigvuldig 7 × 155!",
         "options": [
           {
-            "text": "985 potplanten",
+            "text": "130 potplanten",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -4690,12 +4679,12 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "1085 potplanten",
+            "text": "140 potplanten",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "1185 potplanten",
+            "text": "150 potplanten",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer nog eens zorgvuldig.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -4703,7 +4692,7 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "22 potplanten",
+            "text": "27 potplanten",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op de rekenbewerking!\n\n🤔 **Reflectievraag:** Moet je vermenigvuldigen of delen?",
@@ -4714,12 +4703,12 @@
         "extra_info": {
           "concept": "Dit is een vermenigvuldigensom met honderdtallen.",
           "berekening": [
-            "7 × 155 = 1085 potplanten"
+            "7 × 20 = 140 potplanten"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldigen | 7 × 155 | **1085 potplanten** ⭐ |"
+            "| 1. Vermenigvuldigen | 7 × 20 | **140 potplanten** ⭐ |"
           ]
         },
         "lova": {
@@ -4732,8 +4721,8 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Aantal karren": "7",
-              "Planten per kar": "155"
+              "Aantal karren": "20",
+              "Planten per kar": "20"
             },
             "tool": "Vermenigvuldigen",
             "conversies": []
@@ -4742,8 +4731,8 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldigen",
-                "berekening": "7 × 155",
-                "resultaat": "1085",
+                "berekening": "7 × 20",
+                "resultaat": "140",
                 "uitleg": "Vermenigvuldigen uitvoeren"
               }
             ]
@@ -4751,25 +4740,25 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "potplanten",
             "logica_check": "1085 potplanten is logisch",
-            "antwoord": "1085 potplanten"
+            "antwoord": "140 potplanten"
           }
         }
       }
     ],
-    "sub_theme": "vermenigvuldigen met honderdtallen"
+    "sub_theme": "vermenigvuldigen met tientallen"
   },
   {
     "id": 55,
     "title": "Markers Kantoor",
     "theme": "vermenigvuldigen",
-    "content": "Een kantoor bestelt markers. Ze krijgen 8 verpakkingen van 175 markers.",
+    "content": "Een kantoor bestelt markers. Ze krijgen 8 verpakkingen van 20 markers.",
     "questions": [
       {
         "question": "Hoeveel markers totaal?",
         "hint": "💡 Tip: Reken 8 × 175!",
         "options": [
           {
-            "text": "1300 markers",
+            "text": "150 markers",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je berekening.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -4777,12 +4766,12 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "1400 markers",
+            "text": "160 markers",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "1500 markers",
+            "text": "170 markers",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer nog eens zorgvuldig.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -4790,7 +4779,7 @@
             "remedial_basis_id": 104
           },
           {
-            "text": "22 markers",
+            "text": "28 markers",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op de rekenbewerking!\n\n🤔 **Reflectievraag:** Moet je vermenigvuldigen of delen?",
@@ -4801,12 +4790,12 @@
         "extra_info": {
           "concept": "Dit is een vermenigvuldigensom met honderdtallen.",
           "berekening": [
-            "8 × 175 = 1400 markers"
+            "8 × 20 = 160 markers"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldigen | 8 × 175 | **1400 markers** ⭐ |"
+            "| 1. Vermenigvuldigen | 8 × 20 | **160 markers** ⭐ |"
           ]
         },
         "lova": {
@@ -4819,8 +4808,8 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Aantal verpakkingen": "8",
-              "Markers per verpakking": "175"
+              "Aantal verpakkingen": "20",
+              "Markers per verpakking": "20"
             },
             "tool": "Vermenigvuldigen",
             "conversies": []
@@ -4829,8 +4818,8 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldigen",
-                "berekening": "8 × 175",
-                "resultaat": "1400",
+                "berekening": "8 × 20",
+                "resultaat": "160",
                 "uitleg": "Vermenigvuldigen uitvoeren"
               }
             ]
@@ -4838,25 +4827,25 @@
           "stap4_antwoorden": {
             "verwachte_eenheid": "markers",
             "logica_check": "1400 markers is logisch",
-            "antwoord": "1400 markers"
+            "antwoord": "160 markers"
           }
         }
       }
     ],
-    "sub_theme": "vermenigvuldigen met honderdtallen"
+    "sub_theme": "vermenigvuldigen met tientallen"
   },
   {
     "id": 56,
     "title": "Bloemen Verdelen",
     "theme": "delen",
-    "content": "Een bloemist heeft 420 bloemen die verdeeld moeten over 7 vazen.",
+    "content": "Een bloemist heeft 63 bloemen die verdeeld moeten over 7 vazen.",
     "questions": [
       {
         "question": "Hoeveel bloemen per vaas?",
         "hint": "💡 Tip: Deel 420 door 7!",
         "options": [
           {
-            "text": "50 bloemen",
+            "text": "8 bloemen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je deling.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -4864,12 +4853,12 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "60 bloemen",
+            "text": "9 bloemen",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "70 bloemen",
+            "text": "10 bloemen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer je deling nog eens.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -4877,7 +4866,7 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "2940 bloemen",
+            "text": "56 bloemen",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Je moet delen, niet vermenigvuldigen.\n\n🤔 **Reflectievraag:** Wat betekent 'verdelen' of 'per'?",
@@ -4888,12 +4877,12 @@
         "extra_info": {
           "concept": "Dit is een deelsom met honderdtallen. Je moet het totaal eerlijk verdelen.",
           "berekening": [
-            "420 ÷ 7 = 60 bloemen"
+            "63 ÷ 7 = 9 bloemen"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Delen | 420 ÷ 7 | **60 bloemen** ⭐ |"
+            "| 1. Delen | 63 ÷ 7 | **9 bloemen** ⭐ |"
           ]
         },
         "lova": {
@@ -4906,7 +4895,7 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Totaal bloemen": "420",
+              "Totaal bloemen": "63",
               "Aantal vazen": "7"
             },
             "tool": "Delen",
@@ -4916,34 +4905,34 @@
             "bewerkingen": [
               {
                 "stap": "Delen",
-                "berekening": "420 ÷ 7",
-                "resultaat": "60",
+                "berekening": "63 ÷ 7",
+                "resultaat": "9",
                 "uitleg": "Verdeel het totaal"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "bloemen",
-            "logica_check": "60 bloemen is logisch",
-            "antwoord": "60 bloemen"
+            "logica_check": "9 bloemen is logisch: 7 vazen × 9 = 63 bloemen totaal",
+            "antwoord": "9 bloemen"
           }
         }
       }
     ],
-    "sub_theme": "delen met honderdtallen"
+    "sub_theme": "delen met tientallen"
   },
   {
     "id": 57,
     "title": "Eieren Verdelen",
     "theme": "delen",
-    "content": "Een boerderij heeft 480 eieren die in dozen van 8 worden verpakt.",
+    "content": "Een boerderij heeft 64 eieren die in dozen van 8 worden verpakt.",
     "questions": [
       {
         "question": "Hoeveel dozen worden het?",
         "hint": "💡 Tip: Deel 480 door 8!",
         "options": [
           {
-            "text": "50 dozen",
+            "text": "7 dozen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je deling.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -4951,12 +4940,12 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "60 dozen",
+            "text": "8 dozen",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "70 dozen",
+            "text": "9 dozen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer je deling nog eens.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -4964,7 +4953,7 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "3840 dozen",
+            "text": "56 dozen",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Je moet delen, niet vermenigvuldigen.\n\n🤔 **Reflectievraag:** Wat betekent 'verdelen' of 'per'?",
@@ -4975,12 +4964,12 @@
         "extra_info": {
           "concept": "Dit is een deelsom met honderdtallen. Je moet het totaal eerlijk verdelen.",
           "berekening": [
-            "480 ÷ 8 = 60 dozen"
+            "64 ÷ 8 = 8 dozen"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Delen | 480 ÷ 8 | **60 dozen** ⭐ |"
+            "| 1. Delen | 64 ÷ 8 | **8 dozen** ⭐ |"
           ]
         },
         "lova": {
@@ -4993,7 +4982,7 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Totaal eieren": "480",
+              "Totaal eieren": "64",
               "Eieren per doos": "8"
             },
             "tool": "Delen",
@@ -5003,34 +4992,34 @@
             "bewerkingen": [
               {
                 "stap": "Delen",
-                "berekening": "480 ÷ 8",
-                "resultaat": "60",
+                "berekening": "64 ÷ 8",
+                "resultaat": "8",
                 "uitleg": "Verdeel het totaal"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "dozen",
-            "logica_check": "60 dozen is logisch",
-            "antwoord": "60 dozen"
+            "logica_check": "8 dozen is logisch: 8 dozen van 8 eieren = 64 eieren totaal",
+            "antwoord": "8 dozen"
           }
         }
       }
     ],
-    "sub_theme": "delen met honderdtallen"
+    "sub_theme": "delen met tientallen"
   },
   {
     "id": 58,
     "title": "Stoelen Verdelen",
     "theme": "delen",
-    "content": "Een school heeft 540 stoelen die over 9 lokalen verdeeld worden.",
+    "content": "Een school heeft 81 stoelen die over 9 lokalen verdeeld worden.",
     "questions": [
       {
         "question": "Hoeveel stoelen per lokaal?",
         "hint": "💡 Tip: Deel 540 door 9!",
         "options": [
           {
-            "text": "50 stoelen",
+            "text": "8 stoelen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je deling.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -5038,12 +5027,12 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "60 stoelen",
+            "text": "9 stoelen",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "70 stoelen",
+            "text": "10 stoelen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer je deling nog eens.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -5051,7 +5040,7 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "4860 stoelen",
+            "text": "72 stoelen",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Je moet delen, niet vermenigvuldigen.\n\n🤔 **Reflectievraag:** Wat betekent 'verdelen' of 'per'?",
@@ -5062,12 +5051,12 @@
         "extra_info": {
           "concept": "Dit is een deelsom met honderdtallen. Je moet het totaal eerlijk verdelen.",
           "berekening": [
-            "540 ÷ 9 = 60 stoelen"
+            "81 ÷ 9 = 9 stoelen"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Delen | 540 ÷ 9 | **60 stoelen** ⭐ |"
+            "| 1. Delen | 81 ÷ 9 | **9 stoelen** ⭐ |"
           ]
         },
         "lova": {
@@ -5080,7 +5069,7 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Totaal stoelen": "540",
+              "Totaal stoelen": "81",
               "Aantal lokalen": "9"
             },
             "tool": "Delen",
@@ -5090,34 +5079,34 @@
             "bewerkingen": [
               {
                 "stap": "Delen",
-                "berekening": "540 ÷ 9",
-                "resultaat": "60",
+                "berekening": "81 ÷ 9",
+                "resultaat": "9",
                 "uitleg": "Verdeel het totaal"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "stoelen",
-            "logica_check": "60 stoelen is logisch",
-            "antwoord": "60 stoelen"
+            "logica_check": "9 stoelen is logisch: 9 lokalen × 9 = 81 stoelen totaal",
+            "antwoord": "9 stoelen"
           }
         }
       }
     ],
-    "sub_theme": "delen met honderdtallen"
+    "sub_theme": "delen met tientallen"
   },
   {
     "id": 59,
     "title": "Potloden Pakjes",
     "theme": "delen",
-    "content": "Een winkel heeft 360 potloden die in pakjes van 6 worden gedaan.",
+    "content": "Een winkel heeft 48 potloden die in pakjes van 6 worden gedaan.",
     "questions": [
       {
         "question": "Hoeveel pakjes worden het?",
         "hint": "💡 Tip: Deel 360 door 6!",
         "options": [
           {
-            "text": "50 pakjes",
+            "text": "7 pakjes",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je deling.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -5125,12 +5114,12 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "60 pakjes",
+            "text": "8 pakjes",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "70 pakjes",
+            "text": "9 pakjes",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer je deling nog eens.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -5138,7 +5127,7 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "2160 pakjes",
+            "text": "42 pakjes",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Je moet delen, niet vermenigvuldigen.\n\n🤔 **Reflectievraag:** Wat betekent 'verdelen' of 'per'?",
@@ -5149,12 +5138,12 @@
         "extra_info": {
           "concept": "Dit is een deelsom met honderdtallen. Je moet het totaal eerlijk verdelen.",
           "berekening": [
-            "360 ÷ 6 = 60 pakjes"
+            "48 ÷ 6 = 8 pakjes"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Delen | 360 ÷ 6 | **60 pakjes** ⭐ |"
+            "| 1. Delen | 48 ÷ 6 | **8 pakjes** ⭐ |"
           ]
         },
         "lova": {
@@ -5167,7 +5156,7 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Totaal potloden": "360",
+              "Totaal potloden": "48",
               "Per pakje": "6"
             },
             "tool": "Delen",
@@ -5177,34 +5166,34 @@
             "bewerkingen": [
               {
                 "stap": "Delen",
-                "berekening": "360 ÷ 6",
-                "resultaat": "60",
+                "berekening": "48 ÷ 6",
+                "resultaat": "8",
                 "uitleg": "Verdeel het totaal"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "pakjes",
-            "logica_check": "60 pakjes is logisch",
-            "antwoord": "60 pakjes"
+            "logica_check": "8 pakjes is logisch: 8 pakjes van 6 potloden = 48 potloden totaal",
+            "antwoord": "8 pakjes"
           }
         }
       }
     ],
-    "sub_theme": "delen met honderdtallen"
+    "sub_theme": "delen met tientallen"
   },
   {
     "id": 60,
     "title": "Stripboeken",
     "theme": "delen",
-    "content": "Een bibliotheek heeft 630 stripboeken voor 9 schappen.",
+    "content": "Een bibliotheek heeft 54 stripboeken voor 9 schappen.",
     "questions": [
       {
         "question": "Hoeveel stripboeken per schap?",
         "hint": "💡 Tip: Deel 630 door 9!",
         "options": [
           {
-            "text": "60 stripboeken",
+            "text": "5 stripboeken",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je deling.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -5212,12 +5201,12 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "70 stripboeken",
+            "text": "6 stripboeken",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "80 stripboeken",
+            "text": "7 stripboeken",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer je deling nog eens.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -5225,7 +5214,7 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "5670 stripboeken",
+            "text": "45 stripboeken",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Je moet delen, niet vermenigvuldigen.\n\n🤔 **Reflectievraag:** Wat betekent 'verdelen' of 'per'?",
@@ -5236,12 +5225,12 @@
         "extra_info": {
           "concept": "Dit is een deelsom met honderdtallen. Je moet het totaal eerlijk verdelen.",
           "berekening": [
-            "630 ÷ 9 = 70 stripboeken"
+            "54 ÷ 9 = 6 stripboeken"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Delen | 630 ÷ 9 | **70 stripboeken** ⭐ |"
+            "| 1. Delen | 54 ÷ 9 | **6 stripboeken** ⭐ |"
           ]
         },
         "lova": {
@@ -5254,7 +5243,7 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Totaal stripboeken": "630",
+              "Totaal stripboeken": "54",
               "Aantal schappen": "9"
             },
             "tool": "Delen",
@@ -5264,34 +5253,34 @@
             "bewerkingen": [
               {
                 "stap": "Delen",
-                "berekening": "630 ÷ 9",
-                "resultaat": "70",
+                "berekening": "54 ÷ 9",
+                "resultaat": "6",
                 "uitleg": "Verdeel het totaal"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "stripboeken",
-            "logica_check": "70 stripboeken is logisch",
-            "antwoord": "70 stripboeken"
+            "logica_check": "6 stripboeken is logisch: 9 schappen × 6 = 54 stripboeken totaal",
+            "antwoord": "6 stripboeken"
           }
         }
       }
     ],
-    "sub_theme": "delen met honderdtallen"
+    "sub_theme": "delen met tientallen"
   },
   {
     "id": 61,
     "title": "Snoepjes Zakjes",
     "theme": "delen",
-    "content": "Een fabriek heeft 560 snoepjes die in zakjes van 8 worden gedaan.",
+    "content": "Een fabriek heeft 56 snoepjes die in zakjes van 8 worden gedaan.",
     "questions": [
       {
         "question": "Hoeveel zakjes worden het?",
         "hint": "💡 Tip: Deel 560 door 8!",
         "options": [
           {
-            "text": "60 zakjes",
+            "text": "6 zakjes",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je deling.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -5299,12 +5288,12 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "70 zakjes",
+            "text": "7 zakjes",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "80 zakjes",
+            "text": "8 zakjes",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer je deling nog eens.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -5312,7 +5301,7 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "4480 zakjes",
+            "text": "48 zakjes",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Je moet delen, niet vermenigvuldigen.\n\n🤔 **Reflectievraag:** Wat betekent 'verdelen' of 'per'?",
@@ -5323,12 +5312,12 @@
         "extra_info": {
           "concept": "Dit is een deelsom met honderdtallen. Je moet het totaal eerlijk verdelen.",
           "berekening": [
-            "560 ÷ 8 = 70 zakjes"
+            "56 ÷ 8 = 7 zakjes"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Delen | 560 ÷ 8 | **70 zakjes** ⭐ |"
+            "| 1. Delen | 56 ÷ 8 | **7 zakjes** ⭐ |"
           ]
         },
         "lova": {
@@ -5341,7 +5330,7 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Totaal snoepjes": "560",
+              "Totaal snoepjes": "56",
               "Per zakje": "8"
             },
             "tool": "Delen",
@@ -5351,34 +5340,34 @@
             "bewerkingen": [
               {
                 "stap": "Delen",
-                "berekening": "560 ÷ 8",
-                "resultaat": "70",
+                "berekening": "56 ÷ 8",
+                "resultaat": "7",
                 "uitleg": "Verdeel het totaal"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "zakjes",
-            "logica_check": "70 zakjes is logisch",
-            "antwoord": "70 zakjes"
+            "logica_check": "7 zakjes is logisch: 7 zakjes van 8 snoepjes = 56 snoepjes totaal",
+            "antwoord": "7 zakjes"
           }
         }
       }
     ],
-    "sub_theme": "delen met honderdtallen"
+    "sub_theme": "delen met tientallen"
   },
   {
     "id": 62,
     "title": "Boeken Stapels",
     "theme": "delen",
-    "content": "Een boekhandel heeft 490 boeken die in stapels van 7 worden gelegd.",
+    "content": "Een boekhandel heeft 49 boeken die in stapels van 7 worden gelegd.",
     "questions": [
       {
-        "question": "Hoeveel boeken per stapel?",
+        "question": "Hoeveel stapels worden het?",
         "hint": "💡 Tip: Deel 490 door 7!",
         "options": [
           {
-            "text": "60 boeken",
+            "text": "6 stapels",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je deling.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -5386,12 +5375,12 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "70 boeken",
+            "text": "7 stapels",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "80 boeken",
+            "text": "8 stapels",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer je deling nog eens.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -5399,7 +5388,7 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "3430 boeken",
+            "text": "42 stapels",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Je moet delen, niet vermenigvuldigen.\n\n🤔 **Reflectievraag:** Wat betekent 'verdelen' of 'per'?",
@@ -5410,12 +5399,12 @@
         "extra_info": {
           "concept": "Dit is een deelsom met honderdtallen. Je moet het totaal eerlijk verdelen.",
           "berekening": [
-            "490 ÷ 7 = 70 boeken"
+            "49 ÷ 7 = 7 stapels"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Delen | 490 ÷ 7 | **70 boeken** ⭐ |"
+            "| 1. Delen | 49 ÷ 7 | **7 stapels** ⭐ |"
           ]
         },
         "lova": {
@@ -5428,7 +5417,7 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Totaal boeken": "490",
+              "Totaal boeken": "49",
               "Aantal stapels": "7"
             },
             "tool": "Delen",
@@ -5438,34 +5427,34 @@
             "bewerkingen": [
               {
                 "stap": "Delen",
-                "berekening": "490 ÷ 7",
-                "resultaat": "70",
+                "berekening": "49 ÷ 7",
+                "resultaat": "7",
                 "uitleg": "Verdeel het totaal"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "boeken",
-            "logica_check": "70 boeken is logisch",
-            "antwoord": "70 boeken"
+            "logica_check": "7 stapels is logisch: 7 stapels van 7 boeken = 49 boeken totaal",
+            "antwoord": "7 stapels"
           }
         }
       }
     ],
-    "sub_theme": "delen met honderdtallen"
+    "sub_theme": "delen met tientallen"
   },
   {
     "id": 63,
     "title": "Plastic Bekers",
     "theme": "delen",
-    "content": "Een sportvereniging heeft 720 bekers voor 8 teams.",
+    "content": "Een sportvereniging heeft 64 bekers voor 8 teams.",
     "questions": [
       {
         "question": "Hoeveel bekers per team?",
         "hint": "💡 Tip: Deel 720 door 8!",
         "options": [
           {
-            "text": "80 bekers",
+            "text": "7 bekers",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je deling.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -5473,12 +5462,12 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "90 bekers",
+            "text": "8 bekers",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "100 bekers",
+            "text": "9 bekers",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer je deling nog eens.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -5486,7 +5475,7 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "5760 bekers",
+            "text": "56 bekers",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Je moet delen, niet vermenigvuldigen.\n\n🤔 **Reflectievraag:** Wat betekent 'verdelen' of 'per'?",
@@ -5497,12 +5486,12 @@
         "extra_info": {
           "concept": "Dit is een deelsom met honderdtallen. Je moet het totaal eerlijk verdelen.",
           "berekening": [
-            "720 ÷ 8 = 90 bekers"
+            "64 ÷ 8 = 8 bekers"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Delen | 720 ÷ 8 | **90 bekers** ⭐ |"
+            "| 1. Delen | 64 ÷ 8 | **8 bekers** ⭐ |"
           ]
         },
         "lova": {
@@ -5515,7 +5504,7 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Totaal bekers": "720",
+              "Totaal bekers": "64",
               "Aantal teams": "8"
             },
             "tool": "Delen",
@@ -5525,34 +5514,34 @@
             "bewerkingen": [
               {
                 "stap": "Delen",
-                "berekening": "720 ÷ 8",
-                "resultaat": "90",
+                "berekening": "64 ÷ 8",
+                "resultaat": "8",
                 "uitleg": "Verdeel het totaal"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "bekers",
-            "logica_check": "90 bekers is logisch",
-            "antwoord": "90 bekers"
+            "logica_check": "8 bekers is logisch: 8 teams × 8 bekers = 64 bekers totaal",
+            "antwoord": "8 bekers"
           }
         }
       }
     ],
-    "sub_theme": "delen met honderdtallen"
+    "sub_theme": "delen met tientallen"
   },
   {
     "id": 64,
     "title": "Plantjes Bakken",
     "theme": "delen",
-    "content": "Een kwekerij heeft 540 plantjes die in bakken van 6 worden gezet.",
+    "content": "Een kwekerij heeft 42 plantjes die in bakken van 6 worden gezet.",
     "questions": [
       {
         "question": "Hoeveel bakken worden het?",
         "hint": "💡 Tip: Deel 540 door 6!",
         "options": [
           {
-            "text": "80 bakken",
+            "text": "6 bakken",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je deling.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -5560,12 +5549,12 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "90 bakken",
+            "text": "7 bakken",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "100 bakken",
+            "text": "8 bakken",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer je deling nog eens.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -5573,7 +5562,7 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "3240 bakken",
+            "text": "36 bakken",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Je moet delen, niet vermenigvuldigen.\n\n🤔 **Reflectievraag:** Wat betekent 'verdelen' of 'per'?",
@@ -5584,12 +5573,12 @@
         "extra_info": {
           "concept": "Dit is een deelsom met honderdtallen. Je moet het totaal eerlijk verdelen.",
           "berekening": [
-            "540 ÷ 6 = 90 bakken"
+            "42 ÷ 6 = 7 bakken"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Delen | 540 ÷ 6 | **90 bakken** ⭐ |"
+            "| 1. Delen | 42 ÷ 6 | **7 bakken** ⭐ |"
           ]
         },
         "lova": {
@@ -5602,7 +5591,7 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Totaal plantjes": "540",
+              "Totaal plantjes": "42",
               "Per bak": "6"
             },
             "tool": "Delen",
@@ -5612,34 +5601,34 @@
             "bewerkingen": [
               {
                 "stap": "Delen",
-                "berekening": "540 ÷ 6",
-                "resultaat": "90",
+                "berekening": "42 ÷ 6",
+                "resultaat": "7",
                 "uitleg": "Verdeel het totaal"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "bakken",
-            "logica_check": "90 bakken is logisch",
-            "antwoord": "90 bakken"
+            "logica_check": "7 bakken is logisch: 7 bakken van 6 plantjes = 42 plantjes totaal",
+            "antwoord": "7 bakken"
           }
         }
       }
     ],
-    "sub_theme": "delen met honderdtallen"
+    "sub_theme": "delen met tientallen"
   },
   {
     "id": 65,
     "title": "Kaarten Spellen",
     "theme": "delen",
-    "content": "Een spelletjeswinkel heeft 630 kaarten die in sets van 7 worden verkocht.",
+    "content": "Een spelletjeswinkel heeft 63 kaarten die in sets van 7 worden verkocht.",
     "questions": [
       {
         "question": "Hoeveel sets worden het?",
         "hint": "💡 Tip: Deel 630 door 7!",
         "options": [
           {
-            "text": "80 sets",
+            "text": "8 sets",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer je deling.\n\n🤔 **Reflectievraag:** Controleer de tafel.",
@@ -5647,12 +5636,12 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "90 sets",
+            "text": "9 sets",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "100 sets",
+            "text": "10 sets",
             "is_correct": false,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna goed! Controleer je deling nog eens.\n\n🤔 **Reflectievraag:** Ken je de tafel goed?",
@@ -5660,7 +5649,7 @@
             "remedial_basis_id": 103
           },
           {
-            "text": "4410 sets",
+            "text": "56 sets",
             "is_correct": false,
             "error_type": "conceptfout",
             "foutanalyse": "Let op! Je moet delen, niet vermenigvuldigen.\n\n🤔 **Reflectievraag:** Wat betekent 'verdelen' of 'per'?",
@@ -5671,12 +5660,12 @@
         "extra_info": {
           "concept": "Dit is een deelsom met honderdtallen. Je moet het totaal eerlijk verdelen.",
           "berekening": [
-            "630 ÷ 7 = 90 sets"
+            "63 ÷ 7 = 9 sets"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Delen | 630 ÷ 7 | **90 sets** ⭐ |"
+            "| 1. Delen | 63 ÷ 7 | **9 sets** ⭐ |"
           ]
         },
         "lova": {
@@ -5689,7 +5678,7 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Totaal kaarten": "630",
+              "Totaal kaarten": "63",
               "Per set": "7"
             },
             "tool": "Delen",
@@ -5699,20 +5688,20 @@
             "bewerkingen": [
               {
                 "stap": "Delen",
-                "berekening": "630 ÷ 7",
-                "resultaat": "90",
+                "berekening": "63 ÷ 7",
+                "resultaat": "9",
                 "uitleg": "Verdeel het totaal"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "sets",
-            "logica_check": "90 sets is logisch",
-            "antwoord": "90 sets"
+            "logica_check": "9 sets is logisch: 9 sets van 7 kaarten = 63 kaarten totaal",
+            "antwoord": "9 sets"
           }
         }
       }
     ],
-    "sub_theme": "delen met honderdtallen"
+    "sub_theme": "delen met tientallen"
   }
 ]
