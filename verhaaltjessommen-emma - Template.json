@@ -987,105 +987,6 @@
     "sub_theme": "klokkijken en tijdsduur"
   },
   {
-    "id": 12,
-    "title": "Linten meten",
-    "theme": "lengte",
-    "content": "Emma heeft een lint van 50 centimeter. Haar zus heeft een lint van 1 meter.",
-    "questions": [
-      {
-        "question": "Wie heeft het langste lint?",
-        "hint": "💡 Tip: 1 meter = 100 centimeter. Vergelijk 50 cm met 100 cm!",
-        "options": [
-          {
-            "text": "Emma",
-            "is_correct": false,
-            "error_type": "conceptfout",
-            "foutanalyse": "Je hebt de maten niet goed vergeleken. 1 meter is 100 centimeter, dus langer dan 50 centimeter.\n\n🤔 **Reflectievraag:** Hoeveel centimeter is 1 meter?",
-            "visual_aid_query": "Meter en centimeter visualisatie",
-            "remedial_basis_id": null
-          },
-          {
-            "text": "Ze zijn even lang",
-            "is_correct": false,
-            "error_type": "conceptfout",
-            "foutanalyse": "Nee, ze zijn niet even lang. 1 meter = 100 cm en 50 cm is de helft daarvan.\n\n🤔 **Reflectievraag:** Is 50 hetzelfde als 100?",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "Haar zus",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "Kan je niet vergelijken",
-            "is_correct": false,
-            "error_type": "conceptfout",
-            "foutanalyse": "Je kunt ze wel vergelijken! Je moet de eenheden omrekenen: 1 meter = 100 centimeter.\n\n🤔 **Reflectievraag:** Kun je meters omrekenen naar centimeters?",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "Dit is een lengte-vergelijking: je moet meters omrekenen naar centimeters om te vergelijken.",
-          "berekening": [
-            "1 meter = 100 centimeter",
-            "Emma: 50 cm, Zus: 100 cm",
-            "100 cm > 50 cm, dus de zus heeft het langste lint"
-          ],
-          "berekening_tabel": [
-            "| Persoon | Lengte lint | In centimeters |",
-            "|---------|-------------|----------------|",
-            "| Emma | 50 cm | 50 cm |",
-            "| Zus | 1 meter | **100 cm** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Wie heeft het langste lint?",
-            "tussenstappen": [
-              "Reken 1 meter om naar centimeters",
-              "Vergelijk de lengtes"
-            ]
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {
-              "Emma's lint": "50 centimeter",
-              "Zus's lint": "1 meter"
-            },
-            "tool": "Vergelijken",
-            "conversies": [
-              "1 meter = 100 centimeter"
-            ]
-          },
-          "stap3_vormen": {
-            "bewerkingen": [
-              {
-                "stap": "Reken om naar centimeters",
-                "berekening": "1 meter = 100 cm",
-                "resultaat": "100 cm",
-                "uitleg": "Reken de meter om naar centimeters"
-              },
-              {
-                "stap": "Vergelijk",
-                "berekening": "50 cm < 100 cm",
-                "resultaat": "Zus heeft langste lint",
-                "uitleg": "100 is meer dan 50"
-              }
-            ]
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "persoon",
-            "logica_check": "De zus heeft het langste lint: 100 cm > 50 cm",
-            "antwoord": "Haar zus"
-          }
-        }
-      }
-    ],
-    "sub_theme": "lengte meten en vergelijken"
-  },
-  {
     "id": 13,
     "title": "Fruit wegen",
     "theme": "gewicht",
@@ -1266,7 +1167,7 @@
     "content": "Jamal tekent een vierkant. Elk zijde is 4 centimeter lang.",
     "questions": [
       {
-        "question": "Hoeveel centimeter is de omtrek van het vierkant?",
+        "question": "Hoeveel centimeter is het helemaal rondom het vierkant?",
         "hint": "💡 Tip: Een vierkant heeft 4 even lange zijden. Tel alle zijden bij elkaar op!",
         "options": [
           {
@@ -1289,7 +1190,7 @@
             "text": "4 cm",
             "is_correct": false,
             "error_type": "conceptfout",
-            "foutanalyse": "Dat is maar 1 zijde! De omtrek is alle zijden bij elkaar: 4 + 4 + 4 + 4.\n\n🤔 **Reflectievraag:** Wat betekent 'omtrek'?",
+            "foutanalyse": "Dat is maar 1 zijde! Helemaal rondom is alle zijden bij elkaar: 4 + 4 + 4 + 4.\n\n🤔 **Reflectievraag:** Hoeveel zijden heeft een vierkant?",
             "visual_aid_query": null,
             "remedial_basis_id": null
           },
@@ -1300,10 +1201,10 @@
           }
         ],
         "extra_info": {
-          "concept": "Dit is een meetkunde-som: de omtrek van een vierkant is 4 keer de lengte van één zijde.",
+          "concept": "Dit is een meetkunde-som: helemaal rondom een vierkant is 4 keer de lengte van één zijde.",
           "berekening": [
             "Een vierkant heeft 4 even lange zijden",
-            "Omtrek = 4 × 4 cm = 16 cm"
+            "Rondom = 4 × 4 cm = 16 cm"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
@@ -1314,7 +1215,7 @@
         "lova": {
           "stap1_lezen": {
             "ruis": [],
-            "hoofdvraag": "Hoeveel centimeter is de omtrek van het vierkant?",
+            "hoofdvraag": "Hoeveel centimeter is het helemaal rondom het vierkant?",
             "tussenstappen": [
               "Tel alle 4 zijden bij elkaar op"
             ]
@@ -1330,7 +1231,7 @@
           "stap3_vormen": {
             "bewerkingen": [
               {
-                "stap": "Bereken omtrek",
+                "stap": "Bereken rondom",
                 "berekening": "4 × 4",
                 "resultaat": "16 cm",
                 "uitleg": "Vermenigvuldig het aantal zijden met de lengte per zijde"
@@ -1345,104 +1246,7 @@
         }
       }
     ],
-    "sub_theme": "omtrek berekenen"
-  },
-  {
-    "id": 16,
-    "title": "Boodschappen met wisselgeld",
-    "theme": "geld",
-    "content": "Tim koopt een brood voor €2 en melk voor €1. Hij geeft de kassamevrouw een briefje van €5.",
-    "questions": [
-      {
-        "question": "Hoeveel wisselgeld krijgt Tim terug?",
-        "hint": "💡 Tip: Bereken eerst wat Tim in totaal uitgeeft, en trek dat af van €5!",
-        "options": [
-          {
-            "text": "€3",
-            "is_correct": false,
-            "error_type": "leesfout_ruis",
-            "foutanalyse": "Je hebt alleen het brood afgetrokken. Tim koopt ook melk voor €1. Totaal: €2 + €1 = €3, dus €5 - €3 = €2.\n\n🤔 **Reflectievraag:** Hoeveel dingen koopt Tim?",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "€4",
-            "is_correct": false,
-            "error_type": "conceptfout",
-            "foutanalyse": "Je hebt alleen de melk afgetrokken. Bereken eerst de totale kosten: €2 + €1 = €3, dan €5 - €3.\n\n🤔 **Reflectievraag:** Hoeveel kost brood en melk samen?",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "€1",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna! Controleer je berekening: €2 + €1 = €3, dan €5 - €3 = ?\n\n🤔 **Reflectievraag:** Wat is 5 - 3?",
-            "visual_aid_query": null,
-            "remedial_basis_id": 102
-          },
-          {
-            "text": "€2",
-            "is_correct": true,
-            "foutanalyse": ""
-          }
-        ],
-        "extra_info": {
-          "concept": "Dit is een wisselgeld-som: je moet eerst optellen wat het kost, dan aftrekken van het betaalde bedrag.",
-          "berekening": [
-            "Totale kosten: €2 + €1 = €3",
-            "Wisselgeld: €5 - €3 = €2"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken totale kosten | €2 + €1 | €3 |",
-            "| 2. Trek af van betaald bedrag | €5 - €3 | **€2** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Hoeveel wisselgeld krijgt Tim terug?",
-            "tussenstappen": [
-              "Bereken totale kosten van brood en melk",
-              "Trek af van €5"
-            ]
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {
-              "Prijs brood": "€2",
-              "Prijs melk": "€1",
-              "Betaald bedrag": "€5"
-            },
-            "tool": "Optellen en aftrekken",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": [
-              {
-                "stap": "Bereken totale kosten",
-                "berekening": "€2 + €1",
-                "resultaat": "€3",
-                "uitleg": "Tel de prijzen van brood en melk bij elkaar op"
-              },
-              {
-                "stap": "Bereken wisselgeld",
-                "berekening": "€5 - €3",
-                "resultaat": "€2",
-                "uitleg": "Trek de totale kosten af van het betaalde bedrag"
-              }
-            ]
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "euro (€)",
-            "logica_check": "€2 wisselgeld is logisch: €5 betaald - €3 kosten = €2",
-            "antwoord": "€2"
-          }
-        }
-      }
-    ],
-    "sub_theme": "wisselgeld berekenen"
+    "sub_theme": "rondom berekenen"
   },
   {
     "id": 17,
@@ -2215,40 +2019,40 @@
   },
   {
     "id": 26,
-    "title": "Eieren in dozen",
+    "title": "Eieren kopen",
     "theme": "vermenigvuldigen",
-    "content": "In een doos zitten 6 eieren. De boer heeft 3 dozen.",
+    "content": "Sarah koopt 3 dozen met eieren. In elke doos zitten 5 eieren.",
     "questions": [
       {
-        "question": "Hoeveel eieren heeft de boer in totaal?",
+        "question": "Hoeveel eieren heeft Sarah in totaal?",
         "hint": "💡 Tip: Vermenigvuldig het aantal dozen met het aantal eieren per doos!",
         "options": [
           {
-            "text": "13 eieren",
+            "text": "8 eieren",
             "is_correct": false,
             "error_type": "conceptfout",
-            "foutanalyse": "Je hebt opgeteld. Je moet vermenigvuldigen: 3 × 6.\n\n🤔 **Reflectievraag:** Als elke doos 6 eieren heeft, hoeveel zijn er dan in 3 dozen?",
+            "foutanalyse": "Je hebt opgeteld in plaats van vermenigvuldigen. Je moet 3 × 5 doen, niet 3 + 5.\n\n🤔 **Reflectievraag:** Als elke doos 5 eieren heeft, hoeveel zijn er dan in 3 dozen?",
             "visual_aid_query": null,
             "remedial_basis_id": null
           },
           {
-            "text": "36 eieren",
+            "text": "10 eieren",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna! Controleer: 3 × 6 = ?\n\n🤔 **Reflectievraag:** Wat is 3 × 5?",
+            "foutanalyse": "Je hebt niet alle eieren geteld. Bereken: 3 × 5.\n\n🤔 **Reflectievraag:** Wat is 3 × 5?",
             "visual_aid_query": null,
             "remedial_basis_id": 104
           },
           {
-            "text": "48 eieren",
+            "text": "20 eieren",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer je vermenigvuldiging: 3 × 6 = ?\n\n🤔 **Reflectievraag:** Wat is de tafel van 3?",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer: 3 × 5.\n\n🤔 **Reflectievraag:** Wat is de tafel van 5?",
             "visual_aid_query": null,
             "remedial_basis_id": 104
           },
           {
-            "text": "18 eieren",
+            "text": "15 eieren",
             "is_correct": true,
             "foutanalyse": ""
           }
@@ -2256,12 +2060,12 @@
         "extra_info": {
           "concept": "Vermenigvuldigen",
           "berekening": [
-            "3 × 6 = 18 eieren"
+            "3 × 5 = 15 eieren"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldig | 3 × 6 | **18 eieren** ⭐ |"
+            "| 1. Vermenigvuldig | 3 × 5 | **15 eieren** ⭐ |"
           ]
         },
         "lova": {
@@ -2269,13 +2073,13 @@
             "ruis": [],
             "hoofdvraag": "Hoeveel eieren in totaal?",
             "tussenstappen": [
-              "3 × 6"
+              "3 × 5"
             ]
           },
           "stap2_ordenen": {
             "relevante_getallen": {
               "Dozen": "3",
-              "Eieren per doos": "6"
+              "Eieren per doos": "5"
             },
             "tool": "Vermenigvuldigen",
             "conversies": []
@@ -2284,21 +2088,21 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldig",
-                "berekening": "3 × 6",
-                "resultaat": "18",
+                "berekening": "3 × 5",
+                "resultaat": "15",
                 "uitleg": "Vermenigvuldig aantal dozen met eieren per doos"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "eieren (aantal)",
-            "logica_check": "18 eieren is logisch: 3 × 6 = 18",
-            "antwoord": "18 eieren"
+            "logica_check": "15 eieren is logisch: 3 × 5 = 15",
+            "antwoord": "15 eieren"
           }
         }
       }
     ],
-    "sub_theme": "tafel van 3"
+    "sub_theme": "tafel van 5"
   },
   {
     "id": 27,
@@ -2391,38 +2195,38 @@
     "id": 28,
     "title": "Spaarpot",
     "theme": "geld",
-    "content": "Liam heeft 10 munten van 50 cent in zijn spaarpot.",
+    "content": "Liam heeft 10 munten van 2 euro in zijn spaarpot.",
     "questions": [
       {
-        "question": "Hoeveel euro heeft Liam gespaard?",
-        "hint": "💡 Tip: 10 munten van 50 cent = 10 × €0,50!",
+        "question": "Hoeveel euro heeft Liam in totaal?",
+        "hint": "💡 Tip: Vermenigvuldig het aantal munten met de waarde per munt!",
         "options": [
+          {
+            "text": "€12",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit er dichtbij, maar niet helemaal. Bereken: 10 × 2.",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
           {
             "text": "€10",
             "is_correct": false,
             "error_type": "conceptfout",
-            "foutanalyse": "Je hebt het aantal munten als euro's geteld. Bereken: 10 × €0,50.",
+            "foutanalyse": "Je hebt maar de helft geteld. Bereken: 10 × 2.",
             "visual_aid_query": null,
             "remedial_basis_id": null
           },
           {
-            "text": "€50",
-            "is_correct": false,
-            "error_type": "conceptfout",
-            "foutanalyse": "Je hebt 10 × 50 gedaan, maar vergeten dat 50 cent = €0,50 is.",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "€4",
+            "text": "€15",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna! Controleer: 10 × €0,50 = ?",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer: 10 × 2 = ?",
             "visual_aid_query": null,
             "remedial_basis_id": null
           },
           {
-            "text": "€5",
+            "text": "€20",
             "is_correct": true,
             "foutanalyse": ""
           }
@@ -2430,26 +2234,26 @@
         "extra_info": {
           "concept": "Geld berekenen",
           "berekening": [
-            "10 × €0,50 = €5"
+            "10 × €2 = €20"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldig | 10 × €0,50 | **€5** ⭐ |"
+            "| 1. Vermenigvuldig | 10 × €2 | **€20** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
-            "hoofdvraag": "Hoeveel euro gespaard?",
+            "hoofdvraag": "Hoeveel euro in totaal?",
             "tussenstappen": [
-              "10 × €0,50"
+              "10 × 2"
             ]
           },
           "stap2_ordenen": {
             "relevante_getallen": {
               "Munten": "10",
-              "Waarde": "€0,50"
+              "Waarde": "€2"
             },
             "tool": "Vermenigvuldigen",
             "conversies": []
@@ -2458,21 +2262,21 @@
             "bewerkingen": [
               {
                 "stap": "Bereken totaal",
-                "berekening": "10 × €0,50",
-                "resultaat": "€5",
+                "berekening": "10 × €2",
+                "resultaat": "€20",
                 "uitleg": "Vermenigvuldig aantal munten met waarde"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "euro",
-            "logica_check": "€5 is logisch",
-            "antwoord": "€5"
+            "logica_check": "€20 is logisch",
+            "antwoord": "€20"
           }
         }
       }
     ],
-    "sub_theme": "munten tellen"
+    "sub_theme": "euro munten tellen"
   },
   {
     "id": 29,
@@ -2731,87 +2535,90 @@
   },
   {
     "id": 32,
-    "title": "Snoepjes verdelen",
-    "theme": "verhoudingen",
-    "content": "Oma heeft 24 snoepjes. Een derde is voor de kinderen.",
+    "title": "Snoepjes delen",
+    "theme": "delen",
+    "content": "Mila heeft 12 snoepjes. Ze geeft de helft aan haar vriendin.",
     "questions": [
       {
-        "question": "Hoeveel snoepjes krijgen de kinderen?",
-        "hint": "💡 Tip: Een derde betekent delen door 3!",
+        "question": "Hoeveel snoepjes houdt Mila over?",
+        "hint": "💡 Tip: De helft betekent delen door 2!",
         "options": [
           {
-            "text": "24 snoepjes",
+            "text": "12 snoepjes",
             "is_correct": false,
             "error_type": "conceptfout",
-            "foutanalyse": "Je hebt het totaal gegeven. Deel door 3.",
+            "foutanalyse": "Je hebt het totaal gegeven. Mila geeft de helft weg, dus ze houdt ook de helft over. Deel door 2.",
             "visual_aid_query": null,
             "remedial_basis_id": null
           },
           {
-            "text": "10 snoepjes",
+            "text": "3 snoepjes",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna! Controleer: 24 ÷ 3 = ?",
+            "foutanalyse": "Je hebt een rekenfout gemaakt. Controleer: 12 ÷ 2 = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "9 snoepjes",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je zit er dichtbij, maar niet helemaal. Controleer: 12 ÷ 2 = ?",
             "visual_aid_query": null,
             "remedial_basis_id": 103
           },
           {
             "text": "6 snoepjes",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer je deling: 24 ÷ 3 = ?",
-            "visual_aid_query": null,
-            "remedial_basis_id": 103
-          },
-          {
-            "text": "8 snoepjes",
             "is_correct": true,
             "foutanalyse": ""
           }
         ],
         "extra_info": {
-          "concept": "Verhoudingen",
+          "concept": "Dit is een delen-som: de helft van 12 is 6.",
           "berekening": [
-            "24 ÷ 3 = 8"
+            "De helft van 12 = 12 ÷ 2 = 6"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Deel | 24 ÷ 3 | **8** ⭐ |"
+            "| 1. Deel door 2 | 12 ÷ 2 | **6 snoepjes** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
-            "hoofdvraag": "Hoeveel snoepjes krijgen de kinderen?",
+            "hoofdvraag": "Hoeveel snoepjes houdt Mila over?",
             "tussenstappen": [
-              "24 ÷ 3"
+              "Bereken de helft van 12"
             ]
           },
           "stap2_ordenen": {
-            "relevante_getallen": {},
+            "relevante_getallen": {
+              "Totaal snoepjes": "12",
+              "Geeft weg": "de helft"
+            },
             "tool": "Delen",
             "conversies": []
           },
           "stap3_vormen": {
             "bewerkingen": [
               {
-                "stap": "Deel",
-                "berekening": "24 ÷ 3",
-                "resultaat": "8",
-                "uitleg": "Bereken het deel"
+                "stap": "Bereken de helft",
+                "berekening": "12 ÷ 2",
+                "resultaat": "6",
+                "uitleg": "De helft betekent delen door 2"
               }
             ]
           },
           "stap4_antwoorden": {
-            "verwachte_eenheid": "aantal",
-            "logica_check": "Logisch",
-            "antwoord": "8"
+            "verwachte_eenheid": "snoepjes",
+            "logica_check": "6 snoepjes is logisch: de helft van 12 is 6",
+            "antwoord": "6 snoepjes"
           }
         }
       }
     ],
-    "sub_theme": "breuken"
+    "sub_theme": "de helft berekenen"
   },
   {
     "id": 33,
@@ -3257,103 +3064,6 @@
     "content": "Lisa fietst elke dag 15 minuten naar school en 15 minuten terug."
   },
   {
-    "id": 38,
-    "title": "Boeken kopen",
-    "theme": "meerstaps",
-    "content": "Jan gaat naar de boekwinkel. Hij koopt 3 boeken van elk €4. Hij betaalt met een briefje van €20.",
-    "questions": [
-      {
-        "question": "Hoeveel geld krijgt Jan terug?",
-        "hint": "💡 Tip: Bereken eerst wat de boeken samen kosten, en trek dat af van €20!",
-        "options": [
-          {
-            "text": "€4",
-            "is_correct": false,
-            "error_type": "conceptfout",
-            "foutanalyse": "Je hebt alleen de prijs van één boek gegeven. Je moet eerst 3 × €4 berekenen, en dan het totaal aftrekken van €20.\n\n🤔 **Reflectievraag:** Wat kosten 3 boeken van €4 samen?",
-            "visual_aid_query": "Meerstaps rekenen visualisatie",
-            "remedial_basis_id": null
-          },
-          {
-            "text": "€12",
-            "is_correct": false,
-            "error_type": "onvolledige_uitvoering",
-            "foutanalyse": "Je bent halverwege gestopt! €12 is wat de boeken kosten (3 × €4 = €12), maar de vraag is hoeveel geld Jan terugkrijgt.\n\n🤔 **Reflectievraag:** Als Jan €20 betaalt en de boeken €12 kosten, hoeveel krijgt hij dan terug?",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "€16",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Je hebt €20 - €4 gerekend, maar je moet eerst alle boeken bij elkaar optellen. 3 boeken × €4 = €12. Dan: €20 - €12 = ?",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "€8",
-            "is_correct": true,
-            "foutanalyse": ""
-          }
-        ],
-        "extra_info": {
-          "concept": "Dit is een meerstaps-som: eerst vermenigvuldigen, dan aftrekken.",
-          "berekening": [
-            "Stap 1: Bereken de totale kosten → 3 × €4 = €12",
-            "Stap 2: Trek af van het betaalde bedrag → €20 - €12 = €8"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken totale kosten | 3 × €4 | €12 |",
-            "| 2. Bereken wisselgeld | €20 - €12 | **€8** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Hoeveel geld krijgt Jan terug?",
-            "tussenstappen": [
-              "Bereken eerst wat 3 boeken kosten",
-              "Trek dat af van €20"
-            ]
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {
-              "Aantal boeken": "3",
-              "Prijs per boek": "€4",
-              "Betaald bedrag": "€20"
-            },
-            "tool": "Vermenigvuldigen en aftrekken",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": [
-              {
-                "stap": "Bereken totale kosten",
-                "berekening": "3 × €4",
-                "resultaat": "€12",
-                "uitleg": "Vermenigvuldig het aantal boeken met de prijs per boek"
-              },
-              {
-                "stap": "Bereken wisselgeld",
-                "berekening": "€20 - €12",
-                "resultaat": "€8",
-                "uitleg": "Trek de totale kosten af van het betaalde bedrag"
-              }
-            ]
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "euro",
-            "logica_check": "€8 wisselgeld is logisch: 3 boeken kosten €12, betaald met €20",
-            "antwoord": "€8"
-          }
-        }
-      }
-    ],
-    "sub_theme": "meerstaps berekening"
-  },
-  {
     "id": 39,
     "title": "Snoep verdelen",
     "theme": "delen",
@@ -3443,408 +3153,90 @@
   },
   {
     "id": 40,
-    "title": "Rechthoekige tuin",
+    "title": "Tuin",
     "theme": "meetkunde",
-    "content": "Piet heeft een rechthoekige tuin. De tuin is 8 meter lang en 5 meter breed. Hij wil een hek plaatsen rondom de hele tuin.",
+    "content": "Een tuin heeft 2 kanten van 5 meter en 2 kanten van 3 meter.",
     "questions": [
       {
-        "question": "Hoeveel meter hek heeft Piet nodig?",
-        "hint": "💡 Tip: De omtrek van een rechthoek bereken je door alle zijden bij elkaar op te tellen!",
+        "question": "Hoeveel meter is het helemaal rondom de tuin?",
+        "hint": "💡 Tip: Tel alle kanten bij elkaar op: 5 + 5 + 3 + 3!",
         "options": [
           {
-            "text": "13 meter",
+            "text": "8 meter",
             "is_correct": false,
             "error_type": "conceptfout",
-            "foutanalyse": "Je hebt de lengte en breedte bij elkaar opgeteld (8 + 5 = 13), maar een rechthoek heeft 4 zijden! Je moet 8 + 5 + 8 + 5 berekenen.\n\n🤔 **Reflectievraag:** Hoeveel zijden heeft een rechthoek?",
-            "visual_aid_query": "Rechthoek omtrek visualisatie",
+            "foutanalyse": "Je hebt maar 2 kanten geteld (5 + 3 = 8). De tuin heeft 4 kanten! Je moet 5 + 5 + 3 + 3 berekenen.\n\n🤔 **Reflectievraag:** Hoeveel kanten heeft de tuin?",
+            "visual_aid_query": "Rondom visualisatie",
             "remedial_basis_id": null
           },
           {
-            "text": "40 meter",
+            "text": "15 meter",
             "is_correct": false,
             "error_type": "verkeerde_bewerking",
-            "foutanalyse": "Je hebt vermenigvuldigd (8 × 5 = 40), maar dat geeft de oppervlakte. Voor de omtrek moet je alle zijden optellen.\n\n🤔 **Reflectievraag:** Wat is het verschil tussen omtrek en oppervlakte?",
-            "visual_aid_query": "Omtrek vs oppervlakte",
-            "remedial_basis_id": null
-          },
-          {
-            "text": "18 meter",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Je bent dichtbij! Controleer je optelling: 8 + 5 + 8 + 5 = ?",
+            "foutanalyse": "Je hebt vermenigvuldigd (5 × 3 = 15), maar je moet alle kanten optellen: 5 + 5 + 3 + 3.\n\n🤔 **Reflectievraag:** Moet je optellen of vermenigvuldigen?",
             "visual_aid_query": null,
             "remedial_basis_id": null
           },
           {
-            "text": "26 meter",
+            "text": "13 meter",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je bent dichtbij! Controleer je optelling: 5 + 5 + 3 + 3 = ?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "16 meter",
             "is_correct": true,
             "foutanalyse": ""
           }
         ],
         "extra_info": {
-          "concept": "De omtrek is de som van alle zijden. Een rechthoek heeft 2 lange en 2 korte zijden.",
+          "concept": "Dit is een meetkunde-som: tel alle kanten bij elkaar op.",
           "berekening": [
-            "Omtrek = lengte + breedte + lengte + breedte",
-            "Omtrek = 8 + 5 + 8 + 5 = 26 meter",
-            "Of: Omtrek = 2 × (8 + 5) = 2 × 13 = 26 meter"
+            "Rondom de tuin = 5 + 5 + 3 + 3 = 16 meter"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Tel alle zijden op | 8 + 5 + 8 + 5 | **26 meter** ⭐ |",
-            "| Of: 2 × (lengte + breedte) | 2 × (8 + 5) = 2 × 13 | **26 meter** ⭐ |"
+            "| 1. Tel alle kanten op | 5 + 5 + 3 + 3 | **16 meter** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
-            "hoofdvraag": "Hoeveel meter hek heeft Piet nodig?",
+            "hoofdvraag": "Hoeveel meter is het helemaal rondom de tuin?",
             "tussenstappen": [
-              "Bereken de omtrek van de rechthoek"
+              "Tel alle kanten bij elkaar op"
             ]
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Lengte": "8 meter",
-              "Breedte": "5 meter"
+              "Kant 1": "5 meter",
+              "Kant 2": "3 meter"
             },
-            "tool": "Omtrek berekenen",
+            "tool": "Optellen",
             "conversies": []
           },
           "stap3_vormen": {
             "bewerkingen": [
               {
-                "stap": "Bereken omtrek",
-                "berekening": "8 + 5 + 8 + 5",
-                "resultaat": "26 meter",
-                "uitleg": "Tel alle vier de zijden van de rechthoek bij elkaar op"
+                "stap": "Tel alle kanten op",
+                "berekening": "5 + 5 + 3 + 3",
+                "resultaat": "16 meter",
+                "uitleg": "Tel alle vier de kanten van de tuin bij elkaar op"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "meter",
-            "logica_check": "26 meter hek is logisch voor een tuin van 8 bij 5 meter",
-            "antwoord": "26 meter"
+            "logica_check": "16 meter is logisch: 5 + 5 + 3 + 3 = 16",
+            "antwoord": "16 meter"
           }
         }
       }
     ],
-    "sub_theme": "omtrek rechthoek"
-  },
-  {
-    "id": 41,
-    "title": "Boodschappen doen met korting",
-    "theme": "geld",
-    "content": "Sarah koopt 4 appels van €0,60 per stuk en 2 pakken melk van €1,20 per pak. De winkel geeft €1,00 korting op het totaal.",
-    "questions": [
-      {
-        "question": "Hoeveel betaalt Sarah in totaal?",
-        "hint": "💡 Tip: Bereken eerst de kosten van de appels, dan de melk, tel ze op en trek de korting eraf!",
-        "options": [
-          {
-            "text": "€2,40",
-            "is_correct": false,
-            "error_type": "onvolledige_uitvoering",
-            "foutanalyse": "Je hebt alleen de appels berekend (4 × €0,60 = €2,40). Je moet ook de melk en de korting meenemen!\n\n🤔 **Reflectievraag:** Wat kosten de 2 pakken melk?",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "€4,80",
-            "is_correct": false,
-            "error_type": "onvolledige_uitvoering",
-            "foutanalyse": "Je hebt de appels en melk bij elkaar opgeteld (€2,40 + €2,40 = €4,80), maar je bent de korting van €1,00 vergeten af te trekken.\n\n🤔 **Reflectievraag:** Hoeveel korting krijgt Sarah?",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "€3,80",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "€5,80",
-            "is_correct": false,
-            "error_type": "verkeerde_bewerking",
-            "foutanalyse": "Je hebt de korting erbij opgeteld in plaats van eraf te halen. Korting moet je aftrekken van het totaal.\n\n🤔 **Reflectievraag:** Wat betekent 'korting' bij winkelen?",
-            "visual_aid_query": "Korting berekenen",
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "Dit is een meerstaps-som met geld: vermenigvuldigen, optellen en aftrekken.",
-          "berekening": [
-            "Stap 1: Kosten appels → 4 × €0,60 = €2,40",
-            "Stap 2: Kosten melk → 2 × €1,20 = €2,40",
-            "Stap 3: Totaal zonder korting → €2,40 + €2,40 = €4,80",
-            "Stap 4: Trek korting af → €4,80 - €1,00 = €3,80"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken kosten appels | 4 × €0,60 | €2,40 |",
-            "| 2. Bereken kosten melk | 2 × €1,20 | €2,40 |",
-            "| 3. Tel samen | €2,40 + €2,40 | €4,80 |",
-            "| 4. Trek korting af | €4,80 - €1,00 | **€3,80** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Hoeveel betaalt Sarah in totaal?",
-            "tussenstappen": [
-              "Bereken de kosten van de appels",
-              "Bereken de kosten van de melk",
-              "Tel beide bedragen op",
-              "Trek de korting af"
-            ]
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {
-              "Aantal appels": "4",
-              "Prijs per appel": "€0,60",
-              "Aantal pakken melk": "2",
-              "Prijs per pak melk": "€1,20",
-              "Korting": "€1,00"
-            },
-            "tool": "Vermenigvuldigen, optellen en aftrekken",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": [
-              {
-                "stap": "Bereken kosten appels",
-                "berekening": "4 × €0,60",
-                "resultaat": "€2,40",
-                "uitleg": "Vermenigvuldig aantal appels met prijs per appel"
-              },
-              {
-                "stap": "Bereken kosten melk",
-                "berekening": "2 × €1,20",
-                "resultaat": "€2,40",
-                "uitleg": "Vermenigvuldig aantal pakken met prijs per pak"
-              },
-              {
-                "stap": "Tel samen",
-                "berekening": "€2,40 + €2,40",
-                "resultaat": "€4,80",
-                "uitleg": "Tel de kosten van appels en melk bij elkaar op"
-              },
-              {
-                "stap": "Trek korting af",
-                "berekening": "€4,80 - €1,00",
-                "resultaat": "€3,80",
-                "uitleg": "Trek de korting af van het totaal"
-              }
-            ]
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "euro",
-            "logica_check": "€3,80 is logisch: appels en melk kosten €4,80, min €1,00 korting",
-            "antwoord": "€3,80"
-          }
-        }
-      }
-    ],
-    "sub_theme": "meerdere producten met korting"
-  },
-  {
-    "id": 42,
-    "title": "Zwembad open",
-    "theme": "tijd",
-    "content": "Het zwembad gaat om 10:00 uur open en sluit om 17:30 uur. Emma komt om 14:15 uur aan.",
-    "questions": [
-      {
-        "question": "Hoeveel minuten kan Emma nog zwemmen voordat het zwembad sluit?",
-        "hint": "💡 Tip: Bereken eerst hoeveel uren en minuten er tussen 14:15 en 17:30 zitten!",
-        "options": [
-          {
-            "text": "3 uren en 15 minuten",
-            "is_correct": false,
-            "error_type": "verkeerde_eenheid",
-            "foutanalyse": "Je hebt het juiste tijdsverschil berekend, maar de vraag vraagt om minuten, niet uren en minuten.\n\n🤔 **Reflectievraag:** Hoeveel minuten zijn 3 uren en 15 minuten samen?",
-            "visual_aid_query": "Tijd omrekenen",
-            "remedial_basis_id": null
-          },
-          {
-            "text": "195 minuten",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "180 minuten",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Je hebt alleen de 3 uren omgerekend naar minuten (3 × 60 = 180), maar vergeten de extra 15 minuten erbij op te tellen.\n\n🤔 **Reflectievraag:** Hoeveel minuten zitten er tussen 14:15 en 17:30?",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "315 minuten",
-            "is_correct": false,
-            "error_type": "conceptfout",
-            "foutanalyse": "Je hebt vanaf het openingstijd gerekend (10:00 - 14:15), maar Emma komt pas om 14:15 aan. Je moet rekenen vanaf 14:15 tot 17:30.\n\n🤔 **Reflectievraag:** Wanneer komt Emma aan bij het zwembad?",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          }
-        ],
-        "extra_info": {
-          "concept": "Tijdsduur berekenen en omrekenen naar minuten.",
-          "berekening": [
-            "Van 14:15 naar 17:30:",
-            "14:15 → 15:00 = 45 minuten",
-            "15:00 → 17:00 = 2 uren = 120 minuten",
-            "17:00 → 17:30 = 30 minuten",
-            "Totaal: 45 + 120 + 30 = 195 minuten",
-            "Of: 3 uren en 15 minuten = (3 × 60) + 15 = 180 + 15 = 195 minuten"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken tijdsverschil | 17:30 - 14:15 | 3u 15min |",
-            "| 2. Reken om naar minuten | (3 × 60) + 15 | **195 minuten** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": ["Het zwembad gaat om 10:00 uur open"],
-            "hoofdvraag": "Hoeveel minuten kan Emma nog zwemmen?",
-            "tussenstappen": [
-              "Bereken tijdsverschil tussen 14:15 en 17:30",
-              "Reken om naar minuten"
-            ]
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {
-              "Emma komt aan": "14:15 uur",
-              "Zwembad sluit": "17:30 uur"
-            },
-            "tool": "Tijd berekenen en omrekenen",
-            "conversies": ["Uren naar minuten: 1 uur = 60 minuten"]
-          },
-          "stap3_vormen": {
-            "bewerkingen": [
-              {
-                "stap": "Bereken tijdsverschil",
-                "berekening": "17:30 - 14:15",
-                "resultaat": "3 uur en 15 minuten",
-                "uitleg": "Bereken hoeveel tijd er is tussen aankomst en sluiting"
-              },
-              {
-                "stap": "Reken om naar minuten",
-                "berekening": "(3 × 60) + 15",
-                "resultaat": "195 minuten",
-                "uitleg": "Reken uren om naar minuten en tel de extra minuten erbij"
-              }
-            ]
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "minuten",
-            "logica_check": "195 minuten is logisch: iets meer dan 3 uur",
-            "antwoord": "195 minuten"
-          }
-        }
-      }
-    ],
-    "sub_theme": "tijd berekenen in minuten"
-  },
-  {
-    "id": 43,
-    "title": "Potloden verdelen",
-    "theme": "vermenigvuldigen",
-    "content": "In de klas zijn 8 tafels. Aan elke tafel zitten 4 leerlingen. Elke leerling krijgt 3 potloden.",
-    "questions": [
-      {
-        "question": "Hoeveel potloden zijn er in totaal nodig?",
-        "hint": "💡 Tip: Bereken eerst hoeveel leerlingen er in totaal zijn, en vermenigvuldig dat met het aantal potloden per leerling!",
-        "options": [
-          {
-            "text": "12 potloden",
-            "is_correct": false,
-            "error_type": "onvolledige_uitvoering",
-            "foutanalyse": "Je hebt alleen gerekend hoeveel potloden er per tafel zijn (4 leerlingen × 3 potloden = 12), maar er zijn 8 tafels!\n\n🤔 **Reflectievraag:** Hoeveel tafels zijn er in de klas?",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "24 potloden",
-            "is_correct": false,
-            "error_type": "verkeerde_combinatie",
-            "foutanalyse": "Je hebt waarschijnlijk 8 × 3 gerekend, maar je moet eerst berekenen hoeveel leerlingen er zijn (8 × 4), en dan × 3.\n\n🤔 **Reflectievraag:** Hoeveel leerlingen zijn er in totaal in de klas?",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "32 potloden",
-            "is_correct": false,
-            "error_type": "onvolledige_uitvoering",
-            "foutanalyse": "Je hebt het aantal leerlingen berekend (8 × 4 = 32), maar vergeten te vermenigvuldigen met het aantal potloden per leerling.\n\n🤔 **Reflectievraag:** Hoeveel potloden krijgt elke leerling?",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "96 potloden",
-            "is_correct": true,
-            "foutanalyse": ""
-          }
-        ],
-        "extra_info": {
-          "concept": "Dit is een meerstaps vermenigvuldiging: eerst aantal leerlingen berekenen, dan vermenigvuldigen met potloden per leerling.",
-          "berekening": [
-            "Stap 1: Bereken aantal leerlingen → 8 tafels × 4 leerlingen = 32 leerlingen",
-            "Stap 2: Bereken totaal aantal potloden → 32 leerlingen × 3 potloden = 96 potloden",
-            "Of in één keer: 8 × 4 × 3 = 96"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Bereken aantal leerlingen | 8 × 4 | 32 leerlingen |",
-            "| 2. Bereken totaal potloden | 32 × 3 | **96 potloden** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "Hoeveel potloden zijn er in totaal nodig?",
-            "tussenstappen": [
-              "Bereken hoeveel leerlingen er zijn",
-              "Vermenigvuldig met aantal potloden per leerling"
-            ]
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {
-              "Aantal tafels": "8",
-              "Leerlingen per tafel": "4",
-              "Potloden per leerling": "3"
-            },
-            "tool": "Meerstaps vermenigvuldigen",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": [
-              {
-                "stap": "Bereken aantal leerlingen",
-                "berekening": "8 × 4",
-                "resultaat": "32 leerlingen",
-                "uitleg": "Vermenigvuldig aantal tafels met leerlingen per tafel"
-              },
-              {
-                "stap": "Bereken totaal potloden",
-                "berekening": "32 × 3",
-                "resultaat": "96 potloden",
-                "uitleg": "Vermenigvuldig aantal leerlingen met potloden per leerling"
-              }
-            ]
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "potloden",
-            "logica_check": "96 potloden is logisch: 32 leerlingen × 3 potloden elk",
-            "antwoord": "96 potloden"
-          }
-        }
-      }
-    ],
-    "sub_theme": "meerstaps vermenigvuldigen"
+    "sub_theme": "rondom berekenen"
   },
   {
     "id": 44,
@@ -4016,91 +3408,6 @@
             "verwachte_eenheid": "getal",
             "logica_check": "92 is logisch: 67 + 25 = 92",
             "antwoord": "92"
-          }
-        }
-      }
-    ],
-    "sub_theme": "kale som"
-  },
-  {
-    "id": 46,
-    "title": "Kale som: vermenigvuldigen",
-    "theme": "vermenigvuldigen",
-    "content": "Bereken:",
-    "questions": [
-      {
-        "question": "6 × 4 = ?",
-        "hint": "💡 Tip: Denk aan de tafel van 4 of de tafel van 6!",
-        "options": [
-          {
-            "text": "24",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "20",
-            "is_correct": false,
-            "error_type": "verwarring_tafel",
-            "foutanalyse": "Dat is 5 × 4, niet 6 × 4. Je bent één stapje te weinig.",
-            "visual_aid_query": "Tafel van 4",
-            "remedial_basis_id": 104
-          },
-          {
-            "text": "28",
-            "is_correct": false,
-            "error_type": "verwarring_tafel",
-            "foutanalyse": "Dat is 7 × 4, niet 6 × 4. Je bent één stapje te ver.",
-            "visual_aid_query": "Tafel van 4",
-            "remedial_basis_id": 104
-          },
-          {
-            "text": "18",
-            "is_correct": false,
-            "error_type": "verwarring_tafel",
-            "foutanalyse": "Dat is 6 × 3, niet 6 × 4. Controleer de tafel van 6.",
-            "visual_aid_query": "Tafel van 6",
-            "remedial_basis_id": 104
-          }
-        ],
-        "extra_info": {
-          "concept": "Vermenigvuldigen: de tafel van 4 en 6.",
-          "berekening": [
-            "6 × 4 = 24"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Vermenigvuldig | 6 × 4 | **24** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "6 × 4 = ?",
-            "tussenstappen": []
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {
-              "Getal 1": "6",
-              "Getal 2": "4"
-            },
-            "tool": "Vermenigvuldigen",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": [
-              {
-                "stap": "Vermenigvuldig",
-                "berekening": "6 × 4",
-                "resultaat": "24",
-                "uitleg": "Vermenigvuldig 6 met 4"
-              }
-            ]
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "getal",
-            "logica_check": "24 is logisch: 6 × 4 = 24",
-            "antwoord": "24"
           }
         }
       }
@@ -4699,92 +4006,6 @@
             "verwachte_eenheid": "getal",
             "logica_check": "9 is logisch: 18 ÷ 2 = 9",
             "antwoord": "9"
-          }
-        }
-      }
-    ],
-    "sub_theme": "kale som"
-  },
-  {
-    "id": 54,
-    "title": "Kale som: vermenigvuldigen (tafel 4)",
-    "theme": "vermenigvuldigen",
-    "content": "Bereken:",
-    "questions": [
-      {
-        "question": "4 × 7 = ?",
-        "hint": "💡 Tip: Denk aan de tafel van 4. Bereken 4 × 7.",
-        "options": [
-          {
-            "text": "28",
-            "is_correct": true,
-            "foutanalyse": ""
-          },
-          {
-            "text": "24",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Je hebt 4 × 6 uitgerekend. Let op: 4 × 7 is één stap verder in de tafel van 4.",
-            "visual_aid_query": "Tafel van 4",
-            "remedial_basis_id": 102
-          },
-          {
-            "text": "32",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Je hebt 4 × 8 uitgerekend. Let op: je moet 4 × 7 berekenen.",
-            "visual_aid_query": "Tafel van 4",
-            "remedial_basis_id": 102
-          },
-          {
-            "text": "35",
-            "is_correct": false,
-            "error_type": "verkeerde_bewerking",
-            "foutanalyse": "Dit is 5 × 7 = 35. Let op dat je de tafel van 4 gebruikt, niet de tafel van 5!\n\n🤔 **Reflectievraag:** Wat is het verschil tussen 4 × 7 en 5 × 7?",
-            "visual_aid_query": "Tafel van 4",
-            "remedial_basis_id": 102
-          }
-        ],
-        "extra_info": {
-          "concept": "Vermenigvuldigen: tafel van 4.",
-          "berekening": [
-            "4 × 7 = 28",
-            "Of: 7 × 4 = 28"
-          ],
-          "berekening_tabel": [
-            "| Stap | Bewerking | Uitkomst |",
-            "|------|-----------|----------|",
-            "| 1. Vermenigvuldig | 4 × 7 | **28** ⭐ |"
-          ]
-        },
-        "lova": {
-          "stap1_lezen": {
-            "ruis": [],
-            "hoofdvraag": "4 × 7 = ?",
-            "tussenstappen": []
-          },
-          "stap2_ordenen": {
-            "relevante_getallen": {
-              "Getal 1": "4",
-              "Getal 2": "7"
-            },
-            "tool": "Vermenigvuldigen",
-            "conversies": []
-          },
-          "stap3_vormen": {
-            "bewerkingen": [
-              {
-                "stap": "Vermenigvuldig",
-                "berekening": "4 × 7",
-                "resultaat": "28",
-                "uitleg": "Tafel van 4: 4 × 7 = 28"
-              }
-            ]
-          },
-          "stap4_antwoorden": {
-            "verwachte_eenheid": "getal",
-            "logica_check": "28 is logisch: 4 × 7 = 28",
-            "antwoord": "28"
           }
         }
       }
