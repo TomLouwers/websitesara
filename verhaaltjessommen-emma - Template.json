@@ -3,52 +3,52 @@
     "id": 1,
     "title": "Snoepjes delen",
     "theme": "delen",
-    "content": "Juf heeft 20 snoepjes. Ze wil ze eerlijk verdelen over 4 kinderen.",
+    "content": "Juf heeft 20 snoepjes. Ze wil ze eerlijk verdelen over 2 kinderen.",
     "questions": [
       {
         "question": "Hoeveel snoepjes krijgt elk kind?",
-        "hint": "💡 Tip: Je moet 20 snoepjes verdelen over 4 kinderen. Dat doe je door te delen!",
+        "hint": "💡 Tip: Je moet 20 snoepjes halveren. Dat is delen door 2!",
         "options": [
           {
-            "text": "4 snoepjes",
+            "text": "2 snoepjes",
             "is_correct": false,
             "error_type": "conceptfout",
-            "foutanalyse": "Je hebt het aantal kinderen gegeven als antwoord, niet het aantal snoepjes per kind. Je moet 20 delen door 4.\n\n🤔 **Reflectievraag:** Als je 20 snoepjes hebt en 4 kinderen, hoeveel krijgt dan elk kind?",
+            "foutanalyse": "Je hebt het aantal kinderen gegeven als antwoord, niet het aantal snoepjes per kind. Je moet 20 delen door 2 (halveren).\n\n🤔 **Reflectievraag:** Als je 20 snoepjes hebt en 2 kinderen, hoeveel krijgt dan elk kind?",
             "visual_aid_query": "Delen visualisatie",
             "remedial_basis_id": null
           },
           {
-            "text": "16 snoepjes",
+            "text": "18 snoepjes",
             "is_correct": false,
             "error_type": "leesfout_ruis",
-            "foutanalyse": "Je hebt afgetrokken in plaats van gedeeld. 20 - 4 = 16, maar dat is niet wat de vraag vraagt. Je moet delen: 20 ÷ 4.\n\n🤔 **Reflectievraag:** Wat betekent 'eerlijk verdelen' in de vraag?",
+            "foutanalyse": "Je hebt afgetrokken in plaats van gedeeld. 20 - 2 = 18, maar dat is niet wat de vraag vraagt. Je moet halveren: 20 ÷ 2.\n\n🤔 **Reflectievraag:** Wat betekent 'eerlijk verdelen' in de vraag?",
             "visual_aid_query": null,
             "remedial_basis_id": null
           },
           {
-            "text": "6 snoepjes",
+            "text": "5 snoepjes",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Je zit dichtbij, maar de deling klopt niet helemaal. Controleer: 20 ÷ 4 = ?\n\n🤔 **Reflectievraag:** Wat is 4 × 6? Past dat bij 20?",
+            "foutanalyse": "Dat zou kloppen als je door 4 deelt, maar je moet halveren (delen door 2). Controleer: 20 ÷ 2 = ?\n\n🤔 **Reflectievraag:** Wat is de helft van 20?",
             "visual_aid_query": null,
             "remedial_basis_id": 103
           },
           {
-            "text": "5 snoepjes",
+            "text": "10 snoepjes",
             "is_correct": true,
             "foutanalyse": ""
           }
         ],
         "extra_info": {
-          "concept": "Dit is een deelsom: je moet het totaal aantal snoepjes eerlijk verdelen over de kinderen.",
+          "concept": "Dit is een deelsom: je moet het totaal aantal snoepjes eerlijk verdelen (halveren).",
           "berekening": [
-            "Deel 20 door 4: 20 ÷ 4 = 5",
-            "Elk kind krijgt 5 snoepjes"
+            "Halveer 20: 20 ÷ 2 = 10",
+            "Elk kind krijgt 10 snoepjes"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Deel snoepjes | 20 ÷ 4 | **5 snoepjes** ⭐ |"
+            "| 1. Halveer snoepjes | 20 ÷ 2 | **10 snoepjes** ⭐ |"
           ]
         },
         "lova": {
@@ -56,31 +56,31 @@
             "ruis": [],
             "hoofdvraag": "Hoeveel snoepjes krijgt elk kind?",
             "tussenstappen": [
-              "Verdeel 20 over 4"
+              "Halveer 20 (verdeel over 2)"
             ]
           },
           "stap2_ordenen": {
             "relevante_getallen": {
               "Totaal aantal snoepjes": "20",
-              "Aantal kinderen": "4"
+              "Aantal kinderen": "2"
             },
-            "tool": "Delen",
+            "tool": "Delen (halveren)",
             "conversies": []
           },
           "stap3_vormen": {
             "bewerkingen": [
               {
-                "stap": "Verdeel de snoepjes",
-                "berekening": "20 ÷ 4",
-                "resultaat": "5",
-                "uitleg": "Deel het totaal aantal snoepjes door het aantal kinderen"
+                "stap": "Halveer de snoepjes",
+                "berekening": "20 ÷ 2",
+                "resultaat": "10",
+                "uitleg": "Deel het totaal aantal snoepjes door het aantal kinderen (halveren)"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "snoepjes (aantal)",
-            "logica_check": "5 snoepjes per kind is logisch: 4 kinderen × 5 = 20 snoepjes totaal",
-            "antwoord": "5 snoepjes"
+            "logica_check": "10 snoepjes per kind is logisch: 2 kinderen × 10 = 20 snoepjes totaal",
+            "antwoord": "10 snoepjes"
           }
         }
       }
@@ -706,69 +706,66 @@
   {
     "id": 9,
     "title": "Auto's parkeren",
-    "theme": "optellen_meerstappen",
-    "content": "Op de parkeerplaats staan 8 blauwe auto's en 6 rode auto's. Er komen nog 5 groene auto's bij.",
+    "theme": "optellen",
+    "content": "Op de parkeerplaats staan 8 blauwe auto's en 6 rode auto's.",
     "questions": [
       {
-        "question": "Hoeveel auto's staan er nu op de parkeerplaats?",
-        "hint": "💡 Tip: Je moet alle auto's bij elkaar optellen: blauw + rood + groen!",
+        "question": "Hoeveel auto's staan er op de parkeerplaats?",
+        "hint": "💡 Tip: Je moet de blauwe en rode auto's bij elkaar optellen!",
         "options": [
           {
             "text": "14 auto's",
+            "is_correct": true,
+            "foutanalyse": ""
+          },
+          {
+            "text": "2 auto's",
             "is_correct": false,
-            "error_type": "leesfout_ruis",
-            "foutanalyse": "Je hebt alleen de blauwe en rode auto's opgeteld en de groene vergeten. Je moet alle drie de soorten optellen: 8 + 6 + 5.\n\n🤔 **Reflectievraag:** Hoeveel verschillende kleuren auto's zijn er?",
+            "error_type": "conceptfout",
+            "foutanalyse": "Je hebt afgetrokken in plaats van opgeteld (8 - 6 = 2). Je moet de auto's bij elkaar optellen: 8 + 6.\n\n🤔 **Reflectievraag:** Worden er meer of minder auto's als we beide kleuren meetellen?",
             "visual_aid_query": null,
             "remedial_basis_id": null
           },
           {
-            "text": "11 auto's",
-            "is_correct": false,
-            "error_type": "leesfout_ruis",
-            "foutanalyse": "Je hebt een soort auto vergeten. Controleer of je alle auto's hebt meegeteld: 8 blauwe + 6 rode + 5 groene.\n\n🤔 **Reflectievraag:** Welke kleuren auto's staan er allemaal?",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "18 auto's",
+            "text": "13 auto's",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna! Controleer je optelling: 8 + 6 + 5 = ?\n\n🤔 **Reflectievraag:** Wat is 8 + 6? En dan nog + 5?",
+            "foutanalyse": "Bijna! Controleer je optelling: 8 + 6 = ?\n\n🤔 **Reflectievraag:** Wat is 8 + 6?",
             "visual_aid_query": null,
             "remedial_basis_id": 101
           },
           {
-            "text": "19 auto's",
-            "is_correct": true,
-            "foutanalyse": ""
+            "text": "15 auto's",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Te veel! Controleer je optelling: 8 + 6 = ?\n\n🤔 **Reflectievraag:** Klopt 8 + 6 = 15?",
+            "visual_aid_query": null,
+            "remedial_basis_id": 101
           }
         ],
         "extra_info": {
-          "concept": "Dit is een meerstappen-optelsom: je moet drie getallen bij elkaar optellen.",
+          "concept": "Dit is een optelsom: tel twee getallen bij elkaar op.",
           "berekening": [
-            "Tel alle auto's bij elkaar op: 8 + 6 + 5",
-            "8 + 6 = 14, dan 14 + 5 = 19 auto's"
+            "Tel de blauwe en rode auto's bij elkaar op: 8 + 6 = 14 auto's"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Tel blauw en rood | 8 + 6 | 14 |",
-            "| 2. Tel groen erbij | 14 + 5 | **19 auto's** ⭐ |"
+            "| 1. Tel blauw en rood | 8 + 6 | **14 auto's** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
-            "hoofdvraag": "Hoeveel auto's staan er nu op de parkeerplaats?",
+            "hoofdvraag": "Hoeveel auto's staan er op de parkeerplaats?",
             "tussenstappen": [
-              "Tel alle auto's bij elkaar op: blauw + rood + groen"
+              "Tel de blauwe en rode auto's bij elkaar op"
             ]
           },
           "stap2_ordenen": {
             "relevante_getallen": {
               "Blauwe auto's": "8",
-              "Rode auto's": "6",
-              "Groene auto's": "5"
+              "Rode auto's": "6"
             },
             "tool": "Optellen",
             "conversies": []
@@ -779,25 +776,19 @@
                 "stap": "Tel blauw en rood",
                 "berekening": "8 + 6",
                 "resultaat": "14",
-                "uitleg": "Tel eerst de blauwe en rode auto's bij elkaar"
-              },
-              {
-                "stap": "Tel groen erbij",
-                "berekening": "14 + 5",
-                "resultaat": "19",
-                "uitleg": "Tel de groene auto's bij het tussentotaal"
+                "uitleg": "Tel de blauwe en rode auto's bij elkaar"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "auto's (aantal)",
-            "logica_check": "19 auto's is logisch: meer dan elk afzonderlijk aantal",
-            "antwoord": "19 auto's"
+            "logica_check": "14 auto's is logisch: meer dan elk afzonderlijk aantal",
+            "antwoord": "14 auto's"
           }
         }
       }
     ],
-    "sub_theme": "meerdere getallen optellen"
+    "sub_theme": "optellen tot 20"
   },
   {
     "id": 10,
@@ -891,55 +882,51 @@
     "id": 11,
     "title": "Klokkijken",
     "theme": "tijd",
-    "content": "De schooldag begint om 8 uur. De pauze is om half 11.",
+    "content": "De schooldag begint om 8 uur. De pauze is om 9 uur.",
     "questions": [
       {
         "question": "Hoeveel uur zit er tussen het begin van school en de pauze?",
-        "hint": "💡 Tip: Tel hoeveel uur er zit tussen 8 uur en half 11 (dat is 10:30 uur).",
+        "hint": "💡 Tip: Tel hoeveel uur er zit tussen 8 uur en 9 uur.",
         "options": [
           {
-            "text": "3,5 uur (3 uur en een half uur)",
-            "is_correct": false,
-            "error_type": "leesfout_ruis",
-            "foutanalyse": "⚠️ Let op! Je hebt 'half 11' gelezen als 11:30 uur, maar dat klopt niet!\n\n'Half 11' betekent half elf, dus 10:30 uur (een half uur vóór 11 uur).\n\nAls je rekent met 8:00 tot 11:30, dan kom je uit op 3,5 uur. Maar de pauze is om 10:30!\n\n🤔 **Reflectievraag:** Is half 11 vóór of ná 11 uur? Hoe laat is half 11 precies?",
-            "visual_aid_query": "Klok half 11 visualisatie",
-            "remedial_basis_id": null
-          },
-          {
             "text": "1 uur",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna! Van 8:00 tot 10:30 is meer dan 1 uur. Tel zorgvuldig hoeveel uur ertussen zit.\n\n🤔 **Reflectievraag:** Van 8:00 tot 10:00 is hoeveel uur? En dan nog tot 10:30?",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
+            "is_correct": true,
+            "foutanalyse": ""
           },
           {
             "text": "2 uur",
             "is_correct": false,
-            "error_type": "leesfout_ruis",
-            "foutanalyse": "Je vergeet de halve uur! Van 8:00 tot 10:30 is 2 uur én 30 minuten, dus 2,5 uur of 2 uur en een half uur.\n\n🤔 **Reflectievraag:** Hoeveel minuten is een half uur?",
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Dat is te veel! Van 8:00 tot 9:00 is maar 1 uur. Tel zorgvuldig hoeveel uur ertussen zit.\n\n🤔 **Reflectievraag:** Van 8:00 tot 9:00 is hoeveel uur?",
             "visual_aid_query": null,
             "remedial_basis_id": null
           },
           {
-            "text": "2,5 uur (2 uur en een half uur)",
-            "is_correct": true,
-            "foutanalyse": ""
+            "text": "30 minuten",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Te weinig! Van 8:00 tot 9:00 is meer dan een half uur. Het is een heel uur!\n\n🤔 **Reflectievraag:** Hoeveel minuten is 1 uur?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "3 uur",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Te veel! Van 8:00 tot 9:00 is maar 1 uur.\n\n🤔 **Reflectievraag:** Als je om 8 uur begint en om 9 uur pauze hebt, hoeveel uur zit daartussen?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
           }
         ],
         "extra_info": {
           "concept": "Dit is een tijdsom: je moet het verschil berekenen tussen twee tijdstippen.",
           "berekening": [
-            "Van 8:00 naar 10:00 = 2 uur",
-            "Van 10:00 naar 10:30 = nog 30 minuten (een half uur)",
-            "Totaal: 2,5 uur of 2 uur en een half uur"
+            "Van 8:00 naar 9:00 = 1 uur"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Tel hele uren | 8:00 → 10:00 | 2 uur |",
-            "| 2. Tel halve uur erbij | 10:00 → 10:30 | 0,5 uur |",
-            "| 3. Tel op | 2 + 0,5 | **2,5 uur** ⭐ |"
+            "| 1. Tel hele uren | 8:00 → 9:00 | **1 uur** ⭐ |"
           ]
         },
         "lova": {
@@ -947,39 +934,31 @@
             "ruis": [],
             "hoofdvraag": "Hoeveel uur zit er tussen het begin van school en de pauze?",
             "tussenstappen": [
-              "Bereken het verschil tussen 8:00 en 10:30"
+              "Bereken het verschil tussen 8:00 en 9:00"
             ]
           },
           "stap2_ordenen": {
             "relevante_getallen": {
               "Begintijd": "8:00",
-              "Pauzetijd": "10:30 (half 11)"
+              "Pauzetijd": "9:00"
             },
             "tool": "Tijd berekenen",
-            "conversies": [
-              "Half 11 = 10:30"
-            ]
+            "conversies": []
           },
           "stap3_vormen": {
             "bewerkingen": [
               {
                 "stap": "Tel hele uren",
-                "berekening": "8:00 → 10:00",
-                "resultaat": "2 uur",
-                "uitleg": "Tel eerst de hele uren"
-              },
-              {
-                "stap": "Tel halve uur erbij",
-                "berekening": "10:00 → 10:30",
-                "resultaat": "0,5 uur",
-                "uitleg": "Tel de resterende minuten erbij"
+                "berekening": "8:00 → 9:00",
+                "resultaat": "1 uur",
+                "uitleg": "Tel de hele uren"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "uur",
-            "logica_check": "2,5 uur is logisch: van ochtend tot bijna middag",
-            "antwoord": "2,5 uur"
+            "logica_check": "1 uur is logisch: van 8 uur naar 9 uur",
+            "antwoord": "1 uur"
           }
         }
       }
@@ -1427,51 +1406,51 @@
     "id": 19,
     "title": "Stickers verdelen",
     "theme": "delen",
-    "content": "Mia heeft 20 stickers. Ze geeft ze eerlijk aan 4 vriendinnen.",
+    "content": "Mia heeft 30 stickers. Ze geeft ze eerlijk aan 5 vriendinnen.",
     "questions": [
       {
         "question": "Hoeveel stickers krijgt elke vriendin?",
-        "hint": "💡 Tip: Deel 20 stickers door 4 vriendinnen!",
+        "hint": "💡 Tip: Deel 30 stickers door 5 vriendinnen!",
         "options": [
           {
             "text": "6 stickers",
-            "is_correct": false,
-            "error_type": "conceptfout",
-            "foutanalyse": "Dat is het aantal vriendinnen, niet het aantal stickers per vriendin. Bereken: 20 ÷ 4.\n\n🤔 **Reflectievraag:** Als je 20 stickers verdeelt over 4 vriendinnen, hoeveel krijgt elk?",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
+            "is_correct": true,
+            "foutanalyse": ""
           },
           {
-            "text": "3 stickers",
+            "text": "5 stickers",
+            "is_correct": false,
+            "error_type": "conceptfout",
+            "foutanalyse": "Dat is het aantal vriendinnen, niet het aantal stickers per vriendin. Je moet 30 delen door 5.\n\n🤔 **Reflectievraag:** Als je 30 stickers verdeelt over 5 vriendinnen, hoeveel krijgt elk?",
+            "visual_aid_query": "Delen visualisatie",
+            "remedial_basis_id": 103
+          },
+          {
+            "text": "7 stickers",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna! Controleer: 20 ÷ 4 = ?\n\n🤔 **Reflectievraag:** Wat is 4 × 5? Past dat bij 20?",
+            "foutanalyse": "Te veel! Controleer: 30 ÷ 5 = ?\n\n🤔 **Reflectievraag:** Wat is 5 × 6? Past dat bij 30?",
             "visual_aid_query": null,
             "remedial_basis_id": 103
           },
           {
             "text": "4 stickers",
             "is_correct": false,
-            "error_type": "conceptfout",
-            "foutanalyse": "Dat is het aantal vriendinnen, niet het aantal stickers per vriendin. Je moet 20 delen door 4.\n\n🤔 **Reflectievraag:** Als je 20 stickers verdeelt over 4 vriendinnen, hoeveel krijgt elk?",
-            "visual_aid_query": "Delen visualisatie",
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Te weinig! Controleer: 30 ÷ 5 = ?\n\n🤔 **Reflectievraag:** Wat is 5 × 6? Past dat bij 30?",
+            "visual_aid_query": null,
             "remedial_basis_id": 103
-          },
-          {
-            "text": "5 stickers",
-            "is_correct": true,
-            "foutanalyse": ""
           }
         ],
         "extra_info": {
           "concept": "Dit is een deelsom: verdeel het totaal eerlijk.",
           "berekening": [
-            "20 ÷ 4 = 5 stickers per vriendin"
+            "30 ÷ 5 = 6 stickers per vriendin"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Deel stickers | 20 ÷ 4 | **5 stickers** ⭐ |"
+            "| 1. Deel stickers | 30 ÷ 5 | **6 stickers** ⭐ |"
           ]
         },
         "lova": {
@@ -1479,13 +1458,13 @@
             "ruis": [],
             "hoofdvraag": "Hoeveel stickers krijgt elke vriendin?",
             "tussenstappen": [
-              "Deel 20 door 4"
+              "Deel 30 door 5"
             ]
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Totaal stickers": "20",
-              "Aantal vriendinnen": "4"
+              "Totaal stickers": "30",
+              "Aantal vriendinnen": "5"
             },
             "tool": "Delen",
             "conversies": []
@@ -1494,21 +1473,21 @@
             "bewerkingen": [
               {
                 "stap": "Verdeel stickers",
-                "berekening": "20 ÷ 4",
-                "resultaat": "5",
+                "berekening": "30 ÷ 5",
+                "resultaat": "6",
                 "uitleg": "Deel het totaal door het aantal vriendinnen"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "stickers (aantal)",
-            "logica_check": "5 stickers is logisch: 4 × 5 = 20",
-            "antwoord": "5 stickers"
+            "logica_check": "6 stickers is logisch: 5 × 6 = 30",
+            "antwoord": "6 stickers"
           }
         }
       }
     ],
-    "sub_theme": "delen tafel van 4"
+    "sub_theme": "delen tafel van 5"
   },
   {
     "id": 20,
@@ -2895,34 +2874,34 @@
     "questions": [
       {
         "question": "Hoeveel uur duurt de film?",
-        "hint": "💡 Tip: Bereken de tijd!",
+        "hint": "💡 Tip: Bereken de tijd! 60 minuten is 1 uur.",
         "options": [
           {
-            "text": "10 minuten",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer je berekening!",
-            "visual_aid_query": null,
-            "remedial_basis_id": null
-          },
-          {
-            "text": "2 uur",
+            "text": "1 uur",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "50 minuten",
+            "text": "2 uur",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Controleer nog eens!",
+            "foutanalyse": "Te veel! 60 minuten is 1 uur, niet 2 uur.\n\n🤔 **Reflectievraag:** Hoeveel minuten is 1 uur?",
             "visual_aid_query": null,
             "remedial_basis_id": null
           },
           {
-            "text": "15 minuten",
+            "text": "60 minuten",
+            "is_correct": false,
+            "error_type": "leesfout_ruis",
+            "foutanalyse": "Dit is wel het juiste aantal minuten, maar de vraag vraagt naar uren! 60 minuten = 1 uur.\n\n🤔 **Reflectievraag:** Hoeveel uur is 60 minuten?",
+            "visual_aid_query": null,
+            "remedial_basis_id": null
+          },
+          {
+            "text": "30 minuten",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna!",
+            "foutanalyse": "Je hebt de helft genomen. De film duurt 60 minuten, dat is 1 heel uur!\n\n🤔 **Reflectievraag:** Hoeveel minuten is een half uur?",
             "visual_aid_query": null,
             "remedial_basis_id": null
           }
@@ -2930,12 +2909,12 @@
         "extra_info": {
           "concept": "Dit is een omrekening van minuten naar uren.",
           "berekening": [
-            "120 minuten ÷ 60 = 2 uur"
+            "60 minuten = 1 uur"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Reken om naar uren | 120 ÷ 60 | **2 uur** ⭐ |"
+            "| 1. Reken om naar uren | 60 minuten | **1 uur** ⭐ |"
           ]
         },
         "lova": {
@@ -2943,12 +2922,12 @@
             "ruis": [],
             "hoofdvraag": "Hoeveel uur duurt de film?",
             "tussenstappen": [
-              "Reken 120 minuten om naar uren"
+              "Reken 60 minuten om naar uren"
             ]
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Duur in minuten": "120 minuten"
+              "Duur in minuten": "60 minuten"
             },
             "tool": "Omrekenen (minuten naar uren)",
             "conversies": [
@@ -2959,22 +2938,22 @@
             "bewerkingen": [
               {
                 "stap": "Reken om naar uren",
-                "berekening": "120 ÷ 60",
-                "resultaat": "2 uur",
-                "uitleg": "Deel het aantal minuten door 60 om uren te krijgen"
+                "berekening": "60 minuten",
+                "resultaat": "1 uur",
+                "uitleg": "60 minuten is precies 1 uur"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "uur",
-            "logica_check": "2 uur is logisch: 2 × 60 minuten = 120 minuten",
-            "antwoord": "2 uur"
+            "logica_check": "1 uur is logisch: 60 minuten = 1 uur",
+            "antwoord": "1 uur"
           }
         }
       }
     ],
     "sub_theme": "tijd berekenen",
-    "content": "Een film duurt 120 minuten."
+    "content": "Een film duurt 60 minuten."
   },
   {
     "id": 37,
@@ -3507,59 +3486,59 @@
     "content": "Bereken:",
     "questions": [
       {
-        "question": "8 × 5 = ?",
-        "hint": "💡 Tip: Denk aan de tafel van 5 of de tafel van 8!",
+        "question": "6 × 5 = ?",
+        "hint": "💡 Tip: Denk aan de tafel van 5 of de tafel van 6!",
         "options": [
           {
-            "text": "40",
+            "text": "30",
             "is_correct": true,
             "foutanalyse": ""
+          },
+          {
+            "text": "25",
+            "is_correct": false,
+            "error_type": "verwarring_tafel",
+            "foutanalyse": "Dat is 5 × 5, niet 6 × 5. Je bent één stapje te weinig.",
+            "visual_aid_query": "Tafel van 5",
+            "remedial_basis_id": 104
           },
           {
             "text": "35",
             "is_correct": false,
             "error_type": "verwarring_tafel",
-            "foutanalyse": "Dat is 7 × 5, niet 8 × 5. Je bent één stapje te weinig.",
+            "foutanalyse": "Dat is 7 × 5, niet 6 × 5. Je bent één stapje te ver.",
             "visual_aid_query": "Tafel van 5",
             "remedial_basis_id": 104
           },
           {
-            "text": "45",
+            "text": "24",
             "is_correct": false,
             "error_type": "verwarring_tafel",
-            "foutanalyse": "Dat is 9 × 5, niet 8 × 5. Je bent één stapje te ver.",
-            "visual_aid_query": "Tafel van 5",
-            "remedial_basis_id": 104
-          },
-          {
-            "text": "32",
-            "is_correct": false,
-            "error_type": "verwarring_tafel",
-            "foutanalyse": "Dat is 8 × 4, niet 8 × 5. Controleer de tafel van 8.",
-            "visual_aid_query": "Tafel van 8",
+            "foutanalyse": "Dat is 6 × 4, niet 6 × 5. Controleer de tafel van 6.",
+            "visual_aid_query": "Tafel van 6",
             "remedial_basis_id": 104
           }
         ],
         "extra_info": {
-          "concept": "Vermenigvuldigen: de tafel van 5 en 8.",
+          "concept": "Vermenigvuldigen: de tafel van 5 en 6.",
           "berekening": [
-            "8 × 5 = 40"
+            "6 × 5 = 30"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldig | 8 × 5 | **40** ⭐ |"
+            "| 1. Vermenigvuldig | 6 × 5 | **30** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
-            "hoofdvraag": "8 × 5 = ?",
+            "hoofdvraag": "6 × 5 = ?",
             "tussenstappen": []
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Getal 1": "8",
+              "Getal 1": "6",
               "Getal 2": "5"
             },
             "tool": "Vermenigvuldigen",
@@ -3569,16 +3548,16 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldig",
-                "berekening": "8 × 5",
-                "resultaat": "40",
-                "uitleg": "Vermenigvuldig 8 met 5"
+                "berekening": "6 × 5",
+                "resultaat": "30",
+                "uitleg": "Vermenigvuldig 6 met 5"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "getal",
-            "logica_check": "40 is logisch: 8 × 5 = 40",
-            "antwoord": "40"
+            "logica_check": "30 is logisch: 6 × 5 = 30",
+            "antwoord": "30"
           }
         }
       }
@@ -3848,35 +3827,35 @@
     "content": "Bereken:",
     "questions": [
       {
-        "question": "7 × 10 = ?",
+        "question": "6 × 10 = ?",
         "hint": "💡 Tip: Alles × 10 is makkelijk: zet er een 0 achter!",
         "options": [
           {
-            "text": "70",
+            "text": "60",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "17",
+            "text": "16",
             "is_correct": false,
             "error_type": "verkeerde_bewerking",
-            "foutanalyse": "Je hebt opgeteld in plaats van vermenigvuldigd (7 + 10 = 17). Let op het kruisje (×)!",
+            "foutanalyse": "Je hebt opgeteld in plaats van vermenigvuldigd (6 + 10 = 16). Let op het kruisje (×)!",
             "visual_aid_query": null,
             "remedial_basis_id": null
           },
           {
-            "text": "60",
+            "text": "50",
             "is_correct": false,
             "error_type": "verwarring_tafel",
-            "foutanalyse": "Dat is 6 × 10, niet 7 × 10. Controleer de tafel van 10.",
+            "foutanalyse": "Dat is 5 × 10, niet 6 × 10. Controleer de tafel van 10.",
             "visual_aid_query": "Tafel van 10",
             "remedial_basis_id": 104
           },
           {
-            "text": "80",
+            "text": "70",
             "is_correct": false,
             "error_type": "verwarring_tafel",
-            "foutanalyse": "Dat is 8 × 10, niet 7 × 10. Controleer de tafel van 10.",
+            "foutanalyse": "Dat is 7 × 10, niet 6 × 10. Controleer de tafel van 10.",
             "visual_aid_query": "Tafel van 10",
             "remedial_basis_id": 104
           }
@@ -3884,23 +3863,23 @@
         "extra_info": {
           "concept": "Vermenigvuldigen met 10: zet er een 0 achter.",
           "berekening": [
-            "7 × 10 = 70"
+            "6 × 10 = 60"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldig | 7 × 10 | **70** ⭐ |"
+            "| 1. Vermenigvuldig | 6 × 10 | **60** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
-            "hoofdvraag": "7 × 10 = ?",
+            "hoofdvraag": "6 × 10 = ?",
             "tussenstappen": []
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Getal 1": "7",
+              "Getal 1": "6",
               "Getal 2": "10"
             },
             "tool": "Vermenigvuldigen",
@@ -3910,16 +3889,16 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldig",
-                "berekening": "7 × 10",
-                "resultaat": "70",
-                "uitleg": "Vermenigvuldig 7 met 10"
+                "berekening": "6 × 10",
+                "resultaat": "60",
+                "uitleg": "Vermenigvuldig 6 met 10"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "getal",
-            "logica_check": "70 is logisch: 7 × 10 = 70",
-            "antwoord": "70"
+            "logica_check": "60 is logisch: 6 × 10 = 60",
+            "antwoord": "60"
           }
         }
       }
@@ -4019,35 +3998,35 @@
     "content": "Bereken:",
     "questions": [
       {
-        "question": "5 × 8 = ?",
-        "hint": "💡 Tip: Denk aan de tafel van 5. Bereken 5 × 8.",
+        "question": "5 × 6 = ?",
+        "hint": "💡 Tip: Denk aan de tafel van 5. Bereken 5 × 6.",
         "options": [
           {
-            "text": "40",
+            "text": "30",
             "is_correct": true,
             "foutanalyse": ""
+          },
+          {
+            "text": "25",
+            "is_correct": false,
+            "error_type": "rekenfout_basis",
+            "foutanalyse": "Je hebt 5 × 5 uitgerekend. Let op: 5 × 6 is één stap verder in de tafel van 5.",
+            "visual_aid_query": "Tafel van 5",
+            "remedial_basis_id": 102
           },
           {
             "text": "35",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Je hebt 5 × 7 uitgerekend. Let op: 5 × 8 is één stap verder in de tafel van 5.",
+            "foutanalyse": "Je hebt 5 × 7 uitgerekend. Let op: je moet 5 × 6 berekenen.",
             "visual_aid_query": "Tafel van 5",
             "remedial_basis_id": 102
           },
           {
-            "text": "45",
-            "is_correct": false,
-            "error_type": "rekenfout_basis",
-            "foutanalyse": "Je hebt 5 × 9 uitgerekend. Let op: je moet 5 × 8 berekenen.",
-            "visual_aid_query": "Tafel van 5",
-            "remedial_basis_id": 102
-          },
-          {
-            "text": "32",
+            "text": "24",
             "is_correct": false,
             "error_type": "verkeerde_bewerking",
-            "foutanalyse": "Dit is 4 × 8 = 32. Let op dat je de tafel van 5 gebruikt, niet de tafel van 4!\n\n🤔 **Reflectievraag:** Wat is het verschil tussen 5 × 8 en 4 × 8?",
+            "foutanalyse": "Dit is 4 × 6 = 24. Let op dat je de tafel van 5 gebruikt, niet de tafel van 4!\n\n🤔 **Reflectievraag:** Wat is het verschil tussen 5 × 6 en 4 × 6?",
             "visual_aid_query": "Tafel van 5",
             "remedial_basis_id": 102
           }
@@ -4055,25 +4034,25 @@
         "extra_info": {
           "concept": "Vermenigvuldigen: tafel van 5.",
           "berekening": [
-            "5 × 8 = 40",
-            "Of: 8 × 5 = 40"
+            "5 × 6 = 30",
+            "Of: 6 × 5 = 30"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Vermenigvuldig | 5 × 8 | **40** ⭐ |"
+            "| 1. Vermenigvuldig | 5 × 6 | **30** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
-            "hoofdvraag": "5 × 8 = ?",
+            "hoofdvraag": "5 × 6 = ?",
             "tussenstappen": []
           },
           "stap2_ordenen": {
             "relevante_getallen": {
               "Getal 1": "5",
-              "Getal 2": "8"
+              "Getal 2": "6"
             },
             "tool": "Vermenigvuldigen",
             "conversies": []
@@ -4082,16 +4061,16 @@
             "bewerkingen": [
               {
                 "stap": "Vermenigvuldig",
-                "berekening": "5 × 8",
-                "resultaat": "40",
-                "uitleg": "Tafel van 5: 5 × 8 = 40"
+                "berekening": "5 × 6",
+                "resultaat": "30",
+                "uitleg": "Tafel van 5: 5 × 6 = 30"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "getal",
-            "logica_check": "40 is logisch: 5 × 8 = 40",
-            "antwoord": "40"
+            "logica_check": "30 is logisch: 5 × 6 = 30",
+            "antwoord": "30"
           }
         }
       }
@@ -4100,84 +4079,84 @@
   },
   {
     "id": 56,
-    "title": "Kale som: delen (tafel 4)",
+    "title": "Kale som: delen (halveren)",
     "theme": "delen",
     "content": "Bereken:",
     "questions": [
       {
-        "question": "28 ÷ 4 = ?",
-        "hint": "💡 Tip: Denk aan de tafel van 4. Hoeveel keer past 4 in 28?",
+        "question": "28 ÷ 2 = ?",
+        "hint": "💡 Tip: Dit is halveren. Wat is de helft van 28?",
         "options": [
           {
-            "text": "7",
+            "text": "14",
             "is_correct": true,
             "foutanalyse": ""
           },
           {
-            "text": "6",
+            "text": "12",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna! Maar 4 × 6 = 24, niet 28. Controleer: 4 × ? = 28",
-            "visual_aid_query": "Tafel van 4",
+            "foutanalyse": "Te weinig! Controleer: 2 × 12 = 24, niet 28. Wat is de helft van 28?",
+            "visual_aid_query": "Halveren visualisatie",
             "remedial_basis_id": 103
           },
           {
-            "text": "8",
+            "text": "16",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Je zit te hoog. 4 × 8 = 32, niet 28. Controleer: 4 × ? = 28",
-            "visual_aid_query": "Tafel van 4",
+            "foutanalyse": "Te veel! Controleer: 2 × 16 = 32, niet 28. Wat is de helft van 28?",
+            "visual_aid_query": "Halveren visualisatie",
             "remedial_basis_id": 103
           },
           {
-            "text": "4",
+            "text": "2",
             "is_correct": false,
             "error_type": "conceptfout",
-            "foutanalyse": "Je hebt het getal waar je door deelt gegeven. Je moet berekenen: hoeveel keer past 4 in 28?",
+            "foutanalyse": "Je hebt het getal waar je door deelt gegeven. Je moet berekenen: hoeveel is de helft van 28?",
             "visual_aid_query": null,
             "remedial_basis_id": 103
           }
         ],
         "extra_info": {
-          "concept": "Delen met behulp van de tafel van 4.",
+          "concept": "Delen door 2 (halveren).",
           "berekening": [
-            "28 ÷ 4 = 7",
-            "Controle: 4 × 7 = 28"
+            "28 ÷ 2 = 14",
+            "Controle: 2 × 14 = 28"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Deel | 28 ÷ 4 | **7** ⭐ |"
+            "| 1. Halveer | 28 ÷ 2 | **14** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
-            "hoofdvraag": "28 ÷ 4 = ?",
+            "hoofdvraag": "28 ÷ 2 = ?",
             "tussenstappen": []
           },
           "stap2_ordenen": {
             "relevante_getallen": {
               "Getal 1": "28",
-              "Getal 2": "4"
+              "Getal 2": "2"
             },
-            "tool": "Delen",
+            "tool": "Delen (halveren)",
             "conversies": []
           },
           "stap3_vormen": {
             "bewerkingen": [
               {
-                "stap": "Deel",
-                "berekening": "28 ÷ 4",
-                "resultaat": "7",
-                "uitleg": "Deel 28 door 4 (tafel van 4)"
+                "stap": "Halveer",
+                "berekening": "28 ÷ 2",
+                "resultaat": "14",
+                "uitleg": "Halveer 28 (deel door 2)"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "getal",
-            "logica_check": "7 is logisch: 28 ÷ 4 = 7",
-            "antwoord": "7"
+            "logica_check": "14 is logisch: 28 ÷ 2 = 14",
+            "antwoord": "14"
           }
         }
       }
