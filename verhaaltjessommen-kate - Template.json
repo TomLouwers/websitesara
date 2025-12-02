@@ -189,7 +189,7 @@
             "text": "15:00 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
-            "foutanalyse": "Je hebt alleen het uur erbij opgeteld, maar de 45 minuten vergeten! 14:30 + 1 uur = 15:30, maar je moet er ook nog 45 minuten bij optellen.\n\n🤔 **Reflectievraag:** Hoeveel minuten moet je in totaal optellen bij 14:30?",
+            "foutanalyse": "Je hebt alleen het half uur erbij opgeteld, niet de volledige 40 minuten. 14:30 + 40 minuten = ?\n\n🤔 **Reflectievraag:** Hoeveel minuten moet je in totaal optellen bij 14:30?",
             "visual_aid_query": "Tijd berekenen",
             "remedial_basis_id": null
           },
@@ -197,7 +197,7 @@
             "text": "15:10 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
-            "foutanalyse": "Je hebt een fout gemaakt bij het optellen van de minuten. Van 14:30 naar 15:30 is 1 uur. Dan moet je er nog 45 minuten bij optellen: 15:30 + 45 minuten = ?\n\n🤔 **Reflectievraag:** Wat is 30 + 45?",
+            "foutanalyse": "Bijna goed! Je hebt waarschijnlijk een kleine fout gemaakt bij het optellen van de minuten. Van 14:30 naar 15:10 is precies 40 minuten.\n\n🤔 **Reflectievraag:** Controleer: 30 + 40 = ?",
             "visual_aid_query": null,
             "remedial_basis_id": null
           },
@@ -210,7 +210,7 @@
             "text": "14:70 uur",
             "is_correct": false,
             "error_type": "conceptfout",
-            "foutanalyse": "Let op! Er kunnen maar 60 minuten in een uur zitten. 75 minuten bestaat niet op de klok. Je moet 60 minuten omzetten naar 1 uur.\n\n🤔 **Reflectievraag:** Als je bij 30 minuten nog 45 minuten optelt, hoeveel minuten is dat? Hoeveel uur en minuten is dat?",
+            "foutanalyse": "Let op! Er kunnen maar 60 minuten in een uur zitten. 70 minuten bestaat niet op de klok. 30 + 40 = 70 minuten, dat moet je omzetten naar uren.\n\n🤔 **Reflectievraag:** 70 minuten = 60 minuten + hoeveel minuten?",
             "visual_aid_query": "Tijd omrekenen",
             "remedial_basis_id": null
           }
@@ -218,6 +218,8 @@
         "extra_info": {
           "concept": "Dit is een tijdberekening. Je moet de duur van de film optellen bij de starttijd. Let op dat 60 minuten gelijk is aan 1 uur.",
           "berekening": [
+            "Starttijd: 14:30 uur",
+            "Duur film: 40 minuten",
             "14:30 + 40 minuten = 15:10 uur"
           ],
           "berekening_tabel": [
@@ -279,13 +281,13 @@
     "questions": [
       {
         "question": "Hoeveel pennen zijn er in totaal besteld?",
-        "hint": "💡 Tip: Je moet 6 keer 150 rekenen. Denk aan de tafel van 6!",
+        "hint": "💡 Tip: Je moet 6 keer 50 rekenen. Denk aan de tafel van 6!",
         "options": [
           {
             "text": "250 pennen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen. Controleer: 6 × 150 = ? Denk aan de tafel van 6: 6 × 15 = 90, dus 6 × 150 = 900.\n\n🤔 **Reflectievraag:** Wat is 6 × 15?",
+            "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen. Controleer: 6 × 50 = ? Denk aan de tafel van 6: 6 × 5 = 30, dus 6 × 50 = 300.\n\n🤔 **Reflectievraag:** Wat is 6 × 5?",
             "visual_aid_query": "Vermenigvuldigen visualisatie",
             "remedial_basis_id": 104
           },
@@ -293,20 +295,20 @@
             "text": "300 pennen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna! Controleer je vermenigvuldiging nog eens: 6 × 150 = ?\n\n🤔 **Reflectievraag:** Ken je de tafel van 6 goed?",
+            "foutanalyse": "Je hebt te veel gerekend. Controleer hoeveel pennen er per doos zitten en reken: 6 × 50 = ?\n\n🤔 **Reflectievraag:** Wat is 6 × 50?",
             "visual_aid_query": null,
             "remedial_basis_id": 104
           },
           {
             "text": "350 pennen",
             "is_correct": true,
-            "foutanalyse": ""
+            "foutanalyse": "Bijna! Controleer je vermenigvuldiging nog eens: 6 × 50 = ?\n\n🤔 **Reflectievraag:** Ken je de tafel van 6 goed? 6 × 5 = ?"
           },
           {
             "text": "56 pennen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Je hebt te veel gerekend. Controleer je vermenigvuldiging: 6 × 150 = ?\n\n🤔 **Reflectievraag:** 6 × 100 = 600 en 6 × 50 = 300. Samen is dat 600 + 300 = ?",
+            "foutanalyse": "Je hebt te veel gerekend. Controleer je vermenigvuldiging: 6 × 50 = ?\n\n🤔 **Reflectievraag:** 6 × 50 = 6 × 5 × 10 = 30 × 10 = ?",
             "visual_aid_query": null,
             "remedial_basis_id": 104
           }
@@ -635,13 +637,13 @@
     "questions": [
       {
         "question": "Hoeveel chocoladerepen zijn er in totaal verkocht?",
-        "hint": "💡 Tip: Je moet 8 keer 120 rekenen. Denk aan de tafel van 8!",
+        "hint": "💡 Tip: Je moet 8 keer 40 rekenen. Denk aan de tafel van 8!",
         "options": [
           {
             "text": "280 chocoladerepen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen. Controleer: 8 × 120 = ?\n\n🤔 **Reflectievraag:** 8 × 12 = 96, dus 8 × 120 = ?",
+            "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen. Controleer: 8 × 40 = ?\n\n🤔 **Reflectievraag:** 8 × 4 = 32, dus 8 × 40 = ?",
             "visual_aid_query": null,
             "remedial_basis_id": 104
           },
@@ -649,20 +651,20 @@
             "text": "320 chocoladerepen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna! Controleer je vermenigvuldiging nog eens: 8 × 120 = ?\n\n🤔 **Reflectievraag:** Ken je de tafel van 8 goed? 8 × 12 = ?",
+            "foutanalyse": "Je hebt te veel gerekend. Controleer hoeveel repen er per doos zitten en reken: 8 × 40 = ?\n\n🤔 **Reflectievraag:** Wat is 8 × 40?",
             "visual_aid_query": null,
             "remedial_basis_id": 104
           },
           {
             "text": "360 chocoladerepen",
             "is_correct": true,
-            "foutanalyse": ""
+            "foutanalyse": "Bijna! Controleer je vermenigvuldiging nog eens: 8 × 40 = ?\n\n🤔 **Reflectievraag:** Ken je de tafel van 8 goed? 8 × 4 = ?"
           },
           {
             "text": "48 chocoladerepen",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Je hebt te veel gerekend. Controleer je vermenigvuldiging: 8 × 120 = ?\n\n🤔 **Reflectievraag:** 8 × 100 = 800 en 8 × 20 = 160. Samen is dat?",
+            "foutanalyse": "Je hebt te veel gerekend. Controleer je vermenigvuldiging: 8 × 40 = ?\n\n🤔 **Reflectievraag:** 8 × 40 = 8 × 4 × 10 = ?",
             "visual_aid_query": null,
             "remedial_basis_id": 104
           }
@@ -991,13 +993,13 @@
     "questions": [
       {
         "question": "Hoeveel appels worden er in totaal verpakt?",
-        "hint": "💡 Tip: Je moet 9 keer 180 rekenen. Denk aan de tafel van 9!",
+        "hint": "💡 Tip: Je moet 9 keer 20 rekenen. Denk aan de tafel van 9!",
         "options": [
           {
             "text": "160 appels",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen. Controleer: 9 × 180 = ?\n\n🤔 **Reflectievraag:** 9 × 18 = 162, dus 9 × 180 = ?",
+            "foutanalyse": "Je hebt een fout gemaakt bij het vermenigvuldigen. Controleer: 9 × 20 = ?\n\n🤔 **Reflectievraag:** 9 × 2 = 18, dus 9 × 20 = ?",
             "visual_aid_query": null,
             "remedial_basis_id": 104
           },
@@ -1010,7 +1012,7 @@
             "text": "200 appels",
             "is_correct": false,
             "error_type": "rekenfout_basis",
-            "foutanalyse": "Bijna! Controleer je vermenigvuldiging nog eens: 9 × 180 = ?\n\n🤔 **Reflectievraag:** Ken je de tafel van 9 goed? 9 × 18 = ?",
+            "foutanalyse": "Bijna! Controleer je vermenigvuldiging nog eens: 9 × 20 = ?\n\n🤔 **Reflectievraag:** Ken je de tafel van 9 goed? 9 × 2 = ?",
             "visual_aid_query": null,
             "remedial_basis_id": 104
           },
@@ -1018,7 +1020,7 @@
             "text": "29 appels",
             "is_correct": false,
             "error_type": "conceptfout",
-            "foutanalyse": "Let op! Je hebt 9 × 200 gerekend in plaats van 9 × 180. Controleer: 9 × 180 = ?\n\n🤔 **Reflectievraag:** 9 × 100 = 900 en 9 × 80 = 720. Samen is dat?",
+            "foutanalyse": "Je hebt opgeteld in plaats van vermenigvuldigd. Je moet rekenen: 9 × 20.\n\n🤔 **Reflectievraag:** Wat betekent '9 kratjes van elk 20 appels'?",
             "visual_aid_query": null,
             "remedial_basis_id": 104
           }
@@ -3972,7 +3974,7 @@
     "questions": [
       {
         "question": "Hoeveel broodjes in totaal?",
-        "hint": "💡 Tip: Vermenigvuldig 7 × 140!",
+        "hint": "💡 Tip: Vermenigvuldig 7 × 30!",
         "options": [
           {
             "text": "200 broodjes",
@@ -4059,7 +4061,7 @@
     "questions": [
       {
         "question": "Hoeveel planten totaal?",
-        "hint": "💡 Tip: Reken 8 × 160!",
+        "hint": "💡 Tip: Reken 8 × 30!",
         "options": [
           {
             "text": "230 planten",
@@ -4146,7 +4148,7 @@
     "questions": [
       {
         "question": "Hoeveel boeken totaal?",
-        "hint": "💡 Tip: Vermenigvuldig 9 × 170!",
+        "hint": "💡 Tip: Vermenigvuldig 9 × 30!",
         "options": [
           {
             "text": "260 boeken",
@@ -4233,7 +4235,7 @@
     "questions": [
       {
         "question": "Hoeveel pakken kaas?",
-        "hint": "💡 Tip: Reken 6 × 130!",
+        "hint": "💡 Tip: Reken 6 × 25!",
         "options": [
           {
             "text": "140 pakken",
@@ -4320,7 +4322,7 @@
     "questions": [
       {
         "question": "Hoeveel tegels totaal?",
-        "hint": "💡 Tip: Vermenigvuldig 7 × 125!",
+        "hint": "💡 Tip: Vermenigvuldig 7 × 25!",
         "options": [
           {
             "text": "165 tegels",
@@ -4407,7 +4409,7 @@
     "questions": [
       {
         "question": "Hoeveel bekers totaal?",
-        "hint": "💡 Tip: Reken 8 × 145!",
+        "hint": "💡 Tip: Reken 8 × 25!",
         "options": [
           {
             "text": "190 bekers",
@@ -4494,7 +4496,7 @@
     "questions": [
       {
         "question": "Hoeveel puzzels?",
-        "hint": "💡 Tip: Vermenigvuldig 9 × 135!",
+        "hint": "💡 Tip: Vermenigvuldig 9 × 15!",
         "options": [
           {
             "text": "125 puzzels",
@@ -4581,7 +4583,7 @@
     "questions": [
       {
         "question": "Hoeveel tennisballen?",
-        "hint": "💡 Tip: Reken 6 × 165!",
+        "hint": "💡 Tip: Reken 6 × 30!",
         "options": [
           {
             "text": "170 tennisballen",
@@ -4668,7 +4670,7 @@
     "questions": [
       {
         "question": "Hoeveel potplanten?",
-        "hint": "💡 Tip: Vermenigvuldig 7 × 155!",
+        "hint": "💡 Tip: Vermenigvuldig 7 × 20!",
         "options": [
           {
             "text": "130 potplanten",
@@ -4755,7 +4757,7 @@
     "questions": [
       {
         "question": "Hoeveel markers totaal?",
-        "hint": "💡 Tip: Reken 8 × 175!",
+        "hint": "💡 Tip: Reken 8 × 20!",
         "options": [
           {
             "text": "150 markers",
