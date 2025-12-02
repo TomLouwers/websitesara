@@ -195,7 +195,7 @@
           },
           {
             "text": "15:10 uur",
-            "is_correct": false,
+            "is_correct": true,
             "error_type": "rekenfout_tijd",
             "foutanalyse": "Bijna goed! Je hebt waarschijnlijk een kleine fout gemaakt bij het optellen van de minuten. Van 14:30 naar 15:10 is precies 40 minuten.\n\n🤔 **Reflectievraag:** Controleer: 30 + 40 = ?",
             "visual_aid_query": null,
@@ -203,7 +203,7 @@
           },
           {
             "text": "15:20 uur",
-            "is_correct": true,
+            "is_correct": false,
             "foutanalyse": ""
           },
           {
@@ -225,8 +225,7 @@
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Tijdberekening | 14:30 + 40 minuten | **15:10 uur** ⭐ |",
-            "| 2. Plus 45 min | 15:30 + 45 min | **16:15 uur** ⭐ |"
+            "| 1. Tijd optellen | 14:30 + 40 min | **15:10 uur** ⭐ |"
           ]
         },
         "lova": {
@@ -250,22 +249,16 @@
           "stap3_vormen": {
             "bewerkingen": [
               {
-                "stap": "Tel het uur erbij op",
+                "stap": "Tel tijd op",
                 "berekening": "14:30 + 40 minuten",
-                "resultaat": "15:10 uur",
-                "uitleg": "Tel eerst het hele uur erbij op"
-              },
-              {
-                "stap": "Tel de minuten erbij op",
-                "berekening": "15:30 + 45 minuten",
-                "resultaat": "16:15",
-                "uitleg": "Tel de 45 minuten erbij op (30 + 45 = 75 minuten = 1 uur en 15 minuten)"
+                "resultaat": "15:10",
+                "uitleg": "Tel de minuten erbij op"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "tijd (uur:minuten)",
-            "logica_check": "16:15 uur is logisch: bijna 2 uur later dan 14:30",
+            "logica_check": "15:10 uur is logisch: 40 minuten later dan 14:30",
             "antwoord": "15:10 uur"
           }
         }
@@ -293,7 +286,7 @@
           },
           {
             "text": "300 pennen",
-            "is_correct": false,
+            "is_correct": true,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt te veel gerekend. Controleer hoeveel pennen er per doos zitten en reken: 6 × 50 = ?\n\n🤔 **Reflectievraag:** Wat is 6 × 50?",
             "visual_aid_query": null,
@@ -301,7 +294,7 @@
           },
           {
             "text": "350 pennen",
-            "is_correct": true,
+            "is_correct": false,
             "foutanalyse": "Bijna! Controleer je vermenigvuldiging nog eens: 6 × 50 = ?\n\n🤔 **Reflectievraag:** Ken je de tafel van 6 goed? 6 × 5 = ?"
           },
           {
@@ -346,13 +339,13 @@
                 "stap": "Vermenigvuldig dozen met pennen",
                 "berekening": "6 × 50",
                 "resultaat": "300",
-                "uitleg": "6 dozen van elk 150 pennen"
+                "uitleg": "6 dozen van elk 50 pennen"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "pennen (aantal)",
-            "logica_check": "900 pennen is logisch: 6 × 150 = 900",
+            "logica_check": "300 pennen is logisch: 6 × 50 = 300",
             "antwoord": "300 pennen"
           }
         }
@@ -649,7 +642,7 @@
           },
           {
             "text": "320 chocoladerepen",
-            "is_correct": false,
+            "is_correct": true,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Je hebt te veel gerekend. Controleer hoeveel repen er per doos zitten en reken: 8 × 40 = ?\n\n🤔 **Reflectievraag:** Wat is 8 × 40?",
             "visual_aid_query": null,
@@ -657,7 +650,7 @@
           },
           {
             "text": "360 chocoladerepen",
-            "is_correct": true,
+            "is_correct": false,
             "foutanalyse": "Bijna! Controleer je vermenigvuldiging nog eens: 8 × 40 = ?\n\n🤔 **Reflectievraag:** Ken je de tafel van 8 goed? 8 × 4 = ?"
           },
           {
@@ -702,13 +695,13 @@
                 "stap": "Vermenigvuldig",
                 "berekening": "8 × 40",
                 "resultaat": "320",
-                "uitleg": "8 dozen van elk 120 repen"
+                "uitleg": "8 dozen van elk 40 repen"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "chocoladerepen (aantal)",
-            "logica_check": "960 chocoladerepen is logisch: 8 × 120 = 960",
+            "logica_check": "320 chocoladerepen is logisch: 8 × 40 = 320",
             "antwoord": "320 chocoladerepen"
           }
         }
@@ -724,7 +717,7 @@
     "questions": [
       {
         "question": "Hoeveel parkeerplaatsen komen er in elk vak?",
-        "hint": "💡 Tip: Je moet 280 parkeerplaatsen verdelen over 7 vakken. Dat doe je door te delen!",
+        "hint": "💡 Tip: Je moet 56 parkeerplaatsen verdelen over 7 vakken. Dat doe je door te delen!",
         "options": [
           {
             "text": "7 parkeerplaatsen",
@@ -736,7 +729,7 @@
           },
           {
             "text": "8 parkeerplaatsen",
-            "is_correct": false,
+            "is_correct": true,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna! Controleer je deling nog eens: 280 ÷ 7 = ?\n\n🤔 **Reflectievraag:** 7 × 35 = 245, niet 280. Ken je de tafel van 7?",
             "visual_aid_query": null,
@@ -744,7 +737,7 @@
           },
           {
             "text": "9 parkeerplaatsen",
-            "is_correct": true,
+            "is_correct": false,
             "foutanalyse": ""
           },
           {
@@ -903,22 +896,22 @@
         "options": [
           {
             "text": "15:45 uur",
-            "is_correct": true,
-            "foutanalyse": ""
+            "is_correct": false,
+            "error_type": "rekenfout_tijd",
+            "foutanalyse": "Je hebt niet goed gerekend. Controleer: 15:20 + 35 minuten = ?\n\n🤔 **Reflectievraag:** 20 + 35 = ?",
+            "visual_aid_query": "Tijd berekenen",
+            "remedial_basis_id": null
           },
           {
             "text": "15:55 uur",
-            "is_correct": false,
-            "error_type": "rekenfout_tijd",
-            "foutanalyse": "Je hebt niet goed gerekend. Van 17:20 moet je 1 uur en 35 minuten aftrekken.\n\n🤔 **Reflectievraag:** 17:20 - 1 uur = 16:20. Dan moet je er nog 35 minuten afhalen.",
-            "visual_aid_query": "Tijd terugtellen",
-            "remedial_basis_id": null
+            "is_correct": true,
+            "foutanalyse": ""
           },
           {
             "text": "16:05 uur",
             "is_correct": false,
             "error_type": "rekenfout_tijd",
-            "foutanalyse": "Je hebt alleen het uur afgetrokken, maar de 35 minuten vergeten! 17:20 - 1 uur = 16:20, maar je moet er ook nog 35 minuten afhalen.\n\n🤔 **Reflectievraag:** 16:20 - 35 minuten = ?",
+            "foutanalyse": "Dat is te laat. Controleer: 15:20 + 35 minuten = ?\n\n🤔 **Reflectievraag:** Heb je de minuten goed opgeteld?",
             "visual_aid_query": null,
             "remedial_basis_id": null
           },
@@ -926,29 +919,30 @@
             "text": "15:65 uur",
             "is_correct": false,
             "error_type": "conceptfout",
-            "foutanalyse": "Je hebt de tijd opgeteld in plaats van afgetrokken. De wedstrijd is om 17:20 afgelopen, dus de begintijd was eerder, niet later!\n\n🤔 **Reflectievraag:** Als iets om 17:20 afgelopen is, is het dan eerder of later begonnen?",
-            "visual_aid_query": null,
+            "foutanalyse": "Let op! Er zitten maar 60 minuten in een uur. 65 minuten bestaat niet.\n\n🤔 **Reflectievraag:** Moet je minuten omzetten naar uren?",
+            "visual_aid_query": "Tijd omrekenen",
             "remedial_basis_id": null
           }
         ],
         "extra_info": {
           "concept": "Dit is een tijdberekening waarbij je terug moet rekenen. Je moet de duur aftrekken van de eindtijd om de begintijd te vinden.",
           "berekening": [
+            "Starttijd: 15:20 uur",
+            "Duur: 35 minuten",
             "15:20 + 35 minuten = 15:55 uur"
           ],
           "berekening_tabel": [
             "| Stap | Bewerking | Uitkomst |",
             "|------|-----------|----------|",
-            "| 1. Tijdberekening | 15:20 + 35 minuten | **15:55 uur** ⭐ |",
-            "| 2. Min 35 min | 16:20 - 35 min | **15:45 uur** ⭐ |"
+            "| 1. Tijd optellen | 15:20 + 35 min | **15:55 uur** ⭐ |"
           ]
         },
         "lova": {
           "stap1_lezen": {
             "ruis": [],
-            "hoofdvraag": "Hoe laat is de wedstrijd begonnen?",
+            "hoofdvraag": "Hoe laat is de wedstrijd afgelopen?",
             "tussenstappen": [
-              "Trek de duur af van de eindtijd"
+              "Tel de duur op bij de starttijd"
             ]
           },
           "stap2_ordenen": {
@@ -962,22 +956,16 @@
           "stap3_vormen": {
             "bewerkingen": [
               {
-                "stap": "Trek het uur af",
+                "stap": "Tel tijd op",
                 "berekening": "15:20 + 35 minuten",
-                "resultaat": "15:55 uur",
-                "uitleg": "Trek eerst het hele uur af"
-              },
-              {
-                "stap": "Trek de minuten af",
-                "berekening": "16:20 - 35 minuten",
-                "resultaat": "15:45",
-                "uitleg": "Trek de 35 minuten af (20 - 35 = -15, lenen van uur: 60 + 20 - 35 = 45)"
+                "resultaat": "15:55",
+                "uitleg": "Tel de minuten erbij op"
               }
             ]
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "tijd (uur:minuten)",
-            "logica_check": "15:45 uur is logisch: ongeveer 1,5 uur eerder dan 17:20",
+            "logica_check": "15:55 uur is logisch: 35 minuten later",
             "antwoord": "15:55 uur"
           }
         }
@@ -1046,7 +1034,7 @@
           },
           "stap2_ordenen": {
             "relevante_getallen": {
-              "Aantal kratjes": "20",
+              "Aantal kratjes": "9",
               "Appels per kratje": "20"
             },
             "tool": "Vermenigvuldigen",
@@ -1058,7 +1046,7 @@
                 "stap": "Vermenigvuldig",
                 "berekening": "9 × 20",
                 "resultaat": "180",
-                "uitleg": "9 kratjes van elk 180 appels"
+                "uitleg": "9 kratjes van elk 20 appels"
               }
             ]
           },
@@ -1168,7 +1156,7 @@
     "questions": [
       {
         "question": "Hoeveel ballen krijgt elke klas?",
-        "hint": "💡 Tip: Je moet 360 ballen verdelen over 9 klassen. Dat doe je door te delen!",
+        "hint": "💡 Tip: Je moet 72 ballen verdelen over 9 klassen. Dat doe je door te delen!",
         "options": [
           {
             "text": "7 ballen",
@@ -1180,7 +1168,7 @@
           },
           {
             "text": "8 ballen",
-            "is_correct": false,
+            "is_correct": true,
             "error_type": "rekenfout_basis",
             "foutanalyse": "Bijna! Controleer je deling nog eens: 360 ÷ 9 = ?\n\n🤔 **Reflectievraag:** 9 × 35 = 315, niet 360. Probeer nog eens!",
             "visual_aid_query": null,
@@ -1188,7 +1176,7 @@
           },
           {
             "text": "9 ballen",
-            "is_correct": true,
+            "is_correct": false,
             "foutanalyse": ""
           },
           {
@@ -1239,7 +1227,7 @@
           },
           "stap4_antwoorden": {
             "verwachte_eenheid": "ballen (aantal)",
-            "logica_check": "8 ballen is logisch: 9 klassen × 8 = 72 ballen totaal",
+            "logica_check": "8 ballen per klas is logisch: 9 klassen × 8 = 72 ballen totaal",
             "antwoord": "8 ballen"
           }
         }
