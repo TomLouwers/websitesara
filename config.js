@@ -14,7 +14,8 @@ const CONFIG = {
         verhaaltjessommen: 'Verhaaltjessommen',
         'verhaaltjessommen-emma': 'Verhaaltjessommen Emma',
         'verhaaltjessommen-kate': 'Verhaaltjessommen Kate',
-        basisvaardigheden: 'Basisvaardigheden'
+        basisvaardigheden: 'Basisvaardigheden',
+        'basisvaardigheden-emma': 'Basisvaardigheden Emma'
     },
 
     // Subject icons
@@ -27,7 +28,8 @@ const CONFIG = {
         verhaaltjessommen: '🔢',
         'verhaaltjessommen-emma': '🧒',
         'verhaaltjessommen-kate': '🎓',
-        basisvaardigheden: '🧮'
+        basisvaardigheden: '🧮',
+        'basisvaardigheden-emma': '🧒'
     },
 
     // Subject descriptions
@@ -40,7 +42,8 @@ const CONFIG = {
         verhaaltjessommen: 'Reken mee met CITO-niveau verhaaltjes',
         'verhaaltjessommen-emma': 'M4 verhaaltjessommen voor Groep 4',
         'verhaaltjessommen-kate': 'M5 verhaaltjessommen voor Groep 5',
-        basisvaardigheden: 'Oefen de rekenkundige basisvaardigheden'
+        basisvaardigheden: 'Oefen de rekenkundige basisvaardigheden',
+        'basisvaardigheden-emma': 'M4 basisvaardigheden voor Groep 4 (330 opgaven)'
     },
 
     // File naming pattern
