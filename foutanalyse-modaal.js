@@ -6,26 +6,26 @@
 // Error type labels
 const errorTypeLabels = {
   conversiefout: {
-    emoji: "🛑",
-    title: "Oeps! Je bent een omrekenstap vergeten!",
+    emoji: "💡",
+    title: "Bijna goed! Er is een omrekenstap vergeten",
     color: "#ef4444",
     concept: "het omrekenen van eenheden"
   },
   leesfout_ruis: {
     emoji: "📖",
-    title: "Let op! Je hebt iets over het hoofd gezien in de tekst!",
+    title: "Let op! Er staat iets belangrijks in de tekst",
     color: "#f59e0b",
     concept: "het herkennen van belangrijke informatie"
   },
   conceptfout: {
     emoji: "🧠",
-    title: "Hmm, dit is een denkfout over hoe de som werkt!",
+    title: "Probeer het anders! Kijk nog eens naar de rekenregel",
     color: "#8b5cf6",
     concept: "het toepassen van de juiste rekenregel"
   },
   rekenfout_basis: {
     emoji: "🔢",
-    title: "Check je rekenwerk nog eens!",
+    title: "Check je rekenwerk nog eens! 💪",
     color: "#3b82f6",
     concept: "de basis rekenvaardigheid"
   }
@@ -120,7 +120,7 @@ function showFoutanalyseModaal(selectedOption, extraInfo, attemptNumber = 1, cur
     const exerciseTitle = exerciseTitles[selectedOption.remedial_basis_id] || `Oefening ${selectedOption.remedial_basis_id}`;
 
     document.getElementById('remedialExplanation').textContent =
-      `Het lijkt erop dat je nog moeite hebt met ${errorInfo.concept}.`;
+      `Laten we ${errorInfo.concept} nog een keer oefenen!`;
 
     document.getElementById('remedialCtaText').innerHTML = `
       Oefen Basissom #${selectedOption.remedial_basis_id}:<br />
