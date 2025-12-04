@@ -266,6 +266,46 @@ body {
     margin: 0 auto;
 }
 
+.level-grid .subject-card {
+    min-height: 140px;
+    padding: 20px 30px;
+    flex-direction: row;
+    text-align: left;
+    gap: 20px;
+}
+
+.level-grid .subject-icon-wrapper {
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.level-grid .subject-icon-material {
+    font-size: 2.5em;
+}
+
+.level-grid .subject-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.level-grid .subject-card p {
+    font-size: 0.9em;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .level-grid .subject-card {
+        flex-direction: column;
+        text-align: center;
+        min-height: 160px;
+        padding: 20px;
+    }
+
+    .level-grid .subject-icon-wrapper {
+        margin-bottom: 10px;
+    }
+}
+
 .subject-card {
     background-color: var(--surface-color);
     border-radius: var(--border-radius-card);

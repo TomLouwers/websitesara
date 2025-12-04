@@ -235,19 +235,19 @@ function showLevelSelection(type) {
     // Define levels with their corresponding subject names (ordered from youngest to oldest)
     const levels = [
         {
-            icon: '🌱',
+            icon: 'eco',
             title: 'Groep 4 - M4 niveau',
             description: 'M4 niveau oefeningen',
             subject: type + '-emma'
         },
         {
-            icon: '📘',
+            icon: 'auto_stories',
             title: 'Groep 5 - M5 niveau',
             description: 'M5 niveau oefeningen',
             subject: type + '-kate'
         },
         {
-            icon: '🎯',
+            icon: 'workspace_premium',
             title: 'Groep 8 - Eindtoets niveau',
             description: 'E8 niveau oefeningen',
             subject: type // verhaaltjessommen or basisvaardigheden
@@ -261,9 +261,13 @@ function showLevelSelection(type) {
         card.onclick = () => loadSubject(level.subject);
 
         card.innerHTML = `
-            <div class="subject-icon">${level.icon}</div>
-            <h3>${level.title}</h3>
-            <p>${level.description}</p>
+            <div class="subject-icon-wrapper">
+                <i class="material-icons subject-icon-material">${level.icon}</i>
+            </div>
+            <div style="flex: 1;">
+                <h3>${level.title}</h3>
+                <p>${level.description}</p>
+            </div>
         `;
 
         levelGrid.appendChild(card);
