@@ -59,9 +59,9 @@ const CONFIG = {
             message: 'Dat is helemaal juist!'
         },
         incorrect: {
-            title: 'Niet correct!',
-            messageDefault: 'Helaas, dat is niet helemaal correct.',
-            messageWithTips: 'Helaas, dat is niet helemaal correct. Hier is een voorbeeld van een goed antwoord en wat tips:'
+            title: 'Bijna goed! 💪',
+            messageDefault: 'Je bent op de goede weg! Fouten helpen je leren.',
+            messageWithTips: 'Je bent op de goede weg! Hier is een voorbeeld van een goed antwoord en wat tips:'
         },
         noAnswer: {
             multipleChoice: 'Selecteer eerst een antwoord!',
@@ -103,8 +103,8 @@ const CONFIG = {
 
     // Review page messages
     reviewMessages: {
-        single: 'Je had 1 vraag fout. Bestudeer deze goed om ervan te leren!',
-        multiple: (count) => `Je had ${count} vragen fout. Bestudeer ze goed om ervan te leren!`
+        single: 'Je hebt 1 leerpunt om mee aan de slag te gaan! Fouten helpen je groeien! 💪',
+        multiple: (count) => `Je hebt ${count} leerpunten om mee aan de slag te gaan! Fouten helpen je groeien! 💪`
     },
 
     // L.O.V.A. configuration

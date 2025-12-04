@@ -201,9 +201,9 @@
                     <h3 class="progress-tracker-title">📊 Voortgang</h3>
                     <div style="display: flex; align-items: center; gap: 10px;">
                         <div class="progress-summary">
-                            <span class="summary-stat correct">✓ <span id="totalCorrect">0</span></span>
-                            <span class="summary-stat incorrect">✗ <span id="totalIncorrect">0</span></span>
-                            <span class="summary-stat" style="color: var(--secondary-color);">📋 <span id="lovaClicks">0</span></span>
+                            <span class="summary-stat correct">✓ Goed: <span id="totalCorrect">0</span></span>
+                            <!-- Incorrect count hidden to reduce anxiety and focus on positive reinforcement -->
+                            <span class="summary-stat" style="color: var(--secondary-color);">📋 Hulp: <span id="lovaClicks">0</span></span>
                         </div>
                     </div>
                 </div>
@@ -369,7 +369,7 @@
     <div id="foutanalyseModaal" class="modaal-overlay">
         <div class="modaal-content">
             <div class="modaal-header">
-                <h2 id="modaalTitle">🛑 Oeps! Dit is niet juist</h2>
+                <h2 id="modaalTitle">💡 Bijna goed! Probeer nog eens</h2>
                 <button class="modaal-close" onclick="closeFoutanalyseModaal()">✕</button>
             </div>
 
@@ -378,7 +378,7 @@
 
             <!-- Foutanalyse Section -->
             <div class="fault-analysis-section">
-                <h3>Wat ging er mis?</h3>
+                <h3>Laten we samen kijken! 💡</h3>
                 <p id="mainExplanation" class="main-explanation"></p>
 
                 <!-- Reflection Question -->
@@ -406,7 +406,7 @@
             <!-- Remedial Section -->
             <div id="remedialSection" class="remedial-section" style="display: none;">
                 <div class="remedial-alert">
-                    🚨 Eerst de Basis Herstellen!
+                    💪 Extra oefening maakt je sterker!
                 </div>
                 <p id="remedialExplanation" class="remedial-explanation"></p>
                 <button id="remedialCta" class="remedial-cta">
