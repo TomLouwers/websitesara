@@ -401,7 +401,7 @@ body {
 
 .subject-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-elevation-2);
+    box-shadow: var(--shadow-elevation-2), 0 0 20px rgba(74, 123, 167, 0.3);
 }
 
 .subject-icon-wrapper {
@@ -628,6 +628,49 @@ body {
     }
 }
 
+/* Micro-Interaction Animations for Delight */
+@keyframes correctPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: var(--shadow-elevation-1), 0 0 0 rgba(82, 199, 136, 0);
+    }
+    50% {
+        transform: scale(1.03);
+        box-shadow: var(--shadow-elevation-2), 0 0 25px rgba(82, 199, 136, 0.6);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: var(--shadow-elevation-1), 0 0 15px rgba(82, 199, 136, 0.4);
+    }
+}
+
+@keyframes checkmarkAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%) scale(0) rotate(-45deg);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-50%) scale(1.2) rotate(5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-50%) scale(1) rotate(0deg);
+    }
+}
+
+@keyframes buttonPress {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 #questionCounter {
     font-size: 1em;
     color: var(--text-color-medium);
@@ -701,7 +744,12 @@ body {
     background-color: #eff0f0;
     border-color: var(--primary-light);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-elevation-1);
+    box-shadow: var(--shadow-elevation-1), 0 0 10px rgba(74, 123, 167, 0.2);
+}
+
+.option:active {
+    transform: translateY(0);
+    transition: transform 0.1s ease;
 }
 
 .option.selected {
@@ -717,7 +765,22 @@ body {
     border-color: var(--color-correct);
     color: var(--color-correct);
     font-weight: bold;
-    box-shadow: var(--shadow-elevation-1);
+    box-shadow: var(--shadow-elevation-1), 0 0 15px rgba(82, 199, 136, 0.4);
+    animation: correctPulse 0.6s ease-out;
+    position: relative;
+    padding-left: 55px; /* Make room for checkmark */
+}
+
+.option.correct::before {
+    content: '✓';
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--color-correct);
+    animation: checkmarkAppear 0.4s ease-out;
 }
 
 .option.incorrect {
@@ -779,7 +842,12 @@ body {
 .btn:hover {
     background-color: var(--primary-dark);
     transform: translateY(-3px);
-    box-shadow: var(--shadow-elevation-2);
+    box-shadow: var(--shadow-elevation-2), 0 0 15px rgba(74, 123, 167, 0.3);
+}
+
+.btn:active {
+    animation: buttonPress 0.2s ease-out;
+    transform: translateY(-1px);
 }
 
 .btn-secondary {
