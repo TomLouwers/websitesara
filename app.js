@@ -302,6 +302,7 @@ function showThemeSelection(subject, themes, data) {
 
     const themeGrid = document.getElementById('themeGrid');
     themeGrid.innerHTML = '';
+    themeGrid.classList.add('theme-grid'); // Add theme-grid class for compact styling
 
     const userName = getUserName();
 
@@ -321,10 +322,17 @@ function showThemeSelection(subject, themes, data) {
     allThemeCard.onclick = () => startQuizWithTheme(subject, null); // Pass null for all themes
     const allHighscore = getHighscore(subject, null);
     allThemeCard.innerHTML = `
-        <div class="subject-icon">🎯</div>
-        <h3>Alle thema's</h3>
-        <p>${totalAllQuestions} vragen beschikbaar</p>
-        <p style="color: var(--primary-color); font-weight: bold; margin-top: 5px;">${userName}, je huidige highscore: ${allHighscore}</p>
+        <div class="subject-icon-wrapper">
+            <i class="material-icons subject-icon-material">quiz</i>
+        </div>
+        <div style="flex: 1;">
+            <h3>Alle thema's</h3>
+            <p>${totalAllQuestions} vragen beschikbaar</p>
+            <div class="theme-highscore">
+                <i class="material-icons">emoji_events</i>
+                <span>Highscore: ${allHighscore}</span>
+            </div>
+        </div>
     `;
     themeGrid.appendChild(allThemeCard);
 
@@ -345,10 +353,17 @@ function showThemeSelection(subject, themes, data) {
         themeCard.onclick = () => startQuizWithTheme(subject, theme);
         const themeHighscore = getHighscore(subject, theme);
         themeCard.innerHTML = `
-            <div class="subject-icon">📝</div>
-            <h3>${theme}</h3>
-            <p>${questionCount} vragen beschikbaar</p>
-            <p style="color: var(--primary-color); font-weight: bold; margin-top: 5px;">${userName}, je huidige highscore: ${themeHighscore}</p>
+            <div class="subject-icon-wrapper">
+                <i class="material-icons subject-icon-material">topic</i>
+            </div>
+            <div style="flex: 1;">
+                <h3>${theme}</h3>
+                <p>${questionCount} vragen</p>
+                <div class="theme-highscore">
+                    <i class="material-icons">emoji_events</i>
+                    <span>Highscore: ${themeHighscore}</span>
+                </div>
+            </div>
         `;
         themeGrid.appendChild(themeCard);
     });
