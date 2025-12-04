@@ -394,6 +394,7 @@ function startQuizWithData(subject) {
     hasAnswered = false;
     wrongAnswers = []; // Reset wrong answers for new quiz
     lovaClickCount = 0; // Reset L.O.V.A. click counter
+    resetMilestones(); // Reset visual progress milestones
 
     // Create randomized questions from the current quiz data
     randomizedQuestions = createRandomizedQuestions(currentQuiz);
@@ -508,6 +509,12 @@ function loadCurrentQuestion() {
     const progress = (currentQuestionIndex / totalQuestions) * 100;
     document.getElementById('progressBar').style.width = progress + '%';
     document.getElementById('questionCounter').textContent = `Vraag ${currentQuestionIndex + 1} van ${totalQuestions}`;
+
+    // Update visual star progress
+    updateStarProgress(progress);
+
+    // Check for milestone celebrations
+    checkMilestone(progress);
 
     // Show reading content if available
     const readingContent = document.getElementById('readingContent');
@@ -1437,6 +1444,63 @@ function loadLovaHelpData(question) {
 }
 
 // (All old L.O.V.A. step-by-step functions removed - now using simpler help panel)
+
+// Update visual star progress based on percentage
+let lastMilestone = 0; // Track last milestone shown
+
+function updateStarProgress(progress) {
+    const stars = document.querySelectorAll('.star-icon');
+    const filledStars = Math.floor((progress / 100) * 5);
+
+    stars.forEach((star, index) => {
+        if (index < filledStars) {
+            if (!star.classList.contains('filled')) {
+                // Add filled class with slight delay for stagger effect
+                setTimeout(() => {
+                    star.textContent = 'star';
+                    star.classList.add('filled');
+                }, index * 100);
+            }
+        } else {
+            star.textContent = 'star_border';
+            star.classList.remove('filled');
+        }
+    });
+}
+
+// Check and display milestone celebrations
+function checkMilestone(progress) {
+    const milestones = [
+        { threshold: 25, message: '🎉 Kwart klaar! Je doet het geweldig!' },
+        { threshold: 50, message: '💪 Halverwege! Goed bezig!' },
+        { threshold: 75, message: '🌟 Bijna klaar! Je bent er bijna!' },
+        { threshold: 100, message: '🏆 Gelukt! Je hebt alle vragen beantwoord!' }
+    ];
+
+    const celebration = document.getElementById('milestoneCelebration');
+    const message = document.getElementById('milestoneMessage');
+
+    // Find the milestone we just passed
+    const passedMilestone = milestones.find(m =>
+        progress >= m.threshold && lastMilestone < m.threshold
+    );
+
+    if (passedMilestone) {
+        lastMilestone = passedMilestone.threshold;
+        message.textContent = passedMilestone.message;
+        celebration.classList.remove('hidden');
+
+        // Hide after 3 seconds
+        setTimeout(() => {
+            celebration.classList.add('hidden');
+        }, 3000);
+    }
+}
+
+// Reset milestone tracker when starting new quiz
+function resetMilestones() {
+    lastMilestone = 0;
+}
 
 // Initialize app when page loads
 document.addEventListener('DOMContentLoaded', function() {
