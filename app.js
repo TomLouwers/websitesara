@@ -133,9 +133,16 @@ function updateProgressTrackerDisplay() {
     });
 
     // Update summary totals only (compact display)
-    document.getElementById('totalCorrect').textContent = totalCorrect;
+    const totalCorrectEl = document.getElementById('totalCorrect');
+    if (totalCorrectEl) {
+        totalCorrectEl.textContent = totalCorrect;
+    }
+
     // totalIncorrect display removed for anxiety reduction - only show positive count
-    document.getElementById('lovaClicks').textContent = lovaClickCount;
+    const lovaClicksEl = document.getElementById('lovaClicks');
+    if (lovaClicksEl) {
+        lovaClicksEl.textContent = lovaClickCount;
+    }
 }
 
 // Shuffle array function (Fisher-Yates algorithm)
