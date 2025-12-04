@@ -214,6 +214,55 @@ async function loadJsonFile(filename) {
     }
 }
 
+// Show level selection page for math subjects
+function showLevelSelection(type) {
+    document.getElementById('landingPage').style.display = 'none';
+    document.getElementById('levelPage').style.display = 'block';
+
+    const levelTitle = type === 'verhaaltjessommen' ? 'Verhaaltjessommen' : 'Basisvaardigheden';
+    document.getElementById('levelTitle').textContent = levelTitle + ' - Kies je groep';
+
+    const levelGrid = document.getElementById('levelGrid');
+    levelGrid.innerHTML = '';
+
+    // Define levels with their corresponding subject names
+    const levels = [
+        {
+            icon: '🎯',
+            title: 'Groep 8 - Eindtoets niveau',
+            description: 'E8 niveau oefeningen',
+            subject: type // verhaaltjessommen or basisvaardigheden
+        },
+        {
+            icon: '📘',
+            title: 'Groep 5 - M5 niveau',
+            description: 'M5 niveau oefeningen',
+            subject: type + '-kate'
+        },
+        {
+            icon: '🌱',
+            title: 'Groep 4 - M4 niveau',
+            description: 'M4 niveau oefeningen',
+            subject: type + '-emma'
+        }
+    ];
+
+    // Create cards for each level
+    levels.forEach(level => {
+        const card = document.createElement('div');
+        card.className = 'subject-card';
+        card.onclick = () => loadSubject(level.subject);
+
+        card.innerHTML = `
+            <div class="subject-icon">${level.icon}</div>
+            <h3>${level.title}</h3>
+            <p>${level.description}</p>
+        `;
+
+        levelGrid.appendChild(card);
+    });
+}
+
 // Load subject and show themes
 async function loadSubject(subject) {
     const filename = subject + CONFIG.templateFileSuffix;
@@ -235,6 +284,7 @@ async function loadSubject(subject) {
 // Show theme selection page
 function showThemeSelection(subject, themes, data) {
     document.getElementById('landingPage').style.display = 'none';
+    document.getElementById('levelPage').style.display = 'none';
     document.getElementById('themePage').style.display = 'block';
 
     document.getElementById('subjectTitle').textContent = CONFIG.subjectTitles[subject] + ' - Kies een thema';
@@ -900,6 +950,7 @@ function showResults() {
 
 function goToLanding() {
     document.getElementById('landingPage').style.display = 'block';
+    document.getElementById('levelPage').style.display = 'none';
     document.getElementById('themePage').style.display = 'none';
     document.getElementById('quizPage').style.display = 'none';
     document.getElementById('resultsPage').style.display = 'none';
