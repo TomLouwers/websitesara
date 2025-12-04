@@ -214,12 +214,18 @@ async function loadJsonFile(filename) {
     }
 }
 
-// Show level selection page for math subjects
+// Show level selection page for subjects with multiple levels
 function showLevelSelection(type) {
     document.getElementById('landingPage').style.display = 'none';
     document.getElementById('levelPage').style.display = 'block';
 
-    const levelTitle = type === 'verhaaltjessommen' ? 'Verhaaltjessommen' : 'Basisvaardigheden';
+    // Map subject type to display title
+    const titleMap = {
+        'verhaaltjessommen': 'Verhaaltjessommen',
+        'basisvaardigheden': 'Basisvaardigheden',
+        'woordenschat': 'Woordenschat'
+    };
+    const levelTitle = titleMap[type] || type;
     document.getElementById('levelTitle').textContent = levelTitle + ' - Kies je groep';
 
     const levelGrid = document.getElementById('levelGrid');
