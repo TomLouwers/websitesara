@@ -15,7 +15,8 @@ const CONFIG = {
         'verhaaltjessommen-emma': 'Verhaaltjessommen Emma',
         'verhaaltjessommen-kate': 'Verhaaltjessommen Kate',
         basisvaardigheden: 'Basisvaardigheden',
-        'basisvaardigheden-emma': 'Basisvaardigheden Emma'
+        'basisvaardigheden-emma': 'Basisvaardigheden Emma',
+        'basisvaardigheden-kate': 'Basisvaardigheden Kate'
     },
 
     // Subject icons
@@ -29,7 +30,8 @@ const CONFIG = {
         'verhaaltjessommen-emma': '🧒',
         'verhaaltjessommen-kate': '🎓',
         basisvaardigheden: '🧮',
-        'basisvaardigheden-emma': '🧒'
+        'basisvaardigheden-emma': '🧒',
+        'basisvaardigheden-kate': '🎓'
     },
 
     // Subject descriptions
@@ -43,7 +45,8 @@ const CONFIG = {
         'verhaaltjessommen-emma': 'M4 verhaaltjessommen voor Groep 4',
         'verhaaltjessommen-kate': 'M5 verhaaltjessommen voor Groep 5',
         basisvaardigheden: 'Oefen de rekenkundige basisvaardigheden',
-        'basisvaardigheden-emma': 'M4 basisvaardigheden voor Groep 4 (330 opgaven)'
+        'basisvaardigheden-emma': 'M4 basisvaardigheden voor Groep 4 (330 opgaven)',
+        'basisvaardigheden-kate': 'M5 basisvaardigheden voor Groep 5 (240 opgaven)'
     },
 
     // File naming pattern
