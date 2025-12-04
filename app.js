@@ -225,13 +225,13 @@ function showLevelSelection(type) {
     const levelGrid = document.getElementById('levelGrid');
     levelGrid.innerHTML = '';
 
-    // Define levels with their corresponding subject names
+    // Define levels with their corresponding subject names (ordered from youngest to oldest)
     const levels = [
         {
-            icon: '🎯',
-            title: 'Groep 8 - Eindtoets niveau',
-            description: 'E8 niveau oefeningen',
-            subject: type // verhaaltjessommen or basisvaardigheden
+            icon: '🌱',
+            title: 'Groep 4 - M4 niveau',
+            description: 'M4 niveau oefeningen',
+            subject: type + '-emma'
         },
         {
             icon: '📘',
@@ -240,10 +240,10 @@ function showLevelSelection(type) {
             subject: type + '-kate'
         },
         {
-            icon: '🌱',
-            title: 'Groep 4 - M4 niveau',
-            description: 'M4 niveau oefeningen',
-            subject: type + '-emma'
+            icon: '🎯',
+            title: 'Groep 8 - Eindtoets niveau',
+            description: 'E8 niveau oefeningen',
+            subject: type // verhaaltjessommen or basisvaardigheden
         }
     ];
 
