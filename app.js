@@ -134,7 +134,7 @@ function updateProgressTrackerDisplay() {
 
     // Update summary totals only (compact display)
     document.getElementById('totalCorrect').textContent = totalCorrect;
-    document.getElementById('totalIncorrect').textContent = totalIncorrect;
+    // totalIncorrect display removed for anxiety reduction - only show positive count
     document.getElementById('lovaClicks').textContent = lovaClickCount;
 }
 
