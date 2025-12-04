@@ -223,7 +223,8 @@ function showLevelSelection(type) {
     const titleMap = {
         'verhaaltjessommen': 'Verhaaltjessommen',
         'basisvaardigheden': 'Basisvaardigheden',
-        'woordenschat': 'Woordenschat'
+        'woordenschat': 'Woordenschat',
+        'wereldorientatie': 'Wereldoriëntatie'
     };
     const levelTitle = titleMap[type] || type;
     document.getElementById('levelTitle').textContent = levelTitle + ' - Kies je groep';
