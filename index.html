@@ -11,52 +11,150 @@
 </head>
 <body>
     <div class="container">
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <div class="nav-brand">
+                <h2 class="logo-text">Oefenplatform Basisonderwijs</h2>
+            </div>
+            <div class="nav-links">
+                <a href="#home" onclick="goToLanding()">Vakken</a>
+                <a href="ouders.html">Voor Ouders & Leraren</a>
+            </div>
+        </nav>
+
         <div class="header">
-            <h1>🎯 Oefenplatform Basisonderwijs</h1>
-            <p>Kies een onderwerp en test je kennis!</p>
+            <h1>Oefenplatform Basisonderwijs</h1>
+            <p class="tagline">CITO-voorbereiding die werkt • Voor groep 3 t/m 8</p>
+            <p class="subtitle">Kies een onderwerp en test je kennis!</p>
+        </div>
+
+        <!-- Trust Bar -->
+        <div class="trust-bar">
+            <div class="trust-item">
+                <span class="trust-icon">✓</span>
+                <span class="trust-text">1.629+ vragen</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">✓</span>
+                <span class="trust-text">CITO-niveau</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">✓</span>
+                <span class="trust-text">7 vakgebieden</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">✓</span>
+                <span class="trust-text">Altijd gratis</span>
+            </div>
         </div>
 
         <div id="landingPage">
+            <!-- Resume Quiz Banner -->
+            <div id="resumeBanner" class="resume-banner" style="display: none;">
+                <div class="resume-content">
+                    <i class="material-icons">info</i>
+                    <div class="resume-text">
+                        <strong>Gepauzeerde quiz gevonden!</strong>
+                        <span id="resumeDetails">Je hebt een quiz gepauzeerd.</span>
+                    </div>
+                </div>
+                <div class="resume-actions">
+                    <button class="btn btn-primary" onclick="resumePausedQuiz()">
+                        <i class="material-icons">play_arrow</i> Hervat Quiz
+                    </button>
+                    <button class="btn btn-secondary" onclick="clearPausedQuiz()">
+                        <i class="material-icons">close</i> Verwijder
+                    </button>
+                </div>
+            </div>
+
             <div class="subject-grid">
                 <div class="subject-card" onclick="loadSubject('begrijpendlezen')">
-                    <div class="subject-icon">📖</div>
+                    <div class="subject-icon-wrapper">
+                        <i class="material-icons subject-icon-material">menu_book</i>
+                    </div>
                     <h3>Begrijpend Lezen</h3>
                     <p>Test je begrip van teksten en verhalen</p>
+                    <div class="subject-meta">
+                        <span class="meta-item"><i class="material-icons meta-icon">quiz</i>4 vragen</span>
+                        <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 3-8</span>
+                    </div>
                 </div>
                 <div class="subject-card" onclick="loadSubject('brandaan')">
-                    <div class="subject-icon">🏛️</div>
+                    <div class="subject-icon-wrapper">
+                        <i class="material-icons subject-icon-material">account_balance</i>
+                    </div>
                     <h3>Geschiedenis</h3>
                     <p>Ontdek de Nederlandse geschiedenis</p>
+                    <div class="subject-meta">
+                        <span class="meta-item"><i class="material-icons meta-icon">quiz</i>50 vragen</span>
+                        <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 3-8</span>
+                    </div>
                 </div>
                 <div class="subject-card" onclick="loadSubject('samenvatten')">
-                    <div class="subject-icon">✍️</div>
+                    <div class="subject-icon-wrapper">
+                        <i class="material-icons subject-icon-material">edit_note</i>
+                    </div>
                     <h3>Samenvatten</h3>
                     <p>Leer teksten kort en bondig samen te vatten</p>
+                    <div class="subject-meta">
+                        <span class="meta-item"><i class="material-icons meta-icon">quiz</i>80 vragen</span>
+                        <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 3-8</span>
+                    </div>
                 </div>
                 <div class="subject-card" onclick="showLevelSelection('wereldorientatie')">
-                    <div class="subject-icon">🌍</div>
+                    <div class="subject-icon-wrapper">
+                        <i class="material-icons subject-icon-material">public</i>
+                    </div>
                     <h3>Wereldoriëntatie</h3>
-                    <p>Algemene kennis over de wereld - Groep 4, 5 en 8</p>
+                    <p>Algemene kennis over de wereld</p>
+                    <div class="subject-meta">
+                        <span class="meta-item"><i class="material-icons meta-icon">quiz</i>649 vragen</span>
+                        <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 4, 5, 8</span>
+                    </div>
                 </div>
                 <div class="subject-card" onclick="showLevelSelection('woordenschat')">
-                    <div class="subject-icon">📚</div>
+                    <div class="subject-icon-wrapper">
+                        <i class="material-icons subject-icon-material">local_library</i>
+                    </div>
                     <h3>Woordenschat</h3>
-                    <p>Vergroot je vocabulaire - Groep 4, 5 en 8</p>
+                    <p>Vergroot je vocabulaire</p>
+                    <div class="subject-meta">
+                        <span class="meta-item"><i class="material-icons meta-icon">quiz</i>268 vragen</span>
+                        <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 4, 5, 8</span>
+                    </div>
                 </div>
                 <div class="subject-card" onclick="showLevelSelection('verhaaltjessommen')">
-                    <div class="subject-icon">📖</div>
+                    <div class="subject-icon-wrapper">
+                        <i class="material-icons subject-icon-material">calculate</i>
+                    </div>
                     <h3>Verhaaltjessommen</h3>
-                    <p>Contextrijke rekenproblemen - Groep 4, 5 en 8</p>
+                    <p>Contextrijke rekenproblemen</p>
+                    <div class="subject-meta">
+                        <span class="meta-item"><i class="material-icons meta-icon">quiz</i>375 vragen</span>
+                        <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 4, 5, 8</span>
+                    </div>
                 </div>
                 <div class="subject-card" onclick="showLevelSelection('basisvaardigheden')">
-                    <div class="subject-icon">🧮</div>
+                    <div class="subject-icon-wrapper">
+                        <i class="material-icons subject-icon-material">functions</i>
+                    </div>
                     <h3>Basisvaardigheden</h3>
-                    <p>Rekenkundige basisvaardigheden - Groep 4, 5 en 8</p>
+                    <p>Rekenkundige basisvaardigheden</p>
+                    <div class="subject-meta">
+                        <span class="meta-item"><i class="material-icons meta-icon">quiz</i>203 vragen</span>
+                        <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 4, 5, 8</span>
+                    </div>
                 </div>
                <a href="modules/leesstrategieën/leesstrategieën.html" class="subject-card module-card">
-                    <div class="subject-icon">🎯</div>
+                    <div class="subject-icon-wrapper">
+                        <i class="material-icons subject-icon-material">psychology</i>
+                    </div>
                     <h3>Leesstrategieën</h3>
                     <p>Oefen en versterk je leesstrategieën</p>
+                    <div class="subject-meta">
+                        <span class="meta-item"><i class="material-icons meta-icon">school</i>Alle groepen</span>
+                    </div>
                 </a>
             </div>
         </div>
@@ -86,6 +184,17 @@
         </div>
 
         <div id="quizPage" class="quiz-container" style="display: none;">
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb" id="breadcrumb" aria-label="breadcrumb">
+                <a href="#" onclick="goToLanding(); return false;">Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <span id="breadcrumbSubject">Onderwerp</span>
+                <span class="breadcrumb-separator" id="breadcrumbLevelSep" style="display:none;">›</span>
+                <span id="breadcrumbLevel" style="display:none;">Niveau</span>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Quiz</span>
+            </nav>
+
             <!-- Progress Tracker Section -->
             <div id="progressTracker" class="progress-tracker">
                 <div class="progress-tracker-header">
@@ -198,6 +307,9 @@
                 <div>
                     <button class="btn btn-secondary" onclick="goToLanding()">
                         <i class="material-icons">arrow_back</i> Terug
+                    </button>
+                    <button class="btn btn-secondary" onclick="pauseQuiz()" style="background-color: #f59e0b; color: white;">
+                        <i class="material-icons">pause</i> Pauzeer
                     </button>
                     <button class="btn btn-secondary" onclick="stopQuiz()" style="background-color: #e07a5f; color: white;">
                         <i class="material-icons">stop</i> Stop

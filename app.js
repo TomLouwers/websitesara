@@ -391,9 +391,47 @@ function startQuizWithData(subject) {
     // Set quiz title
     document.getElementById('quizTitle').textContent = CONFIG.subjectTitles[subject] || 'Quiz';
 
+    // Update breadcrumb navigation
+    updateBreadcrumb(subject);
+
     // L.O.V.A. help button will be shown/hidden automatically per question based on lova data
 
     loadCurrentQuestion();
+}
+
+// Update breadcrumb navigation with current subject and level
+function updateBreadcrumb(subject) {
+    const breadcrumbSubject = document.getElementById('breadcrumbSubject');
+    const breadcrumbLevel = document.getElementById('breadcrumbLevel');
+    const breadcrumbLevelSep = document.getElementById('breadcrumbLevelSep');
+
+    // Determine base subject and level
+    let baseSubject = subject;
+    let level = null;
+
+    // Check if subject has level variant (emma = groep 4, kate = groep 5)
+    if (subject.endsWith('-emma')) {
+        baseSubject = subject.replace('-emma', '');
+        level = 'Groep 4';
+    } else if (subject.endsWith('-kate')) {
+        baseSubject = subject.replace('-kate', '');
+        level = 'Groep 5';
+    } else if (['verhaaltjessommen', 'basisvaardigheden', 'wereldorientatie', 'woordenschat'].includes(subject)) {
+        level = 'Groep 8';
+    }
+
+    // Set subject name
+    breadcrumbSubject.textContent = CONFIG.subjectTitles[baseSubject] || CONFIG.subjectTitles[subject] || subject;
+
+    // Show/hide level if applicable
+    if (level) {
+        breadcrumbLevel.textContent = level;
+        breadcrumbLevel.style.display = 'inline';
+        breadcrumbLevelSep.style.display = 'inline';
+    } else {
+        breadcrumbLevel.style.display = 'none';
+        breadcrumbLevelSep.style.display = 'none';
+    }
 }
 
 // Render visual data (tables) as HTML with mobile-responsive wrapper
@@ -976,6 +1014,108 @@ function goToLanding() {
     lovaClickCount = 0; // Reset L.O.V.A. click counter
     // Reset L.O.V.A. panel state
     lovaHelpPanelExpanded = false;
+
+    // Check for paused quiz and show resume banner
+    checkForPausedQuiz();
+}
+
+// Pause quiz and save state
+function pauseQuiz() {
+    const quizState = {
+        subject: currentSubject,
+        theme: currentTheme,
+        quiz: currentQuiz,
+        randomizedQuestions: randomizedQuestions,
+        currentQuestionIndex: currentQuestionIndex,
+        score: score,
+        totalQuestions: totalQuestions,
+        wrongAnswers: wrongAnswers,
+        categoryProgress: categoryProgress,
+        lovaClickCount: lovaClickCount,
+        timestamp: Date.now()
+    };
+
+    localStorage.setItem('pausedQuiz', JSON.stringify(quizState));
+    alert('Quiz gepauzeerd! Je kunt later doorgaan waar je gebleven bent.');
+    goToLanding();
+}
+
+// Check if there's a paused quiz
+function checkForPausedQuiz() {
+    const pausedQuizData = localStorage.getItem('pausedQuiz');
+    const resumeBanner = document.getElementById('resumeBanner');
+    const resumeDetails = document.getElementById('resumeDetails');
+
+    if (pausedQuizData) {
+        try {
+            const quizState = JSON.parse(pausedQuizData);
+            const subjectName = CONFIG.subjectTitles[quizState.subject] || quizState.subject;
+            const progress = `${quizState.currentQuestionIndex} van ${quizState.totalQuestions} vragen`;
+
+            resumeDetails.textContent = `${subjectName} - ${progress} beantwoord`;
+            resumeBanner.style.display = 'flex';
+        } catch (e) {
+            console.error('Error parsing paused quiz:', e);
+            localStorage.removeItem('pausedQuiz');
+        }
+    } else {
+        resumeBanner.style.display = 'none';
+    }
+}
+
+// Resume paused quiz
+function resumePausedQuiz() {
+    const pausedQuizData = localStorage.getItem('pausedQuiz');
+
+    if (!pausedQuizData) {
+        alert('Geen gepauzeerde quiz gevonden.');
+        return;
+    }
+
+    try {
+        const quizState = JSON.parse(pausedQuizData);
+
+        // Restore quiz state
+        currentSubject = quizState.subject;
+        currentTheme = quizState.theme;
+        currentQuiz = quizState.quiz;
+        randomizedQuestions = quizState.randomizedQuestions;
+        currentQuestionIndex = quizState.currentQuestionIndex;
+        score = quizState.score;
+        totalQuestions = quizState.totalQuestions;
+        wrongAnswers = quizState.wrongAnswers;
+        categoryProgress = quizState.categoryProgress;
+        lovaClickCount = quizState.lovaClickCount || 0;
+        hasAnswered = false;
+        selectedAnswer = null;
+
+        // Show quiz page
+        document.getElementById('landingPage').style.display = 'none';
+        document.getElementById('quizPage').style.display = 'block';
+
+        // Set quiz title and breadcrumb
+        document.getElementById('quizTitle').textContent = CONFIG.subjectTitles[currentSubject] || 'Quiz';
+        updateBreadcrumb(currentSubject);
+
+        // Load current question
+        loadCurrentQuestion();
+
+        // Clear paused state
+        localStorage.removeItem('pausedQuiz');
+
+    } catch (e) {
+        console.error('Error resuming quiz:', e);
+        alert('Fout bij het hervatten van de quiz. De opgeslagen data is mogelijk beschadigd.');
+        localStorage.removeItem('pausedQuiz');
+    }
+}
+
+// Clear paused quiz
+function clearPausedQuiz() {
+    if (confirm('Weet je zeker dat je de gepauzeerde quiz wilt verwijderen?')) {
+        localStorage.removeItem('pausedQuiz');
+        document.getElementById('resumeBanner').style.display = 'none';
+    }
 }
 
 // Stop quiz early and show review of wrong answers
@@ -1278,3 +1418,9 @@ function loadLovaHelpData(question) {
 }
 
 // (All old L.O.V.A. step-by-step functions removed - now using simpler help panel)
+
+// Initialize app when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Check for paused quiz on page load
+    checkForPausedQuiz();
+});
