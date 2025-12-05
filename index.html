@@ -325,10 +325,29 @@
         </div>
 
         <div id="levelPage" style="display: none;">
-            <div class="quiz-container">
-                <h2 id="levelTitle">Kies je groep</h2>
-                <div id="levelGrid" class="subject-grid level-grid"></div>
-                <div style="text-align: center; margin-top: 30px;">
+            <!-- Compact Contextual Header -->
+            <div class="level-page-header">
+                <div class="breadcrumb">
+                    <a href="#" onclick="goToLanding(); return false;">Home</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span class="breadcrumb-current" id="levelBreadcrumb">Wereldoriëntatie</span>
+                </div>
+                <div class="level-header-content">
+                    <div class="level-subject-icon" id="levelSubjectIcon">
+                        <i class="material-icons">public</i>
+                    </div>
+                    <div class="level-header-text">
+                        <h1 id="levelTitle" class="level-page-title">Wereldoriëntatie</h1>
+                        <p class="level-page-subtitle">Kies jouw niveau om te beginnen!</p>
+                        <p class="level-page-description" id="levelDescription">Ontdek alles over de aarde, geschiedenis, natuur en techniek</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level Selection Grid -->
+            <div class="level-selection-container">
+                <div id="levelGrid" class="level-selection-grid"></div>
+                <div class="level-back-button">
                     <button class="btn btn-secondary" onclick="goToLanding()">
                         <i class="material-icons">arrow_back</i> Terug naar onderwerpen
                     </button>

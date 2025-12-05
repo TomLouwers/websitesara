@@ -247,55 +247,93 @@ function showLevelSelection(type) {
     document.getElementById('landingPage').style.display = 'none';
     document.getElementById('levelPage').style.display = 'block';
 
-    // Map subject type to display title
-    const titleMap = {
-        'verhaaltjessommen': 'Verhaaltjessommen',
-        'basisvaardigheden': 'Basisvaardigheden',
-        'woordenschat': 'Woordenschat',
-        'wereldorientatie': 'Wereldoriëntatie'
+    // Subject metadata for contextual header
+    const subjectMeta = {
+        'verhaaltjessommen': {
+            title: 'Verhaaltjessommen',
+            icon: 'calculate',
+            color: '#FF7F69',
+            description: 'Los slimme rekenpuzzels op met contextrijke rekenproblemen'
+        },
+        'basisvaardigheden': {
+            title: 'Basisvaardigheden',
+            icon: 'functions',
+            color: '#FF7F69',
+            description: 'Train je rekenkundige basisvaardigheden en word steeds sneller'
+        },
+        'woordenschat': {
+            title: 'Woordenschat',
+            icon: 'local_library',
+            color: '#7FD4A8',
+            description: 'Vergroot je woordenkennis en leer nieuwe woorden en hun betekenis'
+        },
+        'wereldorientatie': {
+            title: 'Wereldoriëntatie',
+            icon: 'public',
+            color: '#5FC5B8',
+            description: 'Ontdek alles over de aarde, geschiedenis, natuur en techniek'
+        }
     };
-    const levelTitle = titleMap[type] || type;
-    document.getElementById('levelTitle').textContent = levelTitle + ' - Kies je groep';
+
+    const meta = subjectMeta[type] || {
+        title: type,
+        icon: 'school',
+        color: '#4A7BA7',
+        description: 'Kies jouw niveau om te beginnen'
+    };
+
+    // Update contextual header
+    document.getElementById('levelTitle').textContent = meta.title;
+    document.getElementById('levelBreadcrumb').textContent = meta.title;
+    document.getElementById('levelDescription').textContent = meta.description;
+
+    const levelSubjectIcon = document.getElementById('levelSubjectIcon');
+    levelSubjectIcon.innerHTML = `<i class="material-icons">${meta.icon}</i>`;
+    levelSubjectIcon.style.background = `linear-gradient(135deg, ${meta.color} 0%, ${meta.color}dd 100%)`;
 
     const levelGrid = document.getElementById('levelGrid');
     levelGrid.innerHTML = '';
 
-    // Define levels with their corresponding subject names (ordered from youngest to oldest)
+    // Define levels with gamified progression (ordered from youngest to oldest)
     const levels = [
         {
-            icon: 'eco',
-            title: 'Groep 4 - M4 niveau',
-            description: 'M4 niveau oefeningen',
+            group: 4,
+            icon: '🌱',
+            title: 'Groep 4',
+            description: 'M4 niveau',
+            difficulty: 'Basis',
             subject: type + '-emma'
         },
         {
-            icon: 'auto_stories',
-            title: 'Groep 5 - M5 niveau',
-            description: 'M5 niveau oefeningen',
+            group: 5,
+            icon: '📖',
+            title: 'Groep 5',
+            description: 'M5 niveau',
+            difficulty: 'Midden',
             subject: type + '-kate'
         },
         {
-            icon: 'workspace_premium',
-            title: 'Groep 8 - Eindtoets niveau',
-            description: 'E8 niveau oefeningen',
+            group: 8,
+            icon: '🏆',
+            title: 'Groep 8',
+            description: 'Eindtoets niveau',
+            difficulty: 'CITO',
             subject: type // verhaaltjessommen or basisvaardigheden
         }
     ];
 
-    // Create cards for each level
+    // Create gamified level cards
     levels.forEach(level => {
         const card = document.createElement('div');
-        card.className = 'subject-card';
+        card.className = `level-card level-${level.group}`;
         card.onclick = () => loadSubject(level.subject);
 
         card.innerHTML = `
-            <div class="subject-icon-wrapper">
-                <i class="material-icons subject-icon-material">${level.icon}</i>
-            </div>
-            <div style="flex: 1;">
-                <h3>${level.title}</h3>
-                <p>${level.description}</p>
-            </div>
+            <div class="level-badge">${level.group}</div>
+            <h3 class="level-card-title">${level.title}</h3>
+            <p class="level-card-description">${level.description}</p>
+            <div class="level-card-icon">${level.icon}</div>
+            <span class="level-difficulty">${level.difficulty}</span>
         `;
 
         levelGrid.appendChild(card);
