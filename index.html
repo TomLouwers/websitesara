@@ -383,6 +383,17 @@
         </div>
 
         <div id="quizPage" class="quiz-container" style="display: none;">
+            <!-- Bold Colorful Progress Bar at Top -->
+            <div class="quiz-progress-bar-container">
+                <div class="quiz-progress-info">
+                    <span id="progressLabel" class="progress-label">Vraag 1 van 10</span>
+                    <span id="progressPercentage" class="progress-percentage">10% voltooid</span>
+                </div>
+                <div class="quiz-progress-bar">
+                    <div id="progressBarFill" class="quiz-progress-fill" style="width: 10%"></div>
+                </div>
+            </div>
+
             <!-- Breadcrumb Navigation -->
             <nav class="breadcrumb" id="breadcrumb" aria-label="breadcrumb">
                 <a href="#" onclick="goToLanding(); return false;">Home</a>
@@ -394,21 +405,8 @@
                 <span class="breadcrumb-current">Quiz</span>
             </nav>
 
-            <!-- Progress Tracker Section -->
-            <div id="progressTracker" class="progress-tracker">
-                <div class="progress-tracker-header">
-                    <h3 class="progress-tracker-title">📊 Voortgang</h3>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <div class="progress-summary">
-                            <span class="summary-stat correct">✓ Goed: <span id="totalCorrect">0</span></span>
-                            <!-- Incorrect count hidden to reduce anxiety and focus on positive reinforcement -->
-                            <span class="summary-stat" style="color: var(--secondary-color);">📋 Hulp: <span id="lovaClicks">0</span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="quiz-header">
+            <!-- Quiz Header - Minimal, Clean -->
+            <div class="quiz-header-minimal">
                 <h2 id="quizTitle">Quiz</h2>
 
                 <!-- Quiz Control Icons (top-right) -->
@@ -421,116 +419,127 @@
                     </button>
                 </div>
 
-                <!-- L.O.V.A. Help Button (only shown for verhaaltjessommen with L.O.V.A. data) -->
-                <div id="lovaHelpButton" class="lova-help-button-container hidden">
-                    <button class="btn btn-lova-help" onclick="toggleLovaPanel()">
-                        <span id="lovaToggleIcon">▼</span> 📋 L.O.V.A. Stappenplan
-                    </button>
-                </div>
-
-                <!-- Visual Star Progress -->
-                <div class="star-progress" id="starProgress">
-                    <i class="material-icons star-icon">star_border</i>
-                    <i class="material-icons star-icon">star_border</i>
-                    <i class="material-icons star-icon">star_border</i>
-                    <i class="material-icons star-icon">star_border</i>
-                    <i class="material-icons star-icon">star_border</i>
-                </div>
-
-                <div id="questionCounter">Vraag 1 van 1</div>
-
-                <!-- Milestone Celebration -->
-                <div id="milestoneCelebration" class="milestone-celebration hidden">
-                    <i class="material-icons celebration-icon">celebration</i>
-                    <span id="milestoneMessage">Goed bezig!</span>
+                <!-- Progress Summary (compact) -->
+                <div class="quiz-progress-summary">
+                    <span class="progress-stat correct">✓ <span id="totalCorrect">0</span> goed</span>
+                    <span class="progress-stat" style="color: var(--secondary-color);">📋 <span id="lovaClicks">0</span> hulp</span>
                 </div>
             </div>
 
-            <div class="question-container">
-                <div id="readingContent" class="reading-content hidden"></div>
-                <div class="question-text" id="questionText"></div>
+            <!-- L.O.V.A. Help Button (only shown for verhaaltjessommen with L.O.V.A. data) -->
+            <div id="lovaHelpButton" class="lova-help-button-container hidden">
+                <button class="btn btn-lova-help" onclick="toggleLovaPanel()">
+                    <span id="lovaToggleIcon">▼</span> 📋 L.O.V.A. Stappenplan
+                </button>
+            </div>
 
-                <!-- Hint Container (voor scaffolding hints) -->
-                <div id="hintContainer" style="text-align: center; margin: 20px 0;"></div>
+            <!-- Milestone Celebration (moved outside header for better positioning) -->
+            <div id="milestoneCelebration" class="milestone-celebration hidden">
+                <i class="material-icons celebration-icon">celebration</i>
+                <span id="milestoneMessage">Goed bezig!</span>
+            </div>
 
-                <!-- L.O.V.A. Help Panel (collapsible guidance) -->
-                <div id="lovaHelpPanel" class="lova-help-panel hidden">
-                    <div class="lova-help-content">
-                        <!-- Stap 1: Lezen -->
-                        <div class="lova-help-step">
-                            <h4 class="lova-help-step-title">📖 Stap 1: Lezen</h4>
-                            <div class="lova-help-section">
-                                <p><strong>Wat wordt er gevraagd?</strong></p>
-                                <p id="lovaHelpHoofdvraag" class="lova-help-text"></p>
-                            </div>
-                            <div class="lova-help-section">
-                                <p><strong>Let op: dit is ruis (niet nodig voor deze vraag):</strong></p>
-                                <ul id="lovaHelpRuis" class="lova-help-list"></ul>
-                            </div>
-                            <div class="lova-help-section">
-                                <p><strong>Tussenstappen:</strong></p>
-                                <ul id="lovaHelpTussenstappen" class="lova-help-list"></ul>
-                            </div>
-                        </div>
+            <!-- Question Card Container -->
+            <div class="question-card">
+                <div class="question-container">
+                    <div id="readingContent" class="reading-content hidden"></div>
+                    <div class="question-text" id="questionText"></div>
 
-                        <!-- Stap 2: Ordenen -->
-                        <div class="lova-help-step">
-                            <h4 class="lova-help-step-title">🗃️ Stap 2: Ordenen</h4>
-                            <div class="lova-help-section">
-                                <p><strong>Relevante getallen:</strong></p>
-                                <ul id="lovaHelpGetallen" class="lova-help-list"></ul>
-                            </div>
-                            <div class="lova-help-section">
-                                <p><strong>Wiskundige tool:</strong></p>
-                                <p id="lovaHelpTool" class="lova-help-text"></p>
-                            </div>
-                        </div>
+                    <!-- Hint Container (voor scaffolding hints) -->
+                    <div id="hintContainer" style="text-align: center; margin: 20px 0;"></div>
 
-                        <!-- Stap 3: Vormen -->
-                        <div class="lova-help-step">
-                            <h4 class="lova-help-step-title">✍️ Stap 3: Vormen</h4>
-                            <div id="lovaHelpBewerkingen" class="lova-help-bewerkingen"></div>
-                        </div>
-
-                        <!-- Stap 4: Antwoorden -->
-                        <div class="lova-help-step">
-                            <h4 class="lova-help-step-title">✅ Stap 4: Antwoorden</h4>
-                            <div class="lova-help-section">
-                                <p><strong>Verwachte eenheid:</strong> <span id="lovaHelpEenheid" class="lova-help-text"></span></p>
+                    <!-- L.O.V.A. Help Panel (collapsible guidance) -->
+                    <div id="lovaHelpPanel" class="lova-help-panel hidden">
+                        <div class="lova-help-content">
+                            <!-- Stap 1: Lezen -->
+                            <div class="lova-help-step">
+                                <h4 class="lova-help-step-title">📖 Stap 1: Lezen</h4>
+                                <div class="lova-help-section">
+                                    <p><strong>Wat wordt er gevraagd?</strong></p>
+                                    <p id="lovaHelpHoofdvraag" class="lova-help-text"></p>
+                                </div>
+                                <div class="lova-help-section">
+                                    <p><strong>Let op: dit is ruis (niet nodig voor deze vraag):</strong></p>
+                                    <ul id="lovaHelpRuis" class="lova-help-list"></ul>
+                                </div>
+                                <div class="lova-help-section">
+                                    <p><strong>Tussenstappen:</strong></p>
+                                    <ul id="lovaHelpTussenstappen" class="lova-help-list"></ul>
+                                </div>
                             </div>
-                            <div class="lova-help-section">
-                                <p><strong>Logica check:</strong></p>
-                                <p id="lovaHelpLogica" class="lova-help-text"></p>
+
+                            <!-- Stap 2: Ordenen -->
+                            <div class="lova-help-step">
+                                <h4 class="lova-help-step-title">🗃️ Stap 2: Ordenen</h4>
+                                <div class="lova-help-section">
+                                    <p><strong>Relevante getallen:</strong></p>
+                                    <ul id="lovaHelpGetallen" class="lova-help-list"></ul>
+                                </div>
+                                <div class="lova-help-section">
+                                    <p><strong>Wiskundige tool:</strong></p>
+                                    <p id="lovaHelpTool" class="lova-help-text"></p>
+                                </div>
+                            </div>
+
+                            <!-- Stap 3: Vormen -->
+                            <div class="lova-help-step">
+                                <h4 class="lova-help-step-title">✍️ Stap 3: Vormen</h4>
+                                <div id="lovaHelpBewerkingen" class="lova-help-bewerkingen"></div>
+                            </div>
+
+                            <!-- Stap 4: Antwoorden -->
+                            <div class="lova-help-step">
+                                <h4 class="lova-help-step-title">✅ Stap 4: Antwoorden</h4>
+                                <div class="lova-help-section">
+                                    <p><strong>Verwachte eenheid:</strong> <span id="lovaHelpEenheid" class="lova-help-text"></span></p>
+                                </div>
+                                <div class="lova-help-section">
+                                    <p><strong>Logica check:</strong></p>
+                                    <p id="lovaHelpLogica" class="lova-help-text"></p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Quiz content (always visible in regular quiz mode) -->
-                <div id="optionsContainer" class="options-container"></div>
-                <textarea id="textareaAnswer" class="textarea-answer hidden" placeholder="Typ hier je antwoord..."></textarea>
-            </div>
+                <!-- Answer Options Container -->
+                <div class="answers-section">
+                    <div id="optionsContainer" class="options-container"></div>
+                    <textarea id="textareaAnswer" class="textarea-answer hidden" placeholder="Typ hier je antwoord..."></textarea>
+                </div>
 
-            <div id="feedbackSection" class="hidden">
-                <h4 id="feedbackTitle"></h4>
-                <p id="feedbackMessage"></p>
-                <p id="correctAnswerDisplay" class="hidden"></p>
-                <div id="verhoudingstabelContainer"></div>
-                <p id="extraInfoDisplay" class="hidden"></p> <div id="strategyAndTips" class="hidden">
-                    <h4>Strategie</h4>
-                    <p id="strategyText"></p>
-                    <h4>Tips</h4>
-                    <ul id="tipsList"></ul>
+                <!-- Feedback Section -->
+                <div id="feedbackSection" class="feedback-card hidden">
+                    <div class="feedback-icon" id="feedbackIcon"></div>
+                    <h4 id="feedbackTitle"></h4>
+                    <p id="feedbackMessage"></p>
+                    <p id="correctAnswerDisplay" class="hidden"></p>
+                    <div id="verhoudingstabelContainer"></div>
+                    <p id="extraInfoDisplay" class="hidden"></p>
+                    <div id="strategyAndTips" class="hidden">
+                        <h4>Strategie</h4>
+                        <p id="strategyText"></p>
+                        <h4>Tips</h4>
+                        <ul id="tipsList"></ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="quiz-controls">
-                <button class="btn" id="submitBtn" onclick="submitAnswer()">
-                    <i class="material-icons">check_circle_outline</i> Controleer Antwoord
+            <!-- Action Buttons - Clear Hierarchy -->
+            <div class="quiz-actions">
+                <button class="btn btn-primary-action" id="submitBtn" onclick="submitAnswer()">
+                    <i class="material-icons">check_circle</i> Controleer Antwoord
                 </button>
-                <button class="btn hidden" id="nextBtn" onclick="nextQuestion()">
+                <button class="btn btn-primary-action hidden" id="nextBtn" onclick="nextQuestion()">
                     Volgende Vraag <i class="material-icons">arrow_forward</i>
                 </button>
+
+                <!-- Secondary Actions -->
+                <div class="quiz-secondary-actions">
+                    <button class="btn-secondary-action" onclick="goToLanding()" title="Terug">
+                        <i class="material-icons">arrow_back</i> Terug
+                    </button>
+                </div>
             </div>
         </div>
 
