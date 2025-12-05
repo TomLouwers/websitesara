@@ -23,9 +23,65 @@
         </nav>
 
         <div class="header">
-            <h1>Leer spelenderwijs voor de CITO-toets!</h1>
-            <p class="tagline">Oefenplatform voor groep 3 t/m 8 • 1.629+ vragen • Altijd gratis</p>
-            <p class="subtitle">Kies een vak en start met oefenen 🚀</p>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Leer spelenderwijs voor de CITO-toets!</h1>
+                    <p class="tagline">Oefenplatform voor groep 3 t/m 8 • 1.629+ vragen • Altijd gratis</p>
+
+                    <!-- Primary and Secondary CTAs -->
+                    <div class="hero-cta-group">
+                        <button class="btn btn-hero-primary" onclick="document.querySelector('.subject-grid').scrollIntoView({ behavior: 'smooth', block: 'start' })">
+                            <i class="material-icons">play_arrow</i> Begin met oefenen
+                        </button>
+                        <a href="ouders.html" class="btn btn-hero-secondary">
+                            <i class="material-icons">family_restroom</i> Voor ouders & leraren
+                        </a>
+                    </div>
+
+                    <p class="subtitle">Kies hieronder een vak om te starten</p>
+                </div>
+
+                <!-- Hero Illustration -->
+                <div class="hero-illustration">
+                    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Friendly learning illustration with rounded shapes -->
+                        <!-- Background circle (soft) -->
+                        <circle cx="200" cy="200" r="180" fill="#E8EEF2" opacity="0.5"/>
+
+                        <!-- Book/Learning icon -->
+                        <rect x="140" y="160" width="120" height="140" rx="12" fill="#4A7BA7" opacity="0.9"/>
+                        <rect x="150" y="170" width="100" height="120" rx="8" fill="#6B9BC3"/>
+                        <line x1="200" y1="170" x2="200" y2="290" stroke="#4A7BA7" stroke-width="3"/>
+
+                        <!-- Floating stars (achievement) -->
+                        <g transform="translate(280, 120)">
+                            <path d="M 0,-15 L 4,-5 L 15,-3 L 6,4 L 8,15 L 0,9 L -8,15 L -6,4 L -15,-3 L -4,-5 Z" fill="#fbbf24"/>
+                        </g>
+                        <g transform="translate(120, 100)">
+                            <path d="M 0,-12 L 3,-4 L 12,-2 L 5,3 L 6,12 L 0,7 L -6,12 L -5,3 L -12,-2 L -3,-4 Z" fill="#fbbf24" opacity="0.8"/>
+                        </g>
+                        <g transform="translate(300, 200)">
+                            <path d="M 0,-10 L 2.5,-3 L 10,-1.5 L 4,2.5 L 5,10 L 0,6 L -5,10 L -4,2.5 L -10,-1.5 L -2.5,-3 Z" fill="#fbbf24" opacity="0.7"/>
+                        </g>
+
+                        <!-- Rocket (progress metaphor) -->
+                        <g transform="translate(100, 260)">
+                            <ellipse cx="0" cy="20" rx="25" ry="8" fill="#E07A5F" opacity="0.3"/>
+                            <path d="M -8,20 L -12,35 L 0,30 L 12,35 L 8,20 Z" fill="#E07A5F"/>
+                            <rect x="-8" y="-10" width="16" height="30" rx="8" fill="#5DADE2"/>
+                            <circle cx="0" cy="5" r="5" fill="white" opacity="0.8"/>
+                            <path d="M -8,-10 L -15,5 L -8,5 Z" fill="#4A8FB5"/>
+                            <path d="M 8,-10 L 15,5 L 8,5 Z" fill="#4A8FB5"/>
+                        </g>
+
+                        <!-- Happy face (child-friendly) -->
+                        <circle cx="200" cy="100" r="35" fill="#52C788" opacity="0.2"/>
+                        <circle cx="190" cy="95" r="4" fill="#2C3E50"/>
+                        <circle cx="210" cy="95" r="4" fill="#2C3E50"/>
+                        <path d="M 185,108 Q 200,118 215,108" stroke="#2C3E50" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
         </div>
 
         <!-- Trust Bar -->
