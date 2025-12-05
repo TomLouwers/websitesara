@@ -1958,29 +1958,38 @@ body::before {
     margin-bottom: 20px;
     border-radius: var(--border-radius-card);
     box-shadow: var(--shadow-elevation-1);
+    display: block !important;
+    visibility: visible !important;
 }
 
 .quiz-progress-info {
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 12px;
+    visibility: visible !important;
 }
 
 .progress-label {
     font-size: 1.2em;
     font-weight: 700;
-    color: var(--text-color-dark);
+    color: var(--text-color-dark) !important;
+    display: inline-block !important;
+    visibility: visible !important;
 }
 
 .progress-percentage {
     font-size: 1em;
     font-weight: 600;
-    color: var(--accent-warm-orange);
+    color: var(--accent-warm-orange) !important;
+    display: inline-block !important;
+    visibility: visible !important;
 }
 
 .quiz-progress-bar {
     width: 100%;
+    display: block !important;
+    visibility: visible !important;
     height: 18px;
     background: rgba(0, 0, 0, 0.08);
     border-radius: 20px;
@@ -2318,12 +2327,20 @@ body::before {
     padding: 25px;
     border-radius: var(--border-radius-card);
     margin-top: 25px;
+    display: block !important;
+    visibility: visible !important;
 }
 
 .options-container {
-    display: grid;
+    display: grid !important;
     grid-template-columns: 1fr;
     gap: 14px;
+    visibility: visible !important;
+}
+
+#optionsContainer {
+    display: grid !important;
+    visibility: visible !important;
 }
 
 /* Child-Friendly Answer Buttons */
