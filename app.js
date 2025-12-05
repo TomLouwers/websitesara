@@ -346,62 +346,82 @@ function showThemeSelection(subject, themes, data) {
     `;
     themeGrid.appendChild(allThemeCard);
 
-    // Categorize themes
-    const themeCategories = categorizeThemes(themes);
+    // Check if this is a math subject that needs categorization
+    const isMathSubject = subject.includes('verhaaltjessommen') || subject.includes('basisvaardigheden');
 
-    // Add categorized themes
-    Object.entries(themeCategories).forEach(([category, categoryThemes]) => {
-        if (categoryThemes.length === 0) return;
+    if (isMathSubject) {
+        // Categorize themes for math subjects
+        const themeCategories = categorizeThemes(themes);
 
-        // Add section header
-        const sectionHeader = document.createElement('div');
-        sectionHeader.className = 'theme-section-header';
-        sectionHeader.innerHTML = `<h3>${category}</h3>`;
-        themeGrid.appendChild(sectionHeader);
+        // Add categorized themes
+        Object.entries(themeCategories).forEach(([category, categoryThemes]) => {
+            if (categoryThemes.length === 0) return;
 
-        // Add theme grid for this category
+            // Add section header
+            const sectionHeader = document.createElement('div');
+            sectionHeader.className = 'theme-section-header';
+            sectionHeader.innerHTML = `<h3>${category}</h3>`;
+            themeGrid.appendChild(sectionHeader);
+
+            // Add theme grid for this category
+            const categoryGrid = document.createElement('div');
+            categoryGrid.className = 'theme-category-grid';
+
+            categoryThemes.forEach(theme => {
+                addThemeCard(categoryGrid, theme, data, subject);
+            });
+
+            themeGrid.appendChild(categoryGrid);
+        });
+    } else {
+        // For non-math subjects, just list all themes without categorization
         const categoryGrid = document.createElement('div');
         categoryGrid.className = 'theme-category-grid';
 
-        categoryThemes.forEach(theme => {
-            const filteredItems = data.filter(item => item.theme === theme);
-            let questionCount = 0;
-
-            filteredItems.forEach(item => {
-                if (Array.isArray(item.questions)) {
-                    questionCount += item.questions.length;
-                } else if (item.question) {
-                    questionCount += 1;
-                }
-            });
-
-            const themeCard = document.createElement('div');
-            themeCard.className = 'subject-card theme-card-small';
-            themeCard.onclick = () => startQuizWithTheme(subject, theme);
-            const themeHighscore = getHighscore(subject, theme);
-            themeCard.innerHTML = `
-                <div class="subject-icon-wrapper">
-                    <i class="material-icons subject-icon-material">topic</i>
-                </div>
-                <div style="flex: 1;">
-                    <h3>${theme}</h3>
-                    <p>${questionCount} vragen</p>
-                    ${themeHighscore > 0 ? `
-                        <div class="theme-highscore">
-                            <i class="material-icons">emoji_events</i>
-                            <span>Highscore: ${themeHighscore}</span>
-                        </div>
-                    ` : ''}
-                </div>
-            `;
-            categoryGrid.appendChild(themeCard);
+        themes.forEach(theme => {
+            addThemeCard(categoryGrid, theme, data, subject);
         });
 
         themeGrid.appendChild(categoryGrid);
-    });
+    }
 }
 
-// Categorize themes into logical groups
+// Helper function to create theme card
+function addThemeCard(container, theme, data, subject) {
+    const filteredItems = data.filter(item => item.theme === theme);
+    let questionCount = 0;
+
+    filteredItems.forEach(item => {
+        if (Array.isArray(item.questions)) {
+            questionCount += item.questions.length;
+        } else if (item.question) {
+            questionCount += 1;
+        }
+    });
+
+    const themeCard = document.createElement('div');
+    themeCard.className = 'subject-card theme-card-small';
+    themeCard.onclick = () => startQuizWithTheme(subject, theme);
+    const themeHighscore = getHighscore(subject, theme);
+    themeCard.innerHTML = `
+        <div class="subject-icon-wrapper">
+            <i class="material-icons subject-icon-material">topic</i>
+        </div>
+        <div style="flex: 1;">
+            <h3>${theme}</h3>
+            <p>${questionCount} vragen</p>
+            ${themeHighscore > 0 ? `
+                <div class="theme-highscore">
+                    <i class="material-icons">emoji_events</i>
+                    <span>Highscore: ${themeHighscore}</span>
+                </div>
+            ` : ''}
+        </div>
+    `;
+    container.appendChild(themeCard);
+}
+
+// Categorize themes into logical groups (only for math subjects)
 function categorizeThemes(themes) {
     const categories = {
         '🔢 Rekenen': [],
@@ -418,8 +438,8 @@ function categorizeThemes(themes) {
         } else if (metenCategories.includes(themeLower)) {
             categories['📏 Meten & Verhoudingen'].push(theme);
         } else {
-            // Default to Rekenen if not categorized
-            categories['🔢 Rekenen'].push(theme);
+            // Default to Meten & Verhoudingen for other math-related themes
+            categories['📏 Meten & Verhoudingen'].push(theme);
         }
     });
 
