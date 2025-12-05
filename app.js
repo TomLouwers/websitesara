@@ -584,7 +584,6 @@ function loadCurrentQuestion() {
 
     // Update progress
     const progress = (currentQuestionIndex / totalQuestions) * 100;
-    document.getElementById('progressBar').style.width = progress + '%';
     document.getElementById('questionCounter').textContent = `Vraag ${currentQuestionIndex + 1} van ${totalQuestions}`;
 
     // Update visual star progress

@@ -212,15 +212,21 @@
             <div class="quiz-header">
                 <h2 id="quizTitle">Quiz</h2>
 
+                <!-- Quiz Control Icons (top-right) -->
+                <div class="quiz-header-controls">
+                    <button class="btn-icon" onclick="pauseQuiz()" title="Pauzeer">
+                        <i class="material-icons">pause</i>
+                    </button>
+                    <button class="btn-icon" onclick="stopQuiz()" title="Stop">
+                        <i class="material-icons">stop</i>
+                    </button>
+                </div>
+
                 <!-- L.O.V.A. Help Button (only shown for verhaaltjessommen with L.O.V.A. data) -->
                 <div id="lovaHelpButton" class="lova-help-button-container hidden">
                     <button class="btn btn-lova-help" onclick="toggleLovaPanel()">
                         <span id="lovaToggleIcon">▼</span> 📋 L.O.V.A. Stappenplan
                     </button>
-                </div>
-
-                <div class="quiz-progress">
-                    <div class="quiz-progress-bar" id="progressBar"></div>
                 </div>
 
                 <!-- Visual Star Progress -->
@@ -320,25 +326,12 @@
             </div>
 
             <div class="quiz-controls">
-                <div>
-                    <button class="btn btn-secondary" onclick="goToLanding()">
-                        <i class="material-icons">arrow_back</i> Terug
-                    </button>
-                    <button class="btn btn-secondary" onclick="pauseQuiz()" style="background-color: #f59e0b; color: white;">
-                        <i class="material-icons">pause</i> Pauzeer
-                    </button>
-                    <button class="btn btn-secondary" onclick="stopQuiz()" style="background-color: #e07a5f; color: white;">
-                        <i class="material-icons">stop</i> Stop
-                    </button>
-                </div>
-                <div>
-                    <button class="btn" id="submitBtn" onclick="submitAnswer()">
-                        <i class="material-icons">check_circle_outline</i> Controleer Antwoord
-                    </button>
-                    <button class="btn hidden" id="nextBtn" onclick="nextQuestion()">
-                        Volgende Vraag <i class="material-icons">arrow_forward</i>
-                    </button>
-                </div>
+                <button class="btn" id="submitBtn" onclick="submitAnswer()">
+                    <i class="material-icons">check_circle_outline</i> Controleer Antwoord
+                </button>
+                <button class="btn hidden" id="nextBtn" onclick="nextQuestion()">
+                    Volgende Vraag <i class="material-icons">arrow_forward</i>
+                </button>
             </div>
         </div>
 

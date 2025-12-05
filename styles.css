@@ -696,6 +696,7 @@ body {
 }
 
 .quiz-header {
+    position: relative;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -707,25 +708,41 @@ body {
     font-weight: 500;
 }
 
-.quiz-progress {
-    background-color: #e0e0e0; /* Light grey for empty part of progress bar */
-    border-radius: 10px;
-    height: 12px;
-    overflow: hidden;
-    margin-bottom: 10px;
-    position: relative;
+/* Quiz control icons in header (pause/stop) */
+.quiz-header-controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    gap: 8px;
 }
 
-.quiz-progress-bar {
-    height: 100%;
-    width: 0%;
-    background: linear-gradient(90deg,
-        var(--secondary-color) 0%,
-        var(--primary-light) 50%,
-        var(--color-correct) 100%);
-    border-radius: 10px;
-    transition: width 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
-    box-shadow: 0 0 10px rgba(93, 173, 226, 0.3);
+.btn-icon {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: var(--border-radius-button);
+    background-color: #f5f5f5;
+    color: var(--text-color-medium);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.btn-icon:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.btn-icon:active {
+    transform: scale(0.95);
+}
+
+.btn-icon .material-icons {
+    font-size: 20px;
 }
 
 /* Visual Star Progress */
@@ -1009,8 +1026,9 @@ body {
 
 .quiz-controls {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 15px;
     margin-top: 40px;
 }
 
@@ -1136,6 +1154,7 @@ body {
     margin-bottom: 25px;
     overflow: hidden;
     transition: all 0.3s ease;
+    display: none; /* Hidden during quiz for cleaner, calmer interface */
 }
 
 .progress-tracker-header {
@@ -1554,6 +1573,16 @@ body {
         gap: 6px;
     }
 
+    .quiz-header h2 {
+        font-size: 1.6em;
+    }
+
+    .quiz-header-controls {
+        position: static;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
     .star-progress {
         gap: 5px;
         margin: 8px 0;
@@ -1595,9 +1624,10 @@ body {
         font-size: 1em;
         width: 100%; /* Full width buttons for easier tapping */
     }
+
     .quiz-controls {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
     }
 
     /* Progress tracker responsive - optimized for mobile */
@@ -1717,13 +1747,6 @@ body {
     .review-correct-answer {
         display: block;
         margin-top: 5px;
-    }
-
-    .quiz-controls > div {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
     }
 }
 
