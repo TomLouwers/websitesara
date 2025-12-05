@@ -2047,11 +2047,13 @@ body::before {
 
 /* Question Card Container */
 .question-card {
-    background: white;
+    background: white !important;
     border-radius: var(--border-radius-card);
     box-shadow: var(--shadow-elevation-2);
     padding: 35px;
     margin-bottom: 30px;
+    display: block !important;
+    visibility: visible !important;
 }
 
 /* Quiz Container Styles */
@@ -2294,11 +2296,20 @@ body::before {
 /* Visually Dominant Question Text */
 .question-text {
     font-size: 1.6em;
-    color: var(--text-color-dark);
+    color: var(--text-color-dark) !important;
     margin-bottom: 35px;
     line-height: 1.5;
     font-weight: 500;
     max-width: 100%;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+#questionText {
+    color: #2C3E50 !important;
+    display: block !important;
+    visibility: visible !important;
 }
 
 /* Answers Section with Background Shading */
