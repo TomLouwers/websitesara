@@ -13,12 +13,20 @@
     <div class="container">
         <!-- Navigation -->
         <nav class="main-nav">
-            <div class="nav-brand">
-                <h2 class="logo-text">OefenPlatform</h2>
-            </div>
-            <div class="nav-links">
-                <a href="#home" onclick="goToLanding()">Vakken</a>
-                <a href="ouders.html">Voor Ouders & Leraren</a>
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <h2 class="logo-text">OefenPlatform</h2>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" onclick="goToLanding()" class="nav-link-primary">
+                        <i class="material-icons">school</i>
+                        Wat wil je oefenen?
+                    </a>
+                    <a href="ouders.html" class="nav-link-secondary">
+                        <i class="material-icons">family_restroom</i>
+                        Voor Ouders & Leraren
+                    </a>
+                </div>
             </div>
         </nav>
 
@@ -122,6 +130,51 @@
                         <i class="material-icons">close</i> Verwijder
                     </button>
                 </div>
+            </div>
+
+            <!-- Snelle Start Section -->
+            <div class="quick-start-section">
+                <h2 class="section-title">
+                    <span class="title-icon">⚡</span>
+                    Snelle Start per Groep
+                </h2>
+                <p class="section-subtitle">Spring direct naar oefeningen voor jouw groep</p>
+                <div class="quick-start-grid">
+                    <button class="quick-start-card" onclick="startQuickForGroup(3)">
+                        <span class="quick-start-number">3</span>
+                        <span class="quick-start-label">Groep 3</span>
+                    </button>
+                    <button class="quick-start-card" onclick="startQuickForGroup(4)">
+                        <span class="quick-start-number">4</span>
+                        <span class="quick-start-label">Groep 4</span>
+                    </button>
+                    <button class="quick-start-card" onclick="startQuickForGroup(5)">
+                        <span class="quick-start-number">5</span>
+                        <span class="quick-start-label">Groep 5</span>
+                    </button>
+                    <button class="quick-start-card" onclick="startQuickForGroup(6)">
+                        <span class="quick-start-number">6</span>
+                        <span class="quick-start-label">Groep 6</span>
+                    </button>
+                    <button class="quick-start-card" onclick="startQuickForGroup(7)">
+                        <span class="quick-start-number">7</span>
+                        <span class="quick-start-label">Groep 7</span>
+                    </button>
+                    <button class="quick-start-card quick-start-featured" onclick="startQuickForGroup(8)">
+                        <span class="quick-start-number">8</span>
+                        <span class="quick-start-label">Groep 8</span>
+                        <span class="quick-start-badge">CITO</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Subject Selection Intro -->
+            <div class="subject-intro">
+                <h2 class="section-title">
+                    <span class="title-icon">📚</span>
+                    Of kies een vak om te oefenen
+                </h2>
+                <p class="section-subtitle">Selecteer het onderwerp waar je mee aan de slag wilt</p>
             </div>
 
             <div class="subject-grid">
