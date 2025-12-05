@@ -356,10 +356,25 @@
         </div>
 
         <div id="themePage" style="display: none;">
-            <div class="quiz-container">
-                <h2 id="subjectTitle">Kies een thema</h2>
-                <div id="themeGrid" class="subject-grid"></div>
-                <div style="text-align: center; margin-top: 30px;">
+            <!-- Motivational Theme Selection Header -->
+            <div class="theme-page-header">
+                <div class="breadcrumb">
+                    <a href="#" onclick="goToLanding(); return false;">Home</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span class="breadcrumb-current" id="themeBreadcrumb">Wereldoriëntatie</span>
+                </div>
+                <div class="theme-header-content">
+                    <h1 id="subjectTitle" class="theme-page-title">Kies wat je wilt oefenen!</h1>
+                    <p class="theme-page-subtitle">Start met alle thema's of kies een specifiek onderwerp</p>
+                </div>
+            </div>
+
+            <!-- Theme Selection Container -->
+            <div class="theme-selection-container">
+                <!-- Primary CTA and subtopics will be inserted here by JavaScript -->
+                <div id="themeGrid" class="theme-grid-container"></div>
+
+                <div class="theme-back-button">
                     <button class="btn btn-secondary" onclick="goToLanding()">
                         <i class="material-icons">arrow_back</i> Terug naar onderwerpen
                     </button>
