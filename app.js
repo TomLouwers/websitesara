@@ -309,7 +309,7 @@ function showThemeSelection(subject, themes, data) {
 
     const themeGrid = document.getElementById('themeGrid');
     themeGrid.innerHTML = '';
-    themeGrid.classList.add('theme-grid'); // Add theme-grid class for compact styling
+    themeGrid.classList.remove('theme-grid'); // Remove compact grid for categorized layout
 
     const userName = getUserName();
 
@@ -323,57 +323,107 @@ function showThemeSelection(subject, themes, data) {
         }
     });
 
-    // Option to select all themes
+    // PROMINENT "Alle thema's" card
     const allThemeCard = document.createElement('div');
-    allThemeCard.className = 'subject-card';
-    allThemeCard.onclick = () => startQuizWithTheme(subject, null); // Pass null for all themes
+    allThemeCard.className = 'theme-card-prominent';
+    allThemeCard.onclick = () => startQuizWithTheme(subject, null);
     const allHighscore = getHighscore(subject, null);
     allThemeCard.innerHTML = `
-        <div class="subject-icon-wrapper">
-            <i class="material-icons subject-icon-material">quiz</i>
+        <div class="prominent-icon">
+            <i class="material-icons">quiz</i>
         </div>
-        <div style="flex: 1;">
+        <div class="prominent-content">
             <h3>Alle thema's</h3>
-            <p>${totalAllQuestions} vragen beschikbaar</p>
-            <div class="theme-highscore">
-                <i class="material-icons">emoji_events</i>
-                <span>Highscore: ${allHighscore}</span>
-            </div>
+            <p class="prominent-description">Start met een mix van alle onderwerpen!</p>
+            <p class="prominent-meta">${totalAllQuestions} vragen beschikbaar</p>
+            ${allHighscore > 0 ? `
+                <div class="theme-highscore">
+                    <i class="material-icons">emoji_events</i>
+                    <span>Highscore: ${allHighscore}</span>
+                </div>
+            ` : ''}
         </div>
     `;
     themeGrid.appendChild(allThemeCard);
 
-    themes.forEach(theme => {
-        const filteredItems = data.filter(item => item.theme === theme);
-        let questionCount = 0;
+    // Categorize themes
+    const themeCategories = categorizeThemes(themes);
 
-        filteredItems.forEach(item => {
-            if (Array.isArray(item.questions)) {
-                questionCount += item.questions.length;
-            } else if (item.question) { // Check for single question items
-                questionCount += 1;
-            }
+    // Add categorized themes
+    Object.entries(themeCategories).forEach(([category, categoryThemes]) => {
+        if (categoryThemes.length === 0) return;
+
+        // Add section header
+        const sectionHeader = document.createElement('div');
+        sectionHeader.className = 'theme-section-header';
+        sectionHeader.innerHTML = `<h3>${category}</h3>`;
+        themeGrid.appendChild(sectionHeader);
+
+        // Add theme grid for this category
+        const categoryGrid = document.createElement('div');
+        categoryGrid.className = 'theme-category-grid';
+
+        categoryThemes.forEach(theme => {
+            const filteredItems = data.filter(item => item.theme === theme);
+            let questionCount = 0;
+
+            filteredItems.forEach(item => {
+                if (Array.isArray(item.questions)) {
+                    questionCount += item.questions.length;
+                } else if (item.question) {
+                    questionCount += 1;
+                }
+            });
+
+            const themeCard = document.createElement('div');
+            themeCard.className = 'subject-card theme-card-small';
+            themeCard.onclick = () => startQuizWithTheme(subject, theme);
+            const themeHighscore = getHighscore(subject, theme);
+            themeCard.innerHTML = `
+                <div class="subject-icon-wrapper">
+                    <i class="material-icons subject-icon-material">topic</i>
+                </div>
+                <div style="flex: 1;">
+                    <h3>${theme}</h3>
+                    <p>${questionCount} vragen</p>
+                    ${themeHighscore > 0 ? `
+                        <div class="theme-highscore">
+                            <i class="material-icons">emoji_events</i>
+                            <span>Highscore: ${themeHighscore}</span>
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+            categoryGrid.appendChild(themeCard);
         });
 
-        const themeCard = document.createElement('div');
-        themeCard.className = 'subject-card';
-        themeCard.onclick = () => startQuizWithTheme(subject, theme);
-        const themeHighscore = getHighscore(subject, theme);
-        themeCard.innerHTML = `
-            <div class="subject-icon-wrapper">
-                <i class="material-icons subject-icon-material">topic</i>
-            </div>
-            <div style="flex: 1;">
-                <h3>${theme}</h3>
-                <p>${questionCount} vragen</p>
-                <div class="theme-highscore">
-                    <i class="material-icons">emoji_events</i>
-                    <span>Highscore: ${themeHighscore}</span>
-                </div>
-            </div>
-        `;
-        themeGrid.appendChild(themeCard);
+        themeGrid.appendChild(categoryGrid);
     });
+}
+
+// Categorize themes into logical groups
+function categorizeThemes(themes) {
+    const categories = {
+        '🔢 Rekenen': [],
+        '📏 Meten & Verhoudingen': []
+    };
+
+    const rekenCategories = ['optellen', 'aftrekken', 'vermenigvuldigen', 'delen'];
+    const metenCategories = ['tijd', 'geld', 'gewicht', 'verhoudingen', 'inhoud', 'meetkunde', 'oppervlakte', 'omtrek'];
+
+    themes.forEach(theme => {
+        const themeLower = theme.toLowerCase();
+        if (rekenCategories.includes(themeLower)) {
+            categories['🔢 Rekenen'].push(theme);
+        } else if (metenCategories.includes(themeLower)) {
+            categories['📏 Meten & Verhoudingen'].push(theme);
+        } else {
+            // Default to Rekenen if not categorized
+            categories['🔢 Rekenen'].push(theme);
+        }
+    });
+
+    return categories;
 }
 
 // Start quiz with specific theme
