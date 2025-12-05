@@ -735,7 +735,27 @@ function loadCurrentQuestion() {
 
     // Update progress
     const progress = (currentQuestionIndex / totalQuestions) * 100;
-    document.getElementById('questionCounter').textContent = `Vraag ${currentQuestionIndex + 1} van ${totalQuestions}`;
+
+    // Update new progress bar elements
+    const progressLabel = document.getElementById('progressLabel');
+    const progressPercentage = document.getElementById('progressPercentage');
+    const progressBarFill = document.getElementById('progressBarFill');
+
+    if (progressLabel) {
+        progressLabel.textContent = `Vraag ${currentQuestionIndex + 1} van ${totalQuestions}`;
+    }
+    if (progressPercentage) {
+        progressPercentage.textContent = `${Math.round(progress)}% voltooid`;
+    }
+    if (progressBarFill) {
+        progressBarFill.style.width = `${progress}%`;
+    }
+
+    // Also update old questionCounter for backwards compatibility
+    const questionCounter = document.getElementById('questionCounter');
+    if (questionCounter) {
+        questionCounter.textContent = `Vraag ${currentQuestionIndex + 1} van ${totalQuestions}`;
+    }
 
     // Update visual star progress
     updateStarProgress(progress);
