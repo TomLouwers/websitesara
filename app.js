@@ -41,6 +41,27 @@ let incorrectOptions = new Set(); // Track which options were already tried (to 
 let categoryProgress = {};
 let lovaClickCount = 0; // Track L.O.V.A. button clicks
 
+/**
+ * Quick Start Function - Navigate directly to exercises for a specific grade level
+ * Reduces navigation depth by jumping straight to relevant subjects
+ */
+function startQuickForGroup(groupNumber) {
+    // For now, simply scroll to the subject grid
+    // Future enhancement: could filter subjects by grade level
+    const subjectGrid = document.querySelector('.subject-grid');
+    if (subjectGrid) {
+        subjectGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        // Optional: Show a toast notification
+        console.log(`Snelle start voor Groep ${groupNumber}`);
+
+        // Could be enhanced to:
+        // 1. Filter subjects relevant to the selected group
+        // 2. Pre-select the group in level selection
+        // 3. Show a contextual message about the selected group
+    }
+}
+
 // Helper function to render verhoudingstabel widget
 function renderVerhoudingstabel(containerElement, extraInfo) {
     // Clear the container first
@@ -226,55 +247,93 @@ function showLevelSelection(type) {
     document.getElementById('landingPage').style.display = 'none';
     document.getElementById('levelPage').style.display = 'block';
 
-    // Map subject type to display title
-    const titleMap = {
-        'verhaaltjessommen': 'Verhaaltjessommen',
-        'basisvaardigheden': 'Basisvaardigheden',
-        'woordenschat': 'Woordenschat',
-        'wereldorientatie': 'Wereldoriëntatie'
+    // Subject metadata for contextual header
+    const subjectMeta = {
+        'verhaaltjessommen': {
+            title: 'Verhaaltjessommen',
+            icon: 'calculate',
+            color: '#FF7F69',
+            description: 'Los slimme rekenpuzzels op met contextrijke rekenproblemen'
+        },
+        'basisvaardigheden': {
+            title: 'Basisvaardigheden',
+            icon: 'functions',
+            color: '#FF7F69',
+            description: 'Train je rekenkundige basisvaardigheden en word steeds sneller'
+        },
+        'woordenschat': {
+            title: 'Woordenschat',
+            icon: 'local_library',
+            color: '#7FD4A8',
+            description: 'Vergroot je woordenkennis en leer nieuwe woorden en hun betekenis'
+        },
+        'wereldorientatie': {
+            title: 'Wereldoriëntatie',
+            icon: 'public',
+            color: '#5FC5B8',
+            description: 'Ontdek alles over de aarde, geschiedenis, natuur en techniek'
+        }
     };
-    const levelTitle = titleMap[type] || type;
-    document.getElementById('levelTitle').textContent = levelTitle + ' - Kies je groep';
+
+    const meta = subjectMeta[type] || {
+        title: type,
+        icon: 'school',
+        color: '#4A7BA7',
+        description: 'Kies jouw niveau om te beginnen'
+    };
+
+    // Update contextual header
+    document.getElementById('levelTitle').textContent = meta.title;
+    document.getElementById('levelBreadcrumb').textContent = meta.title;
+    document.getElementById('levelDescription').textContent = meta.description;
+
+    const levelSubjectIcon = document.getElementById('levelSubjectIcon');
+    levelSubjectIcon.innerHTML = `<i class="material-icons">${meta.icon}</i>`;
+    levelSubjectIcon.style.background = `linear-gradient(135deg, ${meta.color} 0%, ${meta.color}dd 100%)`;
 
     const levelGrid = document.getElementById('levelGrid');
     levelGrid.innerHTML = '';
 
-    // Define levels with their corresponding subject names (ordered from youngest to oldest)
+    // Define levels with gamified progression (ordered from youngest to oldest)
     const levels = [
         {
-            icon: 'eco',
-            title: 'Groep 4 - M4 niveau',
-            description: 'M4 niveau oefeningen',
+            group: 4,
+            icon: '🌱',
+            title: 'Groep 4',
+            description: 'M4 niveau',
+            difficulty: 'Basis',
             subject: type + '-emma'
         },
         {
-            icon: 'auto_stories',
-            title: 'Groep 5 - M5 niveau',
-            description: 'M5 niveau oefeningen',
+            group: 5,
+            icon: '📖',
+            title: 'Groep 5',
+            description: 'M5 niveau',
+            difficulty: 'Midden',
             subject: type + '-kate'
         },
         {
-            icon: 'workspace_premium',
-            title: 'Groep 8 - Eindtoets niveau',
-            description: 'E8 niveau oefeningen',
+            group: 8,
+            icon: '🏆',
+            title: 'Groep 8',
+            description: 'Eindtoets niveau',
+            difficulty: 'CITO',
             subject: type // verhaaltjessommen or basisvaardigheden
         }
     ];
 
-    // Create cards for each level
+    // Create gamified level cards
     levels.forEach(level => {
         const card = document.createElement('div');
-        card.className = 'subject-card';
+        card.className = `level-card level-${level.group}`;
         card.onclick = () => loadSubject(level.subject);
 
         card.innerHTML = `
-            <div class="subject-icon-wrapper">
-                <i class="material-icons subject-icon-material">${level.icon}</i>
-            </div>
-            <div style="flex: 1;">
-                <h3>${level.title}</h3>
-                <p>${level.description}</p>
-            </div>
+            <div class="level-badge">${level.group}</div>
+            <h3 class="level-card-title">${level.title}</h3>
+            <p class="level-card-description">${level.description}</p>
+            <div class="level-card-icon">${level.icon}</div>
+            <span class="level-difficulty">${level.difficulty}</span>
         `;
 
         levelGrid.appendChild(card);
@@ -305,13 +364,13 @@ function showThemeSelection(subject, themes, data) {
     document.getElementById('levelPage').style.display = 'none';
     document.getElementById('themePage').style.display = 'block';
 
-    document.getElementById('subjectTitle').textContent = CONFIG.subjectTitles[subject] + ' - Kies een thema';
+    // Update header
+    const subjectTitle = CONFIG.subjectTitles[subject] || subject;
+    document.getElementById('subjectTitle').textContent = 'Kies wat je wilt oefenen!';
+    document.getElementById('themeBreadcrumb').textContent = subjectTitle;
 
     const themeGrid = document.getElementById('themeGrid');
     themeGrid.innerHTML = '';
-    themeGrid.classList.remove('theme-grid'); // Remove compact grid for categorized layout
-
-    const userName = getUserName();
 
     // Calculate total questions for "all themes"
     let totalAllQuestions = 0;
@@ -323,70 +382,162 @@ function showThemeSelection(subject, themes, data) {
         }
     });
 
-    // PROMINENT "Alle thema's" card
-    const allThemeCard = document.createElement('div');
-    allThemeCard.className = 'theme-card-prominent';
-    allThemeCard.onclick = () => startQuizWithTheme(subject, null);
+    // TIER 1: PRIMARY MIX MODE CTA (HERO CARD)
+    const primaryCTA = document.createElement('div');
+    primaryCTA.className = 'theme-primary-cta';
+    primaryCTA.onclick = () => startQuizWithTheme(subject, null);
     const allHighscore = getHighscore(subject, null);
-    allThemeCard.innerHTML = `
-        <div class="prominent-icon">
-            <i class="material-icons">quiz</i>
-        </div>
-        <div class="prominent-content">
-            <h3>Alle thema's</h3>
-            <p class="prominent-description">Start met een mix van alle onderwerpen!</p>
-            <p class="prominent-meta">${totalAllQuestions} vragen beschikbaar</p>
-            ${allHighscore > 0 ? `
-                <div class="theme-highscore">
-                    <i class="material-icons">emoji_events</i>
-                    <span>Highscore: ${allHighscore}</span>
+
+    const motivationalPhrases = [
+        'Klaar om jezelf uit te dagen?',
+        'Hoeveel kun jij er goed beantwoorden?',
+        'Verdien badges terwijl je oefent!',
+        'Elke vraag maakt je wijzer!'
+    ];
+    const randomPhrase = motivationalPhrases[Math.floor(Math.random() * motivationalPhrases.length)];
+
+    primaryCTA.innerHTML = `
+        <div class="theme-primary-content">
+            <div class="theme-primary-icon">
+                <i class="material-icons">rocket_launch</i>
+            </div>
+            <div class="theme-primary-text">
+                <h2 class="theme-primary-title">🚀 Complete Mix Mode</h2>
+                <p class="theme-primary-description">${randomPhrase}</p>
+                <div class="theme-primary-meta">
+                    <span class="theme-primary-badge">
+                        <i class="material-icons">quiz</i>
+                        ${totalAllQuestions} vragen klaar!
+                    </span>
+                    ${allHighscore > 0 ? `
+                        <span class="theme-primary-badge">
+                            <i class="material-icons">emoji_events</i>
+                            Highscore: ${allHighscore}
+                        </span>
+                    ` : ''}
                 </div>
-            ` : ''}
+            </div>
         </div>
     `;
-    themeGrid.appendChild(allThemeCard);
+    themeGrid.appendChild(primaryCTA);
 
-    // Check if this is a math subject that needs categorization
-    const isMathSubject = subject.includes('verhaaltjessommen') || subject.includes('basisvaardigheden');
+    // TIER 2: SUBTOPIC CARDS
+    if (themes && themes.length > 0) {
+        const subtopicsSection = document.createElement('div');
+        subtopicsSection.className = 'theme-subtopics-section';
 
-    if (isMathSubject) {
-        // Categorize themes for math subjects
-        const themeCategories = categorizeThemes(themes);
+        // Check if this is a math subject that needs categorization
+        const isMathSubject = subject.includes('verhaaltjessommen') || subject.includes('basisvaardigheden');
 
-        // Add categorized themes
-        Object.entries(themeCategories).forEach(([category, categoryThemes]) => {
-            if (categoryThemes.length === 0) return;
+        if (isMathSubject) {
+            // Categorize themes for math subjects
+            const themeCategories = categorizeThemes(themes);
 
-            // Add section header
-            const sectionHeader = document.createElement('div');
-            sectionHeader.className = 'theme-section-header';
-            sectionHeader.innerHTML = `<h3>${category}</h3>`;
-            themeGrid.appendChild(sectionHeader);
+            // Add categorized themes
+            Object.entries(themeCategories).forEach(([category, categoryThemes]) => {
+                if (categoryThemes.length === 0) return;
 
-            // Add theme grid for this category
-            const categoryGrid = document.createElement('div');
-            categoryGrid.className = 'theme-category-grid';
+                // Add category section
+                const categorySection = document.createElement('div');
+                categorySection.className = 'theme-category-section';
 
-            categoryThemes.forEach(theme => {
-                addThemeCard(categoryGrid, theme, data, subject);
+                // Add category header
+                const categoryHeader = document.createElement('div');
+                categoryHeader.className = 'theme-category-header';
+                categoryHeader.innerHTML = `<h3 class="theme-category-title">${category}</h3>`;
+                categorySection.appendChild(categoryHeader);
+
+                // Add theme grid for this category
+                const categoryGrid = document.createElement('div');
+                categoryGrid.className = 'theme-subtopics-grid';
+
+                categoryThemes.forEach((theme, index) => {
+                    addThemeCardNew(categoryGrid, theme, data, subject, index);
+                });
+
+                categorySection.appendChild(categoryGrid);
+                subtopicsSection.appendChild(categorySection);
+            });
+        } else {
+            // For non-math subjects, just list all themes without categorization
+            const subtopicsGrid = document.createElement('div');
+            subtopicsGrid.className = 'theme-subtopics-grid';
+
+            themes.forEach((theme, index) => {
+                addThemeCardNew(subtopicsGrid, theme, data, subject, index);
             });
 
-            themeGrid.appendChild(categoryGrid);
-        });
-    } else {
-        // For non-math subjects, just list all themes without categorization
-        const categoryGrid = document.createElement('div');
-        categoryGrid.className = 'theme-category-grid';
+            subtopicsSection.appendChild(subtopicsGrid);
+        }
 
-        themes.forEach(theme => {
-            addThemeCard(categoryGrid, theme, data, subject);
-        });
-
-        themeGrid.appendChild(categoryGrid);
+        themeGrid.appendChild(subtopicsSection);
     }
 }
 
-// Helper function to create theme card
+// Helper function to create NEW tier 2 subtopic card
+function addThemeCardNew(container, theme, data, subject, index) {
+    const filteredItems = data.filter(item => item.theme === theme);
+    let questionCount = 0;
+
+    filteredItems.forEach(item => {
+        if (Array.isArray(item.questions)) {
+            questionCount += item.questions.length;
+        } else if (item.question) {
+            questionCount += 1;
+        }
+    });
+
+    // Theme-specific icons and colors
+    const themeIcons = {
+        'optellen': '➕',
+        'aftrekken': '➖',
+        'vermenigvuldigen': '✖️',
+        'delen': '➗',
+        'tijd': '⏰',
+        'geld': '💰',
+        'gewicht': '⚖️',
+        'verhoudingen': '📊',
+        'inhoud': '📦',
+        'meetkunde': '📐',
+        'oppervlakte': '📏',
+        'omtrek': '🔄'
+    };
+
+    const colors = ['color-teal', 'color-blue', 'color-purple', 'color-mint', 'color-coral', 'color-yellow'];
+    const colorClass = colors[index % colors.length];
+
+    const icon = themeIcons[theme.toLowerCase()] || '📚';
+
+    const themeCard = document.createElement('div');
+    themeCard.className = `theme-subtopic-card ${colorClass}`;
+    themeCard.onclick = () => startQuizWithTheme(subject, theme);
+    const themeHighscore = getHighscore(subject, theme);
+
+    themeCard.innerHTML = `
+        <div class="theme-subtopic-header">
+            <span class="theme-subtopic-icon">${icon}</span>
+            <h3 class="theme-subtopic-title">${theme}</h3>
+        </div>
+        <div class="theme-subtopic-count">
+            <i class="material-icons">quiz</i>
+            <span>${questionCount} vragen</span>
+        </div>
+        ${themeHighscore > 0 ? `
+            <div class="theme-subtopic-highscore">
+                <i class="material-icons">emoji_events</i>
+                <span>Highscore: ${themeHighscore}</span>
+            </div>
+        ` : ''}
+        <div class="theme-subtopic-cta">
+            <span>Start oefenen</span>
+            <i class="material-icons">arrow_forward</i>
+        </div>
+    `;
+
+    container.appendChild(themeCard);
+}
+
+// Helper function to create OLD theme card (for backwards compatibility)
 function addThemeCard(container, theme, data, subject) {
     const filteredItems = data.filter(item => item.theme === theme);
     let questionCount = 0;

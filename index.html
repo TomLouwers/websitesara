@@ -13,19 +13,83 @@
     <div class="container">
         <!-- Navigation -->
         <nav class="main-nav">
-            <div class="nav-brand">
-                <h2 class="logo-text">OefenPlatform</h2>
-            </div>
-            <div class="nav-links">
-                <a href="#home" onclick="goToLanding()">Vakken</a>
-                <a href="ouders.html">Voor Ouders & Leraren</a>
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <h2 class="logo-text">OefenPlatform</h2>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" onclick="goToLanding()" class="nav-link-primary">
+                        <i class="material-icons">school</i>
+                        Wat wil je oefenen?
+                    </a>
+                    <a href="ouders.html" class="nav-link-secondary">
+                        <i class="material-icons">family_restroom</i>
+                        Voor Ouders & Leraren
+                    </a>
+                </div>
             </div>
         </nav>
 
         <div class="header">
-            <h1>Leer spelenderwijs voor de CITO-toets!</h1>
-            <p class="tagline">Oefenplatform voor groep 3 t/m 8 • 1.629+ vragen • Altijd gratis</p>
-            <p class="subtitle">Kies een vak en start met oefenen 🚀</p>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Leer spelenderwijs voor de CITO-toets!</h1>
+                    <p class="tagline">Oefenplatform voor groep 3 t/m 8 • 1.629+ vragen • Altijd gratis</p>
+
+                    <!-- Primary and Secondary CTAs -->
+                    <div class="hero-cta-group">
+                        <button class="btn btn-hero-primary" onclick="document.querySelector('.subject-grid').scrollIntoView({ behavior: 'smooth', block: 'start' })">
+                            <i class="material-icons">play_arrow</i> Begin met oefenen
+                        </button>
+                        <a href="ouders.html" class="btn btn-hero-secondary">
+                            <i class="material-icons">family_restroom</i> Voor ouders & leraren
+                        </a>
+                    </div>
+
+                    <p class="subtitle">Kies hieronder een vak om te starten</p>
+                </div>
+
+                <!-- Hero Illustration -->
+                <div class="hero-illustration">
+                    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Friendly learning illustration with rounded shapes -->
+                        <!-- Background circle (soft) -->
+                        <circle cx="200" cy="200" r="180" fill="#E8EEF2" opacity="0.5"/>
+
+                        <!-- Book/Learning icon -->
+                        <rect x="140" y="160" width="120" height="140" rx="12" fill="#4A7BA7" opacity="0.9"/>
+                        <rect x="150" y="170" width="100" height="120" rx="8" fill="#6B9BC3"/>
+                        <line x1="200" y1="170" x2="200" y2="290" stroke="#4A7BA7" stroke-width="3"/>
+
+                        <!-- Floating stars (achievement) -->
+                        <g transform="translate(280, 120)">
+                            <path d="M 0,-15 L 4,-5 L 15,-3 L 6,4 L 8,15 L 0,9 L -8,15 L -6,4 L -15,-3 L -4,-5 Z" fill="#fbbf24"/>
+                        </g>
+                        <g transform="translate(120, 100)">
+                            <path d="M 0,-12 L 3,-4 L 12,-2 L 5,3 L 6,12 L 0,7 L -6,12 L -5,3 L -12,-2 L -3,-4 Z" fill="#fbbf24" opacity="0.8"/>
+                        </g>
+                        <g transform="translate(300, 200)">
+                            <path d="M 0,-10 L 2.5,-3 L 10,-1.5 L 4,2.5 L 5,10 L 0,6 L -5,10 L -4,2.5 L -10,-1.5 L -2.5,-3 Z" fill="#fbbf24" opacity="0.7"/>
+                        </g>
+
+                        <!-- Rocket (progress metaphor) -->
+                        <g transform="translate(100, 260)">
+                            <ellipse cx="0" cy="20" rx="25" ry="8" fill="#E07A5F" opacity="0.3"/>
+                            <path d="M -8,20 L -12,35 L 0,30 L 12,35 L 8,20 Z" fill="#E07A5F"/>
+                            <rect x="-8" y="-10" width="16" height="30" rx="8" fill="#5DADE2"/>
+                            <circle cx="0" cy="5" r="5" fill="white" opacity="0.8"/>
+                            <path d="M -8,-10 L -15,5 L -8,5 Z" fill="#4A8FB5"/>
+                            <path d="M 8,-10 L 15,5 L 8,5 Z" fill="#4A8FB5"/>
+                        </g>
+
+                        <!-- Happy face (child-friendly) -->
+                        <circle cx="200" cy="100" r="35" fill="#52C788" opacity="0.2"/>
+                        <circle cx="190" cy="95" r="4" fill="#2C3E50"/>
+                        <circle cx="210" cy="95" r="4" fill="#2C3E50"/>
+                        <path d="M 185,108 Q 200,118 215,108" stroke="#2C3E50" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
         </div>
 
         <!-- Trust Bar -->
@@ -68,102 +132,222 @@
                 </div>
             </div>
 
+            <!-- Snelle Start Section -->
+            <div class="quick-start-section">
+                <h2 class="section-title">
+                    <span class="title-icon">⚡</span>
+                    Snelle Start per Groep
+                </h2>
+                <p class="section-subtitle">Spring direct naar oefeningen voor jouw groep</p>
+                <div class="quick-start-grid">
+                    <button class="quick-start-card" onclick="startQuickForGroup(3)">
+                        <span class="quick-start-number">3</span>
+                        <span class="quick-start-label">Groep 3</span>
+                    </button>
+                    <button class="quick-start-card" onclick="startQuickForGroup(4)">
+                        <span class="quick-start-number">4</span>
+                        <span class="quick-start-label">Groep 4</span>
+                    </button>
+                    <button class="quick-start-card" onclick="startQuickForGroup(5)">
+                        <span class="quick-start-number">5</span>
+                        <span class="quick-start-label">Groep 5</span>
+                    </button>
+                    <button class="quick-start-card" onclick="startQuickForGroup(6)">
+                        <span class="quick-start-number">6</span>
+                        <span class="quick-start-label">Groep 6</span>
+                    </button>
+                    <button class="quick-start-card" onclick="startQuickForGroup(7)">
+                        <span class="quick-start-number">7</span>
+                        <span class="quick-start-label">Groep 7</span>
+                    </button>
+                    <button class="quick-start-card quick-start-featured" onclick="startQuickForGroup(8)">
+                        <span class="quick-start-number">8</span>
+                        <span class="quick-start-label">Groep 8</span>
+                        <span class="quick-start-badge">CITO</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Subject Selection Intro -->
+            <div class="subject-intro">
+                <h2 class="section-title">
+                    <span class="title-icon">📚</span>
+                    Of kies een vak om te oefenen
+                </h2>
+                <p class="section-subtitle">Selecteer het onderwerp waar je mee aan de slag wilt</p>
+            </div>
+
             <div class="subject-grid">
-                <div class="subject-card" onclick="loadSubject('begrijpendlezen')">
+                <div class="subject-card" data-category="language" style="--animation-order: 0;">
                     <div class="subject-icon-wrapper">
                         <i class="material-icons subject-icon-material">menu_book</i>
                     </div>
-                    <h3>Begrijpend Lezen</h3>
-                    <p>Test je begrip van teksten en verhalen</p>
-                    <div class="subject-meta">
-                        <span class="meta-item"><i class="material-icons meta-icon">quiz</i>4 vragen</span>
-                        <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 3-8</span>
+                    <div class="card-content">
+                        <h3>Begrijpend Lezen</h3>
+                        <p class="card-tagline">Train je lees-skills!</p>
+                        <p class="card-description">Test je begrip van teksten en verhalen</p>
+                        <div class="subject-meta">
+                            <span class="badge badge-questions">4 vragen</span>
+                            <span class="badge badge-grade">Groep 3-8</span>
+                        </div>
                     </div>
+                    <button class="card-cta" onclick="loadSubject('begrijpendlezen'); event.stopPropagation();">
+                        <span>Start oefenen</span>
+                        <i class="material-icons">arrow_forward</i>
+                    </button>
                 </div>
-                <div class="subject-card" onclick="loadSubject('brandaan')">
+                <div class="subject-card" data-category="history" style="--animation-order: 1;">
                     <div class="subject-icon-wrapper">
                         <i class="material-icons subject-icon-material">account_balance</i>
                     </div>
-                    <h3>Geschiedenis</h3>
-                    <p>Ontdek de Nederlandse geschiedenis</p>
-                    <div class="subject-meta">
-                        <span class="meta-item"><i class="material-icons meta-icon">quiz</i>50 vragen</span>
-                        <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 3-8</span>
+                    <div class="card-content">
+                        <h3>Geschiedenis</h3>
+                        <p class="card-tagline">Ontdek het verleden!</p>
+                        <p class="card-description">Reis door de Nederlandse geschiedenis</p>
+                        <div class="subject-meta">
+                            <span class="badge badge-questions">50 vragen</span>
+                            <span class="badge badge-grade">Groep 3-8</span>
+                        </div>
                     </div>
+                    <button class="card-cta" onclick="loadSubject('brandaan'); event.stopPropagation();">
+                        <span>Start oefenen</span>
+                        <i class="material-icons">arrow_forward</i>
+                    </button>
                 </div>
-                <div class="subject-card" onclick="loadSubject('samenvatten')">
+                <div class="subject-card" data-category="summary" style="--animation-order: 2;">
                     <div class="subject-icon-wrapper">
                         <i class="material-icons subject-icon-material">edit_note</i>
                     </div>
-                    <h3>Samenvatten</h3>
-                    <p>Leer teksten kort en bondig samen te vatten</p>
-                    <div class="subject-meta">
-                        <span class="meta-item"><i class="material-icons meta-icon">quiz</i>80 vragen</span>
-                        <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 3-8</span>
+                    <div class="card-content">
+                        <h3>Samenvatten</h3>
+                        <p class="card-tagline">Maak het kort en krachtig!</p>
+                        <p class="card-description">Leer teksten bondig samen te vatten</p>
+                        <div class="subject-meta">
+                            <span class="badge badge-questions">80 vragen</span>
+                            <span class="badge badge-grade">Groep 3-8</span>
+                        </div>
                     </div>
+                    <button class="card-cta" onclick="loadSubject('samenvatten'); event.stopPropagation();">
+                        <span>Start oefenen</span>
+                        <i class="material-icons">arrow_forward</i>
+                    </button>
                 </div>
-                <div class="subject-card" onclick="showLevelSelection('wereldorientatie')">
+                <div class="subject-card" data-category="worldorientation" style="--animation-order: 3;">
                     <div class="subject-icon-wrapper">
                         <i class="material-icons subject-icon-material">public</i>
                     </div>
-                    <h3>Wereldoriëntatie</h3>
-                    <p>Algemene kennis over de wereld</p>
-                    <div class="subject-meta">
-                        <span class="meta-item"><i class="material-icons meta-icon">quiz</i>649 vragen</span>
-                        <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 4, 5, 8</span>
+                    <div class="card-content">
+                        <h3>Wereldoriëntatie</h3>
+                        <p class="card-tagline">Leer meer over de wereld!</p>
+                        <p class="card-description">Algemene kennis die jou wijzer maakt</p>
+                        <div class="subject-meta">
+                            <span class="badge badge-questions">649 vragen</span>
+                            <span class="badge badge-grade">Groep 4, 5, 8</span>
+                        </div>
                     </div>
+                    <button class="card-cta" onclick="showLevelSelection('wereldorientatie'); event.stopPropagation();">
+                        <span>Kies je groep</span>
+                        <i class="material-icons">arrow_forward</i>
+                    </button>
                 </div>
-                <div class="subject-card" onclick="showLevelSelection('woordenschat')">
+                <div class="subject-card" data-category="vocabulary" style="--animation-order: 4;">
                     <div class="subject-icon-wrapper">
                         <i class="material-icons subject-icon-material">local_library</i>
                     </div>
-                    <h3>Woordenschat</h3>
-                    <p>Vergroot je vocabulaire</p>
-                    <div class="subject-meta">
-                        <span class="meta-item"><i class="material-icons meta-icon">quiz</i>268 vragen</span>
-                        <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 4, 5, 8</span>
+                    <div class="card-content">
+                        <h3>Woordenschat</h3>
+                        <p class="card-tagline">Vergroot je woordenkennis!</p>
+                        <p class="card-description">Leer nieuwe woorden en hun betekenis</p>
+                        <div class="subject-meta">
+                            <span class="badge badge-questions">268 vragen</span>
+                            <span class="badge badge-grade">Groep 4, 5, 8</span>
+                        </div>
                     </div>
+                    <button class="card-cta" onclick="showLevelSelection('woordenschat'); event.stopPropagation();">
+                        <span>Kies je groep</span>
+                        <i class="material-icons">arrow_forward</i>
+                    </button>
                 </div>
-                <div class="subject-card" onclick="showLevelSelection('verhaaltjessommen')">
+                <div class="subject-card" data-category="math" style="--animation-order: 5;">
                     <div class="subject-icon-wrapper">
                         <i class="material-icons subject-icon-material">calculate</i>
                     </div>
-                    <h3>Verhaaltjessommen</h3>
-                    <p>Contextrijke rekenproblemen</p>
-                    <div class="subject-meta">
-                        <span class="meta-item"><i class="material-icons meta-icon">quiz</i>375 vragen</span>
-                        <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 4, 5, 8</span>
+                    <div class="card-content">
+                        <h3>Verhaaltjessommen</h3>
+                        <p class="card-tagline">Los slimme rekenpuzzels op!</p>
+                        <p class="card-description">Contextrijke rekenproblemen</p>
+                        <div class="subject-meta">
+                            <span class="badge badge-questions">375 vragen</span>
+                            <span class="badge badge-grade">Groep 4, 5, 8</span>
+                        </div>
                     </div>
+                    <button class="card-cta" onclick="showLevelSelection('verhaaltjessommen'); event.stopPropagation();">
+                        <span>Kies je groep</span>
+                        <i class="material-icons">arrow_forward</i>
+                    </button>
                 </div>
-                <div class="subject-card" onclick="showLevelSelection('basisvaardigheden')">
+                <div class="subject-card" data-category="math" style="--animation-order: 6;">
                     <div class="subject-icon-wrapper">
                         <i class="material-icons subject-icon-material">functions</i>
                     </div>
-                    <h3>Basisvaardigheden</h3>
-                    <p>Rekenkundige basisvaardigheden</p>
-                    <div class="subject-meta">
-                        <span class="meta-item"><i class="material-icons meta-icon">quiz</i>203 vragen</span>
-                        <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 4, 5, 8</span>
+                    <div class="card-content">
+                        <h3>Basisvaardigheden</h3>
+                        <p class="card-tagline">Word steeds sneller met sommen!</p>
+                        <p class="card-description">Rekenkundige basisvaardigheden</p>
+                        <div class="subject-meta">
+                            <span class="badge badge-questions">203 vragen</span>
+                            <span class="badge badge-grade">Groep 4, 5, 8</span>
+                        </div>
                     </div>
+                    <button class="card-cta" onclick="showLevelSelection('basisvaardigheden'); event.stopPropagation();">
+                        <span>Kies je groep</span>
+                        <i class="material-icons">arrow_forward</i>
+                    </button>
                 </div>
-               <a href="modules/leesstrategieën/leesstrategieën.html" class="subject-card module-card">
+               <a href="modules/leesstrategieën/leesstrategieën.html" class="subject-card module-card" data-category="reading" style="--animation-order: 7;">
                     <div class="subject-icon-wrapper">
                         <i class="material-icons subject-icon-material">psychology</i>
                     </div>
-                    <h3>Leesstrategieën</h3>
-                    <p>Oefen en versterk je leesstrategieën</p>
-                    <div class="subject-meta">
-                        <span class="meta-item"><i class="material-icons meta-icon">school</i>Alle groepen</span>
+                    <div class="card-content">
+                        <h3>Leesstrategieën</h3>
+                        <p class="card-tagline">Versterk je leesvaardigheid!</p>
+                        <p class="card-description">Oefen slimme leestechnieken</p>
+                        <div class="subject-meta">
+                            <span class="badge badge-grade">Alle groepen</span>
+                        </div>
+                    </div>
+                    <div class="card-cta card-cta-link">
+                        <span>Start module</span>
+                        <i class="material-icons">arrow_forward</i>
                     </div>
                 </a>
             </div>
         </div>
 
         <div id="levelPage" style="display: none;">
-            <div class="quiz-container">
-                <h2 id="levelTitle">Kies je groep</h2>
-                <div id="levelGrid" class="subject-grid level-grid"></div>
-                <div style="text-align: center; margin-top: 30px;">
+            <!-- Compact Contextual Header -->
+            <div class="level-page-header">
+                <div class="breadcrumb">
+                    <a href="#" onclick="goToLanding(); return false;">Home</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span class="breadcrumb-current" id="levelBreadcrumb">Wereldoriëntatie</span>
+                </div>
+                <div class="level-header-content">
+                    <div class="level-subject-icon" id="levelSubjectIcon">
+                        <i class="material-icons">public</i>
+                    </div>
+                    <div class="level-header-text">
+                        <h1 id="levelTitle" class="level-page-title">Wereldoriëntatie</h1>
+                        <p class="level-page-subtitle">Kies jouw niveau om te beginnen!</p>
+                        <p class="level-page-description" id="levelDescription">Ontdek alles over de aarde, geschiedenis, natuur en techniek</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level Selection Grid -->
+            <div class="level-selection-container">
+                <div id="levelGrid" class="level-selection-grid"></div>
+                <div class="level-back-button">
                     <button class="btn btn-secondary" onclick="goToLanding()">
                         <i class="material-icons">arrow_back</i> Terug naar onderwerpen
                     </button>
@@ -172,10 +356,25 @@
         </div>
 
         <div id="themePage" style="display: none;">
-            <div class="quiz-container">
-                <h2 id="subjectTitle">Kies een thema</h2>
-                <div id="themeGrid" class="subject-grid"></div>
-                <div style="text-align: center; margin-top: 30px;">
+            <!-- Motivational Theme Selection Header -->
+            <div class="theme-page-header">
+                <div class="breadcrumb">
+                    <a href="#" onclick="goToLanding(); return false;">Home</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span class="breadcrumb-current" id="themeBreadcrumb">Wereldoriëntatie</span>
+                </div>
+                <div class="theme-header-content">
+                    <h1 id="subjectTitle" class="theme-page-title">Kies wat je wilt oefenen!</h1>
+                    <p class="theme-page-subtitle">Start met alle thema's of kies een specifiek onderwerp</p>
+                </div>
+            </div>
+
+            <!-- Theme Selection Container -->
+            <div class="theme-selection-container">
+                <!-- Primary CTA and subtopics will be inserted here by JavaScript -->
+                <div id="themeGrid" class="theme-grid-container"></div>
+
+                <div class="theme-back-button">
                     <button class="btn btn-secondary" onclick="goToLanding()">
                         <i class="material-icons">arrow_back</i> Terug naar onderwerpen
                     </button>
