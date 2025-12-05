@@ -259,6 +259,17 @@ body {
     padding: 20px;
 }
 
+/* Theme Grid Container - Override grid layout for categorized themes */
+#themeGrid {
+    display: block;
+}
+
+#themeGrid.theme-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 18px;
+}
+
 /* Level Grid - single column for level selection */
 .level-grid {
     grid-template-columns: 1fr;
@@ -438,7 +449,8 @@ body {
 }
 
 .theme-card-small {
-    min-height: 80px;
+    min-height: 95px;
+    height: 95px;
     padding: 14px 18px;
     flex-direction: row;
     text-align: left;
