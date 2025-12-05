@@ -125,7 +125,7 @@
             </div>
 
             <div class="subject-grid">
-                <div class="subject-card" onclick="loadSubject('begrijpendlezen')">
+                <div class="subject-card" data-category="language" onclick="loadSubject('begrijpendlezen')" style="--animation-order: 0;">
                     <div class="subject-icon-wrapper">
                         <i class="material-icons subject-icon-material">menu_book</i>
                     </div>
@@ -136,7 +136,7 @@
                         <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 3-8</span>
                     </div>
                 </div>
-                <div class="subject-card" onclick="loadSubject('brandaan')">
+                <div class="subject-card" data-category="history" onclick="loadSubject('brandaan')" style="--animation-order: 1;">
                     <div class="subject-icon-wrapper">
                         <i class="material-icons subject-icon-material">account_balance</i>
                     </div>
@@ -147,7 +147,7 @@
                         <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 3-8</span>
                     </div>
                 </div>
-                <div class="subject-card" onclick="loadSubject('samenvatten')">
+                <div class="subject-card" data-category="summary" onclick="loadSubject('samenvatten')" style="--animation-order: 2;">
                     <div class="subject-icon-wrapper">
                         <i class="material-icons subject-icon-material">edit_note</i>
                     </div>
@@ -158,7 +158,7 @@
                         <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 3-8</span>
                     </div>
                 </div>
-                <div class="subject-card" onclick="showLevelSelection('wereldorientatie')">
+                <div class="subject-card" data-category="worldorientation" onclick="showLevelSelection('wereldorientatie')" style="--animation-order: 3;">
                     <div class="subject-icon-wrapper">
                         <i class="material-icons subject-icon-material">public</i>
                     </div>
@@ -169,7 +169,7 @@
                         <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 4, 5, 8</span>
                     </div>
                 </div>
-                <div class="subject-card" onclick="showLevelSelection('woordenschat')">
+                <div class="subject-card" data-category="vocabulary" onclick="showLevelSelection('woordenschat')" style="--animation-order: 4;">
                     <div class="subject-icon-wrapper">
                         <i class="material-icons subject-icon-material">local_library</i>
                     </div>
@@ -180,7 +180,7 @@
                         <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 4, 5, 8</span>
                     </div>
                 </div>
-                <div class="subject-card" onclick="showLevelSelection('verhaaltjessommen')">
+                <div class="subject-card" data-category="math" onclick="showLevelSelection('verhaaltjessommen')" style="--animation-order: 5;">
                     <div class="subject-icon-wrapper">
                         <i class="material-icons subject-icon-material">calculate</i>
                     </div>
@@ -191,7 +191,7 @@
                         <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 4, 5, 8</span>
                     </div>
                 </div>
-                <div class="subject-card" onclick="showLevelSelection('basisvaardigheden')">
+                <div class="subject-card" data-category="math" onclick="showLevelSelection('basisvaardigheden')" style="--animation-order: 6;">
                     <div class="subject-icon-wrapper">
                         <i class="material-icons subject-icon-material">functions</i>
                     </div>
@@ -202,7 +202,7 @@
                         <span class="meta-item"><i class="material-icons meta-icon">school</i>Groep 4, 5, 8</span>
                     </div>
                 </div>
-               <a href="modules/leesstrategieën/leesstrategieën.html" class="subject-card module-card">
+               <a href="modules/leesstrategieën/leesstrategieën.html" class="subject-card module-card" data-category="reading" style="--animation-order: 7;">
                     <div class="subject-icon-wrapper">
                         <i class="material-icons subject-icon-material">psychology</i>
                     </div>

@@ -11,6 +11,19 @@
     --secondary-color: #5DADE2; /* Soft cyan-blue */
     --secondary-dark: #4A8FB5; /* Muted teal */
 
+    /* WARM ACCENT COLORS - Emotional engagement and motivation */
+    --accent-warm-orange: #FF9A62; /* Friendly apricot/coral - primary warm accent */
+    --accent-warm-orange-light: #FFB589; /* Lighter warm orange for hover */
+    --accent-warm-orange-dark: #E87F4D; /* Deeper warm orange for emphasis */
+
+    /* Supporting warm palette for category differentiation */
+    --accent-teal: #5FC5B8; /* Warm turquoise */
+    --accent-yellow: #FFD166; /* Sunny yellow */
+    --accent-purple: #9B87D5; /* Soft purple */
+    --accent-mint: #7FD4A8; /* Mint green */
+    --accent-coral: #FF7F69; /* Vibrant coral */
+    --accent-sky: #8DCDEB; /* Soft sky blue */
+
     /* Background: Neutral cool tones reduce eye strain and cognitive load */
     --background-gradient-start: #F4F6F8; /* Very light cool gray */
     --background-gradient-end: #E8EEF2;   /* Slightly cooler light gray */
@@ -29,14 +42,15 @@
     --color-incorrect: #E07A5F; /* Softer coral - signals error without inducing stress */
     --color-info: #5DADE2; /* Soft blue - informational, non-threatening */
 
-    /* Shadow Elevations */
-    --shadow-elevation-1: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-    --shadow-elevation-2: 0 4px 8px rgba(0, 0, 0, 0.15), 0 2px 5px rgba(0, 0, 0, 0.1);
-    --shadow-elevation-3: 0 6px 12px rgba(0, 0, 0, 0.2), 0 3px 8px rgba(0, 0, 0, 0.15);
+    /* Shadow Elevations - Enhanced for warmth */
+    --shadow-elevation-1: 0 2px 6px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.06);
+    --shadow-elevation-2: 0 4px 12px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.08);
+    --shadow-elevation-3: 0 8px 20px rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.1);
+    --shadow-warm: 0 4px 16px rgba(255, 154, 98, 0.25); /* Warm shadow for CTAs */
 
-    /* Border Radii */
-    --border-radius-card: 12px;
-    --border-radius-button: 8px;
+    /* Border Radii - More generous for warmth */
+    --border-radius-card: 16px; /* Increased from 12px */
+    --border-radius-button: 10px; /* Increased from 8px */
 }
 
 * {
@@ -47,7 +61,7 @@
 
 body {
     font-family: 'Lexend', sans-serif;
-    background: linear-gradient(135deg, var(--background-gradient-start) 0%, var(--background-gradient-end) 100%);
+    background: linear-gradient(135deg, #FFF8F3 0%, var(--background-gradient-start) 50%, var(--background-gradient-end) 100%);
     min-height: 100vh;
     color: var(--on-background-color); /* Changed to on-background-color for body text */
     display: flex;
@@ -56,6 +70,23 @@ body {
     padding: 20px;
     padding-top: 100px; /* Account for fixed nav */
     letter-spacing: 0.01em; /* Slight increase for better dyslexia readability */
+    position: relative;
+}
+
+/* Subtle decorative background pattern */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(255, 154, 98, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(93, 173, 226, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(127, 212, 168, 0.02) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
 }
 
 .container {
@@ -210,7 +241,7 @@ body {
 }
 
 .btn-hero-primary {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    background: linear-gradient(135deg, var(--accent-warm-orange) 0%, var(--accent-warm-orange-dark) 100%);
     color: white;
     font-size: 1.2em;
     font-weight: 600;
@@ -221,19 +252,20 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    box-shadow: 0 4px 14px rgba(74, 123, 167, 0.4);
-    transition: all 0.3s ease;
+    box-shadow: var(--shadow-warm);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     text-decoration: none;
 }
 
 .btn-hero-primary:hover {
-    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(74, 123, 167, 0.5);
+    background: linear-gradient(135deg, var(--accent-warm-orange-light) 0%, var(--accent-warm-orange) 100%);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(255, 154, 98, 0.4);
 }
 
 .btn-hero-primary:active {
-    transform: translateY(-1px);
+    transform: translateY(-1px) scale(0.98);
+    transition: all 0.1s ease;
 }
 
 .btn-hero-secondary {
@@ -695,7 +727,7 @@ body {
     padding: 30px;
     text-align: center;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -703,20 +735,161 @@ body {
     min-height: 240px;
     color: var(--text-color-dark);
     text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+/* Soft background tint for warmth */
+.subject-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: var(--border-radius-card) var(--border-radius-card) 0 0;
+    z-index: 0;
+}
+
+.subject-card:hover::before {
+    opacity: 1;
+}
+
+.subject-card > * {
+    position: relative;
+    z-index: 1;
 }
 
 .subject-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-elevation-2), 0 0 20px rgba(74, 123, 167, 0.3);
+    transform: translateY(-10px) rotate(-1deg);
+    box-shadow: var(--shadow-elevation-3);
+    border-color: currentColor;
+}
+
+/* Category-specific colors */
+.subject-card[data-category="language"] {
+    background: linear-gradient(135deg, rgba(139, 205, 235, 0.1) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+.subject-card[data-category="language"]:hover {
+    border-color: var(--accent-sky);
+}
+
+.subject-card[data-category="history"] {
+    background: linear-gradient(135deg, rgba(155, 135, 213, 0.1) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+.subject-card[data-category="history"]:hover {
+    border-color: var(--accent-purple);
+}
+
+.subject-card[data-category="summary"] {
+    background: linear-gradient(135deg, rgba(255, 209, 102, 0.1) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+.subject-card[data-category="summary"]:hover {
+    border-color: var(--accent-yellow);
+}
+
+.subject-card[data-category="worldorientation"] {
+    background: linear-gradient(135deg, rgba(95, 197, 184, 0.1) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+.subject-card[data-category="worldorientation"]:hover {
+    border-color: var(--accent-teal);
+}
+
+.subject-card[data-category="vocabulary"] {
+    background: linear-gradient(135deg, rgba(127, 212, 168, 0.1) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+.subject-card[data-category="vocabulary"]:hover {
+    border-color: var(--accent-mint);
+}
+
+.subject-card[data-category="math"] {
+    background: linear-gradient(135deg, rgba(255, 127, 105, 0.1) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+.subject-card[data-category="math"]:hover {
+    border-color: var(--accent-coral);
+}
+
+.subject-card[data-category="reading"] {
+    background: linear-gradient(135deg, rgba(255, 154, 98, 0.1) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+.subject-card[data-category="reading"]:hover {
+    border-color: var(--accent-warm-orange);
+}
+
+/* Sparkle effect on hover - adds magical delight */
+.subject-card::after {
+    content: '✨';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5em;
+    opacity: 0;
+    transform: scale(0) rotate(-45deg);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.subject-card:hover::after {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
 }
 
 .subject-icon-wrapper {
     margin-bottom: 15px;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(74, 123, 167, 0.1) 0%, rgba(93, 173, 226, 0.05) 100%);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+}
+
+.subject-card:hover .subject-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, rgba(74, 123, 167, 0.15) 0%, rgba(93, 173, 226, 0.1) 100%);
+}
+
+/* Subtle pulse animation on page load */
+@keyframes iconPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.subject-icon-wrapper {
+    animation: iconPulse 2s ease-in-out infinite;
+    animation-delay: calc(var(--animation-order, 0) * 0.1s);
+}
+
+.subject-card:hover .subject-icon-wrapper {
+    animation: none;
 }
 
 .subject-icon-material {
-    font-size: 4em;
+    font-size: 3.5em;
     color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.subject-card:hover .subject-icon-material {
+    color: var(--accent-warm-orange);
+    filter: drop-shadow(0 2px 8px rgba(255, 154, 98, 0.3));
 }
 
 .subject-card h3 {
@@ -1147,31 +1320,31 @@ body {
 }
 
 .btn {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--accent-warm-orange) 0%, var(--accent-warm-orange-dark) 100%);
     color: white;
     border: none;
     padding: 14px 30px;
     border-radius: var(--border-radius-button);
     cursor: pointer;
     font-size: 1.1em;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 8px;
     font-weight: 500;
-    box-shadow: var(--shadow-elevation-1);
+    box-shadow: var(--shadow-warm);
 }
 
 .btn:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-elevation-2), 0 0 15px rgba(74, 123, 167, 0.3);
+    background: linear-gradient(135deg, var(--accent-warm-orange-light) 0%, var(--accent-warm-orange) 100%);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(255, 154, 98, 0.4);
 }
 
 .btn:active {
-    animation: buttonPress 0.2s ease-out;
-    transform: translateY(-1px);
+    transform: translateY(-1px) scale(0.98);
+    transition: all 0.1s ease;
 }
 
 .btn-secondary {
