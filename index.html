@@ -509,6 +509,9 @@
 
                 <!-- Quiz Control Icons (top-right) -->
                 <div class="quiz-header-controls">
+                    <button class="btn-icon" id="lovaHelpButton" onclick="toggleLovaPanel()" title="L.O.V.A. Stappenplan" style="display: none;">
+                        <i class="material-icons">help_outline</i>
+                    </button>
                     <button class="btn-icon" onclick="pauseQuiz()" title="Pauzeer">
                         <i class="material-icons">pause</i>
                     </button>
@@ -522,13 +525,6 @@
                     <span class="progress-stat correct">✓ <span id="totalCorrect">0</span> goed</span>
                     <span class="progress-stat" style="color: var(--secondary-color);">📋 <span id="lovaClicks">0</span> hulp</span>
                 </div>
-            </div>
-
-            <!-- L.O.V.A. Help Button (only shown for verhaaltjessommen with L.O.V.A. data) -->
-            <div id="lovaHelpButton" class="lova-help-button-container hidden">
-                <button class="btn btn-lova-help" onclick="toggleLovaPanel()">
-                    <span id="lovaToggleIcon">▼</span> 📋 L.O.V.A. Stappenplan
-                </button>
             </div>
 
             <!-- Milestone Celebration (moved outside header for better positioning) -->
