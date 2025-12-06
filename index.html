@@ -33,20 +33,20 @@
         <div class="header">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Leer spelenderwijs voor de CITO-toets!</h1>
-                    <p class="tagline">Oefenplatform voor groep 3 t/m 8 • 1.629+ vragen • Altijd gratis</p>
+                    <h1>Oefen als een Pro voor je CITO! 🚀</h1>
+                    <p class="tagline">Jij kunt dit! • Voor groep 3 t/m 8 • 1.629+ vragen • Altijd gratis</p>
 
                     <!-- Primary and Secondary CTAs -->
                     <div class="hero-cta-group">
                         <button class="btn btn-hero-primary" onclick="document.querySelector('.subject-grid').scrollIntoView({ behavior: 'smooth', block: 'start' })">
-                            <i class="material-icons">play_arrow</i> Begin met oefenen
+                            <i class="material-icons">play_arrow</i> Yes! Laten we beginnen
                         </button>
                         <a href="ouders.html" class="btn btn-hero-secondary">
                             <i class="material-icons">family_restroom</i> Voor ouders & leraren
                         </a>
                     </div>
 
-                    <p class="subtitle">Kies hieronder een vak om te starten</p>
+                    <p class="subtitle">Wat wil je vandaag oefenen? 🌟</p>
 
                     <!-- Trust Metrics - High Impact -->
                     <div class="hero-trust-metrics">
@@ -152,10 +152,10 @@
                 </div>
                 <div class="resume-actions">
                     <button class="btn btn-primary" onclick="resumePausedQuiz()">
-                        <i class="material-icons">play_arrow</i> Hervat Quiz
+                        <i class="material-icons">play_arrow</i> Verder gaan!
                     </button>
                     <button class="btn btn-secondary" onclick="clearPausedQuiz()">
-                        <i class="material-icons">close</i> Verwijder
+                        <i class="material-icons">close</i> Later proberen
                     </button>
                 </div>
             </div>
@@ -166,7 +166,7 @@
                     <span class="title-icon">⚡</span>
                     Snelle Start per Groep
                 </h2>
-                <p class="section-subtitle">Spring direct naar oefeningen voor jouw groep</p>
+                <p class="section-subtitle">Kies jouw niveau en begin direct! 💪</p>
                 <div class="quick-start-grid">
                     <button class="quick-start-card" onclick="startQuickForGroup(3)">
                         <span class="quick-start-number">3</span>
@@ -447,7 +447,7 @@
                 <div id="levelGrid" class="level-selection-grid"></div>
                 <div class="level-back-button">
                     <button class="btn btn-secondary" onclick="goToLanding()">
-                        <i class="material-icons">arrow_back</i> Terug naar onderwerpen
+                        <i class="material-icons">arrow_back</i> Kies ander vak
                     </button>
                 </div>
             </div>
@@ -474,7 +474,7 @@
 
                 <div class="theme-back-button">
                     <button class="btn btn-secondary" onclick="goToLanding()">
-                        <i class="material-icons">arrow_back</i> Terug naar onderwerpen
+                        <i class="material-icons">arrow_back</i> Kies ander vak
                     </button>
                 </div>
             </div>
@@ -626,16 +626,16 @@
             <!-- Action Buttons - Clear Hierarchy -->
             <div class="quiz-actions">
                 <button class="btn btn-primary-action" id="submitBtn" onclick="submitAnswer()">
-                    <i class="material-icons">check_circle</i> Controleer Antwoord
+                    <i class="material-icons">check_circle</i> Check mijn antwoord!
                 </button>
                 <button class="btn btn-primary-action hidden" id="nextBtn" onclick="nextQuestion()">
-                    Volgende Vraag <i class="material-icons">arrow_forward</i>
+                    Volgende! <i class="material-icons">arrow_forward</i>
                 </button>
 
                 <!-- Secondary Actions -->
                 <div class="quiz-secondary-actions">
-                    <button class="btn-secondary-action" onclick="goToLanding()" title="Terug">
-                        <i class="material-icons">arrow_back</i> Terug
+                    <button class="btn-secondary-action" onclick="goToLanding()" title="Ga terug">
+                        <i class="material-icons">arrow_back</i> Ga terug
                     </button>
                 </div>
             </div>
@@ -643,23 +643,23 @@
 
         <div id="resultsPage" class="results-container" style="display: none;">
             <div class="results-score" id="finalScore">0/0</div>
-            <div class="results-message" id="resultsMessage">Goed gedaan!</div>
+            <div class="results-message" id="resultsMessage">Fantastisch gewerkt! 🌟</div>
             <button class="btn" onclick="goToLanding()">
-                <i class="material-icons">refresh</i> Nieuwe Quiz
+                <i class="material-icons">refresh</i> Nog een keer oefenen!
             </button>
         </div>
 
         <div id="reviewPage" class="results-container" style="display: none;">
-            <h2 style="color: var(--primary-color); margin-bottom: 20px;">📚 Leermoment: Review je fouten</h2>
+            <h2 style="color: var(--primary-color); margin-bottom: 20px;">📚 Leer van je fouten — zo word je beter!</h2>
             <div class="results-score" id="reviewScore">0/0</div>
-            <div class="results-message" id="reviewMessage">Hier zijn de vragen die je fout had. Bestudeer ze goed!</div>
+            <div class="results-message" id="reviewMessage">Kijk goed naar deze vragen — elke fout maakt je slimmer! 💪</div>
 
             <div id="wrongAnswersContainer" style="margin-top: 30px;">
                 <!-- Wrong answers will be dynamically inserted here -->
             </div>
 
             <button class="btn" onclick="goToLanding()" style="margin-top: 30px;">
-                <i class="material-icons">refresh</i> Nieuwe Quiz
+                <i class="material-icons">refresh</i> Nog een keer oefenen!
             </button>
         </div>
     </div>
@@ -668,7 +668,7 @@
     <div id="foutanalyseModaal" class="modaal-overlay">
         <div class="modaal-content">
             <div class="modaal-header">
-                <h2 id="modaalTitle">💡 Bijna goed! Probeer nog eens</h2>
+                <h2 id="modaalTitle">💡 Bijna! Je komt er wel! 👀✨</h2>
                 <button class="modaal-close" onclick="closeFoutanalyseModaal()">✕</button>
             </div>
 

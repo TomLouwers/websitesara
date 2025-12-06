@@ -1718,10 +1718,10 @@ function updateStarProgress(progress) {
 // Check and display milestone celebrations
 function checkMilestone(progress) {
     const milestones = [
-        { threshold: 25, message: '🎉 Kwart klaar! Je doet het geweldig!' },
-        { threshold: 50, message: '💪 Halverwege! Goed bezig!' },
-        { threshold: 75, message: '🌟 Bijna klaar! Je bent er bijna!' },
-        { threshold: 100, message: '🏆 Gelukt! Je hebt alle vragen beantwoord!' }
+        { threshold: 25, message: '🎉 Yes! Je bent al een kwart! Knap hoor!' },
+        { threshold: 50, message: '💪 Wow! Je bent al op de helft! Ga zo door!' },
+        { threshold: 75, message: '🌟 Top! Nog een klein stukje en je hebt het! 🚀' },
+        { threshold: 100, message: '🏆 Fantastisch! Je hebt alles gemaakt! Trots op jou!' }
     ];
 
     const celebration = document.getElementById('milestoneCelebration');
