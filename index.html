@@ -766,10 +766,60 @@
         </div>
     </div>
 
+    <!-- Accessibility Settings Panel -->
+    <button class="accessibility-toggle" id="accessibilityToggle" aria-label="Toegankelijkheidsopties">
+        <i class="material-icons">accessibility</i>
+    </button>
+
+    <div class="accessibility-panel" id="accessibilityPanel">
+        <h3>♿ Toegankelijkheidsopties</h3>
+
+        <!-- Font Size Control -->
+        <div class="accessibility-option">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                <span class="option-icon">🔠</span>
+                <span style="font-weight: 600;">Lettergrootte</span>
+            </div>
+            <div class="font-size-group">
+                <button class="font-size-btn active" data-size="standard">Standaard</button>
+                <button class="font-size-btn" data-size="groot">Groot</button>
+                <button class="font-size-btn" data-size="extra-groot">Extra Groot</button>
+            </div>
+        </div>
+
+        <!-- Dyslexia Mode -->
+        <div class="accessibility-option">
+            <label>
+                <input type="checkbox" id="dyslexiaMode">
+                <span class="option-icon">🧠</span>
+                <span>Dyslexie-modus (Lexend)</span>
+            </label>
+        </div>
+
+        <!-- Focus Mode -->
+        <div class="accessibility-option">
+            <label>
+                <input type="checkbox" id="focusMode">
+                <span class="option-icon">🎯</span>
+                <span>Focus-modus (minimale afleiding)</span>
+            </label>
+        </div>
+
+        <!-- High Contrast Mode -->
+        <div class="accessibility-option">
+            <label>
+                <input type="checkbox" id="highContrastMode">
+                <span class="option-icon">🎨</span>
+                <span>Hoog contrast</span>
+            </label>
+        </div>
+    </div>
+
     <script src="config.js"></script>
     <script src="verhoudingstabel-widget.js"></script>
     <script src="foutanalyse-modaal.js"></script>
     <script src="app.js"></script>
+    <script src="accessibility.js"></script>
 </body>
 
 </html>

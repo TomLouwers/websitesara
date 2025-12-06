@@ -32,10 +32,14 @@
     --on-surface-color: #2C3E50; /* Dark slate - softer than pure black, reduces harshness */
     --on-background-color: #2C3E50; /* Dark slate for readability on light backgrounds */
 
-    /* Text Hierarchy: Optimized contrast ratios for WCAG AAA compliance */
-    --text-color-dark: var(--on-surface-color); /* Primary text - dark slate */
-    --text-color-medium: #5A6C7D; /* Secondary text - medium cool gray */
-    --text-color-light: #95A5B8; /* Tertiary text - soft gray */
+    /* Text Hierarchy: Enhanced for WCAG AAA compliance & improved readability */
+    --text-color-dark: #1F2937; /* Primary text - darker for better contrast (14:1) */
+    --text-color-medium: #374151; /* Secondary text - WCAG AAA compliant (11:1) */
+    --text-color-light: #4B5563; /* Tertiary text - WCAG AA compliant (7:1) */
+
+    /* High Contrast Mode - Additional variables for accessibility */
+    --text-color-high-contrast: #000000; /* Pure black for maximum contrast */
+    --bg-high-contrast: #FFFFFF; /* Pure white background */
 
     /* Semantic Colors: Softer saturation reduces stress while maintaining clarity */
     --color-correct: #52C788; /* Softer green - positive feedback without intensity */
@@ -51,6 +55,23 @@
     /* Border Radii - More generous for warmth */
     --border-radius-card: 16px; /* Increased from 12px */
     --border-radius-button: 10px; /* Increased from 8px */
+
+    /* Accessibility Variables */
+    --min-touch-target: 44px; /* WCAG minimum touch target size */
+    --comfortable-touch-target: 48px; /* Recommended for children */
+
+    /* Font Size Scaling */
+    --font-scale-standard: 1; /* Default */
+    --font-scale-groot: 1.15; /* Large */
+    --font-scale-extra-groot: 1.3; /* Extra Large */
+
+    /* Dyslexia Mode Settings */
+    --dyslexia-line-height: 1.5; /* Increased line spacing */
+    --dyslexia-letter-spacing: 0.02em; /* Slightly wider letter spacing */
+    --dyslexia-word-spacing: 0.08em; /* Increased word spacing */
+
+    /* Focus Mode */
+    --focus-mode-bg: #FAFAFA; /* Minimal distraction background */
 }
 
 * {
@@ -2349,12 +2370,15 @@ body::before {
     border: 3px solid #e0e0e0;
     border-radius: 14px;
     padding: 20px 25px;
+    min-height: var(--comfortable-touch-target); /* Ensures 48px minimum touch target */
     cursor: pointer;
     text-align: left;
     transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
     font-size: 1.15em;
     color: var(--text-color-dark);
     box-shadow: var(--shadow-elevation-1);
+    display: flex;
+    align-items: center;
 }
 
 .option:hover {
@@ -2542,6 +2566,7 @@ body::before {
     color: white;
     border: none;
     padding: 14px 30px;
+    min-height: var(--comfortable-touch-target); /* Ensures 48px minimum for children */
     border-radius: var(--border-radius-button);
     cursor: pointer;
     font-size: 1.1em;
@@ -2549,6 +2574,7 @@ body::before {
     text-decoration: none;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     font-weight: 500;
     box-shadow: var(--shadow-warm);
@@ -4323,5 +4349,370 @@ body::before {
 
     .professional-badge p {
         font-size: 0.9em;
+    }
+}
+
+/* ==========================================
+   ACCESSIBILITY & INCLUSIVENESS IMPROVEMENTS
+   WCAG 2.1 AAA compliant features for children with diverse learning needs
+   ========================================== */
+
+/* Enhanced Visual Separation for Focus & Attention */
+.question-card,
+.answers-section {
+    background: linear-gradient(135deg, #FAFBFC 0%, #F9FAFB 100%) !important;
+    border: 2px solid rgba(74, 123, 167, 0.15);
+    margin-bottom: 20px;
+}
+
+.question-container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-warm-orange);
+    margin-bottom: 20px;
+}
+
+/* Stronger Focus States for Better Visibility */
+.option:focus,
+.btn:focus,
+button:focus {
+    outline: 3px solid var(--accent-warm-orange);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px rgba(255, 154, 98, 0.2);
+}
+
+/* Accessibility Settings Panel */
+.accessibility-panel {
+    position: fixed;
+    right: 20px;
+    top: 120px;
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    max-width: 320px;
+    border: 2px solid var(--primary-color);
+    transform: translateX(calc(100% + 40px));
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.accessibility-panel.open {
+    transform: translateX(0);
+}
+
+.accessibility-toggle {
+    position: fixed;
+    right: 20px;
+    top: 120px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    transition: all 0.3s ease;
+}
+
+.accessibility-toggle:hover {
+    background: var(--primary-dark);
+    transform: scale(1.1);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+}
+
+.accessibility-toggle i {
+    font-size: 28px;
+}
+
+.accessibility-panel h3 {
+    font-size: 1.3em;
+    color: var(--text-color-dark);
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.accessibility-option {
+    margin-bottom: 18px;
+    padding: 12px;
+    background: #F9FAFB;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.accessibility-option:hover {
+    background: #F3F4F6;
+    border-color: var(--primary-light);
+}
+
+.accessibility-option label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 0.95em;
+    color: var(--text-color-dark);
+    font-weight: 500;
+}
+
+.accessibility-option input[type="checkbox"],
+.accessibility-option input[type="radio"] {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+.accessibility-option .option-icon {
+    font-size: 1.3em;
+    min-width: 24px;
+}
+
+.font-size-group {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.font-size-btn {
+    flex: 1;
+    padding: 10px;
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--text-color-medium);
+    transition: all 0.2s ease;
+}
+
+.font-size-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.font-size-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Dyslexia-Friendly Mode */
+body.dyslexia-mode {
+    font-family: 'Lexend', 'OpenDyslexic', 'Comic Sans MS', sans-serif !important;
+    line-height: var(--dyslexia-line-height) !important;
+    letter-spacing: var(--dyslexia-letter-spacing) !important;
+    word-spacing: var(--dyslexia-word-spacing) !important;
+}
+
+body.dyslexia-mode * {
+    font-family: inherit !important;
+    text-align: left !important;
+}
+
+body.dyslexia-mode .question-text,
+body.dyslexia-mode .option,
+body.dyslexia-mode p,
+body.dyslexia-mode h1,
+body.dyslexia-mode h2,
+body.dyslexia-mode h3 {
+    line-height: var(--dyslexia-line-height) !important;
+    letter-spacing: var(--dyslexia-letter-spacing) !important;
+}
+
+body.dyslexia-mode .container,
+body.dyslexia-mode .question-card,
+body.dyslexia-mode .subject-card {
+    max-width: 700px; /* Reduced line length for better readability */
+}
+
+/* Focus Mode - Minimal Distraction */
+body.focus-mode nav,
+body.focus-mode footer,
+body.focus-mode .trust-bar,
+body.focus-mode .trust-section,
+body.focus-mode .hero-trust-metrics,
+body.focus-mode .resume-banner {
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+body.focus-mode .quiz-container {
+    background: var(--focus-mode-bg);
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+body.focus-mode .accessibility-panel,
+body.focus-mode .accessibility-toggle {
+    opacity: 1 !important;
+    pointer-events: all !important;
+}
+
+/* High Contrast Mode */
+body.high-contrast {
+    background: var(--bg-high-contrast) !important;
+}
+
+body.high-contrast * {
+    color: var(--text-color-high-contrast) !important;
+}
+
+body.high-contrast .btn,
+body.high-contrast .option {
+    border: 3px solid #000000 !important;
+}
+
+body.high-contrast .subject-card,
+body.high-contrast .question-card,
+body.high-contrast .option {
+    background: white !important;
+    border: 3px solid #000000 !important;
+}
+
+body.high-contrast .option.selected {
+    background: #FFEB3B !important; /* High contrast yellow for selection */
+    border: 4px solid #000000 !important;
+}
+
+body.high-contrast .option.correct {
+    background: #4CAF50 !important; /* Solid green for correct */
+    color: white !important;
+}
+
+body.high-contrast .option.incorrect {
+    background: #F44336 !important; /* Solid red for incorrect */
+    color: white !important;
+}
+
+/* Font Size Scaling */
+body.font-scale-groot {
+    font-size: calc(16px * var(--font-scale-groot));
+}
+
+body.font-scale-extra-groot {
+    font-size: calc(16px * var(--font-scale-extra-groot));
+}
+
+body.font-scale-groot .question-text,
+body.font-scale-extra-groot .question-text {
+    font-size: 1.4em;
+}
+
+body.font-scale-groot .option,
+body.font-scale-extra-groot .option {
+    font-size: 1.2em;
+    padding: 22px 28px;
+}
+
+/* Multimodal Feedback Animations */
+.option.correct {
+    animation: correctBounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.option.incorrect {
+    animation: incorrectShake 0.5s ease-in-out;
+}
+
+@keyframes correctBounce {
+    0%, 100% { transform: translateY(0) scale(1); }
+    30% { transform: translateY(-12px) scale(1.03); }
+    50% { transform: translateY(-6px) scale(1.02); }
+    70% { transform: translateY(-4px) scale(1.01); }
+}
+
+@keyframes incorrectShake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-8px); }
+    20%, 40%, 60%, 80% { transform: translateX(8px); }
+}
+
+/* Enhanced Feedback with Icons */
+.option.correct::after,
+.option.incorrect::after {
+    font-family: 'Material Icons';
+    font-size: 1.8em;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+.option.correct::after {
+    content: 'check_circle';
+    color: var(--color-correct);
+}
+
+.option.incorrect::after {
+    content: 'error';
+    color: var(--color-incorrect);
+}
+
+.option {
+    position: relative; /* For ::after positioning */
+}
+
+/* Improved Separation for Questions & Answers */
+.quiz-container .answers-section {
+    margin-top: 25px;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.02) !important;
+    border-radius: 14px;
+}
+
+.options-container {
+    gap: 16px; /* Increased spacing between options */
+}
+
+/* Mobile Responsiveness for Accessibility Panel */
+@media (max-width: 768px) {
+    .accessibility-panel {
+        right: 10px;
+        top: 80px;
+        max-width: calc(100% - 20px);
+        padding: 15px;
+    }
+
+    .accessibility-toggle {
+        right: 10px;
+        top: 80px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .accessibility-toggle i {
+        font-size: 24px;
+    }
+
+    body.focus-mode .quiz-container {
+        padding: 20px;
+    }
+
+    .font-size-group {
+        flex-direction: column;
+    }
+
+    .font-size-btn {
+        width: 100%;
     }
 }
