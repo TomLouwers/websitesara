@@ -34,49 +34,49 @@ const CONFIG = {
         'basisvaardigheden-kate': '🎓'
     },
 
-    // Subject descriptions
+    // Subject descriptions - Engaging and motivational
     subjectDescriptions: {
-        begrijpendlezen: 'Test je begrip van teksten en verhalen',
-        brandaan: 'Ontdek de Nederlandse geschiedenis',
-        samenvatten: 'Leer teksten kort en bondig samen te vatten',
-        wereldorientatie: 'Algemene kennis over de wereld',
-        woordenschat: 'Vergroot je vocabulaire',
-        verhaaltjessommen: 'Reken mee met CITO-niveau verhaaltjes',
-        'verhaaltjessommen-emma': 'M4 verhaaltjessommen voor Groep 4',
-        'verhaaltjessommen-kate': 'M5 verhaaltjessommen voor Groep 5',
-        basisvaardigheden: 'Oefen de rekenkundige basisvaardigheden',
-        'basisvaardigheden-emma': 'M4 basisvaardigheden voor Groep 4 (330 opgaven)',
-        'basisvaardigheden-kate': 'M5 basisvaardigheden voor Groep 5 (240 opgaven)'
+        begrijpendlezen: 'Word een échte leesmeester! 📖',
+        brandaan: 'Reis terug in de tijd! ⏰✨',
+        samenvatten: 'Leer teksten slim samen te vatten! 💡',
+        wereldorientatie: 'Ontdek de grote wereld! 🌍',
+        woordenschat: 'Leer gaaf nieuwe woorden! 📚',
+        verhaaltjessommen: 'Los wiskundige puzzels op! 🧩',
+        'verhaaltjessommen-emma': 'Reken mee met Emma! 🧒',
+        'verhaaltjessommen-kate': 'Reken mee met Kate! 🎓',
+        basisvaardigheden: 'Train je rekenskills! 🧮',
+        'basisvaardigheden-emma': 'Word een rekenprof met Emma! (330 opgaven)',
+        'basisvaardigheden-kate': 'Word een rekenprof met Kate! (240 opgaven)'
     },
 
     // File naming pattern
     templateFileSuffix: ' - Template.json',
 
-    // Feedback messages
+    // Feedback messages - Warm, encouraging, child-friendly tone
     feedback: {
         correct: {
-            title: 'Correct!',
-            message: 'Dat is helemaal juist!'
+            title: 'Top gedaan! 🎉',
+            message: 'Je bent goed bezig! Zo leer je steeds meer!'
         },
         incorrect: {
-            title: 'Bijna goed! 💪',
-            messageDefault: 'Je bent op de goede weg! Fouten helpen je leren.',
-            messageWithTips: 'Je bent op de goede weg! Hier is een voorbeeld van een goed antwoord en wat tips:'
+            title: 'Bijna! Probeer het nog eens 👀✨',
+            messageDefault: 'Je komt er wel! Fouten maken hoort bij leren.',
+            messageWithTips: 'Je leert elke vraag erbij! Hier is een voorbeeld en wat tips:'
         },
         noAnswer: {
-            multipleChoice: 'Selecteer eerst een antwoord!',
-            openEnded: 'Vul eerst een antwoord in!'
+            multipleChoice: 'Kies eerst een antwoord! 😊',
+            openEnded: 'Vul eerst je antwoord in! ✍️'
         },
-        noWrongAnswers: 'Geweldig! Je hebt nog geen fouten gemaakt. Ga door met oefenen!'
+        noWrongAnswers: 'Fantastisch! Je hebt nog geen fouten gemaakt! 🌟 Ga zo door!'
     },
 
-    // Score messages
+    // Score messages - Celebratory and motivational
     scoreMessages: {
-        newHighscore: '🎉 NIEUWE HIGHSCORE! ',
-        excellent: '🏆 Uitstekend! Je bent een echte expert!',
-        good: '👏 Goed gedaan! Je hebt het goed onder de knie!',
-        fair: '👍 Niet slecht! Met wat oefening wordt het nog beter!',
-        needsPractice: '💪 Blijf oefenen, je kunt het!'
+        newHighscore: '🎉 NIEUWE HIGHSCORE! Ongelooflijk knap! ',
+        excellent: '🏆 Wauw! Dit heb je écht verdiend! Je bent een ster!',
+        good: '👏 Super gedaan! Je bent op de goede weg!',
+        fair: '👍 Goed bezig! Blijf oefenen en je wordt nóg beter!',
+        needsPractice: '💪 Niet opgeven! Elke keer word je een beetje beter!'
     },
 
     // Score thresholds (percentages)
