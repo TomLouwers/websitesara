@@ -3011,6 +3011,35 @@ body::before {
 }
 
 /* Responsive Adjustments */
+
+/* Tablet-specific styles (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .hero-cta-group {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        width: auto;
+        min-width: 200px;
+    }
+
+    .quick-start-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .subject-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trust-bar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile styles (max 768px) */
 @media (max-width: 768px) {
     body {
         padding-top: 80px; /* Adjust for smaller mobile nav */
@@ -3043,8 +3072,9 @@ body::before {
     .nav-link-secondary {
         width: 100%;
         justify-content: center;
-        font-size: 0.9em;
-        padding: 10px 16px;
+        font-size: 0.95em;
+        padding: 12px 20px;
+        min-height: 48px; /* Better touch target */
     }
 
     /* Quick-start mobile styles */
@@ -3054,11 +3084,13 @@ body::before {
     }
 
     .section-title {
-        font-size: 1.4em;
+        font-size: 1.5em;
+        line-height: 1.3;
     }
 
     .section-subtitle {
-        font-size: 0.9em;
+        font-size: 0.95em;
+        line-height: 1.4;
     }
 
     .quick-start-grid {
@@ -3066,16 +3098,20 @@ body::before {
     }
 
     .quick-start-card {
-        padding: 6px 12px;
-        font-size: 0.9em;
+        padding: 10px 16px;
+        font-size: 0.95em;
+        min-height: 48px; /* Better touch target for children */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .quick-start-number {
-        font-size: 1em;
+        font-size: 1.1em;
     }
 
     .quick-start-label {
-        font-size: 0.8em;
+        font-size: 0.85em;
     }
 
     .subject-intro {
@@ -3098,9 +3134,10 @@ body::before {
     }
 
     .hero-illustration {
-        flex: 0 0 200px;
-        width: 200px;
-        height: 200px;
+        flex: 0 0 180px;
+        width: 180px;
+        height: 180px;
+        margin: 0 auto; /* Center on mobile */
     }
 
     .header h1 {
@@ -3112,13 +3149,15 @@ body::before {
     }
 
     .header .tagline {
-        font-size: 0.9em;
+        font-size: 0.95em;
         margin-bottom: 16px;
+        line-height: 1.4;
     }
 
     .header .subtitle {
-        font-size: 0.85em;
+        font-size: 0.9em;
         margin-top: 12px;
+        line-height: 1.4;
     }
 
     .hero-cta-group {
@@ -3131,25 +3170,36 @@ body::before {
     .btn-hero-secondary {
         width: 100%;
         justify-content: center;
-        font-size: 1em;
-        padding: 14px 24px;
+        font-size: 1.05em;
+        padding: 16px 28px;
+        min-height: 52px; /* Comfortable touch target */
     }
 
     .trust-bar {
-        padding: 15px 10px;
-        gap: 10px;
+        padding: 20px 15px;
+        gap: 12px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2-column grid for better layout */
     }
 
     .trust-item {
-        gap: 5px;
+        gap: 8px;
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
     }
 
-    .trust-text {
+    .trust-item-icon {
+        font-size: 1.8em;
+    }
+
+    .trust-item-title {
+        font-size: 0.9em;
+        font-weight: 600;
+    }
+
+    .trust-item-subtitle {
         font-size: 0.8em;
-    }
-
-    .trust-icon {
-        font-size: 1em;
     }
 
     .subject-grid {
@@ -3166,13 +3216,15 @@ body::before {
     }
 
     .subject-card h3 {
-        font-size: 1.3em;
+        font-size: 1.35em;
         word-wrap: break-word;
         overflow-wrap: break-word;
+        line-height: 1.3;
     }
 
     .subject-card p {
-        font-size: 0.9em;
+        font-size: 0.95em;
+        line-height: 1.4;
     }
 
     .subject-meta {
@@ -3185,12 +3237,16 @@ body::before {
     }
 
     .breadcrumb {
-        font-size: 0.85em;
-        gap: 6px;
+        font-size: 0.9em;
+        gap: 8px;
+        line-height: 1.4;
+        padding: 10px 0;
     }
 
-    .quiz-header h2 {
-        font-size: 1.6em;
+    .quiz-header h2,
+    .quiz-header-minimal h2 {
+        font-size: 1.7em;
+        line-height: 1.3;
     }
 
     .quiz-header-controls {
@@ -3222,23 +3278,33 @@ body::before {
     }
 
     .question-text {
-        font-size: 1.2em; /* Reduced from 1.3em for better fit */
+        font-size: 1.25em;
         word-wrap: break-word;
         overflow-wrap: break-word;
         hyphens: auto;
+        line-height: 1.5;
     }
 
     .option {
-        padding: 15px 20px;
+        padding: 16px 20px;
         font-size: 1.05em;
         word-wrap: break-word;
         overflow-wrap: break-word;
+        min-height: 52px; /* Comfortable touch target for children */
+        line-height: 1.4;
     }
 
     .btn {
-        padding: 12px 25px;
+        padding: 14px 28px;
         font-size: 1em;
-        width: 100%; /* Full width buttons for easier tapping */
+        min-height: 48px; /* Comfortable touch target */
+        /* Removed width: 100% for more flexible layouts */
+    }
+
+    /* Primary action buttons can be full width for emphasis */
+    .btn-primary,
+    .btn-primary-action {
+        width: 100%;
     }
 
     .quiz-controls {
@@ -3363,6 +3429,45 @@ body::before {
     .review-correct-answer {
         display: block;
         margin-top: 5px;
+    }
+}
+
+/* Extra small screens (max 400px) - Ultra compact mode */
+@media (max-width: 400px) {
+    body {
+        padding: 15px;
+        padding-top: 75px;
+    }
+
+    .header {
+        padding: 10px 10px 8px;
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-illustration {
+        flex: 0 0 150px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .quick-start-grid {
+        gap: 6px;
+    }
+
+    .quick-start-card {
+        padding: 8px 12px;
+    }
+
+    .subject-card {
+        padding: 20px;
+    }
+
+    .quiz-container,
+    .results-container {
+        padding: 20px;
     }
 }
 
@@ -3878,14 +3983,33 @@ body::before {
 
 /* Responsive Design for Modaal */
 @media (max-width: 768px) {
+    .modaal-overlay {
+        padding: 0; /* Remove padding for full-screen modal */
+    }
+
     .modaal-content {
-        border-radius: 0;
-        max-height: 100vh;
+        border-radius: 20px 20px 0 0; /* Rounded top corners only */
+        max-height: 95vh;
+        margin-top: auto; /* Push to bottom like a sheet */
+    }
+
+    .modaal-header {
+        padding: 20px 24px;
+        position: sticky;
+        top: 0;
+        background: white;
+        z-index: 1;
+    }
+
+    .modaal-header h2 {
+        font-size: 1.3em;
+        line-height: 1.3;
     }
 
     .error-badge {
         flex-direction: column;
         text-align: center;
+        padding: 16px 20px;
     }
 
     .remedial-cta {
@@ -3916,8 +4040,8 @@ body::before {
     .berekening-section,
     .concept-box,
     .lova-accordion {
-        margin: 15px;
-        padding: 15px;
+        margin: 18px;
+        padding: 18px;
     }
 }
 
@@ -4260,32 +4384,27 @@ body::before {
 /* Responsive Design for Trust Elements */
 @media (max-width: 768px) {
     .hero-trust-metrics {
-        gap: 12px;
+        gap: 10px;
         margin-top: 20px;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .trust-metric {
-        padding: 8px 14px;
-        font-size: 0.9em;
+        padding: 10px 16px;
+        font-size: 0.95em;
+        min-height: 44px; /* Better touch target */
+        display: flex;
+        align-items: center;
     }
 
     .trust-metric-icon {
-        font-size: 1.1em;
+        font-size: 1.2em;
     }
 
     .trust-metric-text {
-        font-size: 0.8em;
-    }
-
-    .trust-bar {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .trust-bar .trust-item {
-        width: 100%;
-        min-width: auto;
+        font-size: 0.85em;
+        white-space: nowrap;
     }
 
     .trust-section {
@@ -4294,8 +4413,9 @@ body::before {
     }
 
     .trust-section-title {
-        font-size: 1.6em;
+        font-size: 1.7em;
         margin-bottom: 30px;
+        line-height: 1.3;
     }
 
     .testimonials-grid {
