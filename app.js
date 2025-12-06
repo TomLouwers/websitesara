@@ -793,18 +793,17 @@ function loadCurrentQuestion() {
     const lovaHelpPanel = document.getElementById('lovaHelpPanel');
 
     if (hasLovaData) {
-        // Show L.O.V.A. help button and load data into panel
-        lovaHelpButton.classList.remove('hidden');
+        // Show L.O.V.A. help button (question mark icon) and load data into panel
+        lovaHelpButton.style.display = 'flex';
         loadLovaHelpData(currentQuestion);
 
         // Reset panel to collapsed state for new question
         lovaHelpPanelExpanded = false;
         lovaHelpPanel.classList.remove('expanded');
         lovaHelpPanel.classList.add('hidden');
-        document.getElementById('lovaToggleIcon').textContent = '▼';
     } else {
         // Hide L.O.V.A. help button
-        lovaHelpButton.classList.add('hidden');
+        lovaHelpButton.style.display = 'none';
         lovaHelpPanel.classList.add('hidden');
     }
 
@@ -1599,12 +1598,10 @@ let lovaHelpPanelExpanded = false;
 function toggleLovaPanel() {
     lovaHelpPanelExpanded = !lovaHelpPanelExpanded;
     const panel = document.getElementById('lovaHelpPanel');
-    const icon = document.getElementById('lovaToggleIcon');
 
     if (lovaHelpPanelExpanded) {
         panel.classList.add('expanded');
         panel.classList.remove('hidden');
-        icon.textContent = '▲';
 
         // Increment L.O.V.A. click counter (global)
         lovaClickCount++;
@@ -1622,7 +1619,6 @@ function toggleLovaPanel() {
                 panel.classList.add('hidden');
             }
         }, CONFIG.lova.panelTransitionDuration);
-        icon.textContent = '▼';
     }
 }
 
