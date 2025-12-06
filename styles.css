@@ -3933,10 +3933,10 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 15px;
     margin-top: 25px;
     margin-bottom: 15px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .trust-metric {
@@ -4264,6 +4264,7 @@ body::before {
     .hero-trust-metrics {
         gap: 12px;
         margin-top: 20px;
+        flex-wrap: wrap;
     }
 
     .trust-metric {
