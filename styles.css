@@ -3043,7 +3043,7 @@ body::before {
 @media (max-width: 768px) {
     body {
         padding: 0; /* App-like: no body padding */
-        padding-top: 60px; /* Compact nav */
+        padding-top: 0; /* No fixed nav on mobile */
     }
 
     .container {
@@ -3052,7 +3052,9 @@ body::before {
     }
 
     .main-nav {
-        padding: 6px 10px;
+        position: static; /* Not fixed on mobile - scrolls away */
+        padding: 8px 12px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
     }
 
     .logo-text {
@@ -3282,11 +3284,13 @@ body::before {
         gap: 6px;
         line-height: 1.3;
         padding: 8px 12px;
+        margin: 0; /* Remove default margin */
     }
 
     .quiz-progress-bar-container {
-        padding: 10px 12px;
-        margin-bottom: 10px;
+        padding: 12px;
+        margin: 0; /* Flush to edge */
+        border-radius: 0; /* Sharp edges for app-like feel */
     }
 
     .progress-label,
@@ -3302,13 +3306,15 @@ body::before {
 
     .quiz-header,
     .quiz-header-minimal {
-        margin-bottom: 12px;
-        padding: 0 12px;
+        margin-bottom: 8px;
+        padding: 12px; /* Consistent padding with other elements */
+        background: white; /* Background for contrast */
     }
 
     .quiz-header-summary,
     .quiz-progress-summary {
         font-size: 0.8em;
+        margin-top: 6px;
     }
 
     .quiz-header-controls {
@@ -3336,17 +3342,19 @@ body::before {
     }
 
     .quiz-container, .results-container {
-        padding: 12px;
+        padding: 0; /* Remove outer container padding */
+        background: transparent; /* No background on outer container */
+        box-shadow: none; /* No shadow on outer container */
     }
 
     .question-card {
-        padding: 12px;
-        margin-bottom: 12px;
+        padding: 14px; /* Only padding on the card itself */
+        margin: 12px; /* Margin instead of padding for spacing */
         border-radius: 10px;
     }
 
     .question-container {
-        padding: 12px;
+        padding: 0; /* Remove inner container padding */
     }
 
     .question-text {
@@ -3369,7 +3377,8 @@ body::before {
     }
 
     .answers-section {
-        padding: 12px;
+        padding: 0; /* Remove answers section padding */
+        margin: 0 12px; /* Use margin for spacing */
     }
 
     .options-container {
@@ -3377,13 +3386,13 @@ body::before {
     }
 
     .quiz-actions {
-        padding: 12px;
-        margin-top: 10px;
+        padding: 0 12px 12px 12px; /* Only horizontal and bottom padding */
+        margin-top: 12px;
     }
 
     .feedback-card {
-        padding: 12px;
-        margin: 10px 0;
+        padding: 14px;
+        margin: 12px; /* Use margin for spacing from edges */
         border-radius: 8px;
     }
 
@@ -3535,11 +3544,14 @@ body::before {
 @media (max-width: 400px) {
     body {
         padding: 0;
-        padding-top: 56px;
     }
 
     .container {
         padding: 0;
+    }
+
+    .main-nav {
+        padding: 6px 10px;
     }
 
     .header {
@@ -3579,15 +3591,21 @@ body::before {
 
     .quiz-container,
     .results-container {
-        padding: 10px;
+        padding: 0; /* No padding on outer container */
     }
 
     .question-card {
-        padding: 10px;
+        padding: 12px; /* Compact padding */
+        margin: 10px; /* Margin for spacing */
     }
 
     .question-container {
-        padding: 10px;
+        padding: 0; /* No inner padding */
+    }
+
+    .answers-section {
+        padding: 0;
+        margin: 0 10px;
     }
 
     .question-text {
