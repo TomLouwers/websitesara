@@ -3070,7 +3070,8 @@ body::before {
 
     /* Hide landing page content when quiz is active */
     body:has(#quizPage:not([style*="display: none"])) #landingPage,
-    body:has(#quizPage:not([style*="display: none"])) .header {
+    body:has(#quizPage:not([style*="display: none"])) .header,
+    body:has(#quizPage:not([style*="display: none"])) .trust-bar {
         display: none !important;
     }
 
@@ -3079,10 +3080,29 @@ body::before {
         display: none !important;
     }
 
-    /* Hide quiz header on mobile - too much clutter */
-    .quiz-header,
-    .quiz-header-minimal {
+    /* Hide full quiz header but keep minimal version with controls */
+    .quiz-header {
         display: none !important;
+    }
+
+    /* Keep quiz-header-minimal visible - has essential controls */
+    .quiz-header-minimal {
+        /* Keep visible - has stop, pause, help buttons */
+        display: block !important;
+        padding: 10px 12px;
+        margin-bottom: 8px;
+    }
+
+    /* Make quiz controls more prominent */
+    .quiz-header-controls {
+        display: flex !important;
+        gap: 8px;
+    }
+
+    .btn-icon {
+        min-width: 40px;
+        min-height: 40px;
+        padding: 8px;
     }
 
     /* Compact progress bar - make it minimal */
