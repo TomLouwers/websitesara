@@ -1292,6 +1292,23 @@ function goToLanding() {
 }
 
 // Pause quiz and save state
+// Focus Mode - Hide distractions for better concentration
+function toggleFocusMode() {
+    const body = document.body;
+    const focusButton = document.getElementById('focusModeToggle');
+    const icon = focusButton.querySelector('i');
+
+    body.classList.toggle('focus-mode');
+
+    if (body.classList.contains('focus-mode')) {
+        icon.textContent = 'visibility';
+        focusButton.title = 'Exit Focus Modus';
+    } else {
+        icon.textContent = 'visibility_off';
+        focusButton.title = 'Focus Modus';
+    }
+}
+
 function pauseQuiz() {
     const quizState = {
         subject: currentSubject,
