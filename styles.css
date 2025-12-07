@@ -3346,6 +3346,128 @@ body::before {
         display: none;
     }
 
+    /* Focus Mode - ultra-minimal quiz view for concentration */
+    body.focus-mode .quiz-header-minimal h2,
+    body.focus-mode .quiz-progress-summary,
+    body.focus-mode .milestone-celebration,
+    body.focus-mode .breadcrumb {
+        display: none !important;
+    }
+
+    body.focus-mode .quiz-header-minimal {
+        padding: 8px 12px;
+        margin-bottom: 4px;
+        background: transparent;
+    }
+
+    body.focus-mode .quiz-header-controls {
+        justify-content: flex-end;
+        margin: 0;
+    }
+
+    body.focus-mode .question-card {
+        margin: 0;
+        box-shadow: none;
+    }
+
+    #focusModeToggle {
+        background: linear-gradient(135deg, #E7F3FF 0%, #CFE2FF 100%);
+        color: #0d6efd;
+    }
+
+    #focusModeToggle:hover {
+        background: linear-gradient(135deg, #CFE2FF 0%, #B6D7FF 100%);
+    }
+
+    body.focus-mode #focusModeToggle {
+        background: linear-gradient(135deg, #ff9a62 0%, #ff7b3d 100%);
+        color: white;
+    }
+
+    /* Trust section - mobile vertical blocks */
+    .trust-section {
+        padding: 24px 16px;
+        background: linear-gradient(135deg, #F9FAFB 0%, #FFFFFF 100%);
+        margin: 20px 0;
+    }
+
+    .trust-section-title {
+        font-size: 1.2em;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.3;
+    }
+
+    .trust-section-subtitle {
+        font-size: 0.85em;
+        text-align: center;
+        color: var(--text-color-medium);
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
+
+    .testimonials-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    .testimonial-card {
+        background: white;
+        padding: 16px;
+        border-radius: 12px;
+        border-left: 4px solid var(--accent-warm-orange);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .testimonial-icon {
+        font-size: 2em;
+        margin-bottom: 8px;
+    }
+
+    .testimonial-quote {
+        font-size: 0.9em;
+        line-height: 1.5;
+        font-style: italic;
+        margin-bottom: 8px;
+        color: var(--text-color-dark);
+    }
+
+    .testimonial-author {
+        font-size: 0.8em;
+        color: var(--text-color-medium);
+        font-weight: 600;
+    }
+
+    .trust-stats-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .trust-stat {
+        text-align: center;
+        padding: 12px 8px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .trust-stat-number {
+        font-size: 1.3em;
+        font-weight: 700;
+        color: var(--accent-warm-orange);
+        margin-bottom: 4px;
+    }
+
+    .trust-stat-label {
+        font-size: 0.7em;
+        line-height: 1.3;
+        color: var(--text-color-medium);
+    }
+
     .subject-grid {
         grid-template-columns: repeat(2, 1fr);
         padding: 12px;
