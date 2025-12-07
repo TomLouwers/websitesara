@@ -3206,10 +3206,85 @@ body::before {
         background: white;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         transition: all 0.2s ease-out;
+        border: 2px solid transparent;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Soft gradients for each group */
+    .quick-start-card[data-group="3"]::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #A8E6CF 0%, #7ED9A8 100%);
+    }
+
+    .quick-start-card[data-group="4"]::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #7ED9A8 0%, #52C788 100%);
+    }
+
+    .quick-start-card[data-group="5"]::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #52C788 0%, #48B57E 100%);
+    }
+
+    .quick-start-card[data-group="6"]::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #5DADE2 0%, #4A8FB5 100%);
+    }
+
+    .quick-start-card[data-group="7"]::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #FFD93D 0%, #FFC107 100%);
+    }
+
+    .quick-start-card[data-group="8"]::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #ff9a62 0%, #ff7b3d 100%);
     }
 
     .quick-start-card:active {
         transform: scale(0.96);
+    }
+
+    .quick-start-card:hover {
+        border-color: var(--accent-warm-orange);
+        box-shadow: 0 4px 12px rgba(255, 154, 98, 0.2);
+    }
+
+    .quick-start-icon {
+        font-size: 1.8em;
+        margin-bottom: 4px;
+        line-height: 1;
     }
 
     .quick-start-number {
@@ -3229,6 +3304,11 @@ body::before {
         color: white;
         padding: 2px 6px;
         border-radius: 6px;
+    }
+
+    .quick-start-featured {
+        border-color: var(--accent-warm-orange);
+        background: linear-gradient(135deg, #FFF5E8 0%, #FFFFFF 100%);
     }
 
     .subject-intro {
