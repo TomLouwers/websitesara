@@ -165,13 +165,6 @@ body::before {
     line-height: 1;
 }
 
-/* Center: Link */
-.nav-center {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
 .nav-link {
     text-decoration: none;
     color: var(--text-dark);
@@ -286,11 +279,11 @@ body::before {
 .hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 80px;
     align-items: center;
-    max-width: 95%;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 60px;
 }
 
 /* Left Column */
@@ -392,21 +385,21 @@ body::before {
 
 .btn-hero-primary {
     padding: 14px 32px;
-    background-color: rgba(255, 138, 52, 0.15);
-    color: var(--primary);
+    background-color: var(--primary);
+    color: white;
     border: none;
     border-radius: var(--border-radius-button);
     font-size: 1.125rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
-    box-shadow: 0 2px 8px rgba(255, 138, 52, 0.15);
+    box-shadow: 0 2px 8px rgba(255, 138, 52, 0.2);
 }
 
 .btn-hero-primary:hover {
-    background-color: rgba(255, 138, 52, 0.25);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 138, 52, 0.25);
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 138, 52, 0.3);
 }
 
 .btn-hero-secondary {
@@ -573,7 +566,7 @@ body::before {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-dark);
 }
@@ -596,8 +589,8 @@ body::before {
 
 .quiz-card-question p {
     margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: 0.85rem;
+    line-height: 1.4;
     color: var(--text-dark);
 }
 
@@ -649,7 +642,7 @@ body::before {
 }
 
 .option-text {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: var(--text-dark);
 }
 
@@ -660,7 +653,7 @@ body::before {
     color: white;
     border: none;
     border-radius: var(--border-radius-button);
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
