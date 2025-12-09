@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | OefenPlatform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="verhoudingstabel-widget.css">
+    <style>
+        /* Quiz page specific styles */
+        body {
+            background-color: #FFFDF8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .quiz-page-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Quiz Page Content -->
+    <div id="quizPage" class="quiz-container">
+        <!-- Bold Colorful Progress Bar at Top -->
+        <div class="quiz-progress-bar-container">
+            <div class="quiz-progress-info">
+                <span id="progressLabel" class="progress-label">Vraag 1 van 10</span>
+                <span id="progressPercentage" class="progress-percentage">10% voltooid</span>
+            </div>
+            <div class="quiz-progress-bar">
+                <div id="progressBarFill" class="quiz-progress-fill" style="width: 10%"></div>
+            </div>
+        </div>
+
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" id="breadcrumb" aria-label="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator">›</span>
+            <span id="breadcrumbSubject">Onderwerp</span>
+            <span class="breadcrumb-separator" id="breadcrumbLevelSep" style="display:none;">›</span>
+            <span id="breadcrumbLevel" style="display:none;">Niveau</span>
+            <span class="breadcrumb-separator">›</span>
+            <span class="breadcrumb-current">Quiz</span>
+        </nav>
+
+        <!-- Quiz Header - Minimal, Clean -->
+        <div class="quiz-header-minimal">
+            <h2 id="quizTitle">Quiz</h2>
+
+            <!-- Quiz Control Icons (top-right) -->
+            <div class="quiz-header-controls">
+                <button class="btn-icon" id="focusModeToggle" onclick="toggleFocusMode()" title="Focus Modus">
+                    <i class="material-icons">visibility_off</i>
+                </button>
+                <button class="btn-icon" id="lovaHelpButton" onclick="toggleLovaPanel()" title="L.O.V.A. Stappenplan" style="display: none;">
+                    <i class="material-icons">help_outline</i>
+                </button>
+                <button class="btn-icon" onclick="pauseQuiz()" title="Pauzeer">
+                    <i class="material-icons">pause</i>
+                </button>
+                <button class="btn-icon" onclick="stopQuiz()" title="Stop">
+                    <i class="material-icons">stop</i>
+                </button>
+            </div>
+
+            <!-- Progress Summary (compact) -->
+            <div class="quiz-progress-summary">
+                <span class="progress-stat correct">✓ <span id="totalCorrect">0</span> goed</span>
+                <span class="progress-stat" style="color: var(--secondary-color);">📋 <span id="lovaClicks">0</span> hulp</span>
+            </div>
+        </div>
+
+        <!-- Milestone Celebration -->
+        <div id="milestoneCelebration" class="milestone-celebration hidden">
+            <i class="material-icons celebration-icon">celebration</i>
+            <span id="milestoneMessage">Goed bezig!</span>
+        </div>
+
+        <!-- Question Card Container -->
+        <div class="question-card">
+            <div class="question-container">
+                <div id="readingContent" class="reading-content hidden"></div>
+                <div class="question-text" id="questionText"></div>
+
+                <!-- Hint Container -->
+                <div id="hintContainer" style="text-align: center; margin: 20px 0;"></div>
+
+                <!-- L.O.V.A. Help Panel -->
+                <div id="lovaHelpPanel" class="lova-help-panel hidden">
+                    <div class="lova-help-content">
+                        <!-- Stap 1: Lezen -->
+                        <div class="lova-help-step">
+                            <h4 class="lova-help-step-title">📖 Stap 1: Lezen</h4>
+                            <div class="lova-help-section">
+                                <p><strong>Wat wordt er gevraagd?</strong></p>
+                                <p id="lovaHelpHoofdvraag" class="lova-help-text"></p>
+                            </div>
+                            <div class="lova-help-section">
+                                <p><strong>Let op: dit is ruis (niet nodig voor deze vraag):</strong></p>
+                                <ul id="lovaHelpRuis" class="lova-help-list"></ul>
+                            </div>
+                            <div class="lova-help-section">
+                                <p><strong>Tussenstappen:</strong></p>
+                                <ul id="lovaHelpTussenstappen" class="lova-help-list"></ul>
+                            </div>
+                        </div>
+
+                        <!-- Stap 2: Ordenen -->
+                        <div class="lova-help-step">
+                            <h4 class="lova-help-step-title">🗃️ Stap 2: Ordenen</h4>
+                            <div class="lova-help-section">
+                                <p><strong>Relevante getallen:</strong></p>
+                                <ul id="lovaHelpGetallen" class="lova-help-list"></ul>
+                            </div>
+                            <div class="lova-help-section">
+                                <p><strong>Wiskundige tool:</strong></p>
+                                <p id="lovaHelpTool" class="lova-help-text"></p>
+                            </div>
+                        </div>
+
+                        <!-- Stap 3: Vormen -->
+                        <div class="lova-help-step">
+                            <h4 class="lova-help-step-title">✍️ Stap 3: Vormen</h4>
+                            <div id="lovaHelpBewerkingen" class="lova-help-bewerkingen"></div>
+                        </div>
+
+                        <!-- Stap 4: Antwoorden -->
+                        <div class="lova-help-step">
+                            <h4 class="lova-help-step-title">✅ Stap 4: Antwoorden</h4>
+                            <div class="lova-help-section">
+                                <p><strong>Verwachte eenheid:</strong> <span id="lovaHelpEenheid" class="lova-help-text"></span></p>
+                            </div>
+                            <div class="lova-help-section">
+                                <p><strong>Logica check:</strong></p>
+                                <p id="lovaHelpLogica" class="lova-help-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Answer Options Container -->
+            <div class="answers-section">
+                <div id="optionsContainer" class="options-container"></div>
+                <textarea id="textareaAnswer" class="textarea-answer hidden" placeholder="Typ hier je antwoord..."></textarea>
+            </div>
+
+            <!-- Feedback Section -->
+            <div id="feedbackSection" class="feedback-card hidden">
+                <div class="feedback-icon" id="feedbackIcon"></div>
+                <h4 id="feedbackTitle"></h4>
+                <p id="feedbackMessage"></p>
+                <p id="correctAnswerDisplay" class="hidden"></p>
+                <div id="verhoudingstabelContainer"></div>
+                <p id="extraInfoDisplay" class="hidden"></p>
+                <div id="strategyAndTips" class="hidden">
+                    <h4>Strategie</h4>
+                    <p id="strategyText"></p>
+                    <h4>Tips</h4>
+                    <ul id="tipsList"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="quiz-actions">
+            <button class="btn btn-primary-action" id="submitBtn" onclick="submitAnswer()">
+                <i class="material-icons">check_circle</i> Check mijn antwoord!
+            </button>
+            <button class="btn btn-primary-action hidden" id="nextBtn" onclick="nextQuestion()">
+                Volgende! <i class="material-icons">arrow_forward</i>
+            </button>
+
+            <!-- Secondary Actions -->
+            <div class="quiz-secondary-actions">
+                <button class="btn-secondary-action" onclick="goToLanding()" title="Ga terug">
+                    <i class="material-icons">arrow_back</i> Ga terug
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Page -->
+    <div id="resultsPage" class="results-container" style="display: none;">
+        <div class="results-score" id="finalScore">0/0</div>
+        <div class="results-message" id="resultsMessage">Fantastisch gewerkt! 🌟</div>
+        <button class="btn" onclick="goToLanding()">
+            <i class="material-icons">refresh</i> Nog een keer oefenen!
+        </button>
+    </div>
+
+    <!-- Review Page -->
+    <div id="reviewPage" class="results-container" style="display: none;">
+        <h2 style="color: var(--primary-color); margin-bottom: 20px;">📚 Leer van je fouten — zo word je beter!</h2>
+        <div class="results-score" id="reviewScore">0/0</div>
+        <div class="results-message" id="reviewMessage">Kijk goed naar deze vragen — elke fout maakt je slimmer! 💪</div>
+
+        <div id="wrongAnswersContainer" style="margin-top: 30px;">
+            <!-- Wrong answers will be dynamically inserted here -->
+        </div>
+
+        <button class="btn" onclick="goToLanding()" style="margin-top: 30px;">
+            <i class="material-icons">refresh</i> Nog een keer oefenen!
+        </button>
+    </div>
+
+    <!-- Foutanalyse Modaal -->
+    <div id="foutanalyseModaal" class="modaal-overlay">
+        <div class="modaal-content">
+            <div class="modaal-header">
+                <h2 id="modaalTitle">💡 Bijna! Je komt er wel! 👀✨</h2>
+                <button class="modaal-close" onclick="closeFoutanalyseModaal()">✕</button>
+            </div>
+
+            <div id="errorBadge" class="error-badge"></div>
+
+            <div class="fault-analysis-section">
+                <h3>Laten we samen kijken! 💡</h3>
+                <p id="mainExplanation" class="main-explanation"></p>
+
+                <div id="reflectionBox" class="reflection-box" style="display: none;">
+                    <div class="reflection-header">
+                        <span class="reflection-icon">🤔</span>
+                        <strong>REFLECTIEVRAAG:</strong>
+                    </div>
+                    <p id="reflectionText" class="reflection-text"></p>
+                </div>
+            </div>
+
+            <div id="visualAidSection" class="visual-aid-section" style="display: none;">
+                <h4>
+                    <span class="visual-icon">📊</span>
+                    <span id="visualAidTitle"></span>
+                </h4>
+                <div id="visualAidContent" class="visual-content"></div>
+                <button id="videoButton" class="video-button" style="display: none;">
+                    ▶️ Bekijk Uitleg: <span id="videoTitle"></span>
+                </button>
+            </div>
+
+            <div id="remedialSection" class="remedial-section" style="display: none;">
+                <div class="remedial-alert">
+                    💪 Extra oefening maakt je sterker!
+                </div>
+                <p id="remedialExplanation" class="remedial-explanation"></p>
+                <button id="remedialCta" class="remedial-cta">
+                    <span class="cta-icon">🎯</span>
+                    <span id="remedialCtaText" class="cta-text"></span>
+                </button>
+                <div class="exercise-info">
+                    <span class="info-icon">ℹ️</span>
+                    <span>5 eenvoudige oefenopgaven</span>
+                </div>
+            </div>
+
+            <div class="modaal-actions">
+                <button class="btn btn-primary" onclick="closeFoutanalyseModaal()">
+                    Probeer Opnieuw
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modaal -->
+    <div id="successModaal" class="modaal-overlay">
+        <div class="modaal-content">
+            <div class="modaal-header">
+                <h2>✅ Goed gedaan! Hier is de uitleg</h2>
+                <button class="modaal-close" onclick="closeSuccessModaal()">✕</button>
+            </div>
+
+            <div class="lova-accordion">
+                <button class="accordion-toggle" onclick="toggleLovaAccordion()">
+                    <span id="lovaToggleIcon">▼</span>
+                    📚 L.O.V.A. Stappenplan (klik om uit te klappen)
+                </button>
+                <div id="lovaContent" class="accordion-content">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="berekening-section">
+                <h3>🧮 Berekening Stap voor Stap</h3>
+                <div id="berekeningTable"></div>
+            </div>
+
+            <div class="concept-box">
+                <h3>💡 Dit moet je weten</h3>
+                <p id="conceptText"></p>
+            </div>
+
+            <div class="modaal-actions">
+                <button class="btn btn-primary" onclick="nextQuestion()">
+                    Volgende Vraag
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accessibility Panel -->
+    <div class="accessibility-panel" id="accessibilityPanel">
+        <h3>♿ Toegankelijkheidsopties</h3>
+
+        <div class="accessibility-option">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                <span class="option-icon">🔠</span>
+                <span style="font-weight: 600;">Lettergrootte</span>
+            </div>
+            <div class="font-size-group">
+                <button class="font-size-btn active" data-size="standard">Standaard</button>
+                <button class="font-size-btn" data-size="groot">Groot</button>
+                <button class="font-size-btn" data-size="extra-groot">Extra Groot</button>
+            </div>
+        </div>
+
+        <div class="accessibility-option">
+            <label>
+                <input type="checkbox" id="dyslexiaMode">
+                <span class="option-icon">🧠</span>
+                <span>Dyslexie-modus (Lexend)</span>
+            </label>
+        </div>
+
+        <div class="accessibility-option">
+            <label>
+                <input type="checkbox" id="focusMode">
+                <span class="option-icon">🎯</span>
+                <span>Focus-modus (minimale afleiding)</span>
+            </label>
+        </div>
+
+        <div class="accessibility-option">
+            <label>
+                <input type="checkbox" id="highContrastMode">
+                <span class="option-icon">🎨</span>
+                <span>Hoog contrast</span>
+            </label>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="verhoudingstabel-widget.js"></script>
+    <script src="foutanalyse-modaal.js"></script>
+    <script src="app.js"></script>
+    <script src="accessibility.js"></script>
+
+    <script>
+        // On page load, check if we have quiz data in localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const quizState = localStorage.getItem('quizState');
+
+            if (!quizState) {
+                // No quiz state found, redirect to home
+                alert('Geen quiz data gevonden. Je wordt teruggestuurd naar de homepagina.');
+                window.location.href = 'index.html';
+                return;
+            }
+
+            // Quiz state exists, let app.js handle loading it
+            // The quiz should already start automatically via the modified app.js
+        });
+
+        // Override goToLanding to redirect to index.html
+        function goToLanding() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
