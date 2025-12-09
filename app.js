@@ -1861,9 +1861,24 @@ document.addEventListener('DOMContentLoaded', function() {
         // Clear the flag
         localStorage.removeItem('autoStartSubject');
 
-        // Small delay to ensure DOM is ready
-        setTimeout(() => {
-            loadSubject(autoStartSubject);
+        // Load the subject data and start quiz directly (skip theme selection)
+        setTimeout(async () => {
+            const filename = autoStartSubject + CONFIG.templateFileSuffix;
+            const data = await loadJsonFile(filename);
+
+            if (!data) {
+                alert('Kon quiz data niet laden.');
+                return;
+            }
+
+            // Store the data
+            quizData[autoStartSubject] = data;
+            currentSubject = autoStartSubject;
+            currentTheme = null; // No specific theme, use all questions
+
+            // Start quiz directly with all questions
+            currentQuiz = data;
+            startQuizWithData(autoStartSubject);
         }, 100);
     }
 });
