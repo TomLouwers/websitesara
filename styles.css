@@ -466,6 +466,26 @@ body::before {
     box-shadow: var(--shadow-card);
     width: 100%;
     max-width: 420px;
+    opacity: 0.95;
+}
+
+/* Floating animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes floatSlow {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
 }
 
 .success-badge {
@@ -479,6 +499,8 @@ body::before {
     font-size: 0.875rem;
     font-weight: 600;
     box-shadow: 0 2px 8px rgba(56, 193, 114, 0.3);
+    animation: float 3s ease-in-out infinite;
+    z-index: 10;
 }
 
 .floating-action-btn {
@@ -495,12 +517,28 @@ body::before {
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 8px rgba(255, 138, 52, 0.3);
-    transition: all 0.2s ease;
+    animation: floatSlow 4s ease-in-out infinite;
+    font-size: 1.25rem;
 }
 
 .floating-action-btn:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 12px rgba(255, 138, 52, 0.4);
+}
+
+.quiz-card-points-pill {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background: #FFE8D1;
+    color: #FF8A34;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(255, 138, 52, 0.2);
+    animation: float 3.5s ease-in-out infinite;
+    z-index: 10;
 }
 
 .quiz-card-header {
@@ -614,13 +652,20 @@ body::before {
 /* === Snelle Start Strip - Master Configuration === */
 .snelle-start-strip {
     background-color: rgba(255, 138, 52, 0.05);
-    padding: 20px;
+    padding: 20px 0;
     margin: 40px 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 .snelle-start-container {
     max-width: var(--container-max-width);
     margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     gap: 24px;
