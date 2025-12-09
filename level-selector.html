@@ -629,7 +629,7 @@
     </footer>
 
     <script>
-        // Subject configuration
+        // Subject configuration - maps to available quiz data
         const subjectConfig = {
             'verhaaltjessommen': {
                 title: 'Verhaaltjessommen',
@@ -637,7 +637,12 @@
                 emoji: '🎯',
                 questions: 520,
                 color: '#FFE6F1',
-                gradeRange: [3, 4, 5, 6, 7, 8]
+                // Only show levels that have actual quiz data
+                levels: [
+                    { grade: 4, suffix: '-emma', label: 'M4' },
+                    { grade: 5, suffix: '-kate', label: 'M5' },
+                    { grade: 8, suffix: '', label: 'E8 (CITO)' }
+                ]
             },
             'basisvaardigheden': {
                 title: 'Basisvaardigheden',
@@ -645,7 +650,11 @@
                 emoji: '🎯',
                 questions: 203,
                 color: '#E8DFF5',
-                gradeRange: [3, 4, 5, 6, 7, 8]
+                levels: [
+                    { grade: 4, suffix: '-emma', label: 'M4' },
+                    { grade: 5, suffix: '-kate', label: 'M5' },
+                    { grade: 8, suffix: '', label: 'E8 (CITO)' }
+                ]
             },
             'wereldorientatie': {
                 title: 'Wereldoriëntatie',
@@ -653,7 +662,9 @@
                 emoji: '🎯',
                 questions: 649,
                 color: '#D1F2EB',
-                gradeRange: [3, 4, 5, 6, 7, 8]
+                levels: [
+                    { grade: 8, suffix: '', label: 'Alle niveaus' }
+                ]
             },
             'woordenschat': {
                 title: 'Woordenschat',
@@ -661,7 +672,9 @@
                 emoji: '🎯',
                 questions: 268,
                 color: '#D5F4E6',
-                gradeRange: [3, 4, 5, 6, 7, 8]
+                levels: [
+                    { grade: 8, suffix: '', label: 'Alle niveaus' }
+                ]
             }
         };
 
@@ -694,29 +707,35 @@
             8: '🏆'
         };
 
-        // Generate level cards
+        // Function to start quiz for a specific level
+        function startLevel(subjectName) {
+            // Store the subject to load in localStorage
+            localStorage.setItem('autoStartSubject', subjectName);
+            // Redirect to index.html which will auto-start the quiz
+            window.location.href = 'index.html';
+        }
+
+        // Generate level cards based on available levels
         const grid = document.getElementById('levelCardsGrid');
-        config.gradeRange.forEach(grade => {
+        config.levels.forEach(level => {
             const card = document.createElement('div');
-            card.className = `level-card groep-${grade}`;
+            card.className = `level-card groep-${level.grade}`;
+            const subjectName = subject + level.suffix;
 
             card.innerHTML = `
-                <div class="icon-circle">${gradeEmojis[grade]}</div>
-                <h3 class="level-label">Groep ${grade} ${gradeEmojis[grade]}</h3>
-
-                <div class="cito-toggle">
-                    <div class="cito-option">M${grade}</div>
-                    <div class="cito-option active">E${grade}</div>
-                </div>
-
-                <a href="index.html#${subject}-${grade}" class="card-cta">Start oefenen →</a>
+                <div class="icon-circle">${gradeEmojis[level.grade]}</div>
+                <h3 class="level-label">Groep ${level.grade} ${gradeEmojis[level.grade]}</h3>
+                <p style="color: #7F8C8D; font-size: 0.875rem; margin-bottom: 16px;">${level.label}</p>
+                <button class="card-cta" onclick="startLevel('${subjectName}')">Start oefenen →</button>
             `;
 
             grid.appendChild(card);
         });
 
-        // Update all questions button link
-        document.getElementById('allQuestionsBtn').href = `index.html#${subject}`;
+        // Update all questions button to start full subject quiz
+        document.getElementById('allQuestionsBtn').onclick = function() {
+            startLevel(subject);
+        };
     </script>
 </body>
 </html>

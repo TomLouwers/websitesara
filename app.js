@@ -1766,4 +1766,16 @@ function resetMilestones() {
 document.addEventListener('DOMContentLoaded', function() {
     // Check for paused quiz on page load
     checkForPausedQuiz();
+
+    // Check if we should auto-start a subject (from level selector page)
+    const autoStartSubject = localStorage.getItem('autoStartSubject');
+    if (autoStartSubject) {
+        // Clear the flag
+        localStorage.removeItem('autoStartSubject');
+
+        // Small delay to ensure DOM is ready
+        setTimeout(() => {
+            loadSubject(autoStartSubject);
+        }, 100);
+    }
 });
