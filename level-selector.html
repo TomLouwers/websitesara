@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verhaaltjessommen - Kies jouw niveau | OefenPlatform</title>
+    <title>Kies jouw niveau | OefenPlatform</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -136,6 +136,7 @@
             background: linear-gradient(135deg, #FFE6F1 0%, #FFD9EA 100%);
             padding: 32px 0;
             margin-top: 0;
+            transition: background 0.3s;
         }
 
         .subject-header-content {
@@ -180,6 +181,7 @@
             justify-content: center;
             font-size: 2.5rem;
             box-shadow: 0 8px 20px rgba(255, 122, 184, 0.3);
+            transition: background 0.3s;
         }
 
         .subject-text h1 {
@@ -573,21 +575,21 @@
     </nav>
 
     <!-- Subject Header Bar -->
-    <section class="subject-header">
+    <section class="subject-header" id="subjectHeader">
         <div class="subject-header-content">
             <!-- Breadcrumb -->
             <div class="breadcrumb">
                 <a href="index.html">Home</a>
                 <span class="breadcrumb-separator">></span>
-                <span>Verhaaltjessommen</span>
+                <span id="breadcrumbSubject">Laden...</span>
             </div>
 
             <!-- Subject Info -->
             <div class="subject-info">
-                <div class="subject-icon-circle">🔢</div>
+                <div class="subject-icon-circle" id="subjectIcon">🎯</div>
                 <div class="subject-text">
-                    <h1>Verhaaltjessommen 🎯</h1>
-                    <p class="subject-questions-available">520 vragen beschikbaar</p>
+                    <h1 id="subjectTitle">Laden...</h1>
+                    <p class="subject-questions-available" id="subjectQuestions">Laden...</p>
                 </div>
             </div>
         </div>
@@ -602,89 +604,13 @@
 
         <!-- Level Cards -->
         <section class="level-cards-container">
-            <div class="level-cards-grid">
-                <!-- Groep 3 -->
-                <div class="level-card groep-3">
-                    <div class="icon-circle">⭐</div>
-                    <h3 class="level-label">Groep 3 ⭐</h3>
-
-                    <div class="cito-toggle">
-                        <div class="cito-option">M3</div>
-                        <div class="cito-option active">E3</div>
-                    </div>
-
-                    <a href="#" class="card-cta">Start oefenen →</a>
-                </div>
-
-                <!-- Groep 4 -->
-                <div class="level-card groep-4">
-                    <div class="icon-circle">🌱</div>
-                    <h3 class="level-label">Groep 4 🌱</h3>
-
-                    <div class="cito-toggle">
-                        <div class="cito-option">M4</div>
-                        <div class="cito-option active">E4</div>
-                    </div>
-
-                    <a href="#" class="card-cta">Start oefenen →</a>
-                </div>
-
-                <!-- Groep 5 -->
-                <div class="level-card groep-5">
-                    <div class="icon-circle">📚</div>
-                    <h3 class="level-label">Groep 5 📚</h3>
-
-                    <div class="cito-toggle">
-                        <div class="cito-option">M5</div>
-                        <div class="cito-option active">E5</div>
-                    </div>
-
-                    <a href="#" class="card-cta">Start oefenen →</a>
-                </div>
-
-                <!-- Groep 6 -->
-                <div class="level-card groep-6">
-                    <div class="icon-circle">🚀</div>
-                    <h3 class="level-label">Groep 6 🚀</h3>
-
-                    <div class="cito-toggle">
-                        <div class="cito-option">M6</div>
-                        <div class="cito-option active">E6</div>
-                    </div>
-
-                    <a href="#" class="card-cta">Start oefenen →</a>
-                </div>
-
-                <!-- Groep 7 -->
-                <div class="level-card groep-7">
-                    <div class="icon-circle">🎯</div>
-                    <h3 class="level-label">Groep 7 🎯</h3>
-
-                    <div class="cito-toggle">
-                        <div class="cito-option">M7</div>
-                        <div class="cito-option active">E7</div>
-                    </div>
-
-                    <a href="#" class="card-cta">Start oefenen →</a>
-                </div>
-
-                <!-- Groep 8 -->
-                <div class="level-card groep-8">
-                    <div class="icon-circle">🏆</div>
-                    <h3 class="level-label">Groep 8 🏆</h3>
-
-                    <div class="cito-toggle">
-                        <div class="cito-option">M8</div>
-                        <div class="cito-option active">E8</div>
-                    </div>
-
-                    <a href="#" class="card-cta">Start oefenen →</a>
-                </div>
+            <div class="level-cards-grid" id="levelCardsGrid">
+                <!-- Cards will be generated by JavaScript -->
             </div>
 
             <!-- Bottom CTA -->
             <div class="bottom-cta-row">
-                <a href="#" class="btn-all-questions">Start met alle 520 vragen →</a>
+                <a href="#" class="btn-all-questions" id="allQuestionsBtn">Start met alle vragen →</a>
             </div>
         </section>
     </div>
@@ -701,5 +627,96 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Subject configuration
+        const subjectConfig = {
+            'verhaaltjessommen': {
+                title: 'Verhaaltjessommen',
+                icon: '🔢',
+                emoji: '🎯',
+                questions: 520,
+                color: '#FFE6F1',
+                gradeRange: [3, 4, 5, 6, 7, 8]
+            },
+            'basisvaardigheden': {
+                title: 'Basisvaardigheden',
+                icon: '🔢',
+                emoji: '🎯',
+                questions: 203,
+                color: '#E8DFF5',
+                gradeRange: [3, 4, 5, 6, 7, 8]
+            },
+            'wereldorientatie': {
+                title: 'Wereldoriëntatie',
+                icon: '🌍',
+                emoji: '🎯',
+                questions: 649,
+                color: '#D1F2EB',
+                gradeRange: [3, 4, 5, 6, 7, 8]
+            },
+            'woordenschat': {
+                title: 'Woordenschat',
+                icon: '📖',
+                emoji: '🎯',
+                questions: 268,
+                color: '#D5F4E6',
+                gradeRange: [3, 4, 5, 6, 7, 8]
+            }
+        };
+
+        // Get subject from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const subject = urlParams.get('subject') || 'verhaaltjessommen';
+        const config = subjectConfig[subject] || subjectConfig['verhaaltjessommen'];
+
+        // Update page content
+        document.getElementById('breadcrumbSubject').textContent = config.title;
+        document.getElementById('subjectTitle').textContent = config.title + ' ' + config.emoji;
+        document.getElementById('subjectIcon').textContent = config.icon;
+        document.getElementById('subjectQuestions').textContent = config.questions + ' vragen beschikbaar';
+        document.getElementById('allQuestionsBtn').textContent = `Start met alle ${config.questions} vragen →`;
+
+        // Update header color
+        const header = document.getElementById('subjectHeader');
+        header.style.background = `linear-gradient(135deg, ${config.color} 0%, ${config.color}dd 100%)`;
+
+        // Update page title
+        document.title = `${config.title} - Kies jouw niveau | OefenPlatform`;
+
+        // Grade emojis
+        const gradeEmojis = {
+            3: '⭐',
+            4: '🌱',
+            5: '📚',
+            6: '🚀',
+            7: '🎯',
+            8: '🏆'
+        };
+
+        // Generate level cards
+        const grid = document.getElementById('levelCardsGrid');
+        config.gradeRange.forEach(grade => {
+            const card = document.createElement('div');
+            card.className = `level-card groep-${grade}`;
+
+            card.innerHTML = `
+                <div class="icon-circle">${gradeEmojis[grade]}</div>
+                <h3 class="level-label">Groep ${grade} ${gradeEmojis[grade]}</h3>
+
+                <div class="cito-toggle">
+                    <div class="cito-option">M${grade}</div>
+                    <div class="cito-option active">E${grade}</div>
+                </div>
+
+                <a href="index.html#${subject}-${grade}" class="card-cta">Start oefenen →</a>
+            `;
+
+            grid.appendChild(card);
+        });
+
+        // Update all questions button link
+        document.getElementById('allQuestionsBtn').href = `index.html#${subject}`;
+    </script>
 </body>
 </html>
