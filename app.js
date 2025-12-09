@@ -631,20 +631,24 @@ function startQuizWithData(subject) {
     // Initialize category progress tracker (reset to 0)
     initializeCategoryProgress(randomizedQuestions);
 
-    document.getElementById('landingPage').style.display = 'none';
-    document.getElementById('themePage').style.display = 'none';
-    document.getElementById('quizPage').style.display = 'block';
-    document.getElementById('resultsPage').style.display = 'none';
+    // Save quiz state to sessionStorage for quiz.html
+    const quizState = {
+        subject: subject,
+        currentSubject: currentSubject,
+        currentTheme: currentTheme,
+        currentQuiz: currentQuiz,
+        randomizedQuestions: randomizedQuestions,
+        totalQuestions: totalQuestions,
+        currentQuestionIndex: 0,
+        score: 0,
+        wrongAnswers: [],
+        lovaClickCount: 0,
+        categoryProgress: categoryProgress
+    };
+    sessionStorage.setItem('quizState', JSON.stringify(quizState));
 
-    // Set quiz title
-    document.getElementById('quizTitle').textContent = CONFIG.subjectTitles[subject] || 'Quiz';
-
-    // Update breadcrumb navigation
-    updateBreadcrumb(subject);
-
-    // L.O.V.A. help button will be shown/hidden automatically per question based on lova data
-
-    loadCurrentQuestion();
+    // Redirect to quiz.html
+    window.location.href = 'quiz.html';
 }
 
 // Update breadcrumb navigation with current subject and level
@@ -1229,6 +1233,17 @@ function nextQuestion() {
 
     currentQuestionIndex++;
 
+    // Update sessionStorage with current progress
+    if (window.location.pathname.endsWith('quiz.html')) {
+        const quizState = JSON.parse(sessionStorage.getItem('quizState') || '{}');
+        quizState.currentQuestionIndex = currentQuestionIndex;
+        quizState.score = score;
+        quizState.wrongAnswers = wrongAnswers;
+        quizState.lovaClickCount = lovaClickCount;
+        quizState.categoryProgress = categoryProgress;
+        sessionStorage.setItem('quizState', JSON.stringify(quizState));
+    }
+
     if (currentQuestionIndex >= randomizedQuestions.length) {
         showResults();
     } else {
@@ -1266,12 +1281,33 @@ function showResults() {
 }
 
 function goToLanding() {
-    document.getElementById('landingPage').style.display = 'block';
-    document.getElementById('levelPage').style.display = 'none';
-    document.getElementById('themePage').style.display = 'none';
-    document.getElementById('quizPage').style.display = 'none';
-    document.getElementById('resultsPage').style.display = 'none';
-    document.getElementById('reviewPage').style.display = 'none';
+    // If we're on quiz.html, redirect to index.html
+    if (window.location.pathname.endsWith('quiz.html')) {
+        sessionStorage.removeItem('quizState'); // Clear quiz state
+        window.location.href = 'index.html';
+        return;
+    }
+
+    // Otherwise, handle navigation on index.html
+    if (document.getElementById('landingPage')) {
+        document.getElementById('landingPage').style.display = 'block';
+    }
+    if (document.getElementById('levelPage')) {
+        document.getElementById('levelPage').style.display = 'none';
+    }
+    if (document.getElementById('themePage')) {
+        document.getElementById('themePage').style.display = 'none';
+    }
+    if (document.getElementById('quizPage')) {
+        document.getElementById('quizPage').style.display = 'none';
+    }
+    if (document.getElementById('resultsPage')) {
+        document.getElementById('resultsPage').style.display = 'none';
+    }
+    if (document.getElementById('reviewPage')) {
+        document.getElementById('reviewPage').style.display = 'none';
+    }
+
     // Reset quiz state when returning to landing page
     currentQuiz = null;
     randomizedQuestions = [];
@@ -1288,7 +1324,9 @@ function goToLanding() {
     lovaHelpPanelExpanded = false;
 
     // Check for paused quiz and show resume banner
-    checkForPausedQuiz();
+    if (typeof checkForPausedQuiz === 'function') {
+        checkForPausedQuiz();
+    }
 }
 
 // Pause quiz and save state
@@ -1764,6 +1802,56 @@ function resetMilestones() {
 
 // Initialize app when page loads
 document.addEventListener('DOMContentLoaded', function() {
+    // Check if we're on quiz.html and need to restore state
+    if (window.location.pathname.endsWith('quiz.html')) {
+        const quizStateStr = sessionStorage.getItem('quizState');
+
+        if (!quizStateStr) {
+            alert('Geen quiz data gevonden. Je wordt teruggestuurd naar de homepagina.');
+            window.location.href = 'index.html';
+            return;
+        }
+
+        // Restore quiz state
+        const quizState = JSON.parse(quizStateStr);
+        currentSubject = quizState.currentSubject;
+        currentTheme = quizState.currentTheme;
+        currentQuiz = quizState.currentQuiz;
+        randomizedQuestions = quizState.randomizedQuestions;
+        totalQuestions = quizState.totalQuestions;
+        currentQuestionIndex = quizState.currentQuestionIndex;
+        score = quizState.score;
+        wrongAnswers = quizState.wrongAnswers;
+        lovaClickCount = quizState.lovaClickCount;
+        categoryProgress = quizState.categoryProgress;
+        hasAnswered = false;
+        selectedAnswer = null;
+
+        // Set quiz title
+        if (document.getElementById('quizTitle')) {
+            document.getElementById('quizTitle').textContent = CONFIG.subjectTitles[quizState.subject] || 'Quiz';
+        }
+
+        // Update breadcrumb
+        updateBreadcrumb(quizState.subject);
+
+        // Show quiz page and load first question
+        if (document.getElementById('quizPage')) {
+            document.getElementById('quizPage').style.display = 'block';
+        }
+        if (document.getElementById('resultsPage')) {
+            document.getElementById('resultsPage').style.display = 'none';
+        }
+        if (document.getElementById('reviewPage')) {
+            document.getElementById('reviewPage').style.display = 'none';
+        }
+
+        // Load the current question
+        loadCurrentQuestion();
+        return;
+    }
+
+    // Regular index.html initialization
     // Check for paused quiz on page load
     checkForPausedQuiz();
 
