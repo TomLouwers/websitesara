@@ -36,6 +36,9 @@
                 <!-- Right: Link + Primary Button -->
                 <div class="nav-right">
                     <a href="ouders.html" class="nav-link">Voor Ouders & Leraren</a>
+                    <button class="btn-nav-accessibility" id="accessibilityToggle" aria-label="Toegankelijkheidsopties">
+                        <i class="material-icons">accessibility</i>
+                    </button>
                     <a href="#home" onclick="goToLanding(); return false;" class="btn-nav-primary">Gratis Beginnen</a>
                 </div>
             </div>
@@ -83,9 +86,6 @@
                         <button class="btn-hero-primary" onclick="document.querySelector('.subject-grid').scrollIntoView({ behavior: 'smooth', block: 'start' })">
                             Begin met oefenen
                         </button>
-                        <button class="btn-hero-secondary" onclick="window.location.href='ouders.html'">
-                            Aan de slag voor mijn kind
-                        </button>
                     </div>
 
                     <!-- Social Proof -->
@@ -109,7 +109,7 @@
                 <div class="hero-right">
                     <div class="quiz-card-demo">
                         <!-- Success Badge -->
-                        <div class="success-badge">Goed gedaan!</div>
+                        <div class="success-badge">🎉 Goed gedaan!</div>
 
                         <!-- Floating Star Button -->
                         <button class="floating-action-btn">⭐</button>
@@ -761,10 +761,6 @@
     </div>
 
     <!-- Accessibility Settings Panel -->
-    <button class="accessibility-toggle" id="accessibilityToggle" aria-label="Toegankelijkheidsopties">
-        <i class="material-icons">accessibility</i>
-    </button>
-
     <div class="accessibility-panel" id="accessibilityPanel">
         <h3>♿ Toegankelijkheidsopties</h3>
 
