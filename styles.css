@@ -191,6 +191,24 @@ body::before {
     gap: 20px;
 }
 
+.btn-nav-accessibility {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    color: #A0AEC0;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.btn-nav-accessibility:hover {
+    color: var(--text-dark);
+}
+
 .btn-nav-primary {
     display: inline-block;
     padding: 10px 24px;
@@ -261,7 +279,7 @@ body::before {
 
 /* === Hero Section - Master Configuration === */
 .hero-section {
-    padding: 60px 0;
+    padding: 20px 0 60px 0;
     width: 100%;
 }
 
@@ -309,7 +327,7 @@ body::before {
 }
 
 .hero-headline {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
     color: var(--text-dark);
@@ -374,21 +392,21 @@ body::before {
 
 .btn-hero-primary {
     padding: 14px 32px;
-    background-color: var(--primary);
-    color: white;
+    background-color: rgba(255, 138, 52, 0.15);
+    color: var(--primary);
     border: none;
     border-radius: var(--border-radius-button);
     font-size: 1.125rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
-    box-shadow: 0 4px 12px rgba(255, 138, 52, 0.25);
+    box-shadow: 0 2px 8px rgba(255, 138, 52, 0.15);
 }
 
 .btn-hero-primary:hover {
-    background-color: var(--primary-hover);
+    background-color: rgba(255, 138, 52, 0.25);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(255, 138, 52, 0.35);
+    box-shadow: 0 4px 12px rgba(255, 138, 52, 0.25);
 }
 
 .btn-hero-secondary {
@@ -521,6 +539,7 @@ body::before {
     box-shadow: 0 2px 8px rgba(255, 138, 52, 0.3);
     animation: floatSlow 4s ease-in-out infinite;
     font-size: 1.25rem;
+    opacity: 0.85;
 }
 
 .floating-action-btn:hover {
@@ -554,7 +573,7 @@ body::before {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--text-dark);
 }
@@ -569,7 +588,7 @@ body::before {
 }
 
 .quiz-card-question {
-    background-color: #F7F9FA;
+    background-color: #FAFBFC;
     padding: 20px;
     border-radius: 12px;
     margin-bottom: 20px;
@@ -577,8 +596,8 @@ body::before {
 
 .quiz-card-question p {
     margin: 0;
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    line-height: 1.5;
     color: var(--text-dark);
 }
 
@@ -630,25 +649,25 @@ body::before {
 }
 
 .option-text {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--text-dark);
 }
 
 .quiz-card-submit {
     width: 100%;
     padding: 14px;
-    background-color: var(--primary);
+    background-color: rgba(255, 138, 52, 0.7);
     color: white;
     border: none;
     border-radius: var(--border-radius-button);
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 .quiz-card-submit:hover {
-    background-color: var(--primary-hover);
+    background-color: var(--primary);
 }
 
 /* === Snelle Start Strip - Master Configuration === */
