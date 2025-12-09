@@ -1281,6 +1281,10 @@ function showResults() {
 }
 
 function goToLanding() {
+    // Clear auto-start flags to prevent unwanted auto-starting
+    localStorage.removeItem('autoStartSubject');
+    localStorage.removeItem('autoStartTheme');
+
     // If we're on quiz.html, redirect to index.html
     if (window.location.pathname.endsWith('quiz.html')) {
         sessionStorage.removeItem('quizState'); // Clear quiz state
@@ -1890,5 +1894,17 @@ document.addEventListener('DOMContentLoaded', function() {
             // Start quiz directly
             startQuizWithData(autoStartSubject);
         }, 100);
+    }
+});
+
+// Handle back button navigation - clear auto-start flags if user navigates back to index.html
+window.addEventListener('pageshow', function(event) {
+    // If page is restored from cache (back button)
+    if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+        // Clear auto-start flags when arriving via back button
+        if (!window.location.pathname.endsWith('quiz.html')) {
+            localStorage.removeItem('autoStartSubject');
+            localStorage.removeItem('autoStartTheme');
+        }
     }
 });
