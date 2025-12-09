@@ -5739,31 +5739,23 @@ button:focus {
 
 /* Dyslexia-Friendly Mode */
 body.dyslexia-mode {
-    font-family: 'Lexend', 'OpenDyslexic', 'Comic Sans MS', sans-serif !important;
-    line-height: var(--dyslexia-line-height) !important;
-    letter-spacing: var(--dyslexia-letter-spacing) !important;
-    word-spacing: var(--dyslexia-word-spacing) !important;
+    font-family: 'Lexend', sans-serif !important;
 }
 
 body.dyslexia-mode * {
-    font-family: inherit !important;
-    text-align: left !important;
+    font-family: 'Lexend', sans-serif !important;
 }
 
+/* Apply enhanced spacing to text-heavy elements only */
 body.dyslexia-mode .question-text,
-body.dyslexia-mode .option,
-body.dyslexia-mode p,
-body.dyslexia-mode h1,
-body.dyslexia-mode h2,
-body.dyslexia-mode h3 {
-    line-height: var(--dyslexia-line-height) !important;
-    letter-spacing: var(--dyslexia-letter-spacing) !important;
-}
-
-body.dyslexia-mode .container,
-body.dyslexia-mode .question-card,
-body.dyslexia-mode .subject-card {
-    max-width: 700px; /* Reduced line length for better readability */
+body.dyslexia-mode .option-text,
+body.dyslexia-mode .quiz-card-question p,
+body.dyslexia-mode .card-description,
+body.dyslexia-mode .benefit-description,
+body.dyslexia-mode .footer-description {
+    line-height: 1.7 !important;
+    letter-spacing: 0.03em !important;
+    word-spacing: 0.1em !important;
 }
 
 /* Focus Mode - Minimal Distraction */
