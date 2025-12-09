@@ -4,107 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CITO Oefenplatform - Gratis oefenen voor groep 3-8</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="verhoudingstabel-widget.css">
 </head>
 <body>
     <div class="container">
-        <!-- Navigation -->
+        <!-- Navigation - Master Configuration Design -->
         <nav class="main-nav">
             <div class="nav-content">
+                <!-- Left: Logo + Brand + Tagline -->
                 <div class="nav-brand">
-                    <h2 class="logo-text">OefenPlatform</h2>
+                    <div class="nav-logo">
+                        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="20" fill="#FF8A34"/>
+                            <text x="20" y="28" font-family="Nunito, sans-serif" font-size="24" font-weight="800" fill="white" text-anchor="middle">O</text>
+                        </svg>
+                    </div>
+                    <div class="nav-brand-text">
+                        <div class="nav-brand-name">OefenPlatform</div>
+                        <div class="nav-brand-tagline">Leren met plezier! 🚀</div>
+                    </div>
                 </div>
-                <div class="nav-links">
-                    <a href="#home" onclick="goToLanding()" class="nav-link-primary">
-                        <i class="material-icons">school</i>
-                        Wat wil je oefenen?
-                    </a>
-                    <a href="ouders.html" class="nav-link-secondary">
-                        <i class="material-icons">family_restroom</i>
-                        Voor Ouders & Leraren
-                    </a>
+
+                <!-- Center: Link -->
+                <div class="nav-center">
+                    <a href="#home" onclick="goToLanding(); return false;" class="nav-link">Start met oefenen</a>
+                </div>
+
+                <!-- Right: Link + Primary Button -->
+                <div class="nav-right">
+                    <a href="ouders.html" class="nav-link">Voor Ouders & Leraren</a>
+                    <a href="#home" onclick="goToLanding(); return false;" class="btn-nav-primary">Gratis Beginnen</a>
                 </div>
             </div>
         </nav>
 
-        <div class="header">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Oefen als een Pro voor je CITO! 🚀</h1>
-                    <p class="tagline">Meer dan 1.600 vragen klaar voor jou — elke dag een beetje beter!</p>
+        <!-- Hero Section - Master Configuration Design -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <!-- Left Column -->
+                <div class="hero-left">
+                    <!-- Pill Badges -->
+                    <div class="hero-badges">
+                        <span class="badge-pill badge-blue">CITO-niveau</span>
+                        <span class="badge-pill badge-orange">7 vakgebieden</span>
+                    </div>
 
-                    <!-- Primary and Secondary CTAs -->
-                    <div class="hero-cta-group">
-                        <button class="btn btn-hero-primary" onclick="document.querySelector('.subject-grid').scrollIntoView({ behavior: 'smooth', block: 'start' })">
-                            🟠 Begin met oefenen
+                    <!-- Headline -->
+                    <h1 class="hero-headline">
+                        Oefen als een <span class="gradient-text">Pro</span> voor je <span class="highlight-cito">CITO</span>! 🚀
+                    </h1>
+
+                    <!-- Subtext -->
+                    <p class="hero-subtext">
+                        Het leukste oefenplatform van Nederland! Speciaal voor groep 3 t/m 8. Train je skills en word steeds beter!
+                    </p>
+
+                    <!-- Bullet List -->
+                    <ul class="hero-features">
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Meer dan 5.000 oefenvragen</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Directe feedback bij elk antwoord</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Volledig gratis & veilig</span>
+                        </li>
+                    </ul>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-cta-row">
+                        <button class="btn-hero-primary" onclick="document.querySelector('.subject-grid').scrollIntoView({ behavior: 'smooth', block: 'start' })">
+                            Begin met oefenen
                         </button>
-                        <button class="btn btn-hero-secondary" onclick="window.location.href='ouders.html'">
+                        <button class="btn-hero-secondary" onclick="window.location.href='ouders.html'">
                             Aan de slag voor mijn kind
                         </button>
                     </div>
 
-                    <!-- Trust Metrics - High Impact -->
-                    <div class="hero-trust-metrics">
-                        <div class="trust-metric">
-                            <span class="trust-metric-icon">⭐</span>
-                            <span class="trust-metric-text"><strong>30.000+</strong> leerlingen</span>
+                    <!-- Social Proof -->
+                    <div class="hero-social-proof">
+                        <div class="social-proof-item">
+                            <div class="avatars">
+                                <div class="avatar" style="background: linear-gradient(135deg, #FF8A34, #E07020)"></div>
+                                <div class="avatar" style="background: linear-gradient(135deg, #38C172, #2CC6A3)"></div>
+                                <div class="avatar" style="background: linear-gradient(135deg, #B794F4, #FF7AB8)"></div>
+                            </div>
+                            <span class="social-proof-text">30.000+ leerlingen</span>
                         </div>
-                        <div class="trust-metric">
-                            <span class="trust-metric-icon">🏫</span>
-                            <span class="trust-metric-text"><strong>120+</strong> scholen</span>
-                        </div>
-                        <div class="trust-metric">
-                            <span class="trust-metric-icon">🌟</span>
-                            <span class="trust-metric-text"><strong>4.9/5</strong> beoordeling</span>
+                        <div class="social-proof-item">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <span class="social-proof-text">4,9/5</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Hero Illustration -->
-                <div class="hero-illustration">
-                    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Friendly learning illustration with rounded shapes -->
-                        <!-- Background circle (soft) -->
-                        <circle cx="200" cy="200" r="180" fill="#E8EEF2" opacity="0.5"/>
+                <!-- Right Column -->
+                <div class="hero-right">
+                    <div class="quiz-card-demo">
+                        <!-- Success Badge -->
+                        <div class="success-badge">Goed gedaan!</div>
 
-                        <!-- Book/Learning icon -->
-                        <rect x="140" y="160" width="120" height="140" rx="12" fill="#4A7BA7" opacity="0.9"/>
-                        <rect x="150" y="170" width="100" height="120" rx="8" fill="#6B9BC3"/>
-                        <line x1="200" y1="170" x2="200" y2="290" stroke="#4A7BA7" stroke-width="3"/>
+                        <!-- Floating Action Button -->
+                        <button class="floating-action-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="white">
+                                <path d="M10 3v14M3 10h14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
 
-                        <!-- Floating stars (achievement) -->
-                        <g transform="translate(280, 120)">
-                            <path d="M 0,-15 L 4,-5 L 15,-3 L 6,4 L 8,15 L 0,9 L -8,15 L -6,4 L -15,-3 L -4,-5 Z" fill="#fbbf24"/>
-                        </g>
-                        <g transform="translate(120, 100)">
-                            <path d="M 0,-12 L 3,-4 L 12,-2 L 5,3 L 6,12 L 0,7 L -6,12 L -5,3 L -12,-2 L -3,-4 Z" fill="#fbbf24" opacity="0.8"/>
-                        </g>
-                        <g transform="translate(300, 200)">
-                            <path d="M 0,-10 L 2.5,-3 L 10,-1.5 L 4,2.5 L 5,10 L 0,6 L -5,10 L -4,2.5 L -10,-1.5 L -2.5,-3 Z" fill="#fbbf24" opacity="0.7"/>
-                        </g>
+                        <!-- Card Header -->
+                        <div class="quiz-card-header">
+                            <div class="quiz-card-subject">
+                                <span class="subject-icon">📖</span>
+                                <span>Begrijpend Lezen</span>
+                            </div>
+                            <div class="quiz-card-progress">Vraag 3 van 10</div>
+                        </div>
 
-                        <!-- Rocket (progress metaphor) -->
-                        <g transform="translate(100, 260)">
-                            <ellipse cx="0" cy="20" rx="25" ry="8" fill="#E07A5F" opacity="0.3"/>
-                            <path d="M -8,20 L -12,35 L 0,30 L 12,35 L 8,20 Z" fill="#E07A5F"/>
-                            <rect x="-8" y="-10" width="16" height="30" rx="8" fill="#5DADE2"/>
-                            <circle cx="0" cy="5" r="5" fill="white" opacity="0.8"/>
-                            <path d="M -8,-10 L -15,5 L -8,5 Z" fill="#4A8FB5"/>
-                            <path d="M 8,-10 L 15,5 L 8,5 Z" fill="#4A8FB5"/>
-                        </g>
+                        <!-- Question Area -->
+                        <div class="quiz-card-question">
+                            <p>Wat is de hoofdgedachte van het tweede deel van de tekst?</p>
+                        </div>
 
-                        <!-- Happy face (child-friendly) -->
-                        <circle cx="200" cy="100" r="35" fill="#52C788" opacity="0.2"/>
-                        <circle cx="190" cy="95" r="4" fill="#2C3E50"/>
-                        <circle cx="210" cy="95" r="4" fill="#2C3E50"/>
-                        <path d="M 185,108 Q 200,118 215,108" stroke="#2C3E50" stroke-width="3" fill="none" stroke-linecap="round"/>
-                    </svg>
+                        <!-- Answer Options -->
+                        <div class="quiz-card-answers">
+                            <div class="answer-option selected">
+                                <span class="option-label">A</span>
+                                <span class="option-text">De oorzaken van het probleem</span>
+                            </div>
+                            <div class="answer-option">
+                                <span class="option-label">B</span>
+                                <span class="option-text">De oplossing van het probleem</span>
+                            </div>
+                            <div class="answer-option">
+                                <span class="option-label">C</span>
+                                <span class="option-text">De gevolgen van het probleem</span>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button class="quiz-card-submit">
+                            Check mijn antwoord!
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Enhanced Trust Bar with Icons and Benefits -->
         <div class="trust-bar">
@@ -158,39 +209,18 @@
                 </div>
             </div>
 
-            <!-- Snelle Start Section -->
-            <div class="quick-start-section">
-                <h2 class="section-title">
-                    <span class="title-icon">⚡</span>
-                    Snelle Start per Groep
-                </h2>
-                <p class="section-subtitle">Kies jouw niveau en begin direct! 💪</p>
-                <div class="quick-start-grid">
-                    <button class="quick-start-card" onclick="startQuickForGroup(3)">
-                        <span class="quick-start-number">3</span>
-                        <span class="quick-start-label">Groep 3</span>
-                    </button>
-                    <button class="quick-start-card" onclick="startQuickForGroup(4)">
-                        <span class="quick-start-number">4</span>
-                        <span class="quick-start-label">Groep 4</span>
-                    </button>
-                    <button class="quick-start-card" onclick="startQuickForGroup(5)">
-                        <span class="quick-start-number">5</span>
-                        <span class="quick-start-label">Groep 5</span>
-                    </button>
-                    <button class="quick-start-card" onclick="startQuickForGroup(6)">
-                        <span class="quick-start-number">6</span>
-                        <span class="quick-start-label">Groep 6</span>
-                    </button>
-                    <button class="quick-start-card" onclick="startQuickForGroup(7)">
-                        <span class="quick-start-number">7</span>
-                        <span class="quick-start-label">Groep 7</span>
-                    </button>
-                    <button class="quick-start-card quick-start-featured" onclick="startQuickForGroup(8)">
-                        <span class="quick-start-number">8</span>
-                        <span class="quick-start-label">Groep 8</span>
-                        <span class="quick-start-badge">CITO</span>
-                    </button>
+            <!-- Snelle Start Strip - Master Configuration Design -->
+            <div class="snelle-start-strip">
+                <div class="snelle-start-container">
+                    <div class="snelle-start-label">⚡ Snelle Start:</div>
+                    <div class="snelle-start-chips">
+                        <button class="grade-chip" onclick="startQuickForGroup(3)">Groep 3</button>
+                        <button class="grade-chip" onclick="startQuickForGroup(4)">Groep 4</button>
+                        <button class="grade-chip" onclick="startQuickForGroup(5)">Groep 5</button>
+                        <button class="grade-chip" onclick="startQuickForGroup(6)">Groep 6</button>
+                        <button class="grade-chip" onclick="startQuickForGroup(7)">Groep 7</button>
+                        <button class="grade-chip" onclick="startQuickForGroup(8)">Groep 8</button>
+                    </div>
                 </div>
             </div>
 
