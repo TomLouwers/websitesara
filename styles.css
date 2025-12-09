@@ -652,13 +652,20 @@ body::before {
 /* === Snelle Start Strip - Master Configuration === */
 .snelle-start-strip {
     background-color: rgba(255, 138, 52, 0.05);
-    padding: 20px;
+    padding: 20px 0;
     margin: 40px 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 .snelle-start-container {
     max-width: var(--container-max-width);
     margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     gap: 24px;
