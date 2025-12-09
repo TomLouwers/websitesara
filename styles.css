@@ -261,9 +261,8 @@ body::before {
 
 /* === Hero Section - Master Configuration === */
 .hero-section {
-    padding: 60px 20px;
-    max-width: var(--container-max-width);
-    margin: 0 auto;
+    padding: 60px 0;
+    width: 100%;
 }
 
 .hero-container {
@@ -271,6 +270,9 @@ body::before {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Left Column */
@@ -490,7 +492,7 @@ body::before {
 
 .success-badge {
     position: absolute;
-    top: -12px;
+    top: 65px;
     left: 24px;
     background-color: var(--secondary);
     color: white;
