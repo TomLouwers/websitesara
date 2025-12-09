@@ -352,9 +352,9 @@
     <script src="accessibility.js"></script>
 
     <script>
-        // On page load, check if we have quiz data in localStorage
+        // On page load, check if we have quiz data in sessionStorage
         document.addEventListener('DOMContentLoaded', function() {
-            const quizState = localStorage.getItem('quizState');
+            const quizState = sessionStorage.getItem('quizState');
 
             if (!quizState) {
                 // No quiz state found, redirect to home
