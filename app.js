@@ -1855,11 +1855,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check for paused quiz on page load
     checkForPausedQuiz();
 
-    // Check if we should auto-start a subject (from level selector page)
+    // Check if we should auto-start a subject (from level selector or theme selector page)
     const autoStartSubject = localStorage.getItem('autoStartSubject');
+    const autoStartTheme = localStorage.getItem('autoStartTheme');
+
     if (autoStartSubject) {
-        // Clear the flag
+        // Clear the flags
         localStorage.removeItem('autoStartSubject');
+        localStorage.removeItem('autoStartTheme');
 
         // Load the subject data and start quiz directly (skip theme selection)
         setTimeout(async () => {
@@ -1874,10 +1877,17 @@ document.addEventListener('DOMContentLoaded', function() {
             // Store the data
             quizData[autoStartSubject] = data;
             currentSubject = autoStartSubject;
-            currentTheme = null; // No specific theme, use all questions
 
-            // Start quiz directly with all questions
-            currentQuiz = data;
+            // Check if we need to filter by theme
+            if (autoStartTheme) {
+                currentTheme = autoStartTheme;
+                currentQuiz = data.filter(item => item.theme === autoStartTheme);
+            } else {
+                currentTheme = null; // No specific theme, use all questions
+                currentQuiz = data;
+            }
+
+            // Start quiz directly
             startQuizWithData(autoStartSubject);
         }, 100);
     }
