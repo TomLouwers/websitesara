@@ -446,6 +446,12 @@
             50% { transform: scale(1.02); }
         }
 
+        /* Hide duplicate icons on right side (from old styles) */
+        .quiz-answers-wrapper .option::after {
+            display: none !important;
+            content: none !important;
+        }
+
         /* Responsive */
         @media (max-width: 640px) {
             .quiz-answers-wrapper .option {
