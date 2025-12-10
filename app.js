@@ -159,6 +159,12 @@ function updateProgressTrackerDisplay() {
         totalCorrectEl.textContent = totalCorrect;
     }
 
+    // Update new top bar points counter
+    const totalCorrectNew = document.getElementById('totalCorrectNew');
+    if (totalCorrectNew) {
+        totalCorrectNew.textContent = totalCorrect;
+    }
+
     // totalIncorrect display removed for anxiety reduction - only show positive count
     const lovaClicksEl = document.getElementById('lovaClicks');
     if (lovaClicksEl) {
@@ -684,6 +690,26 @@ function updateBreadcrumb(subject) {
         breadcrumbLevel.style.display = 'none';
         breadcrumbLevelSep.style.display = 'none';
     }
+
+    // Update new breadcrumb elements
+    const breadcrumbSubjectNew = document.getElementById('breadcrumbSubjectNew');
+    const breadcrumbLevelNew = document.getElementById('breadcrumbLevelNew');
+    const breadcrumbLevelSepNew = document.getElementById('breadcrumbLevelSepNew');
+
+    if (breadcrumbSubjectNew) {
+        breadcrumbSubjectNew.textContent = CONFIG.subjectTitles[baseSubject] || CONFIG.subjectTitles[subject] || subject;
+    }
+
+    if (breadcrumbLevelNew && breadcrumbLevelSepNew) {
+        if (level) {
+            breadcrumbLevelNew.textContent = level;
+            breadcrumbLevelNew.style.display = 'inline';
+            breadcrumbLevelSepNew.style.display = 'inline';
+        } else {
+            breadcrumbLevelNew.style.display = 'none';
+            breadcrumbLevelSepNew.style.display = 'none';
+        }
+    }
 }
 
 // Render visual data (tables) as HTML with mobile-responsive wrapper
@@ -755,6 +781,17 @@ function loadCurrentQuestion() {
         progressBarFill.style.width = `${progress}%`;
     }
 
+    // Update new top bar progress elements
+    const progressLabelNew = document.getElementById('progressLabelNew');
+    const progressBarFillNew = document.getElementById('progressBarFillNew');
+
+    if (progressLabelNew) {
+        progressLabelNew.textContent = `Vraag ${currentQuestionIndex + 1} van ${totalQuestions}`;
+    }
+    if (progressBarFillNew) {
+        progressBarFillNew.style.width = `${progress}%`;
+    }
+
     // Also update old questionCounter for backwards compatibility
     const questionCounter = document.getElementById('questionCounter');
     if (questionCounter) {
@@ -794,11 +831,15 @@ function loadCurrentQuestion() {
     // Check if question has L.O.V.A. data
     const hasLovaData = currentQuestion.lova && currentQuestion.lova.stap1_lezen;
     const lovaHelpButton = document.getElementById('lovaHelpButton');
+    const lovaHelpButtonNew = document.getElementById('lovaHelpButtonNew');
     const lovaHelpPanel = document.getElementById('lovaHelpPanel');
 
     if (hasLovaData) {
         // Show L.O.V.A. help button (question mark icon) and load data into panel
         lovaHelpButton.style.display = 'flex';
+        if (lovaHelpButtonNew) {
+            lovaHelpButtonNew.style.display = 'inline-flex';
+        }
         loadLovaHelpData(currentQuestion);
 
         // Reset panel to collapsed state for new question
@@ -808,6 +849,9 @@ function loadCurrentQuestion() {
     } else {
         // Hide L.O.V.A. help button
         lovaHelpButton.style.display = 'none';
+        if (lovaHelpButtonNew) {
+            lovaHelpButtonNew.style.display = 'none';
+        }
         lovaHelpPanel.classList.add('hidden');
     }
 
