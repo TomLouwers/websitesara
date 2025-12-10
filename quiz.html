@@ -204,6 +204,109 @@
         .quiz-header-minimal {
             display: none !important;
         }
+
+        /* ============================================
+           QUIZ QUESTION CARD - NEW DESIGN
+           ============================================ */
+
+        .quiz-question-wrapper {
+            max-width: 640px;
+            margin: 0 auto 24px;
+            background: white;
+            border-radius: 20px;
+            padding: 28px 32px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Card Header with Icon + Title + Subtitle */
+        .quiz-card-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .quiz-subject-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #E0F5F0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .quiz-card-title-group {
+            flex: 1;
+        }
+
+        .quiz-card-subject-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2C3E50;
+            margin: 0 0 2px 0;
+            line-height: 1.2;
+        }
+
+        .quiz-card-subtitle {
+            font-size: 13px;
+            font-weight: 500;
+            color: #7F8C8D;
+            margin: 0;
+        }
+
+        /* Question Box */
+        .quiz-question-box {
+            background: #F8FCFF;
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+        }
+
+        .quiz-question-box .question-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2C3E50;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .quiz-question-wrapper {
+                padding: 20px 24px;
+                border-radius: 16px;
+            }
+
+            .quiz-subject-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .quiz-card-subject-title {
+                font-size: 16px;
+            }
+
+            .quiz-card-subtitle {
+                font-size: 12px;
+            }
+
+            .quiz-question-box {
+                padding: 16px 20px;
+            }
+
+            .quiz-question-box .question-text {
+                font-size: 16px;
+            }
+        }
+
+        /* Hide old question card */
+        .question-card {
+            display: none !important;
+        }
     </style>
 </head>
 <body>
@@ -303,7 +406,105 @@
             <span id="milestoneMessage">Goed bezig!</span>
         </div>
 
-        <!-- Question Card Container -->
+        <!-- New Question Card Wrapper -->
+        <div class="quiz-question-wrapper">
+            <!-- Card Header: Icon + Subject Title + Subtitle -->
+            <div class="quiz-card-header">
+                <div class="quiz-subject-icon" id="quizSubjectIcon">🔢</div>
+                <div class="quiz-card-title-group">
+                    <h3 class="quiz-card-subject-title" id="quizCardSubjectTitle">Verhaaltjessommen</h3>
+                    <p class="quiz-card-subtitle" id="quizCardSubtitle">Groep 8</p>
+                </div>
+            </div>
+
+            <!-- Question Box -->
+            <div class="quiz-question-box">
+                <div class="question-text" id="questionTextNew"></div>
+            </div>
+
+            <!-- Reading Content (if available) -->
+            <div id="readingContentNew" class="reading-content hidden"></div>
+
+            <!-- Hint Container -->
+            <div id="hintContainerNew" style="text-align: center; margin: 20px 0;"></div>
+
+            <!-- L.O.V.A. Help Panel -->
+            <div id="lovaHelpPanelNew" class="lova-help-panel hidden">
+                <div class="lova-help-content">
+                    <!-- Stap 1: Lezen -->
+                    <div class="lova-help-step">
+                        <h4 class="lova-help-step-title">📖 Stap 1: Lezen</h4>
+                        <div class="lova-help-section">
+                            <p><strong>Wat wordt er gevraagd?</strong></p>
+                            <p id="lovaHelpHoofdvraagNew" class="lova-help-text"></p>
+                        </div>
+                        <div class="lova-help-section">
+                            <p><strong>Let op: dit is ruis (niet nodig voor deze vraag):</strong></p>
+                            <ul id="lovaHelpRuisNew" class="lova-help-list"></ul>
+                        </div>
+                        <div class="lova-help-section">
+                            <p><strong>Tussenstappen:</strong></p>
+                            <ul id="lovaHelpTussenstappenNew" class="lova-help-list"></ul>
+                        </div>
+                    </div>
+
+                    <!-- Stap 2: Ordenen -->
+                    <div class="lova-help-step">
+                        <h4 class="lova-help-step-title">🗃️ Stap 2: Ordenen</h4>
+                        <div class="lova-help-section">
+                            <p><strong>Relevante getallen:</strong></p>
+                            <ul id="lovaHelpGetallenNew" class="lova-help-list"></ul>
+                        </div>
+                        <div class="lova-help-section">
+                            <p><strong>Wiskundige tool:</strong></p>
+                            <p id="lovaHelpToolNew" class="lova-help-text"></p>
+                        </div>
+                    </div>
+
+                    <!-- Stap 3: Vormen -->
+                    <div class="lova-help-step">
+                        <h4 class="lova-help-step-title">✍️ Stap 3: Vormen</h4>
+                        <div id="lovaHelpBewerkingenNew" class="lova-help-bewerkingen"></div>
+                    </div>
+
+                    <!-- Stap 4: Antwoorden -->
+                    <div class="lova-help-step">
+                        <h4 class="lova-help-step-title">✅ Stap 4: Antwoorden</h4>
+                        <div class="lova-help-section">
+                            <p><strong>Verwachte eenheid:</strong> <span id="lovaHelpEenheidNew" class="lova-help-text"></span></p>
+                        </div>
+                        <div class="lova-help-section">
+                            <p><strong>Logica check:</strong></p>
+                            <p id="lovaHelpLogicaNew" class="lova-help-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Answer Options Container -->
+            <div class="answers-section">
+                <div id="optionsContainerNew" class="options-container"></div>
+                <textarea id="textareaAnswerNew" class="textarea-answer hidden" placeholder="Typ hier je antwoord..."></textarea>
+            </div>
+
+            <!-- Feedback Section -->
+            <div id="feedbackSectionNew" class="feedback-card hidden">
+                <div class="feedback-icon" id="feedbackIconNew"></div>
+                <h4 id="feedbackTitleNew"></h4>
+                <p id="feedbackMessageNew"></p>
+                <p id="correctAnswerDisplayNew" class="hidden"></p>
+                <div id="verhoudingstabelContainerNew"></div>
+                <p id="extraInfoDisplayNew" class="hidden"></p>
+                <div id="strategyAndTipsNew" class="hidden">
+                    <h4>Strategie</h4>
+                    <p id="strategyTextNew"></p>
+                    <h4>Tips</h4>
+                    <ul id="tipsListNew"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Old Question Card Container (hidden) -->
         <div class="question-card">
             <div class="question-container">
                 <div id="readingContent" class="reading-content hidden"></div>
