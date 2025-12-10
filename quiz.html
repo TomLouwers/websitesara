@@ -238,12 +238,14 @@
             display: none !important;
         }
 
-        /* Question Box - More prominent design */
+        /* Question Box - Step 2: Clear and prominent */
         .quiz-question-box {
-            background: #F8FCFF;
+            background: white;
             border-radius: 16px;
-            padding: 24px 28px;
+            padding: 26px 30px;
             margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            border: 2px solid #E8E8E8;
         }
 
         .quiz-question-box .question-text {
@@ -254,19 +256,40 @@
             margin: 0;
         }
 
-        /* Reading Content Styling - Quieter design */
-        .quiz-question-wrapper .reading-content {
-            background: #F8FAFC;
-            border-radius: 12px;
-            padding: 18px 22px;
-            margin-bottom: 20px;
-            font-size: 14px;
-            line-height: 1.7;
+        /* Story Header Label */
+        .story-header-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: 700;
             color: #5A6C7D;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
         }
 
-        .quiz-question-wrapper .reading-content:not(.hidden) {
-            display: block;
+        /* Story Block Wrapper */
+        #storyBlockWrapper {
+            margin-bottom: 24px;
+        }
+
+        #storyBlockWrapper.hidden {
+            display: none;
+        }
+
+        /* Reading Content Styling - Enhanced visibility as Step 1 */
+        .quiz-question-wrapper .reading-content {
+            position: relative;
+            background: #FFF8E8;
+            border-radius: 14px;
+            padding: 24px 24px 24px 32px;
+            margin-bottom: 0;
+            font-size: 15px;
+            line-height: 1.75;
+            color: #2C3E50;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+            border-left: 5px solid #70D6C4;
         }
 
         .quiz-question-wrapper .reading-content p {
@@ -308,8 +331,14 @@
             }
 
             .quiz-question-wrapper .reading-content {
-                padding: 14px 18px;
-                font-size: 13px;
+                padding: 20px 20px 20px 28px;
+                font-size: 14px;
+                border-left-width: 4px;
+            }
+
+            .story-header-label {
+                font-size: 12px;
+                margin-bottom: 10px;
             }
         }
 
@@ -726,8 +755,14 @@
                 </div>
             </div>
 
-            <!-- Reading Content (if available) - shown first -->
-            <div id="readingContentNew" class="reading-content hidden"></div>
+            <!-- Story Block (if available) - shown first -->
+            <div id="storyBlockWrapper" class="hidden">
+                <div class="story-header-label">
+                    <span>📘</span>
+                    <span>Verhaaltje</span>
+                </div>
+                <div id="readingContentNew" class="reading-content"></div>
+            </div>
 
             <!-- Question Box -->
             <div class="quiz-question-box">

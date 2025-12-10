@@ -860,6 +860,8 @@ function loadCurrentQuestion() {
     // Show reading content if available
     const readingContent = document.getElementById('readingContent');
     const readingContentNew = document.getElementById('readingContentNew');
+    const storyBlockWrapper = document.getElementById('storyBlockWrapper');
+
     if (currentQuestion.content || currentQuestion.visual) {
         let contentHtml = '';
 
@@ -876,15 +878,17 @@ function loadCurrentQuestion() {
         readingContent.innerHTML = contentHtml;
         readingContent.classList.remove('hidden');
 
-        // Sync to new card
+        // Sync to new card with story header wrapper
         if (readingContentNew) {
             readingContentNew.innerHTML = contentHtml;
-            readingContentNew.classList.remove('hidden');
+        }
+        if (storyBlockWrapper) {
+            storyBlockWrapper.classList.remove('hidden');
         }
     } else {
         readingContent.classList.add('hidden');
-        if (readingContentNew) {
-            readingContentNew.classList.add('hidden');
+        if (storyBlockWrapper) {
+            storyBlockWrapper.classList.add('hidden');
         }
     }
 
