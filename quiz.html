@@ -61,17 +61,25 @@
             margin: 0 2px;
         }
 
-        /* 2. Progress Section */
+        /* 2. Progress Row (Text + Bar + Points) */
         .quiz-progress-section {
-            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
         }
 
         .quiz-progress-text {
             font-size: 15px;
             font-weight: 600;
             color: #333;
-            margin-bottom: 10px;
-            display: block;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .quiz-progress-track-wrapper {
+            flex: 1;
+            min-width: 0;
         }
 
         .quiz-progress-track {
@@ -90,15 +98,6 @@
             transition: width 0.4s ease;
         }
 
-        /* 3. Bottom row: Points + Controls */
-        .quiz-topbar-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
         .quiz-points-pill {
             display: inline-flex;
             align-items: center;
@@ -109,6 +108,15 @@
             border-radius: 999px;
             font-size: 15px;
             font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        /* 3. Control Buttons Row (below progress) */
+        .quiz-topbar-bottom {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         /* 4. Control Buttons */
@@ -116,19 +124,20 @@
             display: flex;
             gap: 10px;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .quiz-control-btn {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            height: 42px;
-            padding: 0 18px;
+            height: 36px;
+            padding: 0 16px;
             border-radius: 999px;
-            border: 2px solid;
+            border: 1.5px solid;
             background: white;
             font-family: 'Nunito', sans-serif;
-            font-size: 14px;
+            font-size: 0.85rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s ease;
@@ -144,7 +153,7 @@
         }
 
         .quiz-control-btn.pauze {
-            border-color: #CCCCCC;
+            border-color: #CFCFCF;
             color: #666;
         }
 
@@ -173,28 +182,34 @@
                 margin-bottom: 12px;
             }
 
-            .quiz-progress-text {
-                font-size: 14px;
+            .quiz-progress-section {
+                flex-wrap: wrap;
+                gap: 10px;
             }
 
-            .quiz-topbar-bottom {
-                flex-direction: column;
-                align-items: stretch;
+            .quiz-progress-text {
+                font-size: 14px;
+                width: 100%;
+            }
+
+            .quiz-progress-track-wrapper {
+                order: 2;
             }
 
             .quiz-points-pill {
-                justify-content: center;
+                order: 1;
+                font-size: 14px;
+                padding: 6px 12px;
             }
 
-            .quiz-control-buttons {
+            .quiz-topbar-bottom {
                 justify-content: center;
-                flex-wrap: wrap;
             }
 
             .quiz-control-btn {
-                flex: 1;
-                min-width: 100px;
-                justify-content: center;
+                height: 34px;
+                padding: 0 14px;
+                font-size: 0.8rem;
             }
         }
 
@@ -488,23 +503,22 @@
                 <span id="breadcrumbLevelNew" style="display:none;">Niveau</span>
             </nav>
 
-            <!-- 2. Progress Section -->
+            <!-- 2. Progress Row (Text + Bar + Points) -->
             <div class="quiz-progress-section">
                 <span id="progressLabelNew" class="quiz-progress-text">Vraag 1 van 10</span>
-                <div class="quiz-progress-track">
-                    <div id="progressBarFillNew" class="quiz-progress-fill" style="width: 10%"></div>
+                <div class="quiz-progress-track-wrapper">
+                    <div class="quiz-progress-track">
+                        <div id="progressBarFillNew" class="quiz-progress-fill" style="width: 10%"></div>
+                    </div>
                 </div>
-            </div>
-
-            <!-- 3. Bottom Row: Points + Controls -->
-            <div class="quiz-topbar-bottom">
-                <!-- Points Counter -->
                 <div class="quiz-points-pill">
                     <span>🏅</span>
                     <span><span id="totalCorrectNew">0</span> punten</span>
                 </div>
+            </div>
 
-                <!-- Control Buttons -->
+            <!-- 3. Control Buttons Row -->
+            <div class="quiz-topbar-bottom">
                 <div class="quiz-control-buttons">
                     <button class="quiz-control-btn hulp" id="lovaHelpButtonNew" onclick="toggleLovaPanel()" title="L.O.V.A. Stappenplan" style="display: none;">
                         <span>❓</span>
