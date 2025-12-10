@@ -725,6 +725,11 @@ body::before {
     .quiz-card-demo {
         max-width: 100%;
     }
+
+    /* Hide hero right column on tablet and below */
+    .hero-right {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1096,21 +1101,17 @@ body::before {
 /* Responsive grid layout */
 @media (max-width: 1024px) {
     .subject-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        padding: 18px;
     }
 }
 
 @media (max-width: 768px) {
     .subject-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 16px;
         padding: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .subject-grid {
-        grid-template-columns: 1fr;
     }
 }
 
