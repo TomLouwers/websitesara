@@ -22,13 +22,240 @@
             margin: 0 auto;
             padding: 20px;
         }
+
+        /* ============================================
+           QUIZ TOP BAR - NEW DESIGN
+           ============================================ */
+
+        .quiz-topbar-wrapper {
+            background: white;
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        /* 1. Breadcrumbs - very subtle */
+        .quiz-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: #9A9A9A;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .quiz-breadcrumb a {
+            color: #9A9A9A;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .quiz-breadcrumb a:hover {
+            color: #32C4A0;
+        }
+
+        .quiz-breadcrumb-separator {
+            color: #9A9A9A;
+            margin: 0 2px;
+        }
+
+        /* 2. Progress Section */
+        .quiz-progress-section {
+            margin-bottom: 16px;
+        }
+
+        .quiz-progress-text {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .quiz-progress-track {
+            width: 100%;
+            height: 8px;
+            background: #E6F7F3;
+            border-radius: 999px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .quiz-progress-fill {
+            height: 100%;
+            background: #32C4A0;
+            border-radius: 999px;
+            transition: width 0.4s ease;
+        }
+
+        /* 3. Bottom row: Points + Controls */
+        .quiz-topbar-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .quiz-points-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #FFE8D1;
+            color: #FF8A34;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        /* 4. Control Buttons */
+        .quiz-control-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .quiz-control-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            height: 42px;
+            padding: 0 18px;
+            border-radius: 999px;
+            border: 2px solid;
+            background: white;
+            font-family: 'Nunito', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .quiz-control-btn.hulp {
+            border-color: rgba(59, 130, 246, 0.25);
+            color: #3B82F6;
+        }
+
+        .quiz-control-btn.hulp:hover {
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        .quiz-control-btn.pauze {
+            border-color: #CCCCCC;
+            color: #666;
+        }
+
+        .quiz-control-btn.pauze:hover {
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        .quiz-control-btn.stoppen {
+            border-color: rgba(249, 115, 115, 0.4);
+            color: #F97373;
+        }
+
+        .quiz-control-btn.stoppen:hover {
+            background: rgba(249, 115, 115, 0.05);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .quiz-topbar-wrapper {
+                padding: 16px;
+                margin-bottom: 16px;
+            }
+
+            .quiz-breadcrumb {
+                font-size: 12px;
+                margin-bottom: 12px;
+            }
+
+            .quiz-progress-text {
+                font-size: 14px;
+            }
+
+            .quiz-topbar-bottom {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .quiz-points-pill {
+                justify-content: center;
+            }
+
+            .quiz-control-buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .quiz-control-btn {
+                flex: 1;
+                min-width: 100px;
+                justify-content: center;
+            }
+        }
+
+        /* Hide old elements */
+        .quiz-progress-bar-container,
+        .breadcrumb,
+        .quiz-header-minimal {
+            display: none !important;
+        }
     </style>
 </head>
 <body>
     <!-- Quiz Page Content -->
     <div id="quizPage" class="quiz-container">
-        <!-- Bold Colorful Progress Bar at Top -->
-        <div class="quiz-progress-bar-container">
+        <!-- New Quiz Top Bar -->
+        <div class="quiz-topbar-wrapper">
+            <!-- 1. Breadcrumbs (very subtle) -->
+            <nav class="quiz-breadcrumb" id="quizBreadcrumb" aria-label="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="quiz-breadcrumb-separator">›</span>
+                <span id="breadcrumbSubjectNew">Onderwerp</span>
+                <span class="quiz-breadcrumb-separator" id="breadcrumbLevelSepNew" style="display:none;">›</span>
+                <span id="breadcrumbLevelNew" style="display:none;">Niveau</span>
+            </nav>
+
+            <!-- 2. Progress Section -->
+            <div class="quiz-progress-section">
+                <span id="progressLabelNew" class="quiz-progress-text">Vraag 1 van 10</span>
+                <div class="quiz-progress-track">
+                    <div id="progressBarFillNew" class="quiz-progress-fill" style="width: 10%"></div>
+                </div>
+            </div>
+
+            <!-- 3. Bottom Row: Points + Controls -->
+            <div class="quiz-topbar-bottom">
+                <!-- Points Counter -->
+                <div class="quiz-points-pill">
+                    <span>🏅</span>
+                    <span><span id="totalCorrectNew">0</span> punten</span>
+                </div>
+
+                <!-- Control Buttons -->
+                <div class="quiz-control-buttons">
+                    <button class="quiz-control-btn hulp" id="lovaHelpButtonNew" onclick="toggleLovaPanel()" title="L.O.V.A. Stappenplan" style="display: none;">
+                        <span>❓</span>
+                        <span>Hulp</span>
+                    </button>
+                    <button class="quiz-control-btn pauze" onclick="pauseQuiz()" title="Pauzeer">
+                        <span>⏸️</span>
+                        <span>Pauze</span>
+                    </button>
+                    <button class="quiz-control-btn stoppen" onclick="stopQuiz()" title="Stop">
+                        <span>⏹️</span>
+                        <span>Stoppen</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Keep old elements hidden for backwards compatibility -->
+        <div class="quiz-progress-bar-container" style="display:none;">
             <div class="quiz-progress-info">
                 <span id="progressLabel" class="progress-label">Vraag 1 van 10</span>
                 <span id="progressPercentage" class="progress-percentage">10% voltooid</span>
@@ -38,8 +265,7 @@
             </div>
         </div>
 
-        <!-- Breadcrumb Navigation -->
-        <nav class="breadcrumb" id="breadcrumb" aria-label="breadcrumb">
+        <nav class="breadcrumb" id="breadcrumb" aria-label="breadcrumb" style="display:none;">
             <a href="index.html">Home</a>
             <span class="breadcrumb-separator">›</span>
             <span id="breadcrumbSubject">Onderwerp</span>
@@ -49,11 +275,8 @@
             <span class="breadcrumb-current">Quiz</span>
         </nav>
 
-        <!-- Quiz Header - Minimal, Clean -->
-        <div class="quiz-header-minimal">
+        <div class="quiz-header-minimal" style="display:none;">
             <h2 id="quizTitle">Quiz</h2>
-
-            <!-- Quiz Control Icons (top-right) -->
             <div class="quiz-header-controls">
                 <button class="btn-icon" id="focusModeToggle" onclick="toggleFocusMode()" title="Focus Modus">
                     <i class="material-icons">visibility_off</i>
@@ -68,8 +291,6 @@
                     <i class="material-icons">stop</i>
                 </button>
             </div>
-
-            <!-- Progress Summary (compact) -->
             <div class="quiz-progress-summary">
                 <span class="progress-stat correct">✓ <span id="totalCorrect">0</span> goed</span>
                 <span class="progress-stat" style="color: var(--secondary-color);">📋 <span id="lovaClicks">0</span> hulp</span>
