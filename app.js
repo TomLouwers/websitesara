@@ -1065,11 +1065,20 @@ function submitAnswer() {
 
     feedbackSection.classList.remove('hidden'); // Show feedback section
 
+    // Also show new feedback section
+    const feedbackSectionNew = document.getElementById('feedbackSectionNew');
+    if (feedbackSectionNew) {
+        feedbackSectionNew.classList.remove('hidden');
+    }
+
     if (currentQuestion.options) {
         // Multiple choice
         if (selectedAnswer === null) {
             alert(CONFIG.feedback.noAnswer.multipleChoice);
             feedbackSection.classList.add('hidden'); // Hide if no answer selected
+            if (feedbackSectionNew) {
+                feedbackSectionNew.classList.add('hidden');
+            }
             return;
         }
 
@@ -1158,6 +1167,17 @@ function submitAnswer() {
                 extraInfoDisplay.classList.add('hidden'); // NIEUW: extraInfo verbergen bij correct
                 verhoudingstabelContainer.innerHTML = ''; // Clear verhoudingstabel
                 strategyAndTips.classList.add('hidden');
+
+                // Sync new feedback section
+                const feedbackSectionNew = document.getElementById('feedbackSectionNew');
+                if (feedbackSectionNew) {
+                    feedbackSectionNew.classList.remove('hidden');
+                    feedbackSectionNew.classList.add('correct');
+                    const feedbackTitleNew = document.getElementById('feedbackTitleNew');
+                    const feedbackMessageNew = document.getElementById('feedbackMessageNew');
+                    if (feedbackTitleNew) feedbackTitleNew.textContent = CONFIG.feedback.correct.title;
+                    if (feedbackMessageNew) feedbackMessageNew.textContent = CONFIG.feedback.correct.message;
+                }
             }
         } else {
             // Increment error count for this question
@@ -1258,6 +1278,25 @@ function submitAnswer() {
                 correctAnswerDisplay.textContent = `Het juiste antwoord was: "${correctAnswerText}"`;
                 correctAnswerDisplay.classList.remove('hidden');
                 strategyAndTips.classList.add('hidden'); // No strategy/tips for MC by default
+
+                // Sync new feedback section
+                const feedbackSectionNew = document.getElementById('feedbackSectionNew');
+                if (feedbackSectionNew) {
+                    feedbackSectionNew.classList.remove('hidden');
+                    feedbackSectionNew.classList.add('incorrect');
+                    const feedbackTitleNew = document.getElementById('feedbackTitleNew');
+                    const feedbackMessageNew = document.getElementById('feedbackMessageNew');
+                    const correctAnswerDisplayNew = document.getElementById('correctAnswerDisplayNew');
+
+                    if (feedbackTitleNew) feedbackTitleNew.textContent = CONFIG.feedback.incorrect.title;
+                    if (feedbackMessageNew) {
+                        feedbackMessageNew.textContent = errorAnalysis || CONFIG.feedback.incorrect.messageDefault;
+                    }
+                    if (correctAnswerDisplayNew) {
+                        correctAnswerDisplayNew.textContent = `Het juiste antwoord was: "${correctAnswerText}"`;
+                        correctAnswerDisplayNew.classList.remove('hidden');
+                    }
+                }
             }
 
             // Track wrong answer for review
@@ -1322,6 +1361,9 @@ function submitAnswer() {
         if (!userAnswer) {
             alert(CONFIG.feedback.noAnswer.openEnded);
             feedbackSection.classList.add('hidden'); // Hide if no answer entered
+            if (feedbackSectionNew) {
+                feedbackSectionNew.classList.add('hidden');
+            }
             return;
         }
 
@@ -1339,6 +1381,15 @@ function submitAnswer() {
             verhoudingstabelContainer.innerHTML = ''; // Clear verhoudingstabel
             strategyAndTips.classList.add('hidden');
 
+            // Sync new feedback section
+            if (feedbackSectionNew) {
+                feedbackSectionNew.classList.add('correct');
+                const feedbackTitleNew = document.getElementById('feedbackTitleNew');
+                const feedbackMessageNew = document.getElementById('feedbackMessageNew');
+                if (feedbackTitleNew) feedbackTitleNew.textContent = CONFIG.feedback.correct.title;
+                if (feedbackMessageNew) feedbackMessageNew.textContent = CONFIG.feedback.correct.message;
+            }
+
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, true);
         } else {
@@ -1348,6 +1399,21 @@ function submitAnswer() {
             feedbackSection.classList.add('incorrect');
             feedbackTitle.textContent = CONFIG.feedback.incorrect.title;
             feedbackMessage.textContent = CONFIG.feedback.incorrect.messageWithTips;
+
+            // Sync new feedback section
+            if (feedbackSectionNew) {
+                feedbackSectionNew.classList.add('incorrect');
+                const feedbackTitleNew = document.getElementById('feedbackTitleNew');
+                const feedbackMessageNew = document.getElementById('feedbackMessageNew');
+                const correctAnswerDisplayNew = document.getElementById('correctAnswerDisplayNew');
+
+                if (feedbackTitleNew) feedbackTitleNew.textContent = CONFIG.feedback.incorrect.title;
+                if (feedbackMessageNew) feedbackMessageNew.textContent = CONFIG.feedback.incorrect.messageWithTips;
+                if (correctAnswerDisplayNew) {
+                    correctAnswerDisplayNew.textContent = `Voorbeeld antwoord: "${currentQuestion.possible_answer}"`;
+                    correctAnswerDisplayNew.classList.remove('hidden');
+                }
+            }
 
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, false);
