@@ -16,7 +16,8 @@ const CONFIG = {
         'verhaaltjessommen-kate': 'Verhaaltjessommen Kate',
         basisvaardigheden: 'Basisvaardigheden',
         'basisvaardigheden-emma': 'Basisvaardigheden Emma',
-        'basisvaardigheden-kate': 'Basisvaardigheden Kate'
+        'basisvaardigheden-kate': 'Basisvaardigheden Kate',
+        spelling: 'Spelling'
     },
 
     // Subject icons
@@ -31,7 +32,8 @@ const CONFIG = {
         'verhaaltjessommen-kate': '🎓',
         basisvaardigheden: '🧮',
         'basisvaardigheden-emma': '🧒',
-        'basisvaardigheden-kate': '🎓'
+        'basisvaardigheden-kate': '🎓',
+        spelling: '✏️'
     },
 
     // Subject descriptions - Engaging and motivational
@@ -46,7 +48,8 @@ const CONFIG = {
         'verhaaltjessommen-kate': 'Reken mee met Kate! 🎓',
         basisvaardigheden: 'Train je rekenskills! 🧮',
         'basisvaardigheden-emma': 'Word een rekenprof met Emma! (330 opgaven)',
-        'basisvaardigheden-kate': 'Word een rekenprof met Kate! (240 opgaven)'
+        'basisvaardigheden-kate': 'Word een rekenprof met Kate! (240 opgaven)',
+        spelling: 'Leer correct spellen! ✏️'
     },
 
     // File naming pattern
