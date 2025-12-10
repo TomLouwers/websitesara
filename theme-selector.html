@@ -563,6 +563,12 @@
                 icon: '📖',
                 emoji: '📚',
                 color: '#D5F4E6'
+            },
+            'spelling': {
+                title: 'Spelling',
+                icon: '✏️',
+                emoji: '✨',
+                color: '#E0F2FE'
             }
         };
 
@@ -590,7 +596,13 @@
             } else {
                 localStorage.removeItem('autoStartTheme');
             }
-            window.location.href = 'index.html';
+
+            // Route to spelling-quiz for spelling subject
+            if (subject === 'spelling') {
+                window.location.href = 'spelling-quiz.html';
+            } else {
+                window.location.href = 'index.html';
+            }
         }
 
         // Load themes from JSON
