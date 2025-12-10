@@ -663,64 +663,6 @@ body::before {
     background-color: var(--primary);
 }
 
-/* === Snelle Start Strip - Master Configuration === */
-.snelle-start-strip {
-    background-color: rgba(255, 138, 52, 0.05);
-    padding: 20px 0;
-    margin: 40px 0;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-}
-
-.snelle-start-container {
-    max-width: var(--container-max-width);
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    flex-wrap: wrap;
-}
-
-.snelle-start-label {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--text-dark);
-    white-space: nowrap;
-}
-
-.snelle-start-chips {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    flex: 1;
-}
-
-.grade-chip {
-    padding: 10px 20px;
-    background-color: white;
-    color: var(--text-dark);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: var(--border-radius-button);
-    font-size: 0.875rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-}
-
-.grade-chip:hover {
-    background-color: var(--primary);
-    color: white;
-    border-color: var(--primary);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(255, 138, 52, 0.2);
-}
-
 /* === Responsive Styles - Mobile First === */
 @media (max-width: 768px) {
     /* Navigation */
@@ -784,21 +726,9 @@ body::before {
         max-width: 100%;
     }
 
-    /* Snelle Start Strip */
-    .snelle-start-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-    }
-
-    .snelle-start-chips {
-        width: 100%;
-        justify-content: flex-start;
-    }
-
-    .grade-chip {
-        flex: 1;
-        min-width: calc(50% - 6px);
+    /* Hide hero right column on tablet and below */
+    .hero-right {
+        display: none;
     }
 }
 
@@ -820,12 +750,6 @@ body::before {
     .badge-pill {
         font-size: 0.75rem;
         padding: 6px 12px;
-    }
-
-    /* Snelle Start */
-    .grade-chip {
-        min-width: 100%;
-        text-align: center;
     }
 }
 
@@ -1177,21 +1101,17 @@ body::before {
 /* Responsive grid layout */
 @media (max-width: 1024px) {
     .subject-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        padding: 18px;
     }
 }
 
 @media (max-width: 768px) {
     .subject-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 16px;
         padding: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .subject-grid {
-        grid-template-columns: 1fr;
     }
 }
 

@@ -41,27 +41,6 @@ let incorrectOptions = new Set(); // Track which options were already tried (to 
 let categoryProgress = {};
 let lovaClickCount = 0; // Track L.O.V.A. button clicks
 
-/**
- * Quick Start Function - Navigate directly to exercises for a specific grade level
- * Reduces navigation depth by jumping straight to relevant subjects
- */
-function startQuickForGroup(groupNumber) {
-    // For now, simply scroll to the subject grid
-    // Future enhancement: could filter subjects by grade level
-    const subjectGrid = document.querySelector('.subject-grid');
-    if (subjectGrid) {
-        subjectGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-        // Optional: Show a toast notification
-        console.log(`Snelle start voor Groep ${groupNumber}`);
-
-        // Could be enhanced to:
-        // 1. Filter subjects relevant to the selected group
-        // 2. Pre-select the group in level selection
-        // 3. Show a contextual message about the selected group
-    }
-}
-
 // Helper function to render verhoudingstabel widget
 function renderVerhoudingstabel(containerElement, extraInfo) {
     // Clear the container first
