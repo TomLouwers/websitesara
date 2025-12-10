@@ -629,7 +629,6 @@
             card.innerHTML = `
                 <div class="icon-circle">${grade}</div>
                 <h3 class="level-label">Groep ${grade} ${gradeEmojis[grade]}</h3>
-                <p class="level-description">${grade === 8 ? 'CITO Eindtoets' : `Groep ${grade} niveau`}</p>
 
                 <div class="cito-selector" data-grade="${grade}">
                     <div class="cito-option ${selectedMoment === 'M' ? 'active' : ''}" data-moment="M" onclick="selectMoment(${grade}, 'M')">
@@ -640,7 +639,7 @@
                     </div>
                 </div>
 
-                <button class="card-cta" onclick="startLevelFromCard(${grade})">Start oefenen →</button>
+                <button class="card-cta" onclick="startLevelFromCard(${grade})">Start oefenen</button>
             `;
 
             grid.appendChild(card);
