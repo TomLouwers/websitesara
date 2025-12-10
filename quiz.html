@@ -454,6 +454,169 @@
                 font-size: 16px;
             }
         }
+
+        /* ============================================
+           FEEDBACK COMPONENT - ENHANCED LEARNING
+           ============================================ */
+
+        .feedback-card {
+            max-width: 640px;
+            margin: 24px auto;
+            background: white;
+            border-radius: 20px;
+            padding: 28px 32px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .feedback-card.hidden {
+            display: none;
+        }
+
+        /* Encouraging Headline */
+        .feedback-headline {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #2C3E50;
+            margin: 0 0 16px 0;
+        }
+
+        .feedback-headline .emoji {
+            font-size: 28px;
+        }
+
+        /* Correct feedback color */
+        .feedback-card.correct .feedback-headline {
+            color: #2D6A4F;
+        }
+
+        /* Incorrect feedback color (soft, no shame) */
+        .feedback-card.incorrect .feedback-headline {
+            color: #D97706;
+        }
+
+        /* Answer Confirmation */
+        .feedback-answer-confirm {
+            font-size: 15px;
+            font-weight: 600;
+            color: #5A6C7D;
+            margin: 0 0 20px 0;
+            padding: 12px 16px;
+            background: #F8FAFC;
+            border-radius: 12px;
+            border-left: 4px solid #32C4A0;
+        }
+
+        .feedback-card.incorrect .feedback-answer-confirm {
+            border-left-color: #FFA726;
+        }
+
+        /* Section Headers */
+        .feedback-section {
+            margin-bottom: 20px;
+        }
+
+        .feedback-section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2C3E50;
+            margin: 0 0 10px 0;
+        }
+
+        .feedback-section-content {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #2C3E50;
+            margin: 0;
+        }
+
+        /* "Zo werkt het" (worked example) */
+        .feedback-worked-example {
+            background: #F0F9FF;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 12px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            font-weight: 600;
+            color: #0369A1;
+            text-align: center;
+        }
+
+        /* Tip Box */
+        .feedback-tip {
+            background: #FFF4E6;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-top: 16px;
+            border-left: 4px solid #FFB84D;
+        }
+
+        .feedback-tip-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #D97706;
+            margin: 0 0 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .feedback-tip-content {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #92400E;
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .feedback-card {
+                padding: 20px 24px;
+                border-radius: 16px;
+                margin: 20px auto;
+            }
+
+            .feedback-headline {
+                font-size: 18px;
+            }
+
+            .feedback-headline .emoji {
+                font-size: 24px;
+            }
+
+            .feedback-answer-confirm {
+                font-size: 14px;
+                padding: 10px 14px;
+            }
+
+            .feedback-section-title {
+                font-size: 15px;
+            }
+
+            .feedback-section-content {
+                font-size: 14px;
+            }
+
+            .feedback-worked-example {
+                font-size: 15px;
+                padding: 14px 16px;
+            }
+
+            .feedback-tip {
+                padding: 14px 16px;
+            }
+
+            .feedback-tip-title {
+                font-size: 13px;
+            }
+
+            .feedback-tip-content {
+                font-size: 13px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -635,17 +798,47 @@
 
             <!-- Feedback Section -->
             <div id="feedbackSectionNew" class="feedback-card hidden">
-                <div class="feedback-icon" id="feedbackIconNew"></div>
-                <h4 id="feedbackTitleNew"></h4>
-                <p id="feedbackMessageNew"></p>
-                <p id="correctAnswerDisplayNew" class="hidden"></p>
-                <div id="verhoudingstabelContainerNew"></div>
-                <p id="extraInfoDisplayNew" class="hidden"></p>
-                <div id="strategyAndTipsNew" class="hidden">
-                    <h4>Strategie</h4>
-                    <p id="strategyTextNew"></p>
-                    <h4>Tips</h4>
-                    <ul id="tipsListNew"></ul>
+                <!-- Encouraging Headline -->
+                <h3 class="feedback-headline">
+                    <span class="emoji" id="feedbackEmojiNew">🤗</span>
+                    <span id="feedbackHeadlineNew">Bijna! Probeer het nog een keer!</span>
+                </h3>
+
+                <!-- Answer Confirmation -->
+                <p class="feedback-answer-confirm" id="feedbackAnswerConfirmNew"></p>
+
+                <!-- "Waarom?" Section -->
+                <div class="feedback-section" id="feedbackWhySection">
+                    <h4 class="feedback-section-title">Waarom?</h4>
+                    <p class="feedback-section-content" id="feedbackWhyContentNew"></p>
+                </div>
+
+                <!-- "Zo werkt het:" Section (worked example) -->
+                <div class="feedback-section" id="feedbackWorkedSection">
+                    <h4 class="feedback-section-title">Zo werkt het:</h4>
+                    <div class="feedback-worked-example" id="feedbackWorkedExampleNew"></div>
+                </div>
+
+                <!-- Tip for Next Time -->
+                <div class="feedback-tip" id="feedbackTipSection">
+                    <p class="feedback-tip-title">💡 Tip voor de volgende keer:</p>
+                    <p class="feedback-tip-content" id="feedbackTipContentNew"></p>
+                </div>
+
+                <!-- Hidden elements for backward compatibility -->
+                <div style="display: none;">
+                    <div class="feedback-icon" id="feedbackIconNew"></div>
+                    <h4 id="feedbackTitleNew"></h4>
+                    <p id="feedbackMessageNew"></p>
+                    <p id="correctAnswerDisplayNew" class="hidden"></p>
+                    <div id="verhoudingstabelContainerNew"></div>
+                    <p id="extraInfoDisplayNew" class="hidden"></p>
+                    <div id="strategyAndTipsNew" class="hidden">
+                        <h4>Strategie</h4>
+                        <p id="strategyTextNew"></p>
+                        <h4>Tips</h4>
+                        <ul id="tipsListNew"></ul>
+                    </div>
                 </div>
             </div>
         </div>

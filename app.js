@@ -1049,6 +1049,120 @@ function selectOption(index) {
  * - Correct answer → Traditional feedback
  * - Incorrect answer → Traditional feedback with correct answer revealed
  */
+
+/**
+ * Populate the enhanced learning feedback component
+ * @param {boolean} isCorrect - Whether the answer was correct
+ * @param {Object} currentQuestion - The current question object
+ * @param {Object|null} selectedOption - The selected option (for error analysis)
+ * @param {number} correctIndex - Index of correct answer
+ */
+function populateEnhancedFeedback(isCorrect, currentQuestion, selectedOption = null, correctIndex = null) {
+    const feedbackSection = document.getElementById('feedbackSectionNew');
+    if (!feedbackSection) return;
+
+    // Show and reset feedback
+    feedbackSection.classList.remove('hidden', 'correct', 'incorrect');
+    feedbackSection.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+    // Get all feedback elements
+    const feedbackEmoji = document.getElementById('feedbackEmojiNew');
+    const feedbackHeadline = document.getElementById('feedbackHeadlineNew');
+    const feedbackAnswerConfirm = document.getElementById('feedbackAnswerConfirmNew');
+    const feedbackWhySection = document.getElementById('feedbackWhySection');
+    const feedbackWhyContent = document.getElementById('feedbackWhyContentNew');
+    const feedbackWorkedSection = document.getElementById('feedbackWorkedSection');
+    const feedbackWorkedExample = document.getElementById('feedbackWorkedExampleNew');
+    const feedbackTipSection = document.getElementById('feedbackTipSection');
+    const feedbackTipContent = document.getElementById('feedbackTipContentNew');
+
+    // 1. Set Encouraging Headline
+    if (isCorrect) {
+        if (feedbackEmoji) feedbackEmoji.textContent = '🎉';
+        if (feedbackHeadline) feedbackHeadline.textContent = 'Top gedaan!';
+        if (feedbackAnswerConfirm) {
+            feedbackAnswerConfirm.textContent = 'Je hebt het juiste antwoord gekozen! Je bent goed bezig!';
+        }
+    } else {
+        if (feedbackEmoji) feedbackEmoji.textContent = '🤗';
+        if (feedbackHeadline) feedbackHeadline.textContent = 'Bijna! Probeer het nog een keer!';
+
+        // Show correct answer
+        if (feedbackAnswerConfirm) {
+            if (correctIndex !== null && currentQuestion.options) {
+                // Multiple choice question
+                const correctAnswerText = typeof currentQuestion.options[correctIndex] === 'string'
+                    ? currentQuestion.options[correctIndex]
+                    : currentQuestion.options[correctIndex].text;
+
+                // Get the letter for the correct answer
+                const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+                const correctLetter = letters[correctIndex] || '';
+
+                feedbackAnswerConfirm.textContent = `Het goede antwoord was ${correctLetter} – ${correctAnswerText}`;
+            } else if (currentQuestion.possible_answer) {
+                // Open-ended question
+                feedbackAnswerConfirm.textContent = `Een goed antwoord is: ${currentQuestion.possible_answer}`;
+            }
+        }
+    }
+
+    // 2. Show "Waarom?" section (concept explanation)
+    if (feedbackWhySection && feedbackWhyContent && currentQuestion.extra_info?.concept) {
+        feedbackWhySection.style.display = 'block';
+        feedbackWhyContent.textContent = currentQuestion.extra_info.concept;
+    } else if (feedbackWhySection) {
+        feedbackWhySection.style.display = 'none';
+    }
+
+    // 3. Show "Zo werkt het:" section (worked example)
+    if (feedbackWorkedSection && feedbackWorkedExample && currentQuestion.extra_info?.berekening) {
+        feedbackWorkedSection.style.display = 'block';
+
+        // Join calculation steps with line breaks
+        const calculationSteps = Array.isArray(currentQuestion.extra_info.berekening)
+            ? currentQuestion.extra_info.berekening.join('\n')
+            : currentQuestion.extra_info.berekening;
+
+        feedbackWorkedExample.textContent = calculationSteps;
+    } else if (feedbackWorkedSection) {
+        feedbackWorkedSection.style.display = 'none';
+    }
+
+    // 4. Show Tip section
+    if (feedbackTipSection && feedbackTipContent) {
+        let tipText = '';
+
+        if (!isCorrect && selectedOption && typeof selectedOption === 'object' && selectedOption.foutanalyse) {
+            // For incorrect answers with foutanalyse: extract just the main tip without reflectievraag
+            const foutanalyse = selectedOption.foutanalyse;
+            // Remove the reflectievraag part (everything from 🤔 onwards)
+            tipText = foutanalyse.split('🤔')[0].trim();
+            // Remove any ** markdown formatting
+            tipText = tipText.replace(/\*\*/g, '');
+        } else if (currentQuestion.extra_info?.tips && Array.isArray(currentQuestion.extra_info.tips) && currentQuestion.extra_info.tips.length > 0) {
+            // Use general tips from extra_info
+            tipText = currentQuestion.extra_info.tips[0];
+        } else {
+            // Default tip based on theme
+            if (currentQuestion.theme && currentQuestion.theme.includes('tafels')) {
+                tipText = 'Oefen de tafels regelmatig om ze beter te onthouden!';
+            } else if (currentQuestion.theme && currentQuestion.theme.includes('geld')) {
+                tipText = 'Let goed op de komma bij geldbedragen!';
+            } else {
+                tipText = 'Lees de vraag nog een keer goed door. Wat wordt er precies gevraagd?';
+            }
+        }
+
+        if (tipText) {
+            feedbackTipSection.style.display = 'block';
+            feedbackTipContent.textContent = tipText;
+        } else {
+            feedbackTipSection.style.display = 'none';
+        }
+    }
+}
+
 function submitAnswer() {
     if (hasAnswered) return;
 
@@ -1159,25 +1273,17 @@ function submitAnswer() {
                 feedbackSection.classList.add('hidden'); // Hide old feedback
                 showSuccessModaal(currentQuestion, currentQuestion.extra_info);
             } else {
-                // Old feedback for other subjects
+                // Old feedback for other subjects (keep for backward compatibility)
                 feedbackSection.classList.add('correct');
                 feedbackTitle.textContent = CONFIG.feedback.correct.title;
                 feedbackMessage.textContent = CONFIG.feedback.correct.message;
                 correctAnswerDisplay.classList.add('hidden');
-                extraInfoDisplay.classList.add('hidden'); // NIEUW: extraInfo verbergen bij correct
-                verhoudingstabelContainer.innerHTML = ''; // Clear verhoudingstabel
+                extraInfoDisplay.classList.add('hidden');
+                verhoudingstabelContainer.innerHTML = '';
                 strategyAndTips.classList.add('hidden');
 
-                // Sync new feedback section
-                const feedbackSectionNew = document.getElementById('feedbackSectionNew');
-                if (feedbackSectionNew) {
-                    feedbackSectionNew.classList.remove('hidden');
-                    feedbackSectionNew.classList.add('correct');
-                    const feedbackTitleNew = document.getElementById('feedbackTitleNew');
-                    const feedbackMessageNew = document.getElementById('feedbackMessageNew');
-                    if (feedbackTitleNew) feedbackTitleNew.textContent = CONFIG.feedback.correct.title;
-                    if (feedbackMessageNew) feedbackMessageNew.textContent = CONFIG.feedback.correct.message;
-                }
+                // NEW: Enhanced feedback component
+                populateEnhancedFeedback(true, currentQuestion, null, correctIndex);
             }
         } else {
             // Increment error count for this question
@@ -1261,7 +1367,7 @@ function submitAnswer() {
                 if (newOptions[correctIndex]) {
                     newOptions[correctIndex].classList.add('is-correct');
                 }
-                // Old feedback for other subjects
+                // Old feedback for other subjects (keep for backward compatibility)
                 feedbackSection.classList.add('incorrect');
                 feedbackTitle.textContent = CONFIG.feedback.incorrect.title;
 
@@ -1277,26 +1383,10 @@ function submitAnswer() {
                     : currentQuestion.options[correctIndex].text;
                 correctAnswerDisplay.textContent = `Het juiste antwoord was: "${correctAnswerText}"`;
                 correctAnswerDisplay.classList.remove('hidden');
-                strategyAndTips.classList.add('hidden'); // No strategy/tips for MC by default
+                strategyAndTips.classList.add('hidden');
 
-                // Sync new feedback section
-                const feedbackSectionNew = document.getElementById('feedbackSectionNew');
-                if (feedbackSectionNew) {
-                    feedbackSectionNew.classList.remove('hidden');
-                    feedbackSectionNew.classList.add('incorrect');
-                    const feedbackTitleNew = document.getElementById('feedbackTitleNew');
-                    const feedbackMessageNew = document.getElementById('feedbackMessageNew');
-                    const correctAnswerDisplayNew = document.getElementById('correctAnswerDisplayNew');
-
-                    if (feedbackTitleNew) feedbackTitleNew.textContent = CONFIG.feedback.incorrect.title;
-                    if (feedbackMessageNew) {
-                        feedbackMessageNew.textContent = errorAnalysis || CONFIG.feedback.incorrect.messageDefault;
-                    }
-                    if (correctAnswerDisplayNew) {
-                        correctAnswerDisplayNew.textContent = `Het juiste antwoord was: "${correctAnswerText}"`;
-                        correctAnswerDisplayNew.classList.remove('hidden');
-                    }
-                }
+                // NEW: Enhanced feedback component
+                populateEnhancedFeedback(false, currentQuestion, selectedOption, correctIndex);
             }
 
             // Track wrong answer for review
@@ -1377,18 +1467,12 @@ function submitAnswer() {
             feedbackTitle.textContent = CONFIG.feedback.correct.title;
             feedbackMessage.textContent = CONFIG.feedback.correct.message;
             correctAnswerDisplay.classList.add('hidden');
-            extraInfoDisplay.classList.add('hidden'); // NIEUW: extraInfo verbergen bij correct
-            verhoudingstabelContainer.innerHTML = ''; // Clear verhoudingstabel
+            extraInfoDisplay.classList.add('hidden');
+            verhoudingstabelContainer.innerHTML = '';
             strategyAndTips.classList.add('hidden');
 
-            // Sync new feedback section
-            if (feedbackSectionNew) {
-                feedbackSectionNew.classList.add('correct');
-                const feedbackTitleNew = document.getElementById('feedbackTitleNew');
-                const feedbackMessageNew = document.getElementById('feedbackMessageNew');
-                if (feedbackTitleNew) feedbackTitleNew.textContent = CONFIG.feedback.correct.title;
-                if (feedbackMessageNew) feedbackMessageNew.textContent = CONFIG.feedback.correct.message;
-            }
+            // NEW: Enhanced feedback component (for open-ended, no correct/incorrect index)
+            populateEnhancedFeedback(true, currentQuestion, null, null);
 
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, true);
@@ -1400,20 +1484,13 @@ function submitAnswer() {
             feedbackTitle.textContent = CONFIG.feedback.incorrect.title;
             feedbackMessage.textContent = CONFIG.feedback.incorrect.messageWithTips;
 
-            // Sync new feedback section
-            if (feedbackSectionNew) {
-                feedbackSectionNew.classList.add('incorrect');
-                const feedbackTitleNew = document.getElementById('feedbackTitleNew');
-                const feedbackMessageNew = document.getElementById('feedbackMessageNew');
-                const correctAnswerDisplayNew = document.getElementById('correctAnswerDisplayNew');
-
-                if (feedbackTitleNew) feedbackTitleNew.textContent = CONFIG.feedback.incorrect.title;
-                if (feedbackMessageNew) feedbackMessageNew.textContent = CONFIG.feedback.incorrect.messageWithTips;
-                if (correctAnswerDisplayNew) {
-                    correctAnswerDisplayNew.textContent = `Voorbeeld antwoord: "${currentQuestion.possible_answer}"`;
-                    correctAnswerDisplayNew.classList.remove('hidden');
-                }
-            }
+            // NEW: Enhanced feedback component
+            // Create a pseudo-option object for open-ended questions
+            const pseudoOption = {
+                text: currentQuestion.possible_answer,
+                foutanalyse: `Het antwoord was: "${currentQuestion.possible_answer}". Probeer het nog een keer!`
+            };
+            populateEnhancedFeedback(false, currentQuestion, pseudoOption, null);
 
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, false);
