@@ -5778,10 +5778,22 @@ body.focus-mode .quiz-container {
     margin: 0 auto;
 }
 
+/* Keep accessibility controls fully accessible even in focus mode */
 body.focus-mode .accessibility-panel,
-body.focus-mode .accessibility-toggle {
+body.focus-mode .accessibility-toggle,
+body.focus-mode .btn-nav-accessibility,
+body.focus-mode #accessibilityToggle {
     opacity: 1 !important;
     pointer-events: all !important;
+}
+
+/* Ensure nav allows interaction with accessibility button even when dimmed */
+body.focus-mode nav .btn-nav-accessibility,
+body.focus-mode nav #accessibilityToggle {
+    opacity: 1 !important;
+    pointer-events: all !important;
+    position: relative;
+    z-index: 10;
 }
 
 /* High Contrast Mode */
