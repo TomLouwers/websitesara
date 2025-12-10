@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kies jouw niveau | OefenPlatform</title>
+    <title>Kies je groep | OefenPlatform</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style>
@@ -98,45 +97,26 @@
             background: linear-gradient(135deg, #FF8A34 0%, #FF6B35 100%);
             color: white;
             padding: 10px 24px;
-            border-radius: 24px;
+            border-radius: 10px;
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 600;
             font-size: 0.95rem;
-            transition: all 0.3s;
-            box-shadow: 0 4px 12px rgba(255, 138, 52, 0.3);
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(255, 138, 52, 0.25);
         }
 
         .btn-nav-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 138, 52, 0.4);
-        }
-
-        .btn-nav-accessibility {
-            background: #F5F6FA;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s;
-        }
-
-        .btn-nav-accessibility:hover {
-            background: #E8E9EE;
-            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(255, 138, 52, 0.35);
         }
 
         /* ========================================
-           SUBJECT HEADER BAR
+           SUBJECT HEADER
            ======================================== */
         .subject-header {
-            background: linear-gradient(135deg, #FFE6F1 0%, #FFD9EA 100%);
-            padding: 32px 0;
-            margin-top: 0;
-            transition: background 0.3s;
+            background: linear-gradient(135deg, #FFE6F1 0%, #FFE6F1dd 100%);
+            padding: 40px 0;
+            margin-bottom: 60px;
         }
 
         .subject-header-content {
@@ -146,6 +126,9 @@
         }
 
         .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
             font-size: 0.875rem;
             color: #7F8C8D;
             margin-bottom: 20px;
@@ -162,7 +145,7 @@
         }
 
         .breadcrumb-separator {
-            margin: 0 8px;
+            color: #BDC3C7;
         }
 
         .subject-info {
@@ -174,39 +157,38 @@
         .subject-icon-circle {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #FF7AB8 0%, #FF5BA3 100%);
             border-radius: 50%;
+            background: white;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 2.5rem;
-            box-shadow: 0 8px 20px rgba(255, 122, 184, 0.3);
-            transition: background 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .subject-text h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 800;
             color: #2C3E50;
-            margin-bottom: 4px;
+            margin-bottom: 8px;
         }
 
         .subject-questions-available {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: #7F8C8D;
             font-weight: 500;
         }
 
         /* ========================================
-           PAGE TITLE & SUBTITLE
+           PAGE INTRO
            ======================================== */
         .page-intro {
             text-align: center;
-            padding: 60px 0 40px 0;
+            margin-bottom: 50px;
         }
 
         .page-title {
-            font-size: 2.5rem;
+            font-size: 2.25rem;
             font-weight: 800;
             color: #2C3E50;
             margin-bottom: 12px;
@@ -228,17 +210,17 @@
         .level-cards-grid {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            gap: 24px;
+            gap: 20px;
             margin-bottom: 40px;
         }
 
         .level-card {
             background: white;
             border-radius: 18px;
-            padding: 24px;
+            padding: 24px 20px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -251,55 +233,18 @@
             box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
         }
 
-        /* Card color variations */
-        .level-card.groep-3 .icon-circle {
-            background: linear-gradient(135deg, #FFD86F 0%, #FFC93D 100%);
+        .level-card.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
         }
 
-        .level-card.groep-4 .icon-circle {
-            background: linear-gradient(135deg, #8FD36B 0%, #7BC95A 100%);
+        .level-card.disabled:hover {
+            transform: none;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
         }
 
-        .level-card.groep-5 .icon-circle {
-            background: linear-gradient(135deg, #FFA45C 0%, #FF8F3D 100%);
-        }
-
-        .level-card.groep-6 .icon-circle {
-            background: linear-gradient(135deg, #FF7AB8 0%, #FF5BA3 100%);
-        }
-
-        .level-card.groep-7 .icon-circle {
-            background: linear-gradient(135deg, #B794F4 0%, #A077E8 100%);
-        }
-
-        .level-card.groep-8 .icon-circle {
-            background: linear-gradient(135deg, #FFD700 0%, #FFC700 100%);
-        }
-
-        .level-card:hover.groep-3 {
-            border: 2px solid #FFD86F;
-        }
-
-        .level-card:hover.groep-4 {
-            border: 2px solid #8FD36B;
-        }
-
-        .level-card:hover.groep-5 {
-            border: 2px solid #FFA45C;
-        }
-
-        .level-card:hover.groep-6 {
-            border: 2px solid #FF7AB8;
-        }
-
-        .level-card:hover.groep-7 {
-            border: 2px solid #B794F4;
-        }
-
-        .level-card:hover.groep-8 {
-            border: 2px solid #FFD700;
-        }
-
+        /* Icon Circle */
         .icon-circle {
             width: 70px;
             height: 70px;
@@ -307,168 +252,127 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: white;
             margin-bottom: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
+        .groep-3 .icon-circle { background: linear-gradient(135deg, #FFD86F 0%, #FFC947 100%); }
+        .groep-4 .icon-circle { background: linear-gradient(135deg, #8FD36B 0%, #72C34D 100%); }
+        .groep-5 .icon-circle { background: linear-gradient(135deg, #FF9A62 0%, #FF7B3D 100%); }
+        .groep-6 .icon-circle { background: linear-gradient(135deg, #FF7AB8 0%, #FF5A9D 100%); }
+        .groep-7 .icon-circle { background: linear-gradient(135deg, #B794F4 0%, #9B73E8 100%); }
+        .groep-8 .icon-circle { background: linear-gradient(135deg, #F4C542 0%, #E0B02A 100%); }
+
+        /* Group Label */
         .level-label {
-            font-size: 1.25rem;
+            font-size: 1.125rem;
             font-weight: 700;
             color: #2C3E50;
+            margin-bottom: 8px;
+        }
+
+        .level-description {
+            font-size: 0.875rem;
+            color: #7F8C8D;
             margin-bottom: 16px;
         }
 
-        /* ========================================
-           CITO TOGGLE SWITCH (M/E)
-           ======================================== */
-        .cito-toggle {
+        /* CITO Moment Selector (M/E Toggle) */
+        .cito-selector {
             background: #F5F6FA;
             border-radius: 999px;
             padding: 3px;
-            display: inline-flex;
+            display: flex;
             gap: 2px;
             margin-bottom: 16px;
+            width: 100%;
+            max-width: 120px;
         }
 
         .cito-option {
-            padding: 6px 16px;
+            flex: 1;
+            padding: 6px 12px;
             border-radius: 999px;
-            font-size: 0.875rem;
+            font-size: 0.8rem;
             font-weight: 600;
+            text-align: center;
+            cursor: pointer;
             transition: all 0.2s;
             color: #7F8C8D;
-            cursor: pointer;
+            background: transparent;
         }
 
         .cito-option.active {
-            background: white;
+            background: rgba(255, 138, 52, 0.15);
             color: #2C3E50;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-weight: 700;
         }
 
-        /* Groep-specific active states */
-        .level-card.groep-3 .cito-option.active {
-            background: rgba(255, 216, 111, 0.3);
-            color: #C49200;
+        .cito-option:hover:not(.active) {
+            background: rgba(0, 0, 0, 0.03);
         }
 
-        .level-card.groep-4 .cito-option.active {
-            background: rgba(143, 211, 107, 0.3);
-            color: #4A8F3A;
-        }
-
-        .level-card.groep-5 .cito-option.active {
-            background: rgba(255, 164, 92, 0.3);
-            color: #C66B1F;
-        }
-
-        .level-card.groep-6 .cito-option.active {
-            background: rgba(255, 122, 184, 0.3);
-            color: #C4357B;
-        }
-
-        .level-card.groep-7 .cito-option.active {
-            background: rgba(183, 148, 244, 0.3);
-            color: #7647C4;
-        }
-
-        .level-card.groep-8 .cito-option.active {
-            background: rgba(255, 215, 0, 0.3);
-            color: #B89200;
-        }
-
-        /* ========================================
-           PRIMARY CTA BUTTON
-           ======================================== */
+        /* CTA Button */
         .card-cta {
             width: 100%;
-            background: linear-gradient(135deg, #FFA45C 0%, #FF8F3D 100%);
+            background: linear-gradient(135deg, #FF9A62 0%, #FF7B3D 100%);
             color: white;
-            padding: 12px 20px;
             border: none;
+            padding: 10px 16px;
             border-radius: 999px;
-            font-size: 0.95rem;
-            font-weight: 700;
+            font-size: 0.875rem;
+            font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 4px 12px rgba(255, 164, 92, 0.3);
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(255, 122, 61, 0.25);
         }
 
         .card-cta:hover {
-            box-shadow: 0 6px 16px rgba(255, 164, 92, 0.4);
-            transform: scale(1.02);
-        }
-
-        /* ========================================
-           BOTTOM CTA ROW
-           ======================================== */
-        .bottom-cta-row {
-            text-align: center;
-            padding: 40px 0 60px 0;
-        }
-
-        .btn-all-questions {
-            background: linear-gradient(135deg, #FF7AB8 0%, #FF5BA3 100%);
-            color: white;
-            padding: 18px 48px;
-            border: none;
-            border-radius: 999px;
-            font-size: 1.125rem;
-            font-weight: 800;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 8px 24px rgba(255, 122, 184, 0.4);
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-all-questions:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(255, 122, 184, 0.5);
+            box-shadow: 0 4px 12px rgba(255, 122, 61, 0.35);
         }
 
         /* ========================================
-           FOOTER (Simple)
+           FOOTER
            ======================================== */
-        .simple-footer {
-            background: #F5F6FA;
+        footer {
+            background: #2C3E50;
+            color: white;
             padding: 40px 0;
-            text-align: center;
-            margin-top: 60px;
+            margin-top: 80px;
         }
 
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 32px;
-        }
-
-        .footer-text {
-            color: #7F8C8D;
-            font-size: 0.95rem;
-            margin-bottom: 16px;
+            text-align: center;
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
             gap: 24px;
-            flex-wrap: wrap;
+            margin-bottom: 20px;
         }
 
         .footer-links a {
-            color: #7F8C8D;
+            color: #ECF0F1;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
             transition: color 0.2s;
         }
 
         .footer-links a:hover {
             color: #FF8A34;
+        }
+
+        .footer-copyright {
+            color: #95A5A6;
+            font-size: 0.875rem;
         }
 
         /* ========================================
@@ -477,7 +381,6 @@
         @media (max-width: 1024px) {
             .level-cards-grid {
                 grid-template-columns: repeat(3, 1fr);
-                gap: 20px;
             }
         }
 
@@ -486,32 +389,25 @@
                 padding: 0 20px;
             }
 
-            .nav-content,
-            .subject-header-content,
-            .footer-content {
+            .nav-content {
                 padding: 0 20px;
             }
 
-            .nav-link {
-                display: none;
-            }
-
             .subject-header {
-                padding: 24px 0;
+                padding: 30px 0;
+                margin-bottom: 40px;
             }
 
-            .subject-icon-circle {
-                width: 60px;
-                height: 60px;
-                font-size: 2rem;
+            .subject-header-content {
+                padding: 0 20px;
             }
 
             .subject-text h1 {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
 
             .page-title {
-                font-size: 2rem;
+                font-size: 1.75rem;
             }
 
             .page-subtitle {
@@ -523,26 +419,19 @@
                 gap: 16px;
             }
 
-            .icon-circle {
-                width: 60px;
-                height: 60px;
-                font-size: 1.75rem;
-            }
-
-            .level-label {
-                font-size: 1.125rem;
+            .nav-link {
+                display: none;
             }
         }
 
         @media (max-width: 480px) {
             .level-cards-grid {
                 grid-template-columns: 1fr;
-                gap: 16px;
             }
 
-            .btn-all-questions {
-                padding: 16px 32px;
-                font-size: 1rem;
+            .subject-info {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
@@ -567,9 +456,6 @@
             <div class="nav-right">
                 <a href="ouders.html" class="nav-link">Voor Ouders & Leraren</a>
                 <a href="index.html" class="btn-nav-primary">Gratis Beginnen</a>
-                <button class="btn-nav-accessibility" aria-label="Toegankelijkheidsopties">
-                    <i class="material-icons">accessibility</i>
-                </button>
             </div>
         </div>
     </nav>
@@ -598,8 +484,8 @@
     <!-- Page Title & Subtitle -->
     <div class="main-container">
         <section class="page-intro">
-            <h2 class="page-title">Kies jouw niveau om te beginnen! 🎯</h2>
-            <p class="page-subtitle">Selecteer je groep en start direct met oefenen.</p>
+            <h2 class="page-title">Kies je groep! 🎯</h2>
+            <p class="page-subtitle">Selecteer je klas en CITO-moment (M of E) om te beginnen.</p>
         </section>
 
         <!-- Level Cards -->
@@ -607,28 +493,33 @@
             <div class="level-cards-grid" id="levelCardsGrid">
                 <!-- Cards will be generated by JavaScript -->
             </div>
-
-            <!-- Bottom CTA -->
-            <div class="bottom-cta-row">
-                <a href="#" class="btn-all-questions" id="allQuestionsBtn">Start met alle vragen →</a>
-            </div>
         </section>
     </div>
 
     <!-- Footer -->
-    <footer class="simple-footer">
+    <footer>
         <div class="footer-content">
-            <p class="footer-text">© 2025 OefenPlatform. Gemaakt met ❤️ voor Nederlandse kinderen.</p>
             <div class="footer-links">
                 <a href="index.html">Home</a>
-                <a href="ouders.html">Voor Ouders</a>
-                <a href="ouders.html">Privacy</a>
-                <a href="ouders.html">Voorwaarden</a>
+                <a href="ouders.html">Voor Ouders & Leraren</a>
+                <a href="#">Privacy</a>
             </div>
+            <p class="footer-copyright">© 2024 OefenPlatform. Met ❤️ gemaakt voor Nederlandse leerlingen.</p>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
+        // Grade emojis and colors
+        const gradeEmojis = {
+            3: '⭐',
+            4: '🌱',
+            5: '📚',
+            6: '🚀',
+            7: '🎯',
+            8: '🏆'
+        };
+
         // Subject configuration - maps to available quiz data
         const subjectConfig = {
             'verhaaltjessommen': {
@@ -637,12 +528,12 @@
                 emoji: '🎯',
                 questions: 520,
                 color: '#FFE6F1',
-                // Only show levels that have actual quiz data
-                levels: [
-                    { grade: 4, suffix: '-emma', label: 'M4' },
-                    { grade: 5, suffix: '-kate', label: 'M5' },
-                    { grade: 8, suffix: '', label: 'E8 (CITO)' }
-                ]
+                // Map which groep-moment combinations have actual quiz data
+                availableLevels: {
+                    '4-M': '-emma',
+                    '5-M': '-kate',
+                    '8-E': ''
+                }
             },
             'basisvaardigheden': {
                 title: 'Basisvaardigheden',
@@ -650,11 +541,11 @@
                 emoji: '🎯',
                 questions: 203,
                 color: '#E8DFF5',
-                levels: [
-                    { grade: 4, suffix: '-emma', label: 'M4' },
-                    { grade: 5, suffix: '-kate', label: 'M5' },
-                    { grade: 8, suffix: '', label: 'E8 (CITO)' }
-                ]
+                availableLevels: {
+                    '4-M': '-emma',
+                    '5-M': '-kate',
+                    '8-E': ''
+                }
             },
             'wereldorientatie': {
                 title: 'Wereldoriëntatie',
@@ -662,9 +553,9 @@
                 emoji: '🎯',
                 questions: 649,
                 color: '#D1F2EB',
-                levels: [
-                    { grade: 8, suffix: '', label: 'Alle niveaus' }
-                ]
+                availableLevels: {
+                    '8-E': ''
+                }
             },
             'woordenschat': {
                 title: 'Woordenschat',
@@ -672,9 +563,9 @@
                 emoji: '🎯',
                 questions: 268,
                 color: '#D5F4E6',
-                levels: [
-                    { grade: 8, suffix: '', label: 'Alle niveaus' }
-                ]
+                availableLevels: {
+                    '8-E': ''
+                }
             }
         };
 
@@ -688,54 +579,94 @@
         document.getElementById('subjectTitle').textContent = config.title + ' ' + config.emoji;
         document.getElementById('subjectIcon').textContent = config.icon;
         document.getElementById('subjectQuestions').textContent = config.questions + ' vragen beschikbaar';
-        document.getElementById('allQuestionsBtn').textContent = `Start met alle ${config.questions} vragen →`;
 
         // Update header color
         const header = document.getElementById('subjectHeader');
         header.style.background = `linear-gradient(135deg, ${config.color} 0%, ${config.color}dd 100%)`;
 
-        // Update page title
-        document.title = `${config.title} - Kies jouw niveau | OefenPlatform`;
+        // Function to start quiz for a specific level and CITO moment
+        function startLevel(grade, moment) {
+            const key = `${grade}-${moment}`;
+            const suffix = config.availableLevels[key];
 
-        // Grade emojis
-        const gradeEmojis = {
-            3: '⭐',
-            4: '🌱',
-            5: '📚',
-            6: '🚀',
-            7: '🎯',
-            8: '🏆'
-        };
+            if (suffix === undefined) {
+                alert('Deze combinatie is nog niet beschikbaar.');
+                return;
+            }
 
-        // Function to start quiz for a specific level
-        function startLevel(subjectName) {
+            const subjectName = subject + suffix;
+
             // Store the subject to load in localStorage
             localStorage.setItem('autoStartSubject', subjectName);
             // Redirect to index.html which will auto-start the quiz
             window.location.href = 'index.html';
         }
 
-        // Generate level cards based on available levels
+        // Generate all 6 groep cards (Groep 3-8)
         const grid = document.getElementById('levelCardsGrid');
-        config.levels.forEach(level => {
+
+        for (let grade = 3; grade <= 8; grade++) {
             const card = document.createElement('div');
-            card.className = `level-card groep-${level.grade}`;
-            const subjectName = subject + level.suffix;
+            card.className = `level-card groep-${grade}`;
+
+            // Check if this groep has any available data
+            const hasMoment = config.availableLevels[`${grade}-M`] !== undefined;
+            const hasEmoment = config.availableLevels[`${grade}-E`] !== undefined;
+            const hasAnyData = hasMoment || hasEmoment;
+
+            // Default selection: E if available, otherwise M
+            let selectedMoment = hasEmoment ? 'E' : 'M';
+
+            if (!hasAnyData) {
+                card.classList.add('disabled');
+            }
+
+            const cardId = `card-${grade}`;
+            card.id = cardId;
+            card.setAttribute('data-grade', grade);
+            card.setAttribute('data-selected-moment', selectedMoment);
 
             card.innerHTML = `
-                <div class="icon-circle">${gradeEmojis[level.grade]}</div>
-                <h3 class="level-label">Groep ${level.grade} ${gradeEmojis[level.grade]}</h3>
-                <p style="color: #7F8C8D; font-size: 0.875rem; margin-bottom: 16px;">${level.label}</p>
-                <button class="card-cta" onclick="startLevel('${subjectName}')">Start oefenen →</button>
+                <div class="icon-circle">${grade}</div>
+                <h3 class="level-label">Groep ${grade} ${gradeEmojis[grade]}</h3>
+                <p class="level-description">${grade === 8 ? 'CITO Eindtoets' : `Groep ${grade} niveau`}</p>
+
+                <div class="cito-selector" data-grade="${grade}">
+                    <div class="cito-option ${selectedMoment === 'M' ? 'active' : ''}" data-moment="M" onclick="selectMoment(${grade}, 'M')">
+                        M${grade}
+                    </div>
+                    <div class="cito-option ${selectedMoment === 'E' ? 'active' : ''}" data-moment="E" onclick="selectMoment(${grade}, 'E')">
+                        E${grade}
+                    </div>
+                </div>
+
+                <button class="card-cta" onclick="startLevelFromCard(${grade})">Start oefenen →</button>
             `;
 
             grid.appendChild(card);
-        });
+        }
 
-        // Update all questions button to start full subject quiz
-        document.getElementById('allQuestionsBtn').onclick = function() {
-            startLevel(subject);
-        };
+        // Function to select M or E moment
+        function selectMoment(grade, moment) {
+            const card = document.getElementById(`card-${grade}`);
+            const selector = card.querySelector('.cito-selector');
+
+            // Update active state
+            selector.querySelectorAll('.cito-option').forEach(opt => {
+                opt.classList.remove('active');
+            });
+            selector.querySelector(`[data-moment="${moment}"]`).classList.add('active');
+
+            // Store selection
+            card.setAttribute('data-selected-moment', moment);
+        }
+
+        // Function to start quiz from card CTA
+        function startLevelFromCard(grade) {
+            const card = document.getElementById(`card-${grade}`);
+            const selectedMoment = card.getAttribute('data-selected-moment');
+            startLevel(grade, selectedMoment);
+        }
     </script>
 </body>
 </html>
