@@ -745,6 +745,47 @@ function renderVisualData(visualData) {
     return html;
 }
 
+// Update quiz card header with subject icon, title, and subtitle
+function updateQuizCardHeader(subject) {
+    const iconElement = document.getElementById('quizSubjectIcon');
+    const titleElement = document.getElementById('quizCardSubjectTitle');
+    const subtitleElement = document.getElementById('quizCardSubtitle');
+
+    if (!iconElement || !titleElement || !subtitleElement) {
+        return;
+    }
+
+    // Determine base subject and level
+    let baseSubject = subject;
+    let level = null;
+
+    // Check if subject has level variant (emma = groep 4, kate = groep 5)
+    if (subject.endsWith('-emma')) {
+        baseSubject = subject.replace('-emma', '');
+        level = 'Groep 4';
+    } else if (subject.endsWith('-kate')) {
+        baseSubject = subject.replace('-kate', '');
+        level = 'Groep 5';
+    } else if (['verhaaltjessommen', 'basisvaardigheden', 'wereldorientatie', 'woordenschat'].includes(subject)) {
+        level = 'Groep 8';
+    }
+
+    // Set subject icon
+    const subjectIcon = CONFIG.subjectIcons[subject] || CONFIG.subjectIcons[baseSubject] || '📚';
+    iconElement.textContent = subjectIcon;
+
+    // Set subject title
+    const subjectTitle = CONFIG.subjectTitles[baseSubject] || CONFIG.subjectTitles[subject] || subject;
+    titleElement.textContent = subjectTitle;
+
+    // Set subtitle (level)
+    if (level) {
+        subtitleElement.textContent = level;
+    } else {
+        subtitleElement.textContent = '';
+    }
+}
+
 function loadCurrentQuestion() {
     if (currentQuestionIndex >= randomizedQuestions.length) {
         showResults();
@@ -761,6 +802,12 @@ function loadCurrentQuestion() {
     const hintContainer = document.getElementById('hintContainer');
     if (hintContainer) {
         hintContainer.innerHTML = '';
+    }
+
+    // Sync new hint container
+    const hintContainerNew = document.getElementById('hintContainerNew');
+    if (hintContainerNew) {
+        hintContainerNew.innerHTML = '';
     }
 
     // Update progress
@@ -798,6 +845,9 @@ function loadCurrentQuestion() {
         questionCounter.textContent = `Vraag ${currentQuestionIndex + 1} van ${totalQuestions}`;
     }
 
+    // Update quiz card header (icon, title, subtitle)
+    updateQuizCardHeader(currentSubject);
+
     // Update visual star progress
     updateStarProgress(progress);
 
@@ -806,6 +856,7 @@ function loadCurrentQuestion() {
 
     // Show reading content if available
     const readingContent = document.getElementById('readingContent');
+    const readingContentNew = document.getElementById('readingContentNew');
     if (currentQuestion.content || currentQuestion.visual) {
         let contentHtml = '';
 
@@ -821,12 +872,27 @@ function loadCurrentQuestion() {
 
         readingContent.innerHTML = contentHtml;
         readingContent.classList.remove('hidden');
+
+        // Sync to new card
+        if (readingContentNew) {
+            readingContentNew.innerHTML = contentHtml;
+            readingContentNew.classList.remove('hidden');
+        }
     } else {
         readingContent.classList.add('hidden');
+        if (readingContentNew) {
+            readingContentNew.classList.add('hidden');
+        }
     }
 
     // Load question
     document.getElementById('questionText').textContent = currentQuestion.question;
+
+    // Sync to new question card
+    const questionTextNew = document.getElementById('questionTextNew');
+    if (questionTextNew) {
+        questionTextNew.textContent = currentQuestion.question;
+    }
 
     // Check if question has L.O.V.A. data
     const hasLovaData = currentQuestion.lova && currentQuestion.lova.stap1_lezen;
@@ -860,6 +926,11 @@ function loadCurrentQuestion() {
     const textareaAnswer = document.getElementById('textareaAnswer');
     const feedbackSection = document.getElementById('feedbackSection');
 
+    // Get new elements
+    const optionsContainerNew = document.getElementById('optionsContainerNew');
+    const textareaAnswerNew = document.getElementById('textareaAnswerNew');
+    const feedbackSectionNew = document.getElementById('feedbackSectionNew');
+
     // Hide feedback section and reset classes for new question
     feedbackSection.classList.add('hidden');
     feedbackSection.classList.remove('correct', 'incorrect');
@@ -868,24 +939,67 @@ function loadCurrentQuestion() {
     document.getElementById('verhoudingstabelContainer').innerHTML = ''; // Clear verhoudingstabel
     document.getElementById('strategyAndTips').classList.add('hidden');
 
+    // Sync new feedback section
+    if (feedbackSectionNew) {
+        feedbackSectionNew.classList.add('hidden');
+        feedbackSectionNew.classList.remove('correct', 'incorrect');
+        const correctAnswerDisplayNew = document.getElementById('correctAnswerDisplayNew');
+        const extraInfoDisplayNew = document.getElementById('extraInfoDisplayNew');
+        const verhoudingstabelContainerNew = document.getElementById('verhoudingstabelContainerNew');
+        const strategyAndTipsNew = document.getElementById('strategyAndTipsNew');
+
+        if (correctAnswerDisplayNew) correctAnswerDisplayNew.classList.add('hidden');
+        if (extraInfoDisplayNew) extraInfoDisplayNew.classList.add('hidden');
+        if (verhoudingstabelContainerNew) verhoudingstabelContainerNew.innerHTML = '';
+        if (strategyAndTipsNew) strategyAndTipsNew.classList.add('hidden');
+    }
+
     if (currentQuestion.options) {
         // Multiple choice question
         optionsContainer.classList.remove('hidden');
         textareaAnswer.classList.add('hidden');
 
+        if (optionsContainerNew) {
+            optionsContainerNew.classList.remove('hidden');
+        }
+        if (textareaAnswerNew) {
+            textareaAnswerNew.classList.add('hidden');
+        }
+
         optionsContainer.innerHTML = '';
+        if (optionsContainerNew) {
+            optionsContainerNew.innerHTML = '';
+        }
         currentQuestion.options.forEach((option, index) => {
             const optionElement = document.createElement('div');
             optionElement.className = 'option';
             optionElement.textContent = typeof option === 'string' ? option : option.text;
             optionElement.onclick = () => selectOption(index);
             optionsContainer.appendChild(optionElement);
+
+            // Sync to new container
+            if (optionsContainerNew) {
+                const optionElementNew = document.createElement('div');
+                optionElementNew.className = 'option';
+                optionElementNew.textContent = typeof option === 'string' ? option : option.text;
+                optionElementNew.onclick = () => selectOption(index);
+                optionsContainerNew.appendChild(optionElementNew);
+            }
         });
     } else {
         // Open question
         optionsContainer.classList.add('hidden');
         textareaAnswer.classList.remove('hidden');
         textareaAnswer.value = '';
+
+        // Sync to new elements
+        if (optionsContainerNew) {
+            optionsContainerNew.classList.add('hidden');
+        }
+        if (textareaAnswerNew) {
+            textareaAnswerNew.classList.remove('hidden');
+            textareaAnswerNew.value = '';
+        }
     }
 
     // Reset UI state
