@@ -273,6 +273,29 @@
             margin: 0;
         }
 
+        /* Reading Content Styling */
+        .quiz-question-wrapper .reading-content {
+            background: #F5F5F5;
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin-bottom: 16px;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #2C3E50;
+        }
+
+        .quiz-question-wrapper .reading-content:not(.hidden) {
+            display: block;
+        }
+
+        .quiz-question-wrapper .reading-content p {
+            margin: 0 0 12px 0;
+        }
+
+        .quiz-question-wrapper .reading-content p:last-child {
+            margin-bottom: 0;
+        }
+
         /* Responsive */
         @media (max-width: 640px) {
             .quiz-question-wrapper {
@@ -300,6 +323,11 @@
 
             .quiz-question-box .question-text {
                 font-size: 16px;
+            }
+
+            .quiz-question-wrapper .reading-content {
+                padding: 14px 18px;
+                font-size: 14px;
             }
         }
 
@@ -417,13 +445,13 @@
                 </div>
             </div>
 
+            <!-- Reading Content (if available) - shown first -->
+            <div id="readingContentNew" class="reading-content hidden"></div>
+
             <!-- Question Box -->
             <div class="quiz-question-box">
                 <div class="question-text" id="questionTextNew"></div>
             </div>
-
-            <!-- Reading Content (if available) -->
-            <div id="readingContentNew" class="reading-content hidden"></div>
 
             <!-- Hint Container -->
             <div id="hintContainerNew" style="text-align: center; margin: 20px 0;"></div>

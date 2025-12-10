@@ -667,13 +667,13 @@ function updateBreadcrumb(subject) {
     let baseSubject = subject;
     let level = null;
 
-    // Check if subject has level variant (emma = groep 4, kate = groep 5)
+    // Check if subject has level variant (emma = midden groep 4, kate = midden groep 5)
     if (subject.endsWith('-emma')) {
         baseSubject = subject.replace('-emma', '');
-        level = 'Groep 4';
+        level = 'Midden Groep 4';
     } else if (subject.endsWith('-kate')) {
         baseSubject = subject.replace('-kate', '');
-        level = 'Groep 5';
+        level = 'Midden Groep 5';
     } else if (['verhaaltjessommen', 'basisvaardigheden', 'wereldorientatie', 'woordenschat'].includes(subject)) {
         level = 'Groep 8';
     }
@@ -759,19 +759,22 @@ function updateQuizCardHeader(subject) {
     let baseSubject = subject;
     let level = null;
 
-    // Check if subject has level variant (emma = groep 4, kate = groep 5)
+    // Check if subject has level variant (emma = midden groep 4, kate = midden groep 5)
     if (subject.endsWith('-emma')) {
         baseSubject = subject.replace('-emma', '');
-        level = 'Groep 4';
+        level = 'Midden Groep 4';
     } else if (subject.endsWith('-kate')) {
         baseSubject = subject.replace('-kate', '');
-        level = 'Groep 5';
+        level = 'Midden Groep 5';
     } else if (['verhaaltjessommen', 'basisvaardigheden', 'wereldorientatie', 'woordenschat'].includes(subject)) {
         level = 'Groep 8';
     }
 
-    // Set subject icon
-    const subjectIcon = CONFIG.subjectIcons[subject] || CONFIG.subjectIcons[baseSubject] || '📚';
+    // Set subject icon (exclude graduation cap emoji - too much white space)
+    let subjectIcon = CONFIG.subjectIcons[subject] || CONFIG.subjectIcons[baseSubject] || '📚';
+    if (subjectIcon === '🎓') {
+        subjectIcon = '📚'; // Replace graduation cap with book
+    }
     iconElement.textContent = subjectIcon;
 
     // Set subject title
