@@ -233,70 +233,36 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
         }
 
-        /* Card Header with Icon + Title + Subtitle */
+        /* Card Header - HIDDEN (info shown in breadcrumb only) */
         .quiz-card-header {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 20px;
+            display: none !important;
         }
 
-        .quiz-subject-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: #E0F5F0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            flex-shrink: 0;
-        }
-
-        .quiz-card-title-group {
-            flex: 1;
-        }
-
-        .quiz-card-subject-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: #2C3E50;
-            margin: 0 0 2px 0;
-            line-height: 1.2;
-        }
-
-        .quiz-card-subtitle {
-            font-size: 13px;
-            font-weight: 500;
-            color: #7F8C8D;
-            margin: 0;
-        }
-
-        /* Question Box */
+        /* Question Box - More prominent design */
         .quiz-question-box {
             background: #F8FCFF;
             border-radius: 16px;
-            padding: 20px 24px;
+            padding: 24px 28px;
             margin-bottom: 20px;
         }
 
         .quiz-question-box .question-text {
-            font-size: 18px;
-            font-weight: 600;
-            color: #2C3E50;
+            font-size: 20px;
+            font-weight: 700;
+            color: #1A2332;
             line-height: 1.6;
             margin: 0;
         }
 
-        /* Reading Content Styling */
+        /* Reading Content Styling - Quieter design */
         .quiz-question-wrapper .reading-content {
-            background: #F5F5F5;
+            background: #F8FAFC;
             border-radius: 12px;
             padding: 18px 22px;
-            margin-bottom: 16px;
-            font-size: 15px;
+            margin-bottom: 20px;
+            font-size: 14px;
             line-height: 1.7;
-            color: #2C3E50;
+            color: #5A6C7D;
         }
 
         .quiz-question-wrapper .reading-content:not(.hidden) {
@@ -333,16 +299,17 @@
             }
 
             .quiz-question-box {
-                padding: 16px 20px;
+                padding: 20px 24px;
             }
 
             .quiz-question-box .question-text {
-                font-size: 16px;
+                font-size: 18px;
+                font-weight: 700;
             }
 
             .quiz-question-wrapper .reading-content {
                 padding: 14px 18px;
-                font-size: 14px;
+                font-size: 13px;
             }
         }
 
