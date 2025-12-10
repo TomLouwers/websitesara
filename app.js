@@ -974,16 +974,20 @@ function loadCurrentQuestion() {
             optionsContainerNew.innerHTML = '';
         }
         currentQuestion.options.forEach((option, index) => {
+            const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+            const letter = letters[index] || String.fromCharCode(65 + index);
+
             const optionElement = document.createElement('div');
             optionElement.className = 'option';
             optionElement.textContent = typeof option === 'string' ? option : option.text;
             optionElement.onclick = () => selectOption(index);
             optionsContainer.appendChild(optionElement);
 
-            // Sync to new container
+            // Sync to new container with letter prefix
             if (optionsContainerNew) {
                 const optionElementNew = document.createElement('div');
                 optionElementNew.className = 'option';
+                optionElementNew.setAttribute('data-letter', letter);
                 optionElementNew.textContent = typeof option === 'string' ? option : option.text;
                 optionElementNew.onclick = () => selectOption(index);
                 optionsContainerNew.appendChild(optionElementNew);
@@ -1117,6 +1121,13 @@ function submitAnswer() {
 
         if (selectedAnswer === correctIndex) {
             options[selectedAnswer].classList.add('correct');
+
+            // Also add new class for new quiz wrapper
+            const newOptions = document.querySelectorAll('.quiz-answers-wrapper .option');
+            if (newOptions[selectedAnswer]) {
+                newOptions[selectedAnswer].classList.add('is-correct');
+            }
+
             score++;
 
             // Update category progress tracker
@@ -1175,6 +1186,13 @@ function submitAnswer() {
                 // For verhaaltjessommen: mark selected answer as incorrect but DON'T reveal correct answer
                 // This allows the user to try again after seeing the error modal
                 options[selectedAnswer].classList.add('incorrect');
+
+                // Also add new class for new quiz wrapper
+                const newOptions = document.querySelectorAll('.quiz-answers-wrapper .option');
+                if (newOptions[selectedAnswer]) {
+                    newOptions[selectedAnswer].classList.add('is-incorrect');
+                }
+
                 incorrectOptions.add(selectedAnswer); // Disable this option for future attempts
 
                 // Track wrong answer for review (only add once per question)
@@ -1207,9 +1225,21 @@ function submitAnswer() {
             } else {
                 // For other subjects: mark incorrect and reveal correct answer immediately
                 options[selectedAnswer].classList.add('incorrect');
+
+                // Also add new classes for new quiz wrapper
+                const newOptions = document.querySelectorAll('.quiz-answers-wrapper .option');
+                if (newOptions[selectedAnswer]) {
+                    newOptions[selectedAnswer].classList.add('is-incorrect');
+                }
+
                 // Highlight correct answer if an incorrect one was selected
                 if (options[correctIndex]) {
                     options[correctIndex].classList.add('correct');
+                }
+
+                // Also highlight correct in new wrapper
+                if (newOptions[correctIndex]) {
+                    newOptions[correctIndex].classList.add('is-correct');
                 }
                 // Old feedback for other subjects
                 feedbackSection.classList.add('incorrect');

@@ -335,6 +335,137 @@
         .question-card {
             display: none !important;
         }
+
+        /* ============================================
+           ANSWER OPTION LIST - NEW DESIGN
+           ============================================ */
+
+        .quiz-answers-wrapper {
+            margin-top: 24px;
+        }
+
+        /* Base Answer Option Style */
+        .quiz-answers-wrapper .option {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: white;
+            border: 2px solid #D9D9D9;
+            border-radius: 999px;
+            padding: 16px 20px 16px 70px;
+            min-height: 58px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 16px;
+            font-weight: 500;
+            color: #2C3E50;
+        }
+
+        .quiz-answers-wrapper .option:hover {
+            background: #F9FAFB;
+        }
+
+        /* Letter Prefix Circle */
+        .quiz-answers-wrapper .option::before {
+            content: attr(data-letter);
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #F5F5F5;
+            border: 2px solid #D9D9D9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            font-weight: 700;
+            color: #666;
+            transition: all 0.2s ease;
+        }
+
+        /* Selected State */
+        .quiz-answers-wrapper .option.selected {
+            background: #FFF8F0;
+            border-color: #FFB366;
+        }
+
+        .quiz-answers-wrapper .option.selected::before {
+            background: #FFE8D1;
+            border-color: #FFB366;
+            color: #FF8A34;
+        }
+
+        /* Neutral State (dimmed) */
+        .quiz-answers-wrapper .option.is-neutral {
+            opacity: 0.6;
+            color: #7F8C8D;
+        }
+
+        /* Correct State */
+        .quiz-answers-wrapper .option.is-correct {
+            background: #E6F8E9;
+            border-color: #37B24D;
+            color: #2C3E50;
+            font-weight: 600;
+            animation: correctPulse 0.5s ease-out;
+        }
+
+        .quiz-answers-wrapper .option.is-correct::before {
+            content: '✓';
+            background: #E6F8E9;
+            border-color: #37B24D;
+            color: #37B24D;
+            font-size: 18px;
+        }
+
+        /* Incorrect State (neuroscience-safe) */
+        .quiz-answers-wrapper .option.is-incorrect {
+            background: #FFF4D7;
+            border-color: #FFC46B;
+            color: #2C3E50;
+            font-weight: 600;
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .quiz-answers-wrapper .option.is-incorrect::before {
+            content: '💡';
+            background: #FFF4D7;
+            border-color: #FFC46B;
+            font-size: 18px;
+        }
+
+        /* Animations */
+        @keyframes correctPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .quiz-answers-wrapper .option {
+                padding: 14px 16px 14px 60px;
+                min-height: 54px;
+                font-size: 15px;
+            }
+
+            .quiz-answers-wrapper .option::before {
+                left: 12px;
+                width: 32px;
+                height: 32px;
+                font-size: 14px;
+            }
+
+            .quiz-answers-wrapper .option.is-incorrect::before,
+            .quiz-answers-wrapper .option.is-correct::before {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -510,7 +641,7 @@
             </div>
 
             <!-- Answer Options Container -->
-            <div class="answers-section">
+            <div class="answers-section quiz-answers-wrapper">
                 <div id="optionsContainerNew" class="options-container"></div>
                 <textarea id="textareaAnswerNew" class="textarea-answer hidden" placeholder="Typ hier je antwoord..."></textarea>
             </div>
