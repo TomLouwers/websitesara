@@ -880,7 +880,11 @@ function loadCurrentQuestion() {
 
         // Sync to new card with story header wrapper
         if (readingContentNew) {
-            readingContentNew.innerHTML = contentHtml;
+            // Put content inside the story-text-content div
+            const storyTextContent = readingContentNew.querySelector('.story-text-content');
+            if (storyTextContent) {
+                storyTextContent.innerHTML = contentHtml;
+            }
         }
         if (storyBlockWrapper) {
             storyBlockWrapper.classList.remove('hidden');

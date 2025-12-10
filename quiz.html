@@ -256,47 +256,51 @@
             margin: 0;
         }
 
-        /* Story Header Label */
-        .story-header-label {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 13px;
-            font-weight: 700;
-            color: #5A6C7D;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 12px;
-        }
-
         /* Story Block Wrapper */
         #storyBlockWrapper {
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
         #storyBlockWrapper.hidden {
             display: none;
         }
 
-        /* Reading Content Styling - Enhanced visibility as Step 1 */
+        /* Reading Content Box - Supportive context container */
         .quiz-question-wrapper .reading-content {
             position: relative;
-            background: #FFF8E8;
-            border-radius: 14px;
-            padding: 24px 24px 24px 32px;
+            background: #FFF8EC;
+            border-radius: 16px;
+            padding: 18px 22px 18px 26px;
             margin-bottom: 0;
-            font-size: 15px;
-            line-height: 1.75;
-            color: #2C3E50;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
-            border-left: 5px solid #70D6C4;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+            border-left: 3px solid #A3E7DF;
         }
 
-        .quiz-question-wrapper .reading-content p {
+        /* Story Header Label - Inside the box */
+        .story-header-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #7BA3E5;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        /* Story Text Content */
+        .story-text-content {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .story-text-content p {
             margin: 0 0 12px 0;
         }
 
-        .quiz-question-wrapper .reading-content p:last-child {
+        .story-text-content p:last-child {
             margin-bottom: 0;
         }
 
@@ -331,14 +335,17 @@
             }
 
             .quiz-question-wrapper .reading-content {
-                padding: 20px 20px 20px 28px;
-                font-size: 14px;
-                border-left-width: 4px;
+                padding: 16px 18px 16px 22px;
+                border-left-width: 3px;
             }
 
             .story-header-label {
-                font-size: 12px;
-                margin-bottom: 10px;
+                font-size: 11px;
+                margin-bottom: 8px;
+            }
+
+            .story-text-content {
+                font-size: 14px;
             }
         }
 
@@ -352,7 +359,7 @@
            ============================================ */
 
         .quiz-answers-wrapper {
-            margin-top: 24px;
+            margin-top: 16px;
         }
 
         /* Base Answer Option Style */
@@ -757,11 +764,13 @@
 
             <!-- Story Block (if available) - shown first -->
             <div id="storyBlockWrapper" class="hidden">
-                <div class="story-header-label">
-                    <span>📘</span>
-                    <span>Verhaaltje</span>
+                <div id="readingContentNew" class="reading-content">
+                    <div class="story-header-label">
+                        <span>📘</span>
+                        <span>Verhaaltje</span>
+                    </div>
+                    <div class="story-text-content"></div>
                 </div>
-                <div id="readingContentNew" class="reading-content"></div>
             </div>
 
             <!-- Question Box -->
