@@ -1099,7 +1099,7 @@ body::before {
 }
 
 /* Responsive grid layout */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .subject-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 18px;
@@ -1107,7 +1107,7 @@ body::before {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .subject-grid {
         grid-template-columns: 1fr;
         gap: 16px;
