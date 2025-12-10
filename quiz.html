@@ -28,10 +28,12 @@
            ============================================ */
 
         .quiz-topbar-wrapper {
+            width: 100%;
+            max-width: 640px;
+            margin: 0 auto 24px;
             background: white;
             border-radius: 16px;
             padding: 20px 24px;
-            margin-bottom: 24px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
         }
 
@@ -225,6 +227,7 @@
            ============================================ */
 
         .quiz-question-wrapper {
+            width: 100%;
             max-width: 640px;
             margin: 0 auto 24px;
             background: white;
@@ -304,11 +307,46 @@
             margin-bottom: 0;
         }
 
-        /* Responsive */
+        /* Tablet breakpoint */
+        @media (max-width: 768px) {
+            .quiz-topbar-wrapper,
+            .quiz-question-wrapper,
+            .feedback-card {
+                margin-left: 16px;
+                margin-right: 16px;
+            }
+
+            .quiz-question-wrapper {
+                padding: 24px 28px;
+            }
+
+            .feedback-card {
+                padding: 24px 28px;
+            }
+        }
+
+        /* Mobile breakpoint */
         @media (max-width: 640px) {
+            .quiz-topbar-wrapper,
+            .quiz-question-wrapper,
+            .feedback-card {
+                margin-left: 12px;
+                margin-right: 12px;
+                border-radius: 16px;
+            }
+
+            .quiz-topbar-wrapper {
+                padding: 16px 20px;
+            }
+
             .quiz-question-wrapper {
                 padding: 20px 24px;
-                border-radius: 16px;
+            }
+
+            .feedback-card {
+                padding: 20px 24px;
+                margin-top: 20px;
+                margin-bottom: 20px;
             }
 
             .quiz-subject-icon {
@@ -346,6 +384,45 @@
 
             .story-text-content {
                 font-size: 14px;
+            }
+
+            /* Feedback component mobile styles */
+            .feedback-headline {
+                font-size: 18px;
+            }
+
+            .feedback-headline .emoji {
+                font-size: 24px;
+            }
+
+            .feedback-answer-confirm {
+                font-size: 14px;
+                padding: 10px 14px;
+            }
+
+            .feedback-section-title {
+                font-size: 15px;
+            }
+
+            .feedback-section-content {
+                font-size: 14px;
+            }
+
+            .feedback-worked-example {
+                font-size: 15px;
+                padding: 14px 16px;
+            }
+
+            .feedback-tip {
+                padding: 14px 16px;
+            }
+
+            .feedback-tip-title {
+                font-size: 13px;
+            }
+
+            .feedback-tip-content {
+                font-size: 13px;
             }
         }
 
@@ -496,6 +573,7 @@
            ============================================ */
 
         .feedback-card {
+            width: 100%;
             max-width: 640px;
             margin: 24px auto;
             background: white;
@@ -607,52 +685,6 @@
             margin: 0;
         }
 
-        /* Responsive */
-        @media (max-width: 640px) {
-            .feedback-card {
-                padding: 20px 24px;
-                border-radius: 16px;
-                margin: 20px auto;
-            }
-
-            .feedback-headline {
-                font-size: 18px;
-            }
-
-            .feedback-headline .emoji {
-                font-size: 24px;
-            }
-
-            .feedback-answer-confirm {
-                font-size: 14px;
-                padding: 10px 14px;
-            }
-
-            .feedback-section-title {
-                font-size: 15px;
-            }
-
-            .feedback-section-content {
-                font-size: 14px;
-            }
-
-            .feedback-worked-example {
-                font-size: 15px;
-                padding: 14px 16px;
-            }
-
-            .feedback-tip {
-                padding: 14px 16px;
-            }
-
-            .feedback-tip-title {
-                font-size: 13px;
-            }
-
-            .feedback-tip-content {
-                font-size: 13px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -981,13 +1013,6 @@
             <button class="btn btn-primary-action hidden" id="nextBtn" onclick="nextQuestion()">
                 Volgende! <i class="material-icons">arrow_forward</i>
             </button>
-
-            <!-- Secondary Actions -->
-            <div class="quiz-secondary-actions">
-                <button class="btn-secondary-action" onclick="goToLanding()" title="Ga terug">
-                    <i class="material-icons">arrow_back</i> Ga terug
-                </button>
-            </div>
         </div>
     </div>
 
