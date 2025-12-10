@@ -566,6 +566,27 @@
                 availableLevels: {
                     '8-E': ''
                 }
+            },
+            'spelling': {
+                title: 'Spelling',
+                icon: '✏️',
+                emoji: '✨',
+                questions: 0,
+                color: '#E0F2FE',
+                availableLevels: {
+                    '3-M': '',
+                    '3-E': '',
+                    '4-M': '',
+                    '4-E': '',
+                    '5-M': '',
+                    '5-E': '',
+                    '6-M': '',
+                    '6-E': '',
+                    '7-M': '',
+                    '7-E': '',
+                    '8-M': '',
+                    '8-E': ''
+                }
             }
         };
 
@@ -598,8 +619,15 @@
 
             // Store the subject to load in localStorage
             localStorage.setItem('autoStartSubject', subjectName);
-            // Redirect to index.html which will auto-start the quiz
-            window.location.href = 'index.html';
+
+            // For spelling, also store the level and redirect to spelling-quiz
+            if (subject === 'spelling') {
+                localStorage.setItem('autoStartLevel', `groep${grade}`);
+                window.location.href = 'spelling-quiz.html';
+            } else {
+                // Redirect to index.html which will auto-start the quiz
+                window.location.href = 'index.html';
+            }
         }
 
         // Generate all 6 groep cards (Groep 3-8)

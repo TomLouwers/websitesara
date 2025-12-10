@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spelling Oefenen | OefenPlatform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Spelling Quiz Specific Styles */
+        body {
+            background-color: #FFFDF8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .spelling-quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Top Bar */
+        .quiz-topbar-wrapper {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 24px;
+            background: white;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .quiz-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: #9A9A9A;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .quiz-breadcrumb a {
+            color: #9A9A9A;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .quiz-breadcrumb a:hover {
+            color: #60A5FA;
+        }
+
+        .quiz-progress-section {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        .quiz-progress-text {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .quiz-progress-track-wrapper {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .quiz-progress-track {
+            width: 100%;
+            height: 8px;
+            background: #E0F2FE;
+            border-radius: 999px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .quiz-progress-fill {
+            height: 100%;
+            background: #60A5FA;
+            border-radius: 999px;
+            transition: width 0.4s ease;
+        }
+
+        .quiz-points-pill {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: #E0F2FE;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1E40AF;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .quiz-topbar-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .quiz-control-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .quiz-control-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: #F3F4F6;
+            color: #6B7280;
+        }
+
+        .quiz-control-btn:hover {
+            background: #E5E7EB;
+            transform: translateY(-1px);
+        }
+
+        /* Spelling Question Card */
+        .spelling-question-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            margin-bottom: 24px;
+        }
+
+        .spelling-card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #F3F4F6;
+        }
+
+        .spelling-subject-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #E0F2FE;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .spelling-title-group h3 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 700;
+            color: #1F2937;
+        }
+
+        .spelling-title-group p {
+            margin: 4px 0 0;
+            font-size: 14px;
+            color: #6B7280;
+        }
+
+        /* Audio Player Section */
+        .audio-player-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .audio-instruction {
+            font-size: 18px;
+            color: #4B5563;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        .audio-play-button {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(96, 165, 250, 0.3);
+            position: relative;
+        }
+
+        .audio-play-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 32px rgba(96, 165, 250, 0.4);
+        }
+
+        .audio-play-button:active {
+            transform: scale(0.98);
+        }
+
+        .audio-play-button .material-icons {
+            font-size: 56px;
+            color: white;
+        }
+
+        .audio-play-button.playing {
+            background: linear-gradient(135deg, #34D399 0%, #10B981 100%);
+            box-shadow: 0 8px 24px rgba(52, 211, 153, 0.3);
+        }
+
+        /* Answer Input Section */
+        .answer-input-section {
+            margin: 40px 0;
+        }
+
+        .answer-input-label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .spelling-input {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 20px;
+            font-weight: 600;
+            border: 2px solid #E5E7EB;
+            border-radius: 12px;
+            outline: none;
+            transition: all 0.2s ease;
+            font-family: 'Nunito', sans-serif;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .spelling-input:focus {
+            border-color: #60A5FA;
+            box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.1);
+        }
+
+        .spelling-input.correct {
+            border-color: #10B981;
+            background: #ECFDF5;
+        }
+
+        .spelling-input.incorrect {
+            border-color: #EF4444;
+            background: #FEF2F2;
+        }
+
+        /* Check Answer Button */
+        .check-answer-button {
+            width: 100%;
+            padding: 16px 24px;
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 24px;
+            box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
+        }
+
+        .check-answer-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(96, 165, 250, 0.4);
+        }
+
+        .check-answer-button:active {
+            transform: translateY(0);
+        }
+
+        .check-answer-button:disabled {
+            background: #D1D5DB;
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+        }
+
+        /* Feedback Section */
+        .feedback-section {
+            margin-top: 32px;
+            padding: 24px;
+            border-radius: 16px;
+            display: none;
+        }
+
+        .feedback-section.show {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+
+        .feedback-section.correct {
+            background: #ECFDF5;
+            border: 2px solid #10B981;
+        }
+
+        .feedback-section.incorrect {
+            background: #FEF2F2;
+            border: 2px solid #F59E0B;
+        }
+
+        .feedback-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .feedback-icon {
+            font-size: 36px;
+        }
+
+        .feedback-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .feedback-section.correct .feedback-title {
+            color: #059669;
+        }
+
+        .feedback-section.incorrect .feedback-title {
+            color: #D97706;
+        }
+
+        .feedback-content {
+            margin-top: 16px;
+        }
+
+        .correct-spelling-display {
+            font-size: 32px;
+            font-weight: 700;
+            color: #059669;
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            margin: 16px 0;
+            letter-spacing: 2px;
+        }
+
+        .visual-explanation {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 16px;
+        }
+
+        .visual-explanation h4 {
+            margin: 0 0 12px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #374151;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .visual-explanation-content {
+            font-size: 15px;
+            color: #4B5563;
+            line-height: 1.6;
+        }
+
+        /* Next Button */
+        .next-button {
+            width: 100%;
+            padding: 16px 24px;
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 24px;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .next-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .spelling-question-card {
+                padding: 24px;
+            }
+
+            .audio-play-button {
+                width: 100px;
+                height: 100px;
+            }
+
+            .audio-play-button .material-icons {
+                font-size: 48px;
+            }
+
+            .spelling-input {
+                font-size: 18px;
+            }
+
+            .correct-spelling-display {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="spelling-quiz-container">
+        <!-- Top Bar with Progress -->
+        <div class="quiz-topbar-wrapper">
+            <nav class="quiz-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <span id="breadcrumbSubject">Spelling</span>
+                <span>›</span>
+                <span id="breadcrumbLevel">Groep 4</span>
+            </nav>
+
+            <div class="quiz-progress-section">
+                <span id="progressLabel" class="quiz-progress-text">Woord 1 van 10</span>
+                <div class="quiz-progress-track-wrapper">
+                    <div class="quiz-progress-track">
+                        <div id="progressBarFill" class="quiz-progress-fill" style="width: 10%"></div>
+                    </div>
+                </div>
+                <div class="quiz-points-pill">
+                    <span>✓</span>
+                    <span><span id="totalCorrect">0</span> goed</span>
+                </div>
+            </div>
+
+            <div class="quiz-topbar-bottom">
+                <div class="quiz-control-buttons">
+                    <button class="quiz-control-btn" onclick="pauseSpellingQuiz()">
+                        <span>⏸️</span>
+                        <span>Pauze</span>
+                    </button>
+                    <button class="quiz-control-btn" onclick="stopSpellingQuiz()">
+                        <span>⏹️</span>
+                        <span>Stoppen</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Spelling Question Card -->
+        <div class="spelling-question-card">
+            <div class="spelling-card-header">
+                <div class="spelling-subject-icon">✏️</div>
+                <div class="spelling-title-group">
+                    <h3>Spelling Oefenen</h3>
+                    <p id="cardSubtitle">Luister en schrijf het woord</p>
+                </div>
+            </div>
+
+            <!-- Audio Player -->
+            <div class="audio-player-section">
+                <p class="audio-instruction">🎧 Klik op de knop om het woord te horen</p>
+                <button class="audio-play-button" id="audioPlayButton" onclick="playWordAudio()">
+                    <i class="material-icons" id="playIcon">volume_up</i>
+                </button>
+                <audio id="wordAudio" preload="auto"></audio>
+            </div>
+
+            <!-- Answer Input -->
+            <div class="answer-input-section">
+                <label class="answer-input-label" for="spellingInput">Type het woord dat je hoort:</label>
+                <input
+                    type="text"
+                    id="spellingInput"
+                    class="spelling-input"
+                    placeholder="Typ hier..."
+                    autocomplete="off"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                >
+            </div>
+
+            <!-- Check Answer Button -->
+            <button class="check-answer-button" id="checkButton" onclick="checkSpellingAnswer()">
+                Controleer antwoord
+            </button>
+
+            <!-- Feedback Section -->
+            <div class="feedback-section" id="feedbackSection">
+                <div class="feedback-header">
+                    <span class="feedback-icon" id="feedbackIcon">🎉</span>
+                    <h3 class="feedback-title" id="feedbackTitle">Goed gedaan!</h3>
+                </div>
+                <div class="feedback-content">
+                    <div id="correctSpellingDisplay" class="correct-spelling-display"></div>
+                    <div class="visual-explanation" id="visualExplanation">
+                        <h4>
+                            <span>💡</span>
+                            <span>Uitleg</span>
+                        </h4>
+                        <div class="visual-explanation-content" id="explanationContent"></div>
+                    </div>
+                </div>
+                <button class="next-button" onclick="nextWord()">
+                    Volgende woord →
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="spelling-quiz.js"></script>
+</body>
+</html>
