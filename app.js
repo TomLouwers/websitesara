@@ -241,7 +241,7 @@ function showLevelSelection(type) {
             description: 'Los slimme rekenpuzzels op met contextrijke rekenproblemen'
         },
         'basisvaardigheden': {
-            title: 'Basisvaardigheden',
+            title: 'Getal & Bewerking',
             icon: 'functions',
             color: '#FF7F69',
             description: 'Train je rekenkundige basisvaardigheden en word steeds sneller'

@@ -14,9 +14,9 @@ const CONFIG = {
         verhaaltjessommen: 'Verhaaltjessommen',
         'verhaaltjessommen-emma': 'Verhaaltjessommen Emma',
         'verhaaltjessommen-kate': 'Verhaaltjessommen Kate',
-        basisvaardigheden: 'Basisvaardigheden',
-        'basisvaardigheden-emma': 'Basisvaardigheden Emma',
-        'basisvaardigheden-kate': 'Basisvaardigheden Kate',
+        basisvaardigheden: 'Getal & Bewerking',
+        'basisvaardigheden-emma': 'Getal & Bewerking Emma',
+        'basisvaardigheden-kate': 'Getal & Bewerking Kate',
         spelling: 'Spelling'
     },
 

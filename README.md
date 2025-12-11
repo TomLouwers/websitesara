@@ -97,7 +97,7 @@ CONFIG.scoreThresholds = {
 4. **Wereldoriëntatie** (World Orientation) - 649 questions
 5. **Woordenschat** (Vocabulary) - 268 questions
 6. **Verhaaltjessommen** (Word Problems) - 375 questions
-7. **Basisvaardigheden** (Basic Skills) - 203 questions
+7. **Getal & Bewerking** (Number & Operations) - 203 questions
 
 **Total**: 1,629 quiz questions
 
