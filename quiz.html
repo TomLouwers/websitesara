@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="verhoudingstabel-widget.css">
+    <link rel="stylesheet" href="styles.css?v=20250211">
+    <link rel="stylesheet" href="verhoudingstabel-widget.css?v=20250211">
     <style>
         /* Quiz page specific styles */
         body {
@@ -1021,11 +1021,47 @@
 
     <!-- Results Page -->
     <div id="resultsPage" class="results-container" style="display: none;">
-        <div class="results-score" id="finalScore">0/0</div>
-        <div class="results-message" id="resultsMessage">Fantastisch gewerkt! 🌟</div>
-        <button class="btn" onclick="goToLanding()">
-            <i class="material-icons">refresh</i> Nog een keer oefenen!
-        </button>
+        <!-- 1. Hero Block: Emotional Summary -->
+        <div class="result-hero">
+            <div class="result-emoji" id="resultEmoji">🎉</div>
+            <h1 class="result-headline" id="resultHeadline">Knap gewerkt!</h1>
+            <p class="result-summary" id="resultSummary">Je hebt 8 vragen goed beantwoord!</p>
+            <div class="result-growth-badge" id="resultGrowthBadge">
+                <span class="growth-icon">⭐</span>
+                <span id="growthText">Je hebt 2 leerpunten verdiend!</span>
+            </div>
+        </div>
+
+        <!-- 2. Skills Overview: Progress Chips -->
+        <div class="skills-overview" id="skillsOverview">
+            <h2 class="section-heading">📊 Wat heb je geoefend?</h2>
+            <div class="skills-chips" id="skillsChips">
+                <!-- Skills chips will be inserted here dynamically -->
+            </div>
+        </div>
+
+        <!-- 3. Question Cards: Collapsible Accordion -->
+        <div class="question-review-section" id="questionReviewSection">
+            <h2 class="section-heading">💡 Jouw groeikansen</h2>
+            <p class="section-description">Klik op een vraag om de uitleg te zien</p>
+            <div class="question-accordion" id="questionAccordion">
+                <!-- Accordion items will be inserted here dynamically -->
+            </div>
+        </div>
+
+        <!-- 4. Primary CTA -->
+        <div class="result-actions">
+            <button class="btn-result-primary" onclick="restartQuiz()">
+                <span class="btn-icon">🔁</span>
+                <span>Nog een keer oefenen!</span>
+            </button>
+
+            <!-- 5. Secondary CTA -->
+            <button class="btn-result-secondary" onclick="goToLanding()">
+                <i class="material-icons">arrow_back</i>
+                <span>Terug naar overzicht</span>
+            </button>
+        </div>
     </div>
 
     <!-- Review Page -->
@@ -1178,11 +1214,11 @@
     </div>
 
     <!-- Scripts -->
-    <script src="config.js"></script>
-    <script src="verhoudingstabel-widget.js"></script>
-    <script src="foutanalyse-modaal.js"></script>
-    <script src="app.js"></script>
-    <script src="accessibility.js"></script>
+    <script src="config.js?v=20250211"></script>
+    <script src="verhoudingstabel-widget.js?v=20250211"></script>
+    <script src="foutanalyse-modaal.js?v=20250211"></script>
+    <script src="app.js?v=20250211"></script>
+    <script src="accessibility.js?v=20250211"></script>
 
     <script>
         // On page load, check if we have quiz data in sessionStorage
