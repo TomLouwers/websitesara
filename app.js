@@ -1800,8 +1800,9 @@ function populateQuestionAccordion() {
         contentHTML += `<div class="question-text-review"><strong>Vraag:</strong> ${item.question.question}</div>`;
 
         // Your answer vs Correct answer
-        const userAnswer = item.userAnswer !== null ? item.question.options[item.userAnswer] : 'Niet beantwoord';
-        const correctAnswer = item.question.options[item.question.correct];
+        // wrongAnswers stores the actual text, not the index
+        const userAnswer = item.userAnswer || 'Niet beantwoord';
+        const correctAnswer = item.correctAnswer || 'Onbekend';
 
         contentHTML += `
             <div class="answer-comparison">
