@@ -6350,14 +6350,15 @@ body.font-scale-extra-groot .option {
 }
 
 /* ============================================
-   OPTIMIZED RESULT PAGE - Child-Friendly Design
+/* ============================================
+   OPTIMIZED RESULT PAGE - Compact Design
    ============================================ */
 
 /* Results Container - Clean background */
 .results-container {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 20px 16px;
     background: linear-gradient(135deg, #F8FEFF 0%, #FFF9F0 100%);
     min-height: 100vh;
 }
@@ -6368,58 +6369,49 @@ body.font-scale-extra-groot .option {
 
 .result-hero {
     background: white;
-    border-radius: 20px;
-    padding: 48px 32px;
+    border-radius: 12px;
+    padding: 20px 24px;
     text-align: center;
-    margin-bottom: 32px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .result-emoji {
-    font-size: 80px;
+    font-size: 48px;
     line-height: 1;
-    margin-bottom: 20px;
-    animation: bounceIn 0.6s ease-out;
-}
-
-@keyframes bounceIn {
-    0% { transform: scale(0.3); opacity: 0; }
-    50% { transform: scale(1.05); }
-    70% { transform: scale(0.9); }
-    100% { transform: scale(1); opacity: 1; }
+    margin-bottom: 12px;
 }
 
 .result-headline {
-    font-size: 36px;
-    font-weight: 800;
+    font-size: 24px;
+    font-weight: 700;
     color: #2D3748;
-    margin: 0 0 16px 0;
+    margin: 0 0 8px 0;
     font-family: 'Nunito', sans-serif;
 }
 
 .result-summary {
-    font-size: 20px;
+    font-size: 16px;
     color: #4A5568;
-    line-height: 1.6;
-    margin: 0 0 24px 0;
+    line-height: 1.4;
+    margin: 0 0 12px 0;
     font-weight: 500;
 }
 
 .result-growth-badge {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     background: linear-gradient(135deg, #FFF7D9 0%, #FFF3C4 100%);
-    padding: 16px 28px;
-    border-radius: 16px;
-    font-size: 18px;
-    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
     color: #744210;
-    box-shadow: 0 2px 8px rgba(255, 200, 100, 0.3);
 }
 
 .growth-icon {
-    font-size: 28px;
+    font-size: 20px;
 }
 
 /* ============================================
@@ -6428,78 +6420,75 @@ body.font-scale-extra-groot .option {
 
 .skills-overview {
     background: white;
-    border-radius: 20px;
-    padding: 32px;
-    margin-bottom: 32px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .section-heading {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     color: #2D3748;
-    margin: 0 0 24px 0;
+    margin: 0 0 12px 0;
     font-family: 'Nunito', sans-serif;
 }
 
 .section-description {
-    font-size: 16px;
+    font-size: 14px;
     color: #718096;
-    margin: 0 0 20px 0;
+    margin: 0 0 12px 0;
 }
 
 .skills-chips {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 8px;
 }
 
 .skill-chip {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 16px 20px;
-    border-radius: 16px;
-    font-size: 16px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: transform 0.2s ease;
     cursor: default;
 }
 
 .skill-chip:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
 }
 
 .skill-chip-excellent {
     background: linear-gradient(135deg, #E8F9EC 0%, #D4F4DD 100%);
     border: 2px solid #68D391;
-    box-shadow: 0 2px 8px rgba(104, 211, 145, 0.2);
 }
 
 .skill-chip-good {
     background: linear-gradient(135deg, #EAF8FF 0%, #D6F1FF 100%);
     border: 2px solid #63B3ED;
-    box-shadow: 0 2px 8px rgba(99, 179, 237, 0.2);
 }
 
 .skill-chip-growth {
     background: linear-gradient(135deg, #FFF7D9 0%, #FFF3C4 100%);
     border: 2px solid #F6E05E;
-    box-shadow: 0 2px 8px rgba(246, 224, 94, 0.2);
 }
 
 .skill-chip-icon {
-    font-size: 28px;
+    font-size: 20px;
     line-height: 1;
 }
 
 .skill-chip-label {
-    font-weight: 700;
+    font-weight: 600;
     color: #2D3748;
     flex: 1;
 }
 
 .skill-chip-status {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     color: #4A5568;
 }
@@ -6510,36 +6499,36 @@ body.font-scale-extra-groot .option {
 
 .question-review-section {
     background: white;
-    border-radius: 20px;
-    padding: 32px;
-    margin-bottom: 32px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .question-accordion {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 
 .accordion-item {
     background: #F7FAFC;
     border: 2px solid #E2E8F0;
-    border-radius: 16px;
+    border-radius: 12px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .accordion-item.active {
     border-color: #CBD5E0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .accordion-header {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 20px 24px;
+    gap: 8px;
+    padding: 12px 16px;
     cursor: pointer;
     user-select: none;
     transition: background 0.2s ease;
@@ -6550,10 +6539,10 @@ body.font-scale-extra-groot .option {
 }
 
 .accordion-status {
-    font-size: 14px;
-    font-weight: 700;
-    padding: 6px 12px;
-    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 6px;
 }
 
 .status-growth {
@@ -6563,13 +6552,13 @@ body.font-scale-extra-groot .option {
 
 .accordion-title {
     flex: 1;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 600;
     color: #2D3748;
 }
 
 .accordion-icon {
-    font-size: 20px;
+    font-size: 16px;
     color: #A0AEC0;
     transition: transform 0.3s ease;
 }
@@ -6579,52 +6568,51 @@ body.font-scale-extra-groot .option {
 }
 
 .accordion-content {
-    padding: 0 24px 24px 24px;
+    padding: 0 16px 16px 16px;
 }
 
 /* Verhaaltje Box */
 .verhaaltje-box {
     background: linear-gradient(135deg, #FFF9E6 0%, #FFF4D6 100%);
     border: 2px solid #F6E05E;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-    position: relative;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
 }
 
 .verhaaltje-label {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
     color: #744210;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
 }
 
 .verhaaltje-box p {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
     color: #2D3748;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 /* Question Text in Review */
 .question-text-review {
-    font-size: 18px;
+    font-size: 14px;
     color: #2D3748;
-    margin-bottom: 20px;
-    line-height: 1.6;
+    margin-bottom: 12px;
+    line-height: 1.5;
 }
 
 /* Answer Comparison */
 .answer-comparison {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 24px;
+    gap: 8px;
+    margin-bottom: 12px;
 }
 
 .answer-box {
-    padding: 16px;
-    border-radius: 12px;
+    padding: 10px;
+    border-radius: 8px;
     border: 2px solid;
 }
 
@@ -6639,14 +6627,14 @@ body.font-scale-extra-groot .option {
 }
 
 .answer-label {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
     color: #718096;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .answer-value {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: #2D3748;
 }
@@ -6654,12 +6642,12 @@ body.font-scale-extra-groot .option {
 /* Explanation Section */
 .explanation-section {
     background: #FAFCFE;
-    border-radius: 12px;
-    padding: 20px;
+    border-radius: 8px;
+    padding: 12px;
 }
 
 .explanation-block {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 .explanation-block:last-child {
@@ -6667,19 +6655,19 @@ body.font-scale-extra-groot .option {
 }
 
 .explanation-heading {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     color: #2D3748;
-    margin: 0 0 12px 0;
+    margin: 0 0 6px 0;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 }
 
 .explanation-block p {
-    font-size: 16px;
+    font-size: 14px;
     color: #4A5568;
-    line-height: 1.6;
+    line-height: 1.5;
     margin: 0;
 }
 
@@ -6690,55 +6678,52 @@ body.font-scale-extra-groot .option {
 .result-actions {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .btn-result-primary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    background: linear-gradient(135deg, #FF8A34 0%, #FF6B6B 100%);
+    gap: 8px;
+    background: var(--primary-color);
     color: white;
-    font-size: 20px;
-    font-weight: 700;
-    padding: 20px 48px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 24px;
     border: none;
-    border-radius: 16px;
+    border-radius: 12px;
     cursor: pointer;
-    box-shadow: 0 4px 16px rgba(255, 138, 52, 0.4);
-    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 138, 52, 0.3);
+    transition: all 0.2s ease;
     font-family: 'Nunito', sans-serif;
-    min-width: 280px;
+    min-width: 200px;
 }
 
 .btn-result-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 24px rgba(255, 138, 52, 0.5);
-}
-
-.btn-result-primary:active {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 138, 52, 0.4);
+    background: var(--primary-color-dark);
 }
 
 .btn-result-primary .btn-icon {
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .btn-result-secondary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 6px;
     background: white;
     color: #718096;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    padding: 14px 32px;
+    padding: 10px 20px;
     border: 2px solid #E2E8F0;
-    border-radius: 12px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s ease;
     font-family: 'Nunito', sans-serif;
@@ -6751,7 +6736,7 @@ body.font-scale-extra-groot .option {
 }
 
 .btn-result-secondary .material-icons {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 /* ============================================
@@ -6760,37 +6745,37 @@ body.font-scale-extra-groot .option {
 
 @media (max-width: 768px) {
     .results-container {
-        padding: 24px 16px;
+        padding: 16px 12px;
     }
     
     .result-hero {
-        padding: 32px 24px;
+        padding: 16px 20px;
     }
     
     .result-emoji {
-        font-size: 64px;
+        font-size: 40px;
     }
     
     .result-headline {
-        font-size: 28px;
+        font-size: 20px;
     }
     
     .result-summary {
-        font-size: 18px;
+        font-size: 14px;
     }
     
     .result-growth-badge {
-        font-size: 16px;
-        padding: 12px 20px;
+        font-size: 13px;
+        padding: 6px 12px;
     }
     
     .skills-overview,
     .question-review-section {
-        padding: 24px 20px;
+        padding: 12px 16px;
     }
     
     .section-heading {
-        font-size: 20px;
+        font-size: 16px;
     }
     
     .skills-chips {
@@ -6807,8 +6792,8 @@ body.font-scale-extra-groot .option {
     
     .btn-result-primary {
         width: 100%;
-        font-size: 18px;
-        padding: 18px 32px;
+        font-size: 15px;
+        padding: 11px 20px;
     }
     
     .btn-result-secondary {
@@ -6834,4 +6819,3 @@ body.font-scale-extra-groot .option {
         display: block !important;
     }
 }
-
