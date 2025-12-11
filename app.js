@@ -210,6 +210,32 @@ function createRandomizedQuestions(data) {
     return shuffleArray(flatQuestions);
 }
 
+// Map subject name to file path
+function getFilePath(subject) {
+    // Map basisvaardigheden subjects to exercises/gb/ directory
+    const gbMapping = {
+        'basisvaardigheden-m3': 'exercises/gb/gb_groep3_m3.json',
+        'basisvaardigheden-e3': 'exercises/gb/gb_groep3_e3.json',
+        'basisvaardigheden-m4': 'exercises/gb/gb_groep4_m4.json',
+        'basisvaardigheden-e4': 'exercises/gb/gb_groep4_e4.json',
+        'basisvaardigheden-m5': 'exercises/gb/gb_groep5_m5.json',
+        'basisvaardigheden-e5': 'exercises/gb/gb_groep5_e5.json',
+        'basisvaardigheden-m6': 'exercises/gb/gb_groep6_m6.json',
+        'basisvaardigheden-e6': 'exercises/gb/gb_groep6_e6.json',
+        'basisvaardigheden-m7': 'exercises/gb/gb_groep7_m7.json',
+        'basisvaardigheden-e7': 'exercises/gb/gb_groep7_e7.json',
+        'basisvaardigheden-e8': 'exercises/gb/gb_groep8_e8.json'
+    };
+
+    // Check if this is a GB subject
+    if (gbMapping[subject]) {
+        return gbMapping[subject];
+    }
+
+    // Default: use subject + Template suffix
+    return subject + CONFIG.templateFileSuffix;
+}
+
 // Load JSON file
 async function loadJsonFile(filename) {
     try {
@@ -327,7 +353,7 @@ function showLevelSelection(type) {
 
 // Load subject and show themes
 async function loadSubject(subject) {
-    const filename = subject + CONFIG.templateFileSuffix;
+    const filename = getFilePath(subject);
     const data = await loadJsonFile(filename);
 
     if (!data) return;
@@ -2191,7 +2217,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Load the subject data and start quiz directly (skip theme selection)
         setTimeout(async () => {
-            const filename = autoStartSubject + CONFIG.templateFileSuffix;
+            const filename = getFilePath(autoStartSubject);
             const data = await loadJsonFile(filename);
 
             if (!data) {
