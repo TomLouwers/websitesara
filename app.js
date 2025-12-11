@@ -1605,26 +1605,288 @@ function showResults() {
     // Check for new highscore
     const isNewHighscore = saveHighscore(currentSubject, currentTheme, score);
 
-    // Ensure totalQuestions is not zero to avoid division by zero
+    // Calculate stats
     const percentage = totalQuestions > 0 ? Math.round((score / totalQuestions) * 100) : 0;
-    document.getElementById('finalScore').textContent = `${score}/${totalQuestions}`;
+    const incorrectCount = wrongAnswers.length;
+    const correctCount = score;
 
-    let message = '';
-    if (isNewHighscore) {
-        message = CONFIG.scoreMessages.newHighscore;
-    }
+    // 1. HERO BLOCK: Emotional Summary
+    populateHeroBlock(percentage, correctCount, incorrectCount, isNewHighscore);
 
-    if (percentage >= CONFIG.scoreThresholds.excellent) {
-        message += CONFIG.scoreMessages.excellent;
-    } else if (percentage >= CONFIG.scoreThresholds.good) {
-        message += CONFIG.scoreMessages.good;
-    } else if (percentage >= CONFIG.scoreThresholds.fair) {
-        message += CONFIG.scoreMessages.fair;
+    // 2. SKILLS OVERVIEW: Progress Chips
+    populateSkillsOverview();
+
+    // 3. QUESTION CARDS: Collapsible Accordion
+    populateQuestionAccordion();
+}
+
+// Helper: Populate Hero Block with child-friendly messaging
+function populateHeroBlock(percentage, correctCount, incorrectCount, isNewHighscore) {
+    const emojiEl = document.getElementById('resultEmoji');
+    const headlineEl = document.getElementById('resultHeadline');
+    const summaryEl = document.getElementById('resultSummary');
+    const growthBadgeEl = document.getElementById('resultGrowthBadge');
+    const growthTextEl = document.getElementById('growthText');
+
+    // Select emoji and headline based on performance
+    let emoji, headline;
+    if (percentage >= 90) {
+        emoji = '🎉';
+        headline = isNewHighscore ? 'Nieuw record! Fantastisch!' : 'Wauw! Geweldig gedaan!';
+    } else if (percentage >= 70) {
+        emoji = '🌟';
+        headline = 'Knap gewerkt!';
+    } else if (percentage >= 50) {
+        emoji = '💪';
+        headline = 'Goed bezig!';
     } else {
-        message += CONFIG.scoreMessages.needsPractice;
+        emoji = '🚀';
+        headline = 'Elke vraag maakt je sterker!';
     }
 
-    document.getElementById('resultsMessage').textContent = message;
+    emojiEl.textContent = emoji;
+    headlineEl.textContent = headline;
+
+    // Summary text - always positive framing
+    let summaryText = '';
+    if (correctCount === 1) {
+        summaryText = 'Je hebt 1 vraag goed beantwoord!';
+    } else if (correctCount > 1) {
+        summaryText = `Je hebt ${correctCount} vragen goed beantwoord!`;
+    } else {
+        summaryText = 'Elke vraag is een leerkans!';
+    }
+
+    if (incorrectCount > 0) {
+        if (incorrectCount === 1) {
+            summaryText += ' En 1 vraag maakt je weer een beetje sterker!';
+        } else {
+            summaryText += ` En ${incorrectCount} vragen maken je weer een beetje sterker!`;
+        }
+    }
+
+    summaryEl.textContent = summaryText;
+
+    // Growth badge - celebrate learning points
+    if (incorrectCount > 0) {
+        growthBadgeEl.style.display = 'flex';
+        const leerpunten = incorrectCount === 1 ? '1 leerpunt' : `${incorrectCount} leerpunten`;
+        growthTextEl.textContent = `Je hebt ${leerpunten} verdiend!`;
+    } else {
+        growthBadgeEl.style.display = 'none';
+    }
+}
+
+// Helper: Populate Skills Overview with category chips
+function populateSkillsOverview() {
+    const skillsChipsEl = document.getElementById('skillsChips');
+    const skillsOverviewEl = document.getElementById('skillsOverview');
+
+    // Only show if we have category data
+    const categories = Object.keys(categoryProgress);
+    if (categories.length === 0) {
+        skillsOverviewEl.style.display = 'none';
+        return;
+    }
+
+    skillsOverviewEl.style.display = 'block';
+    skillsChipsEl.innerHTML = '';
+
+    categories.forEach(category => {
+        const data = categoryProgress[category];
+        const total = data.correct + data.incorrect;
+        const percentage = total > 0 ? Math.round((data.correct / total) * 100) : 0;
+
+        // Create chip
+        const chip = document.createElement('div');
+        chip.className = 'skill-chip';
+
+        // Determine status and icon
+        let statusIcon, statusText, chipClass;
+        if (percentage >= 80) {
+            statusIcon = '⭐';
+            statusText = 'Goed gedaan!';
+            chipClass = 'skill-chip-excellent';
+        } else if (percentage >= 50) {
+            statusIcon = '👍';
+            statusText = 'Lekker bezig!';
+            chipClass = 'skill-chip-good';
+        } else {
+            statusIcon = '💡';
+            statusText = 'Hier kun je nog sterker in worden';
+            chipClass = 'skill-chip-growth';
+        }
+
+        chip.classList.add(chipClass);
+
+        // Get theme icon (use default if not found)
+        const themeIcons = {
+            'optellen': '➕',
+            'aftrekken': '➖',
+            'vermenigvuldigen': '✖️',
+            'delen': '➗',
+            'breuken': '½',
+            'procenten': '%',
+            'meten': '📏',
+            'tijd': '⏰',
+            'geld': '💰',
+            'basis-rekenen': '🔢',
+            'omrekenen-eenheden': '⚖️',
+            'kommagetallen': '0.0',
+            'getallenlijn': '📊',
+            'verhoudingstabellen': '📈'
+        };
+
+        const themeIcon = themeIcons[category.toLowerCase()] || '📚';
+
+        chip.innerHTML = `
+            <span class="skill-chip-icon">${themeIcon}</span>
+            <span class="skill-chip-label">${category}</span>
+            <span class="skill-chip-status">${statusIcon} ${statusText}</span>
+        `;
+
+        skillsChipsEl.appendChild(chip);
+    });
+}
+
+// Helper: Populate Question Accordion with wrong answers
+function populateQuestionAccordion() {
+    const accordionEl = document.getElementById('questionAccordion');
+    const reviewSectionEl = document.getElementById('questionReviewSection');
+
+    // Only show if there are wrong answers
+    if (wrongAnswers.length === 0) {
+        reviewSectionEl.style.display = 'none';
+        return;
+    }
+
+    reviewSectionEl.style.display = 'block';
+    accordionEl.innerHTML = '';
+
+    wrongAnswers.forEach((item, index) => {
+        const accordionItem = document.createElement('div');
+        accordionItem.className = 'accordion-item';
+
+        // Status tag
+        let statusTag = '💡 Hier kun je nog groeien';
+        let statusClass = 'status-growth';
+
+        const accordionHeader = document.createElement('div');
+        accordionHeader.className = 'accordion-header';
+        accordionHeader.innerHTML = `
+            <span class="accordion-status ${statusClass}">${statusTag}</span>
+            <span class="accordion-title">Vraag ${index + 1}</span>
+            <span class="accordion-icon">▼</span>
+        `;
+
+        const accordionContent = document.createElement('div');
+        accordionContent.className = 'accordion-content';
+        accordionContent.style.display = 'none';
+
+        // Build content HTML
+        let contentHTML = '';
+
+        // Story (if available)
+        if (item.question.content && item.question.content.trim()) {
+            contentHTML += `
+                <div class="verhaaltje-box">
+                    <div class="verhaaltje-label">📖 Verhaaltje</div>
+                    <p>${item.question.content}</p>
+                </div>
+            `;
+        }
+
+        // Question
+        contentHTML += `<div class="question-text-review"><strong>Vraag:</strong> ${item.question.question}</div>`;
+
+        // Your answer vs Correct answer
+        const userAnswer = item.userAnswer !== null ? item.question.options[item.userAnswer] : 'Niet beantwoord';
+        const correctAnswer = item.question.options[item.question.correct];
+
+        contentHTML += `
+            <div class="answer-comparison">
+                <div class="answer-box answer-user">
+                    <div class="answer-label">Jouw antwoord:</div>
+                    <div class="answer-value">${userAnswer}</div>
+                </div>
+                <div class="answer-box answer-correct">
+                    <div class="answer-label">Goede antwoord:</div>
+                    <div class="answer-value">✓ ${correctAnswer}</div>
+                </div>
+            </div>
+        `;
+
+        // Explanation structure
+        contentHTML += `<div class="explanation-section">`;
+
+        // A) Waarom?
+        if (item.question.extra_info && item.question.extra_info.concept) {
+            contentHTML += `
+                <div class="explanation-block">
+                    <h4 class="explanation-heading">🧠 Waarom?</h4>
+                    <p>${item.question.extra_info.concept}</p>
+                </div>
+            `;
+        }
+
+        // B) Zo werkt het (use strategy or worked example)
+        if (item.question.extra_info && item.question.extra_info.strategy) {
+            contentHTML += `
+                <div class="explanation-block">
+                    <h4 class="explanation-heading">➡️ Zo werkt het:</h4>
+                    <p>${item.question.extra_info.strategy}</p>
+                </div>
+            `;
+        }
+
+        // C) Tip voor de volgende keer
+        if (item.question.extra_info && item.question.extra_info.tips && item.question.extra_info.tips.length > 0) {
+            contentHTML += `
+                <div class="explanation-block">
+                    <h4 class="explanation-heading">💡 Tip voor de volgende keer:</h4>
+                    <p>${item.question.extra_info.tips[0]}</p>
+                </div>
+            `;
+        }
+
+        contentHTML += `</div>`; // Close explanation-section
+
+        accordionContent.innerHTML = contentHTML;
+
+        // Toggle functionality
+        accordionHeader.onclick = function() {
+            const isOpen = accordionContent.style.display === 'block';
+            accordionContent.style.display = isOpen ? 'none' : 'block';
+            accordionHeader.querySelector('.accordion-icon').textContent = isOpen ? '▼' : '▲';
+            accordionItem.classList.toggle('active', !isOpen);
+        };
+
+        accordionItem.appendChild(accordionHeader);
+        accordionItem.appendChild(accordionContent);
+        accordionEl.appendChild(accordionItem);
+    });
+}
+
+// Restart the current quiz with the same subject and theme
+function restartQuiz() {
+    // Reset quiz state
+    currentQuestionIndex = 0;
+    score = 0;
+    hasAnswered = false;
+    wrongAnswers = [];
+    lovaClickCount = 0;
+    currentQuestionErrors = 0;
+    incorrectOptions.clear();
+
+    // Re-initialize category progress
+    initializeCategoryProgress(randomizedQuestions);
+
+    // Hide results page, show quiz page
+    document.getElementById('resultsPage').style.display = 'none';
+    document.getElementById('quizPage').style.display = 'block';
+
+    // Load first question
+    loadCurrentQuestion();
 }
 
 function goToLanding() {

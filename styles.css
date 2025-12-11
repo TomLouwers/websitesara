@@ -6348,3 +6348,490 @@ body.font-scale-extra-groot .option {
         gap: 16px;
     }
 }
+
+/* ============================================
+   OPTIMIZED RESULT PAGE - Child-Friendly Design
+   ============================================ */
+
+/* Results Container - Clean background */
+.results-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #F8FEFF 0%, #FFF9F0 100%);
+    min-height: 100vh;
+}
+
+/* ============================================
+   1. HERO BLOCK - Emotional Summary
+   ============================================ */
+
+.result-hero {
+    background: white;
+    border-radius: 20px;
+    padding: 48px 32px;
+    text-align: center;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.result-emoji {
+    font-size: 80px;
+    line-height: 1;
+    margin-bottom: 20px;
+    animation: bounceIn 0.6s ease-out;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.result-headline {
+    font-size: 36px;
+    font-weight: 800;
+    color: #2D3748;
+    margin: 0 0 16px 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.result-summary {
+    font-size: 20px;
+    color: #4A5568;
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+    font-weight: 500;
+}
+
+.result-growth-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #FFF7D9 0%, #FFF3C4 100%);
+    padding: 16px 28px;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #744210;
+    box-shadow: 0 2px 8px rgba(255, 200, 100, 0.3);
+}
+
+.growth-icon {
+    font-size: 28px;
+}
+
+/* ============================================
+   2. SKILLS OVERVIEW - Progress Chips
+   ============================================ */
+
+.skills-overview {
+    background: white;
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.section-heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2D3748;
+    margin: 0 0 24px 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.section-description {
+    font-size: 16px;
+    color: #718096;
+    margin: 0 0 20px 0;
+}
+
+.skills-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.skill-chip {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-radius: 16px;
+    font-size: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+}
+
+.skill-chip:hover {
+    transform: translateY(-2px);
+}
+
+.skill-chip-excellent {
+    background: linear-gradient(135deg, #E8F9EC 0%, #D4F4DD 100%);
+    border: 2px solid #68D391;
+    box-shadow: 0 2px 8px rgba(104, 211, 145, 0.2);
+}
+
+.skill-chip-good {
+    background: linear-gradient(135deg, #EAF8FF 0%, #D6F1FF 100%);
+    border: 2px solid #63B3ED;
+    box-shadow: 0 2px 8px rgba(99, 179, 237, 0.2);
+}
+
+.skill-chip-growth {
+    background: linear-gradient(135deg, #FFF7D9 0%, #FFF3C4 100%);
+    border: 2px solid #F6E05E;
+    box-shadow: 0 2px 8px rgba(246, 224, 94, 0.2);
+}
+
+.skill-chip-icon {
+    font-size: 28px;
+    line-height: 1;
+}
+
+.skill-chip-label {
+    font-weight: 700;
+    color: #2D3748;
+    flex: 1;
+}
+
+.skill-chip-status {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4A5568;
+}
+
+/* ============================================
+   3. QUESTION ACCORDION - Collapsible Cards
+   ============================================ */
+
+.question-review-section {
+    background: white;
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.question-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.accordion-item {
+    background: #F7FAFC;
+    border: 2px solid #E2E8F0;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-item.active {
+    border-color: #CBD5E0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 24px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s ease;
+}
+
+.accordion-header:hover {
+    background: #EDF2F7;
+}
+
+.accordion-status {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.status-growth {
+    background: #FFF7D9;
+    color: #744210;
+}
+
+.accordion-title {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 700;
+    color: #2D3748;
+}
+
+.accordion-icon {
+    font-size: 20px;
+    color: #A0AEC0;
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    padding: 0 24px 24px 24px;
+}
+
+/* Verhaaltje Box */
+.verhaaltje-box {
+    background: linear-gradient(135deg, #FFF9E6 0%, #FFF4D6 100%);
+    border: 2px solid #F6E05E;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.verhaaltje-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #744210;
+    margin-bottom: 12px;
+}
+
+.verhaaltje-box p {
+    margin: 0;
+    font-size: 16px;
+    color: #2D3748;
+    line-height: 1.6;
+}
+
+/* Question Text in Review */
+.question-text-review {
+    font-size: 18px;
+    color: #2D3748;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Answer Comparison */
+.answer-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.answer-box {
+    padding: 16px;
+    border-radius: 12px;
+    border: 2px solid;
+}
+
+.answer-user {
+    background: #F7FAFC;
+    border-color: #CBD5E0;
+}
+
+.answer-correct {
+    background: linear-gradient(135deg, #E8F9EC 0%, #D4F4DD 100%);
+    border-color: #68D391;
+}
+
+.answer-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #718096;
+    margin-bottom: 8px;
+}
+
+.answer-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2D3748;
+}
+
+/* Explanation Section */
+.explanation-section {
+    background: #FAFCFE;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.explanation-block {
+    margin-bottom: 20px;
+}
+
+.explanation-block:last-child {
+    margin-bottom: 0;
+}
+
+.explanation-heading {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2D3748;
+    margin: 0 0 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.explanation-block p {
+    font-size: 16px;
+    color: #4A5568;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ============================================
+   4. & 5. ACTION BUTTONS - Primary & Secondary CTAs
+   ============================================ */
+
+.result-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.btn-result-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #FF8A34 0%, #FF6B6B 100%);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px 48px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255, 138, 52, 0.4);
+    transition: all 0.3s ease;
+    font-family: 'Nunito', sans-serif;
+    min-width: 280px;
+}
+
+.btn-result-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 24px rgba(255, 138, 52, 0.5);
+}
+
+.btn-result-primary:active {
+    transform: translateY(-1px);
+}
+
+.btn-result-primary .btn-icon {
+    font-size: 24px;
+}
+
+.btn-result-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: white;
+    color: #718096;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 32px;
+    border: 2px solid #E2E8F0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Nunito', sans-serif;
+}
+
+.btn-result-secondary:hover {
+    background: #F7FAFC;
+    border-color: #CBD5E0;
+    color: #4A5568;
+}
+
+.btn-result-secondary .material-icons {
+    font-size: 18px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .results-container {
+        padding: 24px 16px;
+    }
+    
+    .result-hero {
+        padding: 32px 24px;
+    }
+    
+    .result-emoji {
+        font-size: 64px;
+    }
+    
+    .result-headline {
+        font-size: 28px;
+    }
+    
+    .result-summary {
+        font-size: 18px;
+    }
+    
+    .result-growth-badge {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+    
+    .skills-overview,
+    .question-review-section {
+        padding: 24px 20px;
+    }
+    
+    .section-heading {
+        font-size: 20px;
+    }
+    
+    .skills-chips {
+        flex-direction: column;
+    }
+    
+    .skill-chip {
+        width: 100%;
+    }
+    
+    .answer-comparison {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn-result-primary {
+        width: 100%;
+        font-size: 18px;
+        padding: 18px 32px;
+    }
+    
+    .btn-result-secondary {
+        width: 100%;
+    }
+}
+
+/* Accessibility improvements */
+.accordion-header:focus,
+.btn-result-primary:focus,
+.btn-result-secondary:focus {
+    outline: 3px solid #63B3ED;
+    outline-offset: 2px;
+}
+
+/* Print styles - hide interactive elements */
+@media print {
+    .result-actions {
+        display: none;
+    }
+    
+    .accordion-content {
+        display: block !important;
+    }
+}
+
