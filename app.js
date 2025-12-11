@@ -2058,19 +2058,19 @@ function clearPausedQuiz() {
     }
 }
 
-// Stop quiz early and show review of wrong answers
+// Stop quiz early and show results
 function stopQuiz() {
     console.log('Stop button clicked. wrongAnswers:', wrongAnswers.length, wrongAnswers);
-    if (wrongAnswers.length === 0) {
-        alert(CONFIG.feedback.noWrongAnswers);
-        return;
-    }
 
     // Calculate the number of questions answered
     const questionsAnswered = currentQuestionIndex + (hasAnswered ? 1 : 0);
 
-    // Show review page
-    showReviewPage(questionsAnswered);
+    // Set totalQuestions to the number of questions answered so far
+    // This ensures the results page shows the correct score calculation
+    totalQuestions = questionsAnswered;
+
+    // Show the new results page
+    showResults();
 }
 
 // Generate compact progress tracker table
