@@ -1225,19 +1225,19 @@ function loadTextGroupQuestion() {
     }
 
     // NEW: Show/hide hint pill button based on whether question has a hint
-    const hintPillContainer = document.getElementById('hintPillContainer');
+    const hintPillBtn = document.getElementById('hintPillBtn');
     const hintDisplay = document.getElementById('hintDisplay');
     const hintDisplayText = document.getElementById('hintDisplayText');
 
-    if (currentQuestion.hint && hintPillContainer && hintDisplay && hintDisplayText) {
+    if (currentQuestion.hint && hintPillBtn && hintDisplay && hintDisplayText) {
         // Question has a hint - show the button
-        hintPillContainer.style.display = 'block';
+        hintPillBtn.style.display = 'inline-flex';
         hintDisplayText.textContent = currentQuestion.hint;
         // Hide the hint display by default (user needs to click to see it)
         hintDisplay.style.display = 'none';
-    } else if (hintPillContainer && hintDisplay) {
+    } else if (hintPillBtn && hintDisplay) {
         // No hint - hide both button and display
-        hintPillContainer.style.display = 'none';
+        hintPillBtn.style.display = 'none';
         hintDisplay.style.display = 'none';
     }
 
