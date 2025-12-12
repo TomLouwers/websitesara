@@ -1224,6 +1224,23 @@ function loadTextGroupQuestion() {
         hintContainerNew.classList.add('hidden');
     }
 
+    // NEW: Show/hide hint pill button based on whether question has a hint
+    const hintPillContainer = document.getElementById('hintPillContainer');
+    const hintDisplay = document.getElementById('hintDisplay');
+    const hintDisplayText = document.getElementById('hintDisplayText');
+
+    if (currentQuestion.hint && hintPillContainer && hintDisplay && hintDisplayText) {
+        // Question has a hint - show the button
+        hintPillContainer.style.display = 'block';
+        hintDisplayText.textContent = currentQuestion.hint;
+        // Hide the hint display by default (user needs to click to see it)
+        hintDisplay.style.display = 'none';
+    } else if (hintPillContainer && hintDisplay) {
+        // No hint - hide both button and display
+        hintPillContainer.style.display = 'none';
+        hintDisplay.style.display = 'none';
+    }
+
     // Render answer options
     renderAnswerOptions(currentQuestion);
 
@@ -1338,6 +1355,20 @@ function renderAnswerOptions(question) {
 function capitalizeFirst(str) {
     if (!str) return '';
     return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// NEW: Toggle hint display
+function toggleHint() {
+    const hintDisplay = document.getElementById('hintDisplay');
+    const hintBtn = document.getElementById('hintPillBtn');
+
+    if (hintDisplay.style.display === 'none') {
+        hintDisplay.style.display = 'block';
+        hintBtn.classList.add('active');
+    } else {
+        hintDisplay.style.display = 'none';
+        hintBtn.classList.remove('active');
+    }
 }
 
 // Helper: Save text group progress to sessionStorage
@@ -1504,7 +1535,14 @@ function populateEnhancedFeedback(isCorrect, currentQuestion, selectedOption = n
 function submitAnswer() {
     if (hasAnswered) return;
 
-    const currentQuestion = randomizedQuestions[currentQuestionIndex];
+    // NEW: Get current question based on mode
+    let currentQuestion;
+    if (useTextGrouping) {
+        currentQuestion = currentTextGroup.questions[currentQuestionInText];
+    } else {
+        currentQuestion = randomizedQuestions[currentQuestionIndex];
+    }
+
     const feedbackSection = document.getElementById('feedbackSection');
     const feedbackTitle = document.getElementById('feedbackTitle');
     const feedbackMessage = document.getElementById('feedbackMessage');
