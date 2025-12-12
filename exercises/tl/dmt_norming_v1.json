@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0.0",
+  "test_type": "DMT",
+  "language": "nl-NL",
+  "created_at": "2025-12-12",
+  "metric": "correct_words_per_minute",
+  "time_limit_seconds": 60,
+  "bands": [
+    {
+      "band_id": "weak",
+      "label": "Zwak",
+      "definition": "Onder de ondergrens van gemiddeld."
+    },
+    {
+      "band_id": "average",
+      "label": "Gemiddeld",
+      "definition": "Tussen onder- en bovengrens (inclusief)."
+    },
+    {
+      "band_id": "good",
+      "label": "Goed",
+      "definition": "Boven de bovengrens van gemiddeld."
+    }
+  ],
+  "norms": {
+    "A": {
+      "group_3": {
+        "weak_max": 24,
+        "average_min": 25,
+        "average_max": 45,
+        "good_min": 46
+      },
+      "group_4": {
+        "weak_max": 44,
+        "average_min": 45,
+        "average_max": 70,
+        "good_min": 71
+      },
+      "group_5": {
+        "weak_max": 64,
+        "average_min": 65,
+        "average_max": 90,
+        "good_min": 91
+      },
+      "group_6": {
+        "weak_max": 79,
+        "average_min": 80,
+        "average_max": 110,
+        "good_min": 111
+      },
+      "group_7": {
+        "weak_max": 94,
+        "average_min": 95,
+        "average_max": 125,
+        "good_min": 126
+      },
+      "group_8": {
+        "weak_max": 104,
+        "average_min": 105,
+        "average_max": 140,
+        "good_min": 141
+      }
+    },
+    "B": {
+      "group_3": {
+        "weak_max": 14,
+        "average_min": 15,
+        "average_max": 30,
+        "good_min": 31
+      },
+      "group_4": {
+        "weak_max": 29,
+        "average_min": 30,
+        "average_max": 55,
+        "good_min": 56
+      },
+      "group_5": {
+        "weak_max": 49,
+        "average_min": 50,
+        "average_max": 75,
+        "good_min": 76
+      },
+      "group_6": {
+        "weak_max": 64,
+        "average_min": 65,
+        "average_max": 95,
+        "good_min": 96
+      },
+      "group_7": {
+        "weak_max": 79,
+        "average_min": 80,
+        "average_max": 115,
+        "good_min": 116
+      },
+      "group_8": {
+        "weak_max": 89,
+        "average_min": 90,
+        "average_max": 130,
+        "good_min": 131
+      }
+    },
+    "C": {
+      "group_3": null,
+      "group_4": {
+        "weak_max": 9,
+        "average_min": 10,
+        "average_max": 25,
+        "good_min": 26
+      },
+      "group_5": {
+        "weak_max": 29,
+        "average_min": 30,
+        "average_max": 55,
+        "good_min": 56
+      },
+      "group_6": {
+        "weak_max": 44,
+        "average_min": 45,
+        "average_max": 75,
+        "good_min": 76
+      },
+      "group_7": {
+        "weak_max": 59,
+        "average_min": 60,
+        "average_max": 95,
+        "good_min": 96
+      },
+      "group_8": {
+        "weak_max": 69,
+        "average_min": 70,
+        "average_max": 115,
+        "good_min": 116
+      }
+    }
+  },
+  "notes": [
+    "Dit zijn gesimuleerde normen (niet-officieel). Vervang door empirische normering zodra beschikbaar.",
+    "Voor lijst C is groep 3 doorgaans niet van toepassing; daarom is group_3 null."
+  ]
+}
