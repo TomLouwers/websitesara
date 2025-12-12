@@ -740,6 +740,98 @@
             }
         }
 
+        /* ============================================
+           HINT PILL BUTTON & DISPLAY
+           ============================================ */
+
+        .hint-pill-container {
+            margin-top: 12px;
+            margin-bottom: 8px;
+        }
+
+        .hint-pill-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #FFFBEB;
+            color: #92400E;
+            border: 1.5px solid #FDE047;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .hint-pill-btn:hover {
+            background: #FEF3C7;
+            border-color: #FCD34D;
+            transform: translateY(-1px);
+        }
+
+        .hint-pill-btn:active {
+            transform: translateY(0);
+        }
+
+        .hint-pill-icon {
+            font-size: 16px;
+        }
+
+        .hint-display {
+            margin-top: 12px;
+            margin-bottom: 8px;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hint-display-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            background: #FFFBEB;
+            border-left: 4px solid #F59E0B;
+            border-radius: 8px;
+            padding: 12px 16px;
+        }
+
+        .hint-display-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .hint-display-text {
+            color: #78350F;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        @media (max-width: 640px) {
+            .hint-pill-btn {
+                font-size: 12px;
+                padding: 5px 12px;
+            }
+
+            .hint-display-content {
+                padding: 10px 12px;
+            }
+
+            .hint-display-text {
+                font-size: 13px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -875,6 +967,22 @@
                 </div>
 
                 <div class="question-text" id="questionTextNew"></div>
+
+                <!-- NEW: Hint pill button -->
+                <div class="hint-pill-container" id="hintPillContainer" style="display: none;">
+                    <button class="hint-pill-btn" id="hintPillBtn" onclick="toggleHint()">
+                        <span class="hint-pill-icon">💡</span>
+                        <span class="hint-pill-text">Hint</span>
+                    </button>
+                </div>
+
+                <!-- NEW: Hint display area -->
+                <div class="hint-display" id="hintDisplay" style="display: none;">
+                    <div class="hint-display-content">
+                        <span class="hint-display-icon">💡</span>
+                        <span class="hint-display-text" id="hintDisplayText"></span>
+                    </div>
+                </div>
             </div>
 
             <!-- Hint Container -->
