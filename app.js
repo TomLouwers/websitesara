@@ -37,6 +37,13 @@ let wrongAnswers = []; // Track wrong answers for review
 let currentQuestionErrors = 0; // Track errors for current question (for hint display)
 let incorrectOptions = new Set(); // Track which options were already tried (to disable them)
 
+// NEW: Text-based grouping state (for Begrijpend Lezen)
+let textGroups = [];           // Array of text groups
+let currentTextIndex = 0;      // Which text we're on
+let currentQuestionInText = 0; // Which question within current text
+let currentTextGroup = null;   // Current active text group
+let useTextGrouping = false;   // Flag to indicate if we should use text grouping
+
 // Progress tracker by category
 let categoryProgress = {};
 let lovaClickCount = 0; // Track L.O.V.A. button clicks
@@ -210,9 +217,69 @@ function createRandomizedQuestions(data) {
     return shuffleArray(flatQuestions);
 }
 
+// NEW: Create text-based question groups (for Begrijpend Lezen)
+function createTextGroups(data) {
+    const textGroups = [];
+
+    data.forEach(item => {
+        // Each item represents one text with multiple questions
+        const group = {
+            id: item.id,
+            title: item.title,
+            theme: item.theme,
+            text_type: item.text_type,
+            text: item.text || item.content,  // Support both formats
+            metadata: item.metadata,
+            questions: []
+        };
+
+        // Add all questions for this text
+        if (item.questions && Array.isArray(item.questions)) {
+            item.questions.forEach(question => {
+                group.questions.push({
+                    item_id: question.item_id,
+                    skill: question.skill,
+                    strategy: question.strategy,
+                    question: question.question,
+                    hint: question.hint,
+                    options: question.options,
+                    correct: question.correct,
+                    extra_info: question.extra_info
+                });
+            });
+        }
+
+        textGroups.push(group);
+    });
+
+    // Randomize the TEXT order (not individual questions)
+    return shuffleArray(textGroups);
+}
+
 // Map subject name to file path
 function getFilePath(subject) {
-    // Map basisvaardigheden subjects to exercises/gb/ directory
+    // NEW: Check if subject uses structured file paths from CONFIG
+    // Parse subject format: "subjectname-level" (e.g., "begrijpendlezen-m4", "basisvaardigheden-e5")
+    const parts = subject.split('-');
+    const baseSubject = parts[0];
+    const level = parts[1]; // e.g., "m4", "e5"
+
+    // Check if this subject has structured paths in CONFIG
+    if (CONFIG.subjectFilePaths && CONFIG.subjectFilePaths[baseSubject]) {
+        const subjectPaths = CONFIG.subjectFilePaths[baseSubject];
+
+        // Determine groep from level (e.g., "m4" -> "groep4", "e5" -> "groep5")
+        if (level && level.length >= 2) {
+            const groepNumber = level.substring(1); // Extract number from "m4" -> "4"
+            const groepKey = `groep${groepNumber}`;
+
+            if (subjectPaths[groepKey] && subjectPaths[groepKey][level]) {
+                return subjectPaths[groepKey][level];
+            }
+        }
+    }
+
+    // LEGACY: Map basisvaardigheden subjects to exercises/gb/ directory (backwards compatibility)
     const gbMapping = {
         'basisvaardigheden-m3': 'exercises/gb/gb_groep3_m3.json',
         'basisvaardigheden-e3': 'exercises/gb/gb_groep3_e3.json',
@@ -635,27 +702,81 @@ function startQuizWithData(subject) {
     lovaClickCount = 0; // Reset L.O.V.A. click counter
     resetMilestones(); // Reset visual progress milestones
 
-    // Create randomized questions from the current quiz data
-    randomizedQuestions = createRandomizedQuestions(currentQuiz);
-    totalQuestions = randomizedQuestions.length;
+    // NEW: Check if this is a "begrijpendlezen" subject to use text grouping
+    const baseSubject = subject.split('-')[0];
+    useTextGrouping = (baseSubject === 'begrijpendlezen');
 
-    // Initialize category progress tracker (reset to 0)
-    initializeCategoryProgress(randomizedQuestions);
+    let quizState;
 
-    // Save quiz state to sessionStorage for quiz.html
-    const quizState = {
-        subject: subject,
-        currentSubject: currentSubject,
-        currentTheme: currentTheme,
-        currentQuiz: currentQuiz,
-        randomizedQuestions: randomizedQuestions,
-        totalQuestions: totalQuestions,
-        currentQuestionIndex: 0,
-        score: 0,
-        wrongAnswers: [],
-        lovaClickCount: 0,
-        categoryProgress: categoryProgress
-    };
+    if (useTextGrouping) {
+        // Create text groups for Begrijpend Lezen
+        textGroups = createTextGroups(currentQuiz);
+
+        // Calculate total questions across all texts
+        totalQuestions = textGroups.reduce((sum, group) =>
+            sum + group.questions.length, 0
+        );
+
+        // Initialize text state
+        currentTextIndex = 0;
+        currentQuestionInText = 0;
+
+        // Create a flat list of all questions for category progress (optional)
+        randomizedQuestions = [];
+        textGroups.forEach(group => {
+            group.questions.forEach(q => {
+                randomizedQuestions.push({
+                    ...q,
+                    theme: group.theme
+                });
+            });
+        });
+
+        // Initialize category progress tracker
+        initializeCategoryProgress(randomizedQuestions);
+
+        // Save quiz state to sessionStorage for quiz.html
+        quizState = {
+            subject: subject,
+            currentSubject: currentSubject,
+            currentTheme: currentTheme,
+            currentQuiz: currentQuiz,
+            textGroups: textGroups,
+            useTextGrouping: true,
+            currentTextIndex: 0,
+            currentQuestionInText: 0,
+            totalQuestions: totalQuestions,
+            currentQuestionIndex: 0,
+            score: 0,
+            wrongAnswers: [],
+            lovaClickCount: 0,
+            categoryProgress: categoryProgress
+        };
+    } else {
+        // Create randomized questions from the current quiz data (traditional mode)
+        randomizedQuestions = createRandomizedQuestions(currentQuiz);
+        totalQuestions = randomizedQuestions.length;
+
+        // Initialize category progress tracker (reset to 0)
+        initializeCategoryProgress(randomizedQuestions);
+
+        // Save quiz state to sessionStorage for quiz.html
+        quizState = {
+            subject: subject,
+            currentSubject: currentSubject,
+            currentTheme: currentTheme,
+            currentQuiz: currentQuiz,
+            randomizedQuestions: randomizedQuestions,
+            useTextGrouping: false,
+            totalQuestions: totalQuestions,
+            currentQuestionIndex: 0,
+            score: 0,
+            wrongAnswers: [],
+            lovaClickCount: 0,
+            categoryProgress: categoryProgress
+        };
+    }
+
     sessionStorage.setItem('quizState', JSON.stringify(quizState));
 
     // Redirect to quiz.html
@@ -795,6 +916,13 @@ function updateQuizCardHeader(subject) {
 }
 
 function loadCurrentQuestion() {
+    // NEW: Check if using text grouping mode
+    if (useTextGrouping) {
+        loadTextGroupQuestion();
+        return;
+    }
+
+    // Traditional mode: load from randomizedQuestions
     if (currentQuestionIndex >= randomizedQuestions.length) {
         showResults();
         return;
@@ -1027,6 +1155,203 @@ function loadCurrentQuestion() {
     hasAnswered = false;
     document.getElementById('submitBtn').classList.remove('hidden');
     document.getElementById('nextBtn').classList.add('hidden');
+}
+
+// NEW: Load question in text grouping mode (for Begrijpend Lezen)
+function loadTextGroupQuestion() {
+    // Check if we've finished all texts
+    if (currentTextIndex >= textGroups.length) {
+        showResults();
+        return;
+    }
+
+    // Get current text group
+    currentTextGroup = textGroups[currentTextIndex];
+
+    // Check if we've finished all questions in current text
+    if (currentQuestionInText >= currentTextGroup.questions.length) {
+        // Move to next text
+        currentTextIndex++;
+        currentQuestionInText = 0;
+
+        // Update sessionStorage
+        saveTextGroupProgress();
+
+        // Recursively load next text
+        loadTextGroupQuestion();
+        return;
+    }
+
+    // Get current question
+    const currentQuestion = currentTextGroup.questions[currentQuestionInText];
+
+    // Reset error tracking
+    currentQuestionErrors = 0;
+    incorrectOptions.clear();
+
+    // Calculate overall progress
+    const questionsCompletedSoFar = calculateQuestionsCompleted();
+    const overallQuestionNumber = questionsCompletedSoFar + currentQuestionInText + 1;
+    const progress = (overallQuestionNumber / totalQuestions) * 100;
+
+    // Update progress bar
+    const progressLabelNew = document.getElementById('progressLabelNew');
+    const progressBarFillNew = document.getElementById('progressBarFillNew');
+
+    if (progressLabelNew) {
+        progressLabelNew.textContent = `Vraag ${currentQuestionInText + 1}/${currentTextGroup.questions.length} van "${currentTextGroup.title}"`;
+    }
+    if (progressBarFillNew) {
+        progressBarFillNew.style.width = `${progress}%`;
+    }
+
+    // Display reading text (stays visible for all questions)
+    displayReadingText(currentTextGroup);
+
+    // Display question metadata (skill, strategy)
+    displayQuestionMetadata(currentQuestion);
+
+    // Display question text
+    const questionTextNew = document.getElementById('questionTextNew');
+    if (questionTextNew) {
+        questionTextNew.textContent = currentQuestion.question;
+    }
+
+    // Hide hint initially
+    const hintContainerNew = document.getElementById('hintContainerNew');
+    if (hintContainerNew) {
+        hintContainerNew.innerHTML = '';
+        hintContainerNew.classList.add('hidden');
+    }
+
+    // Render answer options
+    renderAnswerOptions(currentQuestion);
+
+    // Hide feedback
+    const feedbackSectionNew = document.getElementById('feedbackSectionNew');
+    if (feedbackSectionNew) {
+        feedbackSectionNew.classList.add('hidden');
+    }
+
+    // Show submit button, hide next button
+    document.getElementById('submitBtn').classList.remove('hidden');
+    document.getElementById('nextBtn').classList.add('hidden');
+
+    // Reset UI state
+    selectedAnswer = null;
+    hasAnswered = false;
+}
+
+// Helper: Calculate how many questions we've completed so far
+function calculateQuestionsCompleted() {
+    let completed = 0;
+    for (let i = 0; i < currentTextIndex; i++) {
+        completed += textGroups[i].questions.length;
+    }
+    return completed;
+}
+
+// Helper: Display reading text with metadata
+function displayReadingText(textGroup) {
+    const storyBlockWrapper = document.getElementById('storyBlockWrapper');
+    const storyTextContent = document.querySelector('.story-text-content');
+    const readingContentNew = document.getElementById('readingContentNew');
+
+    if (!storyBlockWrapper || !readingContentNew) return;
+
+    // Show the story block
+    storyBlockWrapper.classList.remove('hidden');
+
+    // Set reading text
+    if (storyTextContent) {
+        storyTextContent.innerHTML = `<p>${textGroup.text}</p>`;
+    }
+
+    // Update title in the story header
+    const storyHeaderLabel = readingContentNew.querySelector('.story-header-label span:nth-child(2)');
+    if (storyHeaderLabel) {
+        storyHeaderLabel.textContent = textGroup.title;
+    }
+}
+
+// Helper: Display question metadata (skill, strategy badges)
+function displayQuestionMetadata(question) {
+    const skillBadge = document.getElementById('skillBadge');
+    const skillType = document.getElementById('skillType');
+    const strategyBadge = document.getElementById('strategyBadge');
+    const strategyType = document.getElementById('strategyType');
+
+    // Show skill if available
+    if (question.skill && skillBadge && skillType) {
+        skillBadge.style.display = 'inline-flex';
+        skillType.textContent = capitalizeFirst(question.skill);
+    } else if (skillBadge) {
+        skillBadge.style.display = 'none';
+    }
+
+    // Show strategy if available
+    if (question.strategy && strategyBadge && strategyType) {
+        strategyBadge.style.display = 'inline-flex';
+        strategyType.textContent = capitalizeFirst(question.strategy);
+    } else if (strategyBadge) {
+        strategyBadge.style.display = 'none';
+    }
+}
+
+// Helper: Render answer options (supports both old and new format)
+function renderAnswerOptions(question) {
+    const container = document.getElementById('optionsContainerNew');
+    if (!container) return;
+
+    container.innerHTML = '';
+    container.classList.remove('hidden');
+
+    question.options.forEach((option, index) => {
+        const optionDiv = document.createElement('div');
+        optionDiv.className = 'option';
+
+        let optionText, optionLabel, isCorrect;
+
+        if (typeof option === 'string') {
+            // Old format
+            optionText = option;
+            optionLabel = String.fromCharCode(65 + index); // A, B, C, D
+            isCorrect = question.correct === index;
+        } else {
+            // NEW format
+            optionText = option.text;
+            optionLabel = option.label;
+            isCorrect = option.is_correct;
+        }
+
+        optionDiv.setAttribute('data-letter', optionLabel);
+        optionDiv.setAttribute('data-index', index);
+        optionDiv.setAttribute('data-correct', isCorrect);
+        optionDiv.textContent = optionText;
+
+        optionDiv.onclick = () => selectOption(index);
+        container.appendChild(optionDiv);
+    });
+}
+
+// Helper: Capitalize first letter
+function capitalizeFirst(str) {
+    if (!str) return '';
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// Helper: Save text group progress to sessionStorage
+function saveTextGroupProgress() {
+    if (!window.location.pathname.endsWith('quiz.html')) return;
+
+    const quizState = JSON.parse(sessionStorage.getItem('quizState') || '{}');
+    quizState.currentTextIndex = currentTextIndex;
+    quizState.currentQuestionInText = currentQuestionInText;
+    quizState.score = score;
+    quizState.wrongAnswers = wrongAnswers;
+    quizState.lovaClickCount = lovaClickCount;
+    quizState.categoryProgress = categoryProgress;
+    sessionStorage.setItem('quizState', JSON.stringify(quizState));
 }
 
 function selectOption(index) {
@@ -1578,6 +1903,20 @@ function nextQuestion() {
         hintContainer.innerHTML = '';
     }
 
+    // NEW: Handle text grouping mode differently
+    if (useTextGrouping) {
+        // Move to next question in current text
+        currentQuestionInText++;
+
+        // Save progress
+        saveTextGroupProgress();
+
+        // Load next question (will handle moving to next text if needed)
+        loadCurrentQuestion();
+        return;
+    }
+
+    // Traditional mode
     currentQuestionIndex++;
 
     // Update sessionStorage with current progress
@@ -2431,7 +2770,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentSubject = quizState.currentSubject;
         currentTheme = quizState.currentTheme;
         currentQuiz = quizState.currentQuiz;
-        randomizedQuestions = quizState.randomizedQuestions;
+        randomizedQuestions = quizState.randomizedQuestions || [];
         totalQuestions = quizState.totalQuestions;
         currentQuestionIndex = quizState.currentQuestionIndex;
         score = quizState.score;
@@ -2440,6 +2779,17 @@ document.addEventListener('DOMContentLoaded', function() {
         categoryProgress = quizState.categoryProgress;
         hasAnswered = false;
         selectedAnswer = null;
+
+        // NEW: Restore text grouping state if applicable
+        useTextGrouping = quizState.useTextGrouping || false;
+        if (useTextGrouping) {
+            textGroups = quizState.textGroups || [];
+            currentTextIndex = quizState.currentTextIndex || 0;
+            currentQuestionInText = quizState.currentQuestionInText || 0;
+            if (textGroups.length > currentTextIndex) {
+                currentTextGroup = textGroups[currentTextIndex];
+            }
+        }
 
         // Set quiz title
         if (document.getElementById('quizTitle')) {
