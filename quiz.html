@@ -746,20 +746,21 @@
 
         /* Question wrapper with hint button positioned top-right */
         .question-with-hint-wrapper {
-            position: relative;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
             margin-bottom: 8px;
         }
 
-        /* Prevent question text from overlapping with hint button */
+        /* Question text takes available space */
         .question-with-hint-wrapper .question-text {
-            padding-right: 150px;
+            flex: 1;
+            min-width: 0; /* Allow text to wrap properly */
         }
 
         .hint-pill-btn {
-            /* Position in top-right corner of question */
-            position: absolute;
-            top: 0;
-            right: 0;
+            /* Positioned to the right via flexbox */
+            flex-shrink: 0;
 
             /* Touch-friendly size for tablets */
             display: inline-flex;
@@ -854,9 +855,10 @@
 
         /* Mobile optimizations */
         @media (max-width: 640px) {
-            /* Adjust question text padding for mobile hint button */
-            .question-with-hint-wrapper .question-text {
-                padding-right: 140px;
+            /* Allow wrapping on very small screens */
+            .question-with-hint-wrapper {
+                flex-wrap: wrap;
+                gap: 12px;
             }
 
             .hint-pill-btn {
@@ -883,11 +885,6 @@
 
         /* Tablet landscape - keep desktop sizing */
         @media (min-width: 641px) and (max-width: 1024px) {
-            /* Adjust question text padding for tablet hint button */
-            .question-with-hint-wrapper .question-text {
-                padding-right: 160px;
-            }
-
             .hint-pill-btn {
                 min-height: 48px;
                 padding: 12px 18px;
