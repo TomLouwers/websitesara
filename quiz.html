@@ -750,6 +750,11 @@
             margin-bottom: 8px;
         }
 
+        /* Prevent question text from overlapping with hint button */
+        .question-with-hint-wrapper .question-text {
+            padding-right: 150px;
+        }
+
         .hint-pill-btn {
             /* Position in top-right corner of question */
             position: absolute;
@@ -849,6 +854,11 @@
 
         /* Mobile optimizations */
         @media (max-width: 640px) {
+            /* Adjust question text padding for mobile hint button */
+            .question-with-hint-wrapper .question-text {
+                padding-right: 140px;
+            }
+
             .hint-pill-btn {
                 /* Even more touch-friendly on mobile */
                 min-height: 48px;
@@ -873,6 +883,11 @@
 
         /* Tablet landscape - keep desktop sizing */
         @media (min-width: 641px) and (max-width: 1024px) {
+            /* Adjust question text padding for tablet hint button */
+            .question-with-hint-wrapper .question-text {
+                padding-right: 160px;
+            }
+
             .hint-pill-btn {
                 min-height: 48px;
                 padding: 12px 18px;
