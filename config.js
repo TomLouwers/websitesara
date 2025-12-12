@@ -113,6 +113,62 @@ const CONFIG = {
     // L.O.V.A. configuration
     lova: {
         panelTransitionDuration: 400 // milliseconds
+    },
+
+    // File path mapping for subjects with groep/level structure
+    subjectFilePaths: {
+        begrijpendlezen: {
+            groep3: {
+                m3: 'exercises/bl/bl_groep3_m3_1.json',
+                e3: 'exercises/bl/bl_groep3_e3_1.json'
+            },
+            groep4: {
+                m4: 'exercises/bl/bl_groep4_m4_1.json',
+                e4: 'exercises/bl/bl_groep4_e4_1.json'
+            },
+            groep5: {
+                m5: 'exercises/bl/bl_groep5_m5_1.json',
+                e5: 'exercises/bl/bl_groep5_e5_1.json'
+            },
+            groep6: {
+                m6: 'exercises/bl/bl_groep6_m6_1.json',
+                e6: 'exercises/bl/bl_groep6_e6_1.json'
+            },
+            groep7: {
+                m7: 'exercises/bl/bl_groep7_m7_1.json',
+                e7: 'exercises/bl/bl_groep7_e7_1.json'
+            },
+            groep8: {
+                m8: 'exercises/bl/bl_groep8_m8_1.json',
+                e8: 'exercises/bl/bl_groep8_e8_1.json'
+            }
+        },
+        basisvaardigheden: {
+            groep3: {
+                m3: 'exercises/gb/gb_groep3_m3.json',
+                e3: 'exercises/gb/gb_groep3_e3.json'
+            },
+            groep4: {
+                m4: 'exercises/gb/gb_groep4_m4.json',
+                e4: 'exercises/gb/gb_groep4_e4.json'
+            },
+            groep5: {
+                m5: 'exercises/gb/gb_groep5_m5.json',
+                e5: 'exercises/gb/gb_groep5_e5.json'
+            },
+            groep6: {
+                m6: 'exercises/gb/gb_groep6_m6.json',
+                e6: 'exercises/gb/gb_groep6_e6.json'
+            },
+            groep7: {
+                m7: 'exercises/gb/gb_groep7_m7.json',
+                e7: 'exercises/gb/gb_groep7_e7.json'
+            },
+            groep8: {
+                m8: 'exercises/gb/gb_groep8_e8.json',
+                e8: 'exercises/gb/gb_groep8_e8.json'
+            }
+        }
     }
 };
 

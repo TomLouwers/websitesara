@@ -688,6 +688,58 @@
             margin: 0;
         }
 
+        /* ============================================
+           BEGRIJPEND LEZEN: Skill & Strategy Badges
+           ============================================ */
+
+        .question-meta-badges {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .skill-badge,
+        .strategy-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .skill-badge {
+            background: #FFF4E6;
+            color: #D97706;
+            border: 1.5px solid #FFC46B;
+        }
+
+        .strategy-badge {
+            background: #F0F9FF;
+            color: #0369A1;
+            border: 1.5px solid #7DD3FC;
+        }
+
+        .badge-label {
+            font-weight: 500;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 640px) {
+            .question-meta-badges {
+                gap: 8px;
+                margin-bottom: 12px;
+            }
+
+            .skill-badge,
+            .strategy-badge {
+                font-size: 11px;
+                padding: 5px 10px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -810,6 +862,18 @@
 
             <!-- Question Box -->
             <div class="quiz-question-box">
+                <!-- NEW: Skill and Strategy badges -->
+                <div class="question-meta-badges" id="questionMetaBadges" style="display: none;">
+                    <span class="skill-badge" id="skillBadge" style="display: none;">
+                        <span class="badge-label">Vaardigheid:</span>
+                        <span id="skillType">Letterlijk</span>
+                    </span>
+                    <span class="strategy-badge" id="strategyBadge" style="display: none;">
+                        <span class="badge-label">Strategie:</span>
+                        <span id="strategyType">Informatie zoeken</span>
+                    </span>
+                </div>
+
                 <div class="question-text" id="questionTextNew"></div>
             </div>
 
