@@ -1114,7 +1114,11 @@ function loadCurrentQuestion() {
         if (optionsContainerNew) {
             optionsContainerNew.innerHTML = '';
         }
-        currentQuestion.options.forEach((option, index) => {
+
+        // Shuffle options for better distribution
+        const shuffledOptions = shuffleArray(currentQuestion.options);
+
+        shuffledOptions.forEach((option, index) => {
             const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
             const letter = letters[index] || String.fromCharCode(65 + index);
 
@@ -1323,7 +1327,10 @@ function renderAnswerOptions(question) {
     container.innerHTML = '';
     container.classList.remove('hidden');
 
-    question.options.forEach((option, index) => {
+    // Shuffle options for better distribution (always randomize to prevent answer pattern bias)
+    const shuffledOptions = shuffleArray(question.options);
+
+    shuffledOptions.forEach((option, index) => {
         const optionDiv = document.createElement('div');
         optionDiv.className = 'option';
 
@@ -1337,7 +1344,8 @@ function renderAnswerOptions(question) {
         } else {
             // NEW format
             optionText = option.text;
-            optionLabel = option.label;
+            // IMPORTANT: Assign label based on shuffled position, not original JSON label
+            optionLabel = String.fromCharCode(65 + index); // A, B, C, D based on position
             isCorrect = option.is_correct;
         }
 
