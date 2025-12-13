@@ -1125,8 +1125,10 @@ function loadCurrentQuestion() {
             // Determine if this option is correct
             let isCorrect = false;
             if (typeof option === 'string') {
-                isCorrect = currentQuestion.correct === index;
+                // Old format: compare option value with the correct option (not index!)
+                isCorrect = (option === currentQuestion.options[currentQuestion.correct]);
             } else if (option.is_correct !== undefined) {
+                // New format: use is_correct field
                 isCorrect = option.is_correct;
             }
 
@@ -1356,7 +1358,8 @@ function renderAnswerOptions(question) {
             // Old format
             optionText = option;
             optionLabel = String.fromCharCode(65 + index); // A, B, C, D
-            isCorrect = question.correct === index;
+            // Compare option value with correct option (not index, because of shuffle!)
+            isCorrect = (option === question.options[question.correct]);
         } else {
             // NEW format
             optionText = option.text;
