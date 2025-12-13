@@ -1717,7 +1717,7 @@ function submitAnswer() {
             updateCategoryProgress(currentQuestion.theme, false);
 
             // Show error analysis if available for the selected wrong answer
-            const selectedOption = currentQuestion.options[selectedAnswer];
+            // Note: selectedOption is already defined above from data-option attribute
             const errorAnalysis = (typeof selectedOption === 'object' && selectedOption.foutanalyse) ? selectedOption.foutanalyse : '';
 
             // Check if this is a verhaaltjessom with new error analysis fields
@@ -1783,13 +1783,16 @@ function submitAnswer() {
                 }
 
                 // Highlight correct answer if an incorrect one was selected
-                if (options[correctIndex]) {
-                    options[correctIndex].classList.add('correct');
+                // Find the correct option by data-correct attribute (not index, due to shuffle!)
+                const correctOption = Array.from(options).find(opt => opt.getAttribute('data-correct') === 'true');
+                if (correctOption) {
+                    correctOption.classList.add('correct');
                 }
 
                 // Also highlight correct in new wrapper
-                if (newOptions[correctIndex]) {
-                    newOptions[correctIndex].classList.add('is-correct');
+                const correctOptionNew = Array.from(newOptions).find(opt => opt.getAttribute('data-correct') === 'true');
+                if (correctOptionNew) {
+                    correctOptionNew.classList.add('is-correct');
                 }
                 // Old feedback for other subjects (keep for backward compatibility)
                 feedbackSection.classList.add('incorrect');
