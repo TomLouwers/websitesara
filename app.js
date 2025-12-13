@@ -1122,8 +1122,20 @@ function loadCurrentQuestion() {
             const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
             const letter = letters[index] || String.fromCharCode(65 + index);
 
+            // Determine if this option is correct
+            let isCorrect = false;
+            if (typeof option === 'string') {
+                isCorrect = currentQuestion.correct === index;
+            } else if (option.is_correct !== undefined) {
+                isCorrect = option.is_correct;
+            }
+
             const optionElement = document.createElement('div');
             optionElement.className = 'option';
+            optionElement.setAttribute('data-correct', isCorrect);
+            if (typeof option === 'object') {
+                optionElement.setAttribute('data-option', JSON.stringify(option));
+            }
             optionElement.textContent = typeof option === 'string' ? option : option.text;
             optionElement.onclick = () => selectOption(index);
             optionsContainer.appendChild(optionElement);
@@ -1133,6 +1145,10 @@ function loadCurrentQuestion() {
                 const optionElementNew = document.createElement('div');
                 optionElementNew.className = 'option';
                 optionElementNew.setAttribute('data-letter', letter);
+                optionElementNew.setAttribute('data-correct', isCorrect);
+                if (typeof option === 'object') {
+                    optionElementNew.setAttribute('data-option', JSON.stringify(option));
+                }
                 optionElementNew.textContent = typeof option === 'string' ? option : option.text;
                 optionElementNew.onclick = () => selectOption(index);
                 optionsContainerNew.appendChild(optionElementNew);
@@ -1352,6 +1368,10 @@ function renderAnswerOptions(question) {
         optionDiv.setAttribute('data-letter', optionLabel);
         optionDiv.setAttribute('data-index', index);
         optionDiv.setAttribute('data-correct', isCorrect);
+        // Store the option data as JSON for later retrieval (needed for error analysis)
+        if (typeof option === 'object') {
+            optionDiv.setAttribute('data-option', JSON.stringify(option));
+        }
         optionDiv.textContent = optionText;
 
         optionDiv.onclick = () => selectOption(index);
@@ -1582,7 +1602,24 @@ function submitAnswer() {
 
         const options = document.querySelectorAll('.option');
 
-        // Find the correct answer index - supports both old and new format
+        // Check if selected answer is correct using data-correct attribute
+        // This works with shuffled options since the attribute travels with the option
+        const selectedOptionElement = options[selectedAnswer];
+        const isCorrect = selectedOptionElement && selectedOptionElement.getAttribute('data-correct') === 'true';
+
+        // Retrieve the actual option data from the DOM element (for error analysis, etc.)
+        let selectedOption = null;
+        if (selectedOptionElement) {
+            const optionDataStr = selectedOptionElement.getAttribute('data-option');
+            if (optionDataStr) {
+                selectedOption = JSON.parse(optionDataStr);
+            } else if (typeof currentQuestion.options[selectedAnswer] === 'string') {
+                // Old format: options are strings
+                selectedOption = currentQuestion.options[selectedAnswer];
+            }
+        }
+
+        // Find the correct answer index for fallback logic and feedback
         let correctIndex = currentQuestion.options.findIndex(opt => {
             // New format: object with is_correct field (verhaaltjessommen)
             if (typeof opt === 'object' && opt.hasOwnProperty('is_correct')) {
@@ -1596,8 +1633,8 @@ function submitAnswer() {
             correctIndex = currentQuestion.correct;
         }
 
-        // Validate correctIndex - check if question data is incomplete
-        if (correctIndex === -1 || correctIndex >= options.length) {
+        // Validate that we found a correct answer
+        if (correctIndex === -1) {
             // Check if this is an incomplete question (has object options but no is_correct field)
             const hasObjectOptions = currentQuestion.options.some(opt => typeof opt === 'object' && opt.text);
             const hasIsCorrectField = currentQuestion.options.some(opt => typeof opt === 'object' && 'is_correct' in opt);
@@ -1626,7 +1663,7 @@ function submitAnswer() {
             return;
         }
 
-        if (selectedAnswer === correctIndex) {
+        if (isCorrect) {
             options[selectedAnswer].classList.add('correct');
 
             // Also add new class for new quiz wrapper
@@ -1641,7 +1678,7 @@ function submitAnswer() {
             updateCategoryProgress(currentQuestion.theme, true);
 
             // Check if this is a verhaaltjessom with new error analysis fields
-            const selectedOption = currentQuestion.options[selectedAnswer];
+            // Note: selectedOption is already defined above from data-option attribute
             const isVerhaaltjessom = currentSubject === 'verhaaltjessommen' &&
                                      currentQuestion.lova &&
                                      currentQuestion.extra_info;
