@@ -17,7 +17,8 @@ const CONFIG = {
         basisvaardigheden: 'Getal & Bewerking',
         'basisvaardigheden-emma': 'Getal & Bewerking Emma',
         'basisvaardigheden-kate': 'Getal & Bewerking Kate',
-        spelling: 'Spelling'
+        spelling: 'Spelling',
+        dmt: 'DMT Woordtrainer'
     },
 
     // Subject icons
@@ -33,7 +34,8 @@ const CONFIG = {
         basisvaardigheden: '🧮',
         'basisvaardigheden-emma': '🧒',
         'basisvaardigheden-kate': '🎓',
-        spelling: '✏️'
+        spelling: '✏️',
+        dmt: '⚡'
     },
 
     // Subject descriptions - Engaging and motivational
@@ -49,7 +51,8 @@ const CONFIG = {
         basisvaardigheden: 'Train je rekenskills! 🧮',
         'basisvaardigheden-emma': 'Word een rekenprof met Emma! (330 opgaven)',
         'basisvaardigheden-kate': 'Word een rekenprof met Kate! (240 opgaven)',
-        spelling: 'Leer correct spellen! ✏️'
+        spelling: 'Leer correct spellen! ✏️',
+        dmt: 'Word een snellere lezer! ⚡'
     },
 
     // File naming pattern
