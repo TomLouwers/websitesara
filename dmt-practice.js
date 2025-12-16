@@ -62,6 +62,29 @@ class DMTPractice {
     async init() {
         await this.loadData();
         this.setupEventListeners();
+        this.checkURLParams();
+    }
+
+    checkURLParams() {
+        // Check if list and tempo are provided in URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const list = urlParams.get('list');
+        const tempo = urlParams.get('tempo');
+
+        if (list && tempo) {
+            // Auto-start with URL parameters
+            this.state.selectedList = list.toUpperCase();
+            this.state.selectedTempo = tempo.toLowerCase();
+
+            // Validate parameters
+            if (this.wordLists[this.state.selectedList] && this.config.tempoMultipliers[this.state.selectedTempo]) {
+                // Start immediately
+                this.startPractice();
+            } else {
+                console.error('Invalid URL parameters:', { list, tempo });
+                alert('Ongeldige parameters. Kies opnieuw je lijst en tempo.');
+            }
+        }
     }
 
     async loadData() {

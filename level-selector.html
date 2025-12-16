@@ -614,6 +614,24 @@
                     '8-M': '',
                     '8-E': ''
                 }
+            },
+            'dmt': {
+                title: 'DMT Woordtrainer',
+                icon: '⚡',
+                emoji: '⚡',
+                questions: 750,
+                color: '#FFE6F1',
+                isDMT: true,
+                lists: {
+                    'A': { label: 'Lijst A', difficulty: 'Basis', emoji: '🟢', words: 250 },
+                    'B': { label: 'Lijst B', difficulty: 'Gemiddeld', emoji: '🟡', words: 250 },
+                    'C': { label: 'Lijst C', difficulty: 'Moeilijk', emoji: '🔴', words: 250 }
+                },
+                tempos: {
+                    'rustig': { label: 'Rustig', emoji: '🟢', description: 'Langzaam tempo' },
+                    'normaal': { label: 'Normaal', emoji: '🟡', description: 'Standaard tempo' },
+                    'snel': { label: 'Snel', emoji: '🔴', description: 'Snel tempo' }
+                }
             }
         };
 
@@ -631,6 +649,86 @@
         // Update header color
         const header = document.getElementById('subjectHeader');
         header.style.background = `linear-gradient(135deg, ${config.color} 0%, ${config.color}dd 100%)`;
+
+        // Check if this is DMT - render different UI
+        if (config.isDMT) {
+            renderDMTSelector();
+        } else {
+            renderGradeSelector();
+        }
+
+        // Function to render DMT list and tempo selector
+        function renderDMTSelector() {
+            const pageIntro = document.querySelector('.page-intro');
+            pageIntro.innerHTML = `
+                <h2 class="page-title">Kies je lijst en tempo! ⚡</h2>
+                <p class="page-subtitle">Selecteer een woordenlijst en je gewenste snelheid.</p>
+            `;
+
+            const grid = document.getElementById('levelCardsGrid');
+            grid.style.gridTemplateColumns = 'repeat(3, 1fr)';
+            grid.innerHTML = '';
+
+            // Render list cards
+            Object.keys(config.lists).forEach((listId, index) => {
+                const list = config.lists[listId];
+                const card = document.createElement('div');
+                card.className = `level-card groep-${4 + index}`;
+                card.innerHTML = `
+                    <div class="icon-circle">${list.emoji}</div>
+                    <h3 class="level-label">${list.label}</h3>
+                    <p class="level-description">${list.difficulty}</p>
+                    <p class="level-description">${list.words} woorden</p>
+
+                    <div class="cito-selector" data-list="${listId}" style="max-width: 100%;">
+                        ${Object.keys(config.tempos).map((tempoId, i) => {
+                            const tempo = config.tempos[tempoId];
+                            const isDefault = tempoId === 'normaal';
+                            return `<div class="cito-option ${isDefault ? 'active' : ''}"
+                                         data-tempo="${tempoId}"
+                                         onclick="selectDMTTempo('${listId}', '${tempoId}')"
+                                         style="flex: 1; font-size: 0.75rem;">
+                                ${tempo.emoji}
+                            </div>`;
+                        }).join('')}
+                    </div>
+
+                    <button class="card-cta" onclick="startDMT('${listId}')">Start oefenen</button>
+                `;
+                card.setAttribute('data-list', listId);
+                card.setAttribute('data-selected-tempo', 'normaal');
+                grid.appendChild(card);
+            });
+        }
+
+        // Function to select tempo for DMT
+        function selectDMTTempo(listId, tempo) {
+            const card = document.querySelector(`[data-list="${listId}"]`);
+            const selector = card.querySelector('.cito-selector');
+
+            // Update active state
+            selector.querySelectorAll('.cito-option').forEach(opt => {
+                opt.classList.remove('active');
+            });
+            selector.querySelector(`[data-tempo="${tempo}"]`).classList.add('active');
+
+            // Store selection
+            card.setAttribute('data-selected-tempo', tempo);
+        }
+
+        // Function to start DMT practice
+        function startDMT(listId) {
+            const card = document.querySelector(`[data-list="${listId}"]`);
+            const tempo = card.getAttribute('data-selected-tempo');
+
+            // Redirect to DMT practice page with parameters
+            window.location.href = `dmt-practice.html?list=${listId}&tempo=${tempo}`;
+        }
+
+        // Function to render regular grade selector
+        function renderGradeSelector() {
+            generateGradeCards();
+        }
 
         // Function to start quiz for a specific level and CITO moment
         function startLevel(grade, moment) {
@@ -658,9 +756,10 @@
         }
 
         // Generate all 6 groep cards (Groep 3-8)
-        const grid = document.getElementById('levelCardsGrid');
+        function generateGradeCards() {
+            const grid = document.getElementById('levelCardsGrid');
 
-        for (let grade = 3; grade <= 8; grade++) {
+            for (let grade = 3; grade <= 8; grade++) {
             const card = document.createElement('div');
             card.className = `level-card groep-${grade}`;
 
@@ -698,6 +797,7 @@
             `;
 
             grid.appendChild(card);
+            }
         }
 
         // Function to select M or E moment
