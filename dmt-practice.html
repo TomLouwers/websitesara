@@ -542,9 +542,9 @@
             margin-bottom: 8px;
         }
 
-        .dmt-norming-band.weak {
-            background: #FEE2E2;
-            color: #DC2626;
+        .dmt-norming-band.developing {
+            background: #DBEAFE;
+            color: #1E40AF;
         }
 
         .dmt-norming-band.average {
@@ -555,6 +555,11 @@
         .dmt-norming-band.good {
             background: #D1FAE5;
             color: #059669;
+        }
+
+        .dmt-norming-band.excellent {
+            background: #E0E7FF;
+            color: #4F46E5;
         }
 
         .dmt-norming-explanation {
@@ -811,8 +816,14 @@
                 </div>
 
                 <div class="dmt-results-buttons">
-                    <button class="dmt-results-btn primary" id="restartBtn">Nog een keer</button>
-                    <button class="dmt-results-btn secondary" id="homeBtn">Terug naar home</button>
+                    <button class="dmt-results-btn primary" id="restartBtn">
+                        <span class="btn-icon">🔁</span>
+                        <span>Nog een keer oefenen!</span>
+                    </button>
+                    <button class="dmt-results-btn secondary" id="homeBtn">
+                        <span>←</span>
+                        <span>Terug naar overzicht</span>
+                    </button>
                 </div>
             </div>
         </div>
