@@ -171,6 +171,32 @@ const CONFIG = {
                 m8: 'exercises/gb/gb_groep8_e8.json',
                 e8: 'exercises/gb/gb_groep8_e8.json'
             }
+        },
+        wereldorientatie: {
+            groep3: {
+                m3: 'exercises/wo/groep3_wo_150.json',
+                e3: 'exercises/wo/groep3_wo_150.json'
+            },
+            groep4: {
+                m4: 'exercises/wo/groep4_wo_150.json',
+                e4: 'exercises/wo/groep4_wo_150.json'
+            },
+            groep5: {
+                m5: 'exercises/wo/groep5_wo_150.json',
+                e5: 'exercises/wo/groep5_wo_150.json'
+            },
+            groep6: {
+                m6: 'exercises/wo/groep6_wo_150.json',
+                e6: 'exercises/wo/groep6_wo_150.json'
+            },
+            groep7: {
+                m7: 'exercises/wo/groep7_wo_150.json',
+                e7: 'exercises/wo/groep7_wo_150.json'
+            },
+            groep8: {
+                m8: 'exercises/wo/groep8_wo_150.json',
+                e8: 'exercises/wo/groep8_wo_150.json'
+            }
         }
     }
 };

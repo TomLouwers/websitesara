@@ -1560,12 +1560,23 @@ function populateEnhancedFeedback(isCorrect, currentQuestion, selectedOption = n
         }
     }
 
-    // 2. Show "Waarom?" section (concept explanation)
-    if (feedbackWhySection && feedbackWhyContent && currentQuestion.extra_info?.concept) {
-        feedbackWhySection.style.display = 'block';
-        feedbackWhyContent.textContent = currentQuestion.extra_info.concept;
-    } else if (feedbackWhySection) {
-        feedbackWhySection.style.display = 'none';
+    // 2. Show "Waarom?" section (concept explanation or simple string extra_info)
+    if (feedbackWhySection && feedbackWhyContent) {
+        if (currentQuestion.extra_info) {
+            if (typeof currentQuestion.extra_info === 'string') {
+                // Simple string format (like wereldorientatie)
+                feedbackWhySection.style.display = 'block';
+                feedbackWhyContent.innerHTML = currentQuestion.extra_info;
+            } else if (currentQuestion.extra_info.concept) {
+                // Object format with concept field
+                feedbackWhySection.style.display = 'block';
+                feedbackWhyContent.textContent = currentQuestion.extra_info.concept;
+            } else {
+                feedbackWhySection.style.display = 'none';
+            }
+        } else {
+            feedbackWhySection.style.display = 'none';
+        }
     }
 
     // 3. Show "Zo werkt het:" section (worked example)
