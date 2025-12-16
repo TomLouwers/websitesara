@@ -74,14 +74,14 @@ class DMTPractice {
         const tempo = urlParams.get('tempo');
 
         if (list && tempo) {
-            // Auto-start with URL parameters
+            // Set selected list and tempo from URL
             this.state.selectedList = list.toUpperCase();
             this.state.selectedTempo = tempo.toLowerCase();
 
             // Validate parameters
             if (this.wordLists[this.state.selectedList] && this.config.tempoMultipliers[this.state.selectedTempo]) {
-                // Start immediately
-                this.startPractice();
+                // Skip setup screen, go directly to practice screen with START button
+                this.showPracticeScreen();
             } else {
                 console.error('Invalid URL parameters:', { list, tempo });
                 alert('Ongeldige parameters. Kies opnieuw je lijst en tempo.');
