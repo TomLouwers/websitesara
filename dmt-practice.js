@@ -117,6 +117,9 @@ class DMTPractice {
     }
 
     setupEventListeners() {
+        // Set default tempo to "normaal"
+        this.state.selectedTempo = 'normaal';
+
         // List selection
         document.querySelectorAll('.dmt-list-btn').forEach(btn => {
             btn.addEventListener('click', () => {
@@ -211,9 +214,9 @@ class DMTPractice {
 
     updateBreadcrumb() {
         const tempoLabels = {
-            rustig: 'Rustig',
-            normaal: 'Normaal',
-            snel: 'Snel'
+            rustig: 'Rustig aan',
+            normaal: 'Gaat goed',
+            snel: 'Gas erop'
         };
 
         const breadcrumbInfo = document.getElementById('breadcrumbInfo');
@@ -344,15 +347,15 @@ class DMTPractice {
 
     updateTempoIndicator() {
         const tempoEmojis = {
-            rustig: '🟢',
-            normaal: '🟡',
-            snel: '🔴'
+            rustig: '🐢',
+            normaal: '🙂',
+            snel: '🚀'
         };
 
         const tempoLabels = {
-            rustig: 'Rustig',
-            normaal: 'Normaal',
-            snel: 'Snel'
+            rustig: 'Rustig aan',
+            normaal: 'Gaat goed',
+            snel: 'Gas erop'
         };
 
         document.getElementById('tempoEmoji').textContent = tempoEmojis[this.state.selectedTempo];
