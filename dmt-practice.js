@@ -45,11 +45,13 @@ class DMTPractice {
             isRunning: false,
             isPaused: false,
             startTime: null,
-            totalWordsSeen: 0
+            totalWordsSeen: 0,
+            timeRemaining: 60
         };
 
-        // Timer
+        // Timers
         this.intervalId = null;
+        this.countdownTimerId = null;
 
         // Data
         this.wordLists = {};
@@ -117,6 +119,9 @@ class DMTPractice {
     }
 
     setupEventListeners() {
+        // Set default tempo to "normaal"
+        this.state.selectedTempo = 'normaal';
+
         // List selection
         document.querySelectorAll('.dmt-list-btn').forEach(btn => {
             btn.addEventListener('click', () => {
@@ -139,6 +144,11 @@ class DMTPractice {
 
         // Start button
         document.getElementById('startBtn').addEventListener('click', () => {
+            this.showReadyScreen();
+        });
+
+        // Ready start button
+        document.getElementById('readyStartBtn').addEventListener('click', () => {
             this.startPractice();
         });
 
@@ -185,6 +195,12 @@ class DMTPractice {
         }
     }
 
+    showReadyScreen() {
+        // Hide setup, show ready
+        document.getElementById('setupScreen').style.display = 'none';
+        document.getElementById('readyScreen').style.display = 'block';
+    }
+
     startPractice() {
         // Load words for selected list
         this.state.words = [...this.wordLists[this.state.selectedList]];
@@ -193,9 +209,10 @@ class DMTPractice {
         this.state.startTime = Date.now();
         this.state.isRunning = true;
         this.state.isPaused = false;
+        this.state.timeRemaining = 60;
 
         // Show practice screen
-        document.getElementById('setupScreen').style.display = 'none';
+        document.getElementById('readyScreen').style.display = 'none';
         document.getElementById('practiceScreen').style.display = 'block';
 
         // Update breadcrumb
@@ -204,16 +221,44 @@ class DMTPractice {
         // Update tempo indicator
         this.updateTempoIndicator();
 
+        // Start countdown timer
+        this.startCountdownTimer();
+
         // Start word rotation
         this.showNextWord();
         this.scheduleNextWord();
     }
 
+    startCountdownTimer() {
+        // Update timer display immediately
+        this.updateTimerDisplay();
+
+        // Start 1-second interval countdown
+        this.countdownTimerId = setInterval(() => {
+            if (!this.state.isPaused) {
+                this.state.timeRemaining--;
+                this.updateTimerDisplay();
+
+                // Auto-stop at 0
+                if (this.state.timeRemaining <= 0) {
+                    this.stopPractice();
+                }
+            }
+        }, 1000);
+    }
+
+    updateTimerDisplay() {
+        const timerDisplay = document.getElementById('timerDisplay');
+        if (timerDisplay) {
+            timerDisplay.textContent = `${this.state.timeRemaining}s`;
+        }
+    }
+
     updateBreadcrumb() {
         const tempoLabels = {
-            rustig: 'Rustig',
-            normaal: 'Normaal',
-            snel: 'Snel'
+            rustig: 'Rustig aan',
+            normaal: 'Gaat goed',
+            snel: 'Gas erop'
         };
 
         const breadcrumbInfo = document.getElementById('breadcrumbInfo');
@@ -344,15 +389,15 @@ class DMTPractice {
 
     updateTempoIndicator() {
         const tempoEmojis = {
-            rustig: '🟢',
-            normaal: '🟡',
-            snel: '🔴'
+            rustig: '🐢',
+            normaal: '🙂',
+            snel: '🚀'
         };
 
         const tempoLabels = {
-            rustig: 'Rustig',
-            normaal: 'Normaal',
-            snel: 'Snel'
+            rustig: 'Rustig aan',
+            normaal: 'Gaat goed',
+            snel: 'Gas erop'
         };
 
         document.getElementById('tempoEmoji').textContent = tempoEmojis[this.state.selectedTempo];
@@ -360,21 +405,36 @@ class DMTPractice {
     }
 
     stopPractice() {
-        if (confirm('Weet je zeker dat je wilt stoppen? Je voortgang gaat verloren.')) {
-            this.state.isRunning = false;
-            if (this.intervalId) {
-                clearTimeout(this.intervalId);
-                this.intervalId = null;
-            }
-            this.showResults();
+        this.state.isRunning = false;
+
+        // Clear word rotation timer
+        if (this.intervalId) {
+            clearTimeout(this.intervalId);
+            this.intervalId = null;
         }
+
+        // Clear countdown timer
+        if (this.countdownTimerId) {
+            clearInterval(this.countdownTimerId);
+            this.countdownTimerId = null;
+        }
+
+        this.showResults();
     }
 
     showResults() {
         this.state.isRunning = false;
+
+        // Clear word rotation timer
         if (this.intervalId) {
             clearTimeout(this.intervalId);
             this.intervalId = null;
+        }
+
+        // Clear countdown timer
+        if (this.countdownTimerId) {
+            clearInterval(this.countdownTimerId);
+            this.countdownTimerId = null;
         }
 
         // Calculate results

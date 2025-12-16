@@ -176,6 +176,61 @@
             box-shadow: none;
         }
 
+        /* Ready Screen */
+        .dmt-ready-screen {
+            display: none;
+        }
+
+        .dmt-ready-card {
+            background: white;
+            border-radius: 20px;
+            padding: 80px 40px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            max-width: 600px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .dmt-ready-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #2D3748;
+            margin-bottom: 24px;
+        }
+
+        .dmt-ready-subtitle {
+            font-size: 1.2rem;
+            color: #718096;
+            margin-bottom: 40px;
+        }
+
+        .dmt-ready-start-btn {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #38C172, #2FA35F);
+            color: white;
+            border: none;
+            font-size: 3rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(56, 193, 114, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .dmt-ready-start-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(56, 193, 114, 0.5);
+        }
+
+        .dmt-ready-start-btn:active {
+            transform: scale(0.98);
+        }
+
         /* Practice Screen */
         .dmt-practice-screen {
             display: none;
@@ -236,6 +291,18 @@
             gap: 8px;
             background: #F0FDF4;
             color: #38C172;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .dmt-timer-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #EBF8FF;
+            color: #3182CE;
             padding: 8px 16px;
             border-radius: 999px;
             font-size: 0.9rem;
@@ -310,7 +377,8 @@
             color: #2D3748;
             text-align: center;
             line-height: 1.2;
-            word-break: break-word;
+            white-space: nowrap;
+            overflow: visible;
             animation: fadeIn 0.2s ease;
         }
 
@@ -692,16 +760,16 @@
                     <div class="dmt-section-title">Kies een lijst</div>
                     <div class="dmt-list-buttons">
                         <button class="dmt-list-btn" data-list="A">
-                            <div class="dmt-list-label">Lijst A</div>
-                            <div class="dmt-list-difficulty">Basis</div>
+                            <div class="dmt-list-label">Start-woorden</div>
+                            <div class="dmt-list-difficulty">Start</div>
                         </button>
                         <button class="dmt-list-btn" data-list="B">
-                            <div class="dmt-list-label">Lijst B</div>
-                            <div class="dmt-list-difficulty">Gemiddeld</div>
+                            <div class="dmt-list-label">Groei-woorden</div>
+                            <div class="dmt-list-difficulty">Groei</div>
                         </button>
                         <button class="dmt-list-btn" data-list="C">
-                            <div class="dmt-list-label">Lijst C</div>
-                            <div class="dmt-list-difficulty">Moeilijk</div>
+                            <div class="dmt-list-label">Knappe woorden</div>
+                            <div class="dmt-list-difficulty">Uitdaging</div>
                         </button>
                     </div>
                 </div>
@@ -711,18 +779,18 @@
                     <div class="dmt-section-title">Kies je tempo</div>
                     <div class="dmt-tempo-buttons">
                         <button class="dmt-tempo-btn" data-tempo="rustig">
-                            <div class="dmt-tempo-emoji">🟢</div>
-                            <div class="dmt-tempo-label">Rustig</div>
+                            <div class="dmt-tempo-emoji">🐢</div>
+                            <div class="dmt-tempo-label">Rustig aan</div>
                             <div class="dmt-tempo-speed">Langzaam</div>
                         </button>
-                        <button class="dmt-tempo-btn" data-tempo="normaal">
-                            <div class="dmt-tempo-emoji">🟡</div>
-                            <div class="dmt-tempo-label">Normaal</div>
+                        <button class="dmt-tempo-btn selected" data-tempo="normaal">
+                            <div class="dmt-tempo-emoji">🙂</div>
+                            <div class="dmt-tempo-label">Gaat goed</div>
                             <div class="dmt-tempo-speed">Standaard</div>
                         </button>
                         <button class="dmt-tempo-btn" data-tempo="snel">
-                            <div class="dmt-tempo-emoji">🔴</div>
-                            <div class="dmt-tempo-label">Snel</div>
+                            <div class="dmt-tempo-emoji">🚀</div>
+                            <div class="dmt-tempo-label">Gas erop</div>
                             <div class="dmt-tempo-speed">Uitdaging</div>
                         </button>
                     </div>
@@ -730,6 +798,15 @@
 
                 <!-- Start Button -->
                 <button class="dmt-start-btn" id="startBtn" disabled>Start oefening</button>
+            </div>
+        </div>
+
+        <!-- Ready Screen -->
+        <div class="dmt-ready-screen" id="readyScreen">
+            <div class="dmt-ready-card">
+                <div class="dmt-ready-title">Klaar om te starten? 🚀</div>
+                <div class="dmt-ready-subtitle">Druk op de knop om te beginnen met oefenen!</div>
+                <button class="dmt-ready-start-btn" id="readyStartBtn">START</button>
             </div>
         </div>
 
@@ -749,6 +826,10 @@
                 <!-- Progress and Controls -->
                 <div class="dmt-practice-row">
                     <div class="dmt-practice-info">
+                        <div class="dmt-timer-pill">
+                            <span>⏱</span>
+                            <strong id="timerDisplay">60s</strong>
+                        </div>
                         <div class="dmt-info-pill">
                             <span>Woorden gezien:</span>
                             <strong id="wordCount">0</strong>
@@ -791,27 +872,27 @@
                 <div class="dmt-tempo-modal-buttons">
                     <button class="dmt-tempo-modal-btn" data-tempo="rustig">
                         <div class="dmt-tempo-modal-btn-left">
-                            <div class="dmt-tempo-modal-emoji">🟢</div>
+                            <div class="dmt-tempo-modal-emoji">🐢</div>
                             <div>
-                                <div class="dmt-tempo-modal-label">Rustig</div>
+                                <div class="dmt-tempo-modal-label">Rustig aan</div>
                                 <div class="dmt-tempo-modal-speed">Langzaam</div>
                             </div>
                         </div>
                     </button>
                     <button class="dmt-tempo-modal-btn" data-tempo="normaal">
                         <div class="dmt-tempo-modal-btn-left">
-                            <div class="dmt-tempo-modal-emoji">🟡</div>
+                            <div class="dmt-tempo-modal-emoji">🙂</div>
                             <div>
-                                <div class="dmt-tempo-modal-label">Normaal</div>
+                                <div class="dmt-tempo-modal-label">Gaat goed</div>
                                 <div class="dmt-tempo-modal-speed">Standaard</div>
                             </div>
                         </div>
                     </button>
                     <button class="dmt-tempo-modal-btn" data-tempo="snel">
                         <div class="dmt-tempo-modal-btn-left">
-                            <div class="dmt-tempo-modal-emoji">🔴</div>
+                            <div class="dmt-tempo-modal-emoji">🚀</div>
                             <div>
-                                <div class="dmt-tempo-modal-label">Snel</div>
+                                <div class="dmt-tempo-modal-label">Gas erop</div>
                                 <div class="dmt-tempo-modal-speed">Uitdaging</div>
                             </div>
                         </div>
