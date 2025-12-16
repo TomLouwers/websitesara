@@ -364,6 +364,59 @@
             transform: scale(0.98);
         }
 
+        .dmt-word-start-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .dmt-grade-selector {
+            margin-top: 32px;
+            text-align: center;
+        }
+
+        .dmt-grade-selector.hidden {
+            display: none;
+        }
+
+        .dmt-grade-label {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2D3748;
+            margin-bottom: 16px;
+        }
+
+        .dmt-grade-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .dmt-grade-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            border: 2px solid #E2E8F0;
+            background: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2D3748;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .dmt-grade-btn:hover {
+            border-color: #3182CE;
+            background: #EBF8FF;
+        }
+
+        .dmt-grade-btn.selected {
+            border-color: #3182CE;
+            background: #3182CE;
+            color: white;
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -831,7 +884,21 @@
 
             <!-- Word Display -->
             <div class="dmt-word-display-card" style="position: relative;">
-                <button class="dmt-word-start-btn" id="wordStartBtn">START</button>
+                <button class="dmt-word-start-btn" id="wordStartBtn" disabled>START</button>
+
+                <!-- Grade Selector (shown with START button) -->
+                <div class="dmt-grade-selector" id="gradeSelector">
+                    <div class="dmt-grade-label">In welke groep zit je? 🎓</div>
+                    <div class="dmt-grade-buttons">
+                        <button class="dmt-grade-btn" data-grade="3">3</button>
+                        <button class="dmt-grade-btn" data-grade="4">4</button>
+                        <button class="dmt-grade-btn" data-grade="5">5</button>
+                        <button class="dmt-grade-btn" data-grade="6">6</button>
+                        <button class="dmt-grade-btn" data-grade="7">7</button>
+                        <button class="dmt-grade-btn" data-grade="8">8</button>
+                    </div>
+                </div>
+
                 <div class="dmt-word-display" id="wordDisplay" style="display: none;">-</div>
                 <div class="dmt-paused-overlay" id="pausedOverlay">
                     <div class="dmt-paused-text">⏸ Gepauzeerd</div>
