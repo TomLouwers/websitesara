@@ -187,6 +187,35 @@
             padding: 20px 24px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
             margin-bottom: 24px;
+        }
+
+        /* Breadcrumb */
+        .dmt-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: #9A9A9A;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .dmt-breadcrumb a {
+            color: #9A9A9A;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .dmt-breadcrumb a:hover {
+            color: #FF8A34;
+        }
+
+        .dmt-breadcrumb-separator {
+            color: #9A9A9A;
+            margin: 0 2px;
+        }
+
+        .dmt-practice-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -586,7 +615,12 @@
                 grid-template-columns: 1fr;
             }
 
-            .dmt-practice-topbar {
+            .dmt-breadcrumb {
+                font-size: 12px;
+                margin-bottom: 12px;
+            }
+
+            .dmt-practice-row {
                 flex-direction: column;
                 align-items: stretch;
             }
@@ -600,36 +634,10 @@
             }
         }
 
-        /* Back button */
-        .dmt-back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            background: white;
-            border: 2px solid #E2E8F0;
-            border-radius: 999px;
-            color: #718096;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.2s ease;
-            margin-bottom: 20px;
-        }
-
-        .dmt-back-btn:hover {
-            border-color: #FF8A34;
-            color: #FF8A34;
-        }
     </style>
 </head>
 <body>
     <div class="dmt-container">
-        <!-- Back to Home Button -->
-        <a href="index.html" class="dmt-back-btn">
-            <span>←</span>
-            <span>Terug naar home</span>
-        </a>
-
         <!-- Setup Screen -->
         <div class="dmt-setup-screen" id="setupScreen">
             <div class="dmt-setup-card">
@@ -688,29 +696,41 @@
         <div class="dmt-practice-screen" id="practiceScreen">
             <!-- Top Bar with Info and Controls -->
             <div class="dmt-practice-topbar">
-                <div class="dmt-practice-info">
-                    <div class="dmt-info-pill">
-                        <span>Woorden gezien:</span>
-                        <strong id="wordCount">0</strong>
+                <!-- Breadcrumb -->
+                <nav class="dmt-breadcrumb" aria-label="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="dmt-breadcrumb-separator">›</span>
+                    <a href="level-selector.html?subject=dmt">DMT Woordtrainer</a>
+                    <span class="dmt-breadcrumb-separator">›</span>
+                    <span id="breadcrumbInfo">Lijst A - Normaal</span>
+                </nav>
+
+                <!-- Progress and Controls -->
+                <div class="dmt-practice-row">
+                    <div class="dmt-practice-info">
+                        <div class="dmt-info-pill">
+                            <span>Woorden gezien:</span>
+                            <strong id="wordCount">0</strong>
+                        </div>
+                        <div class="dmt-tempo-indicator" id="tempoIndicator">
+                            <span id="tempoEmoji">🟡</span>
+                            <span id="tempoLabel">Normaal</span>
+                        </div>
                     </div>
-                    <div class="dmt-tempo-indicator" id="tempoIndicator">
-                        <span id="tempoEmoji">🟡</span>
-                        <span id="tempoLabel">Normaal</span>
+                    <div class="dmt-practice-controls">
+                        <button class="dmt-control-btn pause" id="pauseBtn">
+                            <span id="pauseBtnIcon">⏸</span>
+                            <span id="pauseBtnText">Pauze</span>
+                        </button>
+                        <button class="dmt-control-btn pause" id="tempoBtn">
+                            <span>🐢/🐇</span>
+                            <span>Tempo</span>
+                        </button>
+                        <button class="dmt-control-btn stop" id="stopBtn">
+                            <span>⏹</span>
+                            <span>Stop</span>
+                        </button>
                     </div>
-                </div>
-                <div class="dmt-practice-controls">
-                    <button class="dmt-control-btn pause" id="pauseBtn">
-                        <span id="pauseBtnIcon">⏸</span>
-                        <span id="pauseBtnText">Pauze</span>
-                    </button>
-                    <button class="dmt-control-btn pause" id="tempoBtn">
-                        <span>🐢/🐇</span>
-                        <span>Tempo</span>
-                    </button>
-                    <button class="dmt-control-btn stop" id="stopBtn">
-                        <span>⏹</span>
-                        <span>Stop</span>
-                    </button>
                 </div>
             </div>
 

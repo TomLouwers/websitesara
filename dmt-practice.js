@@ -198,12 +198,28 @@ class DMTPractice {
         document.getElementById('setupScreen').style.display = 'none';
         document.getElementById('practiceScreen').style.display = 'block';
 
+        // Update breadcrumb
+        this.updateBreadcrumb();
+
         // Update tempo indicator
         this.updateTempoIndicator();
 
         // Start word rotation
         this.showNextWord();
         this.scheduleNextWord();
+    }
+
+    updateBreadcrumb() {
+        const tempoLabels = {
+            rustig: 'Rustig',
+            normaal: 'Normaal',
+            snel: 'Snel'
+        };
+
+        const breadcrumbInfo = document.getElementById('breadcrumbInfo');
+        if (breadcrumbInfo) {
+            breadcrumbInfo.textContent = `Lijst ${this.state.selectedList} - ${tempoLabels[this.state.selectedTempo]}`;
+        }
     }
 
     showNextWord() {
