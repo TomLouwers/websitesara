@@ -195,13 +195,13 @@ function updateProgressTrackerDisplay() {
     // Update summary totals only (compact display)
     const totalCorrectEl = document.getElementById('totalCorrect');
     if (totalCorrectEl) {
-        totalCorrectEl.textContent = totalCorrect;
+        totalCorrectEl.textContent = score;  // Show actual score (includes bonuses)
     }
 
     // Update new top bar points counter
     const totalCorrectNew = document.getElementById('totalCorrectNew');
     if (totalCorrectNew) {
-        totalCorrectNew.textContent = totalCorrect;
+        totalCorrectNew.textContent = score;  // Show actual score (includes bonuses)
     }
 
     // totalIncorrect display removed for anxiety reduction - only show positive count
@@ -2102,12 +2102,18 @@ function showResults() {
     const isNewHighscore = saveHighscore(currentSubject, currentTheme, score);
 
     // Calculate stats
-    const percentage = totalQuestions > 0 ? Math.round((score / totalQuestions) * 100) : 0;
+    // Count actual correct answers (without bonuses) from categoryProgress
+    let actualCorrectCount = 0;
+    Object.keys(categoryProgress).forEach(category => {
+        actualCorrectCount += categoryProgress[category].correct;
+    });
+
+    const percentage = totalQuestions > 0 ? Math.round((actualCorrectCount / totalQuestions) * 100) : 0;
     const incorrectCount = wrongAnswers.length;
-    const correctCount = score;
+    const correctCount = actualCorrectCount;  // Use actual count for display messages
 
     // 1. HERO BLOCK: Emotional Summary
-    populateHeroBlock(percentage, correctCount, incorrectCount, isNewHighscore);
+    populateHeroBlock(percentage, correctCount, incorrectCount, isNewHighscore, score);
 
     // 2. SKILLS OVERVIEW: Progress Chips
     populateSkillsOverview();
@@ -2117,7 +2123,7 @@ function showResults() {
 }
 
 // Helper: Populate Hero Block with child-friendly messaging
-function populateHeroBlock(percentage, correctCount, incorrectCount, isNewHighscore) {
+function populateHeroBlock(percentage, correctCount, incorrectCount, isNewHighscore, totalScore) {
     const emojiEl = document.getElementById('resultEmoji');
     const headlineEl = document.getElementById('resultHeadline');
     const summaryEl = document.getElementById('resultSummary');
@@ -2151,6 +2157,12 @@ function populateHeroBlock(percentage, correctCount, incorrectCount, isNewHighsc
         summaryText = `Je hebt ${correctCount} vragen goed beantwoord!`;
     } else {
         summaryText = 'Elke vraag is een leerkans!';
+    }
+
+    // Add total score with bonuses if there's a difference
+    if (totalScore > correctCount) {
+        const bonusPoints = totalScore - correctCount;
+        summaryText += ` (${totalScore} punten inclusief ${bonusPoints} bonuspunten!)`;
     }
 
     if (incorrectCount > 0) {
