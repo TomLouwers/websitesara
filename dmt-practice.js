@@ -215,6 +215,11 @@ class DMTPractice {
         // Show START button, hide word display
         document.getElementById('wordStartBtn').classList.add('show');
         document.getElementById('wordDisplay').style.display = 'none';
+
+        // Disable controls until START is clicked
+        document.getElementById('pauseBtn').disabled = true;
+        document.getElementById('tempoBtn').disabled = true;
+        document.getElementById('stopBtn').disabled = true;
     }
 
     startPractice() {
@@ -226,6 +231,11 @@ class DMTPractice {
         // Hide START button, show word display
         document.getElementById('wordStartBtn').classList.remove('show');
         document.getElementById('wordDisplay').style.display = 'block';
+
+        // Enable controls now that practice has started
+        document.getElementById('pauseBtn').disabled = false;
+        document.getElementById('tempoBtn').disabled = false;
+        document.getElementById('stopBtn').disabled = false;
 
         // Start countdown timer
         this.startCountdownTimer();
@@ -445,8 +455,15 @@ class DMTPractice {
 
         // Calculate results
         const totalWordsSeen = this.state.totalWordsSeen;
-        const elapsedTime = (Date.now() - this.state.startTime) / 1000; // seconds
-        const wordsPerMinute = Math.round((totalWordsSeen / elapsedTime) * 60);
+
+        // Safety check: if startTime is null, practice never started
+        const elapsedTime = this.state.startTime
+            ? (Date.now() - this.state.startTime) / 1000
+            : 0;
+
+        const wordsPerMinute = elapsedTime > 0
+            ? Math.round((totalWordsSeen / elapsedTime) * 60)
+            : 0;
 
         // Update results display
         document.getElementById('totalWordsResult').textContent = totalWordsSeen;
