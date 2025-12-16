@@ -1523,6 +1523,7 @@ function populateEnhancedFeedback(isCorrect, currentQuestion, selectedOption = n
     const feedbackHeadline = document.getElementById('feedbackHeadlineNew');
     const feedbackAnswerConfirm = document.getElementById('feedbackAnswerConfirmNew');
     const feedbackWhySection = document.getElementById('feedbackWhySection');
+    const feedbackWhySectionTitle = document.getElementById('feedbackWhySectionTitle');
     const feedbackWhyContent = document.getElementById('feedbackWhyContentNew');
     const feedbackWorkedSection = document.getElementById('feedbackWorkedSection');
     const feedbackWorkedExample = document.getElementById('feedbackWorkedExampleNew');
@@ -1536,9 +1537,17 @@ function populateEnhancedFeedback(isCorrect, currentQuestion, selectedOption = n
         if (feedbackAnswerConfirm) {
             feedbackAnswerConfirm.textContent = 'Je hebt het juiste antwoord gekozen! Je bent goed bezig!';
         }
+        // Set "Waarom?" title for correct answers
+        if (feedbackWhySectionTitle) {
+            feedbackWhySectionTitle.textContent = 'Waarom is dit goed?';
+        }
     } else {
         if (feedbackEmoji) feedbackEmoji.textContent = '🤗';
         if (feedbackHeadline) feedbackHeadline.textContent = 'Bijna! Probeer het nog een keer!';
+        // Set "Waarom?" title for incorrect answers
+        if (feedbackWhySectionTitle) {
+            feedbackWhySectionTitle.textContent = 'Waarom niet?';
+        }
 
         // Show correct answer
         if (feedbackAnswerConfirm) {
@@ -1593,35 +1602,41 @@ function populateEnhancedFeedback(isCorrect, currentQuestion, selectedOption = n
         feedbackWorkedSection.style.display = 'none';
     }
 
-    // 4. Show Tip section
+    // 4. Show Tip section - ONLY for incorrect answers
     if (feedbackTipSection && feedbackTipContent) {
-        let tipText = '';
+        // Only show tip for incorrect answers
+        if (!isCorrect) {
+            let tipText = '';
 
-        if (!isCorrect && selectedOption && typeof selectedOption === 'object' && selectedOption.foutanalyse) {
-            // For incorrect answers with foutanalyse: extract just the main tip without reflectievraag
-            const foutanalyse = selectedOption.foutanalyse;
-            // Remove the reflectievraag part (everything from 🤔 onwards)
-            tipText = foutanalyse.split('🤔')[0].trim();
-            // Remove any ** markdown formatting
-            tipText = tipText.replace(/\*\*/g, '');
-        } else if (currentQuestion.extra_info?.tips && Array.isArray(currentQuestion.extra_info.tips) && currentQuestion.extra_info.tips.length > 0) {
-            // Use general tips from extra_info
-            tipText = currentQuestion.extra_info.tips[0];
-        } else {
-            // Default tip based on theme
-            if (currentQuestion.theme && currentQuestion.theme.includes('tafels')) {
-                tipText = 'Oefen de tafels regelmatig om ze beter te onthouden!';
-            } else if (currentQuestion.theme && currentQuestion.theme.includes('geld')) {
-                tipText = 'Let goed op de komma bij geldbedragen!';
+            if (selectedOption && typeof selectedOption === 'object' && selectedOption.foutanalyse) {
+                // For incorrect answers with foutanalyse: extract just the main tip without reflectievraag
+                const foutanalyse = selectedOption.foutanalyse;
+                // Remove the reflectievraag part (everything from 🤔 onwards)
+                tipText = foutanalyse.split('🤔')[0].trim();
+                // Remove any ** markdown formatting
+                tipText = tipText.replace(/\*\*/g, '');
+            } else if (currentQuestion.extra_info?.tips && Array.isArray(currentQuestion.extra_info.tips) && currentQuestion.extra_info.tips.length > 0) {
+                // Use general tips from extra_info
+                tipText = currentQuestion.extra_info.tips[0];
             } else {
-                tipText = 'Lees de vraag nog een keer goed door. Wat wordt er precies gevraagd?';
+                // Default tip based on theme
+                if (currentQuestion.theme && currentQuestion.theme.includes('tafels')) {
+                    tipText = 'Oefen de tafels regelmatig om ze beter te onthouden!';
+                } else if (currentQuestion.theme && currentQuestion.theme.includes('geld')) {
+                    tipText = 'Let goed op de komma bij geldbedragen!';
+                } else {
+                    tipText = 'Lees de vraag nog een keer goed door. Wat wordt er precies gevraagd?';
+                }
             }
-        }
 
-        if (tipText) {
-            feedbackTipSection.style.display = 'block';
-            feedbackTipContent.textContent = tipText;
+            if (tipText) {
+                feedbackTipSection.style.display = 'block';
+                feedbackTipContent.textContent = tipText;
+            } else {
+                feedbackTipSection.style.display = 'none';
+            }
         } else {
+            // For correct answers, hide the tip section completely
             feedbackTipSection.style.display = 'none';
         }
     }
