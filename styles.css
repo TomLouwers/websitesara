@@ -5800,17 +5800,17 @@ body.font-scale-extra-groot .option {
         opacity: 0;
         transform: translateY(0) scale(0.8);
     }
-    20% {
+    10% {
         opacity: 1;
         transform: translateY(-20px) scale(1);
     }
-    80% {
+    75% {
         opacity: 1;
-        transform: translateY(-80px) scale(1);
+        transform: translateY(-60px) scale(1);
     }
     100% {
         opacity: 0;
-        transform: translateY(-120px) scale(0.9);
+        transform: translateY(-100px) scale(0.9);
     }
 }
 
@@ -5826,7 +5826,7 @@ body.font-scale-extra-groot .option {
 }
 
 .streak-bonus.show {
-    animation: streakFloat 1.5s ease-out forwards;
+    animation: streakFloat 2.5s ease-out forwards;
 }
 
 .streak-bonus-content {
