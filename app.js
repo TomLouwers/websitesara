@@ -30,6 +30,7 @@ let currentSubject = null;
 let currentTheme = null; // Track current theme for highscore
 let currentQuestionIndex = 0;
 let score = 0;
+let currentStreak = 0; // Track consecutive correct answers for bonus points
 let totalQuestions = 0;
 let selectedAnswer = null;
 let hasAnswered = false;
@@ -122,6 +123,58 @@ function updateCategoryProgress(theme, isCorrect) {
 
     // Update the display
     updateProgressTrackerDisplay();
+}
+
+// Check and award streak bonus points
+function checkStreakBonus() {
+    let bonusPoints = 0;
+    let milestone = 0;
+
+    // Check streak milestones
+    if (currentStreak === 3) {
+        bonusPoints = 2;
+        milestone = 3;
+    } else if (currentStreak === 5) {
+        bonusPoints = 3;
+        milestone = 5;
+    } else if (currentStreak === 10) {
+        bonusPoints = 5;
+        milestone = 10;
+    }
+
+    // Award bonus points if milestone reached
+    if (bonusPoints > 0) {
+        score += bonusPoints;
+        showStreakBonus(milestone, bonusPoints);
+        updateProgressTrackerDisplay(); // Update points display
+    }
+}
+
+// Show streak bonus visual feedback
+function showStreakBonus(milestone, bonusPoints) {
+    const bonusElement = document.getElementById('streakBonus');
+    if (!bonusElement) return;
+
+    // Set the content
+    bonusElement.innerHTML = `
+        <div class="streak-bonus-content">
+            <div class="streak-bonus-icon">🔥</div>
+            <div class="streak-bonus-text">${milestone}-STREAK BONUS!</div>
+            <div class="streak-bonus-points">+${bonusPoints} punten!</div>
+        </div>
+    `;
+
+    // Show and animate
+    bonusElement.classList.remove('hidden');
+    bonusElement.classList.add('show');
+
+    // Hide after animation completes
+    setTimeout(() => {
+        bonusElement.classList.remove('show');
+        setTimeout(() => {
+            bonusElement.classList.add('hidden');
+        }, 300); // Wait for fade out
+    }, 1500);
 }
 
 // Display the progress tracker
@@ -1677,6 +1730,10 @@ function submitAnswer() {
 
             score++;
 
+            // Increment streak and check for bonus
+            currentStreak++;
+            checkStreakBonus();
+
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, true);
 
@@ -1712,6 +1769,9 @@ function submitAnswer() {
         } else {
             // Increment error count for this question
             currentQuestionErrors++;
+
+            // Reset streak on wrong answer
+            currentStreak = 0;
 
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, false);
@@ -1890,6 +1950,11 @@ function submitAnswer() {
 
         if (isCorrect) {
             score++;
+
+            // Increment streak and check for bonus
+            currentStreak++;
+            checkStreakBonus();
+
             feedbackSection.classList.add('correct');
             feedbackTitle.textContent = CONFIG.feedback.correct.title;
             feedbackMessage.textContent = CONFIG.feedback.correct.message;
@@ -1906,6 +1971,9 @@ function submitAnswer() {
         } else {
             // Increment error count for this question
             currentQuestionErrors++;
+
+            // Reset streak on wrong answer
+            currentStreak = 0;
 
             feedbackSection.classList.add('incorrect');
             feedbackTitle.textContent = CONFIG.feedback.incorrect.title;
