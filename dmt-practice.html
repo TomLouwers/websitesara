@@ -570,39 +570,75 @@
 
         .dmt-results-buttons {
             display: flex;
+            flex-direction: column;
             gap: 12px;
-            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
         }
 
         .dmt-results-btn {
-            padding: 14px 28px;
-            border-radius: 999px;
-            border: none;
-            font-size: 1rem;
-            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Nunito', sans-serif;
             cursor: pointer;
             transition: all 0.2s ease;
+            border: none;
         }
 
         .dmt-results-btn.primary {
-            background: linear-gradient(135deg, #FF8A34, #FF6B9D);
+            gap: 8px;
+            background: #FF8A34;
             color: white;
-            box-shadow: 0 4px 12px rgba(255, 138, 52, 0.3);
+            font-size: 16px;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(255, 138, 52, 0.3);
+            width: auto;
+            min-width: 240px;
         }
 
         .dmt-results-btn.primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 138, 52, 0.4);
+            box-shadow: 0 4px 12px rgba(255, 138, 52, 0.4);
+            background: #E67A2E;
+        }
+
+        .dmt-results-btn.primary .btn-icon {
+            font-size: 18px;
         }
 
         .dmt-results-btn.secondary {
-            background: #F7FAFC;
-            color: #2D3748;
+            gap: 6px;
+            background: white;
+            color: #718096;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 10px 20px;
             border: 2px solid #E2E8F0;
+            border-radius: 10px;
         }
 
         .dmt-results-btn.secondary:hover {
-            background: #EDF2F7;
+            background: #F7FAFC;
+            border-color: #CBD5E0;
+        }
+
+        .dmt-results-btn.secondary .material-icons {
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .dmt-results-btn.primary {
+                width: 100%;
+                font-size: 15px;
+                padding: 11px 20px;
+            }
+
+            .dmt-results-btn.secondary {
+                width: 100%;
+            }
         }
 
         /* Responsive */
@@ -821,7 +857,7 @@
                         <span>Nog een keer oefenen!</span>
                     </button>
                     <button class="dmt-results-btn secondary" id="homeBtn">
-                        <span>←</span>
+                        <i class="material-icons">arrow_back</i>
                         <span>Terug naar overzicht</span>
                     </button>
                 </div>
