@@ -176,61 +176,6 @@
             box-shadow: none;
         }
 
-        /* Ready Screen */
-        .dmt-ready-screen {
-            display: none;
-        }
-
-        .dmt-ready-card {
-            background: white;
-            border-radius: 20px;
-            padding: 80px 40px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-            max-width: 600px;
-            margin: 40px auto;
-            text-align: center;
-        }
-
-        .dmt-ready-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #2D3748;
-            margin-bottom: 24px;
-        }
-
-        .dmt-ready-subtitle {
-            font-size: 1.2rem;
-            color: #718096;
-            margin-bottom: 40px;
-        }
-
-        .dmt-ready-start-btn {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #38C172, #2FA35F);
-            color: white;
-            border: none;
-            font-size: 3rem;
-            font-weight: 800;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(56, 193, 114, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-        }
-
-        .dmt-ready-start-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 12px 30px rgba(56, 193, 114, 0.5);
-        }
-
-        .dmt-ready-start-btn:active {
-            transform: scale(0.98);
-        }
-
         /* Practice Screen */
         .dmt-practice-screen {
             display: none;
@@ -380,6 +325,36 @@
             white-space: nowrap;
             overflow: visible;
             animation: fadeIn 0.2s ease;
+        }
+
+        .dmt-word-start-btn {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #38C172, #2FA35F);
+            color: white;
+            border: none;
+            font-size: 3rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(56, 193, 114, 0.4);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dmt-word-start-btn.show {
+            display: flex;
+        }
+
+        .dmt-word-start-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(56, 193, 114, 0.5);
+        }
+
+        .dmt-word-start-btn:active {
+            transform: scale(0.98);
         }
 
         @keyframes fadeIn {
@@ -801,15 +776,6 @@
             </div>
         </div>
 
-        <!-- Ready Screen -->
-        <div class="dmt-ready-screen" id="readyScreen">
-            <div class="dmt-ready-card">
-                <div class="dmt-ready-title">Klaar om te starten? 🚀</div>
-                <div class="dmt-ready-subtitle">Druk op de knop om te beginnen met oefenen!</div>
-                <button class="dmt-ready-start-btn" id="readyStartBtn">START</button>
-            </div>
-        </div>
-
         <!-- Practice Screen -->
         <div class="dmt-practice-screen" id="practiceScreen">
             <!-- Top Bar with Info and Controls -->
@@ -858,7 +824,8 @@
 
             <!-- Word Display -->
             <div class="dmt-word-display-card" style="position: relative;">
-                <div class="dmt-word-display" id="wordDisplay">-</div>
+                <button class="dmt-word-start-btn" id="wordStartBtn">START</button>
+                <div class="dmt-word-display" id="wordDisplay" style="display: none;">-</div>
                 <div class="dmt-paused-overlay" id="pausedOverlay">
                     <div class="dmt-paused-text">⏸ Gepauzeerd</div>
                 </div>

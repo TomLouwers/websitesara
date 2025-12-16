@@ -142,13 +142,13 @@ class DMTPractice {
             });
         });
 
-        // Start button
+        // Start button - shows practice screen with START button
         document.getElementById('startBtn').addEventListener('click', () => {
-            this.showReadyScreen();
+            this.showPracticeScreen();
         });
 
-        // Ready start button
-        document.getElementById('readyStartBtn').addEventListener('click', () => {
+        // Word START button - actually starts the practice
+        document.getElementById('wordStartBtn').addEventListener('click', () => {
             this.startPractice();
         });
 
@@ -195,24 +195,15 @@ class DMTPractice {
         }
     }
 
-    showReadyScreen() {
-        // Hide setup, show ready
-        document.getElementById('setupScreen').style.display = 'none';
-        document.getElementById('readyScreen').style.display = 'block';
-    }
-
-    startPractice() {
-        // Load words for selected list
+    showPracticeScreen() {
+        // Load words for selected list (but don't start yet)
         this.state.words = [...this.wordLists[this.state.selectedList]];
         this.state.currentIndex = 0;
         this.state.totalWordsSeen = 0;
-        this.state.startTime = Date.now();
-        this.state.isRunning = true;
-        this.state.isPaused = false;
         this.state.timeRemaining = 60;
 
-        // Show practice screen
-        document.getElementById('readyScreen').style.display = 'none';
+        // Hide setup, show practice screen
+        document.getElementById('setupScreen').style.display = 'none';
         document.getElementById('practiceScreen').style.display = 'block';
 
         // Update breadcrumb
@@ -220,6 +211,21 @@ class DMTPractice {
 
         // Update tempo indicator
         this.updateTempoIndicator();
+
+        // Show START button, hide word display
+        document.getElementById('wordStartBtn').classList.add('show');
+        document.getElementById('wordDisplay').style.display = 'none';
+    }
+
+    startPractice() {
+        // Now actually start the practice
+        this.state.startTime = Date.now();
+        this.state.isRunning = true;
+        this.state.isPaused = false;
+
+        // Hide START button, show word display
+        document.getElementById('wordStartBtn').classList.remove('show');
+        document.getElementById('wordDisplay').style.display = 'block';
 
         // Start countdown timer
         this.startCountdownTimer();
