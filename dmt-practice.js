@@ -40,6 +40,7 @@ class DMTPractice {
         this.state = {
             selectedList: null,
             selectedTempo: null,
+            selectedGrade: null,
             words: [],
             currentIndex: 0,
             isRunning: false,
@@ -152,6 +153,16 @@ class DMTPractice {
             this.startPractice();
         });
 
+        // Grade selection
+        document.querySelectorAll('.dmt-grade-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.dmt-grade-btn').forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+                this.state.selectedGrade = parseInt(btn.dataset.grade);
+                this.updateWordStartButton();
+            });
+        });
+
         // Practice controls
         document.getElementById('pauseBtn').addEventListener('click', () => {
             this.togglePause();
@@ -195,6 +206,15 @@ class DMTPractice {
         }
     }
 
+    updateWordStartButton() {
+        const wordStartBtn = document.getElementById('wordStartBtn');
+        if (this.state.selectedGrade) {
+            wordStartBtn.disabled = false;
+        } else {
+            wordStartBtn.disabled = true;
+        }
+    }
+
     showPracticeScreen() {
         // Load words for selected list (but don't start yet)
         this.state.words = [...this.wordLists[this.state.selectedList]];
@@ -228,8 +248,9 @@ class DMTPractice {
         this.state.isRunning = true;
         this.state.isPaused = false;
 
-        // Hide START button, show word display
+        // Hide START button and grade selector, show word display
         document.getElementById('wordStartBtn').classList.remove('show');
+        document.getElementById('gradeSelector').classList.add('hidden');
         document.getElementById('wordDisplay').style.display = 'block';
 
         // Enable controls now that practice has started
@@ -478,13 +499,12 @@ class DMTPractice {
     }
 
     displayNorming(wordsPerMinute) {
-        // Try to get user's grade level from localStorage
-        const userGrade = this.getUserGrade();
-
-        if (!userGrade || !this.normingData) {
+        // Use selected grade from state
+        if (!this.state.selectedGrade || !this.normingData) {
             return;
         }
 
+        const userGrade = `group_${this.state.selectedGrade}`;
         const listId = this.state.selectedList;
         const norms = this.normingData.norms[listId];
 
@@ -532,23 +552,6 @@ class DMTPractice {
         }
 
         document.getElementById('normingExplanation').textContent = explanation;
-    }
-
-    getUserGrade() {
-        // Try to get grade from various localStorage keys
-        // This is a fallback - ideally the app should have a consistent way to store this
-        const level = localStorage.getItem('selectedLevel');
-
-        if (level) {
-            // Convert level like "groep8" to "group_8"
-            const match = level.match(/groep(\d+)/);
-            if (match) {
-                return `group_${match[1]}`;
-            }
-        }
-
-        // Default to group_6 if not found (middle of the range)
-        return 'group_6';
     }
 
     restart() {
