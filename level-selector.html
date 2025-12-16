@@ -675,20 +675,20 @@
                 const card = document.createElement('div');
                 card.className = `level-card groep-${4 + index}`;
                 card.innerHTML = `
-                    <div class="icon-circle">${list.emoji}</div>
+                    <div class="icon-circle">${listId}</div>
                     <h3 class="level-label">${list.label}</h3>
                     <p class="level-description">${list.difficulty}</p>
                     <p class="level-description">${list.words} woorden</p>
 
-                    <div class="cito-selector" data-list="${listId}" style="max-width: 100%;">
+                    <div class="cito-selector" data-list="${listId}" style="max-width: 100%; flex-direction: column; gap: 8px; padding: 8px;">
                         ${Object.keys(config.tempos).map((tempoId, i) => {
                             const tempo = config.tempos[tempoId];
                             const isDefault = tempoId === 'normaal';
                             return `<div class="cito-option ${isDefault ? 'active' : ''}"
                                          data-tempo="${tempoId}"
                                          onclick="selectDMTTempo('${listId}', '${tempoId}')"
-                                         style="flex: 1; font-size: 0.75rem;">
-                                ${tempo.emoji}
+                                         style="width: 100%; padding: 8px 12px; border-radius: 8px; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                                ${tempo.emoji} <span style="font-weight: 600;">${tempo.label}</span>
                             </div>`;
                         }).join('')}
                     </div>
