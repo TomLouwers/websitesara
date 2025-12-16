@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMT Woordtrainer | OefenPlatform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20250212">
+    <style>
+        body {
+            background-color: #FFFDF8;
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .dmt-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Setup Screen */
+        .dmt-setup-screen {
+            display: block;
+        }
+
+        .dmt-setup-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        .dmt-setup-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .dmt-setup-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #2D3748;
+            margin-bottom: 8px;
+        }
+
+        .dmt-setup-subtitle {
+            font-size: 1rem;
+            color: #718096;
+        }
+
+        .dmt-list-selector {
+            margin-bottom: 32px;
+        }
+
+        .dmt-section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2D3748;
+            margin-bottom: 16px;
+        }
+
+        .dmt-list-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .dmt-list-btn {
+            background: white;
+            border: 2px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .dmt-list-btn:hover {
+            border-color: #FF8A34;
+            transform: translateY(-2px);
+        }
+
+        .dmt-list-btn.selected {
+            border-color: #FF8A34;
+            background: #FFF5EC;
+        }
+
+        .dmt-list-label {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #2D3748;
+            margin-bottom: 4px;
+        }
+
+        .dmt-list-difficulty {
+            font-size: 0.875rem;
+            color: #718096;
+        }
+
+        .dmt-tempo-selector {
+            margin-bottom: 32px;
+        }
+
+        .dmt-tempo-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .dmt-tempo-btn {
+            background: white;
+            border: 2px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 24px 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dmt-tempo-btn:hover {
+            border-color: #38C172;
+            transform: translateY(-2px);
+        }
+
+        .dmt-tempo-btn.selected {
+            border-color: #38C172;
+            background: #F0FDF4;
+        }
+
+        .dmt-tempo-emoji {
+            font-size: 2rem;
+        }
+
+        .dmt-tempo-label {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2D3748;
+        }
+
+        .dmt-tempo-speed {
+            font-size: 0.875rem;
+            color: #718096;
+        }
+
+        .dmt-start-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #FF8A34, #FF6B9D);
+            color: white;
+            border: none;
+            border-radius: 999px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(255, 138, 52, 0.3);
+        }
+
+        .dmt-start-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 138, 52, 0.4);
+        }
+
+        .dmt-start-btn:disabled {
+            background: #CBD5E0;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        /* Practice Screen */
+        .dmt-practice-screen {
+            display: none;
+        }
+
+        .dmt-practice-topbar {
+            background: white;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .dmt-practice-info {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .dmt-info-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #F0FDF4;
+            color: #38C172;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .dmt-tempo-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #FFF5EC;
+            color: #FF8A34;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .dmt-practice-controls {
+            display: flex;
+            gap: 10px;
+        }
+
+        .dmt-control-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 999px;
+            border: 2px solid;
+            background: white;
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .dmt-control-btn.pause {
+            border-color: #FFD86F;
+            color: #F59E0B;
+        }
+
+        .dmt-control-btn.pause:hover {
+            background: #FFFBEB;
+        }
+
+        .dmt-control-btn.stop {
+            border-color: #FF7AB8;
+            color: #EC4899;
+        }
+
+        .dmt-control-btn.stop:hover {
+            background: #FDF2F8;
+        }
+
+        .dmt-word-display-card {
+            background: white;
+            border-radius: 20px;
+            padding: 80px 40px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dmt-word-display {
+            font-size: 5rem;
+            font-weight: 800;
+            color: #2D3748;
+            text-align: center;
+            line-height: 1.2;
+            word-break: break-word;
+            animation: fadeIn 0.2s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .dmt-paused-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+        }
+
+        .dmt-paused-overlay.show {
+            display: flex;
+        }
+
+        .dmt-paused-text {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #718096;
+        }
+
+        /* Tempo Switch Modal */
+        .dmt-tempo-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dmt-tempo-modal.show {
+            display: flex;
+        }
+
+        .dmt-tempo-modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 32px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .dmt-tempo-modal-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #2D3748;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .dmt-tempo-modal-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .dmt-tempo-modal-btn {
+            padding: 16px;
+            border: 2px solid #E2E8F0;
+            border-radius: 12px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .dmt-tempo-modal-btn:hover {
+            border-color: #38C172;
+            background: #F0FDF4;
+        }
+
+        .dmt-tempo-modal-btn.selected {
+            border-color: #38C172;
+            background: #F0FDF4;
+        }
+
+        .dmt-tempo-modal-btn-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .dmt-tempo-modal-emoji {
+            font-size: 1.5rem;
+        }
+
+        .dmt-tempo-modal-label {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2D3748;
+        }
+
+        .dmt-tempo-modal-speed {
+            font-size: 0.875rem;
+            color: #718096;
+        }
+
+        .dmt-tempo-modal-close {
+            margin-top: 16px;
+            width: 100%;
+            padding: 12px;
+            background: #E2E8F0;
+            color: #2D3748;
+            border: none;
+            border-radius: 999px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .dmt-tempo-modal-close:hover {
+            background: #CBD5E0;
+        }
+
+        /* Results Screen */
+        .dmt-results-screen {
+            display: none;
+        }
+
+        .dmt-results-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            max-width: 700px;
+            margin: 40px auto;
+        }
+
+        .dmt-results-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .dmt-results-emoji {
+            font-size: 4rem;
+            margin-bottom: 16px;
+        }
+
+        .dmt-results-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #2D3748;
+            margin-bottom: 8px;
+        }
+
+        .dmt-results-subtitle {
+            font-size: 1rem;
+            color: #718096;
+        }
+
+        .dmt-results-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .dmt-stat-box {
+            background: #F7FAFC;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .dmt-stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #2D3748;
+            margin-bottom: 8px;
+        }
+
+        .dmt-stat-label {
+            font-size: 0.875rem;
+            color: #718096;
+            font-weight: 600;
+        }
+
+        .dmt-norming-section {
+            background: #F0FDF4;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+
+        .dmt-norming-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #2D3748;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .dmt-norming-result {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .dmt-norming-band {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 999px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .dmt-norming-band.weak {
+            background: #FEE2E2;
+            color: #DC2626;
+        }
+
+        .dmt-norming-band.average {
+            background: #FEF3C7;
+            color: #D97706;
+        }
+
+        .dmt-norming-band.good {
+            background: #D1FAE5;
+            color: #059669;
+        }
+
+        .dmt-norming-explanation {
+            font-size: 0.9rem;
+            color: #718096;
+            line-height: 1.6;
+        }
+
+        .dmt-results-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .dmt-results-btn {
+            padding: 14px 28px;
+            border-radius: 999px;
+            border: none;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .dmt-results-btn.primary {
+            background: linear-gradient(135deg, #FF8A34, #FF6B9D);
+            color: white;
+            box-shadow: 0 4px 12px rgba(255, 138, 52, 0.3);
+        }
+
+        .dmt-results-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 138, 52, 0.4);
+        }
+
+        .dmt-results-btn.secondary {
+            background: #F7FAFC;
+            color: #2D3748;
+            border: 2px solid #E2E8F0;
+        }
+
+        .dmt-results-btn.secondary:hover {
+            background: #EDF2F7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .dmt-word-display {
+                font-size: 3rem;
+            }
+
+            .dmt-list-buttons,
+            .dmt-tempo-buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .dmt-results-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .dmt-practice-topbar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .dmt-practice-info {
+                justify-content: center;
+            }
+
+            .dmt-practice-controls {
+                justify-content: center;
+            }
+        }
+
+        /* Back button */
+        .dmt-back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid #E2E8F0;
+            border-radius: 999px;
+            color: #718096;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            margin-bottom: 20px;
+        }
+
+        .dmt-back-btn:hover {
+            border-color: #FF8A34;
+            color: #FF8A34;
+        }
+    </style>
+</head>
+<body>
+    <div class="dmt-container">
+        <!-- Back to Home Button -->
+        <a href="index.html" class="dmt-back-btn">
+            <span>←</span>
+            <span>Terug naar home</span>
+        </a>
+
+        <!-- Setup Screen -->
+        <div class="dmt-setup-screen" id="setupScreen">
+            <div class="dmt-setup-card">
+                <div class="dmt-setup-header">
+                    <div class="dmt-setup-title">⚡ DMT Woordtrainer</div>
+                    <div class="dmt-setup-subtitle">Kies je lijst en snelheid om te beginnen</div>
+                </div>
+
+                <!-- List Selector -->
+                <div class="dmt-list-selector">
+                    <div class="dmt-section-title">Kies een lijst</div>
+                    <div class="dmt-list-buttons">
+                        <button class="dmt-list-btn" data-list="A">
+                            <div class="dmt-list-label">Lijst A</div>
+                            <div class="dmt-list-difficulty">Basis</div>
+                        </button>
+                        <button class="dmt-list-btn" data-list="B">
+                            <div class="dmt-list-label">Lijst B</div>
+                            <div class="dmt-list-difficulty">Gemiddeld</div>
+                        </button>
+                        <button class="dmt-list-btn" data-list="C">
+                            <div class="dmt-list-label">Lijst C</div>
+                            <div class="dmt-list-difficulty">Moeilijk</div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tempo Selector -->
+                <div class="dmt-tempo-selector">
+                    <div class="dmt-section-title">Kies je tempo</div>
+                    <div class="dmt-tempo-buttons">
+                        <button class="dmt-tempo-btn" data-tempo="rustig">
+                            <div class="dmt-tempo-emoji">🟢</div>
+                            <div class="dmt-tempo-label">Rustig</div>
+                            <div class="dmt-tempo-speed">Langzaam</div>
+                        </button>
+                        <button class="dmt-tempo-btn" data-tempo="normaal">
+                            <div class="dmt-tempo-emoji">🟡</div>
+                            <div class="dmt-tempo-label">Normaal</div>
+                            <div class="dmt-tempo-speed">Standaard</div>
+                        </button>
+                        <button class="dmt-tempo-btn" data-tempo="snel">
+                            <div class="dmt-tempo-emoji">🔴</div>
+                            <div class="dmt-tempo-label">Snel</div>
+                            <div class="dmt-tempo-speed">Uitdaging</div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Start Button -->
+                <button class="dmt-start-btn" id="startBtn" disabled>Start oefening</button>
+            </div>
+        </div>
+
+        <!-- Practice Screen -->
+        <div class="dmt-practice-screen" id="practiceScreen">
+            <!-- Top Bar with Info and Controls -->
+            <div class="dmt-practice-topbar">
+                <div class="dmt-practice-info">
+                    <div class="dmt-info-pill">
+                        <span>Woorden gezien:</span>
+                        <strong id="wordCount">0</strong>
+                    </div>
+                    <div class="dmt-tempo-indicator" id="tempoIndicator">
+                        <span id="tempoEmoji">🟡</span>
+                        <span id="tempoLabel">Normaal</span>
+                    </div>
+                </div>
+                <div class="dmt-practice-controls">
+                    <button class="dmt-control-btn pause" id="pauseBtn">
+                        <span id="pauseBtnIcon">⏸</span>
+                        <span id="pauseBtnText">Pauze</span>
+                    </button>
+                    <button class="dmt-control-btn pause" id="tempoBtn">
+                        <span>🐢/🐇</span>
+                        <span>Tempo</span>
+                    </button>
+                    <button class="dmt-control-btn stop" id="stopBtn">
+                        <span>⏹</span>
+                        <span>Stop</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Word Display -->
+            <div class="dmt-word-display-card" style="position: relative;">
+                <div class="dmt-word-display" id="wordDisplay">-</div>
+                <div class="dmt-paused-overlay" id="pausedOverlay">
+                    <div class="dmt-paused-text">⏸ Gepauzeerd</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tempo Change Modal -->
+        <div class="dmt-tempo-modal" id="tempoModal">
+            <div class="dmt-tempo-modal-content">
+                <div class="dmt-tempo-modal-title">Kies je tempo</div>
+                <div class="dmt-tempo-modal-buttons">
+                    <button class="dmt-tempo-modal-btn" data-tempo="rustig">
+                        <div class="dmt-tempo-modal-btn-left">
+                            <div class="dmt-tempo-modal-emoji">🟢</div>
+                            <div>
+                                <div class="dmt-tempo-modal-label">Rustig</div>
+                                <div class="dmt-tempo-modal-speed">Langzaam</div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="dmt-tempo-modal-btn" data-tempo="normaal">
+                        <div class="dmt-tempo-modal-btn-left">
+                            <div class="dmt-tempo-modal-emoji">🟡</div>
+                            <div>
+                                <div class="dmt-tempo-modal-label">Normaal</div>
+                                <div class="dmt-tempo-modal-speed">Standaard</div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="dmt-tempo-modal-btn" data-tempo="snel">
+                        <div class="dmt-tempo-modal-btn-left">
+                            <div class="dmt-tempo-modal-emoji">🔴</div>
+                            <div>
+                                <div class="dmt-tempo-modal-label">Snel</div>
+                                <div class="dmt-tempo-modal-speed">Uitdaging</div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                <button class="dmt-tempo-modal-close" id="tempoModalClose">Sluiten</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div class="dmt-results-screen" id="resultsScreen">
+            <div class="dmt-results-card">
+                <div class="dmt-results-header">
+                    <div class="dmt-results-emoji">🎉</div>
+                    <div class="dmt-results-title">Goed gedaan!</div>
+                    <div class="dmt-results-subtitle">Je hebt je oefening afgerond</div>
+                </div>
+
+                <div class="dmt-results-stats">
+                    <div class="dmt-stat-box">
+                        <div class="dmt-stat-value" id="totalWordsResult">0</div>
+                        <div class="dmt-stat-label">Woorden gezien</div>
+                    </div>
+                    <div class="dmt-stat-box">
+                        <div class="dmt-stat-value" id="wordsPerMinuteResult">0</div>
+                        <div class="dmt-stat-label">Woorden per minuut</div>
+                    </div>
+                </div>
+
+                <div class="dmt-norming-section" id="normingSection">
+                    <div class="dmt-norming-title">Jouw score</div>
+                    <div class="dmt-norming-result">
+                        <div class="dmt-norming-band" id="normingBand">-</div>
+                    </div>
+                    <div class="dmt-norming-explanation" id="normingExplanation">
+                        Selecteer je groep in de instellingen om je score te zien ten opzichte van leeftijdsgenoten.
+                    </div>
+                </div>
+
+                <div class="dmt-results-buttons">
+                    <button class="dmt-results-btn primary" id="restartBtn">Nog een keer</button>
+                    <button class="dmt-results-btn secondary" id="homeBtn">Terug naar home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dmt-practice.js"></script>
+</body>
+</html>
