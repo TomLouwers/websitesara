@@ -174,7 +174,7 @@ function showStreakBonus(milestone, bonusPoints) {
         setTimeout(() => {
             bonusElement.classList.add('hidden');
         }, 300); // Wait for fade out
-    }, 1500);
+    }, 2500);
 }
 
 // Display the progress tracker
