@@ -198,12 +198,28 @@ class DMTPractice {
         document.getElementById('setupScreen').style.display = 'none';
         document.getElementById('practiceScreen').style.display = 'block';
 
+        // Update breadcrumb
+        this.updateBreadcrumb();
+
         // Update tempo indicator
         this.updateTempoIndicator();
 
         // Start word rotation
         this.showNextWord();
         this.scheduleNextWord();
+    }
+
+    updateBreadcrumb() {
+        const tempoLabels = {
+            rustig: 'Rustig',
+            normaal: 'Normaal',
+            snel: 'Snel'
+        };
+
+        const breadcrumbInfo = document.getElementById('breadcrumbInfo');
+        if (breadcrumbInfo) {
+            breadcrumbInfo.textContent = `Lijst ${this.state.selectedList} - ${tempoLabels[this.state.selectedTempo]}`;
+        }
     }
 
     showNextWord() {
@@ -395,18 +411,23 @@ class DMTPractice {
 
         const gradeNorms = norms[userGrade];
 
-        // Determine band
+        // Determine band with positive framing
         let band = 'average';
-        let bandLabel = 'Gemiddeld';
+        let bandLabel = 'Goed bezig!';
         let bandClass = 'average';
 
         if (wordsPerMinute <= gradeNorms.weak_max) {
-            band = 'weak';
-            bandLabel = 'Zwak';
-            bandClass = 'weak';
+            band = 'developing';
+            bandLabel = 'Je bent aan het groeien! 🌱';
+            bandClass = 'developing';
+        } else if (wordsPerMinute >= gradeNorms.good_min + 20) {
+            // Excellent: significantly above good threshold
+            band = 'excellent';
+            bandLabel = 'Supergoed! 🌟';
+            bandClass = 'excellent';
         } else if (wordsPerMinute >= gradeNorms.good_min) {
             band = 'good';
-            bandLabel = 'Goed';
+            bandLabel = 'Knap gedaan! 👍';
             bandClass = 'good';
         }
 
@@ -415,14 +436,16 @@ class DMTPractice {
         normingBand.textContent = bandLabel;
         normingBand.className = `dmt-norming-band ${bandClass}`;
 
-        // Update explanation
+        // Update explanation with positive messaging
         let explanation = '';
-        if (band === 'weak') {
-            explanation = `Je score ligt onder het gemiddelde voor jouw leeftijd. Blijf oefenen en je wordt steeds beter! 💪`;
+        if (band === 'developing') {
+            explanation = `Je bent goed bezig met oefenen! Met meer oefening word je steeds sneller en beter. Je kunt het! 💪`;
         } else if (band === 'average') {
-            explanation = `Je score ligt binnen het gemiddelde voor jouw leeftijd (${gradeNorms.average_min}-${gradeNorms.average_max} woorden/min). Goed bezig! 👍`;
+            explanation = `Je leest lekker door! Je score ligt binnen het gemiddelde voor jouw leeftijd (${gradeNorms.average_min}-${gradeNorms.average_max} woorden/min). Ga zo door! 👍`;
         } else if (band === 'good') {
-            explanation = `Je score ligt boven het gemiddelde voor jouw leeftijd! Fantastisch gedaan! 🌟`;
+            explanation = `Wat lees je goed! Je score ligt boven het gemiddelde voor jouw leeftijd. Geweldig gedaan! 🎉`;
+        } else if (band === 'excellent') {
+            explanation = `Wauw! Je bent een super snelle lezer! Je score is fantastisch voor jouw leeftijd. Heel knap! 🌟⭐`;
         }
 
         document.getElementById('normingExplanation').textContent = explanation;
@@ -446,36 +469,8 @@ class DMTPractice {
     }
 
     restart() {
-        // Reset state
-        this.state = {
-            selectedList: this.state.selectedList,
-            selectedTempo: this.state.selectedTempo,
-            words: [],
-            currentIndex: 0,
-            isRunning: false,
-            isPaused: false,
-            startTime: null,
-            totalWordsSeen: 0
-        };
-
-        // Go back to setup
-        document.getElementById('resultsScreen').style.display = 'none';
-        document.getElementById('setupScreen').style.display = 'block';
-
-        // Keep list and tempo selected
-        document.querySelectorAll('.dmt-list-btn').forEach(btn => {
-            if (btn.dataset.list === this.state.selectedList) {
-                btn.classList.add('selected');
-            }
-        });
-
-        document.querySelectorAll('.dmt-tempo-btn').forEach(btn => {
-            if (btn.dataset.tempo === this.state.selectedTempo) {
-                btn.classList.add('selected');
-            }
-        });
-
-        this.updateStartButton();
+        // Go back to level selector to choose again
+        window.location.href = 'level-selector.html?subject=dmt';
     }
 }
 
