@@ -197,6 +197,28 @@ const CONFIG = {
                 m8: 'exercises/wo/groep8_wo_150.json',
                 e8: 'exercises/wo/groep8_wo_150.json'
             }
+        },
+        woordenschat: {
+            groep4: {
+                m4: 'exercises/ws/groep4_wo_m4_webapp_1.json',
+                e4: 'exercises/ws/groep4_wo_e4_webapp_1.json'
+            },
+            groep5: {
+                m5: 'exercises/ws/groep5_wo_m5_webapp_1.json',
+                e5: 'exercises/ws/groep5_wo_e5_webapp_1.json'
+            },
+            groep6: {
+                m6: 'exercises/ws/groep6_wo_m6_webapp_1.json',
+                e6: 'exercises/ws/groep6_wo_e6_webapp_1.json'
+            },
+            groep7: {
+                m7: 'exercises/ws/groep7_wo_m7_webapp_1.json',
+                e7: 'exercises/ws/groep7_wo_e7_webapp_1.json'
+            },
+            groep8: {
+                m8: 'exercises/ws/groep8_wo_m8_webapp_1.json',
+                e8: 'exercises/ws/groep8_wo_e8_webapp_1.json'
+            }
         }
     }
 };
