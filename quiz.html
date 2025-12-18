@@ -1026,9 +1026,7 @@
         }
 
         .woordenschat-modal-icon {
-            font-size: 64px;
-            margin-bottom: 20px;
-            animation: iconBounce 0.6s ease-out;
+            display: none; /* Hidden - focus on sentence */
         }
 
         @keyframes iconBounce {
@@ -1041,20 +1039,22 @@
         }
 
         .woordenschat-modal-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1f2937;
-            margin-bottom: 24px;
-            letter-spacing: -0.5px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #6b7280;
+            margin-bottom: 20px;
+            letter-spacing: 0;
+            text-transform: uppercase;
+            font-size: 14px;
         }
 
         .woordenschat-modal-sentence {
-            font-size: 20px;
-            line-height: 1.7;
-            color: #374151;
-            font-weight: 500;
+            font-size: 26px;
+            line-height: 1.6;
+            color: #111827;
+            font-weight: 600;
             margin: 0;
-            padding: 24px 32px;
+            padding: 32px 40px;
             background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
             border-radius: 16px;
             border: 2px solid #86efac;
@@ -1067,19 +1067,14 @@
                 max-width: 95%;
             }
 
-            .woordenschat-modal-icon {
-                font-size: 52px;
+            .woordenschat-modal-title {
+                font-size: 12px;
                 margin-bottom: 16px;
             }
 
-            .woordenschat-modal-title {
-                font-size: 20px;
-                margin-bottom: 20px;
-            }
-
             .woordenschat-modal-sentence {
-                font-size: 18px;
-                padding: 20px 24px;
+                font-size: 20px;
+                padding: 24px 20px;
             }
         }
 

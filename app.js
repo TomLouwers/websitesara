@@ -2091,7 +2091,7 @@ function submitAnswer() {
             setTimeout(() => {
                 nextBtn.classList.remove('fade-in-up');
             }, 500);
-        }, 4500); // Show button after modal fades (3s display + 0.8s fade + buffer)
+        }, 6500); // Show button after modal fades (5s display + 0.8s fade + buffer)
     } else {
         // For other subjects, show button immediately
         nextBtn.classList.remove('hidden');
@@ -2111,7 +2111,7 @@ function showWoordenschatModal(sentence) {
     // Show the modal
     modal.classList.remove('hidden', 'fade-out');
 
-    // After 3 seconds, start fade out
+    // After 5 seconds, start fade out
     setTimeout(() => {
         modal.classList.add('fade-out');
 
@@ -2120,7 +2120,7 @@ function showWoordenschatModal(sentence) {
             modal.classList.add('hidden');
             modal.classList.remove('fade-out');
         }, 800); // Match the CSS transition duration
-    }, 3000); // Display for 3 seconds
+    }, 5000); // Display for 5 seconds
 }
 
 function nextQuestion() {
