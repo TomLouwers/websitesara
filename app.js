@@ -2079,13 +2079,15 @@ function submitAnswer() {
         // Keep button hidden initially for Woordenschat
         nextBtn.classList.add('hidden');
 
-        // Show the modal with the example sentence
-        showWoordenschatModal(currentQuestion.extra_info);
+        // Delay modal so kids can see if answer was correct/incorrect first
+        setTimeout(() => {
+            showWoordenschatModal(currentQuestion.extra_info);
+        }, 1500); // 1.5 second delay to see feedback
 
         // After modal fades, show the next button
         setTimeout(() => {
             nextBtn.classList.remove('hidden');
-        }, 6500); // Show button after modal fades (5s display + 0.8s fade + buffer)
+        }, 8000); // Show button after feedback + modal (1.5s delay + 5s display + 0.8s fade + buffer)
     } else {
         // For other subjects, show button immediately
         nextBtn.classList.remove('hidden');
