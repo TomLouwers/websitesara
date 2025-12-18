@@ -2071,7 +2071,7 @@ function submitAnswer() {
     hasAnswered = true;
     document.getElementById('submitBtn').classList.add('hidden');
 
-    // Progressive reveal for Woordenschat: delay showing next button to ensure kids read example sentence
+    // Show modal for Woordenschat with example sentence that fades away
     const isWoordenschat = currentSubject && currentSubject.startsWith('woordenschat');
     const nextBtn = document.getElementById('nextBtn');
 
@@ -2079,20 +2079,48 @@ function submitAnswer() {
         // Keep button hidden initially for Woordenschat
         nextBtn.classList.add('hidden');
 
-        // Show button after 3 seconds with fade-in animation
+        // Show the modal with the example sentence
+        showWoordenschatModal(currentQuestion.extra_info);
+
+        // After modal fades, show the next button
         setTimeout(() => {
             nextBtn.classList.remove('hidden');
             nextBtn.classList.add('fade-in-up');
 
-            // Remove animation class after animation completes to allow future animations
+            // Remove animation class after animation completes
             setTimeout(() => {
                 nextBtn.classList.remove('fade-in-up');
             }, 500);
-        }, 3000); // 3 second delay
+        }, 4500); // Show button after modal fades (3s display + 0.8s fade + buffer)
     } else {
         // For other subjects, show button immediately
         nextBtn.classList.remove('hidden');
     }
+}
+
+// Show Woordenschat modal with example sentence
+function showWoordenschatModal(sentence) {
+    const modal = document.getElementById('woordenschatModal');
+    const sentenceElement = document.getElementById('woordenschatModalSentence');
+
+    if (!modal || !sentenceElement) return;
+
+    // Set the sentence content (use innerHTML to support HTML tags like <u>)
+    sentenceElement.innerHTML = sentence;
+
+    // Show the modal
+    modal.classList.remove('hidden', 'fade-out');
+
+    // After 3 seconds, start fade out
+    setTimeout(() => {
+        modal.classList.add('fade-out');
+
+        // After fade completes, hide the modal
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            modal.classList.remove('fade-out');
+        }, 800); // Match the CSS transition duration
+    }, 3000); // Display for 3 seconds
 }
 
 function nextQuestion() {
