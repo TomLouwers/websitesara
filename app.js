@@ -1530,6 +1530,9 @@ function populateEnhancedFeedback(isCorrect, currentQuestion, selectedOption = n
     const feedbackTipSection = document.getElementById('feedbackTipSection');
     const feedbackTipContent = document.getElementById('feedbackTipContentNew');
 
+    // Detect if this is a woordenschat quiz
+    const isWoordenschat = currentSubject && currentSubject.startsWith('woordenschat');
+
     // 1. Set Encouraging Headline
     if (isCorrect) {
         if (feedbackEmoji) feedbackEmoji.textContent = '🎉';
@@ -1537,16 +1540,16 @@ function populateEnhancedFeedback(isCorrect, currentQuestion, selectedOption = n
         if (feedbackAnswerConfirm) {
             feedbackAnswerConfirm.textContent = 'Je hebt het juiste antwoord gekozen! Je bent goed bezig!';
         }
-        // Set "Waarom?" title for correct answers
+        // Set "Waarom?" title for correct answers (or "Zo gebruik je het woord:" for woordenschat)
         if (feedbackWhySectionTitle) {
-            feedbackWhySectionTitle.textContent = 'Waarom is dit goed?';
+            feedbackWhySectionTitle.textContent = isWoordenschat ? 'Zo gebruik je het woord:' : 'Waarom is dit goed?';
         }
     } else {
         if (feedbackEmoji) feedbackEmoji.textContent = '🤗';
         if (feedbackHeadline) feedbackHeadline.textContent = 'Bijna! Probeer het nog een keer!';
-        // Set "Waarom?" title for incorrect answers
+        // Set "Waarom?" title for incorrect answers (or "Zo gebruik je het woord:" for woordenschat)
         if (feedbackWhySectionTitle) {
-            feedbackWhySectionTitle.textContent = 'Waarom niet?';
+            feedbackWhySectionTitle.textContent = isWoordenschat ? 'Zo gebruik je het woord:' : 'Waarom niet?';
         }
 
         // Show correct answer
@@ -2067,7 +2070,29 @@ function submitAnswer() {
 
     hasAnswered = true;
     document.getElementById('submitBtn').classList.add('hidden');
-    document.getElementById('nextBtn').classList.remove('hidden');
+
+    // Progressive reveal for Woordenschat: delay showing next button to ensure kids read example sentence
+    const isWoordenschat = currentSubject && currentSubject.startsWith('woordenschat');
+    const nextBtn = document.getElementById('nextBtn');
+
+    if (isWoordenschat && currentQuestion.extra_info) {
+        // Keep button hidden initially for Woordenschat
+        nextBtn.classList.add('hidden');
+
+        // Show button after 3 seconds with fade-in animation
+        setTimeout(() => {
+            nextBtn.classList.remove('hidden');
+            nextBtn.classList.add('fade-in-up');
+
+            // Remove animation class after animation completes to allow future animations
+            setTimeout(() => {
+                nextBtn.classList.remove('fade-in-up');
+            }, 500);
+        }, 3000); // 3 second delay
+    } else {
+        // For other subjects, show button immediately
+        nextBtn.classList.remove('hidden');
+    }
 }
 
 function nextQuestion() {
