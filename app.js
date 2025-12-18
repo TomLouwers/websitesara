@@ -2085,12 +2085,6 @@ function submitAnswer() {
         // After modal fades, show the next button
         setTimeout(() => {
             nextBtn.classList.remove('hidden');
-            nextBtn.classList.add('fade-in-up');
-
-            // Remove animation class after animation completes
-            setTimeout(() => {
-                nextBtn.classList.remove('fade-in-up');
-            }, 500);
         }, 6500); // Show button after modal fades (5s display + 0.8s fade + buffer)
     } else {
         // For other subjects, show button immediately
