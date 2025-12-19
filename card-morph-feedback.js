@@ -13,6 +13,7 @@ class CardMorphFeedback {
     this.feedbackState = null; // 'correct' or 'incorrect'
     this.antiSkipTimer = null;
     this.canProceed = false;
+    this.originalCardHTML = null; // Store original HTML to restore later
   }
 
   /**
@@ -29,6 +30,11 @@ class CardMorphFeedback {
   morph({ isCorrect, insight, confirmation, questionCard, nextButton, onProceed }) {
     this.feedbackState = isCorrect ? 'correct' : 'incorrect';
     this.canProceed = isCorrect; // Correct answers can proceed immediately
+
+    // Store original HTML if not already stored
+    if (!this.originalCardHTML) {
+      this.originalCardHTML = questionCard.innerHTML;
+    }
 
     // Step 1: Add flip-out animation class
     questionCard.classList.add('card-flip-out');
@@ -173,13 +179,35 @@ class CardMorphFeedback {
   }
 
   /**
-   * Resets the feedback state
+   * Resets the feedback state and restores original card HTML
+   * @param {HTMLElement} questionCard - The question card element to restore
    */
-  reset() {
+  reset(questionCard) {
     if (this.antiSkipTimer) {
       clearTimeout(this.antiSkipTimer);
       this.antiSkipTimer = null;
     }
+
+    // Remove any helper text elements
+    const helperTexts = document.querySelectorAll('.feedback-anti-skip-helper');
+    helperTexts.forEach(helper => {
+      if (helper.parentNode) {
+        helper.parentNode.removeChild(helper);
+      }
+    });
+
+    // Restore original HTML if we have it and a card element
+    if (this.originalCardHTML && questionCard) {
+      // Restore original question HTML immediately (no animation on reset)
+      questionCard.innerHTML = this.originalCardHTML;
+
+      // Remove any animation classes
+      questionCard.classList.remove('card-flip-out', 'card-flip-in');
+
+      // Clear stored HTML so next question's structure can be captured
+      this.originalCardHTML = null;
+    }
+
     this.canProceed = false;
     this.feedbackState = null;
   }
