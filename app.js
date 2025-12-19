@@ -359,15 +359,55 @@ function getFilePath(subject) {
     return subject + CONFIG.templateFileSuffix;
 }
 
-// Load JSON file
+// Load JSON file with localStorage caching
 async function loadJsonFile(filename) {
     try {
-        // Use static cache version - browser will cache until version is incremented
+        const cacheKey = `quiz_cache_${filename}_v${CACHE_VERSION}`;
+
+        // Try to load from localStorage cache first
+        try {
+            const cached = localStorage.getItem(cacheKey);
+            if (cached) {
+                console.log(`Loaded ${filename} from cache`);
+                return JSON.parse(cached);
+            }
+        } catch (storageError) {
+            // If localStorage read fails, continue to fetch
+            console.warn('LocalStorage read failed:', storageError);
+        }
+
+        // Not in cache or cache read failed - fetch from server
+        console.log(`Fetching ${filename} from server`);
         const response = await fetch(jsonPath + filename + '?v=' + CACHE_VERSION);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        return await response.json();
+        const data = await response.json();
+
+        // Try to cache in localStorage for next time
+        try {
+            localStorage.setItem(cacheKey, JSON.stringify(data));
+            console.log(`Cached ${filename} in localStorage`);
+        } catch (storageError) {
+            // Handle quota exceeded or other storage errors
+            console.warn('LocalStorage write failed (quota exceeded?):', storageError);
+            // Try to clear old quiz caches to make room
+            try {
+                const keys = Object.keys(localStorage);
+                for (const key of keys) {
+                    if (key.startsWith('quiz_cache_') && !key.includes(`_v${CACHE_VERSION}`)) {
+                        localStorage.removeItem(key);
+                    }
+                }
+                // Try again after clearing old caches
+                localStorage.setItem(cacheKey, JSON.stringify(data));
+            } catch (retryError) {
+                // If still fails, just continue without caching
+                console.warn('Could not cache data even after cleanup');
+            }
+        }
+
+        return data;
     } catch (error) {
         console.error('Error loading JSON file:', error);
         alert('Fout bij het laden van het bestand. Controleer of de bestanden beschikbaar zijn.');
