@@ -386,6 +386,14 @@ function handleIncorrectAnswer() {
                 .join('');
             document.getElementById('examplesContent').innerHTML = examplesHTML;
             hasAnyInfo = true;
+        } else if (currentItem.extra_info.used_in_sentence) {
+            // Fallback: show used_in_sentence as an example
+            console.log('Showing used_in_sentence as example:', currentItem.extra_info.used_in_sentence);
+            examplesSection.style.display = 'block';
+            examplesSection.style.visibility = 'visible';
+            document.getElementById('examplesContent').innerHTML =
+                `<div style="margin: 4px 0; font-style: italic;">${currentItem.extra_info.used_in_sentence}</div>`;
+            hasAnyInfo = true;
         } else {
             examplesSection.style.display = 'none';
         }
