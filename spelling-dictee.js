@@ -347,13 +347,16 @@ function handleIncorrectAnswer() {
     const tipSection = document.getElementById('tipSection');
     const examplesSection = document.getElementById('examplesSection');
 
+    console.log('Current item extra_info:', currentItem.extra_info); // Debug log
+
     if (currentItem.extra_info) {
-        extraInfoSection.style.display = 'block';
+        let hasAnyInfo = false;
 
         // Show rule
         if (currentItem.extra_info.rule) {
             ruleSection.style.display = 'block';
             document.getElementById('ruleContent').textContent = currentItem.extra_info.rule;
+            hasAnyInfo = true;
         } else {
             ruleSection.style.display = 'none';
         }
@@ -362,6 +365,7 @@ function handleIncorrectAnswer() {
         if (currentItem.extra_info.tip) {
             tipSection.style.display = 'block';
             document.getElementById('tipContent').textContent = currentItem.extra_info.tip;
+            hasAnyInfo = true;
         } else {
             tipSection.style.display = 'none';
         }
@@ -373,10 +377,19 @@ function handleIncorrectAnswer() {
                 .map(ex => `<div style="margin: 4px 0;">• ${ex}</div>`)
                 .join('');
             document.getElementById('examplesContent').innerHTML = examplesHTML;
+            hasAnyInfo = true;
         } else {
             examplesSection.style.display = 'none';
         }
+
+        // Only show the section if we have at least one piece of info
+        if (hasAnyInfo) {
+            extraInfoSection.style.display = 'block';
+        } else {
+            extraInfoSection.style.display = 'none';
+        }
     } else {
+        console.log('No extra_info available'); // Debug log
         extraInfoSection.style.display = 'none';
     }
 
@@ -397,11 +410,9 @@ function pauseQuiz() {
     }
 }
 
-// Stop quiz
+// Stop quiz - go directly to results
 function stopQuiz() {
-    if (confirm('Weet je zeker dat je wilt stoppen? Je voortgang gaat verloren.')) {
-        window.location.href = 'index.html';
-    }
+    showResults();
 }
 
 // Show results at the end
