@@ -614,9 +614,9 @@
                     '8-E': '-e8'
                 }
             },
-            'spelling': {
-                title: 'Spelling',
-                icon: '✏️',
+            'werkwoordspelling': {
+                title: 'Werkwoordspelling',
+                icon: '✍️',
                 emoji: '✨',
                 questions: 0,
                 color: '#E0F2FE',
@@ -763,8 +763,8 @@
             // Store the subject to load in localStorage
             localStorage.setItem('autoStartSubject', subjectName);
 
-            // For spelling, also store the groep and moment, then redirect to spelling-dictee
-            if (subject === 'spelling') {
+            // For werkwoordspelling, also store the groep and moment, then redirect to spelling-dictee
+            if (subject === 'werkwoordspelling') {
                 localStorage.setItem('selectedGroep', `groep${grade}`);
                 localStorage.setItem('selectedMoment', key.split('-')[1].toLowerCase() + grade);
                 window.location.href = 'spelling-dictee.html';

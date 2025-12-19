@@ -35,7 +35,7 @@ async function loadQuizData() {
             `Groep ${groepNumber} (${momentLetter}${groepNumber})`;
 
         // Get file path from config
-        const filePath = CONFIG.subjectFilePaths?.spelling?.[selectedGroep]?.[selectedMoment];
+        const filePath = CONFIG.subjectFilePaths?.werkwoordspelling?.[selectedGroep]?.[selectedMoment];
 
         if (!filePath) {
             throw new Error(`Geen data beschikbaar voor ${selectedGroep} ${selectedMoment}`);

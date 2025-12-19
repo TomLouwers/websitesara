@@ -17,7 +17,7 @@ const CONFIG = {
         basisvaardigheden: 'Getal & Bewerking',
         'basisvaardigheden-emma': 'Getal & Bewerking Emma',
         'basisvaardigheden-kate': 'Getal & Bewerking Kate',
-        spelling: 'Spelling',
+        werkwoordspelling: 'Werkwoordspelling',
         dmt: 'DMT Woordtrainer'
     },
 
@@ -34,7 +34,7 @@ const CONFIG = {
         basisvaardigheden: '🧮',
         'basisvaardigheden-emma': '🧒',
         'basisvaardigheden-kate': '🎓',
-        spelling: '✏️',
+        werkwoordspelling: '✍️',
         dmt: '⚡'
     },
 
@@ -51,7 +51,7 @@ const CONFIG = {
         basisvaardigheden: 'Train je rekenskills! 🧮',
         'basisvaardigheden-emma': 'Word een rekenprof met Emma! (330 opgaven)',
         'basisvaardigheden-kate': 'Word een rekenprof met Kate! (240 opgaven)',
-        spelling: 'Leer correct spellen! ✏️',
+        werkwoordspelling: 'Leer werkwoorden correct spellen! ✍️',
         dmt: 'Word een snellere lezer! ⚡'
     },
 
@@ -220,7 +220,7 @@ const CONFIG = {
                 e8: 'exercises/ws/groep8_wo_e8_webapp_1.json'
             }
         },
-        spelling: {
+        werkwoordspelling: {
             groep3: {
                 m3: 'exercises/sp/sp_groep3_m3_set_v4_audio.json',
                 e3: 'exercises/sp/sp_groep3_e3_set_v4_audio.json'
