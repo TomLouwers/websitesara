@@ -257,8 +257,11 @@ class InsightGenerator {
     if (subject === 'verhaaltjessommen') {
       const insight = this.buildVerhaaltjesomInsight(selectedOption, question);
 
-      // Ensure it starts with "Let op:" for incorrect answers
-      if (!insight.match(/^Let op:/i)) {
+      // Check if insight already starts with an imperative verb
+      const startsWithImperative = insight.match(/^(let|lees|kijk|denk|probeer|controleer|check|tel|reken)\s/i);
+
+      // Ensure it starts with "Let op:" for incorrect answers (unless already imperative)
+      if (!insight.match(/^Let op:/i) && !startsWithImperative) {
         return `Let op: ${insight.charAt(0).toLowerCase()}${insight.slice(1)}`;
       }
       return insight;
@@ -270,7 +273,10 @@ class InsightGenerator {
     // Remove existing prefixes and add "Let op:"
     insight = insight.replace(/^(Onthoud|Betekent|Tip):\s*/i, '');
 
-    if (!insight.match(/^Let op:/i)) {
+    // Check if insight already starts with an imperative verb (let, lees, kijk, denk, etc.)
+    const startsWithImperative = insight.match(/^(let|lees|kijk|denk|probeer|controleer|check)\s/i);
+
+    if (!insight.match(/^Let op:/i) && !startsWithImperative) {
       insight = `Let op: ${insight.charAt(0).toLowerCase()}${insight.slice(1)}`;
     }
 
