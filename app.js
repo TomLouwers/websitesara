@@ -23,6 +23,9 @@
 let quizData = {};
 const jsonPath = CONFIG.jsonPath;
 
+// Cache version - increment this when JSON files are updated to bust cache
+const CACHE_VERSION = '1.0.0';
+
 // Quiz state
 let currentQuiz = null;
 let randomizedQuestions = []; // Array to hold randomized questions
@@ -359,9 +362,8 @@ function getFilePath(subject) {
 // Load JSON file
 async function loadJsonFile(filename) {
     try {
-        // Add cache-busting parameter to prevent browser from using cached version
-        const cacheBuster = new Date().getTime();
-        const response = await fetch(jsonPath + filename + '?v=' + cacheBuster);
+        // Use static cache version - browser will cache until version is incremented
+        const response = await fetch(jsonPath + filename + '?v=' + CACHE_VERSION);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
