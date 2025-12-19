@@ -189,7 +189,10 @@ class InsightGenerator {
 
   /**
    * Builds ONE insight for Begrijpend Lezen (Reading Comprehension)
-   * Format: [Wat je te veel deed / miste] + omdat + [wat de vraag echt vroeg]
+   * VAST FORMAT: [Wat je te veel deed / miste] + maar/terwijl + [wat de vraag echt vroeg]
+   *
+   * Pedagogisch principe: feedback gaat over HOE gelezen werd, niet over kennis
+   * Max 20-25 woorden, geen vakjargon, geen "je had moeten"
    *
    * @param {object} selectedOption - The incorrect option that was selected
    * @param {object} question - Full question object with skill/strategy
@@ -202,24 +205,31 @@ class InsightGenerator {
     // Clean foutanalyse (remove reflection questions)
     foutanalyse = foutanalyse.split('🤔')[0].trim();
 
-    // If we have foutanalyse, use it (it's usually well-crafted)
+    // If we have foutanalyse, use it (it's usually well-crafted for BL)
     if (foutanalyse && foutanalyse.length > 10) {
-      return this.toJijVorm(this.extractFirstSentence(foutanalyse));
+      const cleaned = this.toJijVorm(this.extractFirstSentence(foutanalyse));
+      // Check word count (max 25 words)
+      if (cleaned.split(/\s+/).length <= 25) {
+        return cleaned;
+      }
     }
 
-    // Otherwise, build insight from question metadata
-    const skill = question.skill || '';
+    // Otherwise, build insight from question strategy using VAST FORMAT
     const strategy = question.strategy || '';
-    const hint = question.hint || '';
 
-    // Strategy-based insights (implicitly teaching reading strategies)
+    // Strategy-based insights following [error] + maar/terwijl + [what was asked]
+    // Focus on reading BEHAVIOR, not knowledge
     const strategyInsights = {
       'Informatie zoeken': 'Je keek naar details, maar de vraag ging over het grotere geheel.',
       'Conclusies trekken': 'Je koos wat er letterlijk stond, maar de vraag vroeg om na te denken.',
       'Verbanden leggen': 'Je koos één deel, maar de vraag vroeg om verschillende delen te verbinden.',
-      'Voorspellen': 'Je keek naar wat er al gebeurd was, maar de vraag ging over wat nog komt.',
-      'Samenvatten': 'Je koos een detail, maar de vraag ging over waar het hele verhaal over gaat.',
-      'Interpreteren': 'Je las wat er stond, maar de vraag vroeg om tussen de regels door te lezen.'
+      'Voorspellen': 'Je keek naar wat er al gebeurd was, terwijl de vraag over wat nog komt ging.',
+      'Samenvatten': 'Je lette op één stukje tekst, terwijl de vraag over het hele verhaal ging.',
+      'Interpreteren': 'Je las wat er stond, maar de vraag vroeg om tussen de regels door te lezen.',
+      'Hoofdgedachte': 'Je koos een detail, maar de vraag ging over waar het hele stuk over gaat.',
+      'Titel bedenken': 'Je koos een letterlijke zin, maar de vraag was waar het stuk over gaat.',
+      'Oorzaak en gevolg': 'Je raadde wat logisch leek, maar de vraag was wat er echt in de tekst staat.',
+      'Personages': 'Je vulde zelf iets in, maar de vraag was wat de tekst over het personage zegt.'
     };
 
     // Try strategy-based insight
@@ -228,26 +238,30 @@ class InsightGenerator {
     }
 
     // Try hint-based insight
+    const hint = question.hint || '';
     if (hint) {
       const cleanHint = hint.replace(/^💡\s*/i, '').trim();
-      if (cleanHint.length > 10) {
-        return this.toJijVorm(this.extractFirstSentence(cleanHint));
+      const hintInsight = this.toJijVorm(this.extractFirstSentence(cleanHint));
+      // Check word count
+      if (hintInsight.length > 10 && hintInsight.split(/\s+/).length <= 25) {
+        return hintInsight;
       }
     }
 
-    // Skill-based fallback
+    // Skill-based fallback (less specific but still helpful)
+    const skill = question.skill || '';
     const skillFallbacks = {
-      'Letterlijk': 'Let goed op wat er precies staat in de tekst.',
-      'Interpreterend': 'Denk goed na over wat de schrijver bedoelt.',
-      'Reflecterend': 'Vergelijk wat je leest met wat je zelf weet.'
+      'Letterlijk': 'Je lette op andere woorden dan waar de vraag over ging.',
+      'Interpreterend': 'Je las wat er stond, maar de vraag vroeg om goed na te denken.',
+      'Reflecterend': 'Je dacht aan je eigen ervaring, maar de vraag ging over de tekst.'
     };
 
     if (skill && skillFallbacks[skill]) {
       return skillFallbacks[skill];
     }
 
-    // General fallback
-    return 'Let goed op wat er gevraagd wordt.';
+    // General fallback - always about reading behavior
+    return 'Je lette op iets anders dan waar de vraag over ging.';
   }
 
   /**
@@ -349,34 +363,48 @@ class InsightGenerator {
     const subject = this.detectSubject(question.extra_info, question);
     const extraInfo = question.extra_info;
 
-    // Begrijpend Lezen - use extra_info or strategy-based positive reinforcement
+    // Begrijpend Lezen - benoem WAAR de leerling op lette (strategie verankeren)
     if (subject === 'begrijpendlezen') {
-      if (extraInfo && typeof extraInfo === 'string') {
-        return this.toJijVorm(this.extractFirstSentence(extraInfo));
-      } else if (extraInfo && typeof extraInfo === 'object') {
-        if (extraInfo.concept) {
-          return this.toJijVorm(this.extractFirstSentence(extraInfo.concept));
-        } else if (extraInfo.tips && extraInfo.tips.length > 0) {
-          return this.toJijVorm(this.extractFirstSentence(extraInfo.tips[0]));
-        }
-      }
-
-      // Strategy-based positive reinforcement
+      // Strategy-based: focus on READING BEHAVIOR (what they paid attention to)
       const strategyMessages = {
-        'Informatie zoeken': 'Je vond de juiste informatie in de tekst.',
-        'Conclusies trekken': 'Je trok de juiste conclusie uit het verhaal.',
-        'Verbanden leggen': 'Je verbond de juiste delen uit de tekst.',
-        'Voorspellen': 'Je voorspelde goed wat er zou gebeuren.',
-        'Samenvatten': 'Je begreep waar het verhaal over ging.',
-        'Interpreteren': 'Je las goed tussen de regels door.'
+        'Informatie zoeken': 'Je lette goed op de juiste informatie in de tekst.',
+        'Conclusies trekken': 'Je dacht goed na over wat er in het verhaal gebeurde.',
+        'Verbanden leggen': 'Je verbond de verschillende delen uit de tekst goed.',
+        'Voorspellen': 'Je lette goed op wat er nog zou kunnen gebeuren.',
+        'Samenvatten': 'Je lette goed op waar het hele verhaal over ging.',
+        'Interpreteren': 'Je dacht goed na over wat de schrijver bedoelde.',
+        'Hoofdgedachte': 'Je lette goed op waar het hele stuk over ging.',
+        'Titel bedenken': 'Je keek goed naar waar de tekst over gaat.',
+        'Oorzaak en gevolg': 'Je lette goed op wat er in de tekst staat.',
+        'Personages': 'Je lette goed op wat de tekst over het personage zegt.'
       };
 
       if (question.strategy && strategyMessages[question.strategy]) {
         return strategyMessages[question.strategy];
       }
 
-      // Fallback
-      return 'Je begreep goed wat er gevraagd werd.';
+      // Try extra_info if available
+      if (extraInfo && typeof extraInfo === 'string') {
+        const insight = this.toJijVorm(this.extractFirstSentence(extraInfo));
+        if (insight.split(/\s+/).length <= 25) {
+          return insight;
+        }
+      } else if (extraInfo && typeof extraInfo === 'object') {
+        if (extraInfo.concept) {
+          const insight = this.toJijVorm(this.extractFirstSentence(extraInfo.concept));
+          if (insight.split(/\s+/).length <= 25) {
+            return insight;
+          }
+        } else if (extraInfo.tips && extraInfo.tips.length > 0) {
+          const insight = this.toJijVorm(this.extractFirstSentence(extraInfo.tips[0]));
+          if (insight.split(/\s+/).length <= 25) {
+            return insight;
+          }
+        }
+      }
+
+      // Fallback - still about reading behavior
+      return 'Je lette goed op wat de vraag vroeg.';
     }
 
     if (subject === 'verhaaltjessommen') {
