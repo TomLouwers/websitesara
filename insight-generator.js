@@ -17,7 +17,6 @@ class InsightGenerator {
     // Check for verhaaltjessommen indicators
     const hasLova = question.lova && Object.keys(question.lova).length > 0;
     const hasFoutanalyse = question.options?.some(opt => opt.foutanalyse);
-    const hasStoryContext = question.question && question.question.length > 100;
 
     if (hasLova || hasFoutanalyse) {
       return 'verhaaltjessommen';
@@ -25,17 +24,41 @@ class InsightGenerator {
 
     if (!extraInfo) return 'general';
 
+    // For objects, check specific keys first (more reliable than text search)
+    if (typeof extraInfo === 'object') {
+      // Vocabulary: has betekenis field
+      if (extraInfo.betekenis) {
+        return 'vocabulary';
+      }
+
+      // Spelling: has regel, voorbeelden/examples, or spelling-specific fields
+      if (extraInfo.regel || extraInfo.voorbeelden || extraInfo.examples) {
+        return 'spelling';
+      }
+
+      // Math/Getal & Bewerking: has steps, tips (plural), berekening
+      if (extraInfo.steps || extraInfo.berekening || extraInfo.verhoudingstabel) {
+        return 'math';
+      }
+
+      // Getal & Bewerking: specifically has tips array
+      if (extraInfo.tips && Array.isArray(extraInfo.tips)) {
+        return 'math';
+      }
+    }
+
+    // Fallback to text-based detection
     const infoStr = typeof extraInfo === 'string'
       ? extraInfo
       : JSON.stringify(extraInfo).toLowerCase();
 
-    // Math indicators
+    // Math indicators (numbers, operators, calculations)
     if (infoStr.match(/\d+|bewerking|rekenen|delen|vermenigvuldig|optellen|aftrekken|breuk|procent|verhoudingstabel|berekening/)) {
       return 'math';
     }
 
-    // Spelling indicators
-    if (infoStr.match(/regel|tip|medeklinker|klinker|werkwoord|voltooid|verleden tijd|lettergreep|spelling/)) {
+    // Spelling indicators (but not "tips" - that's math)
+    if (infoStr.match(/\bregel\b|medeklinker|klinker|werkwoord|voltooid|verleden tijd|lettergreep|spelling|voorbeelden/)) {
       return 'spelling';
     }
 
@@ -169,20 +192,39 @@ class InsightGenerator {
 
     // Handle object vs string
     if (typeof extraInfo === 'object') {
-      // Priority: concept > regel > tip > betekenis > first available
+      // Priority order based on subject type and common fields
+      // 1. concept (general learning concept)
+      // 2. regel (spelling rule)
+      // 3. betekenis (vocabulary definition)
+      // 4. tips/tip (general tips)
+      // 5. voorbeelden/examples (examples)
+      // 6. uitleg (explanation)
+      // 7. first string value
+
       if (extraInfo.concept) {
         insight = extraInfo.concept;
       } else if (extraInfo.regel) {
         insight = extraInfo.regel;
-      } else if (extraInfo.tip) {
-        insight = Array.isArray(extraInfo.tip) ? extraInfo.tip[0] : extraInfo.tip;
-      } else if (extraInfo.tips && Array.isArray(extraInfo.tips)) {
-        insight = extraInfo.tips[0];
       } else if (extraInfo.betekenis) {
         insight = `Betekent: ${extraInfo.betekenis}`;
+      } else if (extraInfo.tips && Array.isArray(extraInfo.tips) && extraInfo.tips.length > 0) {
+        insight = extraInfo.tips[0];
+      } else if (extraInfo.tip) {
+        insight = Array.isArray(extraInfo.tip) ? extraInfo.tip[0] : extraInfo.tip;
+      } else if (extraInfo.voorbeelden && Array.isArray(extraInfo.voorbeelden) && extraInfo.voorbeelden.length > 0) {
+        // For examples, take first one
+        insight = extraInfo.voorbeelden[0];
+      } else if (extraInfo.examples && Array.isArray(extraInfo.examples) && extraInfo.examples.length > 0) {
+        insight = extraInfo.examples[0];
+      } else if (extraInfo.uitleg) {
+        insight = extraInfo.uitleg;
+      } else if (extraInfo.steps && Array.isArray(extraInfo.steps) && extraInfo.steps.length > 0) {
+        // For steps, extract learning point from first step
+        const firstStep = extraInfo.steps[0];
+        insight = typeof firstStep === 'string' ? firstStep : (firstStep.uitleg || firstStep.text || '');
       } else {
-        // Get first string value
-        const firstValue = Object.values(extraInfo).find(v => typeof v === 'string');
+        // Get first string value from any field
+        const firstValue = Object.values(extraInfo).find(v => typeof v === 'string' && v.length > 0);
         insight = firstValue || '';
       }
     } else {
@@ -257,8 +299,11 @@ class InsightGenerator {
     if (subject === 'verhaaltjessommen') {
       const insight = this.buildVerhaaltjesomInsight(selectedOption, question);
 
-      // Ensure it starts with "Let op:" for incorrect answers
-      if (!insight.match(/^Let op:/i)) {
+      // Check if insight already starts with an imperative verb
+      const startsWithImperative = insight.match(/^(let|lees|kijk|denk|probeer|controleer|check|tel|reken)\s/i);
+
+      // Ensure it starts with "Let op:" for incorrect answers (unless already imperative)
+      if (!insight.match(/^Let op:/i) && !startsWithImperative) {
         return `Let op: ${insight.charAt(0).toLowerCase()}${insight.slice(1)}`;
       }
       return insight;
@@ -270,7 +315,10 @@ class InsightGenerator {
     // Remove existing prefixes and add "Let op:"
     insight = insight.replace(/^(Onthoud|Betekent|Tip):\s*/i, '');
 
-    if (!insight.match(/^Let op:/i)) {
+    // Check if insight already starts with an imperative verb (let, lees, kijk, denk, etc.)
+    const startsWithImperative = insight.match(/^(let|lees|kijk|denk|probeer|controleer|check)\s/i);
+
+    if (!insight.match(/^Let op:/i) && !startsWithImperative) {
       insight = `Let op: ${insight.charAt(0).toLowerCase()}${insight.slice(1)}`;
     }
 
@@ -287,7 +335,10 @@ class InsightGenerator {
    */
   static buildConfirmation(question, correctIndex, isCorrect) {
     const correctOption = question.options[correctIndex];
-    const correctText = correctOption?.text || '';
+    // Handle both string format (old) and object format (new) options
+    const correctText = typeof correctOption === 'string'
+      ? correctOption
+      : (correctOption?.text || '');
 
     if (isCorrect) {
       return `Dit klopt: ${correctText}`;
