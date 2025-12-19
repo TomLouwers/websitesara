@@ -5,6 +5,8 @@ let score = 0;
 let currentItem = null;
 let hasAnswered = false;
 let isPlayingAudio = false;
+let wrongAnswers = []; // Track incorrect answers for results page
+let tagStats = {}; // Track stats by tag for results page
 
 // Initialize quiz on page load
 document.addEventListener('DOMContentLoaded', function() {
@@ -313,6 +315,17 @@ function handleCorrectAnswer() {
     score++;
     updateScore();
 
+    // Track tag stats
+    if (currentItem.tags) {
+        currentItem.tags.forEach(tag => {
+            if (!tagStats[tag]) {
+                tagStats[tag] = { correct: 0, total: 0 };
+            }
+            tagStats[tag].correct++;
+            tagStats[tag].total++;
+        });
+    }
+
     const input = document.getElementById('spellingInput');
     input.classList.add('correct');
     input.disabled = true;
@@ -340,6 +353,23 @@ function handleCorrectAnswer() {
 
 // Handle incorrect answer
 function handleIncorrectAnswer() {
+    // Track wrong answer
+    wrongAnswers.push({
+        index: currentQuestionIndex,
+        item: currentItem,
+        userAnswer: document.getElementById('spellingInput').value
+    });
+
+    // Track tag stats
+    if (currentItem.tags) {
+        currentItem.tags.forEach(tag => {
+            if (!tagStats[tag]) {
+                tagStats[tag] = { correct: 0, total: 0 };
+            }
+            tagStats[tag].total++;
+        });
+    }
+
     const input = document.getElementById('spellingInput');
     input.classList.add('incorrect');
     input.disabled = true;
@@ -438,29 +468,263 @@ function stopQuiz() {
 
 // Show results at the end
 function showResults() {
-    const percentage = Math.round((score / quizData.items.length) * 100);
-    const total = quizData.items.length;
+    // Hide quiz, show results
+    document.getElementById('quizContainer').style.display = 'none';
+    document.getElementById('resultsPage').style.display = 'block';
 
-    // Clear localStorage to prevent errors on return
+    // Scroll to top
+    window.scrollTo(0, 0);
+
+    const totalQuestions = quizData.items.length;
+    const correctCount = score;
+    const incorrectCount = wrongAnswers.length;
+    const percentage = totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;
+
+    // 1. Populate Hero Block
+    populateHeroBlock(percentage, correctCount, incorrectCount);
+
+    // 2. Populate Skills Overview
+    populateSkillsOverview();
+
+    // 3. Populate Question Accordion (incorrect answers only)
+    populateQuestionAccordion();
+}
+
+// Helper: Populate Hero Block
+function populateHeroBlock(percentage, correctCount, incorrectCount) {
+    const emojiEl = document.getElementById('resultEmoji');
+    const headlineEl = document.getElementById('resultHeadline');
+    const summaryEl = document.getElementById('resultSummary');
+    const growthBadgeEl = document.getElementById('resultGrowthBadge');
+    const growthTextEl = document.getElementById('growthText');
+
+    // Select emoji and headline based on performance
+    let emoji, headline;
+    if (percentage >= 90) {
+        emoji = '🎉';
+        headline = 'Wauw! Geweldig gedaan!';
+    } else if (percentage >= 70) {
+        emoji = '🌟';
+        headline = 'Knap gewerkt!';
+    } else if (percentage >= 50) {
+        emoji = '💪';
+        headline = 'Goed bezig!';
+    } else {
+        emoji = '🚀';
+        headline = 'Elke vraag maakt je sterker!';
+    }
+
+    emojiEl.textContent = emoji;
+    headlineEl.textContent = headline;
+
+    // Summary text
+    let summaryText = '';
+    if (correctCount === 1) {
+        summaryText = 'Je hebt 1 vraag goed beantwoord!';
+    } else if (correctCount > 1) {
+        summaryText = `Je hebt ${correctCount} vragen goed beantwoord!`;
+    } else {
+        summaryText = 'Elke vraag is een leerkans!';
+    }
+
+    if (incorrectCount > 0) {
+        if (incorrectCount === 1) {
+            summaryText += ' En 1 vraag maakt je weer een beetje sterker!';
+        } else {
+            summaryText += ` En ${incorrectCount} vragen maken je weer een beetje sterker!`;
+        }
+    }
+
+    summaryEl.textContent = summaryText;
+
+    // Growth badge
+    if (incorrectCount > 0) {
+        growthBadgeEl.style.display = 'flex';
+        const leerpunten = incorrectCount === 1 ? '1 leerpunt' : `${incorrectCount} leerpunten`;
+        growthTextEl.textContent = `Je hebt ${leerpunten} verdiend!`;
+    } else {
+        growthBadgeEl.style.display = 'none';
+    }
+}
+
+// Helper: Populate Skills Overview
+function populateSkillsOverview() {
+    const skillsChipsEl = document.getElementById('skillsChips');
+    const skillsOverviewEl = document.getElementById('skillsOverview');
+
+    const tags = Object.keys(tagStats);
+    if (tags.length === 0) {
+        skillsOverviewEl.style.display = 'none';
+        return;
+    }
+
+    skillsOverviewEl.style.display = 'block';
+    skillsChipsEl.innerHTML = '';
+
+    // Create chips for each tag
+    tags.forEach(tag => {
+        const stats = tagStats[tag];
+        const percentage = Math.round((stats.correct / stats.total) * 100);
+
+        const chip = document.createElement('div');
+        chip.className = 'skill-chip';
+
+        // Determine status
+        let status = '';
+        if (percentage >= 80) {
+            status = '<span class="status-icon">✅</span>';
+        } else {
+            status = '<span class="status-icon grow">💡</span><span class="grow-text">Hier kun je nog sterker in worden</span>';
+        }
+
+        // Format tag name
+        const tagName = formatTagName(tag);
+
+        chip.innerHTML = `
+            <div class="skill-info">
+                <div class="skill-name">📚 ${tagName}</div>
+                ${status}
+            </div>
+        `;
+
+        skillsChipsEl.appendChild(chip);
+    });
+}
+
+// Helper: Format tag name for display
+function formatTagName(tag) {
+    const tagNames = {
+        'werkwoord_vt': 'Verleden tijd',
+        'werkwoord_ttt': 'Tegenwoordige tijd',
+        'voltooid_deelwoord': 'Voltooid deelwoord',
+        'verlengingsregel': 'Verlengingsregel',
+        'open_lettergreep': 'Open lettergreep',
+        'gesloten_lettergreep': 'Gesloten lettergreep',
+        'tweetekenklank_ui': 'Tweeklank ui',
+        'tweetekenklank_ou': 'Tweeklank ou',
+        'lange_klank_aa': 'Lange klank aa',
+        'cluster_ng': 'Lettercluster ng',
+        'cluster_nk': 'Lettercluster nk',
+        'cluster_sch': 'Lettercluster sch',
+        'cluster_ch': 'Lettercluster ch',
+        'ei_ij': 'ei of ij',
+        'au_ou': 'au of ou'
+    };
+
+    return tagNames[tag] || tag;
+}
+
+// Helper: Populate Question Accordion
+function populateQuestionAccordion() {
+    const accordionEl = document.getElementById('questionAccordion');
+    const questionReviewSectionEl = document.getElementById('questionReviewSection');
+
+    if (wrongAnswers.length === 0) {
+        questionReviewSectionEl.style.display = 'none';
+        return;
+    }
+
+    questionReviewSectionEl.style.display = 'block';
+    accordionEl.innerHTML = '';
+
+    wrongAnswers.forEach((wrong, index) => {
+        const item = wrong.item;
+        const questionNumber = wrong.index + 1;
+
+        const accordionItem = document.createElement('div');
+        accordionItem.className = 'accordion-item';
+
+        const header = document.createElement('div');
+        header.className = 'accordion-header';
+        header.innerHTML = `
+            <div class="accordion-label">
+                <span class="grow-icon">💡</span>
+                <span>Hier kun je nog groeien</span>
+            </div>
+            <div class="accordion-question">Vraag ${questionNumber}</div>
+            <i class="material-icons accordion-icon">expand_more</i>
+        `;
+
+        const content = document.createElement('div');
+        content.className = 'accordion-content';
+        content.style.display = 'none';
+
+        // Build extra info HTML
+        let extraInfoHTML = '';
+        if (item.extra_info) {
+            if (item.extra_info.rule) {
+                extraInfoHTML += `
+                    <div class="feedback-section-wrapper">
+                        <div class="feedback-section-title">📖 Spellingregel</div>
+                        <div class="feedback-section-content">${item.extra_info.rule}</div>
+                    </div>
+                `;
+            }
+            if (item.extra_info.tip) {
+                extraInfoHTML += `
+                    <div class="feedback-tip">
+                        <div class="feedback-tip-title">
+                            <span>💡</span>
+                            <span>Tip</span>
+                        </div>
+                        <div class="feedback-tip-content">${item.extra_info.tip}</div>
+                    </div>
+                `;
+            }
+            if (item.extra_info.examples && item.extra_info.examples.length > 0) {
+                const examplesHTML = item.extra_info.examples
+                    .map(ex => `<div style="margin: 4px 0;">• ${ex}</div>`)
+                    .join('');
+                extraInfoHTML += `
+                    <div class="feedback-section-wrapper">
+                        <div class="feedback-section-title">✨ Voorbeelden</div>
+                        <div class="feedback-section-content">${examplesHTML}</div>
+                    </div>
+                `;
+            }
+        }
+
+        content.innerHTML = `
+            <div class="accordion-answer incorrect">
+                <strong>Jouw antwoord:</strong> ${wrong.userAnswer || '(geen antwoord)'}
+            </div>
+            <div class="accordion-answer correct">
+                <strong>Juiste antwoord:</strong> ${item.target.answer}
+            </div>
+            ${extraInfoHTML}
+        `;
+
+        // Toggle accordion
+        header.addEventListener('click', () => {
+            const isOpen = content.style.display === 'block';
+            content.style.display = isOpen ? 'none' : 'block';
+            header.querySelector('.accordion-icon').textContent = isOpen ? 'expand_more' : 'expand_less';
+        });
+
+        accordionItem.appendChild(header);
+        accordionItem.appendChild(content);
+        accordionEl.appendChild(accordionItem);
+    });
+}
+
+// Restart quiz
+function restartQuiz() {
+    // Clear localStorage
     localStorage.removeItem('autoStartSubject');
     localStorage.removeItem('selectedGroep');
     localStorage.removeItem('selectedMoment');
 
-    let message = `Quiz voltooid!\n\n`;
-    message += `Score: ${score} / ${total} (${percentage}%)\n\n`;
+    // Reload page
+    window.location.reload();
+}
 
-    if (percentage >= 90) {
-        message += '🏆 Uitstekend! Je bent een spellingkampioen!';
-    } else if (percentage >= 70) {
-        message += '👏 Goed gedaan! Je bent goed bezig!';
-    } else if (percentage >= 50) {
-        message += '👍 Niet slecht! Blijf oefenen!';
-    } else {
-        message += '💪 Blijf oefenen, dan word je steeds beter!';
-    }
+// Go to landing page
+function goToLanding() {
+    // Clear localStorage
+    localStorage.removeItem('autoStartSubject');
+    localStorage.removeItem('selectedGroep');
+    localStorage.removeItem('selectedMoment');
 
-    alert(message);
-
-    // Return to home
+    // Go to index
     window.location.href = 'index.html';
 }
