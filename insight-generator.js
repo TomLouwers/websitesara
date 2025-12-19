@@ -293,7 +293,10 @@ class InsightGenerator {
    */
   static buildConfirmation(question, correctIndex, isCorrect) {
     const correctOption = question.options[correctIndex];
-    const correctText = correctOption?.text || '';
+    // Handle both string format (old) and object format (new) options
+    const correctText = typeof correctOption === 'string'
+      ? correctOption
+      : (correctOption?.text || '');
 
     if (isCorrect) {
       return `Dit klopt: ${correctText}`;
