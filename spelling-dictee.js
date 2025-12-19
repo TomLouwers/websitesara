@@ -85,6 +85,9 @@ function showQuestion(index) {
     // Reset UI
     resetUI();
 
+    // Update verb tense instruction
+    updateVerbTenseInstruction();
+
     // Focus input
     document.getElementById('spellingInput').focus();
 }
@@ -105,6 +108,27 @@ function updateProgress() {
 // Update score display
 function updateScore() {
     document.getElementById('totalCorrect').textContent = score;
+}
+
+// Update verb tense instruction based on tags
+function updateVerbTenseInstruction() {
+    const verbTenseSpan = document.getElementById('verbTenseInstruction');
+
+    if (!currentItem || !currentItem.tags || currentItem.tags.length === 0) {
+        verbTenseSpan.textContent = '';
+        return;
+    }
+
+    // Check for specific verb tense tags
+    if (currentItem.tags.includes('werkwoord_vt')) {
+        verbTenseSpan.textContent = ' in verleden tijd';
+    } else if (currentItem.tags.includes('werkwoord_ttt')) {
+        verbTenseSpan.textContent = ' in tegenwoordige tijd';
+    } else if (currentItem.tags.includes('voltooid_deelwoord')) {
+        verbTenseSpan.textContent = ' voltooid deelwoord';
+    } else {
+        verbTenseSpan.textContent = '';
+    }
 }
 
 // Reset UI for new question
