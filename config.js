@@ -17,7 +17,7 @@ const CONFIG = {
         basisvaardigheden: 'Getal & Bewerking',
         'basisvaardigheden-emma': 'Getal & Bewerking Emma',
         'basisvaardigheden-kate': 'Getal & Bewerking Kate',
-        spelling: 'Spelling',
+        werkwoordspelling: 'Werkwoordspelling',
         dmt: 'DMT Woordtrainer'
     },
 
@@ -34,7 +34,7 @@ const CONFIG = {
         basisvaardigheden: '🧮',
         'basisvaardigheden-emma': '🧒',
         'basisvaardigheden-kate': '🎓',
-        spelling: '✏️',
+        werkwoordspelling: '✍️',
         dmt: '⚡'
     },
 
@@ -51,7 +51,7 @@ const CONFIG = {
         basisvaardigheden: 'Train je rekenskills! 🧮',
         'basisvaardigheden-emma': 'Word een rekenprof met Emma! (330 opgaven)',
         'basisvaardigheden-kate': 'Word een rekenprof met Kate! (240 opgaven)',
-        spelling: 'Leer correct spellen! ✏️',
+        werkwoordspelling: 'Leer werkwoorden correct spellen! ✍️',
         dmt: 'Word een snellere lezer! ⚡'
     },
 
@@ -218,6 +218,28 @@ const CONFIG = {
             groep8: {
                 m8: 'exercises/ws/groep8_wo_m8_webapp_1.json',
                 e8: 'exercises/ws/groep8_wo_e8_webapp_1.json'
+            }
+        },
+        werkwoordspelling: {
+            groep3: {
+                m3: 'exercises/sp/sp_groep3_m3_set_v4_audio.json',
+                e3: 'exercises/sp/sp_groep3_e3_set_v4_audio.json'
+            },
+            groep4: {
+                m4: 'exercises/sp/sp_groep4_m4_set_v4_audio.json',
+                e4: 'exercises/sp/sp_groep4_e4_set_v4_audio.json'
+            },
+            groep5: {
+                m5: 'exercises/sp/sp_groep5_m5_set_v4_audio.json',
+                e5: 'exercises/sp/sp_groep5_e5_set_v4_audio.json'
+            },
+            groep6: {
+                m6: 'exercises/sp/sp_groep6_m6_set_v4_audio.json',
+                e6: 'exercises/sp/sp_groep6_e6_set_v4_audio.json'
+            },
+            groep7: {
+                m7: 'exercises/sp/sp_groep7_m7_set_v4_audio.json',
+                e7: 'exercises/sp/sp_groep7_e7_set_v4_audio.json'
             }
         }
     }
