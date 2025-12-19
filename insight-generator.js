@@ -11,9 +11,20 @@ class InsightGenerator {
   /**
    * Detects subject type from extra_info content
    * @param {object|string} extraInfo - The extra_info field from quiz data
-   * @returns {string} - 'math', 'spelling', 'vocabulary', 'verhaaltjessommen', 'general'
+   * @param {object} question - Full question object
+   * @returns {string} - 'begrijpendlezen', 'math', 'spelling', 'vocabulary', 'verhaaltjessommen', 'general'
    */
   static detectSubject(extraInfo, question = {}) {
+    // Check for Begrijpend Lezen indicators (has content/story + skill/strategy)
+    const hasBegrijpendLezenStructure = (
+      (question.content || question.visual) &&
+      (question.skill || question.strategy)
+    );
+
+    if (hasBegrijpendLezenStructure) {
+      return 'begrijpendlezen';
+    }
+
     // Check for verhaaltjessommen indicators
     const hasLova = question.lova && Object.keys(question.lova).length > 0;
     const hasFoutanalyse = question.options?.some(opt => opt.foutanalyse);
@@ -177,6 +188,69 @@ class InsightGenerator {
   }
 
   /**
+   * Builds ONE insight for Begrijpend Lezen (Reading Comprehension)
+   * Format: [Wat je te veel deed / miste] + omdat + [wat de vraag echt vroeg]
+   *
+   * @param {object} selectedOption - The incorrect option that was selected
+   * @param {object} question - Full question object with skill/strategy
+   * @returns {string} - ONE sentence insight
+   */
+  static buildBegrijpendLezenInsight(selectedOption, question) {
+    // Try to use foutanalyse from selected option first
+    let foutanalyse = selectedOption?.foutanalyse || '';
+
+    // Clean foutanalyse (remove reflection questions)
+    foutanalyse = foutanalyse.split('🤔')[0].trim();
+
+    // If we have foutanalyse, use it (it's usually well-crafted)
+    if (foutanalyse && foutanalyse.length > 10) {
+      return this.toJijVorm(this.extractFirstSentence(foutanalyse));
+    }
+
+    // Otherwise, build insight from question metadata
+    const skill = question.skill || '';
+    const strategy = question.strategy || '';
+    const hint = question.hint || '';
+
+    // Strategy-based insights (implicitly teaching reading strategies)
+    const strategyInsights = {
+      'Informatie zoeken': 'Je keek naar details, maar de vraag ging over het grotere geheel.',
+      'Conclusies trekken': 'Je koos wat er letterlijk stond, maar de vraag vroeg om na te denken.',
+      'Verbanden leggen': 'Je koos één deel, maar de vraag vroeg om verschillende delen te verbinden.',
+      'Voorspellen': 'Je keek naar wat er al gebeurd was, maar de vraag ging over wat nog komt.',
+      'Samenvatten': 'Je koos een detail, maar de vraag ging over waar het hele verhaal over gaat.',
+      'Interpreteren': 'Je las wat er stond, maar de vraag vroeg om tussen de regels door te lezen.'
+    };
+
+    // Try strategy-based insight
+    if (strategy && strategyInsights[strategy]) {
+      return strategyInsights[strategy];
+    }
+
+    // Try hint-based insight
+    if (hint) {
+      const cleanHint = hint.replace(/^💡\s*/i, '').trim();
+      if (cleanHint.length > 10) {
+        return this.toJijVorm(this.extractFirstSentence(cleanHint));
+      }
+    }
+
+    // Skill-based fallback
+    const skillFallbacks = {
+      'Letterlijk': 'Let goed op wat er precies staat in de tekst.',
+      'Interpreterend': 'Denk goed na over wat de schrijver bedoelt.',
+      'Reflecterend': 'Vergelijk wat je leest met wat je zelf weet.'
+    };
+
+    if (skill && skillFallbacks[skill]) {
+      return skillFallbacks[skill];
+    }
+
+    // General fallback
+    return 'Let goed op wat er gevraagd wordt.';
+  }
+
+  /**
    * Builds ONE insight for general subjects (math, spelling, vocabulary, general)
    *
    * @param {object|string} extraInfo - The extra_info field
@@ -275,6 +349,36 @@ class InsightGenerator {
     const subject = this.detectSubject(question.extra_info, question);
     const extraInfo = question.extra_info;
 
+    // Begrijpend Lezen - use extra_info or strategy-based positive reinforcement
+    if (subject === 'begrijpendlezen') {
+      if (extraInfo && typeof extraInfo === 'string') {
+        return this.toJijVorm(this.extractFirstSentence(extraInfo));
+      } else if (extraInfo && typeof extraInfo === 'object') {
+        if (extraInfo.concept) {
+          return this.toJijVorm(this.extractFirstSentence(extraInfo.concept));
+        } else if (extraInfo.tips && extraInfo.tips.length > 0) {
+          return this.toJijVorm(this.extractFirstSentence(extraInfo.tips[0]));
+        }
+      }
+
+      // Strategy-based positive reinforcement
+      const strategyMessages = {
+        'Informatie zoeken': 'Je vond de juiste informatie in de tekst.',
+        'Conclusies trekken': 'Je trok de juiste conclusie uit het verhaal.',
+        'Verbanden leggen': 'Je verbond de juiste delen uit de tekst.',
+        'Voorspellen': 'Je voorspelde goed wat er zou gebeuren.',
+        'Samenvatten': 'Je begreep waar het verhaal over ging.',
+        'Interpreteren': 'Je las goed tussen de regels door.'
+      };
+
+      if (question.strategy && strategyMessages[question.strategy]) {
+        return strategyMessages[question.strategy];
+      }
+
+      // Fallback
+      return 'Je begreep goed wat er gevraagd werd.';
+    }
+
     if (subject === 'verhaaltjessommen') {
       // For correct verhaaltjessommen, use extra_info concept if available
       if (typeof extraInfo === 'object' && extraInfo.concept) {
@@ -295,6 +399,13 @@ class InsightGenerator {
    */
   static generateIncorrectInsight(question, selectedOption) {
     const subject = this.detectSubject(question.extra_info, question);
+
+    // Begrijpend Lezen - specialized insight building
+    if (subject === 'begrijpendlezen') {
+      const insight = this.buildBegrijpendLezenInsight(selectedOption, question);
+      // Return as-is (already formatted, no prefix needed)
+      return insight;
+    }
 
     if (subject === 'verhaaltjessommen') {
       const insight = this.buildVerhaaltjesomInsight(selectedOption, question);
