@@ -149,6 +149,24 @@
             border-color: rgba(245, 158, 11, 0.4);
         }
 
+        .quiz-control-btn.pauze {
+            border-color: #CFCFCF;
+            color: #666;
+        }
+
+        .quiz-control-btn.pauze:hover {
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        .quiz-control-btn.stoppen {
+            border-color: rgba(249, 115, 115, 0.4);
+            color: #F97373;
+        }
+
+        .quiz-control-btn.stoppen:hover {
+            background: rgba(249, 115, 115, 0.05);
+        }
+
         /* Spelling Question Card */
         .spelling-question-card {
             background: white;
@@ -327,198 +345,105 @@
             box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
         }
 
-        /* Feedback Section */
-        .feedback-section {
-            margin-top: 32px;
-            padding: 24px;
-            border-radius: 16px;
-            display: none;
-        }
-
-        .feedback-section.show {
-            display: block;
-            animation: slideIn 0.3s ease;
-        }
-
-        .feedback-section.correct {
-            background: #ECFDF5;
-            border: 2px solid #10B981;
-        }
-
-        .feedback-section.incorrect {
-            background: #FEF2F2;
-            border: 2px solid #F59E0B;
-        }
-
-        .feedback-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-
-        .feedback-icon {
-            font-size: 36px;
-        }
-
-        .feedback-title {
-            font-size: 22px;
-            font-weight: 700;
-            margin: 0;
-        }
-
-        .feedback-section.correct .feedback-title {
-            color: #059669;
-        }
-
-        .feedback-section.incorrect .feedback-title {
-            color: #D97706;
-        }
-
-        .correct-answer-display {
-            font-size: 28px;
-            font-weight: 700;
-            text-align: center;
-            padding: 20px;
-            background: white;
-            border-radius: 12px;
-            margin: 16px 0;
-            letter-spacing: 2px;
-        }
-
-        .feedback-section.correct .correct-answer-display {
-            color: #059669;
-        }
-
-        .feedback-section.incorrect .correct-answer-display {
-            color: #DC2626;
-        }
-
-        .feedback-tip {
-            background: white;
-            padding: 16px 20px;
-            border-radius: 12px;
-            margin-top: 16px;
-        }
-
-        .feedback-tip-title {
-            font-size: 15px;
-            font-weight: 700;
-            color: #374151;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .feedback-tip-content {
-            font-size: 15px;
-            color: #4B5563;
-            line-height: 1.6;
-        }
-
-        /* Hint Modal */
-        .hint-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .hint-modal.show {
-            display: flex;
-            animation: fadeIn 0.2s ease;
-        }
-
-        .hint-modal-content {
+        /* Feedback Card - Aligned with Getal & Bewerking */
+        .feedback-card {
+            width: 100%;
+            max-width: 640px;
+            margin: 24px auto;
             background: white;
             border-radius: 20px;
-            padding: 32px;
-            max-width: 500px;
-            width: 100%;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            position: relative;
+            padding: 28px 32px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
         }
 
-        .hint-modal-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
+        .feedback-card.hidden {
+            display: none;
         }
 
-        .hint-modal-title {
-            font-size: 22px;
-            font-weight: 700;
-            color: #1F2937;
+        .feedback-headline {
             display: flex;
             align-items: center;
             gap: 10px;
-        }
-
-        .hint-close-btn {
-            background: none;
-            border: none;
-            font-size: 28px;
-            color: #9CA3AF;
-            cursor: pointer;
-            padding: 0;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            transition: all 0.2s;
-        }
-
-        .hint-close-btn:hover {
-            background: #F3F4F6;
-            color: #4B5563;
-        }
-
-        .hint-modal-body {
-            font-size: 16px;
-            color: #4B5563;
-            line-height: 1.6;
-        }
-
-        .hint-rule {
-            padding: 16px;
-            background: #FEF3C7;
-            border-left: 4px solid #F59E0B;
-            border-radius: 8px;
-            margin-bottom: 16px;
-        }
-
-        .hint-example {
-            padding: 16px;
-            background: #E0F2FE;
-            border-radius: 8px;
-        }
-
-        .hint-example-title {
-            font-weight: 700;
-            color: #1F2937;
-            margin-bottom: 8px;
-        }
-
-        .hint-example-word {
             font-size: 20px;
             font-weight: 700;
-            color: #3B82F6;
-            text-align: center;
-            padding: 12px;
-            background: white;
-            border-radius: 8px;
+            color: #2C3E50;
+            margin: 0 0 16px 0;
         }
+
+        .feedback-headline .emoji {
+            font-size: 28px;
+        }
+
+        .feedback-card.correct .feedback-headline {
+            color: #2D6A4F;
+        }
+
+        .feedback-card.incorrect .feedback-headline {
+            color: #D97706;
+        }
+
+        .feedback-answer-confirm {
+            font-size: 15px;
+            font-weight: 600;
+            color: #5A6C7D;
+            margin: 0 0 20px 0;
+            padding: 12px 16px;
+            background: #F8FAFC;
+            border-radius: 12px;
+            border-left: 4px solid #32C4A0;
+        }
+
+        .feedback-card.incorrect .feedback-answer-confirm {
+            border-left-color: #FFA726;
+        }
+
+        .feedback-section-wrapper {
+            background: #F0F9FF;
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin: 16px 0;
+        }
+
+        .feedback-section-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1E3A8A;
+            margin: 0 0 10px 0;
+        }
+
+        .feedback-section-content {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #1E3A8A;
+            font-weight: 500;
+        }
+
+        .feedback-tip {
+            background: #FFFBF0;
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin-top: 16px;
+            border-left: 3px solid #FCD34D;
+            opacity: 0.92;
+        }
+
+        .feedback-tip-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #B45309;
+            margin: 0 0 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .feedback-tip-content {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #78350F;
+            margin: 0;
+        }
+
 
         @keyframes slideIn {
             from {
@@ -598,9 +523,13 @@
 
             <div class="quiz-topbar-bottom">
                 <div class="quiz-control-buttons">
-                    <button class="quiz-control-btn hint" id="hintButton" onclick="showHint()">
-                        <span>💡</span>
-                        <span>Hint</span>
+                    <button class="quiz-control-btn pauze" onclick="pauseQuiz()">
+                        <span>⏸️</span>
+                        <span>Pauze</span>
+                    </button>
+                    <button class="quiz-control-btn stoppen" onclick="stopQuiz()">
+                        <span>⏹️</span>
+                        <span>Stoppen</span>
                     </button>
                 </div>
             </div>
@@ -608,14 +537,6 @@
 
         <!-- Spelling Question Card -->
         <div class="spelling-question-card">
-            <div class="spelling-card-header">
-                <div class="spelling-subject-icon">✏️</div>
-                <div class="spelling-title-group">
-                    <h3>Spelling Dictee</h3>
-                    <p id="cardSubtitle">Luister goed en schrijf het woord</p>
-                </div>
-            </div>
-
             <!-- Audio Player -->
             <div class="audio-player-section">
                 <p class="audio-instruction">🎧 Klik op de knop om de zin te horen</p>
@@ -640,47 +561,42 @@
             </div>
 
             <!-- Check Answer Button -->
-            <button class="btn-primary" id="checkButton" onclick="checkAnswer()">
-                Controleer antwoord
+            <button class="btn btn-primary-action" id="checkButton" onclick="checkAnswer()">
+                <i class="material-icons">check_circle</i> Check mijn antwoord!
             </button>
 
             <!-- Feedback Section -->
-            <div class="feedback-section" id="feedbackSection">
-                <div class="feedback-header">
-                    <span class="feedback-icon" id="feedbackIcon">🎉</span>
-                    <h3 class="feedback-title" id="feedbackTitle">Goed gedaan!</h3>
+            <div class="feedback-card hidden" id="feedbackSection">
+                <div class="feedback-headline">
+                    <span class="emoji" id="feedbackIcon">🎉</span>
+                    <span id="feedbackTitle">Goed gedaan!</span>
                 </div>
-                <div id="correctAnswerDisplay" class="correct-answer-display"></div>
-                <div class="feedback-tip" id="feedbackTip">
-                    <div class="feedback-tip-title">
-                        <span>💡</span>
-                        <span>Tip</span>
-                    </div>
-                    <div class="feedback-tip-content" id="feedbackTipContent"></div>
-                </div>
-                <button class="btn-primary btn-next" id="nextButton" onclick="nextQuestion()">
-                    Volgende vraag →
-                </button>
-            </div>
-        </div>
-    </div>
+                <div class="feedback-answer-confirm" id="correctAnswerDisplay"></div>
 
-    <!-- Hint Modal -->
-    <div class="hint-modal" id="hintModal" onclick="closeHintIfBackdrop(event)">
-        <div class="hint-modal-content">
-            <div class="hint-modal-header">
-                <h3 class="hint-modal-title">
-                    <span>💡</span>
-                    <span>Spellingregel</span>
-                </h3>
-                <button class="hint-close-btn" onclick="closeHint()">&times;</button>
-            </div>
-            <div class="hint-modal-body">
-                <div class="hint-rule" id="hintRule"></div>
-                <div class="hint-example">
-                    <div class="hint-example-title">Voorbeeld:</div>
-                    <div class="hint-example-word" id="hintExample"></div>
+                <!-- Extra Info Section -->
+                <div id="extraInfoSection" style="display: none;">
+                    <div class="feedback-section-wrapper" id="ruleSection" style="display: none;">
+                        <div class="feedback-section-title">📖 Spellingregel</div>
+                        <div class="feedback-section-content" id="ruleContent"></div>
+                    </div>
+
+                    <div class="feedback-tip" id="tipSection" style="display: none;">
+                        <div class="feedback-tip-title">
+                            <span>💡</span>
+                            <span>Tip</span>
+                        </div>
+                        <div class="feedback-tip-content" id="tipContent"></div>
+                    </div>
+
+                    <div class="feedback-section-wrapper" id="examplesSection" style="display: none;">
+                        <div class="feedback-section-title">✨ Voorbeelden</div>
+                        <div class="feedback-section-content" id="examplesContent"></div>
+                    </div>
                 </div>
+
+                <button class="btn btn-primary-action hidden" id="nextButton" onclick="nextQuestion()">
+                    Volgende! <i class="material-icons">arrow_forward</i>
+                </button>
             </div>
         </div>
     </div>

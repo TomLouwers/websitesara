@@ -116,10 +116,13 @@ function resetUI() {
 
     const checkButton = document.getElementById('checkButton');
     checkButton.disabled = false;
-    checkButton.style.display = 'block';
+    checkButton.classList.remove('hidden');
 
     const feedbackSection = document.getElementById('feedbackSection');
-    feedbackSection.classList.remove('show');
+    feedbackSection.classList.add('hidden');
+
+    const nextButton = document.getElementById('nextButton');
+    nextButton.classList.add('hidden');
 
     const playButton = document.getElementById('audioPlayButton');
     playButton.classList.remove('playing');
@@ -290,22 +293,25 @@ function handleCorrectAnswer() {
     input.classList.add('correct');
     input.disabled = true;
 
-    document.getElementById('checkButton').style.display = 'none';
+    document.getElementById('checkButton').classList.add('hidden');
 
     // Show feedback
     const feedbackSection = document.getElementById('feedbackSection');
     const feedbackIcon = document.getElementById('feedbackIcon');
     const feedbackTitle = document.getElementById('feedbackTitle');
     const correctAnswerDisplay = document.getElementById('correctAnswerDisplay');
-    const feedbackTip = document.getElementById('feedbackTip');
+    const nextButton = document.getElementById('nextButton');
 
-    feedbackSection.className = 'feedback-section show correct';
+    feedbackSection.className = 'feedback-card correct';
     feedbackIcon.textContent = '🎉';
     feedbackTitle.textContent = quizData.set.feedback_templates.correct || 'Goed gedaan!';
-    correctAnswerDisplay.textContent = currentItem.target.answer;
+    correctAnswerDisplay.textContent = 'Het juiste antwoord is: ' + currentItem.target.answer;
 
-    // Hide tip for correct answers
-    feedbackTip.style.display = 'none';
+    // Hide extra info for correct answers
+    document.getElementById('extraInfoSection').style.display = 'none';
+
+    // Show next button
+    nextButton.classList.remove('hidden');
 }
 
 // Handle incorrect answer
@@ -320,29 +326,62 @@ function handleIncorrectAnswer() {
         input.style.animation = '';
     }, 400);
 
-    document.getElementById('checkButton').style.display = 'none';
+    document.getElementById('checkButton').classList.add('hidden');
 
     // Show feedback
     const feedbackSection = document.getElementById('feedbackSection');
     const feedbackIcon = document.getElementById('feedbackIcon');
     const feedbackTitle = document.getElementById('feedbackTitle');
     const correctAnswerDisplay = document.getElementById('correctAnswerDisplay');
-    const feedbackTip = document.getElementById('feedbackTip');
-    const feedbackTipContent = document.getElementById('feedbackTipContent');
+    const nextButton = document.getElementById('nextButton');
 
-    feedbackSection.className = 'feedback-section show incorrect';
+    feedbackSection.className = 'feedback-card incorrect';
     feedbackIcon.textContent = '💡';
     feedbackTitle.textContent = quizData.set.feedback_templates.incorrect ||
         'Nog niet helemaal! Hier is het juiste antwoord:';
-    correctAnswerDisplay.textContent = currentItem.target.answer;
+    correctAnswerDisplay.textContent = 'Het juiste antwoord is: ' + currentItem.target.answer;
 
-    // Show tip if available
-    if (currentItem.extra_info && currentItem.extra_info.tip) {
-        feedbackTip.style.display = 'block';
-        feedbackTipContent.textContent = currentItem.extra_info.tip;
+    // Show extra info if available
+    const extraInfoSection = document.getElementById('extraInfoSection');
+    const ruleSection = document.getElementById('ruleSection');
+    const tipSection = document.getElementById('tipSection');
+    const examplesSection = document.getElementById('examplesSection');
+
+    if (currentItem.extra_info) {
+        extraInfoSection.style.display = 'block';
+
+        // Show rule
+        if (currentItem.extra_info.rule) {
+            ruleSection.style.display = 'block';
+            document.getElementById('ruleContent').textContent = currentItem.extra_info.rule;
+        } else {
+            ruleSection.style.display = 'none';
+        }
+
+        // Show tip
+        if (currentItem.extra_info.tip) {
+            tipSection.style.display = 'block';
+            document.getElementById('tipContent').textContent = currentItem.extra_info.tip;
+        } else {
+            tipSection.style.display = 'none';
+        }
+
+        // Show examples
+        if (currentItem.extra_info.examples && currentItem.extra_info.examples.length > 0) {
+            examplesSection.style.display = 'block';
+            const examplesHTML = currentItem.extra_info.examples
+                .map(ex => `<div style="margin: 4px 0;">• ${ex}</div>`)
+                .join('');
+            document.getElementById('examplesContent').innerHTML = examplesHTML;
+        } else {
+            examplesSection.style.display = 'none';
+        }
     } else {
-        feedbackTip.style.display = 'none';
+        extraInfoSection.style.display = 'none';
     }
+
+    // Show next button
+    nextButton.classList.remove('hidden');
 }
 
 // Move to next question
@@ -350,43 +389,18 @@ function nextQuestion() {
     showQuestion(currentQuestionIndex + 1);
 }
 
-// Show hint modal
-function showHint() {
-    if (!currentItem || !currentItem.extra_info) {
-        alert('Geen hint beschikbaar voor deze vraag.');
-        return;
+// Pause quiz
+function pauseQuiz() {
+    if (confirm('Wil je de quiz pauzeren?')) {
+        // Could save state to localStorage here if needed
+        window.location.href = 'index.html';
     }
-
-    const hintModal = document.getElementById('hintModal');
-    const hintRule = document.getElementById('hintRule');
-    const hintExample = document.getElementById('hintExample');
-
-    // Set rule
-    hintRule.textContent = currentItem.extra_info.rule || 'Geen regel beschikbaar.';
-
-    // Set one random example
-    if (currentItem.extra_info.examples && currentItem.extra_info.examples.length > 0) {
-        const randomExample = currentItem.extra_info.examples[
-            Math.floor(Math.random() * currentItem.extra_info.examples.length)
-        ];
-        hintExample.textContent = randomExample;
-    } else {
-        hintExample.textContent = 'Geen voorbeeld beschikbaar.';
-    }
-
-    hintModal.classList.add('show');
 }
 
-// Close hint modal
-function closeHint() {
-    const hintModal = document.getElementById('hintModal');
-    hintModal.classList.remove('show');
-}
-
-// Close hint if clicking backdrop
-function closeHintIfBackdrop(event) {
-    if (event.target.id === 'hintModal') {
-        closeHint();
+// Stop quiz
+function stopQuiz() {
+    if (confirm('Weet je zeker dat je wilt stoppen? Je voortgang gaat verloren.')) {
+        window.location.href = 'index.html';
     }
 }
 
