@@ -219,6 +219,28 @@ const CONFIG = {
                 m8: 'exercises/ws/groep8_wo_m8_webapp_1.json',
                 e8: 'exercises/ws/groep8_wo_e8_webapp_1.json'
             }
+        },
+        spelling: {
+            groep3: {
+                m3: 'exercises/sp/sp_groep3_m3_set_v4_audio.json',
+                e3: 'exercises/sp/sp_groep3_e3_set_v4_audio.json'
+            },
+            groep4: {
+                m4: 'exercises/sp/sp_groep4_m4_set_v4_audio.json',
+                e4: 'exercises/sp/sp_groep4_e4_set_v4_audio.json'
+            },
+            groep5: {
+                m5: 'exercises/sp/sp_groep5_m5_set_v4_audio.json',
+                e5: 'exercises/sp/sp_groep5_e5_set_v4_audio.json'
+            },
+            groep6: {
+                m6: 'exercises/sp/sp_groep6_m6_set_v4_audio.json',
+                e6: 'exercises/sp/sp_groep6_e6_set_v4_audio.json'
+            },
+            groep7: {
+                m7: 'exercises/sp/sp_groep7_m7_set_v4_audio.json',
+                e7: 'exercises/sp/sp_groep7_e7_set_v4_audio.json'
+            }
         }
     }
 };

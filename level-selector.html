@@ -630,9 +630,7 @@
                     '6-M': '',
                     '6-E': '',
                     '7-M': '',
-                    '7-E': '',
-                    '8-M': '',
-                    '8-E': ''
+                    '7-E': ''
                 }
             },
             'dmt': {
@@ -765,10 +763,11 @@
             // Store the subject to load in localStorage
             localStorage.setItem('autoStartSubject', subjectName);
 
-            // For spelling, also store the level and redirect to spelling-quiz
+            // For spelling, also store the groep and moment, then redirect to spelling-dictee
             if (subject === 'spelling') {
-                localStorage.setItem('autoStartLevel', `groep${grade}`);
-                window.location.href = 'spelling-quiz.html';
+                localStorage.setItem('selectedGroep', `groep${grade}`);
+                localStorage.setItem('selectedMoment', key.split('-')[1].toLowerCase() + grade);
+                window.location.href = 'spelling-dictee.html';
             } else {
                 // Redirect to index.html which will auto-start the quiz
                 window.location.href = 'index.html';
