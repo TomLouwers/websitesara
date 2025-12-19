@@ -969,6 +969,17 @@ function updateQuizCardHeader(subject) {
 }
 
 function loadCurrentQuestion() {
+    // Ensure question card wrapper is visible and reset
+    const questionCard = document.getElementById('questionCardMorph');
+
+    // Reset card morph feedback state and restore original HTML
+    if (window.cardMorphFeedbackInstance && questionCard) {
+        window.cardMorphFeedbackInstance.reset(questionCard);
+    } else if (questionCard) {
+        // Remove any flip animation classes if no feedback instance
+        questionCard.classList.remove('card-flip-out', 'card-flip-in');
+    }
+
     // NEW: Check if using text grouping mode
     if (useTextGrouping) {
         loadTextGroupQuestion();
