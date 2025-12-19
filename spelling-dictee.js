@@ -347,18 +347,12 @@ function handleIncorrectAnswer() {
     const tipSection = document.getElementById('tipSection');
     const examplesSection = document.getElementById('examplesSection');
 
-    console.log('Current item:', currentItem); // Debug log
-    console.log('Extra_info exists?', !!currentItem.extra_info); // Debug log
-
     if (currentItem.extra_info) {
-        console.log('Extra info data:', currentItem.extra_info); // Debug log
         let hasAnyInfo = false;
 
         // Show rule
         if (currentItem.extra_info.rule) {
-            console.log('Showing rule:', currentItem.extra_info.rule);
             ruleSection.style.display = 'block';
-            ruleSection.style.visibility = 'visible';
             document.getElementById('ruleContent').textContent = currentItem.extra_info.rule;
             hasAnyInfo = true;
         } else {
@@ -367,9 +361,7 @@ function handleIncorrectAnswer() {
 
         // Show tip
         if (currentItem.extra_info.tip) {
-            console.log('Showing tip:', currentItem.extra_info.tip);
             tipSection.style.display = 'block';
-            tipSection.style.visibility = 'visible';
             document.getElementById('tipContent').textContent = currentItem.extra_info.tip;
             hasAnyInfo = true;
         } else {
@@ -378,37 +370,23 @@ function handleIncorrectAnswer() {
 
         // Show examples
         if (currentItem.extra_info.examples && currentItem.extra_info.examples.length > 0) {
-            console.log('Showing examples:', currentItem.extra_info.examples);
             examplesSection.style.display = 'block';
-            examplesSection.style.visibility = 'visible';
             const examplesHTML = currentItem.extra_info.examples
                 .map(ex => `<div style="margin: 4px 0;">• ${ex}</div>`)
                 .join('');
             document.getElementById('examplesContent').innerHTML = examplesHTML;
             hasAnyInfo = true;
-        } else if (currentItem.extra_info.used_in_sentence) {
-            // Fallback: show used_in_sentence as an example
-            console.log('Showing used_in_sentence as example:', currentItem.extra_info.used_in_sentence);
-            examplesSection.style.display = 'block';
-            examplesSection.style.visibility = 'visible';
-            document.getElementById('examplesContent').innerHTML =
-                `<div style="margin: 4px 0; font-style: italic;">${currentItem.extra_info.used_in_sentence}</div>`;
-            hasAnyInfo = true;
         } else {
             examplesSection.style.display = 'none';
         }
 
-        // Only show the section if we have at least one piece of info
-        console.log('Has any info?', hasAnyInfo);
+        // Show the extra info section if we have at least one piece of info
         if (hasAnyInfo) {
             extraInfoSection.style.display = 'block';
-            extraInfoSection.style.visibility = 'visible';
-            console.log('Extra info section should be visible now');
         } else {
             extraInfoSection.style.display = 'none';
         }
     } else {
-        console.log('No extra_info in current item'); // Debug log
         extraInfoSection.style.display = 'none';
     }
 
