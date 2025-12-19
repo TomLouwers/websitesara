@@ -1510,6 +1510,72 @@ function selectOption(index) {
  * @param {Object|null} selectedOption - The selected option (for error analysis)
  * @param {number} correctIndex - Index of correct answer
  */
+/**
+ * Shows card morph feedback using InsightGenerator and CardMorphFeedback
+ * This is the new unified feedback system for all quiz types
+ *
+ * @param {boolean} isCorrect - Whether the answer was correct
+ * @param {object} currentQuestion - The current question object
+ * @param {object|null} selectedOption - The selected option (null for correct answers)
+ * @param {number} correctIndex - Index of the correct answer
+ */
+function showCardMorphFeedback(isCorrect, currentQuestion, selectedOption = null, correctIndex = null) {
+    // Get the question card morph wrapper
+    const questionCard = document.getElementById('questionCardMorph');
+    const nextButton = document.getElementById('nextBtn');
+
+    if (!questionCard) {
+        console.error('Question card morph wrapper not found');
+        return;
+    }
+
+    // Generate ONE Insight using InsightGenerator
+    let insight;
+    if (isCorrect) {
+        insight = InsightGenerator.generateCorrectInsight(currentQuestion);
+    } else {
+        insight = InsightGenerator.generateIncorrectInsight(currentQuestion, selectedOption);
+    }
+
+    // Build confirmation text
+    const confirmation = InsightGenerator.buildConfirmation(currentQuestion, correctIndex, isCorrect);
+
+    // Initialize CardMorphFeedback if not already
+    if (!window.cardMorphFeedbackInstance) {
+        window.cardMorphFeedbackInstance = new CardMorphFeedback();
+    }
+
+    // Hide old feedback sections
+    const oldFeedback = document.getElementById('feedbackSectionNew');
+    if (oldFeedback) {
+        oldFeedback.classList.add('hidden');
+    }
+
+    // Morph the card
+    window.cardMorphFeedbackInstance.morph({
+        isCorrect: isCorrect,
+        insight: insight,
+        confirmation: confirmation,
+        questionCard: questionCard,
+        nextButton: nextButton,
+        onProceed: () => {
+            // When user clicks next, load the next question
+            nextQuestion();
+        }
+    });
+
+    // Show next button (will be disabled for 1500ms if incorrect)
+    if (nextButton) {
+        nextButton.classList.remove('hidden');
+    }
+
+    // Hide submit button
+    const submitButton = document.getElementById('submitBtn');
+    if (submitButton) {
+        submitButton.classList.add('hidden');
+    }
+}
+
 function populateEnhancedFeedback(isCorrect, currentQuestion, selectedOption = null, correctIndex = null) {
     const feedbackSection = document.getElementById('feedbackSectionNew');
     if (!feedbackSection) return;
@@ -1772,29 +1838,19 @@ function submitAnswer() {
                                      currentQuestion.lova &&
                                      currentQuestion.extra_info;
 
+            // Remove from wrongAnswers if they eventually got it correct (after retry)
             if (isVerhaaltjessom) {
-                // Remove from wrongAnswers if they eventually got it correct (after retry)
                 const wrongAnswerIndex = wrongAnswers.findIndex(wa => wa.question.originalId === currentQuestion.originalId);
                 if (wrongAnswerIndex !== -1) {
                     wrongAnswers.splice(wrongAnswerIndex, 1);
                 }
-
-                // Show success modaal for verhaaltjessommen
-                feedbackSection.classList.add('hidden'); // Hide old feedback
-                showSuccessModaal(currentQuestion, currentQuestion.extra_info);
-            } else {
-                // Old feedback for other subjects (keep for backward compatibility)
-                feedbackSection.classList.add('correct');
-                feedbackTitle.textContent = CONFIG.feedback.correct.title;
-                feedbackMessage.textContent = CONFIG.feedback.correct.message;
-                correctAnswerDisplay.classList.add('hidden');
-                extraInfoDisplay.classList.add('hidden');
-                verhoudingstabelContainer.innerHTML = '';
-                strategyAndTips.classList.add('hidden');
-
-                // NEW: Enhanced feedback component
-                populateEnhancedFeedback(true, currentQuestion, null, correctIndex);
             }
+
+            // Hide old feedback sections
+            feedbackSection.classList.add('hidden');
+
+            // NEW: Unified card morph feedback for ALL subjects
+            showCardMorphFeedback(true, currentQuestion, null, correctIndex);
         } else {
             // Increment error count for this question
             currentQuestionErrors++;
@@ -1821,104 +1877,53 @@ function submitAnswer() {
                 isVerhaaltjessom
             });
 
-            if (isVerhaaltjessom) {
-                // For verhaaltjessommen: mark selected answer as incorrect but DON'T reveal correct answer
-                // This allows the user to try again after seeing the error modal
-                options[selectedAnswer].classList.add('incorrect');
+            // Mark selected answer as incorrect
+            options[selectedAnswer].classList.add('incorrect');
 
-                // Also add new class for new quiz wrapper
-                const newOptions = document.querySelectorAll('.quiz-answers-wrapper .option');
-                if (newOptions[selectedAnswer]) {
-                    newOptions[selectedAnswer].classList.add('is-incorrect');
-                }
+            // Also add new class for new quiz wrapper
+            const newOptions = document.querySelectorAll('.quiz-answers-wrapper .option');
+            if (newOptions[selectedAnswer]) {
+                newOptions[selectedAnswer].classList.add('is-incorrect');
+            }
 
-                incorrectOptions.add(selectedAnswer); // Disable this option for future attempts
+            // Highlight correct answer
+            // Find the correct option by data-correct attribute (not index, due to shuffle!)
+            const correctOption = Array.from(options).find(opt => opt.getAttribute('data-correct') === 'true');
+            if (correctOption) {
+                correctOption.classList.add('correct');
+            }
 
-                // Track wrong answer for review (only add once per question)
-                const alreadyTracked = wrongAnswers.some(wa => wa.question.originalId === currentQuestion.originalId);
-                if (!alreadyTracked) {
-                    const userAnswerText = typeof selectedOption === 'string' ? selectedOption : selectedOption.text;
-                    const correctAnswerText = typeof currentQuestion.options[correctIndex] === 'string'
-                        ? currentQuestion.options[correctIndex]
-                        : currentQuestion.options[correctIndex].text;
+            // Also highlight correct in new wrapper
+            const correctOptionNew = Array.from(newOptions).find(opt => opt.getAttribute('data-correct') === 'true');
+            if (correctOptionNew) {
+                correctOptionNew.classList.add('is-correct');
+            }
 
-                    wrongAnswers.push({
-                        question: currentQuestion,
-                        userAnswer: userAnswerText,
-                        correctAnswer: correctAnswerText,
-                        explanation: errorAnalysis || 'Zie foutanalyse voor uitleg',
-                        questionType: 'verhaaltjessom'
-                    });
-                    console.log('✓ Tracked wrong answer. Total wrongAnswers:', wrongAnswers.length, wrongAnswers);
-                } else {
-                    console.log('Already tracked this question');
-                }
+            // Hide old feedback sections
+            feedbackSection.classList.add('hidden');
 
-                // Show foutanalyse modaal with attempt number
-                feedbackSection.classList.add('hidden'); // Hide old feedback
-                showFoutanalyseModaal(selectedOption, currentQuestion.extra_info, currentQuestionErrors, currentQuestion);
+            // NEW: Unified card morph feedback for ALL subjects (including verhaaltjessommen)
+            showCardMorphFeedback(false, currentQuestion, selectedOption, correctIndex);
 
-                // DON'T set hasAnswered to true here - allow retry
-                // Return early to skip setting hasAnswered at the end
-                return;
-            } else {
-                // For other subjects: mark incorrect and reveal correct answer immediately
-                options[selectedAnswer].classList.add('incorrect');
-
-                // Also add new classes for new quiz wrapper
-                const newOptions = document.querySelectorAll('.quiz-answers-wrapper .option');
-                if (newOptions[selectedAnswer]) {
-                    newOptions[selectedAnswer].classList.add('is-incorrect');
-                }
-
-                // Highlight correct answer if an incorrect one was selected
-                // Find the correct option by data-correct attribute (not index, due to shuffle!)
-                const correctOption = Array.from(options).find(opt => opt.getAttribute('data-correct') === 'true');
-                if (correctOption) {
-                    correctOption.classList.add('correct');
-                }
-
-                // Also highlight correct in new wrapper
-                const correctOptionNew = Array.from(newOptions).find(opt => opt.getAttribute('data-correct') === 'true');
-                if (correctOptionNew) {
-                    correctOptionNew.classList.add('is-correct');
-                }
-                // Old feedback for other subjects (keep for backward compatibility)
-                feedbackSection.classList.add('incorrect');
-                feedbackTitle.textContent = CONFIG.feedback.incorrect.title;
-
-                if (errorAnalysis) {
-                    feedbackMessage.textContent = errorAnalysis;
-                } else {
-                    feedbackMessage.textContent = CONFIG.feedback.incorrect.messageDefault;
-                }
-
-                // Show correct answer - handle both string and object format
+            // Track wrong answer for review (only add once per question)
+            const alreadyTracked = wrongAnswers.some(wa => wa.question.originalId === currentQuestion.originalId);
+            if (!alreadyTracked) {
+                const userAnswerText = typeof selectedOption === 'string'
+                    ? selectedOption
+                    : selectedOption.text;
                 const correctAnswerText = typeof currentQuestion.options[correctIndex] === 'string'
                     ? currentQuestion.options[correctIndex]
                     : currentQuestion.options[correctIndex].text;
-                correctAnswerDisplay.textContent = `Het juiste antwoord was: "${correctAnswerText}"`;
-                correctAnswerDisplay.classList.remove('hidden');
-                strategyAndTips.classList.add('hidden');
 
-                // NEW: Enhanced feedback component
-                populateEnhancedFeedback(false, currentQuestion, selectedOption, correctIndex);
+                wrongAnswers.push({
+                    question: currentQuestion,
+                    userAnswer: userAnswerText,
+                    correctAnswer: correctAnswerText,
+                    explanation: errorAnalysis || 'Zie uitleg voor details',
+                    questionType: isVerhaaltjessom ? 'verhaaltjessom' : 'multiple-choice'
+                });
+                console.log('✓ Tracked wrong answer. Total wrongAnswers:', wrongAnswers.length);
             }
-
-            // Track wrong answer for review
-            const userAnswerText = typeof selectedOption === 'string'
-                ? selectedOption
-                : selectedOption.text;
-            const correctAnswerText = typeof currentQuestion.options[correctIndex] === 'string'
-                ? currentQuestion.options[correctIndex]
-                : currentQuestion.options[correctIndex].text;
-            wrongAnswers.push({
-                question: currentQuestion,
-                userAnswer: userAnswerText,
-                correctAnswer: correctAnswerText,
-                explanation: errorAnalysis || feedbackMessage.textContent,
-                questionType: 'multiple-choice'
-            });
 
             // NIEUW: Toon extra_info bij incorrect antwoord (meerkeuze)
             if (currentQuestion.extra_info) {
@@ -1992,8 +1997,8 @@ function submitAnswer() {
             verhoudingstabelContainer.innerHTML = '';
             strategyAndTips.classList.add('hidden');
 
-            // NEW: Enhanced feedback component (for open-ended, no correct/incorrect index)
-            populateEnhancedFeedback(true, currentQuestion, null, null);
+            // NEW: Unified card morph feedback (for open-ended, no correct/incorrect index)
+            showCardMorphFeedback(true, currentQuestion, null, 0);
 
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, true);
@@ -2008,13 +2013,13 @@ function submitAnswer() {
             feedbackTitle.textContent = CONFIG.feedback.incorrect.title;
             feedbackMessage.textContent = CONFIG.feedback.incorrect.messageWithTips;
 
-            // NEW: Enhanced feedback component
+            // NEW: Unified card morph feedback
             // Create a pseudo-option object for open-ended questions
             const pseudoOption = {
                 text: currentQuestion.possible_answer,
                 foutanalyse: `Het antwoord was: "${currentQuestion.possible_answer}". Probeer het nog een keer!`
             };
-            populateEnhancedFeedback(false, currentQuestion, pseudoOption, null);
+            showCardMorphFeedback(false, currentQuestion, pseudoOption, 0);
 
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, false);
