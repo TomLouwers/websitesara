@@ -1,0 +1,796 @@
+{
+  "set": {
+    "grade": 5,
+    "level": "E5",
+    "mode": "dictee",
+    "category": "woordspelling",
+    "flags": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "read_aloud": {
+      "pattern": [
+        "sentence",
+        "instruction"
+      ]
+    },
+    "feedback_templates": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Nog niet. Luister nog eens en probeer opnieuw.",
+      "instruction": "Schrijf op: {answer}."
+    },
+    "audio_policy": {
+      "strategy": "pre_generated_mp3",
+      "format": "mp3",
+      "naming": "{prefix}_{id:02d}_{part}.mp3",
+      "parts": {
+        "sentence": "s",
+        "instruction": "i"
+      },
+      "folder": "audio/"
+    }
+  },
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "tags": [
+        "werkwoord_ttt"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_01_s.mp3",
+        "instruction": "audio/sp_gr5_e5_01_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Hij loopt naar school.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "loopt",
+        "accept": [
+          "loopt"
+        ]
+      },
+      "extra_info": {
+        "rule": "Bij hij of zij komt er een t achter de stam.",
+        "tip": "Zet er hij voor.",
+        "examples": [
+          "lopen",
+          "hij loopt",
+          "meeloopt"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "tags": [
+        "werkwoord_ttt"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_02_s.mp3",
+        "instruction": "audio/sp_gr5_e5_02_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Zij werkt hard.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "werkt",
+        "accept": [
+          "werkt"
+        ]
+      },
+      "extra_info": {
+        "rule": "Bij hij of zij schrijf je stam plus t.",
+        "tip": "Hoor je t? Kijk naar de stam.",
+        "examples": [
+          "werken",
+          "hij werkt",
+          "doorwerkt"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "tags": [
+        "werkwoord_ttt"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_03_s.mp3",
+        "instruction": "audio/sp_gr5_e5_03_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Hij fietst naar huis.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "fietst",
+        "accept": [
+          "fietst"
+        ]
+      },
+      "extra_info": {
+        "rule": "De stam eindigt al op t, dus er komt geen extra t bij.",
+        "tip": "Stam eindigt op t.",
+        "examples": [
+          "fietsen",
+          "hij fietst",
+          "meegefietst"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "medium",
+      "tags": [
+        "werkwoord_ttt"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_04_s.mp3",
+        "instruction": "audio/sp_gr5_e5_04_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Het wordt donker.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "wordt",
+        "accept": [
+          "wordt"
+        ]
+      },
+      "extra_info": {
+        "rule": "Bij hij of zij schrijf je word met een t.",
+        "tip": "Zet hij ervoor.",
+        "examples": [
+          "worden",
+          "hij wordt",
+          "geworden"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "hard",
+      "tags": [
+        "suffix_heid",
+        "cluster_ch"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_05_s.mp3",
+        "instruction": "audio/sp_gr5_e5_05_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Vriendelijkheid is belangrijk.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "vriendelijkheid",
+        "accept": [
+          "vriendelijkheid"
+        ]
+      },
+      "extra_info": {
+        "rule": "Woorden op heid schrijf je met h-e-i-d.",
+        "tip": "Let op het einde.",
+        "examples": [
+          "vriendelijk",
+          "vriendelijker",
+          "vriendelijkst"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "hard",
+      "tags": [
+        "suffix_heid-meervoud",
+        "cluster_ch"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_06_s.mp3",
+        "instruction": "audio/sp_gr5_e5_06_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Er zijn veel mogelijkheden.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "mogelijkheden",
+        "accept": [
+          "mogelijkheden"
+        ]
+      },
+      "extra_info": {
+        "rule": "Het woord eindigt op heid en krijgt en in het meervoud.",
+        "tip": "Zoek het grondwoord.",
+        "examples": [
+          "mogelijkheid",
+          "mogelijk",
+          "mogelijker"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "medium",
+      "tags": [
+        "suffix_heid",
+        "cluster_ch"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_07_s.mp3",
+        "instruction": "audio/sp_gr5_e5_07_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Duidelijkheid helpt.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "duidelijkheid",
+        "accept": [
+          "duidelijkheid"
+        ]
+      },
+      "extra_info": {
+        "rule": "Het achtervoegsel heid schrijf je altijd hetzelfde.",
+        "tip": "Kijk naar het einde.",
+        "examples": [
+          "duidelijk",
+          "duidelijker",
+          "duidelijkst"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "medium",
+      "tags": [
+        "suffix_ing",
+        "cluster_ch"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_08_s.mp3",
+        "instruction": "audio/sp_gr5_e5_08_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Wat is de bedoeling?",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "bedoeling",
+        "accept": [
+          "bedoeling"
+        ]
+      },
+      "extra_info": {
+        "rule": "Woorden op ing schrijf je met i-n-g.",
+        "tip": "Hoor je ing aan het eind?",
+        "examples": [
+          "bedoelen",
+          "bedoeld",
+          "bedoelingen"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "difficulty": "hard",
+      "tags": [
+        "suffix_lijk",
+        "cluster_ch"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_09_s.mp3",
+        "instruction": "audio/sp_gr5_e5_09_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Hij is verantwoordelijk.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "verantwoordelijk",
+        "accept": [
+          "verantwoordelijk"
+        ]
+      },
+      "extra_info": {
+        "rule": "Woorden op lijk schrijf je met l-i-j-k.",
+        "tip": "Let op ijk aan het eind.",
+        "examples": [
+          "verantwoordelijkheid",
+          "verantwoordelijker",
+          "verantwoordelijkst"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "difficulty": "hard",
+      "tags": [
+        "suffix_lijk",
+        "cluster_ch"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_10_s.mp3",
+        "instruction": "audio/sp_gr5_e5_10_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Dat is waarschijnlijk.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "waarschijnlijk",
+        "accept": [
+          "waarschijnlijk"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je schrijft lijk met l-i-j-k.",
+        "tip": "Hoor je lijk?",
+        "examples": [
+          "waarschijnlijker",
+          "waarschijnlijkheid",
+          "onwaarschijnlijk"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "difficulty": "hard",
+      "tags": [
+        "suffix_achtig",
+        "cluster_ch"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_11_s.mp3",
+        "instruction": "audio/sp_gr5_e5_11_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Dat gedrag is meisjesachtig.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "meisjesachtig",
+        "accept": [
+          "meisjesachtig"
+        ]
+      },
+      "extra_info": {
+        "rule": "Het achtervoegsel achtig schrijf je met a-c-h-t-i-g.",
+        "tip": "Let op cht.",
+        "examples": [
+          "meisje",
+          "meisjes",
+          "meisjesgedrag"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "tags": [
+        "verlengingsregel"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_12_s.mp3",
+        "instruction": "audio/sp_gr5_e5_12_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Gezondheid is belangrijk.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "gezondheid",
+        "accept": [
+          "gezondheid"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je schrijft d omdat je het woord kunt verlengen.",
+        "tip": "Maak het woord langer.",
+        "examples": [
+          "gezond",
+          "gezondere",
+          "ongezond"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "difficulty": "hard",
+      "tags": [
+        "suffix_heid",
+        "cluster_ch"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_13_s.mp3",
+        "instruction": "audio/sp_gr5_e5_13_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Dit is de werkelijkheid.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "werkelijkheid",
+        "accept": [
+          "werkelijkheid"
+        ]
+      },
+      "extra_info": {
+        "rule": "Het achtervoegsel heid schrijf je altijd hetzelfde.",
+        "tip": "Zoek heid.",
+        "examples": [
+          "werkelijk",
+          "werkelijke",
+          "werkelijker"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "tags": [
+        "gesloten_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_14_s.mp3",
+        "instruction": "audio/sp_gr5_e5_14_i.mp3"
+      },
+      "prompt": {
+        "sentence": "We zoeken oplossingen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "oplossingen",
+        "accept": [
+          "oplossingen"
+        ]
+      },
+      "extra_info": {
+        "rule": "De o klinkt kort, daarom schrijf je ss.",
+        "tip": "Korte klank blijft kort.",
+        "examples": [
+          "oplossing",
+          "oplossen",
+          "opgelost"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "tags": [
+        "gesloten_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_15_s.mp3",
+        "instruction": "audio/sp_gr5_e5_15_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Dat is een mooie herinnering.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "herinnering",
+        "accept": [
+          "herinnering"
+        ]
+      },
+      "extra_info": {
+        "rule": "De i klinkt kort, daarom schrijf je nn.",
+        "tip": "Luister naar de korte i.",
+        "examples": [
+          "herinneren",
+          "herinnert",
+          "herinneringen"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "tags": [
+        "prefix_on"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_16_s.mp3",
+        "instruction": "audio/sp_gr5_e5_16_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Dat is onmogelijk.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "onmogelijk",
+        "accept": [
+          "onmogelijk"
+        ]
+      },
+      "extra_info": {
+        "rule": "Het voorvoegsel on schrijf je altijd hetzelfde.",
+        "tip": "Let op het begin.",
+        "examples": [
+          "mogelijk",
+          "onmogelijker",
+          "onmogelijkheid"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "tags": [
+        "prefix_ver-en-ui"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_17_s.mp3",
+        "instruction": "audio/sp_gr5_e5_17_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Wij gaan verhuizen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "verhuizen",
+        "accept": [
+          "verhuizen"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort ui en schrijft u-i.",
+        "tip": "Zoek ui.",
+        "examples": [
+          "verhuisd",
+          "verhuizing",
+          "verhuist"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "tags": [
+        "vergrotende_trap"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_18_s.mp3",
+        "instruction": "audio/sp_gr5_e5_18_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Dit is duidelijker.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "duidelijker",
+        "accept": [
+          "duidelijker"
+        ]
+      },
+      "extra_info": {
+        "rule": "Bij er blijft de spelling van het woord hetzelfde.",
+        "tip": "Kijk naar het grondwoord.",
+        "examples": [
+          "duidelijk",
+          "duidelijkst",
+          "duidelijkheid"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "tags": [
+        "werkwoord_ttt"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_19_s.mp3",
+        "instruction": "audio/sp_gr5_e5_19_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Hij bedoelt dat.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "bedoelt",
+        "accept": [
+          "bedoelt"
+        ]
+      },
+      "extra_info": {
+        "rule": "Bij hij of zij komt er een t achter de stam.",
+        "tip": "Zet hij ervoor.",
+        "examples": [
+          "bedoelen",
+          "hij bedoelt",
+          "bedoeld"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "difficulty": "hard",
+      "tags": [
+        "suffix_heid-meerlettergrepig",
+        "cluster_ch"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_20_s.mp3",
+        "instruction": "audio/sp_gr5_e5_20_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Dat is zijn verantwoordelijkheid.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "verantwoordelijkheid",
+        "accept": [
+          "verantwoordelijkheid"
+        ]
+      },
+      "extra_info": {
+        "rule": "Het woord eindigt op heid en schrijf je volledig.",
+        "tip": "Let op het lange woord.",
+        "examples": [
+          "verantwoordelijk",
+          "verantwoordelijkheden",
+          "verantwoordelijker"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "tags": [
+        "vergrotende_trap"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_21_s.mp3",
+        "instruction": "audio/sp_gr5_e5_21_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Dit lijkt mogelijker.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "mogelijker",
+        "accept": [
+          "mogelijker"
+        ]
+      },
+      "extra_info": {
+        "rule": "Bij er verandert de spelling van het woord niet.",
+        "tip": "Blijf bij het grondwoord.",
+        "examples": [
+          "mogelijk",
+          "mogelijkst",
+          "mogelijkheid"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "difficulty": "easy",
+      "tags": [
+        "werkwoord_ttt"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_22_s.mp3",
+        "instruction": "audio/sp_gr5_e5_22_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Dat betekent veel.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "betekent",
+        "accept": [
+          "betekent"
+        ]
+      },
+      "extra_info": {
+        "rule": "Bij hij of zij schrijf je stam plus t.",
+        "tip": "Zet hij ervoor.",
+        "examples": [
+          "betekenen",
+          "hij betekent",
+          "betekend"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "tags": [
+        "suffix_heid",
+        "cluster_ch"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_23_s.mp3",
+        "instruction": "audio/sp_gr5_e5_23_i.mp3"
+      },
+      "prompt": {
+        "sentence": "De waarschijnlijkheid is groot.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "waarschijnlijkheid",
+        "accept": [
+          "waarschijnlijkheid"
+        ]
+      },
+      "extra_info": {
+        "rule": "Woorden op heid schrijf je met h-e-i-d.",
+        "tip": "Let op het einde.",
+        "examples": [
+          "waarschijnlijk",
+          "waarschijnlijker",
+          "onwaarschijnlijk"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "tags": [
+        "vergrotende_trap"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_24_s.mp3",
+        "instruction": "audio/sp_gr5_e5_24_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Zij is vriendelijker.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "vriendelijker",
+        "accept": [
+          "vriendelijker"
+        ]
+      },
+      "extra_info": {
+        "rule": "Bij er blijft de spelling van het woord hetzelfde.",
+        "tip": "Kijk naar het grondwoord.",
+        "examples": [
+          "vriendelijk",
+          "vriendelijkst",
+          "vriendelijkheid"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "tags": [
+        "suffix_lijk",
+        "cluster_ch"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_e5_25_s.mp3",
+        "instruction": "audio/sp_gr5_e5_25_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Dat is opmerkelijk.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "opmerkelijk",
+        "accept": [
+          "opmerkelijk"
+        ]
+      },
+      "extra_info": {
+        "rule": "Woorden op lijk schrijf je met l-i-j-k.",
+        "tip": "Let op ijk.",
+        "examples": [
+          "opmerking",
+          "opmerkelijke",
+          "opmerkelijker"
+        ]
+      }
+    }
+  ]
+}

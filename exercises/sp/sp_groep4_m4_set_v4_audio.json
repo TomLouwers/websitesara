@@ -1,0 +1,785 @@
+{
+  "set": {
+    "grade": 4,
+    "level": "M4",
+    "mode": "dictee",
+    "category": "woordspelling",
+    "flags": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "read_aloud": {
+      "pattern": [
+        "sentence",
+        "instruction"
+      ]
+    },
+    "feedback_templates": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Nog niet. Luister nog eens en probeer opnieuw.",
+      "instruction": "Schrijf op: {answer}."
+    },
+    "audio_policy": {
+      "strategy": "pre_generated_mp3",
+      "format": "mp3",
+      "naming": "{prefix}_{id:02d}_{part}.mp3",
+      "parts": {
+        "sentence": "s",
+        "instruction": "i"
+      },
+      "folder": "audio/"
+    }
+  },
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "tags": [
+        "open_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_01_s.mp3",
+        "instruction": "audio/sp_gr4_m4_01_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie kinderen lopen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "lopen",
+        "accept": [
+          "lopen"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort een lange o en schrijft maar één o.",
+        "tip": "Hoor je een lange klank? Kijk of de lettergreep open is.",
+        "examples": [
+          "loopt",
+          "lopende",
+          "meelopen"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "tags": [
+        "open_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_02_s.mp3",
+        "instruction": "audio/sp_gr4_m4_02_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Er staan bomen in het park.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "bomen",
+        "accept": [
+          "bomen"
+        ]
+      },
+      "extra_info": {
+        "rule": "De o klinkt lang, dus je schrijft één o.",
+        "tip": "Hak het woord: bo-men.",
+        "examples": [
+          "boom",
+          "boompje",
+          "bomenrij"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "tags": [
+        "gesloten_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_03_s.mp3",
+        "instruction": "audio/sp_gr4_m4_03_i.mp3"
+      },
+      "prompt": {
+        "sentence": "We zien vissen in het water.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "vissen",
+        "accept": [
+          "vissen"
+        ]
+      },
+      "extra_info": {
+        "rule": "De korte i blijft kort, daarom schrijf je dubbel s.",
+        "tip": "Hoor je een korte klank? Vaak komt er een dubbele medeklinker.",
+        "examples": [
+          "vis",
+          "visje",
+          "vissensoep"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "tags": [
+        "gesloten_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_04_s.mp3",
+        "instruction": "audio/sp_gr4_m4_04_i.mp3"
+      },
+      "prompt": {
+        "sentence": "De bakker bakt brood.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "bakker",
+        "accept": [
+          "bakker"
+        ]
+      },
+      "extra_info": {
+        "rule": "De a klinkt kort, daarom schrijf je kk.",
+        "tip": "Luister of de klinker kort klinkt.",
+        "examples": [
+          "bakken",
+          "bakkers",
+          "broodbakker"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "tags": [
+        "open_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_05_s.mp3",
+        "instruction": "audio/sp_gr4_m4_05_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Een vogel vliegt hoog.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "vogel",
+        "accept": [
+          "vogel"
+        ]
+      },
+      "extra_info": {
+        "rule": "De o klinkt lang, dus je schrijft één o.",
+        "tip": "Hak het woord in stukjes.",
+        "examples": [
+          "vogels",
+          "vogeltje",
+          "roofvogel"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "medium",
+      "tags": [
+        "gesloten_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_06_s.mp3",
+        "instruction": "audio/sp_gr4_m4_06_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik schrijf een letter.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "letter",
+        "accept": [
+          "letter"
+        ]
+      },
+      "extra_info": {
+        "rule": "De e klinkt kort, daarom schrijf je tt.",
+        "tip": "Korte klank? Denk aan een dubbele medeklinker.",
+        "examples": [
+          "letters",
+          "lettertje",
+          "letterdoos"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "tags": [
+        "open_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_07_s.mp3",
+        "instruction": "audio/sp_gr4_m4_07_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik drink water.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "water",
+        "accept": [
+          "water"
+        ]
+      },
+      "extra_info": {
+        "rule": "De a klinkt lang, dus je schrijft één a.",
+        "tip": "Luister of de klank lang is.",
+        "examples": [
+          "wateren",
+          "watertje",
+          "waterkant"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "medium",
+      "tags": [
+        "gesloten_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_08_s.mp3",
+        "instruction": "audio/sp_gr4_m4_08_i.mp3"
+      },
+      "prompt": {
+        "sentence": "We gaan hout hakken.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "hakken",
+        "accept": [
+          "hakken"
+        ]
+      },
+      "extra_info": {
+        "rule": "De a klinkt kort, daarom schrijf je kk.",
+        "tip": "Korte klank vraagt om twee letters.",
+        "examples": [
+          "hak",
+          "hakbijl",
+          "gehakt"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "tags": [
+        "cluster_ng"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_09_s.mp3",
+        "instruction": "audio/sp_gr4_m4_09_i.mp3"
+      },
+      "prompt": {
+        "sentence": "De koning zwaait.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "koning",
+        "accept": [
+          "koning"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort ng aan het eind en schrijft n-g.",
+        "tip": "Ng schrijf je met twee letters.",
+        "examples": [
+          "koningen",
+          "koninklijk",
+          "koningsdag"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "tags": [
+        "cluster_nk"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_10_s.mp3",
+        "instruction": "audio/sp_gr4_m4_10_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik moet goed denken.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "denken",
+        "accept": [
+          "denken"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort nk en schrijft n-k.",
+        "tip": "Luister goed naar nk.",
+        "examples": [
+          "denkt",
+          "denkende",
+          "nadenken"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "tags": [
+        "tweetekenklank_ou"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_11_s.mp3",
+        "instruction": "audio/sp_gr4_m4_11_i.mp3"
+      },
+      "prompt": {
+        "sentence": "De ring is van goud.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "goud",
+        "accept": [
+          "goud"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort ou en schrijft o-u.",
+        "tip": "Ou is één klank.",
+        "examples": [
+          "gouden",
+          "goudje",
+          "goudvis"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "tags": [
+        "lange_klank_aa"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_12_s.mp3",
+        "instruction": "audio/sp_gr4_m4_12_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Het paard rent.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "paard",
+        "accept": [
+          "paard"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort een lange a en schrijft aa.",
+        "tip": "Zeg het woord langzaam.",
+        "examples": [
+          "paarden",
+          "paardje",
+          "paardenstal"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "tags": [
+        "open_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_13_s.mp3",
+        "instruction": "audio/sp_gr4_m4_13_i.mp3"
+      },
+      "prompt": {
+        "sentence": "De meester helpt.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "meester",
+        "accept": [
+          "meester"
+        ]
+      },
+      "extra_info": {
+        "rule": "De ee klinkt lang, daarom schrijf je ee.",
+        "tip": "Lange e hoor je langer.",
+        "examples": [
+          "meesters",
+          "meesterschap",
+          "schoolmeester"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "tags": [
+        "gesloten_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_14_s.mp3",
+        "instruction": "audio/sp_gr4_m4_14_i.mp3"
+      },
+      "prompt": {
+        "sentence": "We maken sommen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "sommen",
+        "accept": [
+          "sommen"
+        ]
+      },
+      "extra_info": {
+        "rule": "De o klinkt kort, daarom schrijf je mm.",
+        "tip": "Korte klank = dubbele medeklinker.",
+        "examples": [
+          "som",
+          "sommetje",
+          "sommenboek"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "tags": [
+        "tweetekenklank_ui"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_15_s.mp3",
+        "instruction": "audio/sp_gr4_m4_15_i.mp3"
+      },
+      "prompt": {
+        "sentence": "De jongen gaat fluiten.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "fluiten",
+        "accept": [
+          "fluiten"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort ui en schrijft u-i.",
+        "tip": "Zoek de klank ui.",
+        "examples": [
+          "fluit",
+          "fluitje",
+          "meeﬂuiten"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "tags": [
+        "cluster_sch"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_16_s.mp3",
+        "instruction": "audio/sp_gr4_m4_16_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Het schip vaart.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "schip",
+        "accept": [
+          "schip"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort sch en schrijft s-c-h.",
+        "tip": "Schrijf alle drie de letters.",
+        "examples": [
+          "schepen",
+          "schipje",
+          "schipvaart"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "tags": [
+        "cluster_ch"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_17_s.mp3",
+        "instruction": "audio/sp_gr4_m4_17_i.mp3"
+      },
+      "prompt": {
+        "sentence": "De kinderen lachen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "lachen",
+        "accept": [
+          "lachen"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort ch en schrijft c-h.",
+        "tip": "Ch hoor je achter in je keel.",
+        "examples": [
+          "lacht",
+          "lachend",
+          "meelachen"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "difficulty": "easy",
+      "tags": [
+        "open_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_18_s.mp3",
+        "instruction": "audio/sp_gr4_m4_18_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Het is zomer.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "zomer",
+        "accept": [
+          "zomer"
+        ]
+      },
+      "extra_info": {
+        "rule": "De o klinkt lang, dus je schrijft één o.",
+        "tip": "Hak het woord: zo-mer.",
+        "examples": [
+          "zomers",
+          "zomertje",
+          "zomervakantie"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "difficulty": "easy",
+      "tags": [
+        "gesloten_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_19_s.mp3",
+        "instruction": "audio/sp_gr4_m4_19_i.mp3"
+      },
+      "prompt": {
+        "sentence": "We gaan koekjes bakken.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "bakken",
+        "accept": [
+          "bakken"
+        ]
+      },
+      "extra_info": {
+        "rule": "De a klinkt kort, daarom schrijf je kk.",
+        "tip": "Luister naar de korte a.",
+        "examples": [
+          "bak",
+          "bakker",
+          "gebakken"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "difficulty": "easy",
+      "tags": [
+        "open_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_20_s.mp3",
+        "instruction": "audio/sp_gr4_m4_20_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik ga lezen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "lezen",
+        "accept": [
+          "lezen"
+        ]
+      },
+      "extra_info": {
+        "rule": "De e klinkt lang, dus je schrijft één e.",
+        "tip": "Hoor je een lange klank?",
+        "examples": [
+          "lees",
+          "lezend",
+          "meelezen"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "tags": [
+        "gesloten_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_21_s.mp3",
+        "instruction": "audio/sp_gr4_m4_21_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Er zijn veel bruggen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "bruggen",
+        "accept": [
+          "bruggen"
+        ]
+      },
+      "extra_info": {
+        "rule": "De u klinkt kort, daarom schrijf je gg.",
+        "tip": "Korte klank = dubbel.",
+        "examples": [
+          "brug",
+          "bruggetje",
+          "bruggenbouw"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "difficulty": "easy",
+      "tags": [
+        "open_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_22_s.mp3",
+        "instruction": "audio/sp_gr4_m4_22_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Het is regen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "regen",
+        "accept": [
+          "regen"
+        ]
+      },
+      "extra_info": {
+        "rule": "De e klinkt lang, dus je schrijft één e.",
+        "tip": "Hak het woord: re-gen.",
+        "examples": [
+          "regent",
+          "regenachtig",
+          "regenbui"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "tags": [
+        "gesloten_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_23_s.mp3",
+        "instruction": "audio/sp_gr4_m4_23_i.mp3"
+      },
+      "prompt": {
+        "sentence": "We gaan klimmen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "klimmen",
+        "accept": [
+          "klimmen"
+        ]
+      },
+      "extra_info": {
+        "rule": "De i klinkt kort, daarom schrijf je mm.",
+        "tip": "Luister naar de korte i.",
+        "examples": [
+          "klim",
+          "klimmer",
+          "inklimmen"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "difficulty": "easy",
+      "tags": [
+        "open_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_24_s.mp3",
+        "instruction": "audio/sp_gr4_m4_24_i.mp3"
+      },
+      "prompt": {
+        "sentence": "De tafel is groot.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "tafel",
+        "accept": [
+          "tafel"
+        ]
+      },
+      "extra_info": {
+        "rule": "De a klinkt lang, dus je schrijft één a.",
+        "tip": "Hak het woord: ta-fel.",
+        "examples": [
+          "tafels",
+          "tafeltje",
+          "eettafel"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "tags": [
+        "gesloten_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr4_m4_25_s.mp3",
+        "instruction": "audio/sp_gr4_m4_25_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Het wordt steeds drukker.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "drukker",
+        "accept": [
+          "drukker"
+        ]
+      },
+      "extra_info": {
+        "rule": "De u klinkt kort, daarom schrijf je kk.",
+        "tip": "Korte klank hoor je snel.",
+        "examples": [
+          "druk",
+          "drukte",
+          "afdrukken"
+        ]
+      }
+    }
+  ]
+}

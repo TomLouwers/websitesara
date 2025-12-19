@@ -1,0 +1,786 @@
+{
+  "set": {
+    "grade": 3,
+    "level": "M3",
+    "mode": "dictee",
+    "category": "woordspelling",
+    "flags": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "read_aloud": {
+      "pattern": [
+        "sentence",
+        "instruction"
+      ]
+    },
+    "feedback_templates": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Nog niet. Luister nog eens en probeer opnieuw.",
+      "instruction": "Schrijf op: {answer}."
+    },
+    "audio_policy": {
+      "strategy": "pre_generated_mp3",
+      "format": "mp3",
+      "naming": "{prefix}_{id:02d}_{part}.mp3",
+      "parts": {
+        "sentence": "s",
+        "instruction": "i"
+      },
+      "folder": "audio/"
+    }
+  },
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "tags": [
+        "korte_klank"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_01_s.mp3",
+        "instruction": "audio/sp_gr3_m3_01_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie een kat.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "kat",
+        "accept": [
+          "kat"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je schrijft het woord zoals je het hoort: k-a-t.",
+        "tip": "Hak in klanken: k / a / t.",
+        "examples": [
+          "katten",
+          "katje",
+          "kattenbak"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "tags": [
+        "lange_klank_oo"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_02_s.mp3",
+        "instruction": "audio/sp_gr3_m3_02_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie een boom.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "boom",
+        "accept": [
+          "boom"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort een lange o: daarom schrijf je 'oo'.",
+        "tip": "Zeg het langzaam: booo-m.",
+        "examples": [
+          "bomen",
+          "boompje",
+          "boomtop"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "tags": [
+        "tweetekenklank_ui"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_03_s.mp3",
+        "instruction": "audio/sp_gr3_m3_03_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie een huis.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "huis",
+        "accept": [
+          "huis"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort de klank 'ui': die schrijf je met u-i.",
+        "tip": "Zoek de tweetekenklank: ui.",
+        "examples": [
+          "huizen",
+          "huisje",
+          "huisdeur"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "tags": [
+        "lange_klank_oo"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_04_s.mp3",
+        "instruction": "audio/sp_gr3_m3_04_i.mp3"
+      },
+      "prompt": {
+        "sentence": "De bal is rood.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "rood",
+        "accept": [
+          "rood"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort een lange o: schrijf 'oo'. Aan het eind staat een d.",
+        "tip": "Let op de laatste letter: d.",
+        "examples": [
+          "rode",
+          "roder",
+          "roodste"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "medium",
+      "tags": [
+        "tweetekenklank_oe"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_05_s.mp3",
+        "instruction": "audio/sp_gr3_m3_05_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie een bloem.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "bloem",
+        "accept": [
+          "bloem"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort de klank 'oe': die schrijf je met o-e.",
+        "tip": "Zeg: bl-oe-m.",
+        "examples": [
+          "bloemen",
+          "bloempje",
+          "bloemrijk"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "tags": [
+        "lange_klank_aa"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_06_s.mp3",
+        "instruction": "audio/sp_gr3_m3_06_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie een maan.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "maan",
+        "accept": [
+          "maan"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort een lange a: daarom schrijf je 'aa'.",
+        "tip": "Zeg het lang: maaa-n.",
+        "examples": [
+          "manen",
+          "maantje",
+          "maanlicht"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "tags": [
+        "lange_klank_ee"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_07_s.mp3",
+        "instruction": "audio/sp_gr3_m3_07_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Mijn been doet pijn.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "been",
+        "accept": [
+          "been"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort een lange e: daarom schrijf je 'ee'.",
+        "tip": "Zeg het langzaam: beee-n.",
+        "examples": [
+          "benen",
+          "beentje",
+          "beenpijn"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "medium",
+      "tags": [
+        "tweetekenklank_eu"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_08_s.mp3",
+        "instruction": "audio/sp_gr3_m3_08_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Doe de deur dicht.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "deur",
+        "accept": [
+          "deur"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort de klank 'eu': die schrijf je met e-u.",
+        "tip": "‘eu’ is één klank.",
+        "examples": [
+          "deuren",
+          "deurtje",
+          "voordeur"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "tags": [
+        "korte_klank"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_09_s.mp3",
+        "instruction": "audio/sp_gr3_m3_09_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie een bal.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "bal",
+        "accept": [
+          "bal"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je schrijft het woord zoals je het hoort: b-a-l.",
+        "tip": "Hak in klanken: b / a / l.",
+        "examples": [
+          "ballen",
+          "balletje",
+          "voetbal"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "tags": [
+        "korte_klank"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_10_s.mp3",
+        "instruction": "audio/sp_gr3_m3_10_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie een vis.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "vis",
+        "accept": [
+          "vis"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je schrijft het woord zoals je het hoort: v-i-s.",
+        "tip": "Korte i: één letter i.",
+        "examples": [
+          "vissen",
+          "visje",
+          "viskom"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "tags": [
+        "tweetekenklank_ie"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_11_s.mp3",
+        "instruction": "audio/sp_gr3_m3_11_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie een fiets.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "fiets",
+        "accept": [
+          "fiets"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort de klank 'ie': die schrijf je met i-e.",
+        "tip": "Zoek de tweetekenklank: ie.",
+        "examples": [
+          "fietsen",
+          "fietsje",
+          "fietsbel"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "tags": [
+        "tweetekenklank_oe"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_12_s.mp3",
+        "instruction": "audio/sp_gr3_m3_12_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie een boek.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "boek",
+        "accept": [
+          "boek"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort de klank 'oe': schrijf o-e.",
+        "tip": "Zeg: b-oe-k.",
+        "examples": [
+          "boeken",
+          "boekje",
+          "boekenkast"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "tags": [
+        "tweetekenklank_oe"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_13_s.mp3",
+        "instruction": "audio/sp_gr3_m3_13_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie een koek.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "koek",
+        "accept": [
+          "koek"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort de klank 'oe': schrijf o-e.",
+        "tip": "Zeg: k-oe-k.",
+        "examples": [
+          "koeken",
+          "koekje",
+          "koekblik"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "tags": [
+        "klankgroep_aai"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_14_s.mp3",
+        "instruction": "audio/sp_gr3_m3_14_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie een haai.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "haai",
+        "accept": [
+          "haai"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort 'aai': die schrijf je met a-a-i.",
+        "tip": "‘aai’ is een klankgroep: aai.",
+        "examples": [
+          "haaien",
+          "haaienvin",
+          "haaienkooi"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "tags": [
+        "klankgroep_aai"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_15_s.mp3",
+        "instruction": "audio/sp_gr3_m3_15_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Dit spel is saai.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "saai",
+        "accept": [
+          "saai"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort 'aai': die schrijf je met a-a-i.",
+        "tip": "Let op: aai schrijf je altijd met drie letters.",
+        "examples": [
+          "saaie",
+          "saaiste",
+          "saaiheid"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "tags": [
+        "tweetekenklank_ei"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_16_s.mp3",
+        "instruction": "audio/sp_gr3_m3_16_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie een geit.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "geit",
+        "accept": [
+          "geit"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort 'ei': die schrijf je met e-i.",
+        "tip": "‘ei’ is één klank.",
+        "examples": [
+          "geiten",
+          "geitje",
+          "geitenstal"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "tags": [
+        "tweetekenklank_ei"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_17_s.mp3",
+        "instruction": "audio/sp_gr3_m3_17_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie een reis.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "reis",
+        "accept": [
+          "reis"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort 'ei': die schrijf je met e-i.",
+        "tip": "Zeg langzaam: r-ei-s.",
+        "examples": [
+          "reizen",
+          "reisje",
+          "reisgids"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "tags": [
+        "tweetekenklank_ui"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_18_s.mp3",
+        "instruction": "audio/sp_gr3_m3_18_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie een muis.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "muis",
+        "accept": [
+          "muis"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort 'ui': die schrijf je met u-i.",
+        "tip": "Zoek ui in het woord.",
+        "examples": [
+          "muizen",
+          "muisje",
+          "muizenval"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "tags": [
+        "tweetekenklank_ou"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_19_s.mp3",
+        "instruction": "audio/sp_gr3_m3_19_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie een hout.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "hout",
+        "accept": [
+          "hout"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort 'ou': die schrijf je met o-u.",
+        "tip": "‘ou’ is één klank.",
+        "examples": [
+          "houten",
+          "houtje",
+          "houtblok"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "tags": [
+        "tweetekenklank_ou"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_20_s.mp3",
+        "instruction": "audio/sp_gr3_m3_20_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Het water is koud.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "koud",
+        "accept": [
+          "koud"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort 'ou': schrijf o-u. Aan het eind staat een d.",
+        "tip": "Let op de laatste letter: d.",
+        "examples": [
+          "koude",
+          "kouder",
+          "koudste"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "tags": [
+        "cluster_ng"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_21_s.mp3",
+        "instruction": "audio/sp_gr3_m3_21_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik heb een ring.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "ring",
+        "accept": [
+          "ring"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort 'ng' aan het eind: schrijf n-g.",
+        "tip": "ng schrijf je met twee letters.",
+        "examples": [
+          "ringen",
+          "ringetje",
+          "ringvinger"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "tags": [
+        "cluster_nk"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_22_s.mp3",
+        "instruction": "audio/sp_gr3_m3_22_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie een bank.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "bank",
+        "accept": [
+          "bank"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort 'nk': schrijf n-k.",
+        "tip": "nk is een vaste combinatie.",
+        "examples": [
+          "banken",
+          "bankje",
+          "schoolbank"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "tags": [
+        "cluster"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_23_s.mp3",
+        "instruction": "audio/sp_gr3_m3_23_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie een ster.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "ster",
+        "accept": [
+          "ster"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort 'st' vooraan: beide letters schrijf je op.",
+        "tip": "Luister naar de beginletters: s-t.",
+        "examples": [
+          "sterren",
+          "stertje",
+          "sterlicht"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "tags": [
+        "cluster"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_24_s.mp3",
+        "instruction": "audio/sp_gr3_m3_24_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik loop op het gras.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "gras",
+        "accept": [
+          "gras"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort 'gr' vooraan: beide letters schrijf je op.",
+        "tip": "Twee medeklinkers vooraan: g-r.",
+        "examples": [
+          "grassen",
+          "grasspriet",
+          "grasveld"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "tags": [
+        "cluster",
+        "lange_klank_oo"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr3_m3_25_s.mp3",
+        "instruction": "audio/sp_gr3_m3_25_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie een spoor.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "spoor",
+        "accept": [
+          "spoor"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort 'sp' vooraan en een lange o: schrijf 'oo'.",
+        "tip": "Let op: sp + oo.",
+        "examples": [
+          "sporen",
+          "spoortje",
+          "spoorlijn"
+        ]
+      }
+    }
+  ]
+}

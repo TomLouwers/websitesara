@@ -1,0 +1,790 @@
+{
+  "set": {
+    "grade": 5,
+    "level": "M5",
+    "mode": "dictee",
+    "category": "woordspelling",
+    "flags": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "read_aloud": {
+      "pattern": [
+        "sentence",
+        "instruction"
+      ]
+    },
+    "feedback_templates": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Nog niet. Luister nog eens en probeer opnieuw.",
+      "instruction": "Schrijf op: {answer}."
+    },
+    "audio_policy": {
+      "strategy": "pre_generated_mp3",
+      "format": "mp3",
+      "naming": "{prefix}_{id:02d}_{part}.mp3",
+      "parts": {
+        "sentence": "s",
+        "instruction": "i"
+      },
+      "folder": "audio/"
+    }
+  },
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "tags": [
+        "verlengingsregel"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_01_s.mp3",
+        "instruction": "audio/sp_gr5_m5_01_i.mp3"
+      },
+      "prompt": {
+        "sentence": "De honden rennen buiten.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "honden",
+        "accept": [
+          "honden"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort een d, maar schrijft d omdat je het woord kunt verlengen.",
+        "tip": "Maak het woord langer om de laatste letter te horen.",
+        "examples": [
+          "hond",
+          "hondje",
+          "hondenhok"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "tags": [
+        "verlengingsregel"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_02_s.mp3",
+        "instruction": "audio/sp_gr5_m5_02_i.mp3"
+      },
+      "prompt": {
+        "sentence": "De paarden staan in de wei.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "paarden",
+        "accept": [
+          "paarden"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort t, maar schrijft d omdat je het woord verlengt.",
+        "tip": "Zeg het woord in het meervoud.",
+        "examples": [
+          "paard",
+          "paardje",
+          "paardenstal"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "tags": [
+        "tweetekenklank_ui"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_03_s.mp3",
+        "instruction": "audio/sp_gr5_m5_03_i.mp3"
+      },
+      "prompt": {
+        "sentence": "In de straat staan veel huizen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "huizen",
+        "accept": [
+          "huizen"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort ui en schrijft u-i.",
+        "tip": "Ui is één klank.",
+        "examples": [
+          "huis",
+          "huisje",
+          "huizenrij"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "medium",
+      "tags": [
+        "ei_ij"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_04_s.mp3",
+        "instruction": "audio/sp_gr5_m5_04_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Wij gaan graag reizen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "reizen",
+        "accept": [
+          "reizen"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort ei en schrijft e-i.",
+        "tip": "Luister goed: ei of ij.",
+        "examples": [
+          "reis",
+          "reiziger",
+          "reisje"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "medium",
+      "tags": [
+        "ij",
+        "open_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_05_s.mp3",
+        "instruction": "audio/sp_gr5_m5_05_i.mp3"
+      },
+      "prompt": {
+        "sentence": "We blijven nog even hier.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "blijven",
+        "accept": [
+          "blijven"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort ij en schrijft i-j.",
+        "tip": "Zoek de klank ij.",
+        "examples": [
+          "blijft",
+          "blijvend",
+          "bijblijven"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "medium",
+      "tags": [
+        "au_ou"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_06_s.mp3",
+        "instruction": "audio/sp_gr5_m5_06_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Dat was een flauwe grap.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "flauwe",
+        "accept": [
+          "flauwe"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort au en schrijft a-u.",
+        "tip": "Au schrijf je met a en u.",
+        "examples": [
+          "flauw",
+          "flauwer",
+          "flauwte"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "medium",
+      "tags": [
+        "au_ou"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_07_s.mp3",
+        "instruction": "audio/sp_gr5_m5_07_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Vandaag is het koudere weer.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "koudere",
+        "accept": [
+          "koudere"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort ou en schrijft o-u.",
+        "tip": "Ou hoor je als één klank.",
+        "examples": [
+          "koud",
+          "kouder",
+          "kou"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "tags": [
+        "gesloten_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_08_s.mp3",
+        "instruction": "audio/sp_gr5_m5_08_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik ben vandaag gelukkig.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "gelukkig",
+        "accept": [
+          "gelukkig"
+        ]
+      },
+      "extra_info": {
+        "rule": "De u klinkt kort, daarom schrijf je kk.",
+        "tip": "Korte klank = dubbel.",
+        "examples": [
+          "geluk",
+          "gelukkige",
+          "ongelukkig"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "tags": [
+        "cluster_sch"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_09_s.mp3",
+        "instruction": "audio/sp_gr5_m5_09_i.mp3"
+      },
+      "prompt": {
+        "sentence": "In de stad zijn veel scholen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "scholen",
+        "accept": [
+          "scholen"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort sch en schrijft s-c-h.",
+        "tip": "Schrijf alle drie de letters.",
+        "examples": [
+          "school",
+          "schooltje",
+          "schoolplein"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "tags": [
+        "cluster_ch"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_10_s.mp3",
+        "instruction": "audio/sp_gr5_m5_10_i.mp3"
+      },
+      "prompt": {
+        "sentence": "We moeten hard lachen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "lachen",
+        "accept": [
+          "lachen"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort ch en schrijft c-h.",
+        "tip": "Ch hoor je achter in je keel.",
+        "examples": [
+          "lacht",
+          "lachend",
+          "meelachen"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "tags": [
+        "verlengingsregel"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_11_s.mp3",
+        "instruction": "audio/sp_gr5_m5_11_i.mp3"
+      },
+      "prompt": {
+        "sentence": "In deze stad zijn veel bruggen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "bruggen",
+        "accept": [
+          "bruggen"
+        ]
+      },
+      "extra_info": {
+        "rule": "De g blijft staan als je het woord verlengt.",
+        "tip": "Maak het woord langer.",
+        "examples": [
+          "brug",
+          "bruggetje",
+          "bruggenbouw"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "tags": [
+        "cluster_ng"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_12_s.mp3",
+        "instruction": "audio/sp_gr5_m5_12_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik zie ringen in de winkel.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "ringen",
+        "accept": [
+          "ringen"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort ng en schrijft n-g.",
+        "tip": "Ng zijn twee letters.",
+        "examples": [
+          "ring",
+          "ringetje",
+          "ringvinger"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "tags": [
+        "cluster_nk"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_13_s.mp3",
+        "instruction": "audio/sp_gr5_m5_13_i.mp3"
+      },
+      "prompt": {
+        "sentence": "In het park staan banken.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "banken",
+        "accept": [
+          "banken"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort nk en schrijft n-k.",
+        "tip": "Nk schrijf je samen.",
+        "examples": [
+          "bank",
+          "bankje",
+          "schoolbank"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "tags": [
+        "verlengingsregel"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_14_s.mp3",
+        "instruction": "audio/sp_gr5_m5_14_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Mijn vrienden komen langs.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "vrienden",
+        "accept": [
+          "vrienden"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je schrijft d omdat je het woord kunt verlengen.",
+        "tip": "Zeg het meervoud.",
+        "examples": [
+          "vriend",
+          "vriendje",
+          "vriendschap"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "tags": [
+        "open_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_15_s.mp3",
+        "instruction": "audio/sp_gr5_m5_15_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik leen boeken uit de bieb.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "boeken",
+        "accept": [
+          "boeken"
+        ]
+      },
+      "extra_info": {
+        "rule": "De oe klinkt lang en blijft één oe.",
+        "tip": "Hak het woord: boe-ken.",
+        "examples": [
+          "boek",
+          "boekje",
+          "boekenrek"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "tags": [
+        "open_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_16_s.mp3",
+        "instruction": "audio/sp_gr5_m5_16_i.mp3"
+      },
+      "prompt": {
+        "sentence": "De kinderen gaan spelen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "spelen",
+        "accept": [
+          "spelen"
+        ]
+      },
+      "extra_info": {
+        "rule": "De e klinkt lang in een open lettergreep.",
+        "tip": "Luister naar de lange klank.",
+        "examples": [
+          "speel",
+          "spelend",
+          "meespelen"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "tags": [
+        "gesloten_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_17_s.mp3",
+        "instruction": "audio/sp_gr5_m5_17_i.mp3"
+      },
+      "prompt": {
+        "sentence": "In de pauze wordt het drukker.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "drukker",
+        "accept": [
+          "drukker"
+        ]
+      },
+      "extra_info": {
+        "rule": "De u klinkt kort, daarom schrijf je kk.",
+        "tip": "Korte klank hoor je snel.",
+        "examples": [
+          "druk",
+          "drukte",
+          "afdrukken"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "tags": [
+        "oe",
+        "ij"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_18_s.mp3",
+        "instruction": "audio/sp_gr5_m5_18_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Deze som is moeilijk.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "moeilijk",
+        "accept": [
+          "moeilijk"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort oe en ij en schrijft beide klanken.",
+        "tip": "Luister naar twee klanken.",
+        "examples": [
+          "moeilijke",
+          "moeilijker",
+          "moeilijkheid"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "tags": [
+        "tweetekenklank_ui"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_19_s.mp3",
+        "instruction": "audio/sp_gr5_m5_19_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Schrijf het heel duidelijk.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "duidelijk",
+        "accept": [
+          "duidelijk"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort ui en schrijft u-i.",
+        "tip": "Zoek ui in het woord.",
+        "examples": [
+          "duidelijke",
+          "duidelijker",
+          "duidelijkheid"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "tags": [
+        "ei_ij"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_20_s.mp3",
+        "instruction": "audio/sp_gr5_m5_20_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Fietsen met licht is veilig.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "veilig",
+        "accept": [
+          "veilig"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort ei en schrijft e-i.",
+        "tip": "Luister goed naar ei.",
+        "examples": [
+          "veiliger",
+          "veiligheid",
+          "onveilig"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "tags": [
+        "sch",
+        "gesloten_lettergreep"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_21_s.mp3",
+        "instruction": "audio/sp_gr5_m5_21_i.mp3"
+      },
+      "prompt": {
+        "sentence": "We doen boodschappen in de winkel.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "boodschappen",
+        "accept": [
+          "boodschappen"
+        ]
+      },
+      "extra_info": {
+        "rule": "De a klinkt kort, daarom schrijf je pp.",
+        "tip": "Let op de korte a.",
+        "examples": [
+          "boodschap",
+          "boodschappentas",
+          "boodschappenlijst"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "tags": [
+        "cluster_cht"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_22_s.mp3",
+        "instruction": "audio/sp_gr5_m5_22_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik luister met aandacht.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "aandacht",
+        "accept": [
+          "aandacht"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort cht en schrijft c-h-t.",
+        "tip": "Schrijf alle drie de letters.",
+        "examples": [
+          "aandachtig",
+          "aandachtspunt",
+          "aandachtsboog"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "tags": [
+        "gesloten_lettergreep",
+        "meerlettergrepig"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_23_s.mp3",
+        "instruction": "audio/sp_gr5_m5_23_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Ik wil het goed herinneren.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "herinneren",
+        "accept": [
+          "herinneren"
+        ]
+      },
+      "extra_info": {
+        "rule": "De i klinkt kort, daarom schrijf je nn.",
+        "tip": "Luister naar de korte i.",
+        "examples": [
+          "herinnering",
+          "herinnert",
+          "herinnerd"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "tags": [
+        "prefix",
+        "tweetekenklank_ui"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_24_s.mp3",
+        "instruction": "audio/sp_gr5_m5_24_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Wij gaan binnenkort verhuizen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "verhuizen",
+        "accept": [
+          "verhuizen"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort ui en schrijft u-i.",
+        "tip": "Zoek ui in het woord.",
+        "examples": [
+          "verhuisd",
+          "verhuizing",
+          "verhuist"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "tags": [
+        "suffix_zaam"
+      ],
+      "audio": {
+        "sentence": "audio/sp_gr5_m5_25_s.mp3",
+        "instruction": "audio/sp_gr5_m5_25_i.mp3"
+      },
+      "prompt": {
+        "sentence": "Mijn oom is heel werkzaam.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "werkzaam",
+        "accept": [
+          "werkzaam"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je schrijft zaam zoals je het hoort.",
+        "tip": "Let op het einde van het woord.",
+        "examples": [
+          "werkzaamheid",
+          "werkzame",
+          "werkzamer"
+        ]
+      }
+    }
+  ]
+}

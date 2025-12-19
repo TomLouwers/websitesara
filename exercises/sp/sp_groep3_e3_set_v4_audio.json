@@ -1,0 +1,790 @@
+{
+  "set": {
+    "grade": 3,
+    "level": "E3",
+    "mode": "dictee",
+    "category": "woordspelling",
+    "flags": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "read_aloud": {
+      "pattern": [
+        "sentence",
+        "instruction"
+      ]
+    },
+    "feedback_templates": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Nog niet. Luister nog eens en probeer opnieuw.",
+      "instruction": "Schrijf op: {answer}."
+    },
+    "audio_policy": {
+      "strategy": "pre_generated_mp3",
+      "format": "mp3",
+      "naming": "{prefix}_{id:02d}_{part}.mp3",
+      "parts": {
+        "sentence": "s",
+        "instruction": "i"
+      }
+    }
+  },
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "tags": [
+        "korte_klank"
+      ],
+      "prompt": {
+        "sentence": "Ik zie de zon.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "zon",
+        "accept": [
+          "zon"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je schrijft het woord zoals je het hoort: z-o-n.",
+        "tip": "Hak in klanken: z / o / n.",
+        "examples": [
+          "zonnen",
+          "zonnetje",
+          "zonneschijn"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_01_s.mp3",
+        "instruction": "audio/sp_gr3_e3_01_i.mp3"
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "tags": [
+        "korte_klank"
+      ],
+      "prompt": {
+        "sentence": "De bus komt eraan.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "bus",
+        "accept": [
+          "bus"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je schrijft het woord zoals je het hoort: b-u-s.",
+        "tip": "Luister naar de korte u.",
+        "examples": [
+          "bussen",
+          "busje",
+          "busrit"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_02_s.mp3",
+        "instruction": "audio/sp_gr3_e3_02_i.mp3"
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "tags": [
+        "korte_klank"
+      ],
+      "prompt": {
+        "sentence": "De kip loopt in de tuin.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "kip",
+        "accept": [
+          "kip"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je schrijft het woord zoals je het hoort: k-i-p.",
+        "tip": "Korte i: één letter i.",
+        "examples": [
+          "kippen",
+          "kipje",
+          "kippenhok"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_03_s.mp3",
+        "instruction": "audio/sp_gr3_e3_03_i.mp3"
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "tags": [
+        "cluster_nd"
+      ],
+      "prompt": {
+        "sentence": "Ik was mijn hand.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "hand",
+        "accept": [
+          "hand"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort aan het eind n-d: schrijf beide letters.",
+        "tip": "Luister naar het einde: n + d.",
+        "examples": [
+          "handen",
+          "handje",
+          "handdoek"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_04_s.mp3",
+        "instruction": "audio/sp_gr3_e3_04_i.mp3"
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "medium",
+      "tags": [
+        "cluster_st"
+      ],
+      "prompt": {
+        "sentence": "De kast staat in de kamer.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "kast",
+        "accept": [
+          "kast"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort aan het eind s-t: schrijf beide letters.",
+        "tip": "Zeg het langzaam: kas-t.",
+        "examples": [
+          "kasten",
+          "kastje",
+          "keukenkast"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_05_s.mp3",
+        "instruction": "audio/sp_gr3_e3_05_i.mp3"
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "medium",
+      "tags": [
+        "cluster_nt"
+      ],
+      "prompt": {
+        "sentence": "De plant krijgt water.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "plant",
+        "accept": [
+          "plant"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort aan het eind n-t: schrijf beide letters.",
+        "tip": "Luister naar het einde: n + t.",
+        "examples": [
+          "planten",
+          "plantje",
+          "plantsoen"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_06_s.mp3",
+        "instruction": "audio/sp_gr3_e3_06_i.mp3"
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "tags": [
+        "lange_klank_aa"
+      ],
+      "prompt": {
+        "sentence": "De maan schijnt 's nachts.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "maan",
+        "accept": [
+          "maan"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort een lange a: daarom schrijf je aa.",
+        "tip": "Zeg het lang: maaa-n.",
+        "examples": [
+          "manen",
+          "maantje",
+          "maanlicht"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_07_s.mp3",
+        "instruction": "audio/sp_gr3_e3_07_i.mp3"
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "tags": [
+        "lange_klank_ee"
+      ],
+      "prompt": {
+        "sentence": "Een week heeft zeven dagen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "week",
+        "accept": [
+          "week"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort een lange e: daarom schrijf je ee.",
+        "tip": "Lange e hoor je langer.",
+        "examples": [
+          "weken",
+          "weekje",
+          "weekend"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_08_s.mp3",
+        "instruction": "audio/sp_gr3_e3_08_i.mp3"
+      }
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "tags": [
+        "lange_klank_oo"
+      ],
+      "prompt": {
+        "sentence": "De boot vaart op het water.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "boot",
+        "accept": [
+          "boot"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort een lange o: daarom schrijf je oo.",
+        "tip": "Zeg het langzaam: booo-t.",
+        "examples": [
+          "boten",
+          "bootje",
+          "boottocht"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_09_s.mp3",
+        "instruction": "audio/sp_gr3_e3_09_i.mp3"
+      }
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "tags": [
+        "lange_klank_uu"
+      ],
+      "prompt": {
+        "sentence": "De muur is hoog.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "muur",
+        "accept": [
+          "muur"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort een lange u: daarom schrijf je uu.",
+        "tip": "Lange u = uu.",
+        "examples": [
+          "muren",
+          "muurtje",
+          "muurverf"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_10_s.mp3",
+        "instruction": "audio/sp_gr3_e3_10_i.mp3"
+      }
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "tags": [
+        "tweetekenklank_oe"
+      ],
+      "prompt": {
+        "sentence": "Ik lees een boek.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "boek",
+        "accept": [
+          "boek"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort de klank oe: die schrijf je met o-e.",
+        "tip": "Zeg: b-oe-k.",
+        "examples": [
+          "boeken",
+          "boekje",
+          "boekenkast"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_11_s.mp3",
+        "instruction": "audio/sp_gr3_e3_11_i.mp3"
+      }
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "tags": [
+        "tweetekenklank_ie"
+      ],
+      "prompt": {
+        "sentence": "Mijn fiets staat buiten.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "fiets",
+        "accept": [
+          "fiets"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort de klank ie: die schrijf je met i-e.",
+        "tip": "Zoek de letters i-e.",
+        "examples": [
+          "fietsen",
+          "fietsje",
+          "fietspad"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_12_s.mp3",
+        "instruction": "audio/sp_gr3_e3_12_i.mp3"
+      }
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "tags": [
+        "tweetekenklank_ui"
+      ],
+      "prompt": {
+        "sentence": "De muis rent weg.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "muis",
+        "accept": [
+          "muis"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort de klank ui: die schrijf je met u-i.",
+        "tip": "ui is één klank.",
+        "examples": [
+          "muizen",
+          "muisje",
+          "muizenval"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_13_s.mp3",
+        "instruction": "audio/sp_gr3_e3_13_i.mp3"
+      }
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "tags": [
+        "tweetekenklank_ei"
+      ],
+      "prompt": {
+        "sentence": "De geit staat in de wei.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "geit",
+        "accept": [
+          "geit"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort de klank ei: die schrijf je met e-i.",
+        "tip": "ei schrijf je met twee letters.",
+        "examples": [
+          "geiten",
+          "geitje",
+          "geitenstal"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_14_s.mp3",
+        "instruction": "audio/sp_gr3_e3_14_i.mp3"
+      }
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "tags": [
+        "tweetekenklank_ou"
+      ],
+      "prompt": {
+        "sentence": "Het water is koud.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "koud",
+        "accept": [
+          "koud"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort ou: die schrijf je met o-u, en aan het eind staat d.",
+        "tip": "Let op: ou + d.",
+        "examples": [
+          "koude",
+          "kouder",
+          "koudste"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_15_s.mp3",
+        "instruction": "audio/sp_gr3_e3_15_i.mp3"
+      }
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "tags": [
+        "tweetekenklank_eu"
+      ],
+      "prompt": {
+        "sentence": "Doe de deur dicht.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "deur",
+        "accept": [
+          "deur"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort eu: die schrijf je met e-u.",
+        "tip": "eu is één klank.",
+        "examples": [
+          "deuren",
+          "deurtje",
+          "voordeur"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_16_s.mp3",
+        "instruction": "audio/sp_gr3_e3_16_i.mp3"
+      }
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "tags": [
+        "cluster_ng"
+      ],
+      "prompt": {
+        "sentence": "Ik draag een ring.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "ring",
+        "accept": [
+          "ring"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort ng: schrijf n-g.",
+        "tip": "ng zijn twee letters.",
+        "examples": [
+          "ringen",
+          "ringetje",
+          "ringvinger"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_17_s.mp3",
+        "instruction": "audio/sp_gr3_e3_17_i.mp3"
+      }
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "tags": [
+        "cluster_nk"
+      ],
+      "prompt": {
+        "sentence": "Ik zit op de bank.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "bank",
+        "accept": [
+          "bank"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort nk: schrijf n-k.",
+        "tip": "nk schrijf je altijd samen.",
+        "examples": [
+          "banken",
+          "bankje",
+          "schoolbank"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_18_s.mp3",
+        "instruction": "audio/sp_gr3_e3_18_i.mp3"
+      }
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "tags": [
+        "cluster_st"
+      ],
+      "prompt": {
+        "sentence": "De stoel staat bij de tafel.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "stoel",
+        "accept": [
+          "stoel"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort st vooraan: schrijf s-t.",
+        "tip": "Luister naar het begin: s + t.",
+        "examples": [
+          "stoelen",
+          "stoeltje",
+          "stoelpoten"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_19_s.mp3",
+        "instruction": "audio/sp_gr3_e3_19_i.mp3"
+      }
+    },
+    {
+      "id": 20,
+      "difficulty": "hard",
+      "tags": [
+        "cluster_sp",
+        "lange_klank_oo"
+      ],
+      "prompt": {
+        "sentence": "Ik zie een spook in het donker.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "spook",
+        "accept": [
+          "spook"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort sp vooraan en een lange o: schrijf oo.",
+        "tip": "Let op: sp + oo.",
+        "examples": [
+          "spoken",
+          "spookje",
+          "spookhuis"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_20_s.mp3",
+        "instruction": "audio/sp_gr3_e3_20_i.mp3"
+      }
+    },
+    {
+      "id": 21,
+      "difficulty": "hard",
+      "tags": [
+        "cluster_tr",
+        "tweetekenklank_ei"
+      ],
+      "prompt": {
+        "sentence": "De trein rijdt weg.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "trein",
+        "accept": [
+          "trein"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort tr vooraan en ei in het woord: schrijf e-i.",
+        "tip": "Zoek ei: e + i.",
+        "examples": [
+          "treinen",
+          "treintje",
+          "treinreis"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_21_s.mp3",
+        "instruction": "audio/sp_gr3_e3_21_i.mp3"
+      }
+    },
+    {
+      "id": 22,
+      "difficulty": "hard",
+      "tags": [
+        "cluster_gr",
+        "lange_klank_oo"
+      ],
+      "prompt": {
+        "sentence": "De olifant is groot.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "groot",
+        "accept": [
+          "groot"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort gr vooraan en een lange o: schrijf oo.",
+        "tip": "Let op: gr + oo.",
+        "examples": [
+          "groter",
+          "grootste",
+          "grootouders"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_22_s.mp3",
+        "instruction": "audio/sp_gr3_e3_22_i.mp3"
+      }
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "tags": [
+        "cluster_sl",
+        "ng"
+      ],
+      "prompt": {
+        "sentence": "De slang kruipt weg.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "slang",
+        "accept": [
+          "slang"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort sl vooraan en ng aan het eind: schrijf beide.",
+        "tip": "Begin sl, einde ng.",
+        "examples": [
+          "slangen",
+          "slangetje",
+          "slangenvel"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_23_s.mp3",
+        "instruction": "audio/sp_gr3_e3_23_i.mp3"
+      }
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "tags": [
+        "cluster_kr",
+        "lange_klank_oo"
+      ],
+      "prompt": {
+        "sentence": "De koning draagt een kroon.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "kroon",
+        "accept": [
+          "kroon"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort kr vooraan en een lange o: schrijf oo.",
+        "tip": "Let op: kr + oo.",
+        "examples": [
+          "kronen",
+          "kroontje",
+          "kroonluchter"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_24_s.mp3",
+        "instruction": "audio/sp_gr3_e3_24_i.mp3"
+      }
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "tags": [
+        "cluster_dr",
+        "tweetekenklank_ie"
+      ],
+      "prompt": {
+        "sentence": "Ik tel tot drie.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "drie",
+        "accept": [
+          "drie"
+        ]
+      },
+      "extra_info": {
+        "rule": "Je hoort dr vooraan en ie: schrijf i-e.",
+        "tip": "Luister naar dr en zoek ie.",
+        "examples": [
+          "drieën",
+          "drietje",
+          "driewieler"
+        ]
+      },
+      "audio": {
+        "sentence": "audio/sp_gr3_e3_25_s.mp3",
+        "instruction": "audio/sp_gr3_e3_25_i.mp3"
+      }
+    }
+  ]
+}

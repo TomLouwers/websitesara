@@ -1,0 +1,914 @@
+{
+  "set": {
+    "grade": 4,
+    "level": "E4",
+    "mode": "dictee",
+    "category": "woorddictee",
+    "flags": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "read_aloud": {
+      "pattern": [
+        "sentence",
+        "instruction"
+      ]
+    },
+    "feedback_templates": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Nog niet. Luister nog eens en probeer opnieuw.",
+      "instruction": "Schrijf op: {answer}."
+    },
+    "audio_policy": {
+      "strategy": "pre_generated_mp3",
+      "format": "mp3",
+      "naming": "{prefix}_{id:02d}_{part}.mp3",
+      "parts": {
+        "sentence": "s",
+        "instruction": "i"
+      }
+    }
+  },
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "In de vaas staan mooie bloemen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "mooie",
+        "accept": [
+          "mooie"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "In de vaas staan mooie bloemen."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_01_s.mp3",
+        "instruction": "audio/sp_gr4_e4_01_i.mp3"
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Bijen maken honing.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "honing",
+        "accept": [
+          "honing"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Bijen maken honing."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_02_s.mp3",
+        "instruction": "audio/sp_gr4_e4_02_i.mp3"
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Juf Laura heeft een nieuwe telefoon gekocht.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "nieuwe",
+        "accept": [
+          "nieuwe"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Juf Laura heeft een nieuwe telefoon gekocht."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_03_s.mp3",
+        "instruction": "audio/sp_gr4_e4_03_i.mp3"
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Op het huis staat een schoorsteen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "schoorsteen",
+        "accept": [
+          "schoorsteen"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Op het huis staat een schoorsteen."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_04_s.mp3",
+        "instruction": "audio/sp_gr4_e4_04_i.mp3"
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Morgen gaat Marleen naar de kapper.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "kapper",
+        "accept": [
+          "kapper"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Morgen gaat Marleen naar de kapper."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_05_s.mp3",
+        "instruction": "audio/sp_gr4_e4_05_i.mp3"
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "De jongen schiet met pijl en boog.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "pijl",
+        "accept": [
+          "pijl"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "De jongen schiet met pijl en boog."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_06_s.mp3",
+        "instruction": "audio/sp_gr4_e4_06_i.mp3"
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Jos naait met naald en draad.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "naald",
+        "accept": [
+          "naald"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Jos naait met naald en draad."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_07_s.mp3",
+        "instruction": "audio/sp_gr4_e4_07_i.mp3"
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Marleen kocht veel kleren op de beurs.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "beurs",
+        "accept": [
+          "beurs"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Marleen kocht veel kleren op de beurs."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_08_s.mp3",
+        "instruction": "audio/sp_gr4_e4_08_i.mp3"
+      }
+    },
+    {
+      "id": 9,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Met een geeuw valt de baby in slaap.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "geeuw",
+        "accept": [
+          "geeuw"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Met een geeuw valt de baby in slaap."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_09_s.mp3",
+        "instruction": "audio/sp_gr4_e4_09_i.mp3"
+      }
+    },
+    {
+      "id": 10,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "In de pauze gaan de kinderen buiten spelen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "pauze",
+        "accept": [
+          "pauze"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "In de pauze gaan de kinderen buiten spelen."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_10_s.mp3",
+        "instruction": "audio/sp_gr4_e4_10_i.mp3"
+      }
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Een kikkertje verstopt zich tussen de waterplanten.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "kikkertje",
+        "accept": [
+          "kikkertje"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Een kikkertje verstopt zich tussen de waterplanten."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_11_s.mp3",
+        "instruction": "audio/sp_gr4_e4_11_i.mp3"
+      }
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Er vaart een zeilboot op het meer.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "zeilboot",
+        "accept": [
+          "zeilboot"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Er vaart een zeilboot op het meer."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_12_s.mp3",
+        "instruction": "audio/sp_gr4_e4_12_i.mp3"
+      }
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "De meester heeft veel verschillende pennen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "pennen",
+        "accept": [
+          "pennen"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "De meester heeft veel verschillende pennen."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_13_s.mp3",
+        "instruction": "audio/sp_gr4_e4_13_i.mp3"
+      }
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Tom heeft een lengte van één meter veertig.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "lengte",
+        "accept": [
+          "lengte"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Tom heeft een lengte van één meter veertig."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_14_s.mp3",
+        "instruction": "audio/sp_gr4_e4_14_i.mp3"
+      }
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Wat een toestand allemaal!",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "toestand",
+        "accept": [
+          "toestand"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Wat een toestand allemaal!"
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_15_s.mp3",
+        "instruction": "audio/sp_gr4_e4_15_i.mp3"
+      }
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "De meester geeft Tom extra aandacht.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "aandacht",
+        "accept": [
+          "aandacht"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "De meester geeft Tom extra aandacht."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_16_s.mp3",
+        "instruction": "audio/sp_gr4_e4_16_i.mp3"
+      }
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Als Kim jarig is, mag ze een feestje geven.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "feestje",
+        "accept": [
+          "feestje"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Als Kim jarig is, mag ze een feestje geven."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_17_s.mp3",
+        "instruction": "audio/sp_gr4_e4_17_i.mp3"
+      }
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Een gitaar heeft meestal zes snaren.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "snaren",
+        "accept": [
+          "snaren"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Een gitaar heeft meestal zes snaren."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_18_s.mp3",
+        "instruction": "audio/sp_gr4_e4_18_i.mp3"
+      }
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Sam duwt de roeiboot van de kant.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "roeiboot",
+        "accept": [
+          "roeiboot"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Sam duwt de roeiboot van de kant."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_19_s.mp3",
+        "instruction": "audio/sp_gr4_e4_19_i.mp3"
+      }
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Kim gaat elke dinsdag naar judo.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "judo",
+        "accept": [
+          "judo"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Kim gaat elke dinsdag naar judo."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_20_s.mp3",
+        "instruction": "audio/sp_gr4_e4_20_i.mp3"
+      }
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Ze gingen eerst eten en daarna zwemmen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "daarna",
+        "accept": [
+          "daarna"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Ze gingen eerst eten en daarna zwemmen."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_21_s.mp3",
+        "instruction": "audio/sp_gr4_e4_21_i.mp3"
+      }
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Opa Kees heeft een gat in zijn kous.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "kous",
+        "accept": [
+          "kous"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Opa Kees heeft een gat in zijn kous."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_22_s.mp3",
+        "instruction": "audio/sp_gr4_e4_22_i.mp3"
+      }
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "In de vijver zwemmen goudvissen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "vijver",
+        "accept": [
+          "vijver"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "In de vijver zwemmen goudvissen."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_23_s.mp3",
+        "instruction": "audio/sp_gr4_e4_23_i.mp3"
+      }
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "In de braadpan bakt Lien het vlees bruin.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "braadpan",
+        "accept": [
+          "braadpan"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "In de braadpan bakt Lien het vlees bruin."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_24_s.mp3",
+        "instruction": "audio/sp_gr4_e4_24_i.mp3"
+      }
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "De sproeier zorgt voor veel waterplezier.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "sproeier",
+        "accept": [
+          "sproeier"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "De sproeier zorgt voor veel waterplezier."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_25_s.mp3",
+        "instruction": "audio/sp_gr4_e4_25_i.mp3"
+      }
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "De mussen pikken kruimeltjes van de grond.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "mussen",
+        "accept": [
+          "mussen"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "De mussen pikken kruimeltjes van de grond."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_26_s.mp3",
+        "instruction": "audio/sp_gr4_e4_26_i.mp3"
+      }
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Met haar fiets maakte Kim een grote bocht.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "bocht",
+        "accept": [
+          "bocht"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Met haar fiets maakte Kim een grote bocht."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_27_s.mp3",
+        "instruction": "audio/sp_gr4_e4_27_i.mp3"
+      }
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "De muren van de woonkamer zijn pas geschilderd.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "muren",
+        "accept": [
+          "muren"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "De muren van de woonkamer zijn pas geschilderd."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_28_s.mp3",
+        "instruction": "audio/sp_gr4_e4_28_i.mp3"
+      }
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Een vis heeft kieuwen in plaats van longen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "kieuwen",
+        "accept": [
+          "kieuwen"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Een vis heeft kieuwen in plaats van longen."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_29_s.mp3",
+        "instruction": "audio/sp_gr4_e4_29_i.mp3"
+      }
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Op de vloer van de woonkamer ligt een kleed.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "kleed",
+        "accept": [
+          "kleed"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Op de vloer van de woonkamer ligt een kleed."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_30_s.mp3",
+        "instruction": "audio/sp_gr4_e4_30_i.mp3"
+      }
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "De lammetjes van oom Bart liggen in het stro.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "stro",
+        "accept": [
+          "stro"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "De lammetjes van oom Bart liggen in het stro."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_31_s.mp3",
+        "instruction": "audio/sp_gr4_e4_31_i.mp3"
+      }
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Het gezicht van juf Laura was helemaal rood.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "gezicht",
+        "accept": [
+          "gezicht"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Het gezicht van juf Laura was helemaal rood."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_32_s.mp3",
+        "instruction": "audio/sp_gr4_e4_32_i.mp3"
+      }
+    },
+    {
+      "id": 33,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "De visser is tevreden met de visvangst van vandaag.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "visvangst",
+        "accept": [
+          "visvangst"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "De visser is tevreden met de visvangst van vandaag."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_33_s.mp3",
+        "instruction": "audio/sp_gr4_e4_33_i.mp3"
+      }
+    },
+    {
+      "id": 34,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "De boomschors voelt ruw aan.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "ruw",
+        "accept": [
+          "ruw"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "De boomschors voelt ruw aan."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_34_s.mp3",
+        "instruction": "audio/sp_gr4_e4_34_i.mp3"
+      }
+    },
+    {
+      "id": 35,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Het leek wel herfstweer met al die regen en wind.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "herfstweer",
+        "accept": [
+          "herfstweer"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Het leek wel herfstweer met al die regen en wind."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_35_s.mp3",
+        "instruction": "audio/sp_gr4_e4_35_i.mp3"
+      }
+    },
+    {
+      "id": 36,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Jos maakt de vloer schoon met een dweil.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "dweil",
+        "accept": [
+          "dweil"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Jos maakt de vloer schoon met een dweil."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_36_s.mp3",
+        "instruction": "audio/sp_gr4_e4_36_i.mp3"
+      }
+    },
+    {
+      "id": 37,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "De bakker maakt lekkere broodjes.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "bakker",
+        "accept": [
+          "bakker"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "De bakker maakt lekkere broodjes."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_37_s.mp3",
+        "instruction": "audio/sp_gr4_e4_37_i.mp3"
+      }
+    },
+    {
+      "id": 38,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Op de markt wordt de vis rauw verkocht.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "rauw",
+        "accept": [
+          "rauw"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Op de markt wordt de vis rauw verkocht."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_38_s.mp3",
+        "instruction": "audio/sp_gr4_e4_38_i.mp3"
+      }
+    },
+    {
+      "id": 39,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Bij het ziekenhuis moet je door een draaideur naar binnen.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "draaideur",
+        "accept": [
+          "draaideur"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Bij het ziekenhuis moet je door een draaideur naar binnen."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_39_s.mp3",
+        "instruction": "audio/sp_gr4_e4_39_i.mp3"
+      }
+    },
+    {
+      "id": 40,
+      "difficulty": "medium",
+      "tags": [],
+      "prompt": {
+        "sentence": "Tom smeerde boter op zijn boterham.",
+        "instruction": "Schrijf op: {answer}."
+      },
+      "target": {
+        "answer": "boter",
+        "accept": [
+          "boter"
+        ]
+      },
+      "extra_info": {
+        "used_in_sentence": "Tom smeerde boter op zijn boterham."
+      },
+      "audio": {
+        "sentence": "audio/sp_gr4_e4_40_s.mp3",
+        "instruction": "audio/sp_gr4_e4_40_i.mp3"
+      }
+    }
+  ]
+}
