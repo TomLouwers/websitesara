@@ -355,8 +355,8 @@ function getFilePath(subject) {
         return gbMapping[subject];
     }
 
-    // Default: use subject + Template suffix
-    return subject + CONFIG.templateFileSuffix;
+    // Default: use subject + Template suffix with data/templates/ prefix
+    return 'data/templates/' + subject + CONFIG.templateFileSuffix;
 }
 
 // Load JSON file with localStorage caching

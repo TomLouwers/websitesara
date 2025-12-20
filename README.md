@@ -1,232 +1,125 @@
-# Sara's Quiz Website - Refactoring Documentation
+# OefenPlatform - CITO Practice Platform
 
-## Overview
+A comprehensive educational web application for Dutch primary school students (grades 3-8) to practice for CITO exams.
 
-Sara's Quiz Website is an educational quiz platform designed for Dutch elementary school students, primarily for CITO exam preparation. The platform provides interactive quizzes across 7 different subjects with progress tracking and highscore management.
-
-## Recent Refactoring (2025)
-
-The codebase has been significantly refactored from a monolithic single-file application to a modular, maintainable structure.
-
-### What Changed
-
-#### Before Refactoring
-- **Single monolithic file**: `index.html` (2,149 lines)
-  - 937 lines of embedded CSS
-  - ~1,000 lines of embedded JavaScript
-  - Poor separation of concerns
-  - Difficult to maintain and test
-
-#### After Refactoring
-- **Modular structure**:
-  - `index.html` (228 lines) - Clean HTML structure
-  - `styles.css` (871 lines) - All styling separated
-  - `app.js` (973 lines) - Application logic
-  - `config.js` (81 lines) - Configuration and constants
-
-### Benefits of Refactoring
-
-1. **Separation of Concerns**: HTML, CSS, and JavaScript are now in separate files
-2. **Maintainability**: Easier to find and modify specific functionality
-3. **Configuration Management**: All constants centralized in `config.js`
-4. **Code Reusability**: Shared configuration can be reused across modules
-5. **Better Developer Experience**: Clearer code structure and organization
-6. **Performance**: Browser can cache CSS and JS files separately
-7. **Scalability**: Easier to add new features and modules
-
-### File Structure
+## Project Structure
 
 ```
-websitesara/
-├── index.html                          # Main HTML (228 lines)
-├── styles.css                          # All CSS styles (871 lines)
-├── app.js                              # Application logic (973 lines)
-├── config.js                           # Configuration constants (81 lines)
-├── *.json                              # Quiz data files (7 subjects)
-│   ├── basisvaardigheden - Template.json
-│   ├── begrijpendlezen - Template.json
-│   ├── brandaan - Template.json
-│   ├── samenvatten - Template.json
-│   ├── verhaaltjessommen - Template.json
-│   ├── wereldorientatie - Template.json
-│   └── woordenschat - Template.json
-├── modules/
-│   └── leesstrategieën/               # Reading strategies module
+/
+├── index.html                  # Main landing page
+├── quiz.html                   # Main quiz interface
+├── level-selector.html         # Grade/level selection
+├── theme-selector.html         # Theme selection
+├── spelling-quiz.html          # Spelling quiz interface
+├── spelling-dictee.html        # Spelling dictation interface
+├── dmt-practice.html           # DMT word trainer
+├── ouders.html                 # Parent/teacher info page
+│
+├── static/                     # Static assets
+│   ├── css/                    # Production CSS (minified)
+│   │   ├── styles.min.css
+│   │   └── verhoudingstabel-widget.min.css
+│   ├── js/                     # Production JavaScript (minified)
+│   │   ├── config.min.js
+│   │   ├── app.min.js
+│   │   ├── accessibility.min.js
+│   │   ├── foutanalyse-modaal.min.js
+│   │   ├── verhoudingstabel-widget.min.js
+│   │   ├── insight-generator.min.js
+│   │   ├── card-morph-feedback.min.js
+│   │   ├── dmt-practice.min.js
+│   │   ├── spelling-quiz.min.js
+│   │   └── spelling-dictee.min.js
+│   └── src/                    # Source files (unminified)
+│       ├── app.js
+│       ├── config.js
+│       ├── accessibility.js
+│       ├── styles.css
+│       └── ...
+│
+├── data/                       # Application data
+│   ├── exercises/              # Exercise JSON files
+│   │   ├── tl/                 # DMT (Drie Minuten Toets)
+│   │   ├── gb/                 # Reading comprehension
+│   │   ├── bl/                 # Reading strategies
+│   │   ├── sp/                 # Spelling
+│   │   ├── wo/                 # World orientation
+│   │   └── ws/                 # Vocabulary
+│   └── templates/              # Template JSON files
+│       ├── verhaaltjessommen - Template.json
+│       ├── basisvaardigheden - Template.json
+│       ├── woordenschat - Template.json
+│       ├── begrijpendlezen - Template.json
+│       ├── wereldorientatie - Template.json
+│       ├── brandaan - Template.json
+│       └── samenvatten - Template.json
+│
+├── modules/                    # Feature modules
+│   └── leesstrategieën/        # Reading strategies module
 │       ├── leesstrategieën.html
-│       ├── leesstrategieën.json
-│       └── img/
-└── *.py                                # Python maintenance scripts (9 files)
+│       └── *.json              # Module data files
+│
+├── docs/                       # Documentation
+│   ├── ANALYSIS_*.md
+│   ├── IMPLEMENTATIE_*.md
+│   ├── INTEGRATIE_OVERZICHT.md
+│   └── README.md
+│
+├── tools/                      # Utility scripts
+│   └── *.py                    # Python maintenance/generation scripts
+│
+├── archive/                    # Archived/deprecated files
+│   ├── deprecated-templates/
+│   └── old-data/
+│
+├── flutter_verhoudingstabellen/ # Flutter widget (separate project)
+│
+├── package.json                # Node.js dependencies
+├── package-lock.json
+└── purgecss.config.js          # CSS optimization config
 ```
-
-## Configuration (config.js)
-
-All configuration is centralized in `config.js`:
-
-### Subject Titles and Metadata
-```javascript
-CONFIG.subjectTitles = {
-    begrijpendlezen: 'Begrijpend Lezen',
-    brandaan: 'Geschiedenis',
-    // ... other subjects
-}
-```
-
-### Feedback Messages
-```javascript
-CONFIG.feedback = {
-    correct: { title: 'Correct!', message: '...' },
-    incorrect: { title: 'Niet correct!', message: '...' }
-}
-```
-
-### Score Thresholds
-```javascript
-CONFIG.scoreThresholds = {
-    excellent: 90,  // >= 90%
-    good: 70,       // >= 70%
-    fair: 50        // >= 50%
-}
-```
-
-## Features
-
-### 7 Subject Areas
-1. **Begrijpend Lezen** (Reading Comprehension) - 4 questions
-2. **Geschiedenis** (History - Brandaan) - 50 questions
-3. **Samenvatten** (Summarizing) - 80 questions
-4. **Wereldoriëntatie** (World Orientation) - 649 questions
-5. **Woordenschat** (Vocabulary) - 268 questions
-6. **Verhaaltjessommen** (Word Problems) - 375 questions
-7. **Getal & Bewerking** (Number & Operations) - 203 questions
-
-**Total**: 1,629 quiz questions
-
-### Question Types
-- **Multiple Choice**: Select from options with error analysis
-- **Open-Ended**: Text input with example answers
-- **L.O.V.A. Support**: Step-by-step problem-solving guidance for word problems
-
-### Progress Tracking
-- Category-based progress tracking
-- Correct/incorrect answer counters
-- Theme-specific highscores
-- Overall highscores per subject
-
-### Educational Features
-- **L.O.V.A. Method**: Structured problem-solving for math word problems
-  - Stap 1: Lezen (Reading)
-  - Stap 2: Ordenen (Organizing)
-  - Stap 3: Vormen (Formulating)
-  - Stap 4: Antwoorden (Answering)
-- **Error Analysis**: Specific feedback for common mistakes
-- **Extra Info**: Contextual explanations and tips
-- **Review Mode**: Study wrong answers after quiz completion
-
-### Accessibility Features
-- **Dyslexia-friendly font**: Lexend typeface
-- **Neuroscience-optimized colors**: Reduced cognitive load
-- **WCAG AAA compliance**: High contrast ratios
-- **Mobile-responsive**: Optimized for tablets and phones
-- **Clear visual hierarchy**: Consistent spacing and sizing
-
-## Technology Stack
-
-- **Frontend**: Pure HTML5/CSS3/Vanilla JavaScript (no frameworks)
-- **Styling**: CSS Custom Properties (CSS Variables)
-- **Data**: JSON files for quiz content
-- **Storage**: localStorage for user state and highscores
-- **Maintenance**: Python 3 scripts for data quality
 
 ## Development
 
-### Adding New Questions
+### Building Assets
 
-Questions are stored in JSON files following this structure:
-
-```json
-{
-  "id": 1,
-  "title": "Problem title",
-  "theme": "category",
-  "content": "Context text",
-  "questions": [{
-    "question": "Question text?",
-    "options": ["A", "B", "C", "D"],
-    "correct": 0,
-    "extra_info": {
-      "concept": "Explanation",
-      "berekening": ["Step 1", "Step 2"]
-    }
-  }]
-}
+Minify JavaScript:
+```bash
+npx terser static/src/[filename].js -c -m -o static/js/[filename].min.js
 ```
 
-### Data Maintenance Scripts
+Minify CSS:
+```bash
+npx csso static/src/styles.css -o static/css/styles.min.css
+```
 
-- `add_new_tips.py` - Adds educational tips
-- `add_remaining_tips.py` - Fills missing tip sections
-- `check_missing_tips.py` - Validates data completeness
-- `fix_cito_conformity.py` - Ensures CITO exam standards
-- `fix_currency.py` - Standardizes currency formatting
-- `fix_final_issues.py` - General bug fixes
-- `fix_remaining_duplicates.py` - Removes duplicates
-- `improve_template.py` - Enhances question quality
-- `restore_extra_info.py` - Restores educational metadata
+### Adding New Exercises
 
-### Browser Support
+1. Add JSON files to appropriate `data/exercises/` subdirectory
+2. Update `static/src/config.js` with new exercise paths
+3. Rebuild minified config: `npx terser static/src/config.js -c -m -o static/js/config.min.js`
 
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-- Requires JavaScript enabled
-- Requires localStorage support
+### File Organization
 
-## Future Improvements
+- **Production files**: All HTML files reference minified assets from `static/css/` and `static/js/`
+- **Source files**: Kept in `static/src/` for development and debugging
+- **Data files**: Exercise and template JSON files in `data/`
+- **Documentation**: All markdown docs in `docs/`
+- **Utilities**: Python scripts for data generation/maintenance in `tools/`
 
-### Recommended Next Steps
+## Features
 
-1. **Modularize JavaScript Further**
-   - Separate state management
-   - Extract UI rendering functions
-   - Create quiz logic module
+- 10+ subject areas (math, reading, spelling, vocabulary, etc.)
+- 5000+ practice questions
+- Immediate feedback with explanations
+- Progress tracking
+- Accessibility features
+- Mobile-responsive design
+- Error analysis and insights
 
-2. **Add Error Handling**
-   - Validation layer for JSON data
-   - Better error messages
-   - Fallback for localStorage failures
+## Tech Stack
 
-3. **Testing**
-   - Unit tests for core functions
-   - Integration tests for quiz flow
-   - E2E tests with Playwright
-
-4. **Build Process**
-   - Implement bundler (Vite/Webpack)
-   - Code minification
-   - CSS autoprefixer
-
-5. **Progressive Web App**
-   - Service worker for offline support
-   - App manifest
-   - Install prompts
-
-6. **Shared Module Assets**
-   - Extract common styles to shared CSS
-   - Share JavaScript utilities
-   - Centralize configuration
-
-## Credits
-
-- **Design**: Neuroscience-optimized color palette for enhanced focus
-- **Font**: Lexend (dyslexia-friendly typeface)
-- **Icons**: Material Icons by Google
-- **Educational Method**: L.O.V.A. problem-solving framework
-
-## License
-
-Educational use for Dutch elementary school students.
-
----
-
-**Refactored by**: Claude (Anthropic)
-**Date**: November 2025
-**Lines of Code Reduction**: 2,149 → 228 lines in main HTML file (89% reduction)
+- Vanilla JavaScript (ES6+)
+- CSS3 with responsive design
+- JSON-based exercise storage
+- No backend required (static site)
