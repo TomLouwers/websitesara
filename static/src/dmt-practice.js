@@ -94,10 +94,10 @@ class DMTPractice {
         try {
             // Load word lists
             const [listA, listB, listC, norming] = await Promise.all([
-                fetch('exercises/tl/dmt_list_A_v1.json').then(r => r.json()),
-                fetch('exercises/tl/dmt_list_B_v1.json').then(r => r.json()),
-                fetch('exercises/tl/dmt_list_C_v1.json').then(r => r.json()),
-                fetch('exercises/tl/dmt_norming_v1.json').then(r => r.json())
+                fetch('data/exercises/tl/dmt_list_A_v1.json').then(r => r.json()),
+                fetch('data/exercises/tl/dmt_list_B_v1.json').then(r => r.json()),
+                fetch('data/exercises/tl/dmt_list_C_v1.json').then(r => r.json()),
+                fetch('data/exercises/tl/dmt_norming_v1.json').then(r => r.json())
             ]);
 
             this.wordLists = {

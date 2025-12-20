@@ -335,19 +335,19 @@ function getFilePath(subject) {
         }
     }
 
-    // LEGACY: Map basisvaardigheden subjects to exercises/gb/ directory (backwards compatibility)
+    // LEGACY: Map basisvaardigheden subjects to data/exercises/gb/ directory (backwards compatibility)
     const gbMapping = {
-        'basisvaardigheden-m3': 'exercises/gb/gb_groep3_m3.json',
-        'basisvaardigheden-e3': 'exercises/gb/gb_groep3_e3.json',
-        'basisvaardigheden-m4': 'exercises/gb/gb_groep4_m4.json',
-        'basisvaardigheden-e4': 'exercises/gb/gb_groep4_e4.json',
-        'basisvaardigheden-m5': 'exercises/gb/gb_groep5_m5.json',
-        'basisvaardigheden-e5': 'exercises/gb/gb_groep5_e5.json',
-        'basisvaardigheden-m6': 'exercises/gb/gb_groep6_m6.json',
-        'basisvaardigheden-e6': 'exercises/gb/gb_groep6_e6.json',
-        'basisvaardigheden-m7': 'exercises/gb/gb_groep7_m7.json',
-        'basisvaardigheden-e7': 'exercises/gb/gb_groep7_e7.json',
-        'basisvaardigheden-e8': 'exercises/gb/gb_groep8_e8.json'
+        'basisvaardigheden-m3': 'data/exercises/gb/gb_groep3_m3.json',
+        'basisvaardigheden-e3': 'data/exercises/gb/gb_groep3_e3.json',
+        'basisvaardigheden-m4': 'data/exercises/gb/gb_groep4_m4.json',
+        'basisvaardigheden-e4': 'data/exercises/gb/gb_groep4_e4.json',
+        'basisvaardigheden-m5': 'data/exercises/gb/gb_groep5_m5.json',
+        'basisvaardigheden-e5': 'data/exercises/gb/gb_groep5_e5.json',
+        'basisvaardigheden-m6': 'data/exercises/gb/gb_groep6_m6.json',
+        'basisvaardigheden-e6': 'data/exercises/gb/gb_groep6_e6.json',
+        'basisvaardigheden-m7': 'data/exercises/gb/gb_groep7_m7.json',
+        'basisvaardigheden-e7': 'data/exercises/gb/gb_groep7_e7.json',
+        'basisvaardigheden-e8': 'data/exercises/gb/gb_groep8_e8.json'
     };
 
     // Check if this is a GB subject

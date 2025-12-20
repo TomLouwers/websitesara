@@ -195,7 +195,7 @@ function playAudioFile(audioPath, fallbackText) {
     return new Promise((resolve, reject) => {
         // Try to play MP3 file
         const audio = new Audio();
-        audio.src = 'exercises/sp/' + audioPath;
+        audio.src = 'data/exercises/sp/' + audioPath;
 
         let audioPlayed = false;
 
