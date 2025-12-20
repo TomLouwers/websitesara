@@ -122,124 +122,124 @@ const CONFIG = {
     subjectFilePaths: {
         begrijpendlezen: {
             groep3: {
-                m3: 'exercises/bl/bl_groep3_m3_1.json',
-                e3: 'exercises/bl/bl_groep3_e3_1.json'
+                m3: 'data/exercises/bl/bl_groep3_m3_1.json',
+                e3: 'data/exercises/bl/bl_groep3_e3_1.json'
             },
             groep4: {
-                m4: 'exercises/bl/bl_groep4_m4_1.json',
-                e4: 'exercises/bl/bl_groep4_e4_1.json'
+                m4: 'data/exercises/bl/bl_groep4_m4_1.json',
+                e4: 'data/exercises/bl/bl_groep4_e4_1.json'
             },
             groep5: {
-                m5: 'exercises/bl/bl_groep5_m5_1.json',
-                e5: 'exercises/bl/bl_groep5_e5_1.json'
+                m5: 'data/exercises/bl/bl_groep5_m5_1.json',
+                e5: 'data/exercises/bl/bl_groep5_e5_1.json'
             },
             groep6: {
-                m6: 'exercises/bl/bl_groep6_m6_1.json',
-                e6: 'exercises/bl/bl_groep6_e6_1.json'
+                m6: 'data/exercises/bl/bl_groep6_m6_1.json',
+                e6: 'data/exercises/bl/bl_groep6_e6_1.json'
             },
             groep7: {
-                m7: 'exercises/bl/bl_groep7_m7_1.json',
-                e7: 'exercises/bl/bl_groep7_e7_1.json'
+                m7: 'data/exercises/bl/bl_groep7_m7_1.json',
+                e7: 'data/exercises/bl/bl_groep7_e7_1.json'
             },
             groep8: {
-                m8: 'exercises/bl/bl_groep8_m8_1.json',
-                e8: 'exercises/bl/bl_groep8_e8_1.json'
+                m8: 'data/exercises/bl/bl_groep8_m8_1.json',
+                e8: 'data/exercises/bl/bl_groep8_e8_1.json'
             }
         },
         basisvaardigheden: {
             groep3: {
-                m3: 'exercises/gb/gb_groep3_m3.json',
-                e3: 'exercises/gb/gb_groep3_e3.json'
+                m3: 'data/exercises/gb/gb_groep3_m3.json',
+                e3: 'data/exercises/gb/gb_groep3_e3.json'
             },
             groep4: {
-                m4: 'exercises/gb/gb_groep4_m4.json',
-                e4: 'exercises/gb/gb_groep4_e4.json'
+                m4: 'data/exercises/gb/gb_groep4_m4.json',
+                e4: 'data/exercises/gb/gb_groep4_e4.json'
             },
             groep5: {
-                m5: 'exercises/gb/gb_groep5_m5.json',
-                e5: 'exercises/gb/gb_groep5_e5.json'
+                m5: 'data/exercises/gb/gb_groep5_m5.json',
+                e5: 'data/exercises/gb/gb_groep5_e5.json'
             },
             groep6: {
-                m6: 'exercises/gb/gb_groep6_m6.json',
-                e6: 'exercises/gb/gb_groep6_e6.json'
+                m6: 'data/exercises/gb/gb_groep6_m6.json',
+                e6: 'data/exercises/gb/gb_groep6_e6.json'
             },
             groep7: {
-                m7: 'exercises/gb/gb_groep7_m7.json',
-                e7: 'exercises/gb/gb_groep7_e7.json'
+                m7: 'data/exercises/gb/gb_groep7_m7.json',
+                e7: 'data/exercises/gb/gb_groep7_e7.json'
             },
             groep8: {
-                m8: 'exercises/gb/gb_groep8_e8.json',
-                e8: 'exercises/gb/gb_groep8_e8.json'
+                m8: 'data/exercises/gb/gb_groep8_e8.json',
+                e8: 'data/exercises/gb/gb_groep8_e8.json'
             }
         },
         wereldorientatie: {
             groep3: {
-                m3: 'exercises/wo/groep3_wo_150.json',
-                e3: 'exercises/wo/groep3_wo_150.json'
+                m3: 'data/exercises/wo/groep3_wo_150.json',
+                e3: 'data/exercises/wo/groep3_wo_150.json'
             },
             groep4: {
-                m4: 'exercises/wo/groep4_wo_150.json',
-                e4: 'exercises/wo/groep4_wo_150.json'
+                m4: 'data/exercises/wo/groep4_wo_150.json',
+                e4: 'data/exercises/wo/groep4_wo_150.json'
             },
             groep5: {
-                m5: 'exercises/wo/groep5_wo_150.json',
-                e5: 'exercises/wo/groep5_wo_150.json'
+                m5: 'data/exercises/wo/groep5_wo_150.json',
+                e5: 'data/exercises/wo/groep5_wo_150.json'
             },
             groep6: {
-                m6: 'exercises/wo/groep6_wo_150.json',
-                e6: 'exercises/wo/groep6_wo_150.json'
+                m6: 'data/exercises/wo/groep6_wo_150.json',
+                e6: 'data/exercises/wo/groep6_wo_150.json'
             },
             groep7: {
-                m7: 'exercises/wo/groep7_wo_150.json',
-                e7: 'exercises/wo/groep7_wo_150.json'
+                m7: 'data/exercises/wo/groep7_wo_150.json',
+                e7: 'data/exercises/wo/groep7_wo_150.json'
             },
             groep8: {
-                m8: 'exercises/wo/groep8_wo_150.json',
-                e8: 'exercises/wo/groep8_wo_150.json'
+                m8: 'data/exercises/wo/groep8_wo_150.json',
+                e8: 'data/exercises/wo/groep8_wo_150.json'
             }
         },
         woordenschat: {
             groep4: {
-                m4: 'exercises/ws/groep4_wo_m4_webapp_1.json',
-                e4: 'exercises/ws/groep4_wo_e4_webapp_1.json'
+                m4: 'data/exercises/ws/groep4_wo_m4_webapp_1.json',
+                e4: 'data/exercises/ws/groep4_wo_e4_webapp_1.json'
             },
             groep5: {
-                m5: 'exercises/ws/groep5_wo_m5_webapp_1.json',
-                e5: 'exercises/ws/groep5_wo_e5_webapp_1.json'
+                m5: 'data/exercises/ws/groep5_wo_m5_webapp_1.json',
+                e5: 'data/exercises/ws/groep5_wo_e5_webapp_1.json'
             },
             groep6: {
-                m6: 'exercises/ws/groep6_wo_m6_webapp_1.json',
-                e6: 'exercises/ws/groep6_wo_e6_webapp_1.json'
+                m6: 'data/exercises/ws/groep6_wo_m6_webapp_1.json',
+                e6: 'data/exercises/ws/groep6_wo_e6_webapp_1.json'
             },
             groep7: {
-                m7: 'exercises/ws/groep7_wo_m7_webapp_1.json',
-                e7: 'exercises/ws/groep7_wo_e7_webapp_1.json'
+                m7: 'data/exercises/ws/groep7_wo_m7_webapp_1.json',
+                e7: 'data/exercises/ws/groep7_wo_e7_webapp_1.json'
             },
             groep8: {
-                m8: 'exercises/ws/groep8_wo_m8_webapp_1.json',
-                e8: 'exercises/ws/groep8_wo_e8_webapp_1.json'
+                m8: 'data/exercises/ws/groep8_wo_m8_webapp_1.json',
+                e8: 'data/exercises/ws/groep8_wo_e8_webapp_1.json'
             }
         },
         werkwoordspelling: {
             groep3: {
-                m3: 'exercises/sp/sp_groep3_m3_set_v4_audio.json',
-                e3: 'exercises/sp/sp_groep3_e3_set_v4_audio.json'
+                m3: 'data/exercises/sp/sp_groep3_m3_set_v4_audio.json',
+                e3: 'data/exercises/sp/sp_groep3_e3_set_v4_audio.json'
             },
             groep4: {
-                m4: 'exercises/sp/sp_groep4_m4_set_v4_audio.json',
-                e4: 'exercises/sp/sp_groep4_e4_set_v4_audio.json'
+                m4: 'data/exercises/sp/sp_groep4_m4_set_v4_audio.json',
+                e4: 'data/exercises/sp/sp_groep4_e4_set_v4_audio.json'
             },
             groep5: {
-                m5: 'exercises/sp/sp_groep5_m5_set_v4_audio.json',
-                e5: 'exercises/sp/sp_groep5_e5_set_v4_audio.json'
+                m5: 'data/exercises/sp/sp_groep5_m5_set_v4_audio.json',
+                e5: 'data/exercises/sp/sp_groep5_e5_set_v4_audio.json'
             },
             groep6: {
-                m6: 'exercises/sp/sp_groep6_m6_set_v4_audio.json',
-                e6: 'exercises/sp/sp_groep6_e6_set_v4_audio.json'
+                m6: 'data/exercises/sp/sp_groep6_m6_set_v4_audio.json',
+                e6: 'data/exercises/sp/sp_groep6_e6_set_v4_audio.json'
             },
             groep7: {
-                m7: 'exercises/sp/sp_groep7_m7_set_v4_audio.json',
-                e7: 'exercises/sp/sp_groep7_e7_set_v4_audio.json'
+                m7: 'data/exercises/sp/sp_groep7_m7_set_v4_audio.json',
+                e7: 'data/exercises/sp/sp_groep7_e7_set_v4_audio.json'
             }
         }
     }
