@@ -118,6 +118,94 @@ const CONFIG = {
         panelTransitionDuration: 400 // milliseconds
     },
 
+    // UI Configuration
+    ui: {
+        animationDuration: 250, // milliseconds
+        antiSkipDuration: 1500, // milliseconds - prevent accidental double-clicks
+        feedbackDisplayTime: 2000, // milliseconds
+        audioTimeout: 2000, // milliseconds - timeout for audio loading
+        debounceDelay: 300, // milliseconds - for input debouncing
+        progressUpdateDelay: 100 // milliseconds
+    },
+
+    // Error type labels for foutanalyse (error analysis)
+    errorTypes: {
+        conversiefout: 'Conversiefout',
+        rekenfout_basis: 'Rekenfout (Basis)',
+        rekenfout_complex: 'Rekenfout (Complex)',
+        begrip: 'Begrip',
+        strategie: 'Strategie',
+        notatie: 'Notatie',
+        andere: 'Andere'
+    },
+
+    // Error type emojis
+    errorEmojis: {
+        conversiefout: '🔄',
+        rekenfout_basis: '➕',
+        rekenfout_complex: '🧮',
+        begrip: '💭',
+        strategie: '🎯',
+        notatie: '✍️',
+        andere: '❓'
+    },
+
+    // DMT (Drie Minuten Test) Configuration
+    dmt: {
+        baseTempos: {
+            A: 720,   // milliseconds per word (List A - easiest)
+            B: 1000,  // milliseconds per word (List B - medium)
+            C: 1350   // milliseconds per word (List C - hardest)
+        },
+        tempoMultipliers: {
+            rustig: 1.25,   // 25% slower
+            normaal: 1.0,   // normal speed
+            snel: 0.8       // 20% faster
+        },
+        speedLabels: {
+            rustig: 'Rustig tempo 🐌',
+            normaal: 'Normaal tempo 🚶',
+            snel: 'Snel tempo 🏃'
+        },
+        listLabels: {
+            A: 'Lijst A (Makkelijk)',
+            B: 'Lijst B (Gemiddeld)',
+            C: 'Lijst C (Moeilijk)'
+        },
+        defaultList: 'A',
+        defaultSpeed: 'normaal',
+        progressUpdateInterval: 100 // milliseconds
+    },
+
+    // Accessibility Configuration
+    accessibility: {
+        fontSizes: {
+            normal: { label: 'Normaal', className: 'font-normal' },
+            large: { label: 'Groot', className: 'font-large' },
+            xlarge: { label: 'Extra Groot', className: 'font-xlarge' }
+        },
+        defaults: {
+            fontSize: 'normal',
+            dyslexiaMode: false,
+            highContrast: false,
+            reducedMotion: false
+        },
+        storageKeys: {
+            fontSize: 'accessibilityFontSize',
+            dyslexia: 'accessibilityDyslexia',
+            highContrast: 'highContrastMode',
+            reducedMotion: 'reducedMotion'
+        }
+    },
+
+    // Cache Configuration
+    cache: {
+        enabled: true,
+        maxAge: 24 * 60 * 60 * 1000, // 24 hours in milliseconds
+        prefix: 'quiz_cache_',
+        version: 'v1' // Increment to invalidate all caches
+    },
+
     // File path mapping for subjects with groep/level structure
     subjectFilePaths: {
         begrijpendlezen: {
