@@ -1,0 +1,254 @@
+{
+  "$schema": "https://yourdomain.com/schemas/exercise-support-v2.0.json",
+  "schema_version": "2.0.0",
+  "exercise_id": "bl_groep4_m4_1",
+  "last_updated": "2025-12-21",
+
+  "global_feedback": {
+    "on_start": "Lees de tekst aandachtig voordat je de vragen beantwoordt.",
+    "on_complete": "Goed gedaan! Je hebt alle vragen beantwoord.",
+    "on_perfect_score": "Perfect! Je hebt alles goed! 🌟",
+    "on_high_score": "Uitstekend werk! Je hebt {percentage}% gehaald.",
+    "on_pass": "Goed gedaan! Je hebt {score} van de {total} vragen goed.",
+    "on_fail": "Je hebt {percentage}% gehaald. Probeer het nog eens, je kunt dit!"
+  },
+
+  "exercises": [
+    {
+      "id": 1,
+      "items": [
+        {
+          "item_id": "1a",
+
+          "hints": [
+            {
+              "level": 1,
+              "text": "Kijk naar de tweede zin van de tekst.",
+              "reveal_after_seconds": null,
+              "cost_points": 0,
+              "analytics_tag": "hint_mild"
+            },
+            {
+              "level": 2,
+              "text": "Zoek naar het woord 'omdat' - dit vertelt je waarom Sofie de hamster deze naam geeft.",
+              "reveal_after_seconds": null,
+              "cost_points": 1,
+              "analytics_tag": "hint_moderate"
+            },
+            {
+              "level": 3,
+              "text": "Sofie geeft hem de naam vanwege wat hij graag eet. Denk aan het geluid van knabbelen.",
+              "reveal_after_seconds": null,
+              "cost_points": 2,
+              "analytics_tag": "hint_strong"
+            }
+          ],
+
+          "feedback": {
+            "correct": {
+              "default": "Perfect! Je hebt het letterlijk in de tekst gevonden.",
+              "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
+              "after_hint": "Goed gedaan! De hint heeft je geholpen.",
+              "slow_but_correct": "Mooi! Je hebt er goed over nagedacht."
+            },
+
+            "incorrect": {
+              "first_attempt": "Nog niet helemaal. Lees de tweede zin nog eens goed.",
+              "second_attempt": "Denk goed na over waarom Sofie hem deze naam geeft. Wil je een hint?",
+              "third_attempt": "Laten we samen kijken naar de tekst. Zoek naar het woord 'omdat'.",
+              "after_hint_still_wrong": "De hint wijst naar de tweede zin. Kijk nog eens goed naar wat de hamster doet."
+            },
+
+            "per_option": [
+              {
+                "option_index": 0,
+                "text": "Hamsters slapen inderdaad veel, maar dat is niet de reden voor de naam 'Nibbel'. Denk aan het geluid van knabbelen.",
+                "common_misconception": "Focust op algemeen hamstergedrag in plaats van specifieke informatie uit de tekst",
+                "remediation": "Zoek in de tekst naar wat Sofie zegt over waarom ze hem deze naam geeft."
+              },
+              {
+                "option_index": 2,
+                "text": "Rennen komt later in het verhaal voor, maar kijk naar waarom Sofie hem deze specifieke naam geeft.",
+                "common_misconception": "Verward door andere acties die later in de tekst gebeuren",
+                "remediation": "Let op de volgorde van gebeurtenissen. De naam wordt gegeven voordat het rennen gebeurt."
+              },
+              {
+                "option_index": 3,
+                "text": "De kleur wordt niet genoemd in de tekst. Zoek naar een actie die bij de naam 'Nibbel' past.",
+                "common_misconception": "Raden zonder de tekst te lezen",
+                "remediation": "Lees altijd de tekst zorgvuldig. Het antwoord staat er letterlijk in."
+              }
+            ],
+
+            "explanation": {
+              "text": "In de tekst staat: 'Ze noemt hem Nibbel, omdat hij graag op zonnebloempitten kauwt.' Het woord 'omdat' is een signaalwoord dat aangeeft waarom iets gebeurt.",
+              "visual_aid_url": null,
+              "video_url": null,
+              "read_aloud_url": null
+            }
+          },
+
+          "learning": {
+            "skill": "letterlijk",
+            "skill_description": "Letterlijke informatie terughalen uit de tekst",
+            "skill_category": "lezen",
+            "bloom_level": "remember",
+            "difficulty_level": 1,
+
+            "learning_objectives": [
+              "Letterlijke informatie kunnen vinden in een tekst",
+              "Signaalwoorden herkennen (omdat, want, daarom)",
+              "Specifieke details onthouden"
+            ],
+
+            "reading_strategies": [
+              "Zoek naar signaalwoorden zoals 'omdat', 'want', 'daarom'",
+              "Lees de vraag eerst, dan weet je waar je op moet letten",
+              "Onderstreep belangrijke informatie in de tekst"
+            ],
+
+            "common_errors": [
+              {
+                "type": "niet_zorgvuldig_lezen",
+                "description": "Snel lezen zonder op details te letten",
+                "remedy": "Neem de tijd om elke zin goed te lezen",
+                "indicator": "Kiest voor eerste beste antwoord"
+              },
+              {
+                "type": "raden",
+                "description": "Antwoord geven zonder de tekst te raadplegen",
+                "remedy": "Zoek het antwoord altijd in de tekst",
+                "indicator": "Antwoordt binnen 5 seconden"
+              },
+              {
+                "type": "algemene_kennis_gebruiken",
+                "description": "Beantwoorden op basis van wat ze al weten in plaats van wat er staat",
+                "remedy": "Het antwoord moet letterlijk in de tekst staan",
+                "indicator": "Kiest logisch klinkend maar fout antwoord"
+              }
+            ],
+
+            "prerequisites": [
+              "basis_tekstbegrip",
+              "signaalwoorden_herkennen"
+            ],
+
+            "next_skills": [
+              "inferentieel",
+              "verbanden_leggen"
+            ],
+
+            "practice_exercises": [
+              "bl_groep4_e4_2",
+              "bl_groep4_e4_5",
+              "bl_groep3_m3_1"
+            ]
+          },
+
+          "adaptive": {
+            "if_correct_quickly": {
+              "action": "increase_difficulty",
+              "next_question_difficulty": 2,
+              "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+            },
+            "if_wrong_multiple": {
+              "action": "decrease_difficulty",
+              "next_question_difficulty": 0,
+              "message": "Laten we eerst wat makkelijkere vragen doen.",
+              "remediation_path": "bl_groep3_e3_letterlijk"
+            },
+            "if_used_all_hints": {
+              "action": "provide_extra_support",
+              "message": "Ik zie dat je alle hints nodig had. Wil je de uitleg nog eens zien?",
+              "offer_tutorial": true
+            }
+          },
+
+          "analytics": {
+            "difficulty_level": 1,
+            "estimated_time_seconds": 30,
+            "common_wrong_answer_index": 0,
+            "average_attempts": 1.5,
+            "hint_usage_rate": 0.35,
+            "mastery_threshold": 0.8,
+            "tags": [
+              "letterlijk_lezen",
+              "signaalwoorden",
+              "basis_begrip"
+            ]
+          },
+
+          "accessibility": {
+            "screen_reader_hint": "Deze vraag gaat over waarom Sofie de hamster Nibbel noemt. Luister goed naar de tweede zin.",
+            "simplified_question": "Waarom heet de hamster Nibbel?",
+            "visual_support_available": false,
+            "audio_support_available": false
+          }
+        }
+      ]
+    }
+  ],
+
+  "resources": {
+    "related_exercises": [
+      {
+        "id": "bl_groep4_e4_2",
+        "title": "De regenachtige picknick",
+        "relationship": "similar_skill",
+        "difficulty": "same"
+      },
+      {
+        "id": "bl_groep5_m5_letterlijk",
+        "title": "Letterlijk lezen - Uitdaging",
+        "relationship": "next_level",
+        "difficulty": "harder"
+      }
+    ],
+
+    "reference_materials": [
+      {
+        "title": "Signaalwoorden herkennen",
+        "type": "tutorial",
+        "url": "/tutorials/signaalwoorden",
+        "description": "Leer hoe je woorden als 'omdat', 'want' en 'daarom' herkent"
+      },
+      {
+        "title": "Letterlijk lezen - Tips",
+        "type": "video",
+        "url": "/videos/letterlijk-lezen",
+        "description": "Korte video met tips voor letterlijk lezen",
+        "duration_seconds": 120
+      }
+    ],
+
+    "parent_guidance": {
+      "skill_explanation": "Bij letterlijk lezen moet uw kind informatie vinden die letterlijk in de tekst staat.",
+      "how_to_help": [
+        "Lees samen de tekst en stel vragen over wat er letterlijk staat",
+        "Laat uw kind het antwoord aanwijzen in de tekst",
+        "Oefen met signaalwoorden zoals 'omdat', 'want', 'daarom'"
+      ],
+      "practice_ideas": [
+        "Lees een kort verhaaltje en stel 'wie', 'wat', 'waar' vragen",
+        "Laat uw kind belangrijke zinnen onderstrepen",
+        "Speel 'zoek het antwoord' met krantenartikelen"
+      ]
+    }
+  },
+
+  "performance_tracking": {
+    "mastery_criteria": {
+      "consecutive_correct": 3,
+      "success_rate": 0.8,
+      "without_hints": true,
+      "average_time_under": 45
+    },
+
+    "skill_progression": {
+      "current_level": "letterlijk",
+      "next_milestone": "inferentieel",
+      "progress_percentage": 75,
+      "estimated_exercises_to_mastery": 5
+    }
+  }
+}
