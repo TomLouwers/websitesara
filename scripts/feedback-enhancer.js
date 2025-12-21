@@ -79,7 +79,7 @@ async function main() {
 async function analyzeAllFiles() {
   console.log('📊 Analyzing feedback quality...\n');
 
-  const categories = CONFIG.category ? [CONFIG.category] : ['bl', 'gb', 'wo', 'ws', 'sp', 'tl'];
+  const categories = CONFIG.category ? [CONFIG.category] : ['bl', 'gb', 'wo', 'ws', 'sp', 'tl', 'vs'];
 
   for (const category of categories) {
     const files = findSupportFiles(category);
@@ -139,20 +139,27 @@ function calculateQualityScore(item) {
 }
 
 /**
- * Extract items from support data (handles both structures)
+ * Extract items from support data (handles all structures)
  */
 function extractItems(data) {
   const items = [];
 
   if (data.exercises && Array.isArray(data.exercises)) {
-    // BL structure
+    // BL structure: exercises[].items[]
     data.exercises.forEach(exercise => {
       if (exercise.items) {
         items.push(...exercise.items);
       }
     });
+  } else if (data.problems && Array.isArray(data.problems)) {
+    // VS structure: problems[].items[]
+    data.problems.forEach(problem => {
+      if (problem.items) {
+        items.push(...problem.items);
+      }
+    });
   } else if (data.items && Array.isArray(data.items)) {
-    // Simple structure
+    // Simple structure: items[]
     items.push(...data.items);
   }
 
@@ -181,7 +188,7 @@ async function enhanceAllFiles() {
   console.log('✨ Enhancing feedback quality...\n');
   console.log(`Mode: ${CONFIG.dryRun ? 'DRY RUN' : 'PRODUCTION'}\n`);
 
-  const categories = CONFIG.category ? [CONFIG.category] : ['bl', 'gb', 'wo', 'ws', 'sp', 'tl'];
+  const categories = CONFIG.category ? [CONFIG.category] : ['bl', 'gb', 'wo', 'ws', 'sp', 'tl', 'vs'];
 
   for (const category of categories) {
     const files = findSupportFiles(category);
@@ -243,13 +250,19 @@ function enhanceData(data) {
 
   // Enhance items
   if (enhanced.exercises && Array.isArray(enhanced.exercises)) {
-    // BL structure
+    // BL structure: exercises[].items[]
     enhanced.exercises = enhanced.exercises.map(exercise => ({
       ...exercise,
       items: exercise.items.map(item => enhanceItem(item)),
     }));
+  } else if (enhanced.problems && Array.isArray(enhanced.problems)) {
+    // VS structure: problems[].items[]
+    enhanced.problems = enhanced.problems.map(problem => ({
+      ...problem,
+      items: problem.items.map(item => enhanceItem(item)),
+    }));
   } else if (enhanced.items && Array.isArray(enhanced.items)) {
-    // Simple structure
+    // Simple structure: items[]
     enhanced.items = enhanced.items.map(item => enhanceItem(item));
   }
 

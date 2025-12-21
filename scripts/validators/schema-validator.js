@@ -19,7 +19,10 @@ function validateCore(data) {
     if (!data.metadata.id) errors.push('Missing metadata.id');
     if (!data.metadata.type) errors.push('Missing metadata.type');
     if (!data.metadata.category) errors.push('Missing metadata.category');
-    if (data.metadata.grade === undefined) errors.push('Missing metadata.grade');
+    // Grade can be a single value or array (grade_levels)
+    if (data.metadata.grade === undefined && !data.metadata.grade_levels) {
+      errors.push('Missing metadata.grade or metadata.grade_levels');
+    }
   }
 
   // Check for items array (simple structure) OR exercises array (BL structure)
@@ -80,8 +83,38 @@ function validateCore(data) {
         }
       });
     }
+  } else if (data.problems && Array.isArray(data.problems)) {
+    // VS structure: problems[].items[]
+    if (data.problems.length === 0) {
+      errors.push('Problems array is empty');
+    } else {
+      data.problems.forEach((problem, probIndex) => {
+        if (!problem.items || !Array.isArray(problem.items)) {
+          errors.push(`Problem ${probIndex}: missing or invalid items array`);
+        } else {
+          problem.items.forEach((item, itemIndex) => {
+            if (!item.id) {
+              errors.push(`Problem ${probIndex}, Item ${itemIndex}: missing id`);
+            }
+            if (!item.question?.text) {
+              errors.push(`Problem ${probIndex}, Item ${itemIndex}: missing question.text`);
+            }
+            if (!item.answer) {
+              errors.push(`Problem ${probIndex}, Item ${itemIndex}: missing answer`);
+            }
+            if (item.type === 'multiple_choice' || !item.type) {
+              if (!item.options || !Array.isArray(item.options)) {
+                errors.push(`Problem ${probIndex}, Item ${itemIndex}: missing or invalid options`);
+              } else if (item.options.length < 2) {
+                errors.push(`Problem ${probIndex}, Item ${itemIndex}: need at least 2 options`);
+              }
+            }
+          });
+        }
+      });
+    }
   } else {
-    errors.push('Missing items or exercises array');
+    errors.push('Missing items, exercises, or problems array');
   }
 
   return {
@@ -130,8 +163,21 @@ function validateSupport(data) {
         errors.push(`Support item ${index}: missing item_id`);
       }
     });
+  } else if (data.problems && Array.isArray(data.problems)) {
+    // VS structure: problems[].items[]
+    data.problems.forEach((problem, probIndex) => {
+      if (!problem.items || !Array.isArray(problem.items)) {
+        errors.push(`Support problem ${probIndex}: missing or invalid items array`);
+      } else {
+        problem.items.forEach((item, itemIndex) => {
+          if (!item.item_id) {
+            errors.push(`Support problem ${probIndex}, item ${itemIndex}: missing item_id`);
+          }
+        });
+      }
+    });
   } else {
-    errors.push('Missing items or exercises array');
+    errors.push('Missing items, exercises, or problems array');
   }
 
   return {
