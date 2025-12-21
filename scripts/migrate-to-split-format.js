@@ -204,12 +204,15 @@ async function processFile(file) {
 
       fs.writeFileSync(corePath, JSON.stringify(core, null, 2));
 
-      if (support && Object.keys(support.items || []).length > 0) {
+      // Check if support has content (items OR exercises)
+      const hasSupport = support && ((support.items && support.items.length > 0) || (support.exercises && support.exercises.length > 0));
+
+      if (hasSupport) {
         fs.writeFileSync(supportPath, JSON.stringify(support, null, 2));
       }
 
       console.log(`  ✅ ${baseName}_core.json`);
-      if (support && Object.keys(support.items || []).length > 0) {
+      if (hasSupport) {
         console.log(`  ✅ ${baseName}_support.json`);
       }
     } else {
