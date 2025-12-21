@@ -1,0 +1,21 @@
+{
+  "schema_version": "2.0.0",
+  "settings": {
+    "autoplay": false,
+    "volume": 0.8,
+    "preload": "metadata"
+  },
+  "formats": {
+    "preferred": "mp3",
+    "fallback": [
+      "ogg",
+      "wav"
+    ]
+  },
+  "paths": {
+    "base": "/audio",
+    "patterns": {
+      "sp": "sp_gr{grade}_{level}_{id:02d}_{part}.mp3"
+    }
+  }
+}
