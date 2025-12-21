@@ -1,4 +1,15 @@
 {
+  "scripts": {
+    "migrate:dry-run": "node scripts/migrate-to-split-format.js --dry-run",
+    "migrate:bl": "node scripts/migrate-to-split-format.js --category=bl",
+    "migrate:gb": "node scripts/migrate-to-split-format.js --category=gb",
+    "migrate:wo": "node scripts/migrate-to-split-format.js --category=wo",
+    "migrate:ws": "node scripts/migrate-to-split-format.js --category=ws",
+    "migrate:sp": "node scripts/migrate-to-split-format.js --category=sp",
+    "migrate:tl": "node scripts/migrate-to-split-format.js --category=tl",
+    "migrate:all": "node scripts/migrate-to-split-format.js",
+    "migrate:test": "node scripts/test-single-file.js"
+  },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^7.0.2",
     "csso-cli": "^4.0.2",
