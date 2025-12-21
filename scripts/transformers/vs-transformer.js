@@ -101,14 +101,14 @@ function transformVerhaaltjessommen(data, filePath) {
         }
       };
 
-      // Support item - rich feedback
+      // Support item - rich feedback (standardized format)
       const supportItem = {
         item_id: itemId,
 
         // Main hint
         hint: q.hint || null,
 
-        // Per-option feedback
+        // Per-option feedback (matches standard template)
         feedback: {
           per_option: q.options.map((opt, optIndex) => {
             if (opt.is_correct) {
@@ -124,36 +124,14 @@ function transformVerhaaltjessommen(data, filePath) {
           }).filter(f => f !== null)
         },
 
-        // Extra information - solution steps
+        // Explanation with steps (matches standard template)
         explanation: q.extra_info ? {
           concept: q.extra_info.concept || null,
           steps: q.extra_info.berekening || [],
           calculation_table: q.extra_info.berekening_tabel || null
         } : null,
 
-        // LOVA methodology
-        lova: q.lova ? {
-          step1_reading: {
-            noise_information: q.lova.stap1_lezen?.ruis || [],
-            main_question: q.lova.stap1_lezen?.hoofdvraag || null,
-            sub_steps: q.lova.stap1_lezen?.tussenstappen || []
-          },
-          step2_organizing: {
-            relevant_numbers: q.lova.stap2_ordenen?.relevante_getallen || {},
-            tool: q.lova.stap2_ordenen?.tool || null,
-            conversions: q.lova.stap2_ordenen?.conversies || []
-          },
-          step3_forming: {
-            operations: q.lova.stap3_vormen?.bewerkingen || []
-          },
-          step4_answering: {
-            expected_unit: q.lova.stap4_antwoorden?.verwachte_eenheid || null,
-            logic_check: q.lova.stap4_antwoorden?.logica_check || null,
-            answer: q.lova.stap4_antwoorden?.antwoord || null
-          }
-        } : null,
-
-        // Learning metadata
+        // Learning metadata (standardized)
         learning: {
           skill: "word_problems",
           theme: problem.theme,
