@@ -52,6 +52,10 @@ let useTextGrouping = false;   // Flag to indicate if we should use text groupin
 let categoryProgress = {};
 let lovaClickCount = 0; // Track L.O.V.A. button clicks
 
+// Hint timer: Delayed affordance - show hint after 12 seconds of inactivity
+let hintTimer = null;
+const HINT_DELAY_MS = 12000; // 12 seconds
+
 // Helper function to render verhoudingstabel widget
 function renderVerhoudingstabel(containerElement, extraInfo) {
     // Clear the container first
@@ -1281,8 +1285,22 @@ function loadCurrentQuestion() {
     // Reset UI state
     selectedAnswer = null;
     hasAnswered = false;
-    document.getElementById('submitBtn').classList.remove('hidden');
+
+    // Show big submit button (will be hidden when answer is selected and inline button appears)
+    const submitBtn = document.getElementById('submitBtn');
+    if (submitBtn) {
+        submitBtn.style.display = 'block';
+        submitBtn.classList.remove('hidden');
+    }
+
     document.getElementById('nextBtn').classList.add('hidden');
+
+    // Clear any existing inline check buttons
+    document.querySelectorAll('.inline-check-btn').forEach(btn => btn.remove());
+
+    // Start hint timer for delayed affordance (will show hint button after 12s of inactivity)
+    clearHintTimer();
+    startHintTimer();
 }
 
 // NEW: Load question in text grouping mode (for Begrijpend Lezen)
@@ -1358,14 +1376,15 @@ function loadTextGroupQuestion() {
     const hintDisplayText = document.getElementById('hintDisplayText');
 
     if (currentQuestion.hint && hintPillBtn && hintDisplay && hintDisplayText) {
-        // Question has a hint - show the button
-        hintPillBtn.style.display = 'inline-flex';
+        // Question has a hint - prepare button (will show after 12s via timer)
         hintDisplayText.textContent = currentQuestion.hint;
         // Hide the hint display by default (user needs to click to see it)
         hintDisplay.style.display = 'none';
+        // Button visibility controlled by delayed affordance timer
+        hintPillBtn.classList.remove('show-hint');
     } else if (hintPillBtn && hintDisplay) {
         // No hint - hide both button and display
-        hintPillBtn.style.display = 'none';
+        hintPillBtn.classList.remove('show-hint');
         hintDisplay.style.display = 'none';
     }
 
@@ -1378,13 +1397,25 @@ function loadTextGroupQuestion() {
         feedbackSectionNew.classList.add('hidden');
     }
 
-    // Show submit button, hide next button
-    document.getElementById('submitBtn').classList.remove('hidden');
+    // Show big submit button (will be hidden when answer is selected and inline button appears)
+    const submitBtn = document.getElementById('submitBtn');
+    if (submitBtn) {
+        submitBtn.style.display = 'block';
+        submitBtn.classList.remove('hidden');
+    }
+
     document.getElementById('nextBtn').classList.add('hidden');
 
     // Reset UI state
     selectedAnswer = null;
     hasAnswered = false;
+
+    // Clear any existing inline check buttons
+    document.querySelectorAll('.inline-check-btn').forEach(btn => btn.remove());
+
+    // Start hint timer for delayed affordance (will show hint button after 12s of inactivity)
+    clearHintTimer();
+    startHintTimer();
 }
 
 // Helper: Calculate how many questions we've completed so far
@@ -1530,14 +1561,96 @@ function selectOption(index) {
         return; // Silently ignore clicks on disabled options
     }
 
-    // Remove previous selection
+    // Remove previous selection and any existing inline check buttons
     document.querySelectorAll('.option').forEach(opt => {
         opt.classList.remove('selected'); // Don't remove 'incorrect' class - keep disabled options marked
+        // Remove any existing inline check button
+        const existingBtn = opt.parentElement.querySelector('.inline-check-btn');
+        if (existingBtn) {
+            existingBtn.remove();
+        }
     });
 
     // Select new option
-    document.querySelectorAll('.option')[index].classList.add('selected');
+    const selectedOption = document.querySelectorAll('.option')[index];
+    selectedOption.classList.add('selected');
     selectedAnswer = index;
+
+    // Reset hint timer when user selects an answer
+    resetHintTimer();
+
+    // Create and show inline check button under selected answer
+    showInlineCheckButton(selectedOption);
+
+    // Hide the big submit button at the bottom
+    const submitBtn = document.getElementById('submitBtn');
+    if (submitBtn) {
+        submitBtn.style.display = 'none';
+    }
+}
+
+// Helper: Show inline check button directly under selected answer
+function showInlineCheckButton(selectedOption) {
+    // Create inline check button
+    const checkBtn = document.createElement('button');
+    checkBtn.className = 'inline-check-btn';
+    checkBtn.innerHTML = '<span>✓</span><span>Check mijn antwoord!</span>';
+    checkBtn.onclick = submitAnswer;
+
+    // Insert button after the selected option
+    selectedOption.parentElement.insertBefore(checkBtn, selectedOption.nextSibling);
+}
+
+// Delayed hint affordance: Start timer to show hint after 12 seconds of inactivity
+function startHintTimer() {
+    // Clear any existing timer
+    if (hintTimer) {
+        clearTimeout(hintTimer);
+        hintTimer = null;
+    }
+
+    const hintBtn = document.getElementById('hintPillBtn');
+    if (!hintBtn) return;
+
+    // Check if question has a hint (only show button if hint exists)
+    const hintText = document.getElementById('hintDisplayText');
+    if (!hintText || !hintText.textContent) {
+        return; // No hint available, don't show button
+    }
+
+    // Start timer to show hint button after 12 seconds
+    hintTimer = setTimeout(() => {
+        hintBtn.classList.add('show-hint');
+    }, HINT_DELAY_MS);
+}
+
+// Reset hint timer (called when user interacts with quiz)
+function resetHintTimer() {
+    const hintBtn = document.getElementById('hintPillBtn');
+    if (hintBtn) {
+        hintBtn.classList.remove('show-hint');
+    }
+
+    if (hintTimer) {
+        clearTimeout(hintTimer);
+        hintTimer = null;
+    }
+
+    // Restart timer
+    startHintTimer();
+}
+
+// Clear hint timer (called when moving to next question)
+function clearHintTimer() {
+    const hintBtn = document.getElementById('hintPillBtn');
+    if (hintBtn) {
+        hintBtn.classList.remove('show-hint');
+    }
+
+    if (hintTimer) {
+        clearTimeout(hintTimer);
+        hintTimer = null;
+    }
 }
 
 /**
