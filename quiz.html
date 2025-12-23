@@ -263,7 +263,7 @@
             margin: 0 auto 24px;
             background: white;
             border-radius: 20px;
-            padding: 28px 32px;
+            padding: 24px 28px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
         }
 
@@ -275,7 +275,7 @@
         /* VISUAL ATTACHMENT: Question belongs to text, not answers */
         /* Story Block Wrapper - contains BOTH text and question */
         #storyBlockWrapper {
-            margin-bottom: 28px; /* Gap after entire text+question block, before answers */
+            margin-bottom: 16px; /* Gap after entire text+question block, before answers */
         }
 
         /* Question in text container - inside the reading content */
@@ -371,11 +371,11 @@
             }
 
             .quiz-question-wrapper {
-                padding: 24px 28px;
+                padding: 20px 24px;
             }
 
             .feedback-card {
-                padding: 24px 28px;
+                padding: 20px 24px;
             }
         }
 
@@ -419,8 +419,12 @@
 
             /* Question in text container - mobile adjustments */
             .question-in-text-container {
-                margin-top: 16px;
-                padding-top: 16px;
+                margin-top: 12px;
+                padding-top: 12px;
+            }
+
+            #storyBlockWrapper {
+                margin-bottom: 12px;
             }
 
             .question-in-text-container .question-text {
@@ -513,7 +517,7 @@
            ============================================ */
 
         .quiz-answers-wrapper {
-            margin-top: 16px;
+            margin-top: 0;
         }
 
         /* SIMPLIFIED Answer Options - NO A/B/C/D labels, larger touch targets */
@@ -522,7 +526,7 @@
             display: flex;
             align-items: center;
             gap: 14px;
-            background: white;
+            background: #FAFAFA;
             border: 2.5px solid #E5E5E5;
             border-radius: 16px;
             padding: 18px 24px;
@@ -536,7 +540,7 @@
         }
 
         .quiz-answers-wrapper .option:hover {
-            background: #F9FAFB;
+            background: #F0F0F0;
             border-color: #32C4A0;
             transform: translateY(-1px);
         }
@@ -1308,10 +1312,10 @@
             width: 100%;
             max-width: 640px;
             margin: 0 auto 24px;
-            background: white;
-            border-radius: 16px;
-            padding: 24px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            background: transparent;
+            border-radius: 0;
+            padding: 0;
+            box-shadow: none;
             position: relative;
         }
 
@@ -1341,7 +1345,7 @@
             }
 
             .quiz-question-card-morph-wrapper {
-                padding: 1.5rem;
+                padding: 0;
             }
         }
 
