@@ -269,30 +269,31 @@
         }
 
         /* VISUAL ATTACHMENT: Question belongs to text, not answers */
-        /* Story Block Wrapper - no gap after, question follows immediately */
+        /* Story Block Wrapper - contains BOTH text and question */
         #storyBlockWrapper {
-            margin-bottom: 0; /* Remove gap - question will follow immediately */
+            margin-bottom: 28px; /* Gap after entire text+question block, before answers */
         }
 
-        /* ONE READING SURFACE: Question attached to text */
-        .quiz-question-box {
-            background: transparent;
-            border-radius: 0;
-            padding: 0;
-            margin-top: 16px; /* Small breathing space from text above */
-            margin-bottom: 28px; /* Gap after question, before answers */
-            box-shadow: none;
-            border: none;
+        /* Question in text container - inside the reading content */
+        .question-in-text-container {
+            margin-top: 20px; /* Breathing space from text */
+            padding-top: 20px; /* Extra spacing */
+            border-top: 1px solid rgba(163, 231, 223, 0.3); /* Subtle divider line, matches border color */
         }
 
-        .quiz-question-box .question-text {
+        /* Question text styling - part of the reading flow */
+        .question-in-text-container .question-text {
             font-size: 19px;
             font-weight: 700;
             color: #1A2332;
             line-height: 1.75; /* Match text line-height for visual unity */
             margin: 0;
-            max-width: 65ch; /* Optimal reading width */
-            padding-left: 20px; /* Align with text (matches border-left padding) */
+            max-width: 65ch; /* Optimal reading width, matches text */
+        }
+
+        /* Empty quiz-question-box (kept for backward compatibility) */
+        .quiz-question-box {
+            display: none; /* Not used anymore, question is in text container */
         }
 
         #storyBlockWrapper.hidden {
@@ -398,11 +399,13 @@
                 font-size: 12px;
             }
 
-            .quiz-question-box {
-                padding: 0;
+            /* Question in text container - mobile adjustments */
+            .question-in-text-container {
+                margin-top: 16px;
+                padding-top: 16px;
             }
 
-            .quiz-question-box .question-text {
+            .question-in-text-container .question-text {
                 font-size: 17px;
                 font-weight: 700;
                 line-height: 1.6;
@@ -1436,7 +1439,7 @@
                 </div>
             </div>
 
-            <!-- Story Block (if available) - shown first -->
+            <!-- Story Block (if available) - contains BOTH text AND question -->
             <div id="storyBlockWrapper" class="hidden">
                 <div id="readingContentNew" class="reading-content">
                     <div class="story-header-label">
@@ -1444,6 +1447,26 @@
                         <span>Verhaaltje</span>
                     </div>
                     <div class="story-text-content"></div>
+
+                    <!-- Question is INSIDE the same container as the text -->
+                    <div class="question-in-text-container">
+                        <!-- NEW: Skill and Strategy badges -->
+                        <div class="question-meta-badges" id="questionMetaBadges" style="display: none;">
+                            <span class="skill-badge" id="skillBadge" style="display: none;">
+                                <span class="badge-label">Vaardigheid:</span>
+                                <span id="skillType">Letterlijk</span>
+                            </span>
+                            <span class="strategy-badge" id="strategyBadge" style="display: none;">
+                                <span class="badge-label">Strategie:</span>
+                                <span id="strategyType">Informatie zoeken</span>
+                            </span>
+                        </div>
+
+                        <!-- Question text -->
+                        <div class="question-with-hint-wrapper">
+                            <div class="question-text" id="questionTextNew"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -1451,22 +1474,6 @@
             <div id="questionCardMorph" class="quiz-question-card-morph-wrapper">
                 <!-- Question Box -->
                 <div class="quiz-question-box">
-                <!-- NEW: Skill and Strategy badges -->
-                <div class="question-meta-badges" id="questionMetaBadges" style="display: none;">
-                    <span class="skill-badge" id="skillBadge" style="display: none;">
-                        <span class="badge-label">Vaardigheid:</span>
-                        <span id="skillType">Letterlijk</span>
-                    </span>
-                    <span class="strategy-badge" id="strategyBadge" style="display: none;">
-                        <span class="badge-label">Strategie:</span>
-                        <span id="strategyType">Informatie zoeken</span>
-                    </span>
-                </div>
-
-                <!-- Question text without hint button -->
-                <div class="question-with-hint-wrapper">
-                    <div class="question-text" id="questionTextNew"></div>
-                </div>
             </div>
 
             <!-- Hint Container -->
