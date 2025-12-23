@@ -1564,12 +1564,13 @@ function selectOption(index) {
     // Remove previous selection and any existing inline check buttons
     document.querySelectorAll('.option').forEach(opt => {
         opt.classList.remove('selected'); // Don't remove 'incorrect' class - keep disabled options marked
-        // Remove any existing inline check button
-        const existingBtn = opt.parentElement.querySelector('.inline-check-btn');
-        if (existingBtn) {
-            existingBtn.remove();
-        }
     });
+
+    // Remove any existing inline check button (from anywhere in the quiz)
+    const existingBtn = document.querySelector('.inline-check-btn');
+    if (existingBtn) {
+        existingBtn.remove();
+    }
 
     // Select new option
     const selectedOption = document.querySelectorAll('.option')[index];
@@ -1579,8 +1580,8 @@ function selectOption(index) {
     // Reset hint timer when user selects an answer
     resetHintTimer();
 
-    // Create and show inline check button under selected answer
-    showInlineCheckButton(selectedOption);
+    // Create and show inline check button after the options container
+    showInlineCheckButton();
 
     // Hide the big submit button at the bottom
     const submitBtn = document.getElementById('submitBtn');
@@ -1589,16 +1590,29 @@ function selectOption(index) {
     }
 }
 
-// Helper: Show inline check button directly under selected answer
-function showInlineCheckButton(selectedOption) {
+// Helper: Show inline check button directly under the selected answer
+function showInlineCheckButton() {
+    // Find the selected option
+    const selectedOption = document.querySelector('.option.selected');
+    if (!selectedOption) return;
+
     // Create inline check button
     const checkBtn = document.createElement('button');
     checkBtn.className = 'inline-check-btn';
     checkBtn.innerHTML = '<span>✓</span><span>Check mijn antwoord!</span>';
     checkBtn.onclick = submitAnswer;
 
-    // Insert button after the selected option
-    selectedOption.parentElement.insertBefore(checkBtn, selectedOption.nextSibling);
+    // Insert button right after the selected option (as its sibling in the container)
+    const optionsContainer = selectedOption.parentElement;
+    if (optionsContainer) {
+        // Insert after the selected option
+        if (selectedOption.nextSibling) {
+            optionsContainer.insertBefore(checkBtn, selectedOption.nextSibling);
+        } else {
+            // If it's the last option, just append it
+            optionsContainer.appendChild(checkBtn);
+        }
+    }
 }
 
 // Delayed hint affordance: Start timer to show hint after 12 seconds of inactivity
