@@ -268,13 +268,19 @@
             display: none !important;
         }
 
-        /* ONE READING SURFACE: Unified text + question layout */
-        /* No strong borders - use spacing instead */
+        /* VISUAL ATTACHMENT: Question belongs to text, not answers */
+        /* Story Block Wrapper - no gap after, question follows immediately */
+        #storyBlockWrapper {
+            margin-bottom: 0; /* Remove gap - question will follow immediately */
+        }
+
+        /* ONE READING SURFACE: Question attached to text */
         .quiz-question-box {
             background: transparent;
             border-radius: 0;
             padding: 0;
-            margin-bottom: 24px;
+            margin-top: 16px; /* Small breathing space from text above */
+            margin-bottom: 28px; /* Gap after question, before answers */
             box-shadow: none;
             border: none;
         }
@@ -283,14 +289,10 @@
             font-size: 19px;
             font-weight: 700;
             color: #1A2332;
-            line-height: 1.65;
+            line-height: 1.75; /* Match text line-height for visual unity */
             margin: 0;
             max-width: 65ch; /* Optimal reading width */
-        }
-
-        /* Story Block Wrapper - integrated into reading flow */
-        #storyBlockWrapper {
-            margin-bottom: 28px;
+            padding-left: 20px; /* Align with text (matches border-left padding) */
         }
 
         #storyBlockWrapper.hidden {
@@ -326,9 +328,10 @@
         /* Story Text Content - optimized for reading */
         .story-text-content {
             font-size: 16px;
-            line-height: 1.65; /* Increased from 1.5 for better readability */
+            line-height: 1.75; /* Increased to 1.75 for better flow and readability */
             color: #333;
             max-width: 65ch; /* Keep lines between 45-75 characters */
+            margin-bottom: 4px; /* Tight connection to question below */
         }
 
         .story-text-content p {
@@ -604,6 +607,60 @@
         }
 
         /* ============================================
+           INLINE CHECK BUTTON - Appears under selected answer
+           ============================================ */
+
+        .inline-check-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-height: 48px;
+            padding: 12px 24px;
+            margin-top: 12px;
+            background: linear-gradient(135deg, #FF8A34 0%, #FF6B35 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(255, 138, 52, 0.25);
+            animation: slideInUp 0.3s ease-out;
+        }
+
+        .inline-check-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 138, 52, 0.35);
+        }
+
+        .inline-check-btn:active {
+            transform: translateY(0);
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile responsive for inline check button */
+        @media (max-width: 640px) {
+            .inline-check-btn {
+                min-height: 44px;
+                padding: 10px 20px;
+                font-size: 15px;
+            }
+        }
+
+        /* ============================================
            FEEDBACK COMPONENT - ENHANCED LEARNING
            ============================================ */
 
@@ -821,10 +878,10 @@
             width: 100%;
         }
 
-        /* HINT BUTTON: Repositioned as "life-line" at bottom, less tempting */
+        /* HINT BUTTON: Delayed affordance - only appears after 12s inactivity */
         .hint-pill-btn {
             /* Position at bottom of answer options, not next to question */
-            display: inline-flex;
+            display: none; /* Hidden by default - shown via JS after 12s */
             align-items: center;
             justify-content: center;
             gap: 5px;
@@ -851,10 +908,27 @@
             /* Interaction */
             cursor: pointer;
             transition: all 0.15s ease;
-            opacity: 0.7;
+            opacity: 0;
 
             /* No outline on focus, but add ring for accessibility */
             outline: none;
+        }
+
+        /* Show hint button with fade-in animation */
+        .hint-pill-btn.show-hint {
+            display: inline-flex;
+            animation: hintFadeIn 0.4s ease-out forwards;
+        }
+
+        @keyframes hintFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-4px);
+            }
+            to {
+                opacity: 0.7;
+                transform: translateY(0);
+            }
         }
 
         .hint-pill-btn:focus {
@@ -1454,11 +1528,11 @@
                     <textarea id="textareaAnswerNew" class="textarea-answer hidden" placeholder="Typ hier je antwoord..."></textarea>
                 </div>
 
-                <!-- HINT BUTTON: Repositioned as "life-line" below answer options -->
+                <!-- HINT BUTTON: Delayed affordance - appears after 12s inactivity -->
                 <div style="text-align: center; margin-top: 8px;">
-                    <button class="hint-pill-btn" id="hintPillBtn" onclick="toggleHint()" style="display: none;">
+                    <button class="hint-pill-btn" id="hintPillBtn" onclick="toggleHint()">
                         <span class="hint-pill-icon">💡</span>
-                        <span class="hint-pill-text">Hint nodig?</span>
+                        <span class="hint-pill-text">Ik wil een hint</span>
                     </button>
                 </div>
 
