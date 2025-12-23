@@ -103,11 +103,12 @@
             transition: width 0.4s ease;
         }
 
+        /* Gamified Points Badge - Star Counter */
         .quiz-points-pill {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: #FFE8D1;
+            background: linear-gradient(135deg, #FFF4E6 0%, #FFE8D1 100%);
             color: #FF8A34;
             padding: 8px 16px;
             border-radius: 999px;
@@ -115,37 +116,56 @@
             font-weight: 600;
             white-space: nowrap;
             flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(255, 138, 52, 0.15);
+            border: 1.5px solid #FFD4A8;
         }
 
-        /* 3. Control Buttons Row (below progress) */
+        .quiz-points-pill span:first-child {
+            font-size: 18px;
+            animation: twinkle 2s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.15); opacity: 0.85; }
+        }
+
+        /* 3. Control Buttons Row - REDESIGNED: Far top-right, less prominent */
         .quiz-topbar-bottom {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             gap: 10px;
         }
 
         /* 4. Control Buttons */
         .quiz-control-buttons {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             align-items: center;
             flex-wrap: wrap;
+            margin-left: auto;
         }
 
         .quiz-control-btn {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            height: 36px;
-            padding: 0 16px;
+            height: 32px;
+            padding: 0 12px;
             border-radius: 999px;
             border: 1.5px solid;
             background: white;
             font-family: 'Nunito', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 600;
+            font-size: 0.8rem;
+            font-weight: 500;
             cursor: pointer;
             transition: all 0.2s ease;
+            opacity: 0.75;
+        }
+
+        .quiz-control-btn:hover {
+            opacity: 1;
         }
 
         .quiz-control-btn.hulp {
@@ -158,21 +178,22 @@
         }
 
         .quiz-control-btn.pauze {
-            border-color: #CFCFCF;
-            color: #666;
+            border-color: #E5E5E5;
+            color: #888;
         }
 
         .quiz-control-btn.pauze:hover {
             background: rgba(0, 0, 0, 0.03);
         }
 
+        /* Softer language for "Stop" button - now "Sluiten" (Close) */
         .quiz-control-btn.stoppen {
-            border-color: rgba(249, 115, 115, 0.4);
-            color: #F97373;
+            border-color: #E5E5E5;
+            color: #888;
         }
 
         .quiz-control-btn.stoppen:hover {
-            background: rgba(249, 115, 115, 0.05);
+            background: rgba(0, 0, 0, 0.03);
         }
 
         /* Responsive adjustments */
@@ -247,66 +268,71 @@
             display: none !important;
         }
 
-        /* Question Box - Step 2: Clear and prominent */
+        /* ONE READING SURFACE: Unified text + question layout */
+        /* No strong borders - use spacing instead */
         .quiz-question-box {
-            background: white;
-            border-radius: 16px;
-            padding: 26px 30px;
-            margin-bottom: 20px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-            border: 2px solid #E8E8E8;
+            background: transparent;
+            border-radius: 0;
+            padding: 0;
+            margin-bottom: 24px;
+            box-shadow: none;
+            border: none;
         }
 
         .quiz-question-box .question-text {
-            font-size: 20px;
+            font-size: 19px;
             font-weight: 700;
             color: #1A2332;
-            line-height: 1.6;
+            line-height: 1.65;
             margin: 0;
+            max-width: 65ch; /* Optimal reading width */
         }
 
-        /* Story Block Wrapper */
+        /* Story Block Wrapper - integrated into reading flow */
         #storyBlockWrapper {
-            margin-bottom: 20px;
+            margin-bottom: 28px;
         }
 
         #storyBlockWrapper.hidden {
             display: none;
         }
 
-        /* Reading Content Box - Supportive context container */
+        /* Reading Content - unified with question, no heavy box */
         .quiz-question-wrapper .reading-content {
             position: relative;
-            background: #FFF8EC;
-            border-radius: 16px;
-            padding: 18px 22px 18px 26px;
+            background: transparent;
+            border-radius: 0;
+            padding: 0 0 20px 0;
             margin-bottom: 0;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-            border-left: 3px solid #A3E7DF;
+            box-shadow: none;
+            border-left: 4px solid #A3E7DF;
+            padding-left: 20px;
         }
 
-        /* Story Header Label - Inside the box */
+        /* Story Header Label - subtle, not prominent */
         .story-header-label {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
-            color: #7BA3E5;
+            color: #32C4A0;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 10px;
+            letter-spacing: 0.6px;
+            margin-bottom: 12px;
+            opacity: 0.85;
         }
 
-        /* Story Text Content */
+        /* Story Text Content - optimized for reading */
         .story-text-content {
-            font-size: 15px;
-            line-height: 1.5;
-            color: #555;
+            font-size: 16px;
+            line-height: 1.65; /* Increased from 1.5 for better readability */
+            color: #333;
+            max-width: 65ch; /* Keep lines between 45-75 characters */
         }
 
         .story-text-content p {
-            margin: 0 0 12px 0;
+            margin: 0 0 14px 0;
         }
 
         .story-text-content p:last-child {
@@ -370,16 +396,17 @@
             }
 
             .quiz-question-box {
-                padding: 20px 24px;
+                padding: 0;
             }
 
             .quiz-question-box .question-text {
-                font-size: 18px;
+                font-size: 17px;
                 font-weight: 700;
+                line-height: 1.6;
             }
 
             .quiz-question-wrapper .reading-content {
-                padding: 16px 18px 16px 22px;
+                padding: 0 0 16px 16px;
                 border-left-width: 3px;
             }
 
@@ -389,7 +416,8 @@
             }
 
             .story-text-content {
-                font-size: 14px;
+                font-size: 15px;
+                line-height: 1.6;
             }
 
             /* Feedback component mobile styles */
@@ -464,100 +492,87 @@
             margin-top: 16px;
         }
 
-        /* Base Answer Option Style */
+        /* SIMPLIFIED Answer Options - NO A/B/C/D labels, larger touch targets */
         .quiz-answers-wrapper .option {
             position: relative;
             display: flex;
             align-items: center;
             gap: 14px;
             background: white;
-            border: 2px solid #D9D9D9;
-            border-radius: 999px;
-            padding: 16px 20px 16px 70px;
-            min-height: 58px;
-            margin-bottom: 12px;
+            border: 2.5px solid #E5E5E5;
+            border-radius: 16px;
+            padding: 18px 24px;
+            min-height: 64px; /* Larger touch target for kids/tablets */
+            margin-bottom: 14px;
             cursor: pointer;
             transition: all 0.2s ease;
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 500;
             color: #2C3E50;
         }
 
         .quiz-answers-wrapper .option:hover {
             background: #F9FAFB;
+            border-color: #32C4A0;
+            transform: translateY(-1px);
         }
 
-        /* Letter Prefix Circle */
+        /* REMOVED: Letter Prefix Circle - NO A/B/C/D labels */
         .quiz-answers-wrapper .option::before {
-            content: attr(data-letter);
-            position: absolute;
-            left: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: #F5F5F5;
-            border: 2px solid #D9D9D9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 15px;
-            font-weight: 700;
-            color: #666;
-            transition: all 0.2s ease;
+            display: none !important;
+            content: none !important;
         }
 
         /* Selected State */
         .quiz-answers-wrapper .option.selected {
             background: #FFF8F0;
             border-color: #FFB366;
-        }
-
-        .quiz-answers-wrapper .option.selected::before {
-            background: #FFE8D1;
-            border-color: #FFB366;
-            color: #FF8A34;
+            border-width: 3px;
+            box-shadow: 0 4px 12px rgba(255, 179, 102, 0.15);
         }
 
         /* Neutral State (dimmed) */
         .quiz-answers-wrapper .option.is-neutral {
-            opacity: 0.6;
+            opacity: 0.5;
             color: #7F8C8D;
         }
 
-        /* Correct State */
+        /* Correct State - Clean, no A/B/C/D circle */
         .quiz-answers-wrapper .option.is-correct {
-            background: #E6F8E9;
+            background: linear-gradient(135deg, #E6F8E9 0%, #F0FDF4 100%);
             border-color: #37B24D;
+            border-width: 3px;
             color: #2C3E50;
             font-weight: 600;
             animation: correctPulse 0.5s ease-out;
+            box-shadow: 0 4px 12px rgba(55, 178, 77, 0.15);
         }
 
-        .quiz-answers-wrapper .option.is-correct::before {
+        .quiz-answers-wrapper .option.is-correct::after {
             content: '✓';
-            background: #E6F8E9;
-            border-color: #37B24D;
+            position: absolute;
+            right: 20px;
+            font-size: 24px;
             color: #37B24D;
-            font-size: 18px;
+            font-weight: bold;
         }
 
-        /* Incorrect State (neuroscience-safe) */
+        /* Incorrect State (neuroscience-safe) - Clean design */
         .quiz-answers-wrapper .option.is-incorrect {
-            background: #FFF4D7;
+            background: #FFF9E6;
             border-color: #FFC46B;
+            border-width: 3px;
             color: #2C3E50;
-            font-weight: 600;
+            font-weight: 500;
             opacity: 0.7;
             cursor: not-allowed;
         }
 
-        .quiz-answers-wrapper .option.is-incorrect::before {
+        .quiz-answers-wrapper .option.is-incorrect::after {
             content: '💡';
-            background: #FFF4D7;
-            border-color: #FFC46B;
-            font-size: 18px;
+            position: absolute;
+            right: 20px;
+            font-size: 20px;
         }
 
         /* Animations */
@@ -572,24 +587,19 @@
             content: none !important;
         }
 
-        /* Responsive */
+        /* Responsive - Simplified for mobile/tablet */
         @media (max-width: 640px) {
             .quiz-answers-wrapper .option {
-                padding: 14px 16px 14px 60px;
-                min-height: 54px;
-                font-size: 15px;
-            }
-
-            .quiz-answers-wrapper .option::before {
-                left: 12px;
-                width: 32px;
-                height: 32px;
-                font-size: 14px;
-            }
-
-            .quiz-answers-wrapper .option.is-incorrect::before,
-            .quiz-answers-wrapper .option.is-correct::before {
+                padding: 16px 20px;
+                min-height: 58px;
                 font-size: 16px;
+                border-radius: 14px;
+            }
+
+            .quiz-answers-wrapper .option.is-correct::after,
+            .quiz-answers-wrapper .option.is-incorrect::after {
+                right: 16px;
+                font-size: 20px;
             }
         }
 
@@ -800,11 +810,9 @@
            HINT PILL BUTTON & DISPLAY
            ============================================ */
 
-        /* Question wrapper - now stacks vertically */
+        /* Question wrapper - hide hint button from immediate view */
         .question-with-hint-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
+            display: block;
             margin-bottom: 8px;
         }
 
@@ -813,29 +821,28 @@
             width: 100%;
         }
 
+        /* HINT BUTTON: Repositioned as "life-line" at bottom, less tempting */
         .hint-pill-btn {
-            /* Small, subtle helper button */
-            align-self: flex-start;
-
-            /* Compact size */
+            /* Position at bottom of answer options, not next to question */
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 4px;
-            min-height: 28px;
-            padding: 6px 12px;
+            gap: 5px;
+            min-height: 32px;
+            padding: 8px 14px;
+            margin-top: 16px;
 
-            /* Very subtle styling */
+            /* Very subtle, de-emphasized styling */
             background: #FEFCE8;
-            color: #A16207;
-            border: 1px solid #FEF3C7;
-            border-radius: 6px;
+            color: #92400E;
+            border: 1px solid #FDE68A;
+            border-radius: 8px;
 
             /* No shadow */
             box-shadow: none;
 
             /* Typography - small and subtle */
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 500;
             font-family: 'Nunito', sans-serif;
             text-transform: none;
@@ -844,7 +851,7 @@
             /* Interaction */
             cursor: pointer;
             transition: all 0.15s ease;
-            opacity: 0.85;
+            opacity: 0.7;
 
             /* No outline on focus, but add ring for accessibility */
             outline: none;
@@ -858,7 +865,7 @@
         .hint-pill-btn:hover {
             background: #FEF9C3;
             border-color: #FDE68A;
-            opacity: 1;
+            opacity: 0.95;
         }
 
         .hint-pill-btn:active {
@@ -1265,7 +1272,7 @@
                     </div>
                 </div>
                 <div class="quiz-points-pill">
-                    <span>🏅</span>
+                    <span>⭐</span>
                     <span><span id="totalCorrectNew">0</span> punten</span>
                 </div>
             </div>
@@ -1273,7 +1280,7 @@
             <!-- Streak Bonus Floating Element -->
             <div id="streakBonus" class="streak-bonus hidden"></div>
 
-            <!-- 3. Control Buttons Row -->
+            <!-- 3. Control Buttons Row - Redesigned to be less prominent -->
             <div class="quiz-topbar-bottom">
                 <div class="quiz-control-buttons">
                     <button class="quiz-control-btn hulp" id="lovaHelpButtonNew" onclick="toggleLovaPanel()" title="L.O.V.A. Stappenplan" style="display: none;">
@@ -1281,12 +1288,12 @@
                         <span>Hulp</span>
                     </button>
                     <button class="quiz-control-btn pauze" onclick="pauseQuiz()" title="Pauzeer">
-                        <span>⏸️</span>
+                        <span>⏸</span>
                         <span>Pauze</span>
                     </button>
-                    <button class="quiz-control-btn stoppen" onclick="stopQuiz()" title="Stop">
-                        <span>⏹️</span>
-                        <span>Stoppen</span>
+                    <button class="quiz-control-btn stoppen" onclick="stopQuiz()" title="Sluiten">
+                        <span>✕</span>
+                        <span>Sluiten</span>
                     </button>
                 </div>
             </div>
@@ -1379,23 +1386,9 @@
                     </span>
                 </div>
 
-                <!-- Question text with hint button -->
+                <!-- Question text without hint button -->
                 <div class="question-with-hint-wrapper">
                     <div class="question-text" id="questionTextNew"></div>
-
-                    <!-- NEW: Hint pill button - positioned top-right of question -->
-                    <button class="hint-pill-btn" id="hintPillBtn" onclick="toggleHint()" style="display: none;">
-                        <span class="hint-pill-icon">💡</span>
-                        <span class="hint-pill-text">Hint</span>
-                    </button>
-                </div>
-
-                <!-- NEW: Hint display area - below question -->
-                <div class="hint-display" id="hintDisplay" style="display: none;">
-                    <div class="hint-display-content">
-                        <span class="hint-display-icon">💡</span>
-                        <span class="hint-display-text" id="hintDisplayText"></span>
-                    </div>
                 </div>
             </div>
 
@@ -1459,6 +1452,22 @@
                 <div class="answers-section quiz-answers-wrapper">
                     <div id="optionsContainerNew" class="options-container"></div>
                     <textarea id="textareaAnswerNew" class="textarea-answer hidden" placeholder="Typ hier je antwoord..."></textarea>
+                </div>
+
+                <!-- HINT BUTTON: Repositioned as "life-line" below answer options -->
+                <div style="text-align: center; margin-top: 8px;">
+                    <button class="hint-pill-btn" id="hintPillBtn" onclick="toggleHint()" style="display: none;">
+                        <span class="hint-pill-icon">💡</span>
+                        <span class="hint-pill-text">Hint nodig?</span>
+                    </button>
+                </div>
+
+                <!-- Hint display area - below hint button -->
+                <div class="hint-display" id="hintDisplay" style="display: none;">
+                    <div class="hint-display-content">
+                        <span class="hint-display-icon">💡</span>
+                        <span class="hint-display-text" id="hintDisplayText"></span>
+                    </div>
                 </div>
             </div>
             <!-- End Question Card Morph Wrapper -->
