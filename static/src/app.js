@@ -1590,19 +1590,28 @@ function selectOption(index) {
     }
 }
 
-// Helper: Show inline check button directly after selected answer
+// Helper: Show inline check button directly under the selected answer
 function showInlineCheckButton() {
+    // Find the selected option
+    const selectedOption = document.querySelector('.option.selected');
+    if (!selectedOption) return;
+
     // Create inline check button
     const checkBtn = document.createElement('button');
     checkBtn.className = 'inline-check-btn';
     checkBtn.innerHTML = '<span>✓</span><span>Check mijn antwoord!</span>';
     checkBtn.onclick = submitAnswer;
 
-    // Insert button after the options container
-    const optionsContainer = document.getElementById('optionsContainerNew');
-    if (optionsContainer && optionsContainer.parentElement) {
-        // Insert right after the options container
-        optionsContainer.parentElement.insertBefore(checkBtn, optionsContainer.nextSibling);
+    // Insert button right after the selected option (as its sibling in the container)
+    const optionsContainer = selectedOption.parentElement;
+    if (optionsContainer) {
+        // Insert after the selected option
+        if (selectedOption.nextSibling) {
+            optionsContainer.insertBefore(checkBtn, selectedOption.nextSibling);
+        } else {
+            // If it's the last option, just append it
+            optionsContainer.appendChild(checkBtn);
+        }
     }
 }
 
