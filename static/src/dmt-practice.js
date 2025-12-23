@@ -126,20 +126,49 @@ class DMTPractice {
         // List selection
         document.querySelectorAll('.dmt-list-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.dmt-list-btn').forEach(b => b.classList.remove('selected'));
+                document.querySelectorAll('.dmt-list-btn').forEach(b => {
+                    b.classList.remove('selected', 'intensity-1', 'intensity-2', 'intensity-3');
+                });
                 btn.classList.add('selected');
+                const intensity = btn.dataset.intensity;
+                if (intensity) {
+                    btn.classList.add(`intensity-${intensity}`);
+                }
                 this.state.selectedList = btn.dataset.list;
                 this.updateStartButton();
+                this.updateSummary();
             });
         });
 
-        // Tempo selection
+        // Tempo selection (old buttons - for backward compatibility)
         document.querySelectorAll('.dmt-tempo-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 document.querySelectorAll('.dmt-tempo-btn').forEach(b => b.classList.remove('selected'));
                 btn.classList.add('selected');
                 this.state.selectedTempo = btn.dataset.tempo;
                 this.updateStartButton();
+                this.updateSummary();
+            });
+        });
+
+        // Speed dial markers (new design)
+        document.querySelectorAll('.dmt-speed-marker').forEach(marker => {
+            marker.addEventListener('click', () => {
+                document.querySelectorAll('.dmt-speed-marker').forEach(m => m.classList.remove('selected'));
+                marker.classList.add('selected');
+                this.state.selectedTempo = marker.dataset.tempo;
+
+                // Also update hidden tempo buttons for backward compatibility
+                document.querySelectorAll('.dmt-tempo-btn').forEach(btn => {
+                    if (btn.dataset.tempo === marker.dataset.tempo) {
+                        btn.classList.add('selected');
+                    } else {
+                        btn.classList.remove('selected');
+                    }
+                });
+
+                this.updateStartButton();
+                this.updateSummary();
             });
         });
 
@@ -204,6 +233,36 @@ class DMTPractice {
         } else {
             startBtn.disabled = true;
         }
+    }
+
+    updateSummary() {
+        const summaryElement = document.getElementById('summarySentence');
+        if (!summaryElement) return;
+
+        if (!this.state.selectedList || !this.state.selectedTempo) {
+            summaryElement.classList.remove('show');
+            return;
+        }
+
+        // List labels
+        const listLabels = {
+            A: 'Start-woorden',
+            B: 'Groei-woorden',
+            C: 'Knappe woorden'
+        };
+
+        // Tempo labels
+        const tempoLabels = {
+            rustig: 'op het tempo Rustig aan',
+            normaal: 'op het tempo Gaat goed',
+            snel: 'op het tempo Gas erop'
+        };
+
+        const listLabel = listLabels[this.state.selectedList];
+        const tempoLabel = tempoLabels[this.state.selectedTempo];
+
+        summaryElement.textContent = `Je gaat ${listLabel} lezen ${tempoLabel}!`;
+        summaryElement.classList.add('show');
     }
 
     updateWordStartButton() {
