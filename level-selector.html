@@ -379,6 +379,317 @@
         }
 
         /* ========================================
+           DMT CONFIGURATOR STYLES
+           ======================================== */
+        .dmt-configurator {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-bottom: 32px;
+            max-width: 900px;
+            margin: 0 auto 32px;
+        }
+
+        /* Left Side: Word List Selector */
+        .dmt-list-selector {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dmt-section-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #2C3E50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .dmt-list-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .dmt-list-btn {
+            background: white;
+            border: 3px solid #E2E8F0;
+            border-radius: 16px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .dmt-list-btn:hover {
+            border-color: #FF8A34;
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(255, 138, 52, 0.2);
+        }
+
+        .dmt-list-btn.selected {
+            border-color: #FF8A34;
+            background: linear-gradient(135deg, #FFF5EC, #FFE8D6);
+            transform: translateX(4px);
+        }
+
+        .dmt-list-btn.selected.intensity-1 {
+            background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+            border-color: #66BB6A;
+        }
+
+        .dmt-list-btn.selected.intensity-2 {
+            background: linear-gradient(135deg, #F3E5F5, #E1BEE7);
+            border-color: #AB47BC;
+        }
+
+        .dmt-list-btn.selected.intensity-3 {
+            background: linear-gradient(135deg, #E8EAF6, #C5CAE9);
+            border-color: #5C6BC0;
+        }
+
+        .dmt-list-label {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #2C3E50;
+            margin-bottom: 6px;
+        }
+
+        .dmt-list-subtitle {
+            font-size: 0.9rem;
+            color: #7F8C8D;
+            font-weight: 500;
+        }
+
+        /* Right Side: Speed Dial Slider */
+        .dmt-tempo-selector {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .dmt-speed-dial-container {
+            width: 100%;
+            max-width: 320px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .dmt-speed-dial {
+            position: relative;
+            width: 100%;
+            padding: 40px 20px 60px;
+        }
+
+        .dmt-speed-dial-arc {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 100px;
+            border: 6px solid #E2E8F0;
+            border-bottom: none;
+            border-radius: 200px 200px 0 0;
+            pointer-events: none;
+        }
+
+        .dmt-speed-labels {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 20px;
+            position: relative;
+            height: 100px;
+        }
+
+        .dmt-speed-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            position: relative;
+        }
+
+        .dmt-speed-label.left {
+            align-items: flex-start;
+        }
+
+        .dmt-speed-label.center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+        }
+
+        .dmt-speed-label.right {
+            align-items: flex-end;
+        }
+
+        .dmt-speed-emoji {
+            font-size: 2.5rem;
+            filter: grayscale(60%);
+            transition: all 0.3s ease;
+        }
+
+        .dmt-speed-emoji.active {
+            filter: grayscale(0%);
+            transform: scale(1.2);
+            animation: dmtBounce 0.5s ease;
+        }
+
+        .dmt-speed-emoji.rocket.active {
+            animation: dmtBounce 0.5s ease, dmtFireGlow 1.5s ease-in-out infinite;
+        }
+
+        @keyframes dmtBounce {
+            0%, 100% { transform: scale(1.2); }
+            50% { transform: scale(1.3); }
+        }
+
+        @keyframes dmtFireGlow {
+            0%, 100% { filter: grayscale(0%) drop-shadow(0 0 0px rgba(255, 138, 52, 0)); }
+            50% { filter: grayscale(0%) drop-shadow(0 0 12px rgba(255, 138, 52, 0.8)); }
+        }
+
+        .dmt-speed-text {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #7F8C8D;
+            transition: color 0.3s ease;
+        }
+
+        .dmt-speed-label.active .dmt-speed-text {
+            color: #2C3E50;
+        }
+
+        .dmt-speed-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 8px;
+            border-radius: 999px;
+            background: linear-gradient(to right,
+                #8FD36B 0%,
+                #FF8A34 50%,
+                #FF6B35 100%);
+            outline: none;
+            cursor: pointer;
+        }
+
+        .dmt-speed-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: white;
+            border: 4px solid #FF8A34;
+            cursor: grab;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .dmt-speed-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(255, 138, 52, 0.4);
+        }
+
+        .dmt-speed-slider::-webkit-slider-thumb:active {
+            cursor: grabbing;
+            transform: scale(1.05);
+        }
+
+        .dmt-speed-slider::-moz-range-thumb {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: white;
+            border: 4px solid #FF8A34;
+            cursor: grab;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .dmt-speed-slider::-moz-range-thumb:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(255, 138, 52, 0.4);
+        }
+
+        .dmt-speed-slider::-moz-range-thumb:active {
+            cursor: grabbing;
+            transform: scale(1.05);
+        }
+
+        .dmt-current-speed {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #2C3E50;
+        }
+
+        .dmt-summary-sentence {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2C3E50;
+            margin-bottom: 20px;
+            text-align: center;
+            min-height: 30px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .dmt-summary-sentence.show {
+            opacity: 1;
+        }
+
+        .dmt-start-btn {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 18px;
+            background: linear-gradient(135deg, #FF8A34 0%, #FF6B35 100%);
+            color: white;
+            border: none;
+            border-radius: 999px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(255, 138, 52, 0.3);
+            display: block;
+        }
+
+        .dmt-start-btn:not(:disabled) {
+            animation: dmtPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes dmtPulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 4px 12px rgba(255, 138, 52, 0.3);
+            }
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 6px 20px rgba(255, 138, 52, 0.5);
+            }
+        }
+
+        .dmt-start-btn:hover:not(:disabled) {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 24px rgba(255, 138, 52, 0.5);
+            animation: none;
+        }
+
+        .dmt-start-btn:disabled {
+            background: #CBD5E0;
+            cursor: not-allowed;
+            box-shadow: none;
+            animation: none;
+        }
+
+        /* ========================================
            LEVEL CARDS GRID
            ======================================== */
         .level-cards-container {
@@ -883,16 +1194,193 @@
         const header = document.getElementById('subjectHeader');
         header.style.background = `linear-gradient(135deg, ${config.color} 0%, ${config.color}dd 100%)`;
 
-        // Check if this is DMT - redirect to new configurator
+        // Check if this is DMT - render embedded configurator
         if (config.isDMT) {
-            // Redirect to the new single-view configurator
-            window.location.href = 'dmt-practice.html';
+            renderDMTConfigurator();
         } else {
-            // Render regular grade selector
             renderGradeSelector();
         }
 
-        // Function to render DMT list and tempo selector
+        // Function to render DMT configurator (embedded)
+        function renderDMTConfigurator() {
+            const pageIntro = document.querySelector('.page-intro');
+            pageIntro.innerHTML = `
+                <h2 class="page-title">Stel je oefening in! ⚡</h2>
+                <p class="page-subtitle">Kies je woordenlijst en tempo, dan beginnen we!</p>
+            `;
+
+            const container = document.querySelector('.level-cards-container');
+            container.innerHTML = `
+                <div class="dmt-configurator">
+                    <!-- Left Side: Word List Selector -->
+                    <div class="dmt-list-selector">
+                        <div class="dmt-section-title">Kies je woorden</div>
+                        <div class="dmt-list-buttons">
+                            <button class="dmt-list-btn" data-list="A" data-intensity="1">
+                                <div class="dmt-list-label">Start-lijst</div>
+                                <div class="dmt-list-subtitle">Korte woorden (aap, roos, vis)</div>
+                            </button>
+                            <button class="dmt-list-btn" data-list="B" data-intensity="2">
+                                <div class="dmt-list-label">Groei-lijst</div>
+                                <div class="dmt-list-subtitle">Iets langere woorden (boom, trap, stoel)</div>
+                            </button>
+                            <button class="dmt-list-btn" data-list="C" data-intensity="3">
+                                <div class="dmt-list-label">Knappe-lijst</div>
+                                <div class="dmt-list-subtitle">Moeilijke woorden (station, ontbijt, kasteel)</div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Speed Dial Slider -->
+                    <div class="dmt-tempo-selector">
+                        <div class="dmt-section-title">Zet je tempo</div>
+                        <div class="dmt-speed-dial-container">
+                            <div class="dmt-speed-dial">
+                                <div class="dmt-speed-dial-arc"></div>
+                                <div class="dmt-speed-labels">
+                                    <div class="dmt-speed-label left" id="labelSlow">
+                                        <div class="dmt-speed-emoji turtle" id="emojiSlow">🐢</div>
+                                        <div class="dmt-speed-text">Schildpad</div>
+                                    </div>
+                                    <div class="dmt-speed-label center" id="labelNormal">
+                                        <div class="dmt-speed-emoji hare active" id="emojiNormal">🐇</div>
+                                        <div class="dmt-speed-text">Haas</div>
+                                    </div>
+                                    <div class="dmt-speed-label right" id="labelFast">
+                                        <div class="dmt-speed-emoji rocket" id="emojiFast">🚀</div>
+                                        <div class="dmt-speed-text">Raket</div>
+                                    </div>
+                                </div>
+                                <input type="range" min="0" max="2" value="1" step="1" class="dmt-speed-slider" id="speedSlider">
+                                <div class="dmt-current-speed" id="currentSpeed">Haas</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summary and Start Button -->
+                <div style="text-align: center; margin-top: 40px;">
+                    <div class="dmt-summary-sentence" id="summarySentence"></div>
+                    <button class="dmt-start-btn" id="dmtStartBtn" disabled>Laten we beginnen!</button>
+                </div>
+            `;
+
+            // Setup DMT configurator event listeners
+            setupDMTEventListeners();
+        }
+
+        // Setup event listeners for DMT configurator
+        function setupDMTEventListeners() {
+            let selectedList = null;
+            let selectedTempo = 'normaal';
+
+            // List selection
+            document.querySelectorAll('.dmt-list-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.dmt-list-btn').forEach(b => {
+                        b.classList.remove('selected', 'intensity-1', 'intensity-2', 'intensity-3');
+                    });
+                    btn.classList.add('selected');
+                    const intensity = btn.dataset.intensity;
+                    if (intensity) {
+                        btn.classList.add(`intensity-${intensity}`);
+                    }
+                    selectedList = btn.dataset.list;
+                    updateDMTStartButton(selectedList, selectedTempo);
+                    updateDMTSummary(selectedList, selectedTempo);
+                });
+            });
+
+            // Speed slider
+            const speedSlider = document.getElementById('speedSlider');
+            if (speedSlider) {
+                speedSlider.addEventListener('input', (e) => {
+                    const value = parseInt(e.target.value);
+                    selectedTempo = handleSliderChange(value);
+                    updateDMTStartButton(selectedList, selectedTempo);
+                    updateDMTSummary(selectedList, selectedTempo);
+                });
+            }
+
+            // Start button
+            const startBtn = document.getElementById('dmtStartBtn');
+            if (startBtn) {
+                startBtn.addEventListener('click', () => {
+                    if (selectedList && selectedTempo) {
+                        window.location.href = `dmt-practice.html?list=${selectedList}&tempo=${selectedTempo}`;
+                    }
+                });
+            }
+        }
+
+        function handleSliderChange(value) {
+            const tempoMap = ['rustig', 'normaal', 'snel'];
+            const labelMap = ['Schildpad', 'Haas', 'Raket'];
+            const tempo = tempoMap[value];
+
+            // Update current speed text
+            const currentSpeed = document.getElementById('currentSpeed');
+            if (currentSpeed) {
+                currentSpeed.textContent = labelMap[value];
+            }
+
+            // Update emoji active states
+            const emojis = ['emojiSlow', 'emojiNormal', 'emojiFast'];
+            const labels = ['labelSlow', 'labelNormal', 'labelFast'];
+
+            emojis.forEach((id, index) => {
+                const emoji = document.getElementById(id);
+                const label = document.getElementById(labels[index]);
+                if (emoji && label) {
+                    if (index === value) {
+                        emoji.classList.add('active');
+                        label.classList.add('active');
+                    } else {
+                        emoji.classList.remove('active');
+                        label.classList.remove('active');
+                    }
+                }
+            });
+
+            return tempo;
+        }
+
+        function updateDMTStartButton(list, tempo) {
+            const startBtn = document.getElementById('dmtStartBtn');
+            if (startBtn) {
+                startBtn.disabled = !(list && tempo);
+            }
+        }
+
+        function updateDMTSummary(list, tempo) {
+            const summaryElement = document.getElementById('summarySentence');
+            if (!summaryElement) return;
+
+            if (!list || !tempo) {
+                summaryElement.classList.remove('show');
+                return;
+            }
+
+            const listLabels = {
+                A: 'Start-woorden',
+                B: 'Groei-woorden',
+                C: 'Knappe woorden'
+            };
+
+            const tempoLabels = {
+                rustig: 'op het tempo Rustig aan',
+                normaal: 'op het tempo Gaat goed',
+                snel: 'op het tempo Gas erop'
+            };
+
+            const listLabel = listLabels[list];
+            const tempoLabel = tempoLabels[tempo];
+
+            summaryElement.textContent = `Je gaat ${listLabel} lezen ${tempoLabel}!`;
+            summaryElement.classList.add('show');
+        }
+
+        // Function to render old DMT list and tempo selector (kept for backward compatibility)
         function renderDMTSelector() {
             const pageIntro = document.querySelector('.page-intro');
             pageIntro.innerHTML = `
