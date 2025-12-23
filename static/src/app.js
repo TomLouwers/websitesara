@@ -1131,6 +1131,11 @@ function loadCurrentQuestion() {
     const readingContentNew = document.getElementById('readingContentNew');
     const storyBlockWrapper = document.getElementById('storyBlockWrapper');
 
+    // Always show the storyBlockWrapper (it contains the question)
+    if (storyBlockWrapper) {
+        storyBlockWrapper.classList.remove('hidden');
+    }
+
     if (currentQuestion.content || currentQuestion.visual) {
         let contentHtml = '';
 
@@ -1149,19 +1154,39 @@ function loadCurrentQuestion() {
 
         // Sync to new card with story header wrapper
         if (readingContentNew) {
+            // Remove no-story-content class since we have content
+            readingContentNew.classList.remove('no-story-content');
+
             // Put content inside the story-text-content div
             const storyTextContent = readingContentNew.querySelector('.story-text-content');
             if (storyTextContent) {
                 storyTextContent.innerHTML = contentHtml;
+                storyTextContent.style.display = ''; // Show story text
             }
-        }
-        if (storyBlockWrapper) {
-            storyBlockWrapper.classList.remove('hidden');
+            // Show story header
+            const storyHeader = readingContentNew.querySelector('.story-header-label');
+            if (storyHeader) {
+                storyHeader.style.display = '';
+            }
         }
     } else {
         readingContent.classList.add('hidden');
-        if (storyBlockWrapper) {
-            storyBlockWrapper.classList.add('hidden');
+
+        // For non-story quizzes, hide the story text content but keep the wrapper visible
+        if (readingContentNew) {
+            // Add class to indicate no story content
+            readingContentNew.classList.add('no-story-content');
+
+            const storyTextContent = readingContentNew.querySelector('.story-text-content');
+            if (storyTextContent) {
+                storyTextContent.innerHTML = '';
+                storyTextContent.style.display = 'none'; // Hide story text
+            }
+            // Hide story header for non-story quizzes
+            const storyHeader = readingContentNew.querySelector('.story-header-label');
+            if (storyHeader) {
+                storyHeader.style.display = 'none';
+            }
         }
     }
 

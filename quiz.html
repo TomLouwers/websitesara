@@ -282,6 +282,20 @@
             border-top: 1px solid rgba(163, 231, 223, 0.3); /* Subtle divider line, matches border color */
         }
 
+        /* For quizzes without story content, remove the top border and spacing */
+        .no-story-content .question-in-text-container {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        /* Hide the reading content container background/border for no-story quizzes */
+        .no-story-content {
+            background: transparent;
+            border-left: none;
+            padding: 0;
+        }
+
         /* Question text styling - part of the reading flow */
         .question-in-text-container .question-text {
             font-size: 19px;
