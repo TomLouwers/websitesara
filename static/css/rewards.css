@@ -9,7 +9,7 @@
  */
 
 /* ========================================
-   STREAK CARD
+   STREAK CARD - SUPER FESTIVE & PLAYFUL!
    ======================================== */
 
 #streakCard {
@@ -24,47 +24,113 @@
 
 .streak-card-content {
     background: white;
-    border-radius: 16px;
-    padding: 2rem 3rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border-radius: 24px;
+    padding: 2.5rem 3rem;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2), 0 0 0 6px rgba(255, 255, 255, 0.8);
     text-align: center;
-    min-width: 280px;
+    min-width: 340px;
+    position: relative;
+    overflow: hidden;
 }
 
-.streak-emoji {
-    font-size: 4rem;
+/* Sparkle decorations at top */
+.streak-sparkles {
+    font-size: 2rem;
     margin-bottom: 0.5rem;
-    animation: gentle-bounce 300ms ease-out;
+    animation: sparkle-float 2s ease-in-out infinite;
+    letter-spacing: 0.5rem;
 }
 
-.streak-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2c3e50;
+/* Big triple emoji - very playful! */
+.streak-emoji-big {
+    font-size: 5rem;
+    margin: 0.5rem 0;
+    animation: emoji-wiggle 600ms ease-in-out;
+    letter-spacing: 0.3rem;
+}
+
+/* Main title - bold and fun */
+.streak-title-playful {
+    font-size: 2rem;
+    font-weight: 900;
     margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
-.streak-bonus {
-    font-size: 1.2rem;
+/* Extra motivational message */
+.streak-message {
+    font-size: 1.3rem;
     font-weight: 600;
-    color: #27ae60;
+    margin-bottom: 0.75rem;
+    font-style: italic;
+    color: #555;
 }
 
-/* Streak tiers */
+/* Bonus points - extra big and bright */
+.streak-bonus-big {
+    font-size: 1.8rem;
+    font-weight: 900;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 0.5rem 0;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
+}
+
+/* Bottom decorations */
+.streak-decoration-bottom {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    letter-spacing: 1rem;
+}
+
+/* Streak tiers - BRIGHT AND COLORFUL! */
 .streak-tier-encouraging {
-    border: 3px solid #ff9800;
-    background: linear-gradient(135deg, #fff 0%, #fff3e0 100%);
+    border: 5px solid #ff9800;
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe0b2 50%, #ffcc80 100%);
+}
+
+.streak-tier-encouraging .streak-title-playful {
+    color: #e65100;
+}
+
+.streak-tier-encouraging .streak-bonus-big {
+    background: linear-gradient(135deg, #ff9800 0%, #ff6f00 100%);
+    color: white;
 }
 
 .streak-tier-skill {
-    border: 3px solid #2196f3;
-    background: linear-gradient(135deg, #fff 0%, #e3f2fd 100%);
+    border: 5px solid #2196f3;
+    background: linear-gradient(135deg, #e3f2fd 0%, #90caf9 50%, #64b5f6 100%);
+}
+
+.streak-tier-skill .streak-title-playful {
+    color: #0d47a1;
+}
+
+.streak-tier-skill .streak-bonus-big {
+    background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+    color: white;
 }
 
 .streak-tier-celebration {
-    border: 3px solid #ffd700;
-    background: linear-gradient(135deg, #fff 0%, #fffbea 100%);
-    box-shadow: 0 8px 32px rgba(255, 215, 0, 0.3);
+    border: 5px solid #ffd700;
+    background: linear-gradient(135deg, #fffbea 0%, #fff59d 50%, #ffd54f 100%);
+    box-shadow: 0 12px 48px rgba(255, 215, 0, 0.5), 0 0 0 6px rgba(255, 255, 255, 0.9), 0 0 60px rgba(255, 215, 0, 0.3);
+    animation: celebration-glow 1.5s ease-in-out infinite;
+}
+
+.streak-tier-celebration .streak-title-playful {
+    color: #f57f17;
+    animation: rainbow-text 3s ease-in-out infinite;
+}
+
+.streak-tier-celebration .streak-bonus-big {
+    background: linear-gradient(135deg, #ffd700 0%, #ffa000 100%);
+    color: white;
+    animation: bonus-pulse 1s ease-in-out infinite;
 }
 
 /* ========================================
@@ -324,6 +390,81 @@
     }
 }
 
+/* PLAYFUL STREAK CARD ANIMATIONS */
+
+@keyframes streak-bounce-in {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.3) rotate(-10deg);
+    }
+    60% {
+        transform: translate(-50%, -50%) scale(1.1) rotate(3deg);
+    }
+    80% {
+        transform: translate(-50%, -50%) scale(0.95) rotate(-2deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+}
+
+@keyframes streak-bounce-out {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.7) rotate(10deg);
+    }
+}
+
+@keyframes emoji-wiggle {
+    0% { transform: rotate(0deg) scale(0.5); }
+    25% { transform: rotate(-15deg) scale(1.1); }
+    50% { transform: rotate(10deg) scale(1); }
+    75% { transform: rotate(-5deg) scale(1.05); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+@keyframes sparkle-float {
+    0%, 100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 0.8;
+    }
+}
+
+@keyframes celebration-glow {
+    0%, 100% {
+        box-shadow: 0 12px 48px rgba(255, 215, 0, 0.5), 0 0 0 6px rgba(255, 255, 255, 0.9), 0 0 60px rgba(255, 215, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 12px 48px rgba(255, 215, 0, 0.7), 0 0 0 6px rgba(255, 255, 255, 1), 0 0 80px rgba(255, 215, 0, 0.5);
+    }
+}
+
+@keyframes rainbow-text {
+    0% { color: #f57f17; }
+    25% { color: #ff6f00; }
+    50% { color: #e65100; }
+    75% { color: #ff6f00; }
+    100% { color: #f57f17; }
+}
+
+@keyframes bonus-pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
 @keyframes star-pulse {
     0% {
         transform: scale(1);
@@ -424,20 +565,32 @@
 
 @media (max-width: 768px) {
     .streak-card-content {
-        padding: 1.5rem 2rem;
-        min-width: 240px;
+        padding: 2rem 2.5rem;
+        min-width: 300px;
     }
 
-    .streak-emoji {
-        font-size: 3rem;
+    .streak-emoji-big {
+        font-size: 4rem;
     }
 
-    .streak-title {
-        font-size: 1.3rem;
+    .streak-title-playful {
+        font-size: 1.7rem;
     }
 
-    .streak-bonus {
+    .streak-message {
         font-size: 1.1rem;
+    }
+
+    .streak-bonus-big {
+        font-size: 1.5rem;
+    }
+
+    .streak-sparkles {
+        font-size: 1.5rem;
+    }
+
+    .streak-decoration-bottom {
+        font-size: 1.5rem;
     }
 
     #shieldBadge,
@@ -460,20 +613,36 @@
 
 @media (max-width: 480px) {
     .streak-card-content {
-        padding: 1rem 1.5rem;
-        min-width: 200px;
+        padding: 1.5rem 2rem;
+        min-width: 260px;
     }
 
-    .streak-emoji {
-        font-size: 2.5rem;
+    .streak-emoji-big {
+        font-size: 3.5rem;
+        letter-spacing: 0.2rem;
     }
 
-    .streak-title {
-        font-size: 1.1rem;
+    .streak-title-playful {
+        font-size: 1.5rem;
     }
 
-    .streak-bonus {
+    .streak-message {
         font-size: 1rem;
+    }
+
+    .streak-bonus-big {
+        font-size: 1.3rem;
+        padding: 0.4rem 1.2rem;
+    }
+
+    .streak-sparkles {
+        font-size: 1.3rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .streak-decoration-bottom {
+        font-size: 1.3rem;
+        letter-spacing: 0.5rem;
     }
 
     .near-miss-content {
