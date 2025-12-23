@@ -52,6 +52,10 @@ let useTextGrouping = false;   // Flag to indicate if we should use text groupin
 let categoryProgress = {};
 let lovaClickCount = 0; // Track L.O.V.A. button clicks
 
+// Session-based reward system
+let sessionRewardManager = null;
+let streakAnimationController = null;
+
 // Hint timer: Delayed affordance - show hint after 12 seconds of inactivity
 let hintTimer = null;
 const HINT_DELAY_MS = 12000; // 12 seconds
@@ -132,56 +136,85 @@ function updateCategoryProgress(theme, isCorrect) {
     updateProgressTrackerDisplay();
 }
 
-// Check and award streak bonus points
-function checkStreakBonus() {
-    let bonusPoints = 0;
-    let milestone = 0;
+// Initialize session reward system
+function initializeRewardSystem() {
+    // Detect grade level from quiz data or URL params
+    const urlParams = new URLSearchParams(window.location.search);
+    const levelParam = urlParams.get('level') || '';
 
-    // Check streak milestones
-    if (currentStreak === 3) {
-        bonusPoints = 2;
-        milestone = 3;
-    } else if (currentStreak === 5) {
-        bonusPoints = 3;
-        milestone = 5;
-    } else if (currentStreak === 10) {
-        bonusPoints = 5;
-        milestone = 10;
+    // Extract grade number from level (e.g., 'groep4_m4' -> 4)
+    let grade = 4; // default
+    const gradeMatch = levelParam.match(/groep(\d)/);
+    if (gradeMatch) {
+        grade = parseInt(gradeMatch[1]);
     }
 
-    // Award bonus points if milestone reached
-    if (bonusPoints > 0) {
-        score += bonusPoints;
-        showStreakBonus(milestone, bonusPoints);
-        updateProgressTrackerDisplay(); // Update points display
+    // Initialize managers
+    sessionRewardManager = new SessionRewardManager({
+        grade: grade,
+        enableLocalStorage: false, // Never rely on localStorage
+        enableAudio: true
+    });
+
+    streakAnimationController = new StreakAnimationController({
+        grade: grade,
+        enableAudio: true
+    });
+
+    // Link audio manager if available
+    if (typeof audioManager !== 'undefined') {
+        streakAnimationController.setAudioManager(audioManager);
     }
 }
 
-// Show streak bonus visual feedback
+// Process answer through reward system
+async function processAnswerWithRewards(isCorrect) {
+    if (!sessionRewardManager || !streakAnimationController) {
+        // Fallback to old system if reward system not initialized
+        if (isCorrect) {
+            score++;
+            currentStreak++;
+        } else {
+            currentStreak = 0;
+        }
+        updateProgressTrackerDisplay();
+        return;
+    }
+
+    // Process answer through reward system
+    const feedback = sessionRewardManager.processAnswer(isCorrect);
+
+    // Update global score and streak for compatibility with existing code
+    score = feedback.score;
+    currentStreak = feedback.currentStreak;
+
+    // Update display
+    updateProgressTrackerDisplay();
+
+    // Play animations
+    if (isCorrect) {
+        await streakAnimationController.playCorrectFeedback(feedback);
+    } else {
+        await streakAnimationController.playIncorrectFeedback(feedback);
+    }
+
+    // Update progress star
+    const summary = sessionRewardManager.getSessionSummary();
+    streakAnimationController.updateProgressStar(summary.starLevel);
+
+    return feedback;
+}
+
+// Legacy function - kept for backwards compatibility (now uses reward system)
+function checkStreakBonus() {
+    // This function is now handled by SessionRewardManager
+    // Kept as no-op for backwards compatibility
+}
+
+// Legacy function - kept for backwards compatibility
 function showStreakBonus(milestone, bonusPoints) {
-    const bonusElement = document.getElementById('streakBonus');
-    if (!bonusElement) return;
-
-    // Set the content
-    bonusElement.innerHTML = `
-        <div class="streak-bonus-content">
-            <div class="streak-bonus-icon">🔥</div>
-            <div class="streak-bonus-text">${milestone}-STREAK BONUS!</div>
-            <div class="streak-bonus-points">+${bonusPoints} punten!</div>
-        </div>
-    `;
-
-    // Show and animate
-    bonusElement.classList.remove('hidden');
-    bonusElement.classList.add('show');
-
-    // Hide after animation completes
-    setTimeout(() => {
-        bonusElement.classList.remove('show');
-        setTimeout(() => {
-            bonusElement.classList.add('hidden');
-        }, 300); // Wait for fade out
-    }, 2500);
+    // This function is now handled by StreakAnimationController
+    // Kept as no-op for backwards compatibility
 }
 
 // Display the progress tracker
@@ -2003,11 +2036,8 @@ function submitAnswer() {
                 newOptions[selectedAnswer].classList.add('is-correct');
             }
 
-            score++;
-
-            // Increment streak and check for bonus
-            currentStreak++;
-            checkStreakBonus();
+            // Process answer through reward system (handles score, streak, bonuses, animations)
+            processAnswerWithRewards(true);
 
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, true);
@@ -2035,8 +2065,8 @@ function submitAnswer() {
             // Increment error count for this question
             currentQuestionErrors++;
 
-            // Reset streak on wrong answer
-            currentStreak = 0;
+            // Process answer through reward system (handles streak reset, shield protection, near-miss)
+            processAnswerWithRewards(false);
 
             // Update category progress tracker
             updateCategoryProgress(currentQuestion.theme, false);
@@ -2378,8 +2408,32 @@ function showResults() {
     // 2. SKILLS OVERVIEW: Progress Chips
     populateSkillsOverview();
 
-    // 3. QUESTION CARDS: Collapsible Accordion
+    // 3. STICKER COLLECTION: Session-based rewards
+    populateStickerCollection();
+
+    // 4. QUESTION CARDS: Collapsible Accordion
     populateQuestionAccordion();
+}
+
+// Helper: Populate Sticker Collection (session-based rewards)
+function populateStickerCollection() {
+    if (!sessionRewardManager || !streakAnimationController) {
+        // Hide sticker section if reward system not initialized
+        const stickerSection = document.getElementById('stickerCollection');
+        if (stickerSection) {
+            stickerSection.style.display = 'none';
+        }
+        return;
+    }
+
+    const summary = sessionRewardManager.getSessionSummary();
+    const stickers = summary.stickers;
+
+    // Render stickers using animation controller
+    streakAnimationController.renderStickers(
+        stickers,
+        (stickerId) => sessionRewardManager.getStickerMetadata(stickerId)
+    );
 }
 
 // Helper: Populate Hero Block with child-friendly messaging
@@ -3227,6 +3281,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Update breadcrumb
         updateBreadcrumb(quizState.subject);
+
+        // Initialize session reward system
+        initializeRewardSystem();
 
         // Show quiz page and load first question
         if (document.getElementById('quizPage')) {

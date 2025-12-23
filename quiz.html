@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/css/styles.min.css?v=20250220">
     <link rel="stylesheet" href="static/css/verhoudingstabel-widget.min.css?v=20250220">
+    <link rel="stylesheet" href="static/css/rewards.css?v=20250220">
     <style>
         /* Quiz page specific styles */
         body {
@@ -1352,13 +1353,32 @@
                     </div>
                 </div>
                 <div class="quiz-points-pill">
-                    <span>⭐</span>
+                    <span id="progressStar">⭐</span>
                     <span><span id="totalCorrectNew">0</span> punten</span>
                 </div>
             </div>
 
-            <!-- Streak Bonus Floating Element -->
+            <!-- Streak Bonus Floating Element (legacy, kept for backwards compatibility) -->
             <div id="streakBonus" class="streak-bonus hidden"></div>
+
+            <!-- ==========================================
+                 SESSION REWARD SYSTEM UI ELEMENTS
+                 ========================================== -->
+
+            <!-- Streak Milestone Card -->
+            <div id="streakCard"></div>
+
+            <!-- Point Burst Animation Container -->
+            <div id="pointBurstContainer"></div>
+
+            <!-- Shield Badge (grades 6-8) -->
+            <div id="shieldBadge"></div>
+
+            <!-- Multiplier Badge (grades 6-8) -->
+            <div id="multiplierBadge"></div>
+
+            <!-- Near-Miss Encouragement Card -->
+            <div id="nearMissCard"></div>
 
             <!-- 3. Control Buttons Row - Redesigned to be less prominent -->
             <div class="quiz-topbar-bottom">
@@ -1721,7 +1741,12 @@
             </div>
         </div>
 
-        <!-- 3. Question Cards: Collapsible Accordion -->
+        <!-- 3. Sticker Collection: Session-based rewards -->
+        <div id="stickerCollection" style="display: none;">
+            <!-- Stickers will be dynamically inserted here -->
+        </div>
+
+        <!-- 4. Question Cards: Collapsible Accordion -->
         <div class="question-review-section" id="questionReviewSection">
             <h2 class="section-heading">💡 Jouw groeikansen</h2>
             <p class="section-description">Klik op een vraag om de uitleg te zien</p>
@@ -1901,6 +1926,9 @@
     <script src="static/js/foutanalyse-modaal.min.js?v=20250220" defer></script>
     <script src="static/js/insight-generator.min.js?v=20250220" defer></script>
     <script src="static/js/card-morph-feedback.min.js?v=20250220" defer></script>
+    <!-- Session-based reward system -->
+    <script src="static/js/session-rewards.min.js?v=20250220" defer></script>
+    <script src="static/js/streak-animations.min.js?v=20250220" defer></script>
     <script src="static/js/app.min.js?v=20250220" defer></script>
     <script src="static/js/accessibility.min.js?v=20250220" defer></script>
 
