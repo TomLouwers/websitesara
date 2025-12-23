@@ -276,6 +276,9 @@
         /* Story Block Wrapper - contains BOTH text and question */
         #storyBlockWrapper {
             margin-bottom: 16px; /* Gap after entire text+question block, before answers */
+            overflow: visible;
+            max-height: none;
+            width: 100%;
         }
 
         /* Question in text container - inside the reading content */
@@ -283,6 +286,8 @@
             margin-top: 20px; /* Breathing space from text */
             padding-top: 20px; /* Extra spacing */
             border-top: 1px solid rgba(163, 231, 223, 0.3); /* Subtle divider line, matches border color */
+            width: 100%;
+            overflow: visible;
         }
 
         /* For quizzes without story content, remove the top border and spacing */
@@ -306,7 +311,7 @@
             color: #1A2332;
             line-height: 1.75; /* Match text line-height for visual unity */
             margin: 0;
-            max-width: 65ch; /* Optimal reading width, matches text */
+            max-width: 100%; /* Full width for consistent alignment */
         }
 
         /* Empty quiz-question-box (kept for backward compatibility) */
@@ -328,6 +333,9 @@
             box-shadow: none;
             border-left: 4px solid #A3E7DF;
             padding-left: 20px;
+            overflow: visible;
+            max-height: none;
+            width: 100%;
         }
 
         /* Story Header Label - subtle, not prominent */
@@ -349,8 +357,10 @@
             font-size: 16px;
             line-height: 1.75; /* Increased to 1.75 for better flow and readability */
             color: #333;
-            max-width: 65ch; /* Keep lines between 45-75 characters */
+            max-width: 100%; /* Full width for consistent alignment */
             margin-bottom: 4px; /* Tight connection to question below */
+            overflow: visible;
+            max-height: none;
         }
 
         .story-text-content p {
