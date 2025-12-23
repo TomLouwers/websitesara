@@ -877,11 +877,39 @@
             .level-cards-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
+
+            .dmt-configurator {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
         }
 
         @media (max-width: 768px) {
             .main-container {
                 padding: 0 20px;
+            }
+
+            .dmt-speed-dial-container {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+
+            .dmt-speed-dial {
+                padding: 30px 10px 40px;
+            }
+
+            .dmt-speed-dial-arc {
+                width: 180px;
+                height: 90px;
+                border-width: 5px;
+            }
+
+            .dmt-speed-labels {
+                height: 90px;
+            }
+
+            .dmt-speed-emoji {
+                font-size: 2rem;
             }
 
             .nav-content {
