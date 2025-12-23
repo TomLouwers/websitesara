@@ -41,14 +41,22 @@
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
         }
 
-        /* 1. Breadcrumbs - very subtle */
+        /* 1. Top Row - Breadcrumbs + Control Buttons */
+        .quiz-topbar-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
         .quiz-breadcrumb {
             display: flex;
             align-items: center;
             gap: 6px;
             font-size: 13px;
             color: #9A9A9A;
-            margin-bottom: 16px;
             flex-wrap: wrap;
         }
 
@@ -131,21 +139,13 @@
             50% { transform: scale(1.15); opacity: 0.85; }
         }
 
-        /* 3. Control Buttons Row - REDESIGNED: Far top-right, less prominent */
-        .quiz-topbar-bottom {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-        }
-
-        /* 4. Control Buttons */
+        /* 3. Control Buttons - Aligned with Breadcrumbs */
         .quiz-control-buttons {
             display: flex;
             gap: 8px;
             align-items: center;
             flex-wrap: wrap;
-            margin-left: auto;
+            flex-shrink: 0;
         }
 
         .quiz-control-btn {
@@ -204,9 +204,12 @@
                 margin-bottom: 16px;
             }
 
+            .quiz-topbar-top {
+                margin-bottom: 12px;
+            }
+
             .quiz-breadcrumb {
                 font-size: 12px;
-                margin-bottom: 12px;
             }
 
             .quiz-progress-section {
@@ -232,7 +235,7 @@
                 align-self: center;
             }
 
-            .quiz-topbar-bottom {
+            .quiz-control-buttons {
                 justify-content: center;
             }
 
@@ -1349,14 +1352,31 @@
     <div id="quizPage" class="quiz-container">
         <!-- New Quiz Top Bar -->
         <div class="quiz-topbar-wrapper">
-            <!-- 1. Breadcrumbs (very subtle) -->
-            <nav class="quiz-breadcrumb" id="quizBreadcrumb" aria-label="breadcrumb">
-                <a href="index.html">Home</a>
-                <span class="quiz-breadcrumb-separator">›</span>
-                <span id="breadcrumbSubjectNew">Onderwerp</span>
-                <span class="quiz-breadcrumb-separator" id="breadcrumbLevelSepNew" style="display:none;">›</span>
-                <span id="breadcrumbLevelNew" style="display:none;">Niveau</span>
-            </nav>
+            <!-- 1. Top Row: Breadcrumbs + Control Buttons -->
+            <div class="quiz-topbar-top">
+                <nav class="quiz-breadcrumb" id="quizBreadcrumb" aria-label="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="quiz-breadcrumb-separator">›</span>
+                    <span id="breadcrumbSubjectNew">Onderwerp</span>
+                    <span class="quiz-breadcrumb-separator" id="breadcrumbLevelSepNew" style="display:none;">›</span>
+                    <span id="breadcrumbLevelNew" style="display:none;">Niveau</span>
+                </nav>
+
+                <div class="quiz-control-buttons">
+                    <button class="quiz-control-btn hulp" id="lovaHelpButtonNew" onclick="toggleLovaPanel()" title="L.O.V.A. Stappenplan" style="display: none;">
+                        <span>❓</span>
+                        <span>Hulp</span>
+                    </button>
+                    <button class="quiz-control-btn pauze" onclick="pauseQuiz()" title="Pauzeer">
+                        <span>⏸</span>
+                        <span>Pauze</span>
+                    </button>
+                    <button class="quiz-control-btn stoppen" onclick="stopQuiz()" title="Sluiten">
+                        <span>✕</span>
+                        <span>Sluiten</span>
+                    </button>
+                </div>
+            </div>
 
             <!-- 2. Progress Row (Text + Bar + Points) -->
             <div class="quiz-progress-section">
@@ -1393,24 +1413,6 @@
 
             <!-- Near-Miss Encouragement Card -->
             <div id="nearMissCard"></div>
-
-            <!-- 3. Control Buttons Row - Redesigned to be less prominent -->
-            <div class="quiz-topbar-bottom">
-                <div class="quiz-control-buttons">
-                    <button class="quiz-control-btn hulp" id="lovaHelpButtonNew" onclick="toggleLovaPanel()" title="L.O.V.A. Stappenplan" style="display: none;">
-                        <span>❓</span>
-                        <span>Hulp</span>
-                    </button>
-                    <button class="quiz-control-btn pauze" onclick="pauseQuiz()" title="Pauzeer">
-                        <span>⏸</span>
-                        <span>Pauze</span>
-                    </button>
-                    <button class="quiz-control-btn stoppen" onclick="stopQuiz()" title="Sluiten">
-                        <span>✕</span>
-                        <span>Sluiten</span>
-                    </button>
-                </div>
-            </div>
         </div>
 
         <!-- Keep old elements hidden for backwards compatibility -->

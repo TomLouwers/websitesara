@@ -406,14 +406,22 @@
             margin-bottom: 24px;
         }
 
-        /* Breadcrumb */
+        /* Breadcrumb and Control Row */
+        .dmt-topbar-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
         .dmt-breadcrumb {
             display: flex;
             align-items: center;
             gap: 6px;
             font-size: 13px;
             color: #9A9A9A;
-            margin-bottom: 16px;
             flex-wrap: wrap;
         }
 
@@ -486,6 +494,7 @@
         .dmt-practice-controls {
             display: flex;
             gap: 10px;
+            flex-shrink: 0;
         }
 
         .dmt-control-btn {
@@ -1004,9 +1013,12 @@
                 grid-template-columns: 1fr;
             }
 
+            .dmt-topbar-top {
+                margin-bottom: 12px;
+            }
+
             .dmt-breadcrumb {
                 font-size: 12px;
-                margin-bottom: 12px;
             }
 
             .dmt-practice-row {
@@ -1113,16 +1125,33 @@
         <div class="dmt-practice-screen" id="practiceScreen">
             <!-- Top Bar with Info and Controls -->
             <div class="dmt-practice-topbar">
-                <!-- Breadcrumb -->
-                <nav class="dmt-breadcrumb" aria-label="breadcrumb">
-                    <a href="index.html">Home</a>
-                    <span class="dmt-breadcrumb-separator">›</span>
-                    <a href="level-selector.html?subject=dmt">DMT Woordtrainer</a>
-                    <span class="dmt-breadcrumb-separator">›</span>
-                    <span id="breadcrumbInfo">Lijst A - Normaal</span>
-                </nav>
+                <!-- Breadcrumb and Control Buttons Row -->
+                <div class="dmt-topbar-top">
+                    <nav class="dmt-breadcrumb" aria-label="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span class="dmt-breadcrumb-separator">›</span>
+                        <a href="level-selector.html?subject=dmt">DMT Woordtrainer</a>
+                        <span class="dmt-breadcrumb-separator">›</span>
+                        <span id="breadcrumbInfo">Lijst A - Normaal</span>
+                    </nav>
 
-                <!-- Progress and Controls -->
+                    <div class="dmt-practice-controls">
+                        <button class="dmt-control-btn pause" id="pauseBtn">
+                            <span id="pauseBtnIcon">⏸</span>
+                            <span id="pauseBtnText">Pauze</span>
+                        </button>
+                        <button class="dmt-control-btn pause" id="tempoBtn">
+                            <span>🐢/🐇</span>
+                            <span>Tempo</span>
+                        </button>
+                        <button class="dmt-control-btn stop" id="stopBtn">
+                            <span>✕</span>
+                            <span>Sluiten</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Progress and Info Pills -->
                 <div class="dmt-practice-row">
                     <div class="dmt-practice-info">
                         <div class="dmt-timer-pill">
@@ -1137,20 +1166,6 @@
                             <span id="tempoEmoji">🟡</span>
                             <span id="tempoLabel">Normaal</span>
                         </div>
-                    </div>
-                    <div class="dmt-practice-controls">
-                        <button class="dmt-control-btn pause" id="pauseBtn">
-                            <span id="pauseBtnIcon">⏸</span>
-                            <span id="pauseBtnText">Pauze</span>
-                        </button>
-                        <button class="dmt-control-btn pause" id="tempoBtn">
-                            <span>🐢/🐇</span>
-                            <span>Tempo</span>
-                        </button>
-                        <button class="dmt-control-btn stop" id="stopBtn">
-                            <span>⏹</span>
-                            <span>Stop</span>
-                        </button>
                     </div>
                 </div>
             </div>
