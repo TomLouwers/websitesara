@@ -152,19 +152,12 @@ function initializeRewardSystem() {
     // Initialize managers
     sessionRewardManager = new SessionRewardManager({
         grade: grade,
-        enableLocalStorage: false, // Never rely on localStorage
-        enableAudio: true
+        enableLocalStorage: false // Never rely on localStorage
     });
 
     streakAnimationController = new StreakAnimationController({
-        grade: grade,
-        enableAudio: true
+        grade: grade
     });
-
-    // Link audio manager if available
-    if (typeof audioManager !== 'undefined') {
-        streakAnimationController.setAudioManager(audioManager);
-    }
 }
 
 // Process answer through reward system

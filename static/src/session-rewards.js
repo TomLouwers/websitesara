@@ -17,7 +17,6 @@ class SessionRewardManager {
         this.options = {
             grade: options.grade || 4, // groep 3-8
             enableLocalStorage: options.enableLocalStorage || false,
-            enableAudio: options.enableAudio !== false,
             ...options
         };
 

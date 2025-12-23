@@ -14,7 +14,6 @@
 class StreakAnimationController {
     constructor(options = {}) {
         this.options = {
-            enableAudio: options.enableAudio !== false,
             grade: options.grade || 4,
             reducedMotion: this._prefersReducedMotion(),
             ...options
@@ -34,9 +33,6 @@ class StreakAnimationController {
             pointBurstContainer: null,
             progressStar: null
         };
-
-        // Audio manager reference
-        this.audioManager = null;
 
         // Initialize
         this._initializeDOMElements();
@@ -69,12 +65,6 @@ class StreakAnimationController {
         this.elements.progressStar = document.getElementById('progressStar');
     }
 
-    /**
-     * Set audio manager reference
-     */
-    setAudioManager(audioManager) {
-        this.audioManager = audioManager;
-    }
 
     /**
      * Play correct answer feedback
@@ -168,11 +158,6 @@ class StreakAnimationController {
      * Play subtle correct answer ping
      */
     async _playCorrectPing() {
-        // Soft audio
-        if (this.options.enableAudio && this.audioManager) {
-            this._playSound('correct', 'soft');
-        }
-
         // Subtle visual (small check mark bounce)
         const checkmark = document.querySelector('.answer-feedback-check');
         if (checkmark) {
@@ -329,56 +314,66 @@ class StreakAnimationController {
     }
 
     /**
-     * Play streak milestone animation
+     * Play streak milestone animation - FESTIVE AND PLAYFUL FOR KIDS!
      */
     async _playStreakMilestone(milestone) {
         if (!this.elements.streakCard) {
             return;
         }
 
-        const { emoji, title, tier, bonusPoints, multiplierApplied } = milestone;
+        const { emoji, title, tier, bonusPoints, multiplierApplied, threshold } = milestone;
 
-        // Build card content
+        // Build super playful card content with extra visual elements
         let bonusText = `+${bonusPoints} punten!`;
         if (multiplierApplied) {
             bonusText = `+${bonusPoints} punten! (x2 bonus)`;
         }
 
+        // Add playful decorations based on tier
+        let decorations = '';
+        if (tier === 'celebration') {
+            decorations = '<div class="streak-sparkles">✨🎉✨🎊✨🎉✨</div>';
+        } else if (tier === 'skill') {
+            decorations = '<div class="streak-sparkles">⭐🌟⭐🌟⭐</div>';
+        } else {
+            decorations = '<div class="streak-sparkles">🌟✨🌟</div>';
+        }
+
+        // Playful motivational messages
+        const motivationalMessages = {
+            3: ['Je bent lekker bezig!', 'Goed zo!', 'Zo kan het!'],
+            5: ['Wauw, super!', 'Je bent een kei!', 'Ontzettend knap!'],
+            10: ['Ongelooflijk!', 'Wow, geweldig!', 'Je bent een kampioen!']
+        };
+        const randomMessage = motivationalMessages[threshold][Math.floor(Math.random() * motivationalMessages[threshold].length)];
+
         this.elements.streakCard.innerHTML = `
             <div class="streak-card-content streak-tier-${tier}">
-                <div class="streak-emoji">${emoji}</div>
-                <div class="streak-title">${title}</div>
-                <div class="streak-bonus">${bonusText}</div>
+                ${decorations}
+                <div class="streak-emoji-big">${emoji}${emoji}${emoji}</div>
+                <div class="streak-title-playful">${title}</div>
+                <div class="streak-message">${randomMessage}</div>
+                <div class="streak-bonus-big">${bonusText}</div>
+                <div class="streak-decoration-bottom">🎈🎈🎈</div>
             </div>
         `;
 
-        // Play appropriate audio
-        if (this.options.enableAudio && this.audioManager) {
-            if (tier === 'celebration') {
-                this._playSound('celebration', 'loud');
-            } else if (tier === 'skill') {
-                this._playSound('success', 'medium');
-            } else {
-                this._playSound('success', 'soft');
-            }
-        }
-
-        // Show card with slide-in animation
+        // Show card with bouncy slide-in animation
         this.elements.streakCard.style.display = 'block';
-        this.elements.streakCard.style.animation = 'slide-in-up 300ms ease-out';
-        await this._wait(300);
+        this.elements.streakCard.style.animation = 'streak-bounce-in 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+        await this._wait(500);
 
         // Show confetti for 10-streak (celebration tier)
         if (tier === 'celebration' && !this.options.reducedMotion) {
             this._playConfetti();
         }
 
-        // Hold card visible for 2000ms
-        await this._wait(2000);
+        // Hold card visible for 2500ms (bit longer for kids to enjoy)
+        await this._wait(2500);
 
-        // Fade out
-        this.elements.streakCard.style.animation = 'fade-out 300ms ease-out';
-        await this._wait(300);
+        // Bounce out
+        this.elements.streakCard.style.animation = 'streak-bounce-out 400ms ease-in';
+        await this._wait(400);
 
         this.elements.streakCard.style.display = 'none';
         this.elements.streakCard.style.animation = '';
@@ -414,11 +409,6 @@ class StreakAnimationController {
                 <div class="shield-label">Schild verdiend!</div>
             </div>
         `;
-
-        // Audio
-        if (this.options.enableAudio && this.audioManager) {
-            this._playSound('powerup', 'medium');
-        }
 
         // Show badge
         this.elements.shieldBadge.style.display = 'flex';
@@ -465,11 +455,6 @@ class StreakAnimationController {
                 <div class="shield-label">Bonus gered!</div>
             </div>
         `;
-
-        // Audio
-        if (this.options.enableAudio && this.audioManager) {
-            this._playSound('shield', 'medium');
-        }
 
         // Flash animation
         this.elements.shieldBadge.style.animation = 'shield-protect 600ms ease-out';
@@ -536,41 +521,6 @@ class StreakAnimationController {
         }, 2000);
     }
 
-    /**
-     * Play sound effect
-     */
-    _playSound(type, volume = 'medium') {
-        if (!this.options.enableAudio || !this.audioManager) {
-            return;
-        }
-
-        const sounds = {
-            correct: { path: '/static/audio/correct.mp3', fallback: 'Correct!' },
-            success: { path: '/static/audio/success.mp3', fallback: 'Geweldig!' },
-            celebration: { path: '/static/audio/celebration.mp3', fallback: 'Fantastisch!' },
-            powerup: { path: '/static/audio/powerup.mp3', fallback: 'Schild verdiend!' },
-            shield: { path: '/static/audio/shield.mp3', fallback: 'Beschermd!' }
-        };
-
-        const sound = sounds[type];
-        if (!sound) {
-            return;
-        }
-
-        const volumeLevels = {
-            soft: 0.3,
-            medium: 0.6,
-            loud: 0.9
-        };
-
-        try {
-            this.audioManager.playAudio(sound.path, sound.fallback, {
-                volume: volumeLevels[volume] || 0.6
-            });
-        } catch (e) {
-            console.warn('Audio playback failed:', e);
-        }
-    }
 
     /**
      * Utility: wait for specified duration
