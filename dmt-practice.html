@@ -35,7 +35,7 @@
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-            max-width: 600px;
+            max-width: 800px;
             margin: 40px auto;
         }
 
@@ -56,87 +56,201 @@
             color: #718096;
         }
 
-        .dmt-list-selector {
+        /* Configurator Layout */
+        .dmt-configurator {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
             margin-bottom: 32px;
         }
 
+        /* Left Side: Word List Selector */
+        .dmt-list-selector {
+            display: flex;
+            flex-direction: column;
+        }
+
         .dmt-section-title {
-            font-size: 1.1rem;
-            font-weight: 700;
+            font-size: 1.3rem;
+            font-weight: 800;
             color: #2D3748;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
+            text-align: center;
         }
 
         .dmt-list-buttons {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-direction: column;
             gap: 12px;
         }
 
         .dmt-list-btn {
             background: white;
-            border: 2px solid #E2E8F0;
-            border-radius: 12px;
+            border: 3px solid #E2E8F0;
+            border-radius: 16px;
             padding: 20px;
             cursor: pointer;
-            transition: all 0.2s ease;
-            text-align: center;
+            transition: all 0.3s ease;
+            text-align: left;
         }
 
         .dmt-list-btn:hover {
             border-color: #FF8A34;
-            transform: translateY(-2px);
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(255, 138, 52, 0.2);
         }
 
         .dmt-list-btn.selected {
             border-color: #FF8A34;
-            background: #FFF5EC;
+            background: linear-gradient(135deg, #FFF5EC, #FFE8D6);
+            transform: translateX(4px);
+        }
+
+        .dmt-list-btn.selected.intensity-1 {
+            background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+            border-color: #66BB6A;
+        }
+
+        .dmt-list-btn.selected.intensity-2 {
+            background: linear-gradient(135deg, #F3E5F5, #E1BEE7);
+            border-color: #AB47BC;
+        }
+
+        .dmt-list-btn.selected.intensity-3 {
+            background: linear-gradient(135deg, #E8EAF6, #C5CAE9);
+            border-color: #5C6BC0;
         }
 
         .dmt-list-label {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 800;
             color: #2D3748;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
 
-        .dmt-list-difficulty {
-            font-size: 0.875rem;
+        .dmt-list-subtitle {
+            font-size: 0.9rem;
             color: #718096;
+            font-weight: 500;
         }
 
+        /* Right Side: Speed Dial */
         .dmt-tempo-selector {
-            margin-bottom: 32px;
-        }
-
-        .dmt-tempo-buttons {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-        }
-
-        .dmt-tempo-btn {
-            background: white;
-            border: 2px solid #E2E8F0;
-            border-radius: 12px;
-            padding: 24px 16px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 8px;
         }
 
-        .dmt-tempo-btn:hover {
-            border-color: #38C172;
-            transform: translateY(-2px);
+        .dmt-speed-dial-container {
+            width: 100%;
+            max-width: 280px;
+            margin: 20px auto;
+            position: relative;
         }
 
-        .dmt-tempo-btn.selected {
-            border-color: #38C172;
-            background: #F0FDF4;
+        .dmt-speed-dial {
+            position: relative;
+            width: 100%;
+            height: 140px;
+            margin-bottom: 20px;
+        }
+
+        .dmt-speed-dial-arc {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 240px;
+            height: 120px;
+            border: 8px solid #E2E8F0;
+            border-bottom: none;
+            border-radius: 240px 240px 0 0;
+        }
+
+        .dmt-speed-markers {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 240px;
+            height: 120px;
+        }
+
+        .dmt-speed-marker {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dmt-speed-marker.turtle {
+            left: -20px;
+            bottom: -10px;
+        }
+
+        .dmt-speed-marker.hare {
+            left: 50%;
+            transform: translateX(-50%);
+            top: -10px;
+        }
+
+        .dmt-speed-marker.rocket {
+            right: -20px;
+            bottom: -10px;
+        }
+
+        .dmt-speed-marker-emoji {
+            font-size: 2.5rem;
+            filter: grayscale(60%);
+            transition: all 0.3s ease;
+        }
+
+        .dmt-speed-marker:hover .dmt-speed-marker-emoji {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        .dmt-speed-marker.selected .dmt-speed-marker-emoji {
+            filter: grayscale(0%);
+            transform: scale(1.2);
+            animation: shake 0.5s ease-in-out;
+        }
+
+        .dmt-speed-marker.selected.rocket .dmt-speed-marker-emoji {
+            animation: shake 0.5s ease-in-out, fire-glow 1.5s ease-in-out infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: scale(1.2) rotate(0deg); }
+            25% { transform: scale(1.2) rotate(-5deg); }
+            75% { transform: scale(1.2) rotate(5deg); }
+        }
+
+        @keyframes fire-glow {
+            0%, 100% { filter: grayscale(0%) drop-shadow(0 0 0px rgba(255, 138, 52, 0)); }
+            50% { filter: grayscale(0%) drop-shadow(0 0 12px rgba(255, 138, 52, 0.8)); }
+        }
+
+        .dmt-speed-marker-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #718096;
+            margin-top: 4px;
+            white-space: nowrap;
+        }
+
+        .dmt-speed-marker.selected .dmt-speed-marker-label {
+            color: #2D3748;
+        }
+
+        .dmt-tempo-buttons {
+            display: none;
+        }
+
+        .dmt-tempo-btn {
+            display: none;
         }
 
         .dmt-tempo-emoji {
@@ -154,29 +268,66 @@
             color: #718096;
         }
 
+        /* Summary and Start Button Section */
+        .dmt-start-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .dmt-summary-sentence {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2D3748;
+            margin-bottom: 20px;
+            min-height: 30px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .dmt-summary-sentence.show {
+            opacity: 1;
+        }
+
         .dmt-start-btn {
             width: 100%;
-            padding: 16px;
+            padding: 18px;
             background: linear-gradient(135deg, #FF8A34, #FF6B9D);
             color: white;
             border: none;
             border-radius: 999px;
-            font-size: 1.1rem;
-            font-weight: 700;
+            font-size: 1.2rem;
+            font-weight: 800;
             cursor: pointer;
             transition: all 0.2s ease;
             box-shadow: 0 4px 12px rgba(255, 138, 52, 0.3);
         }
 
+        .dmt-start-btn:not(:disabled) {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 4px 12px rgba(255, 138, 52, 0.3);
+            }
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 6px 20px rgba(255, 138, 52, 0.5);
+            }
+        }
+
         .dmt-start-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 138, 52, 0.4);
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 24px rgba(255, 138, 52, 0.5);
+            animation: none;
         }
 
         .dmt-start-btn:disabled {
             background: #CBD5E0;
             cursor: not-allowed;
             box-shadow: none;
+            animation: none;
         }
 
         /* Practice Screen */
@@ -753,6 +904,30 @@
                 font-size: 3rem;
             }
 
+            .dmt-configurator {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .dmt-speed-dial-container {
+                max-width: 240px;
+            }
+
+            .dmt-speed-dial-arc {
+                width: 200px;
+                height: 100px;
+                border-width: 6px;
+            }
+
+            .dmt-speed-markers {
+                width: 200px;
+                height: 100px;
+            }
+
+            .dmt-speed-marker-emoji {
+                font-size: 2rem;
+            }
+
             .dmt-list-buttons,
             .dmt-tempo-buttons {
                 grid-template-columns: 1fr;
@@ -790,52 +965,78 @@
             <div class="dmt-setup-card">
                 <div class="dmt-setup-header">
                     <div class="dmt-setup-title">⚡ DMT Woordtrainer</div>
-                    <div class="dmt-setup-subtitle">Kies je lijst en snelheid om te beginnen</div>
+                    <div class="dmt-setup-subtitle">Stel je oefening in en laten we beginnen!</div>
                 </div>
 
-                <!-- List Selector -->
-                <div class="dmt-list-selector">
-                    <div class="dmt-section-title">Kies een lijst</div>
-                    <div class="dmt-list-buttons">
-                        <button class="dmt-list-btn" data-list="A">
-                            <div class="dmt-list-label">Start-woorden</div>
-                            <div class="dmt-list-difficulty">Start</div>
-                        </button>
-                        <button class="dmt-list-btn" data-list="B">
-                            <div class="dmt-list-label">Groei-woorden</div>
-                            <div class="dmt-list-difficulty">Groei</div>
-                        </button>
-                        <button class="dmt-list-btn" data-list="C">
-                            <div class="dmt-list-label">Knappe woorden</div>
-                            <div class="dmt-list-difficulty">Uitdaging</div>
-                        </button>
+                <!-- Configurator: Side-by-Side Layout -->
+                <div class="dmt-configurator">
+                    <!-- Left Side: Word List Selector -->
+                    <div class="dmt-list-selector">
+                        <div class="dmt-section-title">Kies je woorden</div>
+                        <div class="dmt-list-buttons">
+                            <button class="dmt-list-btn" data-list="A" data-intensity="1">
+                                <div class="dmt-list-label">Start-lijst</div>
+                                <div class="dmt-list-subtitle">Korte woorden (aap, roos, vis)</div>
+                            </button>
+                            <button class="dmt-list-btn" data-list="B" data-intensity="2">
+                                <div class="dmt-list-label">Groei-lijst</div>
+                                <div class="dmt-list-subtitle">Iets langere woorden (boom, trap, stoel)</div>
+                            </button>
+                            <button class="dmt-list-btn" data-list="C" data-intensity="3">
+                                <div class="dmt-list-label">Knappe-lijst</div>
+                                <div class="dmt-list-subtitle">Moeilijke woorden (station, ontbijt, kasteel)</div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Speed Dial -->
+                    <div class="dmt-tempo-selector">
+                        <div class="dmt-section-title">Zet je tempo</div>
+                        <div class="dmt-speed-dial-container">
+                            <div class="dmt-speed-dial">
+                                <div class="dmt-speed-dial-arc"></div>
+                                <div class="dmt-speed-markers">
+                                    <div class="dmt-speed-marker turtle" data-tempo="rustig">
+                                        <div class="dmt-speed-marker-emoji">🐢</div>
+                                        <div class="dmt-speed-marker-label">Schildpad</div>
+                                    </div>
+                                    <div class="dmt-speed-marker hare selected" data-tempo="normaal">
+                                        <div class="dmt-speed-marker-emoji">🐇</div>
+                                        <div class="dmt-speed-marker-label">Haas</div>
+                                    </div>
+                                    <div class="dmt-speed-marker rocket" data-tempo="snel">
+                                        <div class="dmt-speed-marker-emoji">🚀</div>
+                                        <div class="dmt-speed-marker-label">Raket</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hidden tempo buttons for backward compatibility -->
+                        <div class="dmt-tempo-buttons">
+                            <button class="dmt-tempo-btn" data-tempo="rustig">
+                                <div class="dmt-tempo-emoji">🐢</div>
+                                <div class="dmt-tempo-label">Rustig aan</div>
+                                <div class="dmt-tempo-speed">Langzaam</div>
+                            </button>
+                            <button class="dmt-tempo-btn selected" data-tempo="normaal">
+                                <div class="dmt-tempo-emoji">🙂</div>
+                                <div class="dmt-tempo-label">Gaat goed</div>
+                                <div class="dmt-tempo-speed">Standaard</div>
+                            </button>
+                            <button class="dmt-tempo-btn" data-tempo="snel">
+                                <div class="dmt-tempo-emoji">🚀</div>
+                                <div class="dmt-tempo-label">Gas erop</div>
+                                <div class="dmt-tempo-speed">Uitdaging</div>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Tempo Selector -->
-                <div class="dmt-tempo-selector">
-                    <div class="dmt-section-title">Kies je tempo</div>
-                    <div class="dmt-tempo-buttons">
-                        <button class="dmt-tempo-btn" data-tempo="rustig">
-                            <div class="dmt-tempo-emoji">🐢</div>
-                            <div class="dmt-tempo-label">Rustig aan</div>
-                            <div class="dmt-tempo-speed">Langzaam</div>
-                        </button>
-                        <button class="dmt-tempo-btn selected" data-tempo="normaal">
-                            <div class="dmt-tempo-emoji">🙂</div>
-                            <div class="dmt-tempo-label">Gaat goed</div>
-                            <div class="dmt-tempo-speed">Standaard</div>
-                        </button>
-                        <button class="dmt-tempo-btn" data-tempo="snel">
-                            <div class="dmt-tempo-emoji">🚀</div>
-                            <div class="dmt-tempo-label">Gas erop</div>
-                            <div class="dmt-tempo-speed">Uitdaging</div>
-                        </button>
-                    </div>
+                <!-- Summary and Start Button -->
+                <div class="dmt-start-section">
+                    <div class="dmt-summary-sentence" id="summarySentence"></div>
+                    <button class="dmt-start-btn" id="startBtn" disabled>Laten we beginnen!</button>
                 </div>
-
-                <!-- Start Button -->
-                <button class="dmt-start-btn" id="startBtn" disabled>Start oefening</button>
             </div>
         </div>
 
