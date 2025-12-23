@@ -63,7 +63,8 @@ class AccessibilityManager {
 
         // Close panel when clicking outside (using event delegation)
         document.addEventListener('click', (e) => {
-            if (panel && !panel.contains(e.target) && !toggle.contains(e.target)) {
+            // Only run if both panel and toggle exist
+            if (panel && toggle && !panel.contains(e.target) && !toggle.contains(e.target)) {
                 panel.classList.remove('open');
             }
         });
