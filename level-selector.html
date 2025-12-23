@@ -883,9 +883,11 @@
         const header = document.getElementById('subjectHeader');
         header.style.background = `linear-gradient(135deg, ${config.color} 0%, ${config.color}dd 100%)`;
 
-        // Check if this is DMT - render different UI
+        // Check if this is DMT - redirect to new configurator
         if (config.isDMT) {
-            renderDMTSelector();
+            // Redirect to the new single-view configurator
+            window.location.href = 'dmt-practice.html';
+            return;
         } else {
             renderGradeSelector();
         }
