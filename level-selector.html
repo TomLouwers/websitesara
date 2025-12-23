@@ -128,27 +128,28 @@
             padding: 0 32px;
         }
 
-        .breadcrumb {
-            display: flex;
+        .back-button {
+            display: inline-flex;
             align-items: center;
             gap: 8px;
-            font-size: 0.875rem;
-            color: #7F8C8D;
-            margin-bottom: 20px;
-        }
-
-        .breadcrumb a {
-            color: #7F8C8D;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .breadcrumb a:hover {
+            font-size: 1rem;
             color: #2C3E50;
+            background: white;
+            padding: 12px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .breadcrumb-separator {
-            color: #BDC3C7;
+        .back-button:hover {
+            transform: translateX(-4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .back-button .material-icons {
+            font-size: 1.25rem;
         }
 
         .subject-info {
@@ -201,6 +202,180 @@
             font-size: 1.125rem;
             color: #7F8C8D;
             font-weight: 500;
+        }
+
+        /* ========================================
+           MODAL/DRAWER FOR M/E SELECTION
+           ======================================== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transform: scale(0.9);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .modal-grade-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: 800;
+            color: white;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .modal-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #2C3E50;
+            margin-bottom: 8px;
+        }
+
+        .modal-subtitle {
+            font-size: 1.125rem;
+            color: #7F8C8D;
+            font-weight: 500;
+        }
+
+        .moment-options {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .moment-option {
+            background: white;
+            border: 3px solid #E8E8E8;
+            border-radius: 16px;
+            padding: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .moment-option:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .moment-option.selected {
+            border-color: currentColor;
+            transform: scale(1.05);
+            animation: bounce 0.5s ease;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: scale(1.05); }
+            50% { transform: scale(1.08); }
+        }
+
+        .moment-option.midden {
+            color: #4A90E2;
+        }
+
+        .moment-option.midden.selected {
+            background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+        }
+
+        .moment-option.einde {
+            color: #FF8A34;
+        }
+
+        .moment-option.einde.selected {
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+        }
+
+        .moment-icon {
+            font-size: 3rem;
+            flex-shrink: 0;
+        }
+
+        .moment-text {
+            flex: 1;
+        }
+
+        .moment-label {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .moment-description {
+            font-size: 0.95rem;
+            color: #7F8C8D;
+            font-weight: 500;
+        }
+
+        .start-button-container {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .start-button-container.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .btn-start {
+            background: linear-gradient(135deg, #FF8A34 0%, #FF6B35 100%);
+            color: white;
+            border: none;
+            padding: 16px 48px;
+            border-radius: 999px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(255, 138, 52, 0.3);
+        }
+
+        .btn-start:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 138, 52, 0.4);
         }
 
         /* ========================================
@@ -283,7 +458,7 @@
             margin-bottom: 16px;
         }
 
-        /* CITO Moment Selector (M/E Toggle) */
+        /* CITO Moment Selector (M/E Toggle) - Only for DMT */
         .cito-selector {
             background: #F5F6FA;
             border-radius: 999px;
@@ -318,7 +493,7 @@
             background: rgba(0, 0, 0, 0.03);
         }
 
-        /* CTA Button */
+        /* CTA Button - Only for DMT */
         .card-cta {
             width: 100%;
             background: linear-gradient(135deg, #FF9A62 0%, #FF7B3D 100%);
@@ -336,6 +511,12 @@
         .card-cta:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(255, 122, 61, 0.35);
+        }
+
+        /* Simplified grade card styling */
+        .level-card.selected-card {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
         }
 
         /* ========================================
@@ -466,12 +647,11 @@
     <!-- Subject Header Bar -->
     <section class="subject-header" id="subjectHeader">
         <div class="subject-header-content">
-            <!-- Breadcrumb -->
-            <div class="breadcrumb">
-                <a href="index.html">Home</a>
-                <span class="breadcrumb-separator">></span>
-                <span id="breadcrumbSubject">Laden...</span>
-            </div>
+            <!-- Back Button -->
+            <a href="index.html" class="back-button">
+                <span class="material-icons">arrow_back</span>
+                Terug
+            </a>
 
             <!-- Subject Info -->
             <div class="subject-info">
@@ -487,8 +667,8 @@
     <!-- Page Title & Subtitle -->
     <div class="main-container">
         <section class="page-intro">
-            <h2 class="page-title">Kies je groep! 🎯</h2>
-            <p class="page-subtitle">Selecteer je klas en CITO-moment (M of E) om te beginnen.</p>
+            <h2 class="page-title">Welk niveau gaan we vandaag oefenen? 🎯</h2>
+            <p class="page-subtitle">Klik op je groep om te beginnen.</p>
         </section>
 
         <!-- Level Cards -->
@@ -497,6 +677,39 @@
                 <!-- Cards will be generated by JavaScript -->
             </div>
         </section>
+    </div>
+
+    <!-- Modal for M/E Selection -->
+    <div class="modal-overlay" id="momentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-grade-circle" id="modalGradeCircle">5</div>
+                <h3 class="modal-title" id="modalTitle">Groep 5</h3>
+                <p class="modal-subtitle">Hoe ver ben je al in Groep 5?</p>
+            </div>
+
+            <div class="moment-options">
+                <div class="moment-option midden" onclick="selectMomentInModal('M')">
+                    <div class="moment-icon">❄️</div>
+                    <div class="moment-text">
+                        <div class="moment-label">Ik ben op de helft!</div>
+                        <div class="moment-description">Midden van het schooljaar</div>
+                    </div>
+                </div>
+
+                <div class="moment-option einde" onclick="selectMomentInModal('E')">
+                    <div class="moment-icon">☀️</div>
+                    <div class="moment-text">
+                        <div class="moment-label">Ik ben bijna klaar!</div>
+                        <div class="moment-description">Einde van het schooljaar</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="start-button-container" id="startButtonContainer">
+                <button class="btn-start" onclick="startSelectedLevel()">Laten we beginnen! 🚀</button>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -782,67 +995,127 @@
             const grid = document.getElementById('levelCardsGrid');
 
             for (let grade = 3; grade <= 8; grade++) {
-            const card = document.createElement('div');
-            card.className = `level-card groep-${grade}`;
+                const card = document.createElement('div');
+                card.className = `level-card groep-${grade}`;
 
-            // Check if this groep has any available data
-            const hasMoment = config.availableLevels[`${grade}-M`] !== undefined;
-            const hasEmoment = config.availableLevels[`${grade}-E`] !== undefined;
-            const hasAnyData = hasMoment || hasEmoment;
+                // Check if this groep has any available data
+                const hasMoment = config.availableLevels[`${grade}-M`] !== undefined;
+                const hasEmoment = config.availableLevels[`${grade}-E`] !== undefined;
+                const hasAnyData = hasMoment || hasEmoment;
 
-            // Default selection: E if available, otherwise M
-            let selectedMoment = hasEmoment ? 'E' : 'M';
+                if (!hasAnyData) {
+                    card.classList.add('disabled');
+                }
 
-            if (!hasAnyData) {
-                card.classList.add('disabled');
-            }
+                const cardId = `card-${grade}`;
+                card.id = cardId;
+                card.setAttribute('data-grade', grade);
 
-            const cardId = `card-${grade}`;
-            card.id = cardId;
-            card.setAttribute('data-grade', grade);
-            card.setAttribute('data-selected-moment', selectedMoment);
+                // Simplified card - just the grade number and label
+                card.innerHTML = `
+                    <div class="icon-circle">${grade}</div>
+                    <h3 class="level-label">Groep ${grade} ${gradeEmojis[grade]}</h3>
+                `;
 
-            card.innerHTML = `
-                <div class="icon-circle">${grade}</div>
-                <h3 class="level-label">Groep ${grade} ${gradeEmojis[grade]}</h3>
+                // Make the entire card clickable (if not disabled)
+                if (hasAnyData) {
+                    card.style.cursor = 'pointer';
+                    card.addEventListener('click', () => openMomentModal(grade, hasMoment, hasEmoment));
+                }
 
-                <div class="cito-selector" data-grade="${grade}">
-                    <div class="cito-option ${selectedMoment === 'M' ? 'active' : ''}" data-moment="M" onclick="selectMoment(${grade}, 'M')">
-                        M${grade}
-                    </div>
-                    <div class="cito-option ${selectedMoment === 'E' ? 'active' : ''}" data-moment="E" onclick="selectMoment(${grade}, 'E')">
-                        E${grade}
-                    </div>
-                </div>
-
-                <button class="card-cta" onclick="startLevelFromCard(${grade})">Start oefenen</button>
-            `;
-
-            grid.appendChild(card);
+                grid.appendChild(card);
             }
         }
 
-        // Function to select M or E moment
-        function selectMoment(grade, moment) {
-            const card = document.getElementById(`card-${grade}`);
-            const selector = card.querySelector('.cito-selector');
+        // Global variables to track modal state
+        let currentGrade = null;
+        let selectedMoment = null;
 
-            // Update active state
-            selector.querySelectorAll('.cito-option').forEach(opt => {
-                opt.classList.remove('active');
+        // Function to open the M/E selection modal
+        function openMomentModal(grade, hasMoment, hasEmoment) {
+            currentGrade = grade;
+            selectedMoment = null;
+
+            const modal = document.getElementById('momentModal');
+            const modalGradeCircle = document.getElementById('modalGradeCircle');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalSubtitle = modal.querySelector('.modal-subtitle');
+
+            // Update modal content
+            modalGradeCircle.textContent = grade;
+            modalTitle.textContent = `Groep ${grade} ${gradeEmojis[grade]}`;
+            modalSubtitle.textContent = `Hoe ver ben je al in Groep ${grade}?`;
+
+            // Set the grade circle color to match the card
+            const gradeColors = {
+                3: 'linear-gradient(135deg, #FFD86F 0%, #FFC947 100%)',
+                4: 'linear-gradient(135deg, #8FD36B 0%, #72C34D 100%)',
+                5: 'linear-gradient(135deg, #FF9A62 0%, #FF7B3D 100%)',
+                6: 'linear-gradient(135deg, #FF7AB8 0%, #FF5A9D 100%)',
+                7: 'linear-gradient(135deg, #B794F4 0%, #9B73E8 100%)',
+                8: 'linear-gradient(135deg, #F4C542 0%, #E0B02A 100%)'
+            };
+            modalGradeCircle.style.background = gradeColors[grade];
+
+            // Show/hide options based on availability
+            const middenOption = modal.querySelector('.moment-option.midden');
+            const eindeOption = modal.querySelector('.moment-option.einde');
+
+            middenOption.style.display = hasMoment ? 'flex' : 'none';
+            eindeOption.style.display = hasEmoment ? 'flex' : 'none';
+
+            // Reset selection states
+            middenOption.classList.remove('selected');
+            eindeOption.classList.remove('selected');
+            document.getElementById('startButtonContainer').classList.remove('visible');
+
+            // Show modal
+            modal.classList.add('active');
+        }
+
+        // Function to select moment (M or E) in modal
+        function selectMomentInModal(moment) {
+            selectedMoment = moment;
+
+            const modal = document.getElementById('momentModal');
+            const middenOption = modal.querySelector('.moment-option.midden');
+            const eindeOption = modal.querySelector('.moment-option.einde');
+            const startButtonContainer = document.getElementById('startButtonContainer');
+
+            // Update selected states
+            middenOption.classList.remove('selected');
+            eindeOption.classList.remove('selected');
+
+            if (moment === 'M') {
+                middenOption.classList.add('selected');
+            } else {
+                eindeOption.classList.add('selected');
+            }
+
+            // Show the start button
+            startButtonContainer.classList.add('visible');
+        }
+
+        // Function to start the selected level
+        function startSelectedLevel() {
+            if (currentGrade && selectedMoment) {
+                // Close modal
+                document.getElementById('momentModal').classList.remove('active');
+
+                // Start the level
+                startLevel(currentGrade, selectedMoment);
+            }
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('momentModal');
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
             });
-            selector.querySelector(`[data-moment="${moment}"]`).classList.add('active');
-
-            // Store selection
-            card.setAttribute('data-selected-moment', moment);
-        }
-
-        // Function to start quiz from card CTA
-        function startLevelFromCard(grade) {
-            const card = document.getElementById(`card-${grade}`);
-            const selectedMoment = card.getAttribute('data-selected-moment');
-            startLevel(grade, selectedMoment);
-        }
+        });
     </script>
 </body>
 </html>
