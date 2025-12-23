@@ -32,10 +32,10 @@
 
         .dmt-setup-card {
             background: white;
-            border-radius: 20px;
+            border-radius: 24px;
             padding: 40px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-            max-width: 800px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            max-width: 900px;
             margin: 40px auto;
         }
 
@@ -47,13 +47,13 @@
         .dmt-setup-title {
             font-size: 2rem;
             font-weight: 800;
-            color: #2D3748;
+            color: #2C3E50;
             margin-bottom: 8px;
         }
 
         .dmt-setup-subtitle {
             font-size: 1rem;
-            color: #718096;
+            color: #7F8C8D;
         }
 
         /* Configurator Layout */
@@ -73,7 +73,7 @@
         .dmt-section-title {
             font-size: 1.3rem;
             font-weight: 800;
-            color: #2D3748;
+            color: #2C3E50;
             margin-bottom: 20px;
             text-align: center;
         }
@@ -124,17 +124,17 @@
         .dmt-list-label {
             font-size: 1.3rem;
             font-weight: 800;
-            color: #2D3748;
+            color: #2C3E50;
             margin-bottom: 6px;
         }
 
         .dmt-list-subtitle {
             font-size: 0.9rem;
-            color: #718096;
+            color: #7F8C8D;
             font-weight: 500;
         }
 
-        /* Right Side: Speed Dial */
+        /* Right Side: Speed Dial Slider */
         .dmt-tempo-selector {
             display: flex;
             flex-direction: column;
@@ -143,7 +143,7 @@
 
         .dmt-speed-dial-container {
             width: 100%;
-            max-width: 280px;
+            max-width: 320px;
             margin: 20px auto;
             position: relative;
         }
@@ -151,81 +151,76 @@
         .dmt-speed-dial {
             position: relative;
             width: 100%;
-            height: 140px;
-            margin-bottom: 20px;
+            padding: 40px 20px 60px;
         }
 
+        /* Dial Arc Background */
         .dmt-speed-dial-arc {
             position: absolute;
-            bottom: 0;
+            top: 20px;
             left: 50%;
             transform: translateX(-50%);
-            width: 240px;
-            height: 120px;
-            border: 8px solid #E2E8F0;
+            width: 200px;
+            height: 100px;
+            border: 6px solid #E2E8F0;
             border-bottom: none;
-            border-radius: 240px 240px 0 0;
+            border-radius: 200px 200px 0 0;
+            pointer-events: none;
         }
 
-        .dmt-speed-markers {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 240px;
-            height: 120px;
+        /* Speed Labels */
+        .dmt-speed-labels {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 20px;
+            position: relative;
+            height: 100px;
         }
 
-        .dmt-speed-marker {
-            position: absolute;
+        .dmt-speed-label {
             display: flex;
             flex-direction: column;
             align-items: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            gap: 8px;
+            flex: 1;
+            position: relative;
         }
 
-        .dmt-speed-marker.turtle {
-            left: -20px;
-            bottom: -10px;
+        .dmt-speed-label.left {
+            align-items: flex-start;
         }
 
-        .dmt-speed-marker.hare {
+        .dmt-speed-label.center {
+            position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            top: -10px;
+            top: 0;
         }
 
-        .dmt-speed-marker.rocket {
-            right: -20px;
-            bottom: -10px;
+        .dmt-speed-label.right {
+            align-items: flex-end;
         }
 
-        .dmt-speed-marker-emoji {
+        .dmt-speed-emoji {
             font-size: 2.5rem;
             filter: grayscale(60%);
             transition: all 0.3s ease;
         }
 
-        .dmt-speed-marker:hover .dmt-speed-marker-emoji {
-            filter: grayscale(0%);
-            transform: scale(1.1);
-        }
-
-        .dmt-speed-marker.selected .dmt-speed-marker-emoji {
+        .dmt-speed-emoji.active {
             filter: grayscale(0%);
             transform: scale(1.2);
-            animation: shake 0.5s ease-in-out;
+            animation: bounce 0.5s ease;
         }
 
-        .dmt-speed-marker.selected.rocket .dmt-speed-marker-emoji {
-            animation: shake 0.5s ease-in-out, fire-glow 1.5s ease-in-out infinite;
+        .dmt-speed-emoji.rocket.active {
+            animation: bounce 0.5s ease, fire-glow 1.5s ease-in-out infinite;
         }
 
-        @keyframes shake {
-            0%, 100% { transform: scale(1.2) rotate(0deg); }
-            25% { transform: scale(1.2) rotate(-5deg); }
-            75% { transform: scale(1.2) rotate(5deg); }
+        @keyframes bounce {
+            0%, 100% { transform: scale(1.2); }
+            50% { transform: scale(1.3); }
         }
 
         @keyframes fire-glow {
@@ -233,16 +228,84 @@
             50% { filter: grayscale(0%) drop-shadow(0 0 12px rgba(255, 138, 52, 0.8)); }
         }
 
-        .dmt-speed-marker-label {
+        .dmt-speed-text {
             font-size: 0.85rem;
             font-weight: 700;
-            color: #718096;
-            margin-top: 4px;
-            white-space: nowrap;
+            color: #7F8C8D;
+            transition: color 0.3s ease;
         }
 
-        .dmt-speed-marker.selected .dmt-speed-marker-label {
-            color: #2D3748;
+        .dmt-speed-label.active .dmt-speed-text {
+            color: #2C3E50;
+        }
+
+        /* Custom Range Slider */
+        .dmt-speed-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 8px;
+            border-radius: 999px;
+            background: linear-gradient(to right,
+                #8FD36B 0%,
+                #FF8A34 50%,
+                #FF6B35 100%);
+            outline: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .dmt-speed-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: white;
+            border: 4px solid #FF8A34;
+            cursor: grab;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .dmt-speed-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(255, 138, 52, 0.4);
+        }
+
+        .dmt-speed-slider::-webkit-slider-thumb:active {
+            cursor: grabbing;
+            transform: scale(1.05);
+        }
+
+        .dmt-speed-slider::-moz-range-thumb {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: white;
+            border: 4px solid #FF8A34;
+            cursor: grab;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .dmt-speed-slider::-moz-range-thumb:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(255, 138, 52, 0.4);
+        }
+
+        .dmt-speed-slider::-moz-range-thumb:active {
+            cursor: grabbing;
+            transform: scale(1.05);
+        }
+
+        .dmt-current-speed {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #2C3E50;
+            min-height: 24px;
         }
 
         .dmt-tempo-buttons {
@@ -277,7 +340,7 @@
         .dmt-summary-sentence {
             font-size: 1.1rem;
             font-weight: 600;
-            color: #2D3748;
+            color: #2C3E50;
             margin-bottom: 20px;
             min-height: 30px;
             opacity: 0;
@@ -291,15 +354,15 @@
         .dmt-start-btn {
             width: 100%;
             padding: 18px;
-            background: linear-gradient(135deg, #FF8A34, #FF6B9D);
+            background: linear-gradient(135deg, #FF8A34 0%, #FF6B35 100%);
             color: white;
             border: none;
             border-radius: 999px;
             font-size: 1.2rem;
             font-weight: 800;
             cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 12px rgba(255, 138, 52, 0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(255, 138, 52, 0.3);
         }
 
         .dmt-start-btn:not(:disabled) {
@@ -910,21 +973,25 @@
             }
 
             .dmt-speed-dial-container {
-                max-width: 240px;
+                max-width: 100%;
+                padding: 0 10px;
+            }
+
+            .dmt-speed-dial {
+                padding: 30px 10px 40px;
             }
 
             .dmt-speed-dial-arc {
-                width: 200px;
-                height: 100px;
-                border-width: 6px;
+                width: 180px;
+                height: 90px;
+                border-width: 5px;
             }
 
-            .dmt-speed-markers {
-                width: 200px;
-                height: 100px;
+            .dmt-speed-labels {
+                height: 90px;
             }
 
-            .dmt-speed-marker-emoji {
+            .dmt-speed-emoji {
                 font-size: 2rem;
             }
 
@@ -989,26 +1056,28 @@
                         </div>
                     </div>
 
-                    <!-- Right Side: Speed Dial -->
+                    <!-- Right Side: Speed Dial Slider -->
                     <div class="dmt-tempo-selector">
                         <div class="dmt-section-title">Zet je tempo</div>
                         <div class="dmt-speed-dial-container">
                             <div class="dmt-speed-dial">
                                 <div class="dmt-speed-dial-arc"></div>
-                                <div class="dmt-speed-markers">
-                                    <div class="dmt-speed-marker turtle" data-tempo="rustig">
-                                        <div class="dmt-speed-marker-emoji">🐢</div>
-                                        <div class="dmt-speed-marker-label">Schildpad</div>
+                                <div class="dmt-speed-labels">
+                                    <div class="dmt-speed-label left" id="labelSlow">
+                                        <div class="dmt-speed-emoji turtle" id="emojiSlow">🐢</div>
+                                        <div class="dmt-speed-text">Schildpad</div>
                                     </div>
-                                    <div class="dmt-speed-marker hare selected" data-tempo="normaal">
-                                        <div class="dmt-speed-marker-emoji">🐇</div>
-                                        <div class="dmt-speed-marker-label">Haas</div>
+                                    <div class="dmt-speed-label center" id="labelNormal">
+                                        <div class="dmt-speed-emoji hare active" id="emojiNormal">🐇</div>
+                                        <div class="dmt-speed-text">Haas</div>
                                     </div>
-                                    <div class="dmt-speed-marker rocket" data-tempo="snel">
-                                        <div class="dmt-speed-marker-emoji">🚀</div>
-                                        <div class="dmt-speed-marker-label">Raket</div>
+                                    <div class="dmt-speed-label right" id="labelFast">
+                                        <div class="dmt-speed-emoji rocket" id="emojiFast">🚀</div>
+                                        <div class="dmt-speed-text">Raket</div>
                                     </div>
                                 </div>
+                                <input type="range" min="0" max="2" value="1" step="1" class="dmt-speed-slider" id="speedSlider">
+                                <div class="dmt-current-speed" id="currentSpeed">Haas</div>
                             </div>
                         </div>
                         <!-- Hidden tempo buttons for backward compatibility -->

@@ -151,7 +151,15 @@ class DMTPractice {
             });
         });
 
-        // Speed dial markers (new design)
+        // Speed slider (new design)
+        const speedSlider = document.getElementById('speedSlider');
+        if (speedSlider) {
+            speedSlider.addEventListener('input', (e) => {
+                this.handleSliderChange(parseInt(e.target.value));
+            });
+        }
+
+        // Speed dial markers (fallback for old design)
         document.querySelectorAll('.dmt-speed-marker').forEach(marker => {
             marker.addEventListener('click', () => {
                 document.querySelectorAll('.dmt-speed-marker').forEach(m => m.classList.remove('selected'));
@@ -233,6 +241,49 @@ class DMTPractice {
         } else {
             startBtn.disabled = true;
         }
+    }
+
+    handleSliderChange(value) {
+        const tempoMap = ['rustig', 'normaal', 'snel'];
+        const labelMap = ['Schildpad', 'Haas', 'Raket'];
+
+        this.state.selectedTempo = tempoMap[value];
+
+        // Update current speed text
+        const currentSpeed = document.getElementById('currentSpeed');
+        if (currentSpeed) {
+            currentSpeed.textContent = labelMap[value];
+        }
+
+        // Update emoji active states
+        const emojis = ['emojiSlow', 'emojiNormal', 'emojiFast'];
+        const labels = ['labelSlow', 'labelNormal', 'labelFast'];
+
+        emojis.forEach((id, index) => {
+            const emoji = document.getElementById(id);
+            const label = document.getElementById(labels[index]);
+            if (emoji && label) {
+                if (index === value) {
+                    emoji.classList.add('active');
+                    label.classList.add('active');
+                } else {
+                    emoji.classList.remove('active');
+                    label.classList.remove('active');
+                }
+            }
+        });
+
+        // Update hidden tempo buttons for backward compatibility
+        document.querySelectorAll('.dmt-tempo-btn').forEach(btn => {
+            if (btn.dataset.tempo === tempoMap[value]) {
+                btn.classList.add('selected');
+            } else {
+                btn.classList.remove('selected');
+            }
+        });
+
+        this.updateStartButton();
+        this.updateSummary();
     }
 
     updateSummary() {
