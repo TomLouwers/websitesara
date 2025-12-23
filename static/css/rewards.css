@@ -1,0 +1,565 @@
+/**
+ * Reward System Animations
+ *
+ * Design principles:
+ * - Non-blocking (≤ 600ms)
+ * - Joyful and safe
+ * - No negative/loss animations
+ * - Respects prefers-reduced-motion
+ */
+
+/* ========================================
+   STREAK CARD
+   ======================================== */
+
+#streakCard {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none;
+    pointer-events: none;
+}
+
+.streak-card-content {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem 3rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    min-width: 280px;
+}
+
+.streak-emoji {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    animation: gentle-bounce 300ms ease-out;
+}
+
+.streak-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.streak-bonus {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #27ae60;
+}
+
+/* Streak tiers */
+.streak-tier-encouraging {
+    border: 3px solid #ff9800;
+    background: linear-gradient(135deg, #fff 0%, #fff3e0 100%);
+}
+
+.streak-tier-skill {
+    border: 3px solid #2196f3;
+    background: linear-gradient(135deg, #fff 0%, #e3f2fd 100%);
+}
+
+.streak-tier-celebration {
+    border: 3px solid #ffd700;
+    background: linear-gradient(135deg, #fff 0%, #fffbea 100%);
+    box-shadow: 0 8px 32px rgba(255, 215, 0, 0.3);
+}
+
+/* ========================================
+   POINT PARTICLES
+   ======================================== */
+
+#pointBurstContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.point-particle {
+    position: absolute;
+    font-size: 1.2rem;
+    pointer-events: none;
+    will-change: transform, opacity;
+}
+
+/* ========================================
+   PROGRESS STAR
+   ======================================== */
+
+#progressStar {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    transition: all 300ms ease-out;
+}
+
+.star-empty {
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
+
+.star-bronze {
+    color: #cd7f32;
+    filter: drop-shadow(0 0 8px rgba(205, 127, 50, 0.5));
+}
+
+.star-silver {
+    color: #c0c0c0;
+    filter: drop-shadow(0 0 8px rgba(192, 192, 192, 0.5));
+}
+
+.star-gold {
+    color: #ffd700;
+    filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.7));
+}
+
+/* ========================================
+   SHIELD BADGE
+   ======================================== */
+
+#shieldBadge {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 900;
+    display: none;
+    pointer-events: none;
+}
+
+.shield-badge-content {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.shield-icon {
+    font-size: 1.5rem;
+}
+
+.shield-label {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.shield-used {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+}
+
+/* ========================================
+   MULTIPLIER BADGE
+   ======================================== */
+
+#multiplierBadge {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    z-index: 900;
+    display: none;
+    pointer-events: none;
+}
+
+.multiplier-badge-content {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(240, 147, 251, 0.4);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.multiplier-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* ========================================
+   NEAR-MISS CARD
+   ======================================== */
+
+#nearMissCard {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 900;
+    display: none;
+    pointer-events: none;
+}
+
+.near-miss-content {
+    background: linear-gradient(135deg, #fff 0%, #e8f5e9 100%);
+    border: 2px solid #4caf50;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 16px rgba(76, 175, 80, 0.2);
+    text-align: center;
+    max-width: 320px;
+}
+
+.near-miss-emoji {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.near-miss-message {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+/* ========================================
+   STICKER COLLECTION (END SCREEN)
+   ======================================== */
+
+#stickerCollection {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    border-radius: 16px;
+    border: 2px solid #e9ecef;
+}
+
+.sticker-collection-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.sticker-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sticker-card {
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+}
+
+.sticker-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.sticker-emoji {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.sticker-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 0.25rem;
+}
+
+.sticker-description {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.sticker-disclaimer {
+    font-size: 0.85rem;
+    color: #6c757d;
+    text-align: center;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes slide-in-up {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes gentle-bounce {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes star-pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes star-fill {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shield-appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-10deg);
+    }
+    60% {
+        transform: scale(1.1) rotate(5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes shield-protect {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+    }
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 8px 32px rgba(102, 126, 234, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+    }
+}
+
+@keyframes multiplier-pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   REDUCED MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    #streakCard,
+    #shieldBadge,
+    #multiplierBadge,
+    #nearMissCard {
+        animation: none !important;
+    }
+
+    .point-particle {
+        display: none !important;
+    }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .streak-card-content {
+        padding: 1.5rem 2rem;
+        min-width: 240px;
+    }
+
+    .streak-emoji {
+        font-size: 3rem;
+    }
+
+    .streak-title {
+        font-size: 1.3rem;
+    }
+
+    .streak-bonus {
+        font-size: 1.1rem;
+    }
+
+    #shieldBadge,
+    #multiplierBadge {
+        top: 80px;
+    }
+
+    #shieldBadge {
+        right: 10px;
+    }
+
+    #multiplierBadge {
+        left: 10px;
+    }
+
+    .sticker-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .streak-card-content {
+        padding: 1rem 1.5rem;
+        min-width: 200px;
+    }
+
+    .streak-emoji {
+        font-size: 2.5rem;
+    }
+
+    .streak-title {
+        font-size: 1.1rem;
+    }
+
+    .streak-bonus {
+        font-size: 1rem;
+    }
+
+    .near-miss-content {
+        padding: 0.75rem 1.5rem;
+        max-width: 280px;
+    }
+
+    .shield-badge-content {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .multiplier-badge-content {
+        width: 50px;
+        height: 50px;
+    }
+
+    .multiplier-value {
+        font-size: 1.3rem;
+    }
+}
+
+/* ========================================
+   DARK MODE (OPTIONAL)
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+    .streak-card-content {
+        background: #2c3e50;
+        color: white;
+    }
+
+    .streak-title {
+        color: white;
+    }
+
+    .near-miss-content {
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        border-color: #4caf50;
+    }
+
+    .near-miss-message {
+        color: white;
+    }
+
+    #stickerCollection {
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        border-color: #4a5568;
+    }
+
+    .sticker-collection-title {
+        color: white;
+    }
+
+    .sticker-card {
+        background: #34495e;
+        border-color: #4a5568;
+    }
+
+    .sticker-title {
+        color: white;
+    }
+
+    .sticker-description {
+        color: #cbd5e0;
+    }
+
+    .sticker-disclaimer {
+        color: #cbd5e0;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+    #streakCard,
+    #shieldBadge,
+    #multiplierBadge,
+    #nearMissCard,
+    #pointBurstContainer {
+        display: none !important;
+    }
+
+    #stickerCollection {
+        page-break-inside: avoid;
+    }
+}
