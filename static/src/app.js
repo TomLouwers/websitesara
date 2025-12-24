@@ -527,12 +527,17 @@ async function loadJsonFile(filename) {
         const parts = currentSubject ? currentSubject.split('-') : [];
         const baseSubject = parts[0];
 
+        console.log('Loading exercise for subject:', baseSubject, 'Enhanced enabled:', CONFIG.enhancedFormat?.enabled[baseSubject]);
+
         if (CONFIG.enhancedFormat && CONFIG.enhancedFormat.enabled[baseSubject]) {
             // Use split format loading
             return await loadSplitFormatExercise(filename);
         } else {
             // Use legacy format
-            filename = filename.legacy || filename;
+            filename = filename.legacy;
+            if (!filename) {
+                throw new Error('No legacy path found and enhanced format not enabled for this subject');
+            }
         }
     }
 
