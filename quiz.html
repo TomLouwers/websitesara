@@ -1283,16 +1283,18 @@
         /* Feedback morph container */
         .feedback-morph-container {
             padding: 2.5rem 2rem;
-            border-radius: 12px;
-            transition: background-color 0.3s ease;
+            border-radius: 16px;
+            transition: all 0.3s ease;
         }
 
         .feedback-morph-container.feedback-correct {
-            border: 3px solid #81C784;
+            background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%); /* Soft green, not neon */
+            border: 2px solid #86EFAC; /* Thin green border */
         }
 
         .feedback-morph-container.feedback-incorrect {
-            border: 3px solid #FFB74D;
+            background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%); /* Soft orange */
+            border: 2px solid #FED7AA; /* Thin orange border */
         }
 
         /* Header - Ondersteunend, niet dominant */
@@ -1320,7 +1322,15 @@
             margin: 0;
             font-size: 1.125rem;
             font-weight: 600;
-            color: #555;
+            color: #374151;
+        }
+
+        .feedback-correct .feedback-morph-title {
+            color: #166534; /* Dark green for correct */
+        }
+
+        .feedback-incorrect .feedback-morph-title {
+            color: #92400E; /* Dark orange for incorrect */
         }
 
         /* ONE Insight (Visual Center - DOMINANT voor kinderen) */

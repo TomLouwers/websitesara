@@ -355,67 +355,58 @@ class InsightGenerator {
 
   /**
    * Main entry point: Generates ONE Insight for correct answers
+   * POSITIVE, EFFORT-FOCUSED - reinforces HOW they found the answer (strategy)
    *
    * @param {object} question - Full question object
-   * @returns {string} - ONE sentence insight
+   * @returns {string} - Strategy reinforcement message (calm, positive)
    */
   static generateCorrectInsight(question) {
     const subject = this.detectSubject(question.extra_info, question);
-    const extraInfo = question.extra_info;
 
-    // Begrijpend Lezen - benoem WAAR de leerling op lette (strategie verankeren)
+    // Begrijpend Lezen - reinforce READING STRATEGY used
     if (subject === 'begrijpendlezen') {
-      // Strategy-based: focus on READING BEHAVIOR (what they paid attention to)
       const strategyMessages = {
-        'Informatie zoeken': 'Je lette goed op de juiste informatie in de tekst.',
-        'Conclusies trekken': 'Je dacht goed na over wat er in het verhaal gebeurde.',
-        'Verbanden leggen': 'Je verbond de verschillende delen uit de tekst goed.',
-        'Voorspellen': 'Je lette goed op wat er nog zou kunnen gebeuren.',
-        'Samenvatten': 'Je lette goed op waar het hele verhaal over ging.',
-        'Interpreteren': 'Je dacht goed na over wat de schrijver bedoelde.',
-        'Hoofdgedachte': 'Je lette goed op waar het hele stuk over ging.',
-        'Titel bedenken': 'Je keek goed naar waar de tekst over gaat.',
-        'Oorzaak en gevolg': 'Je lette goed op wat er in de tekst staat.',
-        'Personages': 'Je lette goed op wat de tekst over het personage zegt.'
+        'Informatie zoeken': 'Je las goed wat er gevraagd werd.',
+        'Conclusies trekken': 'Je dacht goed na bij het lezen.',
+        'Verbanden leggen': 'Je gebruikte de tekst om het antwoord te vinden.',
+        'Voorspellen': 'Dat haalde je goed uit de tekst.',
+        'Samenvatten': 'Je lette op waar het hele verhaal over ging.',
+        'Interpreteren': 'Je dacht goed na bij het lezen.',
+        'Hoofdgedachte': 'Je lette op waar het stuk over gaat.',
+        'Titel bedenken': 'Dat haalde je goed uit de tekst.',
+        'Oorzaak en gevolg': 'Je gebruikte de tekst om het antwoord te vinden.',
+        'Personages': 'Je las goed wat de tekst erover zegt.'
       };
 
       if (question.strategy && strategyMessages[question.strategy]) {
         return strategyMessages[question.strategy];
       }
 
-      // Try extra_info if available
-      if (extraInfo && typeof extraInfo === 'string') {
-        const insight = this.toJijVorm(this.extractFirstSentence(extraInfo));
-        if (insight.split(/\s+/).length <= 25) {
-          return insight;
-        }
-      } else if (extraInfo && typeof extraInfo === 'object') {
-        if (extraInfo.concept) {
-          const insight = this.toJijVorm(this.extractFirstSentence(extraInfo.concept));
-          if (insight.split(/\s+/).length <= 25) {
-            return insight;
-          }
-        } else if (extraInfo.tips && extraInfo.tips.length > 0) {
-          const insight = this.toJijVorm(this.extractFirstSentence(extraInfo.tips[0]));
-          if (insight.split(/\s+/).length <= 25) {
-            return insight;
-          }
-        }
-      }
-
-      // Fallback - still about reading behavior
-      return 'Je lette goed op wat de vraag vroeg.';
+      return 'Je las goed wat er gevraagd werd.';
     }
 
+    // Verhaaltjessommen - reinforce problem-solving effort
     if (subject === 'verhaaltjessommen') {
-      // For correct verhaaltjessommen, use extra_info concept if available
-      if (typeof extraInfo === 'object' && extraInfo.concept) {
-        return this.buildGeneralInsight(extraInfo.concept, 'general');
-      }
-      return this.buildGeneralInsight(extraInfo, 'general');
+      return 'Je las goed wat er gevraagd werd.';
     }
 
-    return this.buildGeneralInsight(extraInfo, subject);
+    // Math/Getal & Bewerking - reinforce calculation process
+    if (subject === 'math') {
+      return 'Je rekende het goed uit.';
+    }
+
+    // Spelling - reinforce application of rule
+    if (subject === 'spelling') {
+      return 'Je gebruikte de spellingregel goed.';
+    }
+
+    // Vocabulary - reinforce understanding
+    if (subject === 'vocabulary') {
+      return 'Je wist goed wat het woord betekent.';
+    }
+
+    // General - calm, positive
+    return 'Je dacht goed na bij je antwoord.';
   }
 
   /**
@@ -466,6 +457,8 @@ class InsightGenerator {
 
   /**
    * Builds the confirmation text for feedback
+   * For CORRECT answers: "Dit klopt" + optional reason from extra_info
+   * For INCORRECT answers: "Het juiste antwoord is" + answer
    *
    * @param {object} question - Full question object
    * @param {number} correctIndex - Index of correct answer
@@ -480,7 +473,34 @@ class InsightGenerator {
       : (correctOption?.text || '');
 
     if (isCorrect) {
-      return `Dit klopt: ${correctText}`;
+      // For CORRECT answers - try to add context from extra_info
+      const extraInfo = question.extra_info;
+      let reason = '';
+
+      // Try to extract a brief explanation/reason
+      if (typeof extraInfo === 'object') {
+        if (extraInfo.concept) {
+          reason = this.extractFirstSentence(extraInfo.concept);
+        } else if (extraInfo.uitleg) {
+          reason = this.extractFirstSentence(extraInfo.uitleg);
+        }
+      } else if (typeof extraInfo === 'string') {
+        reason = this.extractFirstSentence(extraInfo);
+      }
+
+      // If we have a short reason (< 15 words), add it with "want"
+      if (reason && reason.split(/\s+/).length <= 15) {
+        // Remove any prefix like "Onthoud:", "Let op:", etc.
+        reason = reason.replace(/^(Onthoud|Let op|Tip|Betekent):\s*/i, '');
+        // Lowercase first letter for "want" clause
+        reason = reason.charAt(0).toLowerCase() + reason.slice(1);
+        // Remove period at end
+        reason = reason.replace(/\.$/, '');
+        return `Dit klopt, want ${reason}.`;
+      }
+
+      // Default: just confirm correctness
+      return 'Dit klopt.';
     }
 
     // For incorrect answers on verhaaltjessommen, add calculation if available
