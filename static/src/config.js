@@ -203,7 +203,20 @@ const CONFIG = {
         enabled: true,
         maxAge: 24 * 60 * 60 * 1000, // 24 hours in milliseconds
         prefix: 'quiz_cache_',
-        version: 'v1' // Increment to invalidate all caches
+        version: 'v2' // Increment to invalidate all caches
+    },
+
+    // Enhanced Format Configuration (Schema 2.0.0 with split core/support files)
+    enhancedFormat: {
+        enabled: {
+            wereldorientatie: true,  // Enable enhanced format for WO
+            begrijpendlezen: false,
+            basisvaardigheden: false,
+            woordenschat: false,
+            werkwoordspelling: false
+        },
+        // Support file source: 'v2' uses data-v2, 'enhanced' uses data-v2-enhanced
+        supportSource: 'enhanced'
     },
 
     // File path mapping for subjects with groep/level structure
@@ -262,28 +275,88 @@ const CONFIG = {
         },
         wereldorientatie: {
             groep3: {
-                m3: 'data/exercises/wo/groep3_wo_150.json',
-                e3: 'data/exercises/wo/groep3_wo_150.json'
+                m3: {
+                    legacy: 'data/exercises/wo/groep3_wo_150.json',
+                    core: 'data-v2/exercises/wo/groep3_wo_150_core.json',
+                    support: 'data-v2/exercises/wo/groep3_wo_150_support.json',
+                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep3_wo_150_support.json'
+                },
+                e3: {
+                    legacy: 'data/exercises/wo/groep3_wo_150.json',
+                    core: 'data-v2/exercises/wo/groep3_wo_150_core.json',
+                    support: 'data-v2/exercises/wo/groep3_wo_150_support.json',
+                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep3_wo_150_support.json'
+                }
             },
             groep4: {
-                m4: 'data/exercises/wo/groep4_wo_150.json',
-                e4: 'data/exercises/wo/groep4_wo_150.json'
+                m4: {
+                    legacy: 'data/exercises/wo/groep4_wo_150.json',
+                    core: 'data-v2/exercises/wo/groep4_wo_150_core.json',
+                    support: 'data-v2/exercises/wo/groep4_wo_150_support.json',
+                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep4_wo_150_support.json'
+                },
+                e4: {
+                    legacy: 'data/exercises/wo/groep4_wo_150.json',
+                    core: 'data-v2/exercises/wo/groep4_wo_150_core.json',
+                    support: 'data-v2/exercises/wo/groep4_wo_150_support.json',
+                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep4_wo_150_support.json'
+                }
             },
             groep5: {
-                m5: 'data/exercises/wo/groep5_wo_150.json',
-                e5: 'data/exercises/wo/groep5_wo_150.json'
+                m5: {
+                    legacy: 'data/exercises/wo/groep5_wo_150.json',
+                    core: 'data-v2/exercises/wo/groep5_wo_150_core.json',
+                    support: 'data-v2/exercises/wo/groep5_wo_150_support.json',
+                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep5_wo_150_support.json'
+                },
+                e5: {
+                    legacy: 'data/exercises/wo/groep5_wo_150.json',
+                    core: 'data-v2/exercises/wo/groep5_wo_150_core.json',
+                    support: 'data-v2/exercises/wo/groep5_wo_150_support.json',
+                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep5_wo_150_support.json'
+                }
             },
             groep6: {
-                m6: 'data/exercises/wo/groep6_wo_150.json',
-                e6: 'data/exercises/wo/groep6_wo_150.json'
+                m6: {
+                    legacy: 'data/exercises/wo/groep6_wo_150.json',
+                    core: 'data-v2/exercises/wo/groep6_wo_150_core.json',
+                    support: 'data-v2/exercises/wo/groep6_wo_150_support.json',
+                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep6_wo_150_support.json'
+                },
+                e6: {
+                    legacy: 'data/exercises/wo/groep6_wo_150.json',
+                    core: 'data-v2/exercises/wo/groep6_wo_150_core.json',
+                    support: 'data-v2/exercises/wo/groep6_wo_150_support.json',
+                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep6_wo_150_support.json'
+                }
             },
             groep7: {
-                m7: 'data/exercises/wo/groep7_wo_150.json',
-                e7: 'data/exercises/wo/groep7_wo_150.json'
+                m7: {
+                    legacy: 'data/exercises/wo/groep7_wo_150.json',
+                    core: 'data-v2/exercises/wo/groep7_wo_150_core.json',
+                    support: 'data-v2/exercises/wo/groep7_wo_150_support.json',
+                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep7_wo_150_support.json'
+                },
+                e7: {
+                    legacy: 'data/exercises/wo/groep7_wo_150.json',
+                    core: 'data-v2/exercises/wo/groep7_wo_150_core.json',
+                    support: 'data-v2/exercises/wo/groep7_wo_150_support.json',
+                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep7_wo_150_support.json'
+                }
             },
             groep8: {
-                m8: 'data/exercises/wo/groep8_wo_150.json',
-                e8: 'data/exercises/wo/groep8_wo_150.json'
+                m8: {
+                    legacy: 'data/exercises/wo/groep8_wo_150.json',
+                    core: 'data-v2/exercises/wo/groep8_wo_150_core.json',
+                    support: 'data-v2/exercises/wo/groep8_wo_150_support.json',
+                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep8_wo_150_support.json'
+                },
+                e8: {
+                    legacy: 'data/exercises/wo/groep8_wo_150.json',
+                    core: 'data-v2/exercises/wo/groep8_wo_150_core.json',
+                    support: 'data-v2/exercises/wo/groep8_wo_150_support.json',
+                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep8_wo_150_support.json'
+                }
             }
         },
         woordenschat: {

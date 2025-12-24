@@ -389,51 +389,209 @@ function getFilePath(subject) {
     return 'data/templates/' + subject + CONFIG.templateFileSuffix;
 }
 
+// Merge core and support data for schema 2.0.0 format
+function mergeCoreAndSupport(coreData, supportData) {
+    if (!coreData || !supportData) {
+        console.warn('Missing core or support data for merge');
+        return coreData; // Fallback to core-only
+    }
+
+    // Create merged structure
+    const merged = {
+        ...coreData,
+        items: coreData.items.map(coreItem => {
+            // Find matching support item by ID
+            const supportItem = supportData.items.find(s => s.item_id === coreItem.id);
+
+            if (!supportItem) {
+                console.warn(`No support data found for item ${coreItem.id}`);
+                return coreItem;
+            }
+
+            // Merge core item with support data
+            return {
+                ...coreItem,
+                feedback: supportItem.feedback,
+                adaptive: supportItem.adaptive,
+                hints: supportItem.hints
+            };
+        })
+    };
+
+    return merged;
+}
+
+// Transform schema 2.0.0 format to legacy format expected by the app
+function transformToLegacyFormat(schemaV2Data) {
+    if (!schemaV2Data || !schemaV2Data.schema_version || schemaV2Data.schema_version !== '2.0.0') {
+        // Already in legacy format or invalid data
+        return schemaV2Data;
+    }
+
+    console.log('Transforming schema 2.0.0 to legacy format');
+
+    // Transform items to legacy format
+    const legacyItems = schemaV2Data.items.map(item => {
+        // Extract question text (handle both string and object formats)
+        const questionText = typeof item.question === 'string' ? item.question :
+                           (item.question?.text || '');
+
+        // Extract options text (handle both string and object formats)
+        const options = item.options.map(opt =>
+            typeof opt === 'string' ? opt : opt.text
+        );
+
+        // Build legacy item
+        const legacyItem = {
+            id: item.id,
+            question: questionText,
+            options: options,
+            theme: item.theme || 'algemene kennis',
+            correct: item.answer?.correct_index ?? 0,
+            extra_info: item.feedback?.explanation || ''
+        };
+
+        // Add enhanced feedback if available
+        if (item.feedback) {
+            legacyItem.feedback_enhanced = {
+                correct: item.feedback.correct,
+                incorrect: item.feedback.incorrect
+            };
+        }
+
+        // Add adaptive behavior if available
+        if (item.adaptive) {
+            legacyItem.adaptive = item.adaptive;
+        }
+
+        // Add hints if available
+        if (item.hints) {
+            legacyItem.hints = item.hints;
+        }
+
+        // Preserve other fields
+        if (item.content) legacyItem.content = item.content;
+        if (item.visual) legacyItem.visual = item.visual;
+        if (item.lova) legacyItem.lova = item.lova;
+
+        return legacyItem;
+    });
+
+    return legacyItems;
+}
+
+// Load split format exercise (schema 2.0.0 with separate core and support files)
+async function loadSplitFormatExercise(pathConfig) {
+    try {
+        // Determine which support file to use based on config
+        const supportSource = CONFIG.enhancedFormat.supportSource || 'enhanced';
+        const supportPath = supportSource === 'enhanced' ? pathConfig.supportEnhanced : pathConfig.support;
+
+        console.log(`Loading split format: core=${pathConfig.core}, support=${supportPath}`);
+
+        // Load core file (always needed immediately)
+        const coreData = await loadJsonFile(pathConfig.core);
+        if (!coreData) {
+            throw new Error('Failed to load core file');
+        }
+
+        // Load support file
+        // TODO: In future, implement lazy loading here (load on first question answer)
+        const supportData = await loadJsonFile(supportPath);
+
+        // Merge core and support
+        const mergedData = mergeCoreAndSupport(coreData, supportData);
+
+        // Transform to legacy format for compatibility with existing app logic
+        const legacyFormatData = transformToLegacyFormat(mergedData);
+
+        console.log(`Successfully loaded and merged split format exercise: ${coreData.metadata?.id}`);
+        return legacyFormatData;
+    } catch (error) {
+        console.error('Error loading split format exercise:', error);
+        // Fallback: try to load legacy format
+        if (pathConfig.legacy) {
+            console.log('Falling back to legacy format');
+            return await loadJsonFile(pathConfig.legacy);
+        }
+        throw error;
+    }
+}
+
 // Load JSON file with localStorage caching
 async function loadJsonFile(filename) {
+    // Handle string filename (legacy) vs object with paths (new format)
+    if (typeof filename === 'object' && filename !== null) {
+        // New format: object with core/support/legacy paths
+        // Check if this subject uses enhanced format
+        const parts = currentSubject ? currentSubject.split('-') : [];
+        const baseSubject = parts[0];
+
+        if (CONFIG.enhancedFormat && CONFIG.enhancedFormat.enabled[baseSubject]) {
+            // Use split format loading
+            return await loadSplitFormatExercise(filename);
+        } else {
+            // Use legacy format
+            filename = filename.legacy || filename;
+        }
+    }
+
+    // Original loading logic for string filenames
     try {
-        const cacheKey = `quiz_cache_${filename}_v${CACHE_VERSION}`;
+        const cacheKey = `${CONFIG.cache.prefix}${filename}_${CONFIG.cache.version}`;
 
         // Try to load from localStorage cache first
-        try {
-            const cached = localStorage.getItem(cacheKey);
-            if (cached) {
-                console.log(`Loaded ${filename} from cache`);
-                return JSON.parse(cached);
+        if (CONFIG.cache.enabled) {
+            try {
+                const cached = localStorage.getItem(cacheKey);
+                if (cached) {
+                    const cachedData = JSON.parse(cached);
+                    // Check if cache is still valid
+                    if (cachedData.timestamp && Date.now() - cachedData.timestamp < CONFIG.cache.maxAge) {
+                        console.log(`Loaded ${filename} from cache`);
+                        return cachedData.data;
+                    }
+                }
+            } catch (storageError) {
+                // If localStorage read fails, continue to fetch
+                console.warn('LocalStorage read failed:', storageError);
             }
-        } catch (storageError) {
-            // If localStorage read fails, continue to fetch
-            console.warn('LocalStorage read failed:', storageError);
         }
 
         // Not in cache or cache read failed - fetch from server
         console.log(`Fetching ${filename} from server`);
-        const response = await fetch(jsonPath + filename + '?v=' + CACHE_VERSION);
+        const response = await fetch(jsonPath + filename + `?v=${CONFIG.cache.version}`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
 
         // Try to cache in localStorage for next time
-        try {
-            localStorage.setItem(cacheKey, JSON.stringify(data));
-            console.log(`Cached ${filename} in localStorage`);
-        } catch (storageError) {
-            // Handle quota exceeded or other storage errors
-            console.warn('LocalStorage write failed (quota exceeded?):', storageError);
-            // Try to clear old quiz caches to make room
+        if (CONFIG.cache.enabled) {
             try {
-                const keys = Object.keys(localStorage);
-                for (const key of keys) {
-                    if (key.startsWith('quiz_cache_') && !key.includes(`_v${CACHE_VERSION}`)) {
-                        localStorage.removeItem(key);
+                const cacheData = {
+                    data: data,
+                    timestamp: Date.now()
+                };
+                localStorage.setItem(cacheKey, JSON.stringify(cacheData));
+                console.log(`Cached ${filename} in localStorage`);
+            } catch (storageError) {
+                // Handle quota exceeded or other storage errors
+                console.warn('LocalStorage write failed (quota exceeded?):', storageError);
+                // Try to clear old quiz caches to make room
+                try {
+                    const keys = Object.keys(localStorage);
+                    for (const key of keys) {
+                        if (key.startsWith(CONFIG.cache.prefix) && !key.includes(`_${CONFIG.cache.version}`)) {
+                            localStorage.removeItem(key);
+                        }
                     }
+                    // Try again after clearing old caches
+                    localStorage.setItem(cacheKey, JSON.stringify(cacheData));
+                } catch (retryError) {
+                    // If still fails, just continue without caching
+                    console.warn('Could not cache data even after cleanup');
                 }
-                // Try again after clearing old caches
-                localStorage.setItem(cacheKey, JSON.stringify(data));
-            } catch (retryError) {
-                // If still fails, just continue without caching
-                console.warn('Could not cache data even after cleanup');
             }
         }
 
