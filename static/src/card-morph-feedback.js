@@ -71,7 +71,7 @@ class CardMorphFeedback {
   renderFeedbackContent(card, { isCorrect, insight, confirmation }) {
     const stateClass = isCorrect ? 'feedback-correct' : 'feedback-incorrect';
     const emoji = isCorrect ? '✓' : '👀';
-    const header = isCorrect ? 'Top gedaan!' : 'Let goed op wat er staat 👇';
+    const header = isCorrect ? 'Top gedaan!' : 'Kijk nog eens goed 👀';
     const bgColor = isCorrect ? '#E8F5E9' : '#FFF3E0';
 
     card.innerHTML = `
