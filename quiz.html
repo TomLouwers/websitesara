@@ -187,9 +187,14 @@
             display: none; /* Hidden - replaced by top-right X button */
         }
 
+        /* Quiz container needs relative positioning for absolute child */
+        .quiz-container {
+            position: relative;
+        }
+
         /* Top-right close button - app-style X */
         .quiz-close-btn {
-            position: fixed;
+            position: absolute;
             top: 20px;
             right: 20px;
             width: 40px;
