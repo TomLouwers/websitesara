@@ -179,12 +179,7 @@
         }
 
         .quiz-control-btn.pauze {
-            border-color: #E5E5E5;
-            color: #888;
-        }
-
-        .quiz-control-btn.pauze:hover {
-            background: rgba(0, 0, 0, 0.03);
+            display: none; /* Hidden - too confusing for kids, they can restart instead */
         }
 
         /* Softer language for "Stop" button - now "Sluiten" (Close) */
@@ -192,9 +187,14 @@
             display: none; /* Hidden - replaced by top-right X button */
         }
 
+        /* Quiz container needs relative positioning for absolute child */
+        .quiz-container {
+            position: relative;
+        }
+
         /* Top-right close button - app-style X */
         .quiz-close-btn {
-            position: fixed;
+            position: absolute;
             top: 20px;
             right: 20px;
             width: 40px;
