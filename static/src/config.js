@@ -216,7 +216,7 @@ const CONFIG = {
             werkwoordspelling: false
         },
         // Support file source: 'v2' uses data-v2, 'enhanced' uses data-v2-enhanced
-        supportSource: 'enhanced'
+        supportSource: 'v2'
     },
 
     // File path mapping for subjects with groep/level structure
