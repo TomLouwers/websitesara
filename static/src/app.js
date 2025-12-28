@@ -3535,3 +3535,149 @@ window.addEventListener('pageshow', function(event) {
         }
     }
 });
+
+/* ============================================
+   TOUCH INTERACTION IMPROVEMENTS
+   Enhanced touch support for mobile and tablet
+   ============================================ */
+
+// Detect if device supports touch
+const isTouchDevice = () => {
+    return (('ontouchstart' in window) ||
+            (navigator.maxTouchPoints > 0) ||
+            (navigator.msMaxTouchPoints > 0));
+};
+
+// Add touch-specific class to body for CSS targeting
+if (isTouchDevice()) {
+    document.body.classList.add('touch-device');
+}
+
+// Prevent 300ms click delay on mobile (handled by touch-action: manipulation in CSS)
+// But add additional passive event listeners for better scroll performance
+document.addEventListener('touchstart', function() {}, { passive: true });
+document.addEventListener('touchmove', function() {}, { passive: true });
+
+// Add touch feedback to interactive elements
+function addTouchFeedback(element) {
+    if (!element) return;
+
+    let touchStartTime = 0;
+    let touchMoved = false;
+
+    element.addEventListener('touchstart', function(e) {
+        touchStartTime = Date.now();
+        touchMoved = false;
+        this.classList.add('touch-active');
+    }, { passive: true });
+
+    element.addEventListener('touchmove', function(e) {
+        touchMoved = true;
+        this.classList.remove('touch-active');
+    }, { passive: true });
+
+    element.addEventListener('touchend', function(e) {
+        const touchDuration = Date.now() - touchStartTime;
+        this.classList.remove('touch-active');
+
+        // If it was a quick tap (not a scroll), trigger haptic feedback
+        if (!touchMoved && touchDuration < 500) {
+            // Haptic feedback (if supported)
+            if (navigator.vibrate) {
+                navigator.vibrate(10); // 10ms subtle vibration
+            }
+        }
+    }, { passive: true });
+
+    element.addEventListener('touchcancel', function(e) {
+        this.classList.remove('touch-active');
+    }, { passive: true });
+}
+
+// Apply touch feedback to common interactive elements when they're created
+function initializeTouchInteractions() {
+    // Add touch feedback to all buttons
+    document.querySelectorAll('button, .btn, .subject-card, .level-card, .theme-subtopic-card').forEach(element => {
+        addTouchFeedback(element);
+    });
+}
+
+// Initialize touch interactions on load
+if (isTouchDevice()) {
+    document.addEventListener('DOMContentLoaded', function() {
+        initializeTouchInteractions();
+
+        // Re-initialize when options are created (for quiz questions)
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                mutation.addedNodes.forEach(function(node) {
+                    if (node.nodeType === 1) { // Element node
+                        if (node.matches('.option, button, .btn')) {
+                            addTouchFeedback(node);
+                        }
+                        // Also check children
+                        node.querySelectorAll('.option, button, .btn').forEach(addTouchFeedback);
+                    }
+                });
+            });
+        });
+
+        // Observe the quiz container for new options
+        const quizContainer = document.getElementById('quizPage');
+        if (quizContainer) {
+            observer.observe(quizContainer, {
+                childList: true,
+                subtree: true
+            });
+        }
+    });
+}
+
+// Handle orientation changes
+window.addEventListener('orientationchange', function() {
+    // Delay to allow browser to update viewport
+    setTimeout(function() {
+        // Re-calculate any layout-dependent elements
+        const isLandscape = window.matchMedia("(orientation: landscape)").matches;
+
+        // Add/remove landscape class for additional CSS targeting
+        if (isLandscape) {
+            document.body.classList.add('landscape-mode');
+            document.body.classList.remove('portrait-mode');
+        } else {
+            document.body.classList.add('portrait-mode');
+            document.body.classList.remove('landscape-mode');
+        }
+
+        // Force a repaint to fix any layout issues
+        document.body.style.display = 'none';
+        document.body.offsetHeight; // Trigger reflow
+        document.body.style.display = '';
+    }, 100);
+});
+
+// Detect and handle landscape/portrait on initial load
+(function() {
+    const isLandscape = window.matchMedia("(orientation: landscape)").matches;
+    if (isLandscape) {
+        document.body.classList.add('landscape-mode');
+    } else {
+        document.body.classList.add('portrait-mode');
+    }
+})();
+
+// Prevent zoom on double-tap for specific elements (already handled by CSS touch-action)
+// This is a backup for older browsers
+document.addEventListener('DOMContentLoaded', function() {
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', function(event) {
+        const now = Date.now();
+        if (now - lastTouchEnd <= 300) {
+            // Double tap detected on button-like elements
+            if (event.target.matches('button, .btn, .option, .subject-card')) {
+                event.preventDefault();
+            }
+        }
+        lastTouchEnd = now;
+    }, { passive: false }); // Not passive because we're calling preventDefault
+});
