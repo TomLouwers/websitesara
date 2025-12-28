@@ -385,6 +385,48 @@ function getFilePath(subject) {
         return gbMapping[subject];
     }
 
+    // NEW: Map breuken (verhoudingen) subjects to data-v2/exercises/vh/ directory (schema 2.0.0)
+    const breukenMapping = {
+        'breuken-m3': { core: 'data-v2/exercises/vh/gb_groep3_verhoudingen_m3_core.json', support: 'data-v2/exercises/vh/gb_groep3_verhoudingen_m3_support.json' },
+        'breuken-e3': { core: 'data-v2/exercises/vh/gb_groep3_verhoudingen_e3_core.json', support: 'data-v2/exercises/vh/gb_groep3_verhoudingen_e3_support.json' },
+        'breuken-m4': { core: 'data-v2/exercises/vh/gb_groep4_verhoudingen_m4_core.json', support: 'data-v2/exercises/vh/gb_groep4_verhoudingen_m4_support.json' },
+        'breuken-e4': { core: 'data-v2/exercises/vh/gb_groep4_verhoudingen_e4_core.json', support: 'data-v2/exercises/vh/gb_groep4_verhoudingen_e4_support.json' },
+        'breuken-m5': { core: 'data-v2/exercises/vh/gb_groep5_verhoudingen_m5_core.json', support: 'data-v2/exercises/vh/gb_groep5_verhoudingen_m5_support.json' },
+        'breuken-e5': { core: 'data-v2/exercises/vh/gb_groep5_verhoudingen_e5_core.json', support: 'data-v2/exercises/vh/gb_groep5_verhoudingen_e5_support.json' },
+        'breuken-m6': { core: 'data-v2/exercises/vh/gb_groep6_verhoudingen_m6_core.json', support: 'data-v2/exercises/vh/gb_groep6_verhoudingen_m6_support.json' },
+        'breuken-e6': { core: 'data-v2/exercises/vh/gb_groep6_verhoudingen_e6_core.json', support: 'data-v2/exercises/vh/gb_groep6_verhoudingen_e6_support.json' },
+        'breuken-m7': { core: 'data-v2/exercises/vh/gb_groep7_verhoudingen_m7_core.json', support: 'data-v2/exercises/vh/gb_groep7_verhoudingen_m7_support.json' },
+        'breuken-e7': { core: 'data-v2/exercises/vh/gb_groep7_verhoudingen_e7_core.json', support: 'data-v2/exercises/vh/gb_groep7_verhoudingen_e7_support.json' },
+        'breuken-m8': { core: 'data-v2/exercises/vh/gb_groep8_verhoudingen_m8_core.json', support: 'data-v2/exercises/vh/gb_groep8_verhoudingen_m8_support.json' },
+        'breuken-e8': { core: 'data-v2/exercises/vh/gb_groep8_verhoudingen_e8_core.json', support: 'data-v2/exercises/vh/gb_groep8_verhoudingen_e8_support.json' }
+    };
+
+    // Check if this is a breuken subject
+    if (breukenMapping[subject]) {
+        return breukenMapping[subject];
+    }
+
+    // NEW: Map meetkunde subjects to data-v2/exercises/mk/ directory (schema 2.0.0)
+    const meetkundeMapping = {
+        'meetkunde-m3': { core: 'data-v2/exercises/mk/gb_groep3_meetkunde_m3_core.json', support: 'data-v2/exercises/mk/gb_groep3_meetkunde_m3_support.json' },
+        'meetkunde-e3': { core: 'data-v2/exercises/mk/gb_groep3_meetkunde_e3_core.json', support: 'data-v2/exercises/mk/gb_groep3_meetkunde_e3_support.json' },
+        'meetkunde-m4': { core: 'data-v2/exercises/mk/gb_groep4_meetkunde_m4_core.json', support: 'data-v2/exercises/mk/gb_groep4_meetkunde_m4_support.json' },
+        'meetkunde-e4': { core: 'data-v2/exercises/mk/gb_groep4_meetkunde_e4_core.json', support: 'data-v2/exercises/mk/gb_groep4_meetkunde_e4_support.json' },
+        'meetkunde-m5': { core: 'data-v2/exercises/mk/gb_groep5_meetkunde_m5_core.json', support: 'data-v2/exercises/mk/gb_groep5_meetkunde_m5_support.json' },
+        'meetkunde-e5': { core: 'data-v2/exercises/mk/gb_groep5_meetkunde_e5_core.json', support: 'data-v2/exercises/mk/gb_groep5_meetkunde_e5_support.json' },
+        'meetkunde-m6': { core: 'data-v2/exercises/mk/gb_groep6_meetkunde_m6_core.json', support: 'data-v2/exercises/mk/gb_groep6_meetkunde_m6_support.json' },
+        'meetkunde-e6': { core: 'data-v2/exercises/mk/gb_groep6_meetkunde_e6_core.json', support: 'data-v2/exercises/mk/gb_groep6_meetkunde_e6_support.json' },
+        'meetkunde-m7': { core: 'data-v2/exercises/mk/gb_groep7_meetkunde_m7_core.json', support: 'data-v2/exercises/mk/gb_groep7_meetkunde_m7_support.json' },
+        'meetkunde-e7': { core: 'data-v2/exercises/mk/gb_groep7_meetkunde_e7_core.json', support: 'data-v2/exercises/mk/gb_groep7_meetkunde_e7_support.json' },
+        'meetkunde-m8': { core: 'data-v2/exercises/mk/gb_groep8_meetkunde_m8_core.json', support: 'data-v2/exercises/mk/gb_groep8_meetkunde_m8_support.json' },
+        'meetkunde-e8': { core: 'data-v2/exercises/mk/gb_groep8_meetkunde_e8_core.json', support: 'data-v2/exercises/mk/gb_groep8_meetkunde_e8_support.json' }
+    };
+
+    // Check if this is a meetkunde subject
+    if (meetkundeMapping[subject]) {
+        return meetkundeMapping[subject];
+    }
+
     // Default: use subject + Template suffix with data/templates/ prefix
     return 'data/templates/' + subject + CONFIG.templateFileSuffix;
 }

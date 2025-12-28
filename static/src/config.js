@@ -18,7 +18,9 @@ const CONFIG = {
         'basisvaardigheden-emma': 'Getal & Bewerking Emma',
         'basisvaardigheden-kate': 'Getal & Bewerking Kate',
         werkwoordspelling: 'Werkwoordspelling',
-        dmt: 'DMT Woordtrainer'
+        dmt: 'DMT Woordtrainer',
+        breuken: 'Breuken & Procenten',
+        meetkunde: 'Meetkunde'
     },
 
     // Subject icons
@@ -35,7 +37,9 @@ const CONFIG = {
         'basisvaardigheden-emma': '🧒',
         'basisvaardigheden-kate': '🎓',
         werkwoordspelling: '✍️',
-        dmt: '⚡'
+        dmt: '⚡',
+        breuken: '🧮',
+        meetkunde: '📐'
     },
 
     // Subject descriptions - Engaging and motivational
@@ -52,7 +56,9 @@ const CONFIG = {
         'basisvaardigheden-emma': 'Word een rekenprof met Emma! (330 opgaven)',
         'basisvaardigheden-kate': 'Word een rekenprof met Kate! (240 opgaven)',
         werkwoordspelling: 'Leer werkwoorden correct spellen! ✍️',
-        dmt: 'Word een snellere lezer! ⚡'
+        dmt: 'Word een snellere lezer! ⚡',
+        breuken: 'Leer rekenen met breuken en procenten! 🧮',
+        meetkunde: 'Ontdek de wereld van vormen en maten! 📐'
     },
 
     // File naming pattern
@@ -215,7 +221,9 @@ const CONFIG = {
             begrijpendlezen: false,
             basisvaardigheden: false,
             woordenschat: false,
-            werkwoordspelling: false
+            werkwoordspelling: false,
+            breuken: true,  // Enable enhanced format for Breuken & Procenten
+            meetkunde: true  // Enable enhanced format for Meetkunde
         },
         // Support file source: 'v2' uses data-v2, 'enhanced' uses data-v2-enhanced
         supportSource: 'v2'
