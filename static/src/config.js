@@ -92,8 +92,10 @@ const CONFIG = {
         fair: 50
     },
 
-    // Mobile breakpoint
+    // Responsive breakpoints
     mobileBreakpoint: 768,
+    tabletBreakpoint: 1024,
+    desktopBreakpoint: 1200,
 
     // LocalStorage keys
     storageKeys: {
