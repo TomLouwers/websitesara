@@ -561,12 +561,14 @@ async function loadSplitFormatExercise(pathConfig) {
 }
 
 // Load JSON file with localStorage caching
-async function loadJsonFile(filename) {
+async function loadJsonFile(filename, subjectHint = null) {
     // Handle string filename (legacy) vs object with paths (new format)
     if (typeof filename === 'object' && filename !== null) {
         // New format: object with core/support/legacy paths
         // Check if this subject uses enhanced format
-        const parts = currentSubject ? currentSubject.split('-') : [];
+        // Use subjectHint if provided, otherwise try to extract from currentSubject
+        const subject = subjectHint || currentSubject || '';
+        const parts = subject.split('-');
         const baseSubject = parts[0];
 
         console.log('Loading exercise for subject:', baseSubject, 'Enhanced enabled:', CONFIG.enhancedFormat?.enabled[baseSubject]);
@@ -751,7 +753,7 @@ function showLevelSelection(type) {
 // Load subject and show themes
 async function loadSubject(subject) {
     const filename = getFilePath(subject);
-    const data = await loadJsonFile(filename);
+    const data = await loadJsonFile(filename, subject);
 
     if (!data) return;
 
@@ -3540,7 +3542,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Load the subject data and start quiz directly (skip theme selection)
         setTimeout(async () => {
             const filename = getFilePath(autoStartSubject);
-            const data = await loadJsonFile(filename);
+            const data = await loadJsonFile(filename, autoStartSubject);
 
             if (!data) {
                 alert('Kon quiz data niet laden.');
