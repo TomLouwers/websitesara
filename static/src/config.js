@@ -20,7 +20,8 @@ const CONFIG = {
         werkwoordspelling: 'Werkwoordspelling',
         dmt: 'DMT Woordtrainer',
         breuken: 'Breuken & Procenten',
-        meetkunde: 'Meetkunde'
+        meetkunde: 'Meetkunde',
+        studievaardigheden: 'Studievaardigheden'
     },
 
     // Subject icons
@@ -39,7 +40,8 @@ const CONFIG = {
         werkwoordspelling: '✍️',
         dmt: '⚡',
         breuken: '🧮',
-        meetkunde: '📐'
+        meetkunde: '📐',
+        studievaardigheden: '🎓'
     },
 
     // Subject descriptions - Engaging and motivational
@@ -58,7 +60,8 @@ const CONFIG = {
         werkwoordspelling: 'Leer werkwoorden correct spellen! ✍️',
         dmt: 'Word een snellere lezer! ⚡',
         breuken: 'Leer rekenen met breuken en procenten! 🧮',
-        meetkunde: 'Ontdek de wereld van vormen en maten! 📐'
+        meetkunde: 'Ontdek de wereld van vormen en maten! 📐',
+        studievaardigheden: 'Word een studiekampioen! 🎓'
     },
 
     // File naming pattern
@@ -223,7 +226,8 @@ const CONFIG = {
             woordenschat: false,
             werkwoordspelling: false,
             breuken: true,  // Enable enhanced format for Breuken & Procenten
-            meetkunde: true  // Enable enhanced format for Meetkunde
+            meetkunde: true,  // Enable enhanced format for Meetkunde
+            studievaardigheden: true  // Enable enhanced format for Studievaardigheden
         },
         // Support file source: 'v2' uses data-v2, 'enhanced' uses data-v2-enhanced
         supportSource: 'v2'

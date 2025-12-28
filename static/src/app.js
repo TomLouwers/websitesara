@@ -427,6 +427,27 @@ function getFilePath(subject) {
         return meetkundeMapping[subject];
     }
 
+    // NEW: Map studievaardigheden subjects to data-v2/exercises/sv/ directory (schema 2.0.0)
+    const studievaardighedenMapping = {
+        'studievaardigheden-m3': { core: 'data-v2/exercises/sv/sv_groep3_m3_core.json', support: 'data-v2/exercises/sv/sv_groep3_m3_support.json' },
+        'studievaardigheden-e3': { core: 'data-v2/exercises/sv/sv_groep3_e3_core.json', support: 'data-v2/exercises/sv/sv_groep3_e3_support.json' },
+        'studievaardigheden-m4': { core: 'data-v2/exercises/sv/sv_groep4_m4_core.json', support: 'data-v2/exercises/sv/sv_groep4_m4_support.json' },
+        'studievaardigheden-e4': { core: 'data-v2/exercises/sv/sv_groep4_e4_core.json', support: 'data-v2/exercises/sv/sv_groep4_e4_support.json' },
+        'studievaardigheden-m5': { core: 'data-v2/exercises/sv/sv_groep5_m5_core.json', support: 'data-v2/exercises/sv/sv_groep5_m5_support.json' },
+        'studievaardigheden-e5': { core: 'data-v2/exercises/sv/sv_groep5_e5_core.json', support: 'data-v2/exercises/sv/sv_groep5_e5_support.json' },
+        'studievaardigheden-m6': { core: 'data-v2/exercises/sv/sv_groep6_m6_core.json', support: 'data-v2/exercises/sv/sv_groep6_m6_support.json' },
+        'studievaardigheden-e6': { core: 'data-v2/exercises/sv/sv_groep6_e6_core.json', support: 'data-v2/exercises/sv/sv_groep6_e6_support.json' },
+        'studievaardigheden-m7': { core: 'data-v2/exercises/sv/sv_groep7_m7_core.json', support: 'data-v2/exercises/sv/sv_groep7_m7_support.json' },
+        'studievaardigheden-e7': { core: 'data-v2/exercises/sv/sv_groep7_e7_core.json', support: 'data-v2/exercises/sv/sv_groep7_e7_support.json' },
+        'studievaardigheden-m8': { core: 'data-v2/exercises/sv/sv_groep8_m8_core.json', support: 'data-v2/exercises/sv/sv_groep8_m8_support.json' },
+        'studievaardigheden-e8': { core: 'data-v2/exercises/sv/sv_groep8_e8_core.json', support: 'data-v2/exercises/sv/sv_groep8_e8_support.json' }
+    };
+
+    // Check if this is a studievaardigheden subject
+    if (studievaardighedenMapping[subject]) {
+        return studievaardighedenMapping[subject];
+    }
+
     // Default: use subject + Template suffix with data/templates/ prefix
     return 'data/templates/' + subject + CONFIG.templateFileSuffix;
 }
