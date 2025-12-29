@@ -107,6 +107,7 @@ Each CSV file contains the following columns:
 | **Beschrijving** | Brief description of the learning objective |
 | **Level** | **M** (Midden - midyear) or **E** (Eind - end of year) |
 | **Toelichting** | Detailed explanation for implementation |
+| **Prompt_Template** | AI-ready prompt template for automated exercise generation |
 
 ### Code Structure
 
@@ -183,6 +184,111 @@ End-of-Groep-8 objectives explicitly reference:
 
 Use these to ensure exercises prepare students for national standards.
 
+### 5. **Using Prompt Templates for AI-Generated Exercises**
+
+Each learning objective includes a **Prompt_Template** column containing ready-to-use prompts for automated exercise generation. These templates ensure:
+- Correct domain and subject area
+- Appropriate grade level (Groep)
+- Accurate kerndoel references (SLO framework)
+- Proper inhoudslijn alignment
+- Midyear (M) or end-of-year (E) level specification
+
+#### Prompt Template Structure
+
+All prompt templates follow this consistent format:
+
+```
+Genereer [aantal] oefeningen voor Groep [X] ([midden/eind] schooljaar).
+Kerndoel: [K-nummer] ([naam]).
+Inhoudslijn: [domein] - [specifiek onderwerp].
+Leerdoel ([code]): [beschrijving].
+Niveau: [M/E] ([uitleg]).
+[Specifieke instructies voor deze leerdoel].
+Vraagtypen: [voorbeelden].
+Format: [gewenste opmaak].
+```
+
+#### Example Prompt Templates
+
+**Rekenen - Getallen (Groep 4, Midyear):**
+```csv
+"Genereer 10 oefeningen voor Groep 4 (midden schooljaar). Kerndoel: K23 (Automatiseren).
+Inhoudslijn: Getallen - Bewerkingen. Leerdoel (4G1): Alle tafels tot en met 10 automatisch beheersen.
+Niveau: M (midden groep 4). Alle tafels 1-10 gemengd. Vraagtypen: 7×8=?, 6×9=?, 8×4=?, ook deelsommen.
+Format: snelle automatiseringsoefeningen, mixed."
+```
+
+**Nederlands - Lezen (Groep 5, End of year):**
+```csv
+"Genereer 10 oefeningen voor Groep 5 (eind schooljaar). Kerndoel: K1 (Lezen).
+Inhoudslijn: Lezen - Leesstrategieën. Leerdoel (5L7): Voorspellen, vragen stellen, visualiseren.
+Niveau: E (eind groep 5). Focus op actieve leesstrategieën. Vraagtypen: wat verwacht je,
+welke vraag stel je, wat zie je voor je. Format: korte teksten met open vragen."
+```
+
+**Oriëntatie - Ruimte (Groep 4, Midyear):**
+```csv
+"Genereer 10 oefeningen voor Groep 4 (midden schooljaar). Kerndoel: O8-O10 (Ruimtelijke oriëntatie,
+Kaartvaardigheden). Inhoudslijn: Oriëntatie - Ruimte (Aardrijkskunde) - Provincies.
+Leerdoel (4R1): 12 provincies van Nederland kennen. Niveau: M (midden groep 4).
+Gebruik kaart van Nederland met provincies. Vraagtypen: welke provincie is dit, waar ligt Friesland,
+hoeveel provincies heeft Nederland. Format: topografie multiple choice."
+```
+
+#### Using Prompt Templates Programmatically
+
+**Python Example:**
+```python
+import pandas as pd
+
+# Load domain reference file
+df = pd.read_csv('docs/reference/rekenen-getallen.csv')
+
+# Filter for specific grade and level
+groep_4_midyear = df[(df['Groep'] == 4) & (df['Level'] == 'M')]
+
+# Get prompt template for specific learning objective
+prompt = groep_4_midyear[groep_4_midyear['Code'] == '4G1']['Prompt_Template'].values[0]
+
+# Send to AI model for exercise generation
+# exercises = ai_model.generate(prompt)
+```
+
+**TypeScript Example:**
+```typescript
+import { parse } from 'csv-parse/sync';
+import { readFileSync } from 'fs';
+
+// Load and parse CSV
+const csv = readFileSync('docs/reference/nederlands-lezen.csv', 'utf-8');
+const records = parse(csv, { columns: true });
+
+// Filter for end-of-year objectives for Groep 6
+const groep6End = records.filter(r =>
+  r.Groep === '6' && r.Level === 'E'
+);
+
+// Generate exercises for all objectives
+groep6End.forEach(objective => {
+  const prompt = objective.Prompt_Template;
+  // await generateExercises(prompt);
+});
+```
+
+#### Customizing Prompt Templates
+
+While templates are ready to use, you can customize them by:
+- Adjusting the number of exercises (default: 10)
+- Adding specific context (e.g., "gebruik dieren als context")
+- Specifying format preferences (multiple choice, open questions, etc.)
+- Including difficulty modifiers (extra moeilijk, met hulp, etc.)
+
+**Example Customization:**
+```
+Original: "Genereer 10 oefeningen..."
+Modified: "Genereer 15 extra moeilijke oefeningen... Gebruik de context van een speeltuin."
+```
+
 ## Integration with Exercise System
 
 When generating exercises:
@@ -206,6 +312,12 @@ These reference files should be updated when:
 - `/docs/slo-gap-analysis.md` - Identified content gaps
 
 ## Version History
+
+- **v1.1** (2025-12-29): Added AI-ready prompt templates
+  - Added Prompt_Template column to all 13 domain files
+  - 436 total learning objectives with detailed generation prompts
+  - Consistent template structure across all domains
+  - Ready for automated exercise generation with AI models
 
 - **v1.0** (2025-12-29): Initial creation of 13 domain reference files
   - Aligned with SLO Kerndoelen 2006 (current framework)
