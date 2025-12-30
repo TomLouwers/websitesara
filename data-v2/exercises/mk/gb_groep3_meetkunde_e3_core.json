@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0.0",
   "metadata": {
-    "id": "gb_groep3_meetkunde_e3",
+    "id": "gb_groep3_meetkunde_e3_core",
     "type": "multiple_choice",
     "category": "gb",
     "grade": 3,
@@ -10,22 +10,24 @@
     "domain": "meetkunde",
     "slo_alignment": {
       "kerndoelen": [
-        "K28",
         "K32",
         "K33"
       ],
       "rekendomeinen": [
-        "meetkunde"
+        "meetkunde",
+        "meten"
       ],
       "tussendoelen": [
-        "3R_meetkunde_e3"
+        "3MM4_meter_centimeter",
+        "3MM5_vlakke_figuren",
+        "3MM6_tijd_kwartieren"
       ],
       "referentieniveau": "1F",
       "cognitive_level": "toepassen"
     }
   },
   "display": {
-    "title": "Meetkunde Groep 3"
+    "title": "Meetkunde Groep 3 - Vormen & Meten"
   },
   "content": {
     "instruction": "Kies het goede antwoord:"
@@ -34,812 +36,542 @@
     {
       "id": 1,
       "type": "multiple_choice",
-      "theme": "lengte",
+      "theme": "meter_centimeter",
       "question": {
-        "text": "10 cm = ... meter"
+        "text": "Een tafel is 150 cm lang. Hoeveel meter en centimeter is dat?"
       },
       "options": [
         {
-          "text": "0.1 m"
+          "text": "1 m en 5 cm"
         },
         {
-          "text": "1.0 m"
+          "text": "1 m en 50 cm"
         },
         {
-          "text": "10 m"
+          "text": "15 m"
         },
         {
-          "text": "1000 m"
+          "text": "150 m"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 1
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "100 cm = 1 meter, dus 150 cm = 100 cm + 50 cm = 1 m en 50 cm"
     },
     {
       "id": 2,
       "type": "multiple_choice",
-      "theme": "lengte",
+      "theme": "meter_centimeter",
       "question": {
-        "text": "20 cm = ... meter"
+        "text": "Hoeveel centimeter is 2 meter?"
       },
       "options": [
         {
-          "text": "0.2 m"
+          "text": "20 cm"
         },
         {
-          "text": "2.0 m"
+          "text": "100 cm"
         },
         {
-          "text": "20 m"
+          "text": "200 cm"
         },
         {
-          "text": "2000 m"
+          "text": "2000 cm"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 2
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "1 meter = 100 cm, dus 2 meter = 2 × 100 cm = 200 cm"
     },
     {
       "id": 3,
       "type": "multiple_choice",
-      "theme": "lengte",
+      "theme": "vlakke_figuren",
       "question": {
-        "text": "30 cm = ... meter"
+        "text": "Welke figuur heeft 3 hoeken?"
       },
       "options": [
         {
-          "text": "0.3 m"
+          "text": "vierkant"
         },
         {
-          "text": "3.0 m"
+          "text": "driehoek"
         },
         {
-          "text": "30 m"
+          "text": "cirkel"
         },
         {
-          "text": "3000 m"
+          "text": "rechthoek"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 1
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "Drie-hoek = 3 hoeken"
     },
     {
       "id": 4,
       "type": "multiple_choice",
-      "theme": "lengte",
+      "theme": "vlakke_figuren",
       "question": {
-        "text": "40 cm = ... meter"
+        "text": "Een vierkant heeft 4 zijden die allemaal even lang zijn. Hoeveel hoeken heeft een vierkant?"
       },
       "options": [
         {
-          "text": "0.4 m"
+          "text": "2"
         },
         {
-          "text": "4.0 m"
+          "text": "3"
         },
         {
-          "text": "40 m"
+          "text": "4"
         },
         {
-          "text": "4000 m"
+          "text": "5"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 2
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "Een vierkant heeft evenveel hoeken als zijden"
     },
     {
       "id": 5,
       "type": "multiple_choice",
-      "theme": "lengte",
+      "theme": "tijd_kwartieren",
       "question": {
-        "text": "50 cm = ... meter"
+        "text": "Het is kwart over 3. Hoe laat is het op de digitale klok?"
       },
       "options": [
         {
-          "text": "0.5 m"
+          "text": "2:45"
         },
         {
-          "text": "5.0 m"
+          "text": "3:15"
         },
         {
-          "text": "50 m"
+          "text": "3:30"
         },
         {
-          "text": "5000 m"
+          "text": "3:45"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 1
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "Kwart over 3 = 3 uur en 15 minuten = 3:15"
     },
     {
       "id": 6,
       "type": "multiple_choice",
-      "theme": "lengte",
+      "theme": "tijd_kwartieren",
       "question": {
-        "text": "60 cm = ... meter"
+        "text": "De klok wijst 8:45 aan. Hoe zeg je dat?"
       },
       "options": [
         {
-          "text": "0.6 m"
+          "text": "kwart over acht"
         },
         {
-          "text": "6.0 m"
+          "text": "half negen"
         },
         {
-          "text": "60 m"
+          "text": "kwart voor negen"
         },
         {
-          "text": "6000 m"
+          "text": "negen uur"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 2
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "8:45 = nog 15 minuten tot 9 uur = kwart voor negen"
     },
     {
       "id": 7,
       "type": "multiple_choice",
-      "theme": "lengte",
+      "theme": "meter_centimeter",
       "question": {
-        "text": "70 cm = ... meter"
+        "text": "Je meet de lengte van een klas. Gebruik je meters of centimeters?"
       },
       "options": [
         {
-          "text": "0.7 m"
+          "text": "centimeters"
         },
         {
-          "text": "7.0 m"
+          "text": "meters"
         },
         {
-          "text": "70 m"
+          "text": "millimeters"
         },
         {
-          "text": "7000 m"
+          "text": "kilometers"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 1
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "Voor grote dingen (klas, kamer) gebruik je meters"
     },
     {
       "id": 8,
       "type": "multiple_choice",
-      "theme": "lengte",
+      "theme": "vlakke_figuren",
       "question": {
-        "text": "80 cm = ... meter"
+        "text": "Welke figuur heeft GEEN hoeken?"
       },
       "options": [
         {
-          "text": "0.8 m"
+          "text": "vierkant"
         },
         {
-          "text": "8.0 m"
+          "text": "driehoek"
         },
         {
-          "text": "80 m"
+          "text": "cirkel"
         },
         {
-          "text": "8000 m"
+          "text": "rechthoek"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 2
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "Een cirkel is rond en heeft geen hoeken"
     },
     {
       "id": 9,
       "type": "multiple_choice",
-      "theme": "tijd",
+      "theme": "tijd_kwartieren",
       "question": {
-        "text": "De klok wijst 3:00 aan. Hoe laat is het?"
+        "text": "Van 2:00 naar 2:15 is..."
       },
       "options": [
         {
-          "text": "drie uur"
+          "text": "een half uur"
         },
         {
-          "text": "weet ik niet"
+          "text": "een kwartier"
         },
         {
-          "text": "twaalf uur"
+          "text": "een uur"
         },
         {
-          "text": "één uur"
+          "text": "5 minuten"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 1
       },
-      "hint": "3:00 = drie uur"
+      "hint": "Een kwartier = 15 minuten"
     },
     {
       "id": 10,
       "type": "multiple_choice",
-      "theme": "tijd",
+      "theme": "meter_centimeter",
       "question": {
-        "text": "De klok wijst 6:30 aan. Hoe laat is het?"
+        "text": "1 meter en 25 cm = ? centimeter"
       },
       "options": [
         {
-          "text": "half zeven"
+          "text": "25 cm"
         },
         {
-          "text": "weet ik niet"
+          "text": "100 cm"
         },
         {
-          "text": "twaalf uur"
+          "text": "125 cm"
         },
         {
-          "text": "één uur"
+          "text": "225 cm"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 2
       },
-      "hint": "6:30 = half zeven"
+      "hint": "1 meter = 100 cm, dus 100 cm + 25 cm = 125 cm"
     },
     {
       "id": 11,
       "type": "multiple_choice",
-      "theme": "tijd",
+      "theme": "vlakke_figuren",
       "question": {
-        "text": "De klok wijst 9:00 aan. Hoe laat is het?"
+        "text": "Een rechthoek heeft 4 hoeken. Hoeveel zijden heeft een rechthoek?"
       },
       "options": [
         {
-          "text": "negen uur"
+          "text": "2"
         },
         {
-          "text": "weet ik niet"
+          "text": "3"
         },
         {
-          "text": "twaalf uur"
+          "text": "4"
         },
         {
-          "text": "één uur"
+          "text": "6"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 2
       },
-      "hint": "9:00 = negen uur"
+      "hint": "Tel de zijden van een rechthoek: boven, onder, links, rechts = 4 zijden"
     },
     {
       "id": 12,
       "type": "multiple_choice",
-      "theme": "geld",
+      "theme": "tijd_kwartieren",
       "question": {
-        "text": "Je hebt 2 munten van €1. Hoeveel euro heb je?"
+        "text": "Het is 5:30. Een kwartier later is het..."
       },
       "options": [
         {
-          "text": "€1"
+          "text": "5:15"
         },
         {
-          "text": "€2"
+          "text": "5:45"
         },
         {
-          "text": "€3"
+          "text": "6:00"
         },
         {
-          "text": "€4"
+          "text": "6:30"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "2 × €1 = €2"
+      "hint": "Tel 15 minuten bij 5:30 op: 5:30 + 15 = 5:45"
     },
     {
       "id": 13,
       "type": "multiple_choice",
-      "theme": "geld",
+      "theme": "meter_centimeter",
       "question": {
-        "text": "Je hebt 4 munten van €1. Hoeveel euro heb je?"
+        "text": "Een deur is ongeveer 2 meter hoog. Is dat meer of minder dan 150 cm?"
       },
       "options": [
         {
-          "text": "€3"
+          "text": "meer"
         },
         {
-          "text": "€4"
+          "text": "minder"
         },
         {
-          "text": "€5"
+          "text": "even veel"
         },
         {
-          "text": "€8"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "4 × €1 = €4"
-    },
-    {
-      "id": 14,
-      "type": "multiple_choice",
-      "theme": "geld",
-      "question": {
-        "text": "Je hebt 6 munten van €1. Hoeveel euro heb je?"
-      },
-      "options": [
-        {
-          "text": "€5"
-        },
-        {
-          "text": "€6"
-        },
-        {
-          "text": "€7"
-        },
-        {
-          "text": "€12"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "6 × €1 = €6"
-    },
-    {
-      "id": 15,
-      "type": "multiple_choice",
-      "theme": "geld",
-      "question": {
-        "text": "Je hebt 8 munten van €1. Hoeveel euro heb je?"
-      },
-      "options": [
-        {
-          "text": "€7"
-        },
-        {
-          "text": "€8"
-        },
-        {
-          "text": "€9"
-        },
-        {
-          "text": "€16"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "8 × €1 = €8"
-    },
-    {
-      "id": 16,
-      "type": "multiple_choice",
-      "theme": "geld",
-      "question": {
-        "text": "Je hebt 10 munten van €1. Hoeveel euro heb je?"
-      },
-      "options": [
-        {
-          "text": "€9"
-        },
-        {
-          "text": "€10"
-        },
-        {
-          "text": "€11"
-        },
-        {
-          "text": "€20"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "10 × €1 = €10"
-    },
-    {
-      "id": 17,
-      "type": "multiple_choice",
-      "theme": "vormen",
-      "question": {
-        "text": "Hoeveel hoeken heeft een cirkel?"
-      },
-      "options": [
-        {
-          "text": "0"
-        },
-        {
-          "text": "3"
-        },
-        {
-          "text": "4"
-        },
-        {
-          "text": "5"
+          "text": "kan ik niet weten"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Tel de hoeken van een cirkel"
+      "hint": "2 meter = 200 cm. 200 cm is meer dan 150 cm"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "theme": "vlakke_figuren",
+      "question": {
+        "text": "Wat is het verschil tussen een vierkant en een rechthoek?"
+      },
+      "options": [
+        {
+          "text": "Een vierkant heeft 3 hoeken, een rechthoek heeft 4 hoeken"
+        },
+        {
+          "text": "Bij een vierkant zijn alle zijden even lang"
+        },
+        {
+          "text": "Een rechthoek heeft geen hoeken"
+        },
+        {
+          "text": "Er is geen verschil"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "Bij een vierkant zijn alle 4 zijden even lang, bij een rechthoek niet"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "theme": "tijd_kwartieren",
+      "question": {
+        "text": "Kwart voor 7 is hetzelfde als..."
+      },
+      "options": [
+        {
+          "text": "6:15"
+        },
+        {
+          "text": "6:30"
+        },
+        {
+          "text": "6:45"
+        },
+        {
+          "text": "7:15"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Kwart voor 7 = nog 15 minuten tot 7 uur = 6:45"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "theme": "vlakke_figuren",
+      "question": {
+        "text": "Welke vorm heeft een voetbal?"
+      },
+      "options": [
+        {
+          "text": "driehoek"
+        },
+        {
+          "text": "vierkant"
+        },
+        {
+          "text": "cirkel"
+        },
+        {
+          "text": "rechthoek"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Een voetbal is rond, dus een cirkel (plat gezien)"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "theme": "meter_centimeter",
+      "question": {
+        "text": "3 meter = ? centimeter"
+      },
+      "options": [
+        {
+          "text": "30 cm"
+        },
+        {
+          "text": "100 cm"
+        },
+        {
+          "text": "200 cm"
+        },
+        {
+          "text": "300 cm"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 3
+      },
+      "hint": "1 meter = 100 cm, dus 3 meter = 3 × 100 = 300 cm"
     },
     {
       "id": 18,
       "type": "multiple_choice",
-      "theme": "vormen",
+      "theme": "tijd_kwartieren",
       "question": {
-        "text": "Hoeveel hoeken heeft een driehoek?"
+        "text": "De les begint om kwart over 9. De les duurt tot half 10. Hoelang duurt de les?"
       },
       "options": [
         {
-          "text": "0"
+          "text": "15 minuten"
         },
         {
-          "text": "3"
+          "text": "30 minuten"
         },
         {
-          "text": "4"
+          "text": "45 minuten"
         },
         {
-          "text": "5"
+          "text": "60 minuten"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 0
       },
-      "hint": "Tel de hoeken van een driehoek"
+      "hint": "Van 9:15 naar 9:30 = 15 minuten"
     },
     {
       "id": 19,
       "type": "multiple_choice",
-      "theme": "vormen",
+      "theme": "vlakke_figuren",
       "question": {
-        "text": "Hoeveel hoeken heeft een vierkant?"
+        "text": "Je tekent een figuur met 4 zijden die allemaal even lang zijn en 4 hoeken. Welke figuur teken je?"
       },
       "options": [
         {
-          "text": "0"
+          "text": "driehoek"
         },
         {
-          "text": "3"
+          "text": "vierkant"
         },
         {
-          "text": "4"
+          "text": "cirkel"
         },
         {
-          "text": "5"
+          "text": "rechthoek"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 2
+        "correct_index": 1
       },
-      "hint": "Tel de hoeken van een vierkant"
+      "hint": "4 zijden die allemaal even lang zijn = vierkant"
     },
     {
       "id": 20,
       "type": "multiple_choice",
-      "theme": "vormen",
+      "theme": "meter_centimeter",
       "question": {
-        "text": "Hoeveel hoeken heeft een rechthoek?"
+        "text": "250 cm is hetzelfde als..."
       },
       "options": [
         {
-          "text": "0"
+          "text": "2 m en 5 cm"
         },
         {
-          "text": "3"
+          "text": "2 m en 50 cm"
         },
         {
-          "text": "4"
+          "text": "25 m"
         },
         {
-          "text": "5"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Tel de hoeken van een rechthoek"
-    },
-    {
-      "id": 21,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 21: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
+          "text": "250 m"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 22,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 22: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 23,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 23: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 24,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 24: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 25,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 25: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 26,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 26: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 27,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 27: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 28,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 28: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 29,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 29: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 30,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 30: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
+      "hint": "250 cm = 200 cm + 50 cm = 2 m + 50 cm"
     }
   ],
   "settings": {
