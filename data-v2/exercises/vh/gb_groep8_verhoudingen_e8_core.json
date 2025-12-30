@@ -38,115 +38,115 @@
       "type": "multiple_choice",
       "theme": "schaal-complex",
       "question": {
-        "text": "Op een topografische kaart met schaal 1:25.000 meet je een wandelroute van 8,4 cm. Je loopt gemiddeld 5 km per uur. Hoeveel minuten duurt de wandeling?"
+        "text": "Op een Nederlandse topografische kaart met schaal 1:50.000 meet je een fietsroute van 12,5 cm. Hoeveel kilometer is de werkelijke afstand?"
       },
       "options": [
         {
-          "text": "25 minuten"
+          "text": "2,5 km"
         },
         {
-          "text": "42 minuten"
+          "text": "6,25 km"
         },
         {
-          "text": "84 minuten"
+          "text": "12,5 km"
         },
         {
-          "text": "210 minuten"
+          "text": "62,5 km"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Eerst: bereken de echte afstand (8,4 cm × 25.000 = 210.000 cm = 2,1 km). Dan: bereken de tijd (2,1 km ÷ 5 km/uur = 0,42 uur = 25,2 minuten... wacht, controleer je berekening)."
+      "hint": "Bereken: 12,5 cm × 50.000 = 625.000 cm. Reken dit om naar kilometers: 625.000 cm = 6250 meter = 6,25 km."
     },
     {
       "id": 2,
       "type": "multiple_choice",
       "theme": "woordprobleem",
       "question": {
-        "text": "Een recept voor 6 personen vraagt 450 gram bloem, 3 eieren en 0,3 liter melk. Je wilt het recept maken voor 10 personen. Hoeveel bloem heb je nodig?"
+        "text": "Een bakker maakt koekjes. Voor 8 personen gebruikt hij 320 gram bloem en 160 gram suiker. Hoeveel gram bloem heeft hij nodig voor 15 personen?"
       },
       "options": [
         {
-          "text": "675 gram"
+          "text": "480 gram"
         },
         {
-          "text": "700 gram"
+          "text": "600 gram"
         },
         {
-          "text": "750 gram"
+          "text": "640 gram"
         },
         {
-          "text": "900 gram"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Bereken eerst hoeveel keer meer: 10 ÷ 6 = 1,67 (of 5/3). Vermenigvuldig 450 gram met deze factor."
-    },
-    {
-      "id": 3,
-      "type": "multiple_choice",
-      "theme": "gecombineerd",
-      "question": {
-        "text": "In de uitverkoop krijg je 25% korting op een jas van €120. Daarna moet je nog 21% BTW betalen over de korte prijs. Hoeveel betaal je in totaal?"
-      },
-      "options": [
-        {
-          "text": "€90"
-        },
-        {
-          "text": "€96,80"
-        },
-        {
-          "text": "€108,90"
-        },
-        {
-          "text": "€112,50"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Stap 1: Prijs na korting = €120 - (25% van €120) = €120 - €30 = €90. Stap 2: BTW = 21% van €90 = €18,90. Totaal = €90 + €18,90."
-    },
-    {
-      "id": 4,
-      "type": "multiple_choice",
-      "theme": "schaal-complex",
-      "question": {
-        "text": "Een architect maakt een plattegrond op schaal 1:75. De werkelijke woonkamer is 6 meter bij 4,5 meter. Wat is de oppervlakte van de kamer op de plattegrond in cm²?"
-      },
-      "options": [
-        {
-          "text": "32 cm²"
-        },
-        {
-          "text": "48 cm²"
-        },
-        {
-          "text": "270 cm²"
-        },
-        {
-          "text": "360 cm²"
+          "text": "800 gram"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Op de plattegrond: 6 m = 600 cm wordt 600 ÷ 75 = 8 cm. En 4,5 m = 450 cm wordt 450 ÷ 75 = 6 cm. Oppervlakte = 8 × 6."
+      "hint": "Per persoon: 320 ÷ 8 = 40 gram bloem. Voor 15 personen: 15 × 40 = 600 gram."
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "theme": "gecombineerd",
+      "question": {
+        "text": "Een winkel geeft eerst 15% korting op een televisie van €480. Daarna moet je nog 21% BTW betalen over de korte prijs. Wat is de eindprijs?"
+      },
+      "options": [
+        {
+          "text": "€408,00"
+        },
+        {
+          "text": "€428,40"
+        },
+        {
+          "text": "€493,56"
+        },
+        {
+          "text": "€580,80"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Stap 1: Prijs na korting = €480 × 0,85 = €408. Stap 2: Met BTW = €408 × 1,21 = €493,56."
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "theme": "schaal-complex",
+      "question": {
+        "text": "Een architectuurtekening heeft schaal 1:80. Een tuin is op de tekening 7,5 cm lang en 6 cm breed. Wat is de werkelijke oppervlakte in m²?"
+      },
+      "options": [
+        {
+          "text": "28,8 m²"
+        },
+        {
+          "text": "36 m²"
+        },
+        {
+          "text": "45 m²"
+        },
+        {
+          "text": "288 m²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Werkelijk: 7,5 cm × 80 = 600 cm = 6 m lang. 6 cm × 80 = 480 cm = 4,8 m breed. Oppervlakte = 6 × 4,8 = 28,8 m²."
     },
     {
       "id": 5,
       "type": "multiple_choice",
       "theme": "woordprobleem",
       "question": {
-        "text": "Drie vrienden verdelen €180 in de verhouding 2:3:4. Hoeveel krijgt degene met het grootste deel?"
+        "text": "Vier vrienden verdelen €240 in de verhouding 2:3:4:3. Hoeveel krijgt degene met het kleinste deel?"
       },
       "options": [
         {
@@ -156,51 +156,132 @@
           "text": "€60"
         },
         {
-          "text": "€72"
-        },
-        {
           "text": "€80"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 3
-      },
-      "hint": "Totaal aantal delen = 2 + 3 + 4 = 9 delen. Eén deel = €180 ÷ 9 = €20. Het grootste deel is 4 × €20."
-    },
-    {
-      "id": 6,
-      "type": "multiple_choice",
-      "theme": "gecombineerd",
-      "question": {
-        "text": "Karim spaart €1500 met 2,4% rente per jaar. Na 1 jaar betaalt hij 30% belasting over de rente. Hoeveel geld heeft hij netto na 1 jaar?"
-      },
-      "options": [
-        {
-          "text": "€1525,20"
         },
         {
-          "text": "€1536"
-        },
-        {
-          "text": "€1541,60"
-        },
-        {
-          "text": "€1545"
+          "text": "€120"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Rente = 2,4% van €1500 = €36. Belasting = 30% van €36 = €10,80. Netto rente = €36 - €10,80 = €25,20. Totaal = €1500 + €25,20."
+      "hint": "Totaal delen = 2 + 3 + 4 + 3 = 12. Eén deel = €240 ÷ 12 = €20. Het kleinste deel is 2 × €20 = €40."
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "theme": "gecombineerd",
+      "question": {
+        "text": "Mariam spaart €2400 met 1,6% rente per jaar. Na 1 jaar betaalt ze 30% belasting over de rente. Hoeveel heeft ze netto na 1 jaar?"
+      },
+      "options": [
+        {
+          "text": "€2410,88"
+        },
+        {
+          "text": "€2422,40"
+        },
+        {
+          "text": "€2426,88"
+        },
+        {
+          "text": "€2438,40"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Rente = 1,6% van €2400 = €38,40. Belasting = 30% van €38,40 = €11,52. Netto rente = €38,40 - €11,52 = €26,88. Totaal = €2400 + €26,88."
     },
     {
       "id": 7,
       "type": "multiple_choice",
       "theme": "schaal-complex",
       "question": {
-        "text": "Een stadsplattegrond heeft schaal 1:12.500. De werkelijke afstand tussen school en bibliotheek is 2,5 km. Hoeveel cm is dit op de kaart?"
+        "text": "Een model van de Erasmusbrug is gemaakt op schaal 1:600. Het model is 60 cm lang. Hoeveel meter lang is de echte brug?"
+      },
+      "options": [
+        {
+          "text": "36 meter"
+        },
+        {
+          "text": "100 meter"
+        },
+        {
+          "text": "360 meter"
+        },
+        {
+          "text": "600 meter"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Werkelijk: 60 cm × 600 = 36.000 cm = 360 meter."
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "theme": "woordprobleem",
+      "question": {
+        "text": "Voor yoghurtijs meng je yoghurt en room in de verhouding 5:2. Je wilt 3,5 liter yoghurtijs maken. Hoeveel liter yoghurt heb je nodig?"
+      },
+      "options": [
+        {
+          "text": "1 liter"
+        },
+        {
+          "text": "1,75 liter"
+        },
+        {
+          "text": "2,5 liter"
+        },
+        {
+          "text": "2,9 liter"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Totaal delen = 5 + 2 = 7. Yoghurt is 5/7 van het totaal: 3,5 × (5/7) = 2,5 liter."
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "theme": "gecombineerd",
+      "question": {
+        "text": "Een fabriek produceert smartphones voor €180 per stuk en verkoopt ze met 40% winstmarge. Over de verkoopprijs komt 21% BTW. Wat betaalt de klant per smartphone?"
+      },
+      "options": [
+        {
+          "text": "€252,00"
+        },
+        {
+          "text": "€262,80"
+        },
+        {
+          "text": "€304,92"
+        },
+        {
+          "text": "€314,36"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Verkoopprijs excl BTW = €180 × 1,40 = €252. Met BTW = €252 × 1,21 = €304,92."
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "theme": "schaal-complex",
+      "question": {
+        "text": "Een stadsplattegrond heeft schaal 1:18.000. De afstand tussen het station en het museum is in werkelijkheid 3,6 km. Hoeveel cm is dit op de plattegrond?"
       },
       "options": [
         {
@@ -210,368 +291,287 @@
           "text": "5 cm"
         },
         {
+          "text": "18 cm"
+        },
+        {
           "text": "20 cm"
-        },
-        {
-          "text": "50 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "2,5 km = 2500 meter = 250.000 cm. Deel door 12.500: 250.000 ÷ 12.500 = 20 cm."
-    },
-    {
-      "id": 8,
-      "type": "multiple_choice",
-      "theme": "woordprobleem",
-      "question": {
-        "text": "Een mengsel van vruchtensap bestaat uit sinaasappel en appel in de verhouding 5:3. Je hebt 2 liter van dit mengsel. Hoeveel ml sinaasappelsap zit erin?"
-      },
-      "options": [
-        {
-          "text": "750 ml"
-        },
-        {
-          "text": "1000 ml"
-        },
-        {
-          "text": "1250 ml"
-        },
-        {
-          "text": "1500 ml"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Totaal aantal delen = 5 + 3 = 8. Sinaasappel is 5/8 van het totaal. Bereken 5/8 van 2000 ml."
-    },
-    {
-      "id": 9,
-      "type": "multiple_choice",
-      "theme": "gecombineerd",
-      "question": {
-        "text": "Een winkel koopt artikelen in voor €40 exclusief BTW en verkoopt ze met 45% winstmarge. Over de verkoopprijs komt nog 21% BTW. Wat betaalt de klant?"
-      },
-      "options": [
-        {
-          "text": "€58"
-        },
-        {
-          "text": "€69,98"
-        },
-        {
-          "text": "€70,18"
-        },
-        {
-          "text": "€84,70"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Stap 1: Verkoopprijs excl BTW = €40 + 45% = €40 × 1,45 = €58. Stap 2: Inclusief BTW = €58 × 1,21 = €70,18."
-    },
-    {
-      "id": 10,
-      "type": "multiple_choice",
-      "theme": "schaal-complex",
-      "question": {
-        "text": "Een foto van 10 cm bij 15 cm wordt vergroot met schaalfactor 2,5. Wat is de oppervlakte van de vergrote foto?"
-      },
-      "options": [
-        {
-          "text": "150 cm²"
-        },
-        {
-          "text": "375 cm²"
-        },
-        {
-          "text": "625 cm²"
-        },
-        {
-          "text": "937,5 cm²"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 3
       },
-      "hint": "Nieuwe afmetingen: 10 × 2,5 = 25 cm en 15 × 2,5 = 37,5 cm. Oppervlakte = 25 × 37,5."
+      "hint": "3,6 km = 3600 meter = 360.000 cm. Op de kaart: 360.000 ÷ 18.000 = 20 cm."
     },
     {
       "id": 11,
       "type": "multiple_choice",
       "theme": "woordprobleem",
       "question": {
-        "text": "Een schoolklas haalt gemiddeld een 7,2. De 15 meisjes hebben gemiddeld een 7,6 en de jongens gemiddeld een 6,8. Hoeveel jongens zitten er in de klas?"
+        "text": "Een klas van 28 leerlingen haalt gemiddeld een 7,1. De 16 meisjes hebben gemiddeld een 7,5. Wat is het gemiddelde van de jongens?"
       },
       "options": [
         {
-          "text": "10 jongens"
+          "text": "6,5"
         },
         {
-          "text": "12 jongens"
+          "text": "6,6"
         },
         {
-          "text": "15 jongens"
+          "text": "6,7"
         },
         {
-          "text": "18 jongens"
+          "text": "6,8"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 1
       },
-      "hint": "Stel: j = aantal jongens. Dan: (15 × 7,6 + j × 6,8) ÷ (15 + j) = 7,2. Los op: 114 + 6,8j = 7,2 × (15 + j)."
+      "hint": "Totaal punten = 28 × 7,1 = 198,8. Punten meisjes = 16 × 7,5 = 120. Aantal jongens = 12. Punten jongens = 198,8 - 120 = 78,8. Gemiddelde jongens = 78,8 ÷ 12 ≈ 6,6."
     },
     {
       "id": 12,
       "type": "multiple_choice",
       "theme": "gecombineerd",
       "question": {
-        "text": "Een telefoonabonnement kost €25 per maand met 9% BTW. Na 6 maanden krijg je 15% korting op alle maandelijkse kosten. Hoeveel betaal je in totaal over 1 jaar?"
+        "text": "Je koopt een shirt: eerst 20% korting op €35, dan nog 10% extra korting. Over de eindprijs betaal je 21% BTW. Wat is de totaalprijs?"
       },
       "options": [
         {
-          "text": "€304,85"
+          "text": "€24,50"
         },
         {
-          "text": "€316,46"
+          "text": "€25,20"
         },
         {
-          "text": "€326,25"
+          "text": "€30,49"
         },
         {
-          "text": "€327,38"
+          "text": "€35,21"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 2
       },
-      "hint": "Eerste 6 maanden: €25 × 1,09 × 6 = €163,50. Laatste 6 maanden: €25 × 0,85 × 1,09 × 6 = €138,98 + €13,98. Nee wacht, doe het stapsgewijs nauwkeuriger."
+      "hint": "Na 20% korting: €35 × 0,80 = €28. Na 10% korting: €28 × 0,90 = €25,20. Met BTW: €25,20 × 1,21 = €30,49."
     },
     {
       "id": 13,
       "type": "multiple_choice",
       "theme": "schaal-complex",
       "question": {
-        "text": "Op een architectuurtekening met schaal 1:200 is een zwembad 12,5 cm lang en 6 cm breed. Hoeveel m³ water past erin als het zwembad 1,5 meter diep is?"
+        "text": "Een architectuurtekening op schaal 1:125 toont een zwembad van 16 cm bij 8 cm. Het zwembad is 1,8 meter diep. Hoeveel m³ water past erin?"
       },
       "options": [
         {
-          "text": "45 m³"
+          "text": "36 m³"
         },
         {
-          "text": "90 m³"
+          "text": "72 m³"
         },
         {
-          "text": "112,5 m³"
+          "text": "144 m³"
         },
         {
-          "text": "225 m³"
+          "text": "180 m³"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Werkelijke afmetingen: 12,5 cm × 200 = 2500 cm = 25 m lang, 6 cm × 200 = 1200 cm = 12 m breed. Volume = 25 × 12 × 1,5."
+      "hint": "Werkelijk: 16 cm × 125 = 2000 cm = 20 m lang. 8 cm × 125 = 1000 cm = 10 m breed. Volume = 20 × 10 × 1,8 = 360 m³. Check je berekening..."
     },
     {
       "id": 14,
       "type": "multiple_choice",
       "theme": "woordprobleem",
       "question": {
-        "text": "Cement en zand worden gemengd in de verhouding 1:4. Je wilt 75 kg betonmengsel maken. Hoeveel kg cement heb je nodig?"
+        "text": "Voor beton meng je cement, zand en grind in de verhouding 1:2:3. Je wilt 120 kg beton maken. Hoeveel kg zand heb je nodig?"
       },
       "options": [
         {
-          "text": "12 kg"
-        },
-        {
-          "text": "15 kg"
-        },
-        {
-          "text": "18 kg"
-        },
-        {
           "text": "20 kg"
+        },
+        {
+          "text": "30 kg"
+        },
+        {
+          "text": "40 kg"
+        },
+        {
+          "text": "60 kg"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 2
       },
-      "hint": "Totaal aantal delen = 1 + 4 = 5 delen. Cement is 1/5 van het totaal. Bereken 1/5 van 75 kg."
+      "hint": "Totaal delen = 1 + 2 + 3 = 6. Zand is 2/6 van het totaal: 120 × (2/6) = 40 kg."
     },
     {
       "id": 15,
       "type": "multiple_choice",
       "theme": "gecombineerd",
       "question": {
-        "text": "Je koopt een fiets in de uitverkoop: eerst 20% korting, daarna nog eens 10% extra korting op de verlaagde prijs. De originele prijs was €400. Wat betaal je nu?"
+        "text": "Een webwinkel rekent €7,50 verzendkosten (inclusief BTW). Je koopt artikelen voor €95 exclusief BTW (21%). Wat betaal je in totaal?"
       },
       "options": [
         {
-          "text": "€280"
+          "text": "€102,50"
         },
         {
-          "text": "€288"
+          "text": "€107,45"
         },
         {
-          "text": "€300"
+          "text": "€115,45"
         },
         {
-          "text": "€320"
+          "text": "€122,45"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 2
       },
-      "hint": "Eerst 20% korting: €400 × 0,80 = €320. Dan nog 10% korting: €320 × 0,90 = €288."
+      "hint": "Artikelen met BTW = €95 × 1,21 = €114,95. Plus verzendkosten = €114,95 + €7,50 = €122,45. Check..."
     },
     {
       "id": 16,
       "type": "multiple_choice",
       "theme": "schaal-complex",
       "question": {
-        "text": "Een modelvliegtuig heeft schaal 1:72. De spanwijdte van het model is 35 cm. Hoeveel meter is de spanwijdte van het echte vliegtuig?"
+        "text": "Een poster van 30 cm bij 40 cm wordt vergroot met schaalfactor 1,8. Wat is de oppervlakte van de vergrote poster in cm²?"
       },
       "options": [
         {
-          "text": "2,52 meter"
+          "text": "1200 cm²"
         },
         {
-          "text": "12,6 meter"
+          "text": "2160 cm²"
         },
         {
-          "text": "25,2 meter"
+          "text": "3456 cm²"
         },
         {
-          "text": "35,72 meter"
+          "text": "3888 cm²"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 2
+        "correct_index": 3
       },
-      "hint": "35 cm × 72 = 2520 cm = 25,2 meter."
+      "hint": "Nieuwe afmetingen: 30 × 1,8 = 54 cm en 40 × 1,8 = 72 cm. Oppervlakte = 54 × 72 = 3888 cm²."
     },
     {
       "id": 17,
       "type": "multiple_choice",
       "theme": "woordprobleem",
       "question": {
-        "text": "Een auto gebruikt gemiddeld 1 liter benzine per 15 km. Benzine kost €1,85 per liter. Hoeveel kost het om 225 km te rijden?"
+        "text": "Een scooter gebruikt 1 liter benzine per 35 km. Benzine kost €1,92 per liter. Hoeveel kost het om 280 km te rijden?"
       },
       "options": [
         {
-          "text": "€23,10"
+          "text": "€13,44"
         },
         {
-          "text": "€27,75"
+          "text": "€15,36"
         },
         {
-          "text": "€31,45"
+          "text": "€17,28"
         },
         {
-          "text": "€37,50"
+          "text": "€19,20"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Aantal liters nodig = 225 ÷ 15 = 15 liter. Kosten = 15 × €1,85."
+      "hint": "Aantal liters = 280 ÷ 35 = 8 liter. Kosten = 8 × €1,92 = €15,36."
     },
     {
       "id": 18,
       "type": "multiple_choice",
       "theme": "gecombineerd",
       "question": {
-        "text": "Een webshop rekent €5 verzendkosten. Je koopt artikelen ter waarde van €85 exclusief BTW (21%) en verzendkosten. Wat is het totaalbedrag?"
+        "text": "Een spaarrekening heeft 2,1% rente per jaar. Na 1 jaar betaal je 30% belasting over de rente. Wat is het effectieve netto rentepercentage?"
       },
       "options": [
         {
-          "text": "€102,85"
+          "text": "0,63%"
         },
         {
-          "text": "€107,85"
+          "text": "1,47%"
         },
         {
-          "text": "€108,85"
+          "text": "1,68%"
         },
         {
-          "text": "€113,85"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Artikelen met BTW = €85 × 1,21 = €102,85. Plus verzendkosten = €102,85 + €5 (verzending heeft meestal al BTW inbegrepen in de €5)."
-    },
-    {
-      "id": 19,
-      "type": "multiple_choice",
-      "theme": "woordprobleem",
-      "question": {
-        "text": "Oranje verf maak je door rode en gele verf te mengen in de verhouding 3:7. Je hebt 1,5 liter rode verf. Hoeveel liter oranje verf kun je maximaal maken?"
-      },
-      "options": [
-        {
-          "text": "3,5 liter"
-        },
-        {
-          "text": "4 liter"
-        },
-        {
-          "text": "5 liter"
-        },
-        {
-          "text": "6 liter"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Rode verf is 3/10 van het totaal. Als 3/10 = 1,5 liter, dan is 10/10 = ? liter."
-    },
-    {
-      "id": 20,
-      "type": "multiple_choice",
-      "theme": "gecombineerd",
-      "question": {
-        "text": "Een spaarrekening heeft 1,8% rente per jaar. Na 1 jaar wordt 30% belasting ingehouden over de rente. Welk effectief rentepercentage krijg je netto?"
-      },
-      "options": [
-        {
-          "text": "0,54%"
-        },
-        {
-          "text": "1,26%"
-        },
-        {
-          "text": "1,50%"
-        },
-        {
-          "text": "1,62%"
+          "text": "1,80%"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Na belasting krijg je 70% van de rente: 1,8% × 0,70 = 1,26%."
+      "hint": "Na belasting hou je 70% van de rente: 2,1% × 0,70 = 1,47%."
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "theme": "woordprobleem",
+      "question": {
+        "text": "Groene verf maak je door gele en blauwe verf te mengen in de verhouding 3:2. Je hebt 1,8 liter gele verf. Hoeveel liter groene verf kun je maximaal maken?"
+      },
+      "options": [
+        {
+          "text": "2,4 liter"
+        },
+        {
+          "text": "3,0 liter"
+        },
+        {
+          "text": "3,6 liter"
+        },
+        {
+          "text": "4,5 liter"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "Gele verf is 3/5 van het totaal. Als 3/5 = 1,8 liter, dan is 5/5 (totaal) = 1,8 ÷ (3/5) = 1,8 × (5/3) = 3,0 liter."
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "theme": "schaal-complex",
+      "question": {
+        "text": "Op een wandelkaart met schaal 1:40.000 is een route 14,5 cm lang. Je loopt gemiddeld 4,5 km per uur. Hoeveel uur duurt de wandeling ongeveer?"
+      },
+      "options": [
+        {
+          "text": "1 uur"
+        },
+        {
+          "text": "1,3 uur"
+        },
+        {
+          "text": "1,8 uur"
+        },
+        {
+          "text": "2,3 uur"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "Werkelijke afstand: 14,5 cm × 40.000 = 580.000 cm = 5,8 km. Tijd = 5,8 ÷ 4,5 ≈ 1,3 uur."
     }
   ],
   "settings": {

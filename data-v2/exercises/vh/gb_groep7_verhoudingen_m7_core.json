@@ -36,93 +36,90 @@
       "type": "multiple_choice",
       "theme": "verhoudingstabellen",
       "question": {
-        "text": "Bij de camping kosten 3 nachten €84. Hoeveel kosten 7 nachten?"
+        "text": "Een pretpark rekent €72 voor 4 personen. Hoeveel betaal je voor 11 personen?"
       },
       "options": [
         {
-          "text": "€168"
+          "text": "€188"
         },
         {
-          "text": "€196"
+          "text": "€198"
         },
         {
-          "text": "€224"
+          "text": "€208"
         },
         {
-          "text": "€252"
+          "text": "€218"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Bereken eerst de prijs per nacht: €84 : 3 = €28. Dan: 7 × €28 = €196"
+      "hint": "Eerst per persoon: €72 : 4 = €18. Dan voor 11 personen: 11 × €18 = €198"
     },
     {
       "id": 2,
       "type": "multiple_choice",
       "theme": "percentage-van-percentage",
       "question": {
-        "text": "Een spelcomputer kost €200. Eerst krijg je 20% korting, daarna nog eens 10% extra korting op de nieuwe prijs. Wat betaal je?"
+        "text": "Een tablet kost €300. Je krijgt eerst 15% korting, daarna nog 20% extra korting op de nieuwe prijs. Wat betaal je?"
       },
       "options": [
         {
-          "text": "€140"
+          "text": "€195"
         },
         {
-          "text": "€144"
+          "text": "€204"
         },
         {
-          "text": "€160"
+          "text": "€210"
         },
         {
-          "text": "€156"
+          "text": "€225"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Stap 1: 20% van €200 = €40, dus €160. Stap 2: 10% van €160 = €16, dus €160 - €16 = €144"
+      "hint": "Stap 1: 15% van €300 = €45, dus €255. Stap 2: 20% van €255 = €51, dus €255 - €51 = €204"
     },
     {
       "id": 3,
       "type": "multiple_choice",
       "theme": "verhoudingstabellen",
       "question": {
-        "text": "Met 5 liter benzine rijd je 65 kilometer. Hoeveel kilometer kun je rijden met 8 liter?"
+        "text": "Met 3 kg verf kun je 18 m² muur schilderen. Hoeveel kg verf heb je nodig voor 27 m²?"
       },
       "options": [
         {
-          "text": "96 km"
+          "text": "4 kg"
         },
         {
-          "text": "104 km"
+          "text": "4,5 kg"
         },
         {
-          "text": "112 km"
+          "text": "5 kg"
         },
         {
-          "text": "120 km"
+          "text": "5,5 kg"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Eerst per liter: 65 : 5 = 13 km per liter. Dan: 8 × 13 = 104 km"
+      "hint": "Per m²: 3 : 18 = 0,167 kg. Voor 27 m²: 27 × 0,167 = 4,5 kg (of via verhouding: 27 is 1,5× van 18, dus 1,5 × 3 = 4,5)"
     },
     {
       "id": 4,
       "type": "multiple_choice",
       "theme": "korting-berekenen",
       "question": {
-        "text": "Een jas kostte €120, nu kost hij €90. Hoeveel procent korting is dat?"
+        "text": "Een winterjas kostte €180, nu kost hij €126. Hoeveel procent korting is dat?"
       },
       "options": [
-        {
-          "text": "20%"
-        },
         {
           "text": "25%"
         },
@@ -131,349 +128,160 @@
         },
         {
           "text": "35%"
+        },
+        {
+          "text": "40%"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Korting = €120 - €90 = €30. Percentage: (€30 : €120) × 100% = 25%"
+      "hint": "Korting: €180 - €126 = €54. Percentage: (€54 : €180) × 100% = 30%"
     },
     {
       "id": 5,
       "type": "multiple_choice",
       "theme": "verhoudingstabellen",
       "question": {
-        "text": "Een recept voor 4 personen heeft 250 gram bloem nodig. Hoeveel bloem heb je nodig voor 9 personen?"
+        "text": "Een recept voor 6 personen gebruikt 420 gram rijst. Hoeveel rijst voor 14 personen?"
       },
       "options": [
         {
-          "text": "500 gram"
+          "text": "920 gram"
         },
         {
-          "text": "562,5 gram"
+          "text": "960 gram"
         },
         {
-          "text": "600 gram"
+          "text": "980 gram"
         },
         {
-          "text": "625 gram"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Per persoon: 250 : 4 = 62,5 gram. Voor 9 personen: 9 × 62,5 = 562,5 gram"
-    },
-    {
-      "id": 6,
-      "type": "multiple_choice",
-      "theme": "percentage-van-percentage",
-      "question": {
-        "text": "Je hebt €150 zakgeld. Je geeft 40% uit aan een cadeau. Van het restant spaar je 25%. Hoeveel spaar je?"
-      },
-      "options": [
-        {
-          "text": "€20,50"
-        },
-        {
-          "text": "€22,50"
-        },
-        {
-          "text": "€25"
-        },
-        {
-          "text": "€27,50"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Na uitgave: 60% van €150 = €90. Sparen: 25% van €90 = €22,50"
-    },
-    {
-      "id": 7,
-      "type": "multiple_choice",
-      "theme": "korting-berekenen",
-      "question": {
-        "text": "Bij 35% korting op €80, hoeveel betaal je?"
-      },
-      "options": [
-        {
-          "text": "€48"
-        },
-        {
-          "text": "€52"
-        },
-        {
-          "text": "€56"
-        },
-        {
-          "text": "€60"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "35% van €80 = €28 korting. Je betaalt: €80 - €28 = €52"
-    },
-    {
-      "id": 8,
-      "type": "multiple_choice",
-      "theme": "verhoudingstabellen",
-      "question": {
-        "text": "7 appels kosten €4,20. Hoeveel kosten 12 appels?"
-      },
-      "options": [
-        {
-          "text": "€6,80"
-        },
-        {
-          "text": "€7,20"
-        },
-        {
-          "text": "€7,60"
-        },
-        {
-          "text": "€8,00"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Prijs per appel: €4,20 : 7 = €0,60. Voor 12 appels: 12 × €0,60 = €7,20"
-    },
-    {
-      "id": 9,
-      "type": "multiple_choice",
-      "theme": "percentage-van-percentage",
-      "question": {
-        "text": "Bereken 50% van 60% van €240"
-      },
-      "options": [
-        {
-          "text": "€60"
-        },
-        {
-          "text": "€72"
-        },
-        {
-          "text": "€84"
-        },
-        {
-          "text": "€96"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Eerst: 60% van €240 = €144. Dan: 50% van €144 = €72"
-    },
-    {
-      "id": 10,
-      "type": "multiple_choice",
-      "theme": "korting-berekenen",
-      "question": {
-        "text": "Een fiets van €350 is afgeprijsd naar €280. Hoeveel procent korting?"
-      },
-      "options": [
-        {
-          "text": "15%"
-        },
-        {
-          "text": "20%"
-        },
-        {
-          "text": "25%"
-        },
-        {
-          "text": "30%"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Korting: €350 - €280 = €70. Percentage: (€70 : €350) × 100% = 20%"
-    },
-    {
-      "id": 11,
-      "type": "multiple_choice",
-      "theme": "verhoudingstabellen",
-      "question": {
-        "text": "Je fietst 45 km in 3 uur. Hoeveel tijd heb je nodig voor 75 km in hetzelfde tempo?"
-      },
-      "options": [
-        {
-          "text": "4 uur"
-        },
-        {
-          "text": "4,5 uur"
-        },
-        {
-          "text": "5 uur"
-        },
-        {
-          "text": "5,5 uur"
+          "text": "1020 gram"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 2
       },
-      "hint": "Snelheid: 45 : 3 = 15 km/uur. Voor 75 km: 75 : 15 = 5 uur"
+      "hint": "Per persoon: 420 : 6 = 70 gram. Voor 14 personen: 14 × 70 = 980 gram"
     },
     {
-      "id": 12,
+      "id": 6,
       "type": "multiple_choice",
       "theme": "percentage-van-percentage",
       "question": {
-        "text": "In de uitverkoop krijg je eerst 30% korting, daarna nog 20% extra korting op €100. Wat is de eindprijs?"
+        "text": "Je hebt €240 spaargeld. Je geeft 35% uit aan sportschoenen. Van wat overblijft spaar je 40%. Hoeveel spaar je?"
       },
       "options": [
         {
-          "text": "€50"
-        },
-        {
-          "text": "€56"
+          "text": "€58,40"
         },
         {
           "text": "€60"
         },
         {
-          "text": "€64"
+          "text": "€62,40"
+        },
+        {
+          "text": "€64,80"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 2
       },
-      "hint": "Na 30% korting: €70. Dan 20% van €70 = €14 korting. Eindprijs: €70 - €14 = €56"
+      "hint": "Na uitgave: 65% van €240 = €156. Sparen: 40% van €156 = €62,40"
     },
     {
-      "id": 13,
-      "type": "multiple_choice",
-      "theme": "verhoudingstabellen",
-      "question": {
-        "text": "Voor 6 broodjes betaal je €9. Hoeveel betaal je voor 15 broodjes?"
-      },
-      "options": [
-        {
-          "text": "€21,50"
-        },
-        {
-          "text": "€22,50"
-        },
-        {
-          "text": "€23,50"
-        },
-        {
-          "text": "€24,50"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Per broodje: €9 : 6 = €1,50. Voor 15 broodjes: 15 × €1,50 = €22,50"
-    },
-    {
-      "id": 14,
+      "id": 7,
       "type": "multiple_choice",
       "theme": "korting-berekenen",
       "question": {
-        "text": "Bij 40% korting op €65, wat is de nieuwe prijs?"
+        "text": "Bij 45% korting op €140, hoeveel betaal je?"
       },
       "options": [
         {
-          "text": "€35"
+          "text": "€73"
         },
         {
-          "text": "€39"
+          "text": "€77"
         },
         {
-          "text": "€43"
+          "text": "€81"
         },
         {
-          "text": "€47"
+          "text": "€85"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "40% van €65 = €26. Nieuwe prijs: €65 - €26 = €39"
+      "hint": "45% van €140 = €63 korting. Je betaalt: €140 - €63 = €77"
     },
     {
-      "id": 15,
+      "id": 8,
       "type": "multiple_choice",
       "theme": "verhoudingstabellen",
       "question": {
-        "text": "Een recept voor 3 personen gebruikt 225 ml melk. Hoeveel melk voor 8 personen?"
+        "text": "9 studieboeken kosten €108. Hoeveel kosten 13 studieboeken?"
       },
       "options": [
         {
-          "text": "560 ml"
+          "text": "€148"
         },
         {
-          "text": "600 ml"
+          "text": "€152"
         },
         {
-          "text": "640 ml"
+          "text": "€156"
         },
         {
-          "text": "680 ml"
+          "text": "€160"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 2
       },
-      "hint": "Per persoon: 225 : 3 = 75 ml. Voor 8 personen: 8 × 75 = 600 ml"
+      "hint": "Prijs per boek: €108 : 9 = €12. Voor 13 boeken: 13 × €12 = €156"
     },
     {
-      "id": 16,
+      "id": 9,
       "type": "multiple_choice",
       "theme": "percentage-van-percentage",
       "question": {
-        "text": "Bereken 25% van 80% van €320"
+        "text": "Bereken 40% van 75% van €360"
       },
       "options": [
         {
-          "text": "€56"
+          "text": "€98"
         },
         {
-          "text": "€64"
+          "text": "€105"
         },
         {
-          "text": "€72"
+          "text": "€108"
         },
         {
-          "text": "€80"
+          "text": "€112"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 2
       },
-      "hint": "Eerst: 80% van €320 = €256. Dan: 25% van €256 = €64"
+      "hint": "Eerst: 75% van €360 = €270. Dan: 40% van €270 = €108"
     },
     {
-      "id": 17,
+      "id": 10,
       "type": "multiple_choice",
       "theme": "korting-berekenen",
       "question": {
-        "text": "Schoenen kosten nu €72 in plaats van €96. Hoeveel procent korting?"
+        "text": "Een laptop van €560 is afgeprijsd naar €392. Hoeveel procent korting?"
       },
       "options": [
-        {
-          "text": "20%"
-        },
         {
           "text": "25%"
         },
@@ -482,94 +290,286 @@
         },
         {
           "text": "35%"
+        },
+        {
+          "text": "40%"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Korting: €96 - €72 = €24. Percentage: (€24 : €96) × 100% = 25%"
+      "hint": "Korting: €560 - €392 = €168. Percentage: (€168 : €560) × 100% = 30%"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "theme": "verhoudingstabellen",
+      "question": {
+        "text": "Je rijdt 84 km in 1,5 uur. Hoeveel tijd heb je nodig voor 154 km in hetzelfde tempo?"
+      },
+      "options": [
+        {
+          "text": "2,5 uur"
+        },
+        {
+          "text": "2,75 uur"
+        },
+        {
+          "text": "3 uur"
+        },
+        {
+          "text": "3,25 uur"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "Snelheid: 84 : 1,5 = 56 km/uur. Voor 154 km: 154 : 56 = 2,75 uur"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "theme": "percentage-van-percentage",
+      "question": {
+        "text": "In een kledingwinkel krijg je eerst 25% korting, daarna nog 12% extra korting op €160. Wat is de eindprijs?"
+      },
+      "options": [
+        {
+          "text": "€100,80"
+        },
+        {
+          "text": "€105,60"
+        },
+        {
+          "text": "€108"
+        },
+        {
+          "text": "€112"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "Na 25% korting: €120. Dan 12% van €120 = €14,40 korting. Eindprijs: €120 - €14,40 = €105,60"
+    },
+    {
+      "id": 13,
+      "type": "multiple_choice",
+      "theme": "verhoudingstabellen",
+      "question": {
+        "text": "Voor 8 bakjes ijs betaal je €14,40. Hoeveel betaal je voor 18 bakjes?"
+      },
+      "options": [
+        {
+          "text": "€30,60"
+        },
+        {
+          "text": "€32,40"
+        },
+        {
+          "text": "€34,20"
+        },
+        {
+          "text": "€36"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "Per bakje: €14,40 : 8 = €1,80. Voor 18 bakjes: 18 × €1,80 = €32,40"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "theme": "korting-berekenen",
+      "question": {
+        "text": "Bij 38% korting op €250, wat is de nieuwe prijs?"
+      },
+      "options": [
+        {
+          "text": "€145"
+        },
+        {
+          "text": "€150"
+        },
+        {
+          "text": "€155"
+        },
+        {
+          "text": "€160"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "38% van €250 = €95. Nieuwe prijs: €250 - €95 = €155"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "theme": "verhoudingstabellen",
+      "question": {
+        "text": "Een recept voor 5 personen gebruikt 375 ml bouillon. Hoeveel bouillon voor 12 personen?"
+      },
+      "options": [
+        {
+          "text": "840 ml"
+        },
+        {
+          "text": "880 ml"
+        },
+        {
+          "text": "900 ml"
+        },
+        {
+          "text": "920 ml"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Per persoon: 375 : 5 = 75 ml. Voor 12 personen: 12 × 75 = 900 ml"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "theme": "percentage-van-percentage",
+      "question": {
+        "text": "Bereken 30% van 70% van €420"
+      },
+      "options": [
+        {
+          "text": "€84,60"
+        },
+        {
+          "text": "€88,20"
+        },
+        {
+          "text": "€91,80"
+        },
+        {
+          "text": "€94,50"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "Eerst: 70% van €420 = €294. Dan: 30% van €294 = €88,20"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "theme": "korting-berekenen",
+      "question": {
+        "text": "Een bureau kostte €440, nu €308. Hoeveel procent korting?"
+      },
+      "options": [
+        {
+          "text": "25%"
+        },
+        {
+          "text": "28%"
+        },
+        {
+          "text": "30%"
+        },
+        {
+          "text": "32%"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Korting: €440 - €308 = €132. Percentage: (€132 : €440) × 100% = 30%"
     },
     {
       "id": 18,
       "type": "multiple_choice",
       "theme": "verhoudingstabellen",
       "question": {
-        "text": "4 pennen kosten €5,60. Hoeveel kosten 11 pennen?"
+        "text": "6 tennisballen kosten €9,60. Hoeveel kosten 17 tennisballen?"
       },
       "options": [
         {
-          "text": "€14,40"
+          "text": "€25,60"
         },
         {
-          "text": "€15,40"
+          "text": "€27,20"
         },
         {
-          "text": "€16,40"
+          "text": "€28,80"
         },
         {
-          "text": "€17,40"
+          "text": "€30,40"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Per pen: €5,60 : 4 = €1,40. Voor 11 pennen: 11 × €1,40 = €15,40"
+      "hint": "Per bal: €9,60 : 6 = €1,60. Voor 17 ballen: 17 × €1,60 = €27,20"
     },
     {
       "id": 19,
       "type": "multiple_choice",
       "theme": "percentage-van-percentage",
       "question": {
-        "text": "Je hebt €180. Je geeft 30% uit. Van wat overblijft geef je nog 20% uit. Hoeveel heb je dan nog?"
+        "text": "Je hebt €320. Je geeft 45% uit. Van wat overblijft geef je nog 35% uit. Hoeveel heb je dan nog?"
       },
       "options": [
         {
-          "text": "€90"
+          "text": "€108,80"
         },
         {
-          "text": "€100,80"
+          "text": "€112"
         },
         {
-          "text": "€108"
+          "text": "€114,40"
         },
         {
-          "text": "€115,20"
+          "text": "€118,60"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 2
       },
-      "hint": "Na eerste uitgave: 70% van €180 = €126. Na tweede uitgave: 80% van €126 = €100,80"
+      "hint": "Na eerste uitgave: 55% van €320 = €176. Na tweede uitgave: 65% van €176 = €114,40"
     },
     {
       "id": 20,
       "type": "multiple_choice",
       "theme": "verhoudingstabellen",
       "question": {
-        "text": "Bij 8 liter verf kun je 32 m² verven. Hoeveel liter heb je nodig voor 52 m²?"
+        "text": "Bij 12 liter schoonmaakmiddel kun je 96 ramen wassen. Hoeveel liter heb je nodig voor 136 ramen?"
       },
       "options": [
         {
-          "text": "12 liter"
-        },
-        {
-          "text": "13 liter"
-        },
-        {
-          "text": "14 liter"
-        },
-        {
           "text": "15 liter"
+        },
+        {
+          "text": "16 liter"
+        },
+        {
+          "text": "17 liter"
+        },
+        {
+          "text": "18 liter"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 2
       },
-      "hint": "Per m²: 8 : 32 = 0,25 liter. Voor 52 m²: 52 × 0,25 = 13 liter"
+      "hint": "Per raam: 12 : 96 = 0,125 liter. Voor 136 ramen: 136 × 0,125 = 17 liter"
     }
   ],
   "settings": {
