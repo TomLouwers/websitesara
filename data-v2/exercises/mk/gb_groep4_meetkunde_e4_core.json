@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0.0",
   "metadata": {
-    "id": "gb_groep4_meetkunde_e4",
+    "id": "gb_groep4_meetkunde_e4_core",
     "type": "multiple_choice",
     "category": "gb",
     "grade": 4,
@@ -10,15 +10,17 @@
     "domain": "meetkunde",
     "slo_alignment": {
       "kerndoelen": [
-        "K28",
         "K32",
         "K33"
       ],
       "rekendomeinen": [
-        "meetkunde"
+        "meetkunde",
+        "meten"
       ],
       "tussendoelen": [
-        "4R_meetkunde_e4"
+        "4MM5",
+        "4MM6",
+        "4MM7"
       ],
       "referentieniveau": "1F",
       "cognitive_level": "toepassen"
@@ -34,306 +36,36 @@
     {
       "id": 1,
       "type": "multiple_choice",
-      "theme": "lengte-omrekenen",
+      "theme": "omtrek",
       "question": {
-        "text": "100 cm = ?"
+        "text": "Een vierkant heeft zijden van 5 cm. Wat is de omtrek?"
       },
       "options": [
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "100 cm"
-        },
         {
           "text": "10 cm"
         },
         {
-          "text": "weet ik niet"
+          "text": "15 cm"
+        },
+        {
+          "text": "20 cm"
+        },
+        {
+          "text": "25 cm"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 2
       },
-      "hint": "100 cm = 1 m"
+      "hint": "Omtrek vierkant = 4 × zijde. 4 × 5 = 20 cm"
     },
     {
       "id": 2,
       "type": "multiple_choice",
-      "theme": "lengte-omrekenen",
-      "question": {
-        "text": "1000 m = ?"
-      },
-      "options": [
-        {
-          "text": "1 km"
-        },
-        {
-          "text": "1000 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "weet ik niet"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "1000 m = 1 km"
-    },
-    {
-      "id": 3,
-      "type": "multiple_choice",
-      "theme": "lengte-omrekenen",
-      "question": {
-        "text": "10 cm = ?"
-      },
-      "options": [
-        {
-          "text": "1 dm"
-        },
-        {
-          "text": "10 cm"
-        },
-        {
-          "text": "10 cm"
-        },
-        {
-          "text": "weet ik niet"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "10 cm = 1 dm"
-    },
-    {
-      "id": 4,
-      "type": "multiple_choice",
-      "theme": "gewicht",
-      "question": {
-        "text": "1 kg = ... gram"
-      },
-      "options": [
-        {
-          "text": "100 g"
-        },
-        {
-          "text": "1000 g"
-        },
-        {
-          "text": "10000 g"
-        },
-        {
-          "text": "1 g"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1 kg = 1000 gram"
-    },
-    {
-      "id": 5,
-      "type": "multiple_choice",
-      "theme": "gewicht",
-      "question": {
-        "text": "2 kg = ... gram"
-      },
-      "options": [
-        {
-          "text": "200 g"
-        },
-        {
-          "text": "2000 g"
-        },
-        {
-          "text": "20000 g"
-        },
-        {
-          "text": "2 g"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1 kg = 1000 gram"
-    },
-    {
-      "id": 6,
-      "type": "multiple_choice",
-      "theme": "gewicht",
-      "question": {
-        "text": "3 kg = ... gram"
-      },
-      "options": [
-        {
-          "text": "300 g"
-        },
-        {
-          "text": "3000 g"
-        },
-        {
-          "text": "30000 g"
-        },
-        {
-          "text": "3 g"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1 kg = 1000 gram"
-    },
-    {
-      "id": 7,
-      "type": "multiple_choice",
-      "theme": "gewicht",
-      "question": {
-        "text": "4 kg = ... gram"
-      },
-      "options": [
-        {
-          "text": "400 g"
-        },
-        {
-          "text": "4000 g"
-        },
-        {
-          "text": "40000 g"
-        },
-        {
-          "text": "4 g"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1 kg = 1000 gram"
-    },
-    {
-      "id": 8,
-      "type": "multiple_choice",
-      "theme": "gewicht",
-      "question": {
-        "text": "5 kg = ... gram"
-      },
-      "options": [
-        {
-          "text": "500 g"
-        },
-        {
-          "text": "5000 g"
-        },
-        {
-          "text": "50000 g"
-        },
-        {
-          "text": "5 g"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1 kg = 1000 gram"
-    },
-    {
-      "id": 9,
-      "type": "multiple_choice",
       "theme": "omtrek",
       "question": {
-        "text": "Een vierkant heeft zijden van 4 cm. Wat is de omtrek?"
-      },
-      "options": [
-        {
-          "text": "4 cm"
-        },
-        {
-          "text": "8 cm"
-        },
-        {
-          "text": "16 cm"
-        },
-        {
-          "text": "16 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Omtrek vierkant = 4 × zijde = 4 × 4 = 16 cm"
-    },
-    {
-      "id": 10,
-      "type": "multiple_choice",
-      "theme": "omtrek",
-      "question": {
-        "text": "Een vierkant heeft zijden van 6 cm. Wat is de omtrek?"
-      },
-      "options": [
-        {
-          "text": "6 cm"
-        },
-        {
-          "text": "12 cm"
-        },
-        {
-          "text": "24 cm"
-        },
-        {
-          "text": "36 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Omtrek vierkant = 4 × zijde = 4 × 6 = 24 cm"
-    },
-    {
-      "id": 11,
-      "type": "multiple_choice",
-      "theme": "omtrek",
-      "question": {
-        "text": "Een vierkant heeft zijden van 8 cm. Wat is de omtrek?"
-      },
-      "options": [
-        {
-          "text": "8 cm"
-        },
-        {
-          "text": "16 cm"
-        },
-        {
-          "text": "32 cm"
-        },
-        {
-          "text": "64 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Omtrek vierkant = 4 × zijde = 4 × 8 = 32 cm"
-    },
-    {
-      "id": 12,
-      "type": "multiple_choice",
-      "theme": "omtrek",
-      "question": {
-        "text": "Een vierkant heeft zijden van 10 cm. Wat is de omtrek?"
+        "text": "Een rechthoek is 6 cm lang en 4 cm breed. Wat is de omtrek?"
       },
       "options": [
         {
@@ -343,773 +75,503 @@
           "text": "20 cm"
         },
         {
-          "text": "40 cm"
+          "text": "24 cm"
         },
         {
-          "text": "100 cm"
+          "text": "16 cm"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "Omtrek = 2 × lengte + 2 × breedte. 2 × 6 + 2 × 4 = 12 + 8 = 20 cm"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "theme": "omtrek",
+      "question": {
+        "text": "Jouw tuin is vierkant met zijden van 8 meter. Hoeveel meter hek heb je nodig om de tuin helemaal rond te zetten?"
+      },
+      "options": [
+        {
+          "text": "16 meter"
+        },
+        {
+          "text": "24 meter"
+        },
+        {
+          "text": "32 meter"
+        },
+        {
+          "text": "64 meter"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 2
       },
-      "hint": "Omtrek vierkant = 4 × zijde = 4 × 10 = 40 cm"
+      "hint": "De omtrek van een vierkant = 4 × zijde. 4 × 8 = 32 meter"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "theme": "omtrek",
+      "question": {
+        "text": "Een rechthoek heeft lengte 10 cm en breedte 5 cm. Bereken de omtrek."
+      },
+      "options": [
+        {
+          "text": "15 cm"
+        },
+        {
+          "text": "20 cm"
+        },
+        {
+          "text": "30 cm"
+        },
+        {
+          "text": "50 cm"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Omtrek = 2 × (lengte + breedte). 2 × (10 + 5) = 2 × 15 = 30 cm"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "theme": "omtrek",
+      "question": {
+        "text": "Een speelveld is rechthoekig: 20 meter lang en 15 meter breed. Wat is de omtrek?"
+      },
+      "options": [
+        {
+          "text": "35 meter"
+        },
+        {
+          "text": "70 meter"
+        },
+        {
+          "text": "50 meter"
+        },
+        {
+          "text": "300 meter"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "2 × 20 + 2 × 15 = 40 + 30 = 70 meter"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "theme": "omtrek",
+      "question": {
+        "text": "Een vierkant heeft omtrek 24 cm. Hoe lang is één zijde?"
+      },
+      "options": [
+        {
+          "text": "4 cm"
+        },
+        {
+          "text": "6 cm"
+        },
+        {
+          "text": "8 cm"
+        },
+        {
+          "text": "12 cm"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "Omtrek vierkant = 4 × zijde. Dus zijde = 24 : 4 = 6 cm"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "theme": "omtrek",
+      "question": {
+        "text": "Een rechthoekige lijst voor een foto is 12 cm lang en 8 cm breed. Hoeveel cm rand heb je nodig?"
+      },
+      "options": [
+        {
+          "text": "20 cm"
+        },
+        {
+          "text": "40 cm"
+        },
+        {
+          "text": "96 cm"
+        },
+        {
+          "text": "32 cm"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "De rand is de omtrek. 2 × 12 + 2 × 8 = 24 + 16 = 40 cm"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "theme": "ruimtefiguren",
+      "question": {
+        "text": "Hoeveel vlakken heeft een kubus?"
+      },
+      "options": [
+        {
+          "text": "4 vlakken"
+        },
+        {
+          "text": "6 vlakken"
+        },
+        {
+          "text": "8 vlakken"
+        },
+        {
+          "text": "12 vlakken"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "Denk aan een dobbelsteen: voor, achter, links, rechts, boven, onder = 6"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "theme": "ruimtefiguren",
+      "question": {
+        "text": "Welke vorm heeft een voetbal?"
+      },
+      "options": [
+        {
+          "text": "kubus"
+        },
+        {
+          "text": "balk"
+        },
+        {
+          "text": "bol"
+        },
+        {
+          "text": "cilinder"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Een voetbal is rond, dat is een bol"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "theme": "ruimtefiguren",
+      "question": {
+        "text": "Een blikje soep heeft de vorm van een ..."
+      },
+      "options": [
+        {
+          "text": "kubus"
+        },
+        {
+          "text": "balk"
+        },
+        {
+          "text": "cilinder"
+        },
+        {
+          "text": "piramide"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Een blikje is rond met ronde bovenkant en onderkant"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "theme": "ruimtefiguren",
+      "question": {
+        "text": "Hoeveel hoeken heeft een kubus?"
+      },
+      "options": [
+        {
+          "text": "4 hoeken"
+        },
+        {
+          "text": "6 hoeken"
+        },
+        {
+          "text": "8 hoeken"
+        },
+        {
+          "text": "12 hoeken"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Tel de hoekpunten: 4 boven en 4 onder = 8 hoeken"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "theme": "ruimtefiguren",
+      "question": {
+        "text": "Een doosje cornflakes heeft de vorm van een ..."
+      },
+      "options": [
+        {
+          "text": "kubus"
+        },
+        {
+          "text": "balk"
+        },
+        {
+          "text": "cilinder"
+        },
+        {
+          "text": "bol"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "Een balk lijkt op een doos met rechthoekige vlakken"
     },
     {
       "id": 13,
       "type": "multiple_choice",
-      "theme": "omtrek",
-      "question": {
-        "text": "Een vierkant heeft zijden van 12 cm. Wat is de omtrek?"
-      },
-      "options": [
-        {
-          "text": "12 cm"
-        },
-        {
-          "text": "24 cm"
-        },
-        {
-          "text": "48 cm"
-        },
-        {
-          "text": "144 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Omtrek vierkant = 4 × zijde = 4 × 12 = 48 cm"
-    },
-    {
-      "id": 14,
-      "type": "multiple_choice",
       "theme": "ruimtefiguren",
       "question": {
-        "text": "Welke vlakken heeft een kubus?"
+        "text": "Welke ruimtelijke figuur rolt?"
       },
       "options": [
         {
-          "text": "vierkanten"
+          "text": "kubus"
         },
         {
-          "text": "cirkels"
+          "text": "balk"
         },
         {
-          "text": "driehoeken"
+          "text": "piramide"
         },
         {
-          "text": "geen vlakken"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Denk aan de vorm van een kubus"
-    },
-    {
-      "id": 15,
-      "type": "multiple_choice",
-      "theme": "ruimtefiguren",
-      "question": {
-        "text": "Welke vlakken heeft een bol?"
-      },
-      "options": [
-        {
-          "text": "vierkanten"
-        },
-        {
-          "text": "cirkels"
-        },
-        {
-          "text": "driehoeken"
-        },
-        {
-          "text": "geen vlakken"
+          "text": "cilinder"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 3
       },
-      "hint": "Denk aan de vorm van een bol"
+      "hint": "Denk aan een blikje dat je kunt laten rollen"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "theme": "ruimtefiguren",
+      "question": {
+        "text": "Een bol heeft ..."
+      },
+      "options": [
+        {
+          "text": "geen hoeken en geen vlakken"
+        },
+        {
+          "text": "6 vlakken"
+        },
+        {
+          "text": "8 hoeken"
+        },
+        {
+          "text": "12 ribben"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Een bol is helemaal rond, zonder hoeken of platte vlakken"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "theme": "geld",
+      "question": {
+        "text": "Je koopt een boek voor €12,50 en betaalt met een briefje van €20. Hoeveel wisselgeld krijg je?"
+      },
+      "options": [
+        {
+          "text": "€7,50"
+        },
+        {
+          "text": "€8,50"
+        },
+        {
+          "text": "€6,50"
+        },
+        {
+          "text": "€32,50"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "€20 - €12,50 = €7,50"
     },
     {
       "id": 16,
       "type": "multiple_choice",
-      "theme": "ruimtefiguren",
+      "theme": "geld",
       "question": {
-        "text": "Welke vlakken heeft een cilinder?"
+        "text": "Je koopt 3 schriften van €2,50 elk. Wat betaal je in totaal?"
       },
       "options": [
         {
-          "text": "vierkanten"
+          "text": "€5,00"
         },
         {
-          "text": "cirkels"
+          "text": "€6,00"
         },
         {
-          "text": "driehoeken"
+          "text": "€7,50"
         },
         {
-          "text": "geen vlakken"
+          "text": "€10,00"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 2
       },
-      "hint": "Denk aan de vorm van een cilinder"
+      "hint": "3 × €2,50 = €7,50"
     },
     {
       "id": 17,
       "type": "multiple_choice",
-      "theme": "oefening",
+      "theme": "geld",
       "question": {
-        "text": "Oefenvraag 17: 100 cm = ... meter"
+        "text": "Een speelgoedauto kost €23,75. Je betaalt met €25. Hoeveel wisselgeld?"
       },
       "options": [
         {
-          "text": "0.1 m"
+          "text": "€1,25"
         },
         {
-          "text": "1 m"
+          "text": "€2,25"
         },
         {
-          "text": "10 m"
+          "text": "€1,75"
         },
         {
-          "text": "100 m"
+          "text": "€2,00"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 0
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "€25,00 - €23,75 = €1,25"
     },
     {
       "id": 18,
       "type": "multiple_choice",
-      "theme": "oefening",
+      "theme": "geld",
       "question": {
-        "text": "Oefenvraag 18: 100 cm = ... meter"
+        "text": "Je hebt €50 en koopt schoenen voor €38,50. Hoeveel houd je over?"
       },
       "options": [
         {
-          "text": "0.1 m"
+          "text": "€11,50"
         },
         {
-          "text": "1 m"
+          "text": "€12,50"
         },
         {
-          "text": "10 m"
+          "text": "€21,50"
         },
         {
-          "text": "100 m"
+          "text": "€88,50"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 0
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "€50 - €38,50 = €11,50"
     },
     {
       "id": 19,
       "type": "multiple_choice",
-      "theme": "oefening",
+      "theme": "geld",
       "question": {
-        "text": "Oefenvraag 19: 100 cm = ... meter"
+        "text": "Een t-shirt kost €15,95 en een broek €24,50. Wat is het totaal?"
       },
       "options": [
         {
-          "text": "0.1 m"
+          "text": "€39,45"
         },
         {
-          "text": "1 m"
+          "text": "€40,45"
         },
         {
-          "text": "10 m"
+          "text": "€40,00"
         },
         {
-          "text": "100 m"
+          "text": "€39,95"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "€15,95 + €24,50 = €40,45"
     },
     {
       "id": 20,
       "type": "multiple_choice",
-      "theme": "oefening",
+      "theme": "geld",
       "question": {
-        "text": "Oefenvraag 20: 100 cm = ... meter"
+        "text": "Je hebt €100 en geeft €67,80 uit. Hoeveel heb je nog?"
       },
       "options": [
         {
-          "text": "0.1 m"
+          "text": "€32,20"
         },
         {
-          "text": "1 m"
+          "text": "€33,20"
         },
         {
-          "text": "10 m"
+          "text": "€42,20"
         },
         {
-          "text": "100 m"
+          "text": "€167,80"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 0
       },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 21,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 21: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 22,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 22: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 23,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 23: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 24,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 24: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 25,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 25: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 26,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 26: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 27,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 27: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 28,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 28: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 29,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 29: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 30,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 30: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 31,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 31: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 32,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 32: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 33,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 33: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 34,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 34: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 35,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 35: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 36,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 36: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 37,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 37: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 38,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 38: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 39,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 39: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 40,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 40: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
+      "hint": "€100 - €67,80 = €32,20"
     }
   ],
   "settings": {

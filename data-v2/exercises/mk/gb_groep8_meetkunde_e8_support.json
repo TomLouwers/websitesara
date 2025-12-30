@@ -6,51 +6,43 @@
       "item_id": 1,
       "learning": {
         "tips": [
-          "Oppervlakte rechthoek = lengte × breedte",
-          "Antwoord in cm² of m²",
-          "Vermenigvuldig de twee zijden"
+          "Reken alle eenheden om naar meters",
+          "km → m: × 1000, dm → m: ÷ 10, cm → m: ÷ 100",
+          "Tel daarna alle meters bij elkaar op"
         ],
-        "skill_description": "Oppervlakte berekenen",
+        "skill_description": "Alle lengtematen omrekenen en optellen",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Maak een lijst van alle gegeven maten",
+          "Reken ze één voor één om naar dezelfde eenheid"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "verkeerde_omrekenfactoren",
+            "description": "Fout omrekenen tussen eenheden",
+            "remedy": "Gebruik een omrekentabel: 1 km = 1000 m, 1 m = 10 dm = 100 cm"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Uitstekend!",
+          "on_first_try": "Perfect! Je beheerst alle lengtematen!",
+          "after_hint": "Goed gedaan!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Controleer je omrekeningen.",
+          "second_attempt": "Reken alles eerst om naar meters.",
+          "third_attempt": "2500 m + 12,5 m + 2 m = 2514,5 m"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je bent goed in omrekenen!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "provide_conversion_table",
+          "message": "Gebruik deze omrekentabel."
         }
       }
     },
@@ -58,51 +50,43 @@
       "item_id": 2,
       "learning": {
         "tips": [
-          "Oppervlakte rechthoek = lengte × breedte",
-          "Antwoord in cm² of m²",
-          "Vermenigvuldig de twee zijden"
+          "Reken alles om naar kilogram",
+          "1 ton = 1000 kg, 1000 gram = 1 kg",
+          "Tel alle kg bij elkaar op"
         ],
-        "skill_description": "Oppervlakte berekenen",
+        "skill_description": "Gewichtsmaten omrekenen en optellen",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Identificeer alle gewichten in de opgave",
+          "Bepaal naar welke eenheid je omrekent"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "ton_verkeerd_omrekenen",
+            "description": "Ton verkeerd omrekenen naar kg",
+            "remedy": "1 ton = 1000 kg"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Prima!",
+          "on_first_try": "Geweldig! Je werkt goed met gewichtsmaten!",
+          "after_hint": "Goed zo!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Hoeveel kg is 1 ton?",
+          "second_attempt": "Reken alle gewichten om naar kg.",
+          "third_attempt": "2500 + 450 + 75 = 3025 kg"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je beheerst gewichtsmaten!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "step_by_step",
+          "message": "Laten we stap voor stap omrekenen."
         }
       }
     },
@@ -110,51 +94,43 @@
       "item_id": 3,
       "learning": {
         "tips": [
-          "Oppervlakte rechthoek = lengte × breedte",
-          "Antwoord in cm² of m²",
-          "Vermenigvuldig de twee zijden"
+          "Reken alles om naar liters",
+          "1000 ml = 1 l, 100 cl = 1 l",
+          "Let op: +2,5 l en -0,75 l"
         ],
-        "skill_description": "Oppervlakte berekenen",
+        "skill_description": "Inhoudsmaten omrekenen met optellen en aftrekken",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Let op wat erbij komt (+) en wat eraf gaat (-)",
+          "Reken eerst alles om, dan rekenen"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "plus_minus_verwarren",
+            "description": "Aftrekken en optellen door elkaar halen",
+            "remedy": "Toegevoegd = +, afgevoerd = -"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Correct!",
+          "on_first_try": "Perfect! Je werkt nauwkeurig met inhoudsmaten!",
+          "after_hint": "Goed gedaan!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Let op wat erbij komt en wat eraf gaat.",
+          "second_attempt": "45 + 2,5 - 0,75 = ?",
+          "third_attempt": "45 + 2,5 = 47,5, dan - 0,75 = 46,75 l"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je beheerst inhoudsmaten uitstekend!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "visual_support",
+          "message": "Teken de situatie: volume voor en na."
         }
       }
     },
@@ -162,51 +138,43 @@
       "item_id": 4,
       "learning": {
         "tips": [
-          "Oppervlakte rechthoek = lengte × breedte",
-          "Antwoord in cm² of m²",
-          "Vermenigvuldig de twee zijden"
+          "Grote cirkel (met pad): straal = 4 + 1 = 5 m",
+          "Kleine cirkel (vijver): straal = 4 m",
+          "Pad = grote cirkel - kleine cirkel"
         ],
-        "skill_description": "Oppervlakte berekenen",
+        "skill_description": "Ringvormige oppervlakte berekenen",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Diameter vijver = 8 m, dus straal = 4 m",
+          "Pad is 1 m breed, dus grote straal = 5 m"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "verkeerde_stralen",
+            "description": "Verkeerde stralen gebruiken",
+            "remedy": "Kleine straal = 4 m, grote straal = 4 + 1 = 5 m"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Uitstekend!",
+          "on_first_try": "Perfect! Je kunt ringvormige oppervlaktes berekenen!",
+          "after_hint": "Goed zo!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Wat zijn de stralen van beide cirkels?",
+          "second_attempt": "Bereken beide oppervlaktes apart.",
+          "third_attempt": "78,5 - 50,24 = 28,26 m²"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je werkt goed met cirkels!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "diagram_support",
+          "message": "Teken beide cirkels met stralen."
         }
       }
     },
@@ -214,51 +182,43 @@
       "item_id": 5,
       "learning": {
         "tips": [
-          "Oppervlakte rechthoek = lengte × breedte",
-          "Antwoord in cm² of m²",
-          "Vermenigvuldig de twee zijden"
+          "Volume cilinder = π × r² × h",
+          "Diameter = 60 cm, dus straal = 30 cm",
+          "1 dm³ = 1 liter, 1000 cm³ = 1 liter"
         ],
-        "skill_description": "Oppervlakte berekenen",
+        "skill_description": "Volume cilinder berekenen en omrekenen naar liters",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Let op: diameter gegeven, maar straal nodig",
+          "Antwoord moet in liters"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "cm3_niet_omgerekend",
+            "description": "Antwoord in cm³ in plaats van liters",
+            "remedy": "Deel cm³ door 1000 voor liters"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Prima!",
+          "on_first_try": "Geweldig! Je beheerst volume en omrekenen!",
+          "after_hint": "Goed gedaan!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Hoeveel cm³ is 1 liter?",
+          "second_attempt": "Bereken eerst volume in cm³.",
+          "third_attempt": "226.080 cm³ ÷ 1000 ≈ 226 liter"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je werkt nauwkeurig met volumes!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "formula_and_conversion",
+          "message": "Volume = π × r² × h, dan delen door 1000"
         }
       }
     },
@@ -266,51 +226,43 @@
       "item_id": 6,
       "learning": {
         "tips": [
-          "Oppervlakte rechthoek = lengte × breedte",
-          "Antwoord in cm² of m²",
-          "Vermenigvuldig de twee zijden"
+          "Vraag gaat ALLEEN over de kubus",
+          "Volume kubus = zijde³",
+          "3³ = 3 × 3 × 3 = 27"
         ],
-        "skill_description": "Oppervlakte berekenen",
+        "skill_description": "Lezen wat er gevraagd wordt",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Lees de vraag zorgvuldig",
+          "Er staat extra informatie, maar die heb je niet nodig"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "piramide_meegeteld",
+            "description": "Piramide volume ook berekend",
+            "remedy": "Vraag is alleen: wat is het volume van de kubus?"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Correct!",
+          "on_first_try": "Perfect! Je leest goed wat er gevraagd wordt!",
+          "after_hint": "Goed zo!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Wat wordt er precies gevraagd?",
+          "second_attempt": "Alleen het volume van de kubus.",
+          "third_attempt": "3³ = 27 m³"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je leest vragen nauwkeurig!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "highlight_question",
+          "message": "Onderstreep wat er precies gevraagd wordt."
         }
       }
     },
@@ -318,51 +270,43 @@
       "item_id": 7,
       "learning": {
         "tips": [
-          "Oppervlakte rechthoek = lengte × breedte",
-          "Antwoord in cm² of m²",
-          "Vermenigvuldig de twee zijden"
+          "Horizontale afstand = 24 m",
+          "Verticale afstand = 32 m (beide even hoog)",
+          "Kabel = diagonaal, dus Pythagoras"
         ],
-        "skill_description": "Oppervlakte berekenen",
+        "skill_description": "Pythagoras in 3D-context toepassen",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Maak een schets van de situatie",
+          "Zoek de rechthoekige driehoek"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "verkeerde_interpretatie",
+            "description": "Situatie verkeerd interpreteren",
+            "remedy": "Kraan en haak zijn beide 32 m hoog, afstand tussen = 24 m"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Uitstekend!",
+          "on_first_try": "Perfect! Je kunt Pythagoras in complexe situaties toepassen!",
+          "after_hint": "Goed gedaan!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Teken de situatie als driehoek.",
+          "second_attempt": "√(24² + 32²) = ?",
+          "third_attempt": "√(576 + 1024) = √1600 = 40 m"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je beheerst Pythagoras in verschillende contexten!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "visual_diagram",
+          "message": "Bekijk een diagram van de situatie."
         }
       }
     },
@@ -370,51 +314,43 @@
       "item_id": 8,
       "learning": {
         "tips": [
-          "Oppervlakte rechthoek = lengte × breedte",
-          "Antwoord in cm² of m²",
-          "Vermenigvuldig de twee zijden"
+          "Werkelijk: 12 cm × 250 = 3000 cm = 30 m",
+          "Werkelijk: 8 cm × 250 = 2000 cm = 20 m",
+          "Oppervlakte: 30 × 20 = 600 m²"
         ],
-        "skill_description": "Oppervlakte berekenen",
+        "skill_description": "Schaal en oppervlakte combineren",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Eerst beide afmetingen omrekenen",
+          "Dan oppervlakte berekenen"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "oppervlakte_op_schaal_berekend",
+            "description": "Eerst oppervlakte, dan schaal (verkeerd)",
+            "remedy": "Eerst afmetingen omrekenen, dan oppervlakte"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Prima!",
+          "on_first_try": "Geweldig! Je combineert schaal en oppervlakte goed!",
+          "after_hint": "Goed zo!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Reken eerst beide zijden om.",
+          "second_attempt": "30 m × 20 m = ?",
+          "third_attempt": "30 × 20 = 600 m²"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je werkt systematisch!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "step_by_step",
+          "message": "Stap 1: omrekenen, Stap 2: vermenigvuldigen"
         }
       }
     },
@@ -422,51 +358,43 @@
       "item_id": 9,
       "learning": {
         "tips": [
-          "Oppervlakte rechthoek = lengte × breedte",
-          "Antwoord in cm² of m²",
-          "Vermenigvuldig de twee zijden"
+          "Rechte stukken: 2 × 100 = 200 m",
+          "Twee halve cirkels = 1 hele cirkel",
+          "Omtrek cirkel = π × diameter"
         ],
-        "skill_description": "Oppervlakte berekenen",
+        "skill_description": "Atletiekbaan (samengestelde omtrek)",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Onderscheid rechte en ronde stukken",
+          "Tel alles bij elkaar op"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "halve_cirkels_niet_samengevoegd",
+            "description": "Twee halve cirkels apart berekend",
+            "remedy": "2 halve cirkels = 1 hele cirkel"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Correct!",
+          "on_first_try": "Perfect! Je kunt complexe omtrekken berekenen!",
+          "after_hint": "Goed gedaan!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Hoeveel halve cirkels zijn er?",
+          "second_attempt": "2 halve = 1 hele cirkel",
+          "third_attempt": "200 + (3,14 × 64) = 400,96 m"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je beheerst samengestelde figuren!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "diagram",
+          "message": "Bekijk een tekening van de baan."
         }
       }
     },
@@ -474,51 +402,43 @@
       "item_id": 10,
       "learning": {
         "tips": [
-          "Oppervlakte rechthoek = lengte × breedte",
-          "Antwoord in cm² of m²",
-          "Vermenigvuldig de twee zijden"
+          "Totale tijd: 13:47 tot 16:23",
+          "Van 13:47 tot 16:00 = 2u 13min, plus 23min = 2u 36min",
+          "Stiltijd: 2 × 8 = 16 minuten aftrekken"
         ],
-        "skill_description": "Oppervlakte berekenen",
+        "skill_description": "Tijdberekeningen met meerdere stappen",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Bereken eerst totale reistijd",
+          "Trek daarna stiltijd af"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "tijd_verkeerd_berekend",
+            "description": "Fouten bij uren en minuten omrekenen",
+            "remedy": "2 uur 36 min = 120 + 36 = 156 minuten"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Uitstekend!",
+          "on_first_try": "Perfect! Je beheerst tijdberekeningen!",
+          "after_hint": "Goed zo!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Bereken eerst de totale reistijd.",
+          "second_attempt": "156 minuten totaal, minus 16 minuten stil.",
+          "third_attempt": "156 - 16 = 140 minuten rijdend"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je werkt nauwkeurig met tijd!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "timeline",
+          "message": "Gebruik een tijdlijn om te helpen."
         }
       }
     },
@@ -526,51 +446,43 @@
       "item_id": 11,
       "learning": {
         "tips": [
-          "Volume = lengte × breedte × hoogte",
-          "Bij een kubus: zijde × zijde × zijde",
-          "Antwoord in cm³ of m³"
+          "Volume = lengte × breedte × diepte",
+          "25 × 10 × 1,6",
+          "Reken netjes met kommagetallen"
         ],
-        "skill_description": "Volume berekenen",
+        "skill_description": "Volume met kommagetallen",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Identificeer de 3 afmetingen",
+          "Let op kommagetallen in de berekening"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "komma_fout",
+            "description": "Fout met kommagetallen rekenen",
+            "remedy": "25 × 10 = 250, dan × 1,6 = 400"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Prima!",
+          "on_first_try": "Geweldig! Je rekent goed met kommagetallen!",
+          "after_hint": "Goed gedaan!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Controleer je rekenen met 1,6.",
+          "second_attempt": "25 × 10 × 1,6 = ?",
+          "third_attempt": "250 × 1,6 = 400 m³"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je werkt nauwkeurig met volumes!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "calculator_allowed",
+          "message": "Je mag een rekenmachine gebruiken."
         }
       }
     },
@@ -578,51 +490,43 @@
       "item_id": 12,
       "learning": {
         "tips": [
-          "Volume = lengte × breedte × hoogte",
-          "Bij een kubus: zijde × zijde × zijde",
-          "Antwoord in cm³ of m³"
+          "Oppervlakte 1 zeil: ½ × basis × hoogte",
+          "½ × 4,5 × 6 = 13,5 m²",
+          "Voor 2 zeilen: × 2 = 27 m²"
         ],
-        "skill_description": "Volume berekenen",
+        "skill_description": "Oppervlakte driehoek met verdubbeling",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Bereken eerst 1 zeil",
+          "Vermenigvuldig met 2"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "vergeten_te_verdubbelen",
+            "description": "Antwoord voor 1 zeil gegeven",
+            "remedy": "Er worden 2 zeilen gemaakt!"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Correct!",
+          "on_first_try": "Perfect! Je leest goed wat er gevraagd wordt!",
+          "after_hint": "Goed zo!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Hoeveel zeilen worden er gemaakt?",
+          "second_attempt": "Bereken 1 zeil, dan × 2.",
+          "third_attempt": "13,5 × 2 = 27 m²"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je werkt systematisch!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "highlight_keywords",
+          "message": "Let op het woord '2 zeilen'."
         }
       }
     },
@@ -630,51 +534,43 @@
       "item_id": 13,
       "learning": {
         "tips": [
-          "Volume = lengte × breedte × hoogte",
-          "Bij een kubus: zijde × zijde × zijde",
-          "Antwoord in cm³ of m³"
+          "Aantal kubussen = breedte × lengte × hoogte",
+          "3 × 4 × 5",
+          "Dit is een 3D-stapel"
         ],
-        "skill_description": "Volume berekenen",
+        "skill_description": "Ruimtelijk inzicht: kubussen tellen",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Visualiseer de stapel in 3 dimensies",
+          "Vermenigvuldig de 3 afmetingen"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "alleen_zichtbare_kubussen",
+            "description": "Alleen buitenste kubussen geteld",
+            "remedy": "Tel alle kubussen, ook de verborgen"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Uitstekend!",
+          "on_first_try": "Perfect! Je hebt goed ruimtelijk inzicht!",
+          "after_hint": "Goed gedaan!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Hoe bereken je het totaal aantal?",
+          "second_attempt": "Vermenigvuldig de 3 afmetingen.",
+          "third_attempt": "3 × 4 × 5 = 60 kubussen"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je hebt uitstekend ruimtelijk inzicht!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "visual_model",
+          "message": "Stel je de stapel voor in 3D."
         }
       }
     },
@@ -682,51 +578,43 @@
       "item_id": 14,
       "learning": {
         "tips": [
-          "Volume = lengte × breedte × hoogte",
-          "Bij een kubus: zijde × zijde × zijde",
-          "Antwoord in cm³ of m³"
+          "15 km = 15.000 meter",
+          "Per minuut: 15.000 ÷ 75",
+          "Controleer door vermenigvuldigen: 200 × 75 = 15.000"
         ],
-        "skill_description": "Volume berekenen",
+        "skill_description": "Snelheid berekenen met omrekenen",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Reken eerst km om naar meter",
+          "Deel door het aantal minuten"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "niet_omgerekend",
+            "description": "Antwoord in km in plaats van m",
+            "remedy": "Vraag is: hoeveel meter per minuut"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Prima!",
+          "on_first_try": "Geweldig! Je combineert omrekenen en delen goed!",
+          "after_hint": "Goed zo!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Hoeveel meter is 15 km?",
+          "second_attempt": "15.000 ÷ 75 = ?",
+          "third_attempt": "15.000 ÷ 75 = 200 meter"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je werkt nauwkeurig met eenheden!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "conversion_help",
+          "message": "1 km = 1000 meter"
         }
       }
     },
@@ -734,51 +622,43 @@
       "item_id": 15,
       "learning": {
         "tips": [
-          "Volume = lengte × breedte × hoogte",
-          "Bij een kubus: zijde × zijde × zijde",
-          "Antwoord in cm³ of m³"
+          "Veld: 105 × 68 = 7140 m²",
+          "Cirkel: π × 9,15² = 3,14 × 83,72",
+          "Buiten cirkel: 7140 - 263,13"
         ],
-        "skill_description": "Volume berekenen",
+        "skill_description": "Complexe CITO-stijl oppervlakte",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Reken beide oppervlaktes nauwkeurig",
+          "Let op: buiten de cirkel = aftrekken"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "rekenfouten_komma",
+            "description": "Fouten met kommagetallen",
+            "remedy": "Gebruik rekenmachine voor nauwkeurigheid"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Uitstekend!",
+          "on_first_try": "Perfect! Je werkt op CITO-niveau!",
+          "after_hint": "Goed gedaan!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Controleer je berekeningen.",
+          "second_attempt": "Reken beide oppervlaktes zorgvuldig.",
+          "third_attempt": "7140 - 263,13 = 6876,87 m²"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je bent klaar voor de CITO eindtoets!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "calculator_and_formula",
+          "message": "Gebruik rekenmachine en formulekaart."
         }
       }
     },
@@ -786,51 +666,43 @@
       "item_id": 16,
       "learning": {
         "tips": [
-          "Volume = lengte × breedte × hoogte",
-          "Bij een kubus: zijde × zijde × zijde",
-          "Antwoord in cm³ of m³"
+          "Som van hoeken in driehoek = 180°",
+          "180° - 35° - 75° = ?",
+          "Trek beide bekende hoeken af"
         ],
-        "skill_description": "Volume berekenen",
+        "skill_description": "Hoeken in driehoek berekenen",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Weet: som = 180°",
+          "Trek bekende hoeken af"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "verkeerde_som",
+            "description": "Hoeken bij elkaar opgeteld",
+            "remedy": "Je moet aftrekken van 180°"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Correct!",
+          "on_first_try": "Perfect! Je kent de hoekensom!",
+          "after_hint": "Goed zo!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Wat is de som van hoeken in een driehoek?",
+          "second_attempt": "180° - 35° - 75° = ?",
+          "third_attempt": "180 - 35 - 75 = 70°"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je beheerst hoeken goed!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "rule_reminder",
+          "message": "Regel: som hoeken driehoek = 180°"
         }
       }
     },
@@ -838,51 +710,44 @@
       "item_id": 17,
       "learning": {
         "tips": [
-          "Volume = lengte × breedte × hoogte",
-          "Bij een kubus: zijde × zijde × zijde",
-          "Antwoord in cm³ of m³"
+          "5 cm × 10.000 = 50.000 cm = 500 m",
+          "4 cm × 10.000 = 40.000 cm = 400 m",
+          "Oppervlakte: 500 × 400 = 200.000 m² ÷ 10.000 = 20 ha"
         ],
-        "skill_description": "Volume berekenen",
+        "skill_description": "Schaal met hectares",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Reken eerst werkelijke afmetingen",
+          "Bereken oppervlakte",
+          "Reken om naar hectares"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "hectare_vergeten",
+            "description": "Antwoord in m² in plaats van hectare",
+            "remedy": "1 hectare = 10.000 m²"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Uitstekend!",
+          "on_first_try": "Perfect! Je beheerst schaal en hectares!",
+          "after_hint": "Goed gedaan!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Hoeveel m² is 1 hectare?",
+          "second_attempt": "Bereken eerst de oppervlakte in m².",
+          "third_attempt": "200.000 m² ÷ 10.000 = 20 hectare"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je werkt op hoog niveau!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "multi_step_support",
+          "message": "Werk in stappen: schaal → m² → hectare"
         }
       }
     },
@@ -890,51 +755,43 @@
       "item_id": 18,
       "learning": {
         "tips": [
-          "Volume = lengte × breedte × hoogte",
-          "Bij een kubus: zijde × zijde × zijde",
-          "Antwoord in cm³ of m³"
+          "Regelmatige zeshoek heeft 6 zijden",
+          "6 symmetrie-assen: 3 door hoeken, 3 door zijden",
+          "Aantal assen = aantal zijden (bij regelmatige figuren)"
         ],
-        "skill_description": "Volume berekenen",
+        "skill_description": "Symmetrie bij regelmatige veelhoeken",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Teken of visualiseer de zeshoek",
+          "Tel alle symmetrie-assen"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "alleen_hoekassen",
+            "description": "Alleen assen door hoeken geteld",
+            "remedy": "Ook assen door middelpunten van zijden"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Prima!",
+          "on_first_try": "Perfect! Je begrijpt symmetrie goed!",
+          "after_hint": "Goed zo!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Tel alle mogelijke symmetrie-assen.",
+          "second_attempt": "Door hoeken en door zijden.",
+          "third_attempt": "3 door hoeken + 3 door zijden = 6"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je beheerst symmetrie!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "diagram",
+          "message": "Bekijk een diagram met alle assen."
         }
       }
     },
@@ -942,51 +799,43 @@
       "item_id": 19,
       "learning": {
         "tips": [
-          "Rechte hoek = 90°",
-          "Scherpe hoek < 90°",
-          "Stompe hoek > 90° maar < 180°"
+          "Oppervlakte: 50 × 30 = 1500 m²",
+          "Aantal zakken: 1500 ÷ 25 = 60",
+          "Kosten: 60 × €12,50 = €750"
         ],
-        "skill_description": "Hoeken herkennen",
+        "skill_description": "Multi-step woordprobleem met geld",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Werk stap voor stap",
+          "Controleer elke tussenstap"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "stappen_overslaan",
+            "description": "Direct naar eindantwoord zonder tussenstappen",
+            "remedy": "Werk systematisch: oppervlakte → zakken → kosten"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Uitstekend!",
+          "on_first_try": "Perfect! Je lost complexe woordproblemen goed op!",
+          "after_hint": "Goed gedaan!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Werk stap voor stap.",
+          "second_attempt": "Eerst oppervlakte, dan aantal zakken.",
+          "third_attempt": "1500 ÷ 25 = 60, dan 60 × €12,50 = €750"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
           "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "message": "Je werkt systematisch bij complexe opgaven!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "step_breakdown",
+          "message": "Laten we de stappen een voor een doen."
         }
       }
     },
@@ -994,2651 +843,44 @@
       "item_id": 20,
       "learning": {
         "tips": [
-          "Rechte hoek = 90°",
-          "Scherpe hoek < 90°",
-          "Stompe hoek > 90° maar < 180°"
+          "Volume = π × r² × h = 3,14 × 4 × 3 = 37,68 m³",
+          "75% van 37,68 = 0,75 × 37,68 = 28,26 m³",
+          "28,26 m³ = 28.260 liter"
         ],
-        "skill_description": "Hoeken herkennen",
+        "skill_description": "CITO eindtoets niveau: cilinder met percentage en omrekening",
         "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
+          "Stap 1: Volume berekenen",
+          "Stap 2: 75% berekenen",
+          "Stap 3: Omrekenen naar liters"
         ],
         "common_errors": [
           {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
+            "type": "percentage_vergeten",
+            "description": "100% in plaats van 75% berekend",
+            "remedy": "Let op: reservoir is voor 75% gevuld"
           }
         ]
       },
       "feedback": {
         "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+          "default": "Geweldig!",
+          "on_first_try": "Perfect! Je werkt op CITO-eindtoetsniveau!",
+          "after_hint": "Uitstekend!"
         },
         "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+          "first_attempt": "Let op: 75% gevuld.",
+          "second_attempt": "Bereken eerst totale volume, dan 75%.",
+          "third_attempt": "37,68 × 0,75 = 28,26 m³ = 28.260 liter"
         }
       },
       "adaptive": {
         "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+          "action": "cito_ready",
+          "message": "Je bent goed voorbereid op de CITO eindtoets!"
         },
         "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 21,
-      "learning": {
-        "tips": [
-          "Rechte hoek = 90°",
-          "Scherpe hoek < 90°",
-          "Stompe hoek > 90° maar < 180°"
-        ],
-        "skill_description": "Hoeken herkennen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 22,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 23,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 24,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 25,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 26,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 27,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 28,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 29,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 30,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 31,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 32,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 33,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 34,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 35,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 36,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 37,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 38,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 39,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 40,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 41,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 42,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 43,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 44,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 45,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 46,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 47,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 48,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 49,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 50,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 51,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 52,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 53,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 54,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 55,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 56,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 57,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 58,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 59,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 60,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 61,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 62,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 63,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 64,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 65,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 66,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 67,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 68,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 69,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 70,
-      "learning": {
-        "tips": [
-          "Gebruik de juiste formule",
-          "Let op de eenheden",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Meetkunde",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
+          "action": "full_support",
+          "message": "Gebruik formulekaart, rekenmachine en werk stap voor stap."
         }
       }
     }

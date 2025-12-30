@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0.0",
   "metadata": {
-    "id": "gb_groep3_meetkunde_m3",
+    "id": "gb_groep3_meetkunde_m3_core",
     "type": "multiple_choice",
     "category": "gb",
     "grade": 3,
@@ -10,22 +10,24 @@
     "domain": "meetkunde",
     "slo_alignment": {
       "kerndoelen": [
-        "K28",
         "K32",
         "K33"
       ],
       "rekendomeinen": [
-        "meetkunde"
+        "meetkunde",
+        "meten"
       ],
       "tussendoelen": [
-        "3R_meetkunde_m3"
+        "3MM1_meten_liniaal",
+        "3MM2_tijd_halve_uren",
+        "3MM3_geld_tot_20"
       ],
       "referentieniveau": "1F",
       "cognitive_level": "toepassen"
     }
   },
   "display": {
-    "title": "Meetkunde Groep 3"
+    "title": "Meetkunde Groep 3 - Meten & Tijd"
   },
   "content": {
     "instruction": "Kies het goede antwoord:"
@@ -34,306 +36,225 @@
     {
       "id": 1,
       "type": "multiple_choice",
-      "theme": "lengte",
+      "theme": "meten_liniaal",
       "question": {
-        "text": "10 cm = ... meter"
+        "text": "Je meet een potlood met de liniaal. Het potlood is 12 cm lang. Hoeveel centimeter is dat?"
       },
       "options": [
         {
-          "text": "0.1 m"
+          "text": "12 cm"
         },
         {
-          "text": "1.0 m"
+          "text": "21 cm"
         },
         {
-          "text": "10 m"
+          "text": "10 cm"
         },
         {
-          "text": "1000 m"
+          "text": "14 cm"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 0
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "Begin bij 0 op de liniaal en tel tot waar het potlood eindigt"
     },
     {
       "id": 2,
       "type": "multiple_choice",
-      "theme": "lengte",
+      "theme": "meten_liniaal",
       "question": {
-        "text": "20 cm = ... meter"
+        "text": "Een lijn op papier is 8 cm lang. Hoeveel centimeter meet je met de liniaal?"
       },
       "options": [
         {
-          "text": "0.2 m"
+          "text": "6 cm"
         },
         {
-          "text": "2.0 m"
+          "text": "8 cm"
         },
         {
-          "text": "20 m"
+          "text": "10 cm"
         },
         {
-          "text": "2000 m"
+          "text": "12 cm"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 1
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "Tel de streepjes op de liniaal van 0 tot 8"
     },
     {
       "id": 3,
       "type": "multiple_choice",
-      "theme": "lengte",
+      "theme": "meten_liniaal",
       "question": {
-        "text": "30 cm = ... meter"
+        "text": "Je liniaal heeft streepjes van 0 tot 30. Hoeveel centimeter is je liniaal lang?"
       },
       "options": [
         {
-          "text": "0.3 m"
+          "text": "20 cm"
         },
         {
-          "text": "3.0 m"
+          "text": "25 cm"
         },
         {
-          "text": "30 m"
+          "text": "30 cm"
         },
         {
-          "text": "3000 m"
+          "text": "35 cm"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 2
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "Het laatste streepje geeft de lengte aan"
     },
     {
       "id": 4,
       "type": "multiple_choice",
-      "theme": "lengte",
+      "theme": "meten_liniaal",
       "question": {
-        "text": "40 cm = ... meter"
+        "text": "Een gum is 5 cm lang. Een potlood is 15 cm lang. Hoeveel centimeter langer is het potlood?"
       },
       "options": [
         {
-          "text": "0.4 m"
+          "text": "5 cm"
         },
         {
-          "text": "4.0 m"
+          "text": "10 cm"
         },
         {
-          "text": "40 m"
+          "text": "15 cm"
         },
         {
-          "text": "4000 m"
+          "text": "20 cm"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 1
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "Trek de lengte van de gum af van de lengte van het potlood: 15 - 5 = ?"
     },
     {
       "id": 5,
       "type": "multiple_choice",
-      "theme": "lengte",
+      "theme": "tijd_halve_uren",
       "question": {
-        "text": "50 cm = ... meter"
+        "text": "De klok wijst half drie aan. Hoe laat is het?"
       },
       "options": [
         {
-          "text": "0.5 m"
+          "text": "2:30"
         },
         {
-          "text": "5.0 m"
+          "text": "3:00"
         },
         {
-          "text": "50 m"
+          "text": "3:30"
         },
         {
-          "text": "5000 m"
+          "text": "2:00"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 0
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "Half drie betekent: half op weg naar 3 uur, dus 2 uur en 30 minuten"
     },
     {
       "id": 6,
       "type": "multiple_choice",
-      "theme": "lengte",
+      "theme": "tijd_halve_uren",
       "question": {
-        "text": "60 cm = ... meter"
+        "text": "Het is 8:30. Hoe zeg je dat anders?"
       },
       "options": [
         {
-          "text": "0.6 m"
+          "text": "acht uur"
         },
         {
-          "text": "6.0 m"
+          "text": "half acht"
         },
         {
-          "text": "60 m"
+          "text": "half negen"
         },
         {
-          "text": "6000 m"
+          "text": "negen uur"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 2
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "Bij 8:30 ben je half op weg naar 9"
     },
     {
       "id": 7,
       "type": "multiple_choice",
-      "theme": "lengte",
+      "theme": "tijd_halve_uren",
       "question": {
-        "text": "70 cm = ... meter"
+        "text": "Je gaat om 12:00 lunchen. Een half uur later ga je buiten spelen. Hoe laat is dat?"
       },
       "options": [
         {
-          "text": "0.7 m"
+          "text": "11:30"
         },
         {
-          "text": "7.0 m"
+          "text": "12:30"
         },
         {
-          "text": "70 m"
+          "text": "13:00"
         },
         {
-          "text": "7000 m"
+          "text": "13:30"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 1
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "Een half uur is 30 minuten. Tel 30 minuten bij 12:00 op"
     },
     {
       "id": 8,
       "type": "multiple_choice",
-      "theme": "lengte",
+      "theme": "tijd_halve_uren",
       "question": {
-        "text": "80 cm = ... meter"
+        "text": "De grote wijzer staat op de 6 en de kleine wijzer staat tussen de 4 en de 5. Hoe laat is het?"
       },
       "options": [
         {
-          "text": "0.8 m"
+          "text": "4:00"
         },
         {
-          "text": "8.0 m"
+          "text": "4:30"
         },
         {
-          "text": "80 m"
+          "text": "5:00"
         },
         {
-          "text": "8000 m"
+          "text": "5:30"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 1
       },
-      "hint": "100 cm = 1 meter"
+      "hint": "Als de grote wijzer op de 6 staat, is het half. De kleine wijzer wijst naar het volgende hele uur"
     },
     {
       "id": 9,
       "type": "multiple_choice",
-      "theme": "tijd",
+      "theme": "geld_tot_20",
       "question": {
-        "text": "De klok wijst 3:00 aan. Hoe laat is het?"
-      },
-      "options": [
-        {
-          "text": "drie uur"
-        },
-        {
-          "text": "weet ik niet"
-        },
-        {
-          "text": "twaalf uur"
-        },
-        {
-          "text": "één uur"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "3:00 = drie uur"
-    },
-    {
-      "id": 10,
-      "type": "multiple_choice",
-      "theme": "tijd",
-      "question": {
-        "text": "De klok wijst 6:30 aan. Hoe laat is het?"
-      },
-      "options": [
-        {
-          "text": "half zeven"
-        },
-        {
-          "text": "weet ik niet"
-        },
-        {
-          "text": "twaalf uur"
-        },
-        {
-          "text": "één uur"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "6:30 = half zeven"
-    },
-    {
-      "id": 11,
-      "type": "multiple_choice",
-      "theme": "tijd",
-      "question": {
-        "text": "De klok wijst 9:00 aan. Hoe laat is het?"
-      },
-      "options": [
-        {
-          "text": "negen uur"
-        },
-        {
-          "text": "weet ik niet"
-        },
-        {
-          "text": "twaalf uur"
-        },
-        {
-          "text": "één uur"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "9:00 = negen uur"
-    },
-    {
-      "id": 12,
-      "type": "multiple_choice",
-      "theme": "geld",
-      "question": {
-        "text": "Je hebt 2 munten van €1. Hoeveel euro heb je?"
+        "text": "Je koopt een snoepje voor €3. Je betaalt met een briefje van €5. Hoeveel wisselgeld krijg je terug?"
       },
       "options": [
         {
@@ -346,33 +267,6 @@
           "text": "€3"
         },
         {
-          "text": "€4"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "2 × €1 = €2"
-    },
-    {
-      "id": 13,
-      "type": "multiple_choice",
-      "theme": "geld",
-      "question": {
-        "text": "Je hebt 4 munten van €1. Hoeveel euro heb je?"
-      },
-      "options": [
-        {
-          "text": "€3"
-        },
-        {
-          "text": "€4"
-        },
-        {
-          "text": "€5"
-        },
-        {
           "text": "€8"
         }
       ],
@@ -380,16 +274,73 @@
         "type": "single",
         "correct_index": 1
       },
-      "hint": "4 × €1 = €4"
+      "hint": "Trek de prijs af van wat je betaalt: €5 - €3 = ?"
     },
     {
-      "id": 14,
+      "id": 10,
       "type": "multiple_choice",
-      "theme": "geld",
+      "theme": "geld_tot_20",
       "question": {
-        "text": "Je hebt 6 munten van €1. Hoeveel euro heb je?"
+        "text": "Een schrift kost €4 en een pen kost €2. Hoeveel betaal je samen?"
       },
       "options": [
+        {
+          "text": "€2"
+        },
+        {
+          "text": "€4"
+        },
+        {
+          "text": "€6"
+        },
+        {
+          "text": "€8"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Tel de bedragen bij elkaar op: €4 + €2 = ?"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "theme": "geld_tot_20",
+      "question": {
+        "text": "Je hebt €10. Je koopt een boek voor €7. Hoeveel geld houd je over?"
+      },
+      "options": [
+        {
+          "text": "€1"
+        },
+        {
+          "text": "€2"
+        },
+        {
+          "text": "€3"
+        },
+        {
+          "text": "€7"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Trek af: €10 - €7 = ?"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "theme": "geld_tot_20",
+      "question": {
+        "text": "Je hebt 3 munten van €2. Hoeveel euro heb je in totaal?"
+      },
+      "options": [
+        {
+          "text": "€3"
+        },
         {
           "text": "€5"
         },
@@ -397,584 +348,230 @@
           "text": "€6"
         },
         {
-          "text": "€7"
+          "text": "€8"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Vermenigvuldig: 3 × €2 = ?"
+    },
+    {
+      "id": 13,
+      "type": "multiple_choice",
+      "theme": "meten_liniaal",
+      "question": {
+        "text": "Je tekent een lijn van 20 cm. Je gebruikt je liniaal van 30 cm. Hoeveel centimeter van je liniaal gebruik je NIET?"
+      },
+      "options": [
+        {
+          "text": "5 cm"
         },
         {
-          "text": "€12"
+          "text": "10 cm"
+        },
+        {
+          "text": "15 cm"
+        },
+        {
+          "text": "20 cm"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "6 × €1 = €6"
+      "hint": "Trek de lijn af van de hele liniaal: 30 - 20 = ?"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "theme": "meten_liniaal",
+      "question": {
+        "text": "Een boek is 25 cm hoog. Hoeveel centimeter is dat?"
+      },
+      "options": [
+        {
+          "text": "20 cm"
+        },
+        {
+          "text": "22 cm"
+        },
+        {
+          "text": "25 cm"
+        },
+        {
+          "text": "30 cm"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "De hoogte is al in centimeters gegeven"
     },
     {
       "id": 15,
       "type": "multiple_choice",
-      "theme": "geld",
+      "theme": "tijd_halve_uren",
       "question": {
-        "text": "Je hebt 8 munten van €1. Hoeveel euro heb je?"
+        "text": "School begint om 8:30. Dat is ook..."
       },
       "options": [
         {
-          "text": "€7"
+          "text": "acht uur"
         },
         {
-          "text": "€8"
+          "text": "half acht"
         },
         {
-          "text": "€9"
+          "text": "half negen"
         },
         {
-          "text": "€16"
+          "text": "negen uur"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 2
       },
-      "hint": "8 × €1 = €8"
+      "hint": "8:30 is half op weg naar 9"
     },
     {
       "id": 16,
       "type": "multiple_choice",
-      "theme": "geld",
+      "theme": "tijd_halve_uren",
       "question": {
-        "text": "Je hebt 10 munten van €1. Hoeveel euro heb je?"
+        "text": "Je eet om half één. Wat staat er op de digitale klok?"
       },
       "options": [
         {
-          "text": "€9"
+          "text": "12:00"
         },
         {
-          "text": "€10"
+          "text": "12:30"
         },
         {
-          "text": "€11"
+          "text": "13:00"
         },
         {
-          "text": "€20"
+          "text": "13:30"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "10 × €1 = €10"
+      "hint": "Half één is 12 uur en 30 minuten"
     },
     {
       "id": 17,
       "type": "multiple_choice",
-      "theme": "vormen",
+      "theme": "geld_tot_20",
       "question": {
-        "text": "Hoeveel hoeken heeft een cirkel?"
+        "text": "Een stripboek kost €9. Je betaalt met een briefje van €10. Hoeveel krijg je terug?"
       },
       "options": [
         {
-          "text": "0"
+          "text": "€1"
         },
         {
-          "text": "3"
+          "text": "€2"
         },
         {
-          "text": "4"
+          "text": "€9"
         },
         {
-          "text": "5"
+          "text": "€19"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Tel de hoeken van een cirkel"
+      "hint": "Reken: €10 - €9 = ?"
     },
     {
       "id": 18,
       "type": "multiple_choice",
-      "theme": "vormen",
+      "theme": "geld_tot_20",
       "question": {
-        "text": "Hoeveel hoeken heeft een driehoek?"
+        "text": "Je spaart €12. Je krijgt nog €5 van oma. Hoeveel heb je nu?"
       },
       "options": [
         {
-          "text": "0"
+          "text": "€7"
         },
         {
-          "text": "3"
+          "text": "€12"
         },
         {
-          "text": "4"
+          "text": "€15"
         },
         {
-          "text": "5"
+          "text": "€17"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 2
       },
-      "hint": "Tel de hoeken van een driehoek"
+      "hint": "Tel bij elkaar op: €12 + €5 = ?"
     },
     {
       "id": 19,
       "type": "multiple_choice",
-      "theme": "vormen",
+      "theme": "meten_liniaal",
       "question": {
-        "text": "Hoeveel hoeken heeft een vierkant?"
+        "text": "Een krijtje is 6 cm lang. Een nieuw krijtje is 10 cm lang. Hoeveel korter is het oude krijtje?"
       },
       "options": [
         {
-          "text": "0"
+          "text": "2 cm"
         },
         {
-          "text": "3"
+          "text": "4 cm"
         },
         {
-          "text": "4"
+          "text": "6 cm"
         },
         {
-          "text": "5"
+          "text": "16 cm"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 2
+        "correct_index": 1
       },
-      "hint": "Tel de hoeken van een vierkant"
+      "hint": "Trek af: 10 cm - 6 cm = ?"
     },
     {
       "id": 20,
       "type": "multiple_choice",
-      "theme": "vormen",
+      "theme": "tijd_halve_uren",
       "question": {
-        "text": "Hoeveel hoeken heeft een rechthoek?"
+        "text": "De middagpauze begint om 12:00 en eindigt om 12:30. Hoelang is de pauze?"
       },
       "options": [
         {
-          "text": "0"
+          "text": "20 minuten"
         },
         {
-          "text": "3"
+          "text": "30 minuten"
         },
         {
-          "text": "4"
+          "text": "40 minuten"
         },
         {
-          "text": "5"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Tel de hoeken van een rechthoek"
-    },
-    {
-      "id": 21,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 21: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
+          "text": "60 minuten"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 22,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 22: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 23,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 23: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 24,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 24: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 25,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 25: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 26,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 26: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 27,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 27: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 28,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 28: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 29,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 29: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 30,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 30: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 31,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 31: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 32,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 32: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 33,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 33: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 34,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 34: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 35,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 35: 100 cm = ... meter"
-      },
-      "options": [
-        {
-          "text": "0.1 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
+      "hint": "Van 12:00 naar 12:30 is een half uur. Een half uur = 30 minuten"
     }
   ],
   "settings": {
