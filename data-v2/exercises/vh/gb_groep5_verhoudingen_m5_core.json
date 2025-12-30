@@ -35,117 +35,174 @@
       "type": "multiple_choice",
       "theme": "stambreuken",
       "question": {
-        "text": "Hoeveel is 1/5 van 20 euro?"
+        "text": "In de bibliotheek staan 40 boeken op een plank. Hoeveel is 1/8 van deze boeken?"
       },
       "options": [
         {
-          "text": "€2"
+          "text": "4 boeken"
         },
         {
-          "text": "€4"
+          "text": "5 boeken"
         },
         {
-          "text": "€5"
+          "text": "8 boeken"
         },
         {
-          "text": "€10"
+          "text": "10 boeken"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Verdeel 20 euro in 5 gelijke delen. 20 ÷ 5 = ?"
+      "hint": "Verdeel 40 boeken in 8 gelijke delen. 40 ÷ 8 = ?"
     },
     {
       "id": 2,
       "type": "multiple_choice",
       "theme": "stambreuken",
       "question": {
-        "text": "Hoeveel is 1/10 van 100 gram?"
+        "text": "Een bakker heeft 35 broodjes gebakken. Hoeveel is 1/7 van de broodjes?"
       },
       "options": [
         {
-          "text": "5 gram"
+          "text": "3 broodjes"
         },
         {
-          "text": "10 gram"
+          "text": "5 broodjes"
         },
         {
-          "text": "20 gram"
+          "text": "7 broodjes"
         },
         {
-          "text": "50 gram"
+          "text": "10 broodjes"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "1/10 betekent: verdeel in 10 gelijke delen. 100 ÷ 10 = ?"
+      "hint": "1/7 betekent: verdeel in 7 gelijke delen. 35 ÷ 7 = ?"
     },
     {
       "id": 3,
       "type": "multiple_choice",
       "theme": "stambreuken",
       "question": {
-        "text": "Je hebt 30 snoepjes. Je deelt ze in 6 gelijke delen. Hoeveel snoepjes is 1 deel?"
+        "text": "Hoeveel is 1/6 van 18 euro?"
       },
       "options": [
         {
-          "text": "3 snoepjes"
+          "text": "€2"
         },
         {
-          "text": "5 snoepjes"
+          "text": "€3"
         },
         {
-          "text": "6 snoepjes"
+          "text": "€6"
         },
         {
-          "text": "10 snoepjes"
+          "text": "€9"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Delen in 6 gelijke delen betekent: 30 ÷ 6 = ?"
+      "hint": "Verdeel 18 euro in 6 gelijke delen. 18 ÷ 6 = ?"
     },
     {
       "id": 4,
       "type": "multiple_choice",
-      "theme": "getallenlijn",
+      "theme": "stambreuken",
       "question": {
-        "text": "Op de getallenlijn van 0 naar 1 zie je een pijl precies in het midden. Welke breuk hoort daarbij?"
+        "text": "Op de atletiekbaan loop je 50 meter. Hoeveel is 1/10 van deze afstand?"
       },
       "options": [
         {
-          "text": "1/4"
+          "text": "5 meter"
         },
         {
-          "text": "1/2"
+          "text": "10 meter"
         },
         {
-          "text": "3/4"
+          "text": "15 meter"
         },
         {
-          "text": "1/5"
+          "text": "25 meter"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "1/10 van 50 = 50 ÷ 10 = ?"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "theme": "stambreuken",
+      "question": {
+        "text": "Een concert duurt 90 minuten. Na 1/9 van de tijd is er een pauze. Hoeveel minuten is er al gespeeld?"
+      },
+      "options": [
+        {
+          "text": "9 minuten"
+        },
+        {
+          "text": "10 minuten"
+        },
+        {
+          "text": "15 minuten"
+        },
+        {
+          "text": "18 minuten"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Precies in het midden van 0 en 1 is de helft, dat is 1/2"
+      "hint": "1/9 van 90 = 90 ÷ 9 = ?"
     },
     {
-      "id": 5,
+      "id": 6,
       "type": "multiple_choice",
       "theme": "getallenlijn",
       "question": {
-        "text": "De getallenlijn loopt van 0 tot 1. Je verdeelt hem in 10 gelijke stukjes. Waar ligt 3/10?"
+        "text": "Op de getallenlijn van 0 tot 1 staat een pijl bij 1/5. Waar staat deze pijl ongeveer?"
       },
       "options": [
+        {
+          "text": "Vlak na 0"
+        },
+        {
+          "text": "Bij de helft"
+        },
+        {
+          "text": "Vlak voor 1"
+        },
+        {
+          "text": "Voorbij 1"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "1/5 is kleiner dan 1/2, dus dichter bij 0 dan bij 1"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "theme": "getallenlijn",
+      "question": {
+        "text": "De getallenlijn loopt van 0 tot 1. Je verdeelt hem in 4 gelijke stukken. Waar ligt 3/4?"
+      },
+      "options": [
+        {
+          "text": "Bij het 1e streepje"
+        },
         {
           "text": "Bij het 2e streepje"
         },
@@ -153,51 +210,75 @@
           "text": "Bij het 3e streepje"
         },
         {
-          "text": "Bij het 5e streepje"
-        },
-        {
-          "text": "Bij het 7e streepje"
+          "text": "Bij het 4e streepje"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 2
       },
-      "hint": "3/10 betekent 3 van de 10 delen vanaf 0"
+      "hint": "3/4 betekent 3 van de 4 delen vanaf 0, dus bij het 3e streepje"
     },
     {
-      "id": 6,
+      "id": 8,
       "type": "multiple_choice",
-      "theme": "decimalen_breuken",
+      "theme": "getallenlijn",
       "question": {
-        "text": "Schrijf als decimaal getal: 1/2"
+        "text": "Op de getallenlijn van 0 tot 1 zie je een punt bij 2/5. Is dit voor of na het midden?"
       },
       "options": [
         {
-          "text": "0,2"
+          "text": "Voor het midden"
         },
         {
-          "text": "0,5"
+          "text": "Precies op het midden"
         },
         {
-          "text": "0,25"
+          "text": "Na het midden"
         },
         {
-          "text": "1,5"
+          "text": "Bij 1"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Het midden is 1/2. 2/5 is iets kleiner dan 1/2, dus voor het midden"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "theme": "decimalen_breuken",
+      "question": {
+        "text": "In de winkel kost een speelgoedje €0,50. Welk deel van een euro is dit?"
+      },
+      "options": [
+        {
+          "text": "1/4 euro"
+        },
+        {
+          "text": "1/2 euro"
+        },
+        {
+          "text": "1/5 euro"
+        },
+        {
+          "text": "1/10 euro"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "De helft (1/2) is hetzelfde als 0,5. Denk aan een halve euro = €0,50"
+      "hint": "€0,50 = 50 cent = een halve euro = 1/2 euro"
     },
     {
-      "id": 7,
+      "id": 10,
       "type": "multiple_choice",
       "theme": "decimalen_breuken",
       "question": {
-        "text": "0,25 is gelijk aan welke breuk?"
+        "text": "Schrijf als breuk: 0,1"
       },
       "options": [
         {
@@ -215,16 +296,43 @@
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 3
       },
-      "hint": "0,25 is een kwart. Denk aan €0,25 = een kwartje = 1/4 euro"
+      "hint": "0,1 = 1 tiende = 1/10. Denk aan €0,10 = 1/10 euro"
     },
     {
-      "id": 8,
+      "id": 11,
       "type": "multiple_choice",
       "theme": "decimalen_breuken",
       "question": {
-        "text": "Hoeveel is 0,5 liter in breuken?"
+        "text": "Hoeveel is 1/4 als decimaal getal?"
+      },
+      "options": [
+        {
+          "text": "0,1"
+        },
+        {
+          "text": "0,25"
+        },
+        {
+          "text": "0,4"
+        },
+        {
+          "text": "0,5"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "1/4 = een kwart = €0,25 = 0,25"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "theme": "decimalen_breuken",
+      "question": {
+        "text": "Je drinkt 0,5 liter water. Hoeveel is dit in breuken?"
       },
       "options": [
         {
@@ -244,176 +352,149 @@
         "type": "single",
         "correct_index": 1
       },
-      "hint": "0,5 = de helft = 1/2"
+      "hint": "0,5 = de helft = 1/2 liter"
     },
     {
-      "id": 9,
+      "id": 13,
       "type": "multiple_choice",
-      "theme": "decimalen_breuken",
+      "theme": "percentages",
       "question": {
-        "text": "Vul in: 1/10 = 0,..."
+        "text": "In het museum zijn 80 bezoekers. 50% is een kind. Hoeveel kinderen zijn er?"
       },
       "options": [
         {
-          "text": "0,01"
+          "text": "20 kinderen"
         },
         {
-          "text": "0,1"
+          "text": "40 kinderen"
         },
         {
-          "text": "0,5"
+          "text": "50 kinderen"
         },
         {
-          "text": "1,0"
+          "text": "80 kinderen"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "1/10 = 1 tiende = 0,1. Denk aan €0,10 = 1/10 van een euro"
+      "hint": "50% = de helft. De helft van 80 = 80 ÷ 2 = 40"
     },
     {
-      "id": 10,
+      "id": 14,
       "type": "multiple_choice",
       "theme": "percentages",
       "question": {
-        "text": "Hoeveel is 50% van 20 snoepjes?"
-      },
-      "options": [
-        {
-          "text": "5 snoepjes"
-        },
-        {
-          "text": "10 snoepjes"
-        },
-        {
-          "text": "15 snoepjes"
-        },
-        {
-          "text": "20 snoepjes"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "50% = de helft. De helft van 20 is 10"
-    },
-    {
-      "id": 11,
-      "type": "multiple_choice",
-      "theme": "percentages",
-      "question": {
-        "text": "Bij 50% korting op €10, hoeveel betaal je dan?"
-      },
-      "options": [
-        {
-          "text": "€2"
-        },
-        {
-          "text": "€5"
-        },
-        {
-          "text": "€7,50"
-        },
-        {
-          "text": "€10"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "50% korting = de helft korting. De helft van €10 is €5"
-    },
-    {
-      "id": 12,
-      "type": "multiple_choice",
-      "theme": "percentages",
-      "question": {
-        "text": "Hoeveel is 100% van 30?"
+        "text": "Hoeveel is 100% van 45?"
       },
       "options": [
         {
           "text": "0"
         },
         {
-          "text": "15"
+          "text": "22,5"
         },
         {
-          "text": "30"
+          "text": "45"
         },
         {
-          "text": "60"
+          "text": "90"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 2
       },
-      "hint": "100% = alles = het hele getal. 100% van 30 is gewoon 30"
-    },
-    {
-      "id": 13,
-      "type": "multiple_choice",
-      "theme": "stambreuken",
-      "question": {
-        "text": "Een wedstrijd duurt 60 minuten. Na 1/6 van de tijd fluit de scheidsrechter. Hoeveel minuten is er gespeeld?"
-      },
-      "options": [
-        {
-          "text": "6 minuten"
-        },
-        {
-          "text": "10 minuten"
-        },
-        {
-          "text": "12 minuten"
-        },
-        {
-          "text": "15 minuten"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1/6 van 60 betekent: 60 verdelen in 6 delen. 60 ÷ 6 = ?"
-    },
-    {
-      "id": 14,
-      "type": "multiple_choice",
-      "theme": "stambreuken",
-      "question": {
-        "text": "Hoeveel is 1/8 van 40 meter?"
-      },
-      "options": [
-        {
-          "text": "4 meter"
-        },
-        {
-          "text": "5 meter"
-        },
-        {
-          "text": "8 meter"
-        },
-        {
-          "text": "10 meter"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Verdeel 40 meter in 8 gelijke delen. 40 ÷ 8 = ?"
+      "hint": "100% = alles = het hele getal. 100% van 45 = 45"
     },
     {
       "id": 15,
       "type": "multiple_choice",
+      "theme": "percentages",
+      "question": {
+        "text": "Bij de kermis kost een ritje €8. Met 50% korting, hoeveel betaal je dan?"
+      },
+      "options": [
+        {
+          "text": "€2"
+        },
+        {
+          "text": "€4"
+        },
+        {
+          "text": "€6"
+        },
+        {
+          "text": "€8"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "50% korting = de helft korting. De helft van €8 = €4"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "theme": "percentages",
+      "question": {
+        "text": "Hoeveel is 50% van 16 tekenpotloden?"
+      },
+      "options": [
+        {
+          "text": "4 potloden"
+        },
+        {
+          "text": "8 potloden"
+        },
+        {
+          "text": "12 potloden"
+        },
+        {
+          "text": "16 potloden"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "50% = de helft. De helft van 16 = 16 ÷ 2 = 8"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "theme": "stambreuken",
+      "question": {
+        "text": "In het zwembad zijn 48 badgasten. 1/6 zwemt in het diepe. Hoeveel mensen is dat?"
+      },
+      "options": [
+        {
+          "text": "6 mensen"
+        },
+        {
+          "text": "8 mensen"
+        },
+        {
+          "text": "10 mensen"
+        },
+        {
+          "text": "12 mensen"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "1/6 van 48 = 48 ÷ 6 = ?"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
       "theme": "getallenlijn",
       "question": {
-        "text": "Op een wandeling van 1 kilometer heb je al 1/4 afgelegd. Hoeveel meter heb je al gelopen?"
+        "text": "Op een wandelroute van 1 kilometer ben je bij punt 4/10. Hoeveel meter heb je gelopen?"
       },
       "options": [
         {
@@ -431,75 +512,45 @@
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 2
       },
-      "hint": "1 kilometer = 1000 meter. 1/4 van 1000 = 1000 ÷ 4 = ?"
+      "hint": "1 kilometer = 1000 meter. 4/10 van 1000 = 400 meter"
     },
     {
-      "id": 16,
-      "type": "multiple_choice",
-      "theme": "decimalen_breuken",
-      "question": {
-        "text": "Als je €0,25 hebt, welk deel van een euro is dat?"
-      },
-      "options": [
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/5"
-        },
-        {
-          "text": "1/10"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "€0,25 = 25 cent = een kwartje = 1/4 euro"
-    },
-    {
-      "id": 17,
+      "id": 19,
       "type": "multiple_choice",
       "theme": "stambreuken",
       "question": {
-        "text": "In de klas zitten 24 kinderen. 1/8 van de kinderen heeft een bril. Hoeveel kinderen is dat?"
+        "text": "Een watermeloen weegt 80 gram. Hoeveel is 1/10 van het gewicht?"
       },
       "options": [
         {
-          "text": "2 kinderen"
+          "text": "4 gram"
         },
         {
-          "text": "3 kinderen"
+          "text": "8 gram"
         },
         {
-          "text": "4 kinderen"
+          "text": "10 gram"
         },
         {
-          "text": "8 kinderen"
+          "text": "16 gram"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "1/8 van 24 = 24 ÷ 8 = ?"
+      "hint": "1/10 van 80 = 80 ÷ 10 = 8 gram"
     },
     {
-      "id": 18,
+      "id": 20,
       "type": "multiple_choice",
       "theme": "percentages",
       "question": {
-        "text": "Je hebt een toets gemaakt met 20 vragen. Je hebt 100% goed. Hoeveel vragen heb je goed?"
+        "text": "Je maakt een toets met 30 vragen. 100% goed betekent hoeveel vragen?"
       },
       "options": [
-        {
-          "text": "10 vragen"
-        },
         {
           "text": "15 vragen"
         },
@@ -508,67 +559,16 @@
         },
         {
           "text": "25 vragen"
+        },
+        {
+          "text": "30 vragen"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 2
+        "correct_index": 3
       },
-      "hint": "100% = alles = allemaal goed"
-    },
-    {
-      "id": 19,
-      "type": "multiple_choice",
-      "theme": "getallenlijn",
-      "question": {
-        "text": "Op de getallenlijn van 0 tot 1 staat een punt bij 7/10. Waar staat dat punt ongeveer?"
-      },
-      "options": [
-        {
-          "text": "Vlak bij 0"
-        },
-        {
-          "text": "Bij de helft"
-        },
-        {
-          "text": "Voorbij de helft, dicht bij 1"
-        },
-        {
-          "text": "Voorbij 1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "7/10 is meer dan de helft (5/10), dus voorbij het midden richting 1"
-    },
-    {
-      "id": 20,
-      "type": "multiple_choice",
-      "theme": "stambreuken",
-      "question": {
-        "text": "Een pizza heeft 10 plakken. Jij eet er 1. Welk deel van de pizza heb jij gegeten?"
-      },
-      "options": [
-        {
-          "text": "1/5"
-        },
-        {
-          "text": "1/10"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "2/10"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Je eet 1 van de 10 plakken = 1/10"
+      "hint": "100% = alles = alle vragen goed = 30 vragen"
     }
   ],
   "settings": {
