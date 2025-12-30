@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0.0",
   "metadata": {
-    "id": "gb_groep5_verhoudingen_m5",
+    "id": "gb_groep5_verhoudingen_m5_core",
     "type": "multiple_choice",
     "category": "gb",
     "grade": 5,
@@ -11,7 +11,7 @@
     "slo_alignment": {
       "kerndoelen": [
         "K28",
-        "R2"
+        "K29"
       ],
       "rekendomeinen": [
         "verhoudingen"
@@ -24,7 +24,7 @@
     }
   },
   "display": {
-    "title": "Breuken en Procenten Groep 5"
+    "title": "Breuken en Verhoudingen Groep 5"
   },
   "content": {
     "instruction": "Kies het goede antwoord:"
@@ -33,1487 +33,542 @@
     {
       "id": 1,
       "type": "multiple_choice",
-      "theme": "decimalen",
+      "theme": "stambreuken",
       "question": {
-        "text": "Schrijf als breuk: 0.1"
+        "text": "Hoeveel is 1/5 van 20 euro?"
       },
       "options": [
         {
-          "text": "1/10"
+          "text": "€2"
         },
         {
-          "text": "1/100"
+          "text": "€4"
         },
         {
-          "text": "1/1"
+          "text": "€5"
         },
         {
-          "text": "1/5"
+          "text": "€10"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 1
       },
-      "hint": "0.1 = 1 tiende = 1/10"
+      "hint": "Verdeel 20 euro in 5 gelijke delen. 20 ÷ 5 = ?"
     },
     {
       "id": 2,
       "type": "multiple_choice",
-      "theme": "decimalen",
+      "theme": "stambreuken",
       "question": {
-        "text": "Schrijf als breuk: 0.2"
+        "text": "Hoeveel is 1/10 van 100 gram?"
       },
       "options": [
         {
-          "text": "2/10"
+          "text": "5 gram"
         },
         {
-          "text": "2/100"
+          "text": "10 gram"
+        },
+        {
+          "text": "20 gram"
+        },
+        {
+          "text": "50 gram"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "1/10 betekent: verdeel in 10 gelijke delen. 100 ÷ 10 = ?"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "theme": "stambreuken",
+      "question": {
+        "text": "Je hebt 30 snoepjes. Je deelt ze in 6 gelijke delen. Hoeveel snoepjes is 1 deel?"
+      },
+      "options": [
+        {
+          "text": "3 snoepjes"
+        },
+        {
+          "text": "5 snoepjes"
+        },
+        {
+          "text": "6 snoepjes"
+        },
+        {
+          "text": "10 snoepjes"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "Delen in 6 gelijke delen betekent: 30 ÷ 6 = ?"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "theme": "getallenlijn",
+      "question": {
+        "text": "Op de getallenlijn van 0 naar 1 zie je een pijl precies in het midden. Welke breuk hoort daarbij?"
+      },
+      "options": [
+        {
+          "text": "1/4"
         },
         {
           "text": "1/2"
         },
         {
-          "text": "2/5"
+          "text": "3/4"
+        },
+        {
+          "text": "1/5"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 1
       },
-      "hint": "0.2 = 2 tiende = 2/10"
+      "hint": "Precies in het midden van 0 en 1 is de helft, dat is 1/2"
     },
     {
-      "id": 3,
+      "id": 5,
       "type": "multiple_choice",
-      "theme": "decimalen",
+      "theme": "getallenlijn",
       "question": {
-        "text": "Schrijf als breuk: 0.3"
+        "text": "De getallenlijn loopt van 0 tot 1. Je verdeelt hem in 10 gelijke stukjes. Waar ligt 3/10?"
       },
       "options": [
         {
-          "text": "3/10"
+          "text": "Bij het 2e streepje"
         },
         {
-          "text": "3/100"
+          "text": "Bij het 3e streepje"
         },
         {
-          "text": "1/3"
+          "text": "Bij het 5e streepje"
         },
         {
-          "text": "3/5"
+          "text": "Bij het 7e streepje"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 1
       },
-      "hint": "0.3 = 3 tiende = 3/10"
+      "hint": "3/10 betekent 3 van de 10 delen vanaf 0"
     },
     {
-      "id": 4,
+      "id": 6,
       "type": "multiple_choice",
-      "theme": "decimalen",
+      "theme": "decimalen_breuken",
       "question": {
-        "text": "Schrijf als breuk: 0.4"
+        "text": "Schrijf als decimaal getal: 1/2"
       },
       "options": [
         {
-          "text": "4/10"
+          "text": "0,2"
         },
         {
-          "text": "4/100"
+          "text": "0,5"
+        },
+        {
+          "text": "0,25"
+        },
+        {
+          "text": "1,5"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "De helft (1/2) is hetzelfde als 0,5. Denk aan een halve euro = €0,50"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "theme": "decimalen_breuken",
+      "question": {
+        "text": "0,25 is gelijk aan welke breuk?"
+      },
+      "options": [
+        {
+          "text": "1/2"
         },
         {
           "text": "1/4"
         },
         {
-          "text": "4/5"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "0.4 = 4 tiende = 4/10"
-    },
-    {
-      "id": 5,
-      "type": "multiple_choice",
-      "theme": "decimalen",
-      "question": {
-        "text": "Schrijf als breuk: 0.5"
-      },
-      "options": [
-        {
-          "text": "5/10"
-        },
-        {
-          "text": "5/100"
-        },
-        {
           "text": "1/5"
         },
         {
-          "text": "5/5"
+          "text": "1/10"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 1
       },
-      "hint": "0.5 = 5 tiende = 5/10"
-    },
-    {
-      "id": 6,
-      "type": "multiple_choice",
-      "theme": "decimalen",
-      "question": {
-        "text": "Schrijf als breuk: 0.6"
-      },
-      "options": [
-        {
-          "text": "6/10"
-        },
-        {
-          "text": "6/100"
-        },
-        {
-          "text": "1/6"
-        },
-        {
-          "text": "6/5"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "0.6 = 6 tiende = 6/10"
-    },
-    {
-      "id": 7,
-      "type": "multiple_choice",
-      "theme": "decimalen",
-      "question": {
-        "text": "Schrijf als breuk: 0.7"
-      },
-      "options": [
-        {
-          "text": "7/10"
-        },
-        {
-          "text": "7/100"
-        },
-        {
-          "text": "1/7"
-        },
-        {
-          "text": "7/5"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "0.7 = 7 tiende = 7/10"
+      "hint": "0,25 is een kwart. Denk aan €0,25 = een kwartje = 1/4 euro"
     },
     {
       "id": 8,
       "type": "multiple_choice",
-      "theme": "decimalen",
+      "theme": "decimalen_breuken",
       "question": {
-        "text": "Schrijf als breuk: 0.8"
+        "text": "Hoeveel is 0,5 liter in breuken?"
       },
       "options": [
         {
-          "text": "8/10"
+          "text": "1/4 liter"
         },
         {
-          "text": "8/100"
+          "text": "1/2 liter"
         },
         {
-          "text": "1/8"
+          "text": "1/5 liter"
         },
         {
-          "text": "8/5"
+          "text": "1/10 liter"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 1
       },
-      "hint": "0.8 = 8 tiende = 8/10"
+      "hint": "0,5 = de helft = 1/2"
     },
     {
       "id": 9,
       "type": "multiple_choice",
-      "theme": "decimalen",
+      "theme": "decimalen_breuken",
       "question": {
-        "text": "Schrijf als breuk: 0.9"
+        "text": "Vul in: 1/10 = 0,..."
       },
       "options": [
         {
-          "text": "9/10"
+          "text": "0,01"
         },
         {
-          "text": "9/100"
+          "text": "0,1"
         },
         {
-          "text": "1/9"
+          "text": "0,5"
         },
         {
-          "text": "9/5"
+          "text": "1,0"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 1
       },
-      "hint": "0.9 = 9 tiende = 9/10"
+      "hint": "1/10 = 1 tiende = 0,1. Denk aan €0,10 = 1/10 van een euro"
     },
     {
       "id": 10,
       "type": "multiple_choice",
-      "theme": "decimalen",
+      "theme": "percentages",
       "question": {
-        "text": "Schrijf als breuk: 1.0"
+        "text": "Hoeveel is 50% van 20 snoepjes?"
       },
       "options": [
         {
-          "text": "10/10"
+          "text": "5 snoepjes"
         },
         {
-          "text": "10/100"
+          "text": "10 snoepjes"
         },
         {
-          "text": "1/10"
+          "text": "15 snoepjes"
         },
         {
-          "text": "10/5"
+          "text": "20 snoepjes"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 0
+        "correct_index": 1
       },
-      "hint": "1.0 = 10 tiende = 10/10"
+      "hint": "50% = de helft. De helft van 20 is 10"
     },
     {
       "id": 11,
       "type": "multiple_choice",
-      "theme": "decimalen-geld",
+      "theme": "percentages",
       "question": {
-        "text": "€2.50 + €1.75 = ?"
+        "text": "Bij 50% korting op €10, hoeveel betaal je dan?"
       },
       "options": [
         {
-          "text": "€3.25"
+          "text": "€2"
         },
         {
-          "text": "€4.25"
+          "text": "€5"
         },
         {
-          "text": "€5.25"
+          "text": "€7,50"
         },
         {
-          "text": "€8.50"
+          "text": "€10"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Tel eerst de euro's, dan de centen"
+      "hint": "50% korting = de helft korting. De helft van €10 is €5"
     },
     {
       "id": 12,
       "type": "multiple_choice",
-      "theme": "decimalen-geld",
+      "theme": "percentages",
       "question": {
-        "text": "€5.25 + €3.50 = ?"
+        "text": "Hoeveel is 100% van 30?"
       },
       "options": [
         {
-          "text": "€7.75"
+          "text": "0"
         },
         {
-          "text": "€8.75"
-        },
-        {
-          "text": "€9.75"
-        },
-        {
-          "text": "€17.50"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Tel eerst de euro's, dan de centen"
-    },
-    {
-      "id": 13,
-      "type": "multiple_choice",
-      "theme": "decimalen-geld",
-      "question": {
-        "text": "€10.00 + €4.75 = ?"
-      },
-      "options": [
-        {
-          "text": "€13.75"
-        },
-        {
-          "text": "€14.75"
-        },
-        {
-          "text": "€15.75"
-        },
-        {
-          "text": "€29.50"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Tel eerst de euro's, dan de centen"
-    },
-    {
-      "id": 14,
-      "type": "multiple_choice",
-      "theme": "decimalen-geld",
-      "question": {
-        "text": "€7.50 + €2.25 = ?"
-      },
-      "options": [
-        {
-          "text": "€8.75"
-        },
-        {
-          "text": "€9.75"
-        },
-        {
-          "text": "€10.75"
-        },
-        {
-          "text": "€19.50"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Tel eerst de euro's, dan de centen"
-    },
-    {
-      "id": 15,
-      "type": "multiple_choice",
-      "theme": "procenten",
-      "question": {
-        "text": "Wat is 50% van 100?"
-      },
-      "options": [
-        {
-          "text": "45"
-        },
-        {
-          "text": "50"
-        },
-        {
-          "text": "55"
-        },
-        {
-          "text": "100"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "50% = 50/100. Dus 50% van 100 = (50 × 100) ÷ 100"
-    },
-    {
-      "id": 16,
-      "type": "multiple_choice",
-      "theme": "procenten",
-      "question": {
-        "text": "Wat is 25% van 100?"
-      },
-      "options": [
-        {
-          "text": "20"
-        },
-        {
-          "text": "25"
+          "text": "15"
         },
         {
           "text": "30"
         },
         {
-          "text": "100"
+          "text": "60"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "100% = alles = het hele getal. 100% van 30 is gewoon 30"
+    },
+    {
+      "id": 13,
+      "type": "multiple_choice",
+      "theme": "stambreuken",
+      "question": {
+        "text": "Een wedstrijd duurt 60 minuten. Na 1/6 van de tijd fluit de scheidsrechter. Hoeveel minuten is er gespeeld?"
+      },
+      "options": [
+        {
+          "text": "6 minuten"
+        },
+        {
+          "text": "10 minuten"
+        },
+        {
+          "text": "12 minuten"
+        },
+        {
+          "text": "15 minuten"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "25% = 25/100. Dus 25% van 100 = (25 × 100) ÷ 100"
+      "hint": "1/6 van 60 betekent: 60 verdelen in 6 delen. 60 ÷ 6 = ?"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "theme": "stambreuken",
+      "question": {
+        "text": "Hoeveel is 1/8 van 40 meter?"
+      },
+      "options": [
+        {
+          "text": "4 meter"
+        },
+        {
+          "text": "5 meter"
+        },
+        {
+          "text": "8 meter"
+        },
+        {
+          "text": "10 meter"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "Verdeel 40 meter in 8 gelijke delen. 40 ÷ 8 = ?"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "theme": "getallenlijn",
+      "question": {
+        "text": "Op een wandeling van 1 kilometer heb je al 1/4 afgelegd. Hoeveel meter heb je al gelopen?"
+      },
+      "options": [
+        {
+          "text": "100 meter"
+        },
+        {
+          "text": "250 meter"
+        },
+        {
+          "text": "400 meter"
+        },
+        {
+          "text": "500 meter"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "1 kilometer = 1000 meter. 1/4 van 1000 = 1000 ÷ 4 = ?"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "theme": "decimalen_breuken",
+      "question": {
+        "text": "Als je €0,25 hebt, welk deel van een euro is dat?"
+      },
+      "options": [
+        {
+          "text": "1/2"
+        },
+        {
+          "text": "1/4"
+        },
+        {
+          "text": "1/5"
+        },
+        {
+          "text": "1/10"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "€0,25 = 25 cent = een kwartje = 1/4 euro"
     },
     {
       "id": 17,
       "type": "multiple_choice",
-      "theme": "procenten",
+      "theme": "stambreuken",
       "question": {
-        "text": "Wat is 10% van 100?"
+        "text": "In de klas zitten 24 kinderen. 1/8 van de kinderen heeft een bril. Hoeveel kinderen is dat?"
       },
       "options": [
         {
-          "text": "5"
+          "text": "2 kinderen"
         },
         {
-          "text": "10"
+          "text": "3 kinderen"
         },
         {
-          "text": "15"
+          "text": "4 kinderen"
         },
         {
-          "text": "100"
+          "text": "8 kinderen"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "10% = 10/100. Dus 10% van 100 = (10 × 100) ÷ 100"
+      "hint": "1/8 van 24 = 24 ÷ 8 = ?"
     },
     {
       "id": 18,
       "type": "multiple_choice",
-      "theme": "procenten",
+      "theme": "percentages",
       "question": {
-        "text": "Wat is 50% van 200?"
+        "text": "Je hebt een toets gemaakt met 20 vragen. Je hebt 100% goed. Hoeveel vragen heb je goed?"
       },
       "options": [
         {
-          "text": "95"
+          "text": "10 vragen"
         },
         {
-          "text": "100"
+          "text": "15 vragen"
         },
         {
-          "text": "105"
+          "text": "20 vragen"
         },
         {
-          "text": "200"
+          "text": "25 vragen"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 2
       },
-      "hint": "50% = 50/100. Dus 50% van 200 = (50 × 200) ÷ 100"
+      "hint": "100% = alles = allemaal goed"
     },
     {
       "id": 19,
       "type": "multiple_choice",
-      "theme": "procenten",
+      "theme": "getallenlijn",
       "question": {
-        "text": "Wat is 25% van 80?"
+        "text": "Op de getallenlijn van 0 tot 1 staat een punt bij 7/10. Waar staat dat punt ongeveer?"
       },
       "options": [
         {
-          "text": "15"
+          "text": "Vlak bij 0"
         },
         {
-          "text": "20"
+          "text": "Bij de helft"
         },
         {
-          "text": "25"
+          "text": "Voorbij de helft, dicht bij 1"
         },
         {
-          "text": "80"
+          "text": "Voorbij 1"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 2
       },
-      "hint": "25% = 25/100. Dus 25% van 80 = (25 × 80) ÷ 100"
+      "hint": "7/10 is meer dan de helft (5/10), dus voorbij het midden richting 1"
     },
     {
       "id": 20,
       "type": "multiple_choice",
-      "theme": "decimalen-honderdsten",
+      "theme": "stambreuken",
       "question": {
-        "text": "0.25 = ?"
+        "text": "Een pizza heeft 10 plakken. Jij eet er 1. Welk deel van de pizza heb jij gegeten?"
       },
       "options": [
         {
-          "text": "25/10"
+          "text": "1/5"
         },
         {
-          "text": "25/100"
+          "text": "1/10"
+        },
+        {
+          "text": "1/2"
         },
         {
           "text": "2/10"
-        },
-        {
-          "text": "1/4"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Tel hoeveel honderdsten"
-    },
-    {
-      "id": 21,
-      "type": "multiple_choice",
-      "theme": "decimalen-honderdsten",
-      "question": {
-        "text": "0.5 = ?"
-      },
-      "options": [
-        {
-          "text": "50/10"
-        },
-        {
-          "text": "50/100"
-        },
-        {
-          "text": "5/10"
-        },
-        {
-          "text": "1/2"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Tel hoeveel honderdsten"
-    },
-    {
-      "id": 22,
-      "type": "multiple_choice",
-      "theme": "decimalen-honderdsten",
-      "question": {
-        "text": "0.75 = ?"
-      },
-      "options": [
-        {
-          "text": "75/10"
-        },
-        {
-          "text": "75/100"
-        },
-        {
-          "text": "7/10"
-        },
-        {
-          "text": "1/1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Tel hoeveel honderdsten"
-    },
-    {
-      "id": 23,
-      "type": "multiple_choice",
-      "theme": "decimalen-honderdsten",
-      "question": {
-        "text": "1.0 = ?"
-      },
-      "options": [
-        {
-          "text": "100/10"
-        },
-        {
-          "text": "100/100"
-        },
-        {
-          "text": "10/10"
-        },
-        {
-          "text": "1/1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Tel hoeveel honderdsten"
-    },
-    {
-      "id": 24,
-      "type": "multiple_choice",
-      "theme": "decimalen-honderdsten",
-      "question": {
-        "text": "1.25 = ?"
-      },
-      "options": [
-        {
-          "text": "125/10"
-        },
-        {
-          "text": "125/100"
-        },
-        {
-          "text": "12/10"
-        },
-        {
-          "text": "1/0"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Tel hoeveel honderdsten"
-    },
-    {
-      "id": 25,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 25: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 26,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 26: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 27,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 27: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 28,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 28: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 29,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 29: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 30,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 30: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 31,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 31: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 32,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 32: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 33,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 33: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 34,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 34: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 35,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 35: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 36,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 36: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 37,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 37: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 38,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 38: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 39,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 39: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 40,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 40: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 41,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 41: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 42,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 42: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 43,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 43: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 44,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 44: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 45,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 45: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 46,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 46: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 47,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 47: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 48,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 48: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 49,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 49: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 50,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 50: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 51,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 51: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 52,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 52: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 53,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 53: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 54,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 54: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 55,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 55: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
+      "hint": "Je eet 1 van de 10 plakken = 1/10"
     }
   ],
   "settings": {

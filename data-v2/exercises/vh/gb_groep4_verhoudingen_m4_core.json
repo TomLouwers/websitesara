@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0.0",
   "metadata": {
-    "id": "gb_groep4_verhoudingen_m4",
+    "id": "gb_groep4_verhoudingen_m4_core",
     "type": "multiple_choice",
     "category": "gb",
     "grade": 4,
@@ -11,20 +11,21 @@
     "slo_alignment": {
       "kerndoelen": [
         "K28",
-        "R2"
+        "K29"
       ],
       "rekendomeinen": [
         "verhoudingen"
       ],
       "tussendoelen": [
-        "4R_verhoudingen_m4"
+        "4V1_verdelen_in_gelijke_delen",
+        "4V2_breuken_helft_kwart"
       ],
       "referentieniveau": "1F",
       "cognitive_level": "toepassen"
     }
   },
   "display": {
-    "title": "Breuken en Procenten Groep 4"
+    "title": "Verdelen en Breuken Groep 4"
   },
   "content": {
     "instruction": "Kies het goede antwoord:"
@@ -33,1217 +34,542 @@
     {
       "id": 1,
       "type": "multiple_choice",
-      "theme": "fractie-notatie",
+      "theme": "verdelen-visueel",
       "question": {
-        "text": "Schrijf als breuk: de helft"
+        "text": "Emma heeft een pizza. Ze verdeelt de pizza in 4 gelijke stukken. Hoeveel stukken pizza krijgt elk kind als er 4 kinderen zijn?"
       },
       "options": [
         {
-          "text": "1/2"
+          "text": "1 stuk"
         },
         {
-          "text": "1/4"
+          "text": "2 stukken"
         },
         {
-          "text": "1/5"
+          "text": "3 stukken"
         },
         {
-          "text": "1/10"
+          "text": "4 stukken"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 0
       },
-      "hint": "De helft = 1/2, een kwart = 1/4, een vijfde = 1/5"
+      "hint": "Verdeel 4 stukken eerlijk onder 4 kinderen. Hoeveel krijgt elk kind?"
     },
     {
       "id": 2,
       "type": "multiple_choice",
-      "theme": "fractie-notatie",
+      "theme": "verdelen-visueel",
       "question": {
-        "text": "Schrijf als breuk: een kwart"
+        "text": "De bakker heeft een chocoladereep met 8 blokjes. Hij wil deze verdelen in 2 gelijke delen. Hoeveel blokjes zitten er in elk deel?"
       },
       "options": [
         {
-          "text": "1/2"
+          "text": "2 blokjes"
         },
         {
-          "text": "1/4"
+          "text": "3 blokjes"
         },
         {
-          "text": "1/5"
+          "text": "4 blokjes"
         },
         {
-          "text": "1/10"
+          "text": "6 blokjes"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 2
       },
-      "hint": "De helft = 1/2, een kwart = 1/4, een vijfde = 1/5"
+      "hint": "Verdeel 8 blokjes in 2 gelijke delen: 8 : 2 = ?"
     },
     {
       "id": 3,
       "type": "multiple_choice",
-      "theme": "fractie-notatie",
+      "theme": "breuk-helft",
       "question": {
-        "text": "Schrijf als breuk: een vijfde"
+        "text": "Op het verjaardagsfeest is er een taart. Anna eet de helft van de taart. Welke breuk heeft Anna gegeten?"
       },
       "options": [
         {
           "text": "1/2"
-        },
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/5"
-        },
-        {
-          "text": "1/10"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "De helft = 1/2, een kwart = 1/4, een vijfde = 1/5"
-    },
-    {
-      "id": 4,
-      "type": "multiple_choice",
-      "theme": "fractie-notatie",
-      "question": {
-        "text": "Schrijf als breuk: de helft"
-      },
-      "options": [
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/5"
-        },
-        {
-          "text": "1/10"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "De helft = 1/2, een kwart = 1/4, een vijfde = 1/5"
-    },
-    {
-      "id": 5,
-      "type": "multiple_choice",
-      "theme": "fractie-notatie",
-      "question": {
-        "text": "Schrijf als breuk: een kwart"
-      },
-      "options": [
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/5"
-        },
-        {
-          "text": "1/10"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "De helft = 1/2, een kwart = 1/4, een vijfde = 1/5"
-    },
-    {
-      "id": 6,
-      "type": "multiple_choice",
-      "theme": "fractie-notatie",
-      "question": {
-        "text": "Schrijf als breuk: een vijfde"
-      },
-      "options": [
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/5"
-        },
-        {
-          "text": "1/10"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "De helft = 1/2, een kwart = 1/4, een vijfde = 1/5"
-    },
-    {
-      "id": 7,
-      "type": "multiple_choice",
-      "theme": "fractie-notatie",
-      "question": {
-        "text": "Schrijf als breuk: de helft"
-      },
-      "options": [
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/5"
-        },
-        {
-          "text": "1/10"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "De helft = 1/2, een kwart = 1/4, een vijfde = 1/5"
-    },
-    {
-      "id": 8,
-      "type": "multiple_choice",
-      "theme": "fractie-notatie",
-      "question": {
-        "text": "Schrijf als breuk: een kwart"
-      },
-      "options": [
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/5"
-        },
-        {
-          "text": "1/10"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "De helft = 1/2, een kwart = 1/4, een vijfde = 1/5"
-    },
-    {
-      "id": 9,
-      "type": "multiple_choice",
-      "theme": "fractie-hoeveelheid",
-      "question": {
-        "text": "Wat is 1/4 van 20?"
-      },
-      "options": [
-        {
-          "text": "4"
-        },
-        {
-          "text": "5"
-        },
-        {
-          "text": "6"
-        },
-        {
-          "text": "10"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1/4 betekent delen door 4. 20 ÷ 4 = ?"
-    },
-    {
-      "id": 10,
-      "type": "multiple_choice",
-      "theme": "fractie-hoeveelheid",
-      "question": {
-        "text": "Wat is 1/5 van 100?"
-      },
-      "options": [
-        {
-          "text": "19"
-        },
-        {
-          "text": "20"
-        },
-        {
-          "text": "21"
-        },
-        {
-          "text": "50"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1/5 betekent delen door 5. 100 ÷ 5 = ?"
-    },
-    {
-      "id": 11,
-      "type": "multiple_choice",
-      "theme": "fractie-hoeveelheid",
-      "question": {
-        "text": "Wat is 1/4 van 40?"
-      },
-      "options": [
-        {
-          "text": "9"
-        },
-        {
-          "text": "10"
-        },
-        {
-          "text": "11"
-        },
-        {
-          "text": "20"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1/4 betekent delen door 4. 40 ÷ 4 = ?"
-    },
-    {
-      "id": 12,
-      "type": "multiple_choice",
-      "theme": "fractie-hoeveelheid",
-      "question": {
-        "text": "Wat is 1/5 van 50?"
-      },
-      "options": [
-        {
-          "text": "9"
-        },
-        {
-          "text": "10"
-        },
-        {
-          "text": "11"
-        },
-        {
-          "text": "25"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1/5 betekent delen door 5. 50 ÷ 5 = ?"
-    },
-    {
-      "id": 13,
-      "type": "multiple_choice",
-      "theme": "fractie-hoeveelheid",
-      "question": {
-        "text": "Wat is 1/4 van 30?"
-      },
-      "options": [
-        {
-          "text": "6"
-        },
-        {
-          "text": "7"
-        },
-        {
-          "text": "8"
-        },
-        {
-          "text": "15"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1/4 betekent delen door 4. 30 ÷ 4 = ?"
-    },
-    {
-      "id": 14,
-      "type": "multiple_choice",
-      "theme": "fractie-hoeveelheid",
-      "question": {
-        "text": "Wat is 1/5 van 60?"
-      },
-      "options": [
-        {
-          "text": "11"
-        },
-        {
-          "text": "12"
-        },
-        {
-          "text": "13"
-        },
-        {
-          "text": "30"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1/5 betekent delen door 5. 60 ÷ 5 = ?"
-    },
-    {
-      "id": 15,
-      "type": "multiple_choice",
-      "theme": "vergelijken",
-      "question": {
-        "text": "Wat is groter: 1/5 of 2/5?"
-      },
-      "options": [
-        {
-          "text": "1/5"
-        },
-        {
-          "text": "2/5"
-        },
-        {
-          "text": "ze zijn gelijk"
-        },
-        {
-          "text": "weet ik niet"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Bij dezelfde noemer is de breuk met grotere teller groter"
-    },
-    {
-      "id": 16,
-      "type": "multiple_choice",
-      "theme": "vergelijken",
-      "question": {
-        "text": "Wat is groter: 2/5 of 3/5?"
-      },
-      "options": [
-        {
-          "text": "2/5"
-        },
-        {
-          "text": "3/5"
-        },
-        {
-          "text": "ze zijn gelijk"
-        },
-        {
-          "text": "weet ik niet"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Bij dezelfde noemer is de breuk met grotere teller groter"
-    },
-    {
-      "id": 17,
-      "type": "multiple_choice",
-      "theme": "vergelijken",
-      "question": {
-        "text": "Wat is groter: 3/5 of 4/5?"
-      },
-      "options": [
-        {
-          "text": "3/5"
-        },
-        {
-          "text": "4/5"
-        },
-        {
-          "text": "ze zijn gelijk"
-        },
-        {
-          "text": "weet ik niet"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Bij dezelfde noemer is de breuk met grotere teller groter"
-    },
-    {
-      "id": 18,
-      "type": "multiple_choice",
-      "theme": "vergelijken",
-      "question": {
-        "text": "Wat is groter: 4/5 of 5/5?"
-      },
-      "options": [
-        {
-          "text": "4/5"
-        },
-        {
-          "text": "5/5"
-        },
-        {
-          "text": "ze zijn gelijk"
-        },
-        {
-          "text": "weet ik niet"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Bij dezelfde noemer is de breuk met grotere teller groter"
-    },
-    {
-      "id": 19,
-      "type": "multiple_choice",
-      "theme": "vergelijken",
-      "question": {
-        "text": "Wat is groter: 5/5 of 6/5?"
-      },
-      "options": [
-        {
-          "text": "5/5"
-        },
-        {
-          "text": "6/5"
-        },
-        {
-          "text": "ze zijn gelijk"
-        },
-        {
-          "text": "weet ik niet"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Bij dezelfde noemer is de breuk met grotere teller groter"
-    },
-    {
-      "id": 20,
-      "type": "multiple_choice",
-      "theme": "vergelijken",
-      "question": {
-        "text": "Wat is groter: 6/5 of 7/5?"
-      },
-      "options": [
-        {
-          "text": "6/5"
-        },
-        {
-          "text": "7/5"
-        },
-        {
-          "text": "ze zijn gelijk"
-        },
-        {
-          "text": "weet ik niet"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Bij dezelfde noemer is de breuk met grotere teller groter"
-    },
-    {
-      "id": 21,
-      "type": "multiple_choice",
-      "theme": "equivalent",
-      "question": {
-        "text": "Welke breuk is hetzelfde als 2/4?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1/5"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "2/4 = 1/2"
-    },
-    {
-      "id": 22,
-      "type": "multiple_choice",
-      "theme": "equivalent",
-      "question": {
-        "text": "Welke breuk is hetzelfde als 5/10?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1/5"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "5/10 = 1/2"
-    },
-    {
-      "id": 23,
-      "type": "multiple_choice",
-      "theme": "equivalent",
-      "question": {
-        "text": "Welke breuk is hetzelfde als 2/6?"
-      },
-      "options": [
-        {
-          "text": "1/4"
         },
         {
           "text": "1/3"
         },
         {
-          "text": "3/4"
+          "text": "1/4"
         },
         {
-          "text": "1/5"
+          "text": "2/4"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "De helft betekent 1 van de 2 delen. Dat schrijven we als 1/2."
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "theme": "breuk-kwart",
+      "question": {
+        "text": "Tim heeft 4 snoepjes. Hij eet een kwart van zijn snoepjes. Hoeveel snoepjes eet Tim?"
+      },
+      "options": [
+        {
+          "text": "1 snoepje"
+        },
+        {
+          "text": "2 snoepjes"
+        },
+        {
+          "text": "3 snoepjes"
+        },
+        {
+          "text": "4 snoepjes"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Een kwart is 1/4. Van 4 snoepjes is 1/4 gelijk aan 4 : 4 = 1 snoepje."
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "theme": "breuk-helft",
+      "question": {
+        "text": "In de speeltuin zijn 10 kinderen. De helft van de kinderen speelt op de schommel. Hoeveel kinderen is dat?"
+      },
+      "options": [
+        {
+          "text": "3 kinderen"
+        },
+        {
+          "text": "4 kinderen"
+        },
+        {
+          "text": "5 kinderen"
+        },
+        {
+          "text": "6 kinderen"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "De helft van 10 is 10 : 2 = 5 kinderen."
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "theme": "verdelen-visueel",
+      "question": {
+        "text": "Lotte heeft 12 kralen. Ze wil deze verdelen in 3 gelijke hoopjes. Hoeveel kralen komen er in elk hoopje?"
+      },
+      "options": [
+        {
+          "text": "2 kralen"
+        },
+        {
+          "text": "3 kralen"
+        },
+        {
+          "text": "4 kralen"
+        },
+        {
+          "text": "6 kralen"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Verdeel 12 kralen in 3 gelijke hoopjes: 12 : 3 = ?"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "theme": "breuk-kwart",
+      "question": {
+        "text": "Bij de bakkerij koopt vader een appeltaart. Hij snijdt de taart in 4 gelijke stukken. Hoeveel taart is 1 stuk?"
+      },
+      "options": [
+        {
+          "text": "een heel"
+        },
+        {
+          "text": "een half"
+        },
+        {
+          "text": "een derde"
+        },
+        {
+          "text": "een kwart"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 3
+      },
+      "hint": "Als je iets in 4 gelijke stukken snijdt, is 1 stuk een kwart (1/4)."
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "theme": "breuk-helft",
+      "question": {
+        "text": "Sophie heeft 8 euro. Ze geeft de helft aan haar broertje. Hoeveel euro geeft ze aan haar broertje?"
+      },
+      "options": [
+        {
+          "text": "2 euro"
+        },
+        {
+          "text": "3 euro"
+        },
+        {
+          "text": "4 euro"
+        },
+        {
+          "text": "6 euro"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "De helft van 8 euro is 8 : 2 = 4 euro."
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "theme": "breuk-kwart",
+      "question": {
+        "text": "In de pizzeria bestelt Jamal een pizza met 8 punten. Hij eet een kwart van de pizza. Hoeveel punten eet hij?"
+      },
+      "options": [
+        {
+          "text": "1 punt"
+        },
+        {
+          "text": "2 punten"
+        },
+        {
+          "text": "3 punten"
+        },
+        {
+          "text": "4 punten"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "2/6 = 1/3"
+      "hint": "Een kwart (1/4) van 8 punten is 8 : 4 = 2 punten."
     },
     {
-      "id": 24,
+      "id": 10,
       "type": "multiple_choice",
-      "theme": "equivalent",
+      "theme": "verdelen-visueel",
       "question": {
-        "text": "Welke breuk is hetzelfde als 3/6?"
+        "text": "De juf heeft 6 viltstiften. Ze wil deze verdelen in 2 gelijke groepjes voor knutselen. Hoeveel viltstiften komen er in elk groepje?"
       },
       "options": [
         {
-          "text": "1/4"
+          "text": "2 viltstiften"
         },
         {
-          "text": "1/2"
+          "text": "3 viltstiften"
         },
         {
-          "text": "3/4"
+          "text": "4 viltstiften"
         },
         {
-          "text": "1/5"
+          "text": "6 viltstiften"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "3/6 = 1/2"
+      "hint": "Verdeel 6 viltstiften in 2 gelijke groepjes: 6 : 2 = ?"
     },
     {
-      "id": 25,
+      "id": 11,
       "type": "multiple_choice",
-      "theme": "gemengd",
+      "theme": "breuk-helft",
       "question": {
-        "text": "1 heel en nog 1/2 is..."
+        "text": "Een appelsap fles bevat 1 liter. Yasmin drinkt de helft van de fles leeg. Hoeveel liter heeft ze gedronken?"
       },
       "options": [
         {
-          "text": "1"
+          "text": "een kwart liter"
         },
         {
-          "text": "1 1/2"
+          "text": "een halve liter"
         },
         {
-          "text": "2"
+          "text": "drie kwart liter"
         },
         {
-          "text": "1/2"
+          "text": "een hele liter"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "1 + 1/2 = 1 1/2 (gemengd getal)"
+      "hint": "De helft van 1 liter is een halve liter. Dat is 1/2 liter."
     },
     {
-      "id": 26,
+      "id": 12,
       "type": "multiple_choice",
-      "theme": "gemengd",
+      "theme": "breuk-kwart",
       "question": {
-        "text": "1 heel en nog 1/2 is..."
+        "text": "Op de speelgoedwinkel kost een auto 12 euro. Luuk heeft een kwart van dat bedrag gespaard. Hoeveel euro heeft Luuk gespaard?"
       },
       "options": [
         {
-          "text": "1"
+          "text": "2 euro"
         },
         {
-          "text": "1 1/2"
+          "text": "3 euro"
         },
         {
-          "text": "2"
+          "text": "4 euro"
         },
         {
-          "text": "1/2"
+          "text": "6 euro"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "1 + 1/2 = 1 1/2 (gemengd getal)"
+      "hint": "Een kwart (1/4) van 12 euro is 12 : 4 = 3 euro."
     },
     {
-      "id": 27,
+      "id": 13,
       "type": "multiple_choice",
-      "theme": "gemengd",
+      "theme": "verdelen-visueel",
       "question": {
-        "text": "1 heel en nog 1/2 is..."
+        "text": "Moeder bakt 16 koekjes. Ze verdeelt deze eerlijk over 4 kinderen. Hoeveel koekjes krijgt elk kind?"
       },
       "options": [
         {
-          "text": "1"
+          "text": "2 koekjes"
         },
         {
-          "text": "1 1/2"
+          "text": "3 koekjes"
         },
         {
-          "text": "2"
+          "text": "4 koekjes"
         },
         {
-          "text": "1/2"
+          "text": "5 koekjes"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Verdeel 16 koekjes eerlijk over 4 kinderen: 16 : 4 = ?"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "theme": "breuk-helft",
+      "question": {
+        "text": "In de klas zijn 24 leerlingen. De helft van de leerlingen is een jongen. Hoeveel jongens zijn er?"
+      },
+      "options": [
+        {
+          "text": "6 jongens"
+        },
+        {
+          "text": "8 jongens"
+        },
+        {
+          "text": "12 jongens"
+        },
+        {
+          "text": "18 jongens"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "De helft van 24 leerlingen is 24 : 2 = 12 jongens."
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "theme": "breuk-kwart",
+      "question": {
+        "text": "Bij de winkel koopt Noor een pak met 20 stroopwafels. Ze eet een kwart van het pak op. Hoeveel stroopwafels eet ze?"
+      },
+      "options": [
+        {
+          "text": "4 stroopwafels"
+        },
+        {
+          "text": "5 stroopwafels"
+        },
+        {
+          "text": "8 stroopwafels"
+        },
+        {
+          "text": "10 stroopwafels"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "1 + 1/2 = 1 1/2 (gemengd getal)"
+      "hint": "Een kwart (1/4) van 20 stroopwafels is 20 : 4 = 5 stroopwafels."
     },
     {
-      "id": 28,
+      "id": 16,
       "type": "multiple_choice",
-      "theme": "gemengd",
+      "theme": "verdelen-visueel",
       "question": {
-        "text": "1 heel en nog 1/2 is..."
+        "text": "In de tuin staan 9 bloemen. Opa wil deze verdelen in 3 gelijke vaasjes. Hoeveel bloemen komen er in elk vaasje?"
       },
       "options": [
         {
-          "text": "1"
+          "text": "2 bloemen"
         },
         {
-          "text": "1 1/2"
+          "text": "3 bloemen"
         },
         {
-          "text": "2"
+          "text": "4 bloemen"
         },
         {
-          "text": "1/2"
+          "text": "5 bloemen"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "1 + 1/2 = 1 1/2 (gemengd getal)"
+      "hint": "Verdeel 9 bloemen in 3 gelijke vaasjes: 9 : 3 = ?"
     },
     {
-      "id": 29,
+      "id": 17,
       "type": "multiple_choice",
-      "theme": "gemengd",
+      "theme": "breuk-helft",
       "question": {
-        "text": "1 heel en nog 1/2 is..."
+        "text": "Hassan heeft 14 voetbalplaatjes. Hij geeft de helft aan zijn vriend. Hoeveel plaatjes geeft hij weg?"
       },
       "options": [
         {
-          "text": "1"
+          "text": "4 plaatjes"
         },
         {
-          "text": "1 1/2"
+          "text": "5 plaatjes"
         },
         {
-          "text": "2"
+          "text": "6 plaatjes"
         },
         {
-          "text": "1/2"
+          "text": "7 plaatjes"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 3
+      },
+      "hint": "De helft van 14 plaatjes is 14 : 2 = 7 plaatjes."
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "theme": "breuk-kwart",
+      "question": {
+        "text": "De pizzeria verkoopt een grote pizza met 12 stukken. Fenna neemt een kwart van de pizza. Hoeveel stukken is dat?"
+      },
+      "options": [
+        {
+          "text": "2 stukken"
+        },
+        {
+          "text": "3 stukken"
+        },
+        {
+          "text": "4 stukken"
+        },
+        {
+          "text": "6 stukken"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "1 + 1/2 = 1 1/2 (gemengd getal)"
+      "hint": "Een kwart (1/4) van 12 stukken is 12 : 4 = 3 stukken."
     },
     {
-      "id": 30,
+      "id": 19,
       "type": "multiple_choice",
-      "theme": "gemengd",
+      "theme": "verdelen-visueel",
       "question": {
-        "text": "1 heel en nog 1/2 is..."
+        "text": "Bij het knutselen heeft Sara 15 stickers. Ze wil deze verdelen in 3 gelijke groepjes. Hoeveel stickers komen er in elk groepje?"
       },
       "options": [
         {
-          "text": "1"
+          "text": "3 stickers"
         },
         {
-          "text": "1 1/2"
+          "text": "4 stickers"
         },
         {
-          "text": "2"
+          "text": "5 stickers"
         },
         {
-          "text": "1/2"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1 + 1/2 = 1 1/2 (gemengd getal)"
-    },
-    {
-      "id": 31,
-      "type": "multiple_choice",
-      "theme": "gemengd",
-      "question": {
-        "text": "1 heel en nog 1/2 is..."
-      },
-      "options": [
-        {
-          "text": "1"
-        },
-        {
-          "text": "1 1/2"
-        },
-        {
-          "text": "2"
-        },
-        {
-          "text": "1/2"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1 + 1/2 = 1 1/2 (gemengd getal)"
-    },
-    {
-      "id": 32,
-      "type": "multiple_choice",
-      "theme": "gemengd",
-      "question": {
-        "text": "1 heel en nog 1/2 is..."
-      },
-      "options": [
-        {
-          "text": "1"
-        },
-        {
-          "text": "1 1/2"
-        },
-        {
-          "text": "2"
-        },
-        {
-          "text": "1/2"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1 + 1/2 = 1 1/2 (gemengd getal)"
-    },
-    {
-      "id": 33,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 33: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
+          "text": "6 stickers"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 2
       },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
+      "hint": "Verdeel 15 stickers in 3 gelijke groepjes: 15 : 3 = ?"
     },
     {
-      "id": 34,
+      "id": 20,
       "type": "multiple_choice",
-      "theme": "oefening",
+      "theme": "breuk-helft",
       "question": {
-        "text": "Oefenvraag 34: 1/2 + 1/4 = ?"
+        "text": "In de bakkerij koopt vader 6 broodjes. De helft van de broodjes is een kaasbroodje. Hoeveel kaasbroodjes zijn er?"
       },
       "options": [
         {
-          "text": "1/4"
+          "text": "1 kaasbroodje"
         },
         {
-          "text": "1/2"
+          "text": "2 kaasbroodjes"
         },
         {
-          "text": "3/4"
+          "text": "3 kaasbroodjes"
         },
         {
-          "text": "1"
+          "text": "4 kaasbroodjes"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 2
       },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 35,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 35: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 36,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 36: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 37,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 37: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 38,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 38: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 39,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 39: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 40,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 40: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 41,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 41: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 42,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 42: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 43,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 43: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 44,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 44: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 45,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 45: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
+      "hint": "De helft van 6 broodjes is 6 : 2 = 3 kaasbroodjes."
     }
   ],
   "settings": {
