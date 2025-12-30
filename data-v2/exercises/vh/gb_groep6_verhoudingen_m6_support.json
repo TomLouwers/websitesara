@@ -1,3386 +1,577 @@
 {
   "schema_version": "2.0.0",
-  "exercise_id": "gb_groep6_verhoudingen_m6",
+  "metadata": {
+    "id": "gb_groep6_verhoudingen_m6_support",
+    "type": "multiple_choice",
+    "category": "gb",
+    "grade": 6,
+    "level": "M6",
+    "language": "nl-NL",
+    "domain": "verhoudingen",
+    "slo_alignment": {
+      "kerndoelen": [
+        "K28",
+        "K29"
+      ],
+      "rekendomeinen": [
+        "verhoudingen"
+      ],
+      "tussendoelen": [
+        "6R_verhoudingen_m6"
+      ],
+      "referentieniveau": "1F",
+      "cognitive_level": "toepassen"
+    }
+  },
+  "display": {
+    "title": "Verhoudingen en Breuken Groep 6 - Ondersteuning"
+  },
+  "content": {
+    "instruction": "Kies het goede antwoord:"
+  },
   "items": [
     {
-      "item_id": 1,
-      "learning": {
-        "tips": [
-          "Denk aan een taart die je in stukken verdeelt",
-          "De onderste getal (noemer) zegt in hoeveel stukken",
-          "De bovenste getal (teller) zegt hoeveel stukken je hebt"
-        ],
-        "skill_description": "Breuken begrijpen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
+      "id": 1,
+      "type": "multiple_choice",
+      "theme": "breuken-verschillende-noemers",
+      "question": {
+        "text": "Reken uit: 1/2 + 1/4 = ?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+      "options": [
+        {
+          "text": "2/6"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "3/4"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 2,
-      "learning": {
-        "tips": [
-          "Denk aan een taart die je in stukken verdeelt",
-          "De onderste getal (noemer) zegt in hoeveel stukken",
-          "De bovenste getal (teller) zegt hoeveel stukken je hebt"
-        ],
-        "skill_description": "Breuken begrijpen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 3,
-      "learning": {
-        "tips": [
-          "Denk aan een taart die je in stukken verdeelt",
-          "De onderste getal (noemer) zegt in hoeveel stukken",
-          "De bovenste getal (teller) zegt hoeveel stukken je hebt"
-        ],
-        "skill_description": "Breuken begrijpen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 4,
-      "learning": {
-        "tips": [
-          "Denk aan een taart die je in stukken verdeelt",
-          "De onderste getal (noemer) zegt in hoeveel stukken",
-          "De bovenste getal (teller) zegt hoeveel stukken je hebt"
-        ],
-        "skill_description": "Breuken begrijpen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 5,
-      "learning": {
-        "tips": [
-          "Denk aan een taart die je in stukken verdeelt",
-          "De onderste getal (noemer) zegt in hoeveel stukken",
-          "De bovenste getal (teller) zegt hoeveel stukken je hebt"
-        ],
-        "skill_description": "Breuken begrijpen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 6,
-      "learning": {
-        "tips": [
-          "Denk aan een taart die je in stukken verdeelt",
-          "De onderste getal (noemer) zegt in hoeveel stukken",
-          "De bovenste getal (teller) zegt hoeveel stukken je hebt"
-        ],
-        "skill_description": "Breuken begrijpen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 7,
-      "learning": {
-        "tips": [
-          "Denk aan een taart die je in stukken verdeelt",
-          "De onderste getal (noemer) zegt in hoeveel stukken",
-          "De bovenste getal (teller) zegt hoeveel stukken je hebt"
-        ],
-        "skill_description": "Breuken begrijpen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 8,
-      "learning": {
-        "tips": [
-          "Denk aan een taart die je in stukken verdeelt",
-          "De onderste getal (noemer) zegt in hoeveel stukken",
-          "De bovenste getal (teller) zegt hoeveel stukken je hebt"
-        ],
-        "skill_description": "Breuken begrijpen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 9,
-      "learning": {
-        "tips": [
-          "Denk aan een taart die je in stukken verdeelt",
-          "De onderste getal (noemer) zegt in hoeveel stukken",
-          "De bovenste getal (teller) zegt hoeveel stukken je hebt"
-        ],
-        "skill_description": "Breuken begrijpen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 10,
-      "learning": {
-        "tips": [
-          "Denk aan een taart die je in stukken verdeelt",
-          "De onderste getal (noemer) zegt in hoeveel stukken",
-          "De bovenste getal (teller) zegt hoeveel stukken je hebt"
-        ],
-        "skill_description": "Breuken begrijpen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 11,
-      "learning": {
-        "tips": [
-          "Denk aan een taart die je in stukken verdeelt",
-          "De onderste getal (noemer) zegt in hoeveel stukken",
-          "De bovenste getal (teller) zegt hoeveel stukken je hebt"
-        ],
-        "skill_description": "Breuken begrijpen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 12,
-      "learning": {
-        "tips": [
-          "Denk aan een taart die je in stukken verdeelt",
-          "De onderste getal (noemer) zegt in hoeveel stukken",
-          "De bovenste getal (teller) zegt hoeveel stukken je hebt"
-        ],
-        "skill_description": "Breuken begrijpen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 13,
-      "learning": {
-        "tips": [
-          "Denk aan een taart die je in stukken verdeelt",
-          "De onderste getal (noemer) zegt in hoeveel stukken",
-          "De bovenste getal (teller) zegt hoeveel stukken je hebt"
-        ],
-        "skill_description": "Breuken begrijpen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 14,
-      "learning": {
-        "tips": [
-          "Denk aan een taart die je in stukken verdeelt",
-          "De onderste getal (noemer) zegt in hoeveel stukken",
-          "De bovenste getal (teller) zegt hoeveel stukken je hebt"
-        ],
-        "skill_description": "Breuken begrijpen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 15,
-      "learning": {
-        "tips": [
-          "Denk aan een taart die je in stukken verdeelt",
-          "De onderste getal (noemer) zegt in hoeveel stukken",
-          "De bovenste getal (teller) zegt hoeveel stukken je hebt"
-        ],
-        "skill_description": "Breuken begrijpen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 16,
-      "learning": {
-        "tips": [
-          "Procent betekent 'per 100'",
-          "50% = 50/100 = 1/2",
-          "Om een percentage te berekenen: (deel × percentage) ÷ 100"
-        ],
-        "skill_description": "Percentages berekenen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 17,
-      "learning": {
-        "tips": [
-          "Procent betekent 'per 100'",
-          "50% = 50/100 = 1/2",
-          "Om een percentage te berekenen: (deel × percentage) ÷ 100"
-        ],
-        "skill_description": "Percentages berekenen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 18,
-      "learning": {
-        "tips": [
-          "Procent betekent 'per 100'",
-          "50% = 50/100 = 1/2",
-          "Om een percentage te berekenen: (deel × percentage) ÷ 100"
-        ],
-        "skill_description": "Percentages berekenen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 19,
-      "learning": {
-        "tips": [
-          "Procent betekent 'per 100'",
-          "50% = 50/100 = 1/2",
-          "Om een percentage te berekenen: (deel × percentage) ÷ 100"
-        ],
-        "skill_description": "Percentages berekenen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 20,
-      "learning": {
-        "tips": [
-          "Procent betekent 'per 100'",
-          "50% = 50/100 = 1/2",
-          "Om een percentage te berekenen: (deel × percentage) ÷ 100"
-        ],
-        "skill_description": "Percentages berekenen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 21,
-      "learning": {
-        "tips": [
-          "Procent betekent 'per 100'",
-          "50% = 50/100 = 1/2",
-          "Om een percentage te berekenen: (deel × percentage) ÷ 100"
-        ],
-        "skill_description": "Percentages berekenen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 22,
-      "learning": {
-        "tips": [
-          "Procent betekent 'per 100'",
-          "50% = 50/100 = 1/2",
-          "Om een percentage te berekenen: (deel × percentage) ÷ 100"
-        ],
-        "skill_description": "Percentages berekenen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 23,
-      "learning": {
-        "tips": [
-          "Procent betekent 'per 100'",
-          "50% = 50/100 = 1/2",
-          "Om een percentage te berekenen: (deel × percentage) ÷ 100"
-        ],
-        "skill_description": "Percentages berekenen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 24,
-      "learning": {
-        "tips": [
-          "Procent betekent 'per 100'",
-          "50% = 50/100 = 1/2",
-          "Om een percentage te berekenen: (deel × percentage) ÷ 100"
-        ],
-        "skill_description": "Percentages berekenen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 25,
-      "learning": {
-        "tips": [
-          "Procent betekent 'per 100'",
-          "50% = 50/100 = 1/2",
-          "Om een percentage te berekenen: (deel × percentage) ÷ 100"
-        ],
-        "skill_description": "Percentages berekenen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 26,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 27,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "2/4"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "1/6"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "Eerst gelijknamig maken: 1/2 = 2/4. Dan optellen: 2/4 + 1/4 = 3/4"
     },
     {
-      "item_id": 28,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
+      "id": 2,
+      "type": "multiple_choice",
+      "theme": "breuken-verschillende-noemers",
+      "question": {
+        "text": "Reken uit: 2/3 + 1/6 = ?"
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+      "options": [
+        {
+          "text": "3/9"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 29,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "3/6"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "5/6"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "4/6"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "Maak gelijknamig: 2/3 = 4/6. Dan optellen: 4/6 + 1/6 = 5/6"
     },
     {
-      "item_id": 30,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
+      "id": 3,
+      "type": "multiple_choice",
+      "theme": "breuken-vermenigvuldigen",
+      "question": {
+        "text": "Reken uit: 3 × 1/5 = ?"
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+      "options": [
+        {
+          "text": "3/5"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 31,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "1/15"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "3/15"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "4/5"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "Vermenigvuldig de teller: 3 × 1/5 = 3/5"
     },
     {
-      "item_id": 32,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
+      "id": 4,
+      "type": "multiple_choice",
+      "theme": "breuken-vermenigvuldigen",
+      "question": {
+        "text": "Reken uit: 4 × 2/8 = ?"
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+      "options": [
+        {
+          "text": "6/8"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 33,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "8/8"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "2/32"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "8/32"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "Vermenigvuldig de teller: 4 × 2/8 = 8/8 = 1"
     },
     {
-      "item_id": 34,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
+      "id": 5,
+      "type": "multiple_choice",
+      "theme": "percentages-berekenen",
+      "question": {
+        "text": "Bereken 10% van €50"
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+      "options": [
+        {
+          "text": "€3"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "€5"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
-      },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 35,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "€10"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "€15"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "10% betekent delen door 10. €50 ÷ 10 = €5"
     },
     {
-      "item_id": 36,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
+      "id": 6,
+      "type": "multiple_choice",
+      "theme": "percentages-berekenen",
+      "question": {
+        "text": "Bereken 25% van €40"
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+      "options": [
+        {
+          "text": "€5"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 37,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "€8"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "€10"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "€12"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "25% is een kwart. €40 ÷ 4 = €10"
     },
     {
-      "item_id": 38,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
+      "id": 7,
+      "type": "multiple_choice",
+      "theme": "percentages-berekenen",
+      "question": {
+        "text": "Bereken 50% van €30"
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+      "options": [
+        {
+          "text": "€10"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 39,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "€12"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "€15"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "€20"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "50% is de helft. De helft van €30 = €15"
     },
     {
-      "item_id": 40,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
+      "id": 8,
+      "type": "multiple_choice",
+      "theme": "verhoudingstabellen",
+      "question": {
+        "text": "2 snoepjes kosten €1. Hoeveel kosten 4 snoepjes?"
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+      "options": [
+        {
+          "text": "€1"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 41,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "€2"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "€3"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "€4"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "4 snoepjes is 2× zoveel als 2 snoepjes. Prijs wordt ook 2×: €2"
     },
     {
-      "item_id": 42,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
+      "id": 9,
+      "type": "multiple_choice",
+      "theme": "verhoudingstabellen",
+      "question": {
+        "text": "Voor 6 personen gebruik je 12 eieren. Hoeveel eieren gebruik je voor 3 personen?"
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+      "options": [
+        {
+          "text": "4 eieren"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 43,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "6 eieren"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "8 eieren"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "9 eieren"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "3 personen is de helft van 6 personen. De helft van 12 = 6"
     },
     {
-      "item_id": 44,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
+      "id": 10,
+      "type": "multiple_choice",
+      "theme": "verhoudingstabellen",
+      "question": {
+        "text": "3 broodjes kosten €6. Hoeveel kosten 6 broodjes?"
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+      "options": [
+        {
+          "text": "€9"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 45,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "€10"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "€12"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "€15"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "6 broodjes is 2× zoveel als 3 broodjes. Dus 2×€6 = €12"
     },
     {
-      "item_id": 46,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
+      "id": 11,
+      "type": "multiple_choice",
+      "theme": "breuken-verschillende-noemers",
+      "question": {
+        "text": "Reken uit: 3/4 - 1/2 = ?"
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+      "options": [
+        {
+          "text": "2/2"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 47,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "2/4"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "1/4"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "1/2"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "1/2 = 2/4. Dan aftrekken: 3/4 - 2/4 = 1/4"
     },
     {
-      "item_id": 48,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
+      "id": 12,
+      "type": "multiple_choice",
+      "theme": "breuken-vermenigvuldigen",
+      "question": {
+        "text": "Reken uit: 2 × 3/4 = ?"
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+      "options": [
+        {
+          "text": "5/4"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 49,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "6/4"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "6/8"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "3/8"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "Vermenigvuldig de teller: 2 × 3/4 = 6/4"
     },
     {
-      "item_id": 50,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
+      "id": 13,
+      "type": "multiple_choice",
+      "theme": "percentages-berekenen",
+      "question": {
+        "text": "Bereken 10% van €100"
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+      "options": [
+        {
+          "text": "€5"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 51,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "€10"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "€15"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "€20"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "10% = delen door 10. €100 ÷ 10 = €10"
     },
     {
-      "item_id": 52,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
+      "id": 14,
+      "type": "multiple_choice",
+      "theme": "verhoudingstabellen",
+      "question": {
+        "text": "4 pennen kosten €8. Hoeveel kosten 2 pennen?"
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+      "options": [
+        {
+          "text": "€2"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 53,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "€3"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "€4"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "€6"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "2 pennen is de helft van 4 pennen. De helft van €8 = €4"
     },
     {
-      "item_id": 54,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
+      "id": 15,
+      "type": "multiple_choice",
+      "theme": "percentages-berekenen",
+      "question": {
+        "text": "Bereken 25% van €20"
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+      "options": [
+        {
+          "text": "€3"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 55,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "€5"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "€7"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "€10"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "25% is een kwart. €20 ÷ 4 = €5"
     },
     {
-      "item_id": 56,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
+      "id": 16,
+      "type": "multiple_choice",
+      "theme": "breuken-verschillende-noemers",
+      "question": {
+        "text": "Reken uit: 1/3 + 1/6 = ?"
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+      "options": [
+        {
+          "text": "2/9"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 57,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "2/6"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "3/6"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "1/2"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 3
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "1/3 = 2/6. Dan optellen: 2/6 + 1/6 = 3/6 = 1/2"
     },
     {
-      "item_id": 58,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
+      "id": 17,
+      "type": "multiple_choice",
+      "theme": "verhoudingstabellen",
+      "question": {
+        "text": "1 ijsje kost €2. Hoeveel kosten 5 ijsjes?"
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+      "options": [
+        {
+          "text": "€7"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 59,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "€8"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "€10"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "€12"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "5 ijsjes betekent 5× de prijs van 1 ijsje: 5×€2 = €10"
     },
     {
-      "item_id": 60,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
+      "id": 18,
+      "type": "multiple_choice",
+      "theme": "breuken-vermenigvuldigen",
+      "question": {
+        "text": "Reken uit: 5 × 1/4 = ?"
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+      "options": [
+        {
+          "text": "5/4"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 61,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "1/20"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "5/20"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "6/4"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "Vermenigvuldig de teller: 5 × 1/4 = 5/4"
     },
     {
-      "item_id": 62,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
+      "id": 19,
+      "type": "multiple_choice",
+      "theme": "percentages-berekenen",
+      "question": {
+        "text": "Bereken 50% van €60"
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+      "options": [
+        {
+          "text": "€20"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 63,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "€25"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "€30"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "€35"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "50% is de helft. De helft van €60 = €30"
     },
     {
-      "item_id": 64,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
-        },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
-        }
+      "id": 20,
+      "type": "multiple_choice",
+      "theme": "verhoudingstabellen",
+      "question": {
+        "text": "Voor 4 personen gebruik je 8 kopjes rijst. Hoeveel kopjes gebruik je voor 2 personen?"
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
+      "options": [
+        {
+          "text": "2 kopjes"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
-    },
-    {
-      "item_id": 65,
-      "learning": {
-        "tips": [
-          "Lees de vraag goed",
-          "Denk na over wat je weet",
-          "Probeer het stap voor stap"
-        ],
-        "skill_description": "Verhoudingen",
-        "reading_strategies": [
-          "Lees de vraag aandachtig",
-          "Onderstreep belangrijke getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij het rekenen",
-            "remedy": "Controleer je berekening stap voor stap"
-          },
-          {
-            "type": "verkeerde_bewerking",
-            "description": "Verkeerde rekenbewerking gekozen",
-            "remedy": "Lees goed wat er gevraagd wordt"
-          }
-        ]
-      },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je hebt het meteen goed! 🎯",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+        {
+          "text": "3 kopjes"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Probeer het nog eens.",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de vraag."
+        {
+          "text": "4 kopjes"
         },
-        "explanation": {
-          "text": "Het juiste antwoord is..."
+        {
+          "text": "6 kopjes"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere vragen doen."
-        }
-      }
+      "hint": "2 personen is de helft van 4 personen. De helft van 8 = 4"
     }
-  ]
+  ],
+  "settings": {
+    "allow_review": true
+  }
 }

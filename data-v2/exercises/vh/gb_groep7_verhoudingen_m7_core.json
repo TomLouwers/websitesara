@@ -11,7 +11,8 @@
     "slo_alignment": {
       "kerndoelen": [
         "K28",
-        "R2"
+        "K29",
+        "K30"
       ],
       "rekendomeinen": [
         "verhoudingen"
@@ -24,7 +25,7 @@
     }
   },
   "display": {
-    "title": "Breuken en Procenten Groep 7"
+    "title": "Verhoudingen Groep 7"
   },
   "content": {
     "instruction": "Kies het goede antwoord:"
@@ -33,451 +34,181 @@
     {
       "id": 1,
       "type": "multiple_choice",
-      "theme": "breuken-optellen",
+      "theme": "verhoudingstabellen",
       "question": {
-        "text": "1/4 + 2/4 = ?"
+        "text": "Bij de camping kosten 3 nachten €84. Hoeveel kosten 7 nachten?"
       },
       "options": [
         {
-          "text": "1/4"
+          "text": "€168"
         },
         {
-          "text": "2/4"
+          "text": "€196"
         },
         {
-          "text": "3/4"
+          "text": "€224"
         },
         {
-          "text": "3/8"
+          "text": "€252"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 2
+        "correct_index": 1
       },
-      "hint": "Tel de tellers op, de noemer blijft hetzelfde"
+      "hint": "Bereken eerst de prijs per nacht: €84 : 3 = €28. Dan: 7 × €28 = €196"
     },
     {
       "id": 2,
       "type": "multiple_choice",
-      "theme": "breuken-aftrekken",
+      "theme": "percentage-van-percentage",
       "question": {
-        "text": "3/5 - 1/5 = ?"
+        "text": "Een spelcomputer kost €200. Eerst krijg je 20% korting, daarna nog eens 10% extra korting op de nieuwe prijs. Wat betaal je?"
       },
       "options": [
         {
-          "text": "1/5"
+          "text": "€140"
         },
         {
-          "text": "2/5"
+          "text": "€144"
         },
         {
-          "text": "2/0"
+          "text": "€160"
         },
         {
-          "text": "4/5"
+          "text": "€156"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Trek de tellers af, de noemer blijft hetzelfde"
+      "hint": "Stap 1: 20% van €200 = €40, dus €160. Stap 2: 10% van €160 = €16, dus €160 - €16 = €144"
     },
     {
       "id": 3,
       "type": "multiple_choice",
-      "theme": "breuken-vermenigvuldigen",
+      "theme": "verhoudingstabellen",
       "question": {
-        "text": "1/3 × 6 = ?"
+        "text": "Met 5 liter benzine rijd je 65 kilometer. Hoeveel kilometer kun je rijden met 8 liter?"
       },
       "options": [
         {
-          "text": "1"
+          "text": "96 km"
         },
         {
-          "text": "2"
+          "text": "104 km"
         },
         {
-          "text": "3"
+          "text": "112 km"
         },
         {
-          "text": "6"
+          "text": "120 km"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "1/3 van 6 = 6 ÷ 3 = 2"
+      "hint": "Eerst per liter: 65 : 5 = 13 km per liter. Dan: 8 × 13 = 104 km"
     },
     {
       "id": 4,
       "type": "multiple_choice",
-      "theme": "breuken-optellen",
+      "theme": "korting-berekenen",
       "question": {
-        "text": "1/4 + 2/4 = ?"
+        "text": "Een jas kostte €120, nu kost hij €90. Hoeveel procent korting is dat?"
       },
       "options": [
         {
-          "text": "1/4"
+          "text": "20%"
         },
         {
-          "text": "2/4"
+          "text": "25%"
         },
         {
-          "text": "3/4"
+          "text": "30%"
         },
         {
-          "text": "3/8"
+          "text": "35%"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 2
+        "correct_index": 1
       },
-      "hint": "Tel de tellers op, de noemer blijft hetzelfde"
+      "hint": "Korting = €120 - €90 = €30. Percentage: (€30 : €120) × 100% = 25%"
     },
     {
       "id": 5,
       "type": "multiple_choice",
-      "theme": "breuken-aftrekken",
+      "theme": "verhoudingstabellen",
       "question": {
-        "text": "3/5 - 1/5 = ?"
+        "text": "Een recept voor 4 personen heeft 250 gram bloem nodig. Hoeveel bloem heb je nodig voor 9 personen?"
       },
       "options": [
         {
-          "text": "1/5"
+          "text": "500 gram"
         },
         {
-          "text": "2/5"
+          "text": "562,5 gram"
         },
         {
-          "text": "2/0"
+          "text": "600 gram"
         },
         {
-          "text": "4/5"
+          "text": "625 gram"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Trek de tellers af, de noemer blijft hetzelfde"
+      "hint": "Per persoon: 250 : 4 = 62,5 gram. Voor 9 personen: 9 × 62,5 = 562,5 gram"
     },
     {
       "id": 6,
       "type": "multiple_choice",
-      "theme": "breuken-vermenigvuldigen",
+      "theme": "percentage-van-percentage",
       "question": {
-        "text": "1/3 × 6 = ?"
+        "text": "Je hebt €150 zakgeld. Je geeft 40% uit aan een cadeau. Van het restant spaar je 25%. Hoeveel spaar je?"
       },
       "options": [
         {
-          "text": "1"
+          "text": "€20,50"
         },
         {
-          "text": "2"
+          "text": "€22,50"
         },
         {
-          "text": "3"
+          "text": "€25"
         },
         {
-          "text": "6"
+          "text": "€27,50"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "1/3 van 6 = 6 ÷ 3 = 2"
+      "hint": "Na uitgave: 60% van €150 = €90. Sparen: 25% van €90 = €22,50"
     },
     {
       "id": 7,
       "type": "multiple_choice",
-      "theme": "breuken-optellen",
+      "theme": "korting-berekenen",
       "question": {
-        "text": "1/4 + 2/4 = ?"
+        "text": "Bij 35% korting op €80, hoeveel betaal je?"
       },
       "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "2/4"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "3/8"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Tel de tellers op, de noemer blijft hetzelfde"
-    },
-    {
-      "id": 8,
-      "type": "multiple_choice",
-      "theme": "breuken-aftrekken",
-      "question": {
-        "text": "3/5 - 1/5 = ?"
-      },
-      "options": [
-        {
-          "text": "1/5"
-        },
-        {
-          "text": "2/5"
-        },
-        {
-          "text": "2/0"
-        },
-        {
-          "text": "4/5"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Trek de tellers af, de noemer blijft hetzelfde"
-    },
-    {
-      "id": 9,
-      "type": "multiple_choice",
-      "theme": "breuken-vermenigvuldigen",
-      "question": {
-        "text": "1/3 × 6 = ?"
-      },
-      "options": [
-        {
-          "text": "1"
-        },
-        {
-          "text": "2"
-        },
-        {
-          "text": "3"
-        },
-        {
-          "text": "6"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1/3 van 6 = 6 ÷ 3 = 2"
-    },
-    {
-      "id": 10,
-      "type": "multiple_choice",
-      "theme": "breuken-optellen",
-      "question": {
-        "text": "1/4 + 2/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "2/4"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "3/8"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Tel de tellers op, de noemer blijft hetzelfde"
-    },
-    {
-      "id": 11,
-      "type": "multiple_choice",
-      "theme": "breuken-aftrekken",
-      "question": {
-        "text": "3/5 - 1/5 = ?"
-      },
-      "options": [
-        {
-          "text": "1/5"
-        },
-        {
-          "text": "2/5"
-        },
-        {
-          "text": "2/0"
-        },
-        {
-          "text": "4/5"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Trek de tellers af, de noemer blijft hetzelfde"
-    },
-    {
-      "id": 12,
-      "type": "multiple_choice",
-      "theme": "breuken-vermenigvuldigen",
-      "question": {
-        "text": "1/3 × 6 = ?"
-      },
-      "options": [
-        {
-          "text": "1"
-        },
-        {
-          "text": "2"
-        },
-        {
-          "text": "3"
-        },
-        {
-          "text": "6"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1/3 van 6 = 6 ÷ 3 = 2"
-    },
-    {
-      "id": 13,
-      "type": "multiple_choice",
-      "theme": "breuken-optellen",
-      "question": {
-        "text": "1/4 + 2/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "2/4"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "3/8"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Tel de tellers op, de noemer blijft hetzelfde"
-    },
-    {
-      "id": 14,
-      "type": "multiple_choice",
-      "theme": "breuken-aftrekken",
-      "question": {
-        "text": "3/5 - 1/5 = ?"
-      },
-      "options": [
-        {
-          "text": "1/5"
-        },
-        {
-          "text": "2/5"
-        },
-        {
-          "text": "2/0"
-        },
-        {
-          "text": "4/5"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Trek de tellers af, de noemer blijft hetzelfde"
-    },
-    {
-      "id": 15,
-      "type": "multiple_choice",
-      "theme": "breuken-vermenigvuldigen",
-      "question": {
-        "text": "1/3 × 6 = ?"
-      },
-      "options": [
-        {
-          "text": "1"
-        },
-        {
-          "text": "2"
-        },
-        {
-          "text": "3"
-        },
-        {
-          "text": "6"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1/3 van 6 = 6 ÷ 3 = 2"
-    },
-    {
-      "id": 16,
-      "type": "multiple_choice",
-      "theme": "procenten-korting",
-      "question": {
-        "text": "Een artikel kost €50. Je krijgt 20% korting. Wat betaal je?"
-      },
-      "options": [
-        {
-          "text": "€35"
-        },
-        {
-          "text": "€40"
-        },
-        {
-          "text": "€45"
-        },
-        {
-          "text": "€50"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Eerst de korting: 20% van €50 = €10. Dan aftrekken."
-    },
-    {
-      "id": 17,
-      "type": "multiple_choice",
-      "theme": "procenten-korting",
-      "question": {
-        "text": "Een artikel kost €60. Je krijgt 20% korting. Wat betaal je?"
-      },
-      "options": [
-        {
-          "text": "€43"
-        },
         {
           "text": "€48"
         },
         {
-          "text": "€53"
+          "text": "€52"
+        },
+        {
+          "text": "€56"
         },
         {
           "text": "€60"
@@ -487,1303 +218,358 @@
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Eerst de korting: 20% van €60 = €12. Dan aftrekken."
+      "hint": "35% van €80 = €28 korting. Je betaalt: €80 - €28 = €52"
     },
     {
-      "id": 18,
+      "id": 8,
       "type": "multiple_choice",
-      "theme": "procenten-korting",
+      "theme": "verhoudingstabellen",
       "question": {
-        "text": "Een artikel kost €70. Je krijgt 20% korting. Wat betaal je?"
+        "text": "7 appels kosten €4,20. Hoeveel kosten 12 appels?"
       },
       "options": [
         {
-          "text": "€51"
+          "text": "€6,80"
         },
         {
-          "text": "€56"
+          "text": "€7,20"
         },
         {
-          "text": "€61"
+          "text": "€7,60"
         },
         {
-          "text": "€70"
+          "text": "€8,00"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Eerst de korting: 20% van €70 = €14. Dan aftrekken."
+      "hint": "Prijs per appel: €4,20 : 7 = €0,60. Voor 12 appels: 12 × €0,60 = €7,20"
     },
     {
-      "id": 19,
+      "id": 9,
       "type": "multiple_choice",
-      "theme": "procenten-korting",
+      "theme": "percentage-van-percentage",
       "question": {
-        "text": "Een artikel kost €80. Je krijgt 20% korting. Wat betaal je?"
+        "text": "Bereken 50% van 60% van €240"
       },
       "options": [
         {
-          "text": "€59"
-        },
-        {
-          "text": "€64"
-        },
-        {
-          "text": "€69"
-        },
-        {
-          "text": "€80"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Eerst de korting: 20% van €80 = €16. Dan aftrekken."
-    },
-    {
-      "id": 20,
-      "type": "multiple_choice",
-      "theme": "procenten-korting",
-      "question": {
-        "text": "Een artikel kost €90. Je krijgt 20% korting. Wat betaal je?"
-      },
-      "options": [
-        {
-          "text": "€67"
+          "text": "€60"
         },
         {
           "text": "€72"
         },
         {
-          "text": "€77"
-        },
-        {
-          "text": "€90"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Eerst de korting: 20% van €90 = €18. Dan aftrekken."
-    },
-    {
-      "id": 21,
-      "type": "multiple_choice",
-      "theme": "procenten-korting",
-      "question": {
-        "text": "Een artikel kost €100. Je krijgt 20% korting. Wat betaal je?"
-      },
-      "options": [
-        {
-          "text": "€75"
-        },
-        {
-          "text": "€80"
-        },
-        {
-          "text": "€85"
-        },
-        {
-          "text": "€100"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Eerst de korting: 20% van €100 = €20. Dan aftrekken."
-    },
-    {
-      "id": 22,
-      "type": "multiple_choice",
-      "theme": "procenten-korting",
-      "question": {
-        "text": "Een artikel kost €110. Je krijgt 20% korting. Wat betaal je?"
-      },
-      "options": [
-        {
-          "text": "€83"
-        },
-        {
-          "text": "€88"
-        },
-        {
-          "text": "€93"
-        },
-        {
-          "text": "€110"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Eerst de korting: 20% van €110 = €22. Dan aftrekken."
-    },
-    {
-      "id": 23,
-      "type": "multiple_choice",
-      "theme": "procenten-korting",
-      "question": {
-        "text": "Een artikel kost €120. Je krijgt 20% korting. Wat betaal je?"
-      },
-      "options": [
-        {
-          "text": "€91"
+          "text": "€84"
         },
         {
           "text": "€96"
-        },
-        {
-          "text": "€101"
-        },
-        {
-          "text": "€120"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Eerst de korting: 20% van €120 = €24. Dan aftrekken."
+      "hint": "Eerst: 60% van €240 = €144. Dan: 50% van €144 = €72"
     },
     {
-      "id": 24,
+      "id": 10,
       "type": "multiple_choice",
-      "theme": "procenten-korting",
+      "theme": "korting-berekenen",
       "question": {
-        "text": "Een artikel kost €130. Je krijgt 20% korting. Wat betaal je?"
+        "text": "Een fiets van €350 is afgeprijsd naar €280. Hoeveel procent korting?"
       },
       "options": [
         {
-          "text": "€99"
+          "text": "15%"
         },
         {
-          "text": "€104"
+          "text": "20%"
         },
         {
-          "text": "€109"
+          "text": "25%"
         },
         {
-          "text": "€130"
+          "text": "30%"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Eerst de korting: 20% van €130 = €26. Dan aftrekken."
+      "hint": "Korting: €350 - €280 = €70. Percentage: (€70 : €350) × 100% = 20%"
     },
     {
-      "id": 25,
+      "id": 11,
       "type": "multiple_choice",
-      "theme": "procenten-korting",
+      "theme": "verhoudingstabellen",
       "question": {
-        "text": "Een artikel kost €140. Je krijgt 20% korting. Wat betaal je?"
+        "text": "Je fietst 45 km in 3 uur. Hoeveel tijd heb je nodig voor 75 km in hetzelfde tempo?"
       },
       "options": [
         {
-          "text": "€107"
+          "text": "4 uur"
         },
         {
-          "text": "€112"
+          "text": "4,5 uur"
         },
         {
-          "text": "€117"
+          "text": "5 uur"
         },
         {
-          "text": "€140"
+          "text": "5,5 uur"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Snelheid: 45 : 3 = 15 km/uur. Voor 75 km: 75 : 15 = 5 uur"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "theme": "percentage-van-percentage",
+      "question": {
+        "text": "In de uitverkoop krijg je eerst 30% korting, daarna nog 20% extra korting op €100. Wat is de eindprijs?"
+      },
+      "options": [
+        {
+          "text": "€50"
+        },
+        {
+          "text": "€56"
+        },
+        {
+          "text": "€60"
+        },
+        {
+          "text": "€64"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Eerst de korting: 20% van €140 = €28. Dan aftrekken."
+      "hint": "Na 30% korting: €70. Dan 20% van €70 = €14 korting. Eindprijs: €70 - €14 = €56"
     },
     {
-      "id": 26,
+      "id": 13,
       "type": "multiple_choice",
-      "theme": "schaal",
+      "theme": "verhoudingstabellen",
       "question": {
-        "text": "Op een kaart is de schaal 1:100. 1 cm op de kaart is ... in het echt"
+        "text": "Voor 6 broodjes betaal je €9. Hoeveel betaal je voor 15 broodjes?"
       },
       "options": [
         {
-          "text": "10 cm"
+          "text": "€21,50"
         },
         {
-          "text": "100 cm"
+          "text": "€22,50"
         },
         {
-          "text": "1000 cm"
+          "text": "€23,50"
         },
         {
-          "text": "1 cm"
+          "text": "€24,50"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Schaal 1:100 betekent dat 1 cm op de kaart 100 cm in werkelijkheid is"
+      "hint": "Per broodje: €9 : 6 = €1,50. Voor 15 broodjes: 15 × €1,50 = €22,50"
     },
     {
-      "id": 27,
+      "id": 14,
       "type": "multiple_choice",
-      "theme": "schaal",
+      "theme": "korting-berekenen",
       "question": {
-        "text": "Op een kaart is de schaal 1:50. 1 cm op de kaart is ... in het echt"
+        "text": "Bij 40% korting op €65, wat is de nieuwe prijs?"
       },
       "options": [
         {
-          "text": "5 cm"
+          "text": "€35"
         },
         {
-          "text": "50 cm"
+          "text": "€39"
         },
         {
-          "text": "500 cm"
+          "text": "€43"
         },
         {
-          "text": "1 cm"
+          "text": "€47"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Schaal 1:50 betekent dat 1 cm op de kaart 50 cm in werkelijkheid is"
+      "hint": "40% van €65 = €26. Nieuwe prijs: €65 - €26 = €39"
     },
     {
-      "id": 28,
+      "id": 15,
       "type": "multiple_choice",
-      "theme": "schaal",
+      "theme": "verhoudingstabellen",
       "question": {
-        "text": "Op een kaart is de schaal 1:1000. 1 cm op de kaart is ... in het echt"
+        "text": "Een recept voor 3 personen gebruikt 225 ml melk. Hoeveel melk voor 8 personen?"
       },
       "options": [
         {
-          "text": "100 cm"
+          "text": "560 ml"
         },
         {
-          "text": "1000 cm"
+          "text": "600 ml"
         },
         {
-          "text": "10000 cm"
+          "text": "640 ml"
         },
         {
-          "text": "1 cm"
+          "text": "680 ml"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Schaal 1:1000 betekent dat 1 cm op de kaart 1000 cm in werkelijkheid is"
+      "hint": "Per persoon: 225 : 3 = 75 ml. Voor 8 personen: 8 × 75 = 600 ml"
     },
     {
-      "id": 29,
+      "id": 16,
       "type": "multiple_choice",
-      "theme": "schaal",
+      "theme": "percentage-van-percentage",
       "question": {
-        "text": "Op een kaart is de schaal 1:3. 1 cm op de kaart is ... in het echt"
+        "text": "Bereken 25% van 80% van €320"
       },
       "options": [
         {
-          "text": "0 cm"
+          "text": "€56"
         },
         {
-          "text": "3 cm"
+          "text": "€64"
         },
         {
-          "text": "30 cm"
+          "text": "€72"
         },
         {
-          "text": "1 cm"
+          "text": "€80"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Schaal 1:3 betekent dat 1 cm op de kaart 3 cm in werkelijkheid is"
+      "hint": "Eerst: 80% van €320 = €256. Dan: 25% van €256 = €64"
     },
     {
-      "id": 30,
+      "id": 17,
       "type": "multiple_choice",
-      "theme": "oefening",
+      "theme": "korting-berekenen",
       "question": {
-        "text": "Oefenvraag 30: 1/2 + 1/4 = ?"
+        "text": "Schoenen kosten nu €72 in plaats van €96. Hoeveel procent korting?"
       },
       "options": [
         {
-          "text": "1/4"
+          "text": "20%"
         },
         {
-          "text": "1/2"
+          "text": "25%"
         },
         {
-          "text": "3/4"
+          "text": "30%"
         },
         {
-          "text": "1"
+          "text": "35%"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 2
+        "correct_index": 1
       },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
+      "hint": "Korting: €96 - €72 = €24. Percentage: (€24 : €96) × 100% = 25%"
     },
     {
-      "id": 31,
+      "id": 18,
       "type": "multiple_choice",
-      "theme": "oefening",
+      "theme": "verhoudingstabellen",
       "question": {
-        "text": "Oefenvraag 31: 1/2 + 1/4 = ?"
+        "text": "4 pennen kosten €5,60. Hoeveel kosten 11 pennen?"
       },
       "options": [
         {
-          "text": "1/4"
+          "text": "€14,40"
         },
         {
-          "text": "1/2"
+          "text": "€15,40"
         },
         {
-          "text": "3/4"
+          "text": "€16,40"
         },
         {
-          "text": "1"
+          "text": "€17,40"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 2
+        "correct_index": 1
       },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
+      "hint": "Per pen: €5,60 : 4 = €1,40. Voor 11 pennen: 11 × €1,40 = €15,40"
     },
     {
-      "id": 32,
+      "id": 19,
       "type": "multiple_choice",
-      "theme": "oefening",
+      "theme": "percentage-van-percentage",
       "question": {
-        "text": "Oefenvraag 32: 1/2 + 1/4 = ?"
+        "text": "Je hebt €180. Je geeft 30% uit. Van wat overblijft geef je nog 20% uit. Hoeveel heb je dan nog?"
       },
       "options": [
         {
-          "text": "1/4"
+          "text": "€90"
         },
         {
-          "text": "1/2"
+          "text": "€100,80"
         },
         {
-          "text": "3/4"
+          "text": "€108"
         },
         {
-          "text": "1"
+          "text": "€115,20"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 2
+        "correct_index": 1
       },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
+      "hint": "Na eerste uitgave: 70% van €180 = €126. Na tweede uitgave: 80% van €126 = €100,80"
     },
     {
-      "id": 33,
+      "id": 20,
       "type": "multiple_choice",
-      "theme": "oefening",
+      "theme": "verhoudingstabellen",
       "question": {
-        "text": "Oefenvraag 33: 1/2 + 1/4 = ?"
+        "text": "Bij 8 liter verf kun je 32 m² verven. Hoeveel liter heb je nodig voor 52 m²?"
       },
       "options": [
         {
-          "text": "1/4"
+          "text": "12 liter"
         },
         {
-          "text": "1/2"
+          "text": "13 liter"
         },
         {
-          "text": "3/4"
+          "text": "14 liter"
         },
         {
-          "text": "1"
+          "text": "15 liter"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 2
+        "correct_index": 1
       },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 34,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 34: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 35,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 35: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 36,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 36: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 37,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 37: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 38,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 38: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 39,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 39: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 40,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 40: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 41,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 41: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 42,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 42: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 43,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 43: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 44,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 44: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 45,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 45: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 46,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 46: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 47,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 47: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 48,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 48: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 49,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 49: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 50,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 50: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 51,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 51: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 52,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 52: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 53,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 53: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 54,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 54: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 55,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 55: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 56,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 56: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 57,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 57: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 58,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 58: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 59,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 59: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 60,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 60: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 61,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 61: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 62,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 62: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 63,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 63: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 64,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 64: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
-    },
-    {
-      "id": 65,
-      "type": "multiple_choice",
-      "theme": "oefening",
-      "question": {
-        "text": "Oefenvraag 65: 1/2 + 1/4 = ?"
-      },
-      "options": [
-        {
-          "text": "1/4"
-        },
-        {
-          "text": "1/2"
-        },
-        {
-          "text": "3/4"
-        },
-        {
-          "text": "1"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1/2 = 2/4, dus 2/4 + 1/4 = 3/4"
+      "hint": "Per m²: 8 : 32 = 0,25 liter. Voor 52 m²: 52 × 0,25 = 13 liter"
     }
   ],
   "settings": {
