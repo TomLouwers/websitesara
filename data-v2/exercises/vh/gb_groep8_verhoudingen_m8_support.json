@@ -1112,6 +1112,276 @@
         "correct_index": 2
       },
       "hint": "Bereken: €250 × 0,88 = £220."
+    },
+    {
+      "id": 41,
+      "type": "multiple_choice",
+      "theme": "inflatie",
+      "question": {
+        "text": "Door inflatie stijgen de prijzen met 3,5% per jaar. Een product kost nu €80. Hoeveel kost het na 1 jaar?"
+      },
+      "options": [
+        {
+          "text": "€82,40"
+        },
+        {
+          "text": "€82,80"
+        },
+        {
+          "text": "€83,20"
+        },
+        {
+          "text": "€83,60"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "Stijging = 3,5% van €80 = €2,80. Nieuwe prijs = €80 + €2,80 = €82,80"
+    },
+    {
+      "id": 42,
+      "type": "multiple_choice",
+      "theme": "beleggingen",
+      "question": {
+        "text": "Je belegt €1.200 met 4% rendement per jaar. Hoeveel heb je na 1 jaar?"
+      },
+      "options": [
+        {
+          "text": "€1.228"
+        },
+        {
+          "text": "€1.240"
+        },
+        {
+          "text": "€1.248"
+        },
+        {
+          "text": "€1.256"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Rendement = 4% van €1.200 = €48. Totaal = €1.200 + €48 = €1.248"
+    },
+    {
+      "id": 43,
+      "type": "multiple_choice",
+      "theme": "loonstrook",
+      "question": {
+        "text": "Je bruto loon is €2.400. Er gaat 22% af aan belasting. Wat is je netto loon?"
+      },
+      "options": [
+        {
+          "text": "€1.828"
+        },
+        {
+          "text": "€1.848"
+        },
+        {
+          "text": "€1.872"
+        },
+        {
+          "text": "€1.896"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Belasting = 22% van €2.400 = €528. Netto = €2.400 - €528 = €1.872"
+    },
+    {
+      "id": 44,
+      "type": "multiple_choice",
+      "theme": "belastingen",
+      "question": {
+        "text": "Een product kost €50 exclusief BTW. Met 21% BTW erbij, wat is de totaalprijs?"
+      },
+      "options": [
+        {
+          "text": "€58,50"
+        },
+        {
+          "text": "€59,50"
+        },
+        {
+          "text": "€60,50"
+        },
+        {
+          "text": "€61,50"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "BTW = 21% van €50 = €10,50. Totaal = €50 + €10,50 = €60,50"
+    },
+    {
+      "id": 45,
+      "type": "multiple_choice",
+      "theme": "grondstofprijzen",
+      "question": {
+        "text": "Grondstofprijs stijgt van €180 per ton naar €207 per ton. Hoeveel procent stijging?"
+      },
+      "options": [
+        {
+          "text": "12%"
+        },
+        {
+          "text": "15%"
+        },
+        {
+          "text": "18%"
+        },
+        {
+          "text": "20%"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "Stijging: €207 - €180 = €27. Percentage: (€27 : €180) × 100% = 15%"
+    },
+    {
+      "id": 46,
+      "type": "multiple_choice",
+      "theme": "handelsmarge",
+      "question": {
+        "text": "Een winkel koopt producten in voor €40 en verkoopt ze met 35% marge. Wat is de verkoopprijs?"
+      },
+      "options": [
+        {
+          "text": "€52"
+        },
+        {
+          "text": "€54"
+        },
+        {
+          "text": "€56"
+        },
+        {
+          "text": "€58"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "Marge = 35% van €40 = €14. Verkoopprijs = €40 + €14 = €54"
+    },
+    {
+      "id": 47,
+      "type": "multiple_choice",
+      "theme": "kredietkosten",
+      "question": {
+        "text": "Je leent €3.000 met 6% rente per jaar. Hoeveel rente betaal je na 1 jaar?"
+      },
+      "options": [
+        {
+          "text": "€160"
+        },
+        {
+          "text": "€170"
+        },
+        {
+          "text": "€180"
+        },
+        {
+          "text": "€190"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Rente = 6% van €3.000 = €180"
+    },
+    {
+      "id": 48,
+      "type": "multiple_choice",
+      "theme": "economische_cijfers",
+      "question": {
+        "text": "De economie groeit met 2,8% in jaar 1 en 1,5% in jaar 2. Start: index 100. Wat is de index na 2 jaar?"
+      },
+      "options": [
+        {
+          "text": "104,00"
+        },
+        {
+          "text": "104,14"
+        },
+        {
+          "text": "104,34"
+        },
+        {
+          "text": "104,54"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 3
+      },
+      "hint": "Na jaar 1: 100 × 1,028 = 102,8. Na jaar 2: 102,8 × 1,015 = 104,342. Afgerond: 104,34"
+    },
+    {
+      "id": 49,
+      "type": "multiple_choice",
+      "theme": "bevolkingsstatistieken",
+      "question": {
+        "text": "Een stad heeft 85.000 inwoners. De bevolking groeit met 1,8% per jaar. Hoeveel inwoners na 1 jaar?"
+      },
+      "options": [
+        {
+          "text": "86.200"
+        },
+        {
+          "text": "86.430"
+        },
+        {
+          "text": "86.530"
+        },
+        {
+          "text": "86.850"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Groei = 1,8% van 85.000 = 1.530. Totaal = 85.000 + 1.530 = 86.530"
+    },
+    {
+      "id": 50,
+      "type": "multiple_choice",
+      "theme": "milieu_impact",
+      "question": {
+        "text": "CO2-uitstoot daalt met 12% door maatregel A en nog eens 8% door maatregel B. Start: 500 ton. Hoeveel na beide maatregelen?"
+      },
+      "options": [
+        {
+          "text": "395 ton"
+        },
+        {
+          "text": "400 ton"
+        },
+        {
+          "text": "404,8 ton"
+        },
+        {
+          "text": "410 ton"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Na maatregel A: 500 × 0,88 = 440 ton. Na maatregel B: 440 × 0,92 = 404,8 ton"
     }
   ],
   "settings": {
