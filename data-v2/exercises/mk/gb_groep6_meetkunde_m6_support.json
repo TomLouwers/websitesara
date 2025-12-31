@@ -1,886 +1,1374 @@
 {
   "schema_version": "2.0.0",
-  "exercise_id": "gb_groep6_meetkunde_m6_support",
+  "metadata": {
+    "id": "gb_groep6_meetkunde_m6_support",
+    "type": "multiple_choice",
+    "category": "gb",
+    "grade": 6,
+    "level": "M6",
+    "language": "nl-NL",
+    "domain": "meetkunde",
+    "slo_alignment": {
+      "kerndoelen": [
+        "K32",
+        "K33"
+      ],
+      "rekendomeinen": [
+        "meetkunde"
+      ],
+      "tussendoelen": [
+        "6R_meetkunde_m6"
+      ],
+      "referentieniveau": "1F",
+      "cognitive_level": "toepassen"
+    }
+  },
+  "display": {
+    "title": "Meetkunde Groep 6"
+  },
+  "content": {
+    "instruction": "Kies het goede antwoord:"
+  },
   "items": [
     {
-      "item_id": 1,
-      "learning": {
-        "tips": [
-          "Oppervlakte driehoek = ½ × basis × hoogte",
-          "Vergeet niet te delen door 2!",
-          "Een driehoek is de helft van een rechthoek"
-        ],
-        "skill_description": "Oppervlakte van driehoek berekenen",
-        "reading_strategies": [
-          "Zoek de basis en de hoogte",
-          "Controleer de eenheden (cm, m)"
-        ],
-        "common_errors": [
-          {
-            "type": "vergeten_delen",
-            "description": "Vergeten door 2 te delen",
-            "remedy": "Denk eraan: driehoek is half zo groot als een rechthoek!"
-          }
-        ]
+      "id": 1,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Vraag?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je beheerst de formule voor driehoeken!",
-          "after_hint": "Mooi! De formule heeft je geholpen."
-        },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Heb je door 2 gedeeld?",
-          "second_attempt": "Denk aan de formule: ½ × basis × hoogte",
-          "third_attempt": "Laten we samen stap voor stap rekenen."
-        }
+      "options": [],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent goed met driehoeken! Probeer een uitdagender vraag."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we nog even oefenen met de basis."
-        }
-      }
+      "hint": "Denk goed na"
     },
     {
-      "item_id": 2,
-      "learning": {
-        "tips": [
-          "Formule: ½ × basis × hoogte",
-          "Eerst vermenigvuldigen, dan delen door 2",
-          "Controleer je antwoord"
-        ],
-        "skill_description": "Oppervlakte driehoek berekenen",
-        "reading_strategies": [
-          "Zoek basis en hoogte in de tekst",
-          "Let op de volgorde van rekenen"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenvolgorde",
-            "description": "Verkeerde rekenvolgorde gebruikt",
-            "remedy": "Bereken eerst b × h, dan delen door 2"
-          }
-        ]
+      "id": 2,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Balk 4×3×5 cm, volume?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima!",
-          "on_first_try": "Perfect! Je weet hoe het moet!",
-          "after_hint": "Goed zo! Nu snap je het."
+      "options": [
+        {
+          "text": "60 cm³"
         },
-        "incorrect": {
-          "first_attempt": "Probeer het nog eens. Let op de formule.",
-          "second_attempt": "½ × 10 × 4 = ?",
-          "third_attempt": "Eerst 10 × 4 = 40, dan 40 ÷ 2 = 20"
+        {
+          "text": "70 cm³"
+        },
+        {
+          "text": "55 cm³"
+        },
+        {
+          "text": "120 cm³"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Ga zo door!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we de formule nog eens oefenen."
-        }
-      }
+      "hint": "l × b × h"
     },
     {
-      "item_id": 3,
-      "learning": {
-        "tips": [
-          "Oppervlakte driehoek = ½ × basis × hoogte",
-          "Let op de eenheid: m²",
-          "½ × 12 × 5 = ½ × 60"
-        ],
-        "skill_description": "Oppervlakte driehoek in vierkante meters",
-        "reading_strategies": [
-          "Let op de eenheid (meters)",
-          "Antwoord moet ook in m² zijn"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerde_eenheid",
-            "description": "Vergeten de eenheid m² te gebruiken",
-            "remedy": "Als de zijden in meter zijn, is oppervlakte in m²"
-          }
-        ]
+      "id": 3,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Driehoek: basis 8 cm, hoogte 5 cm. Oppervlakte?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Correct!",
-          "on_first_try": "Geweldig! Ook met meters lukt het!",
-          "after_hint": "Goed gedaan!"
+      "options": [
+        {
+          "text": "20 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Bijna! Controleer je berekening.",
-          "second_attempt": "½ × 12 × 5 = ?",
-          "third_attempt": "12 × 5 = 60, dan 60 ÷ 2 = 30 m²"
+        {
+          "text": "25 cm²"
+        },
+        {
+          "text": "15 cm²"
+        },
+        {
+          "text": "40 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je snapt het systeem goed!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "We oefenen nog even met kleinere getallen."
-        }
-      }
+      "hint": "½ × basis × hoogte"
     },
     {
-      "item_id": 4,
-      "learning": {
-        "tips": [
-          "Basis = 6 cm, hoogte = 9 cm",
-          "Formule: ½ × 6 × 9",
-          "6 × 9 = 54, dan delen door 2"
-        ],
-        "skill_description": "Oppervlakte driehoek in context",
-        "reading_strategies": [
-          "Lees welke maat de basis is",
-          "Lees welke maat de hoogte is"
-        ],
-        "common_errors": [
-          {
-            "type": "basis_hoogte_verwisseld",
-            "description": "Basis en hoogte door elkaar gehaald",
-            "remedy": "Het maakt niet uit welke je eerst doet bij vermenigvuldigen!"
-          }
-        ]
+      "id": 4,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Cirkel diameter 10 cm, omtrek? (π=3,14)"
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed!",
-          "on_first_try": "Perfect gerekend!",
-          "after_hint": "Ja, dat klopt!"
+      "options": [
+        {
+          "text": "31.4 cm"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet goed. Probeer opnieuw.",
-          "second_attempt": "Bereken: ½ × 6 × 9",
-          "third_attempt": "6 × 9 = 54. En 54 ÷ 2 = 27 cm²"
+        {
+          "text": "41.4 cm"
+        },
+        {
+          "text": "21.4 cm"
+        },
+        {
+          "text": "62.8 cm"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Super! Je bent er helemaal klaar voor."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we de stappen nog eens doornemen."
-        }
-      }
+      "hint": "π × diameter"
     },
     {
-      "item_id": 5,
-      "learning": {
-        "tips": [
-          "½ × 14 × 7 = ?",
-          "14 × 7 = 98",
-          "98 ÷ 2 = 49"
-        ],
-        "skill_description": "Oppervlakte driehoek berekenen",
-        "reading_strategies": [
-          "Identificeer basis en hoogte",
-          "Pas de formule toe"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Vermenigvuldigingsfout gemaakt",
-            "remedy": "Controleer je tafel van vermenigvuldiging"
-          }
-        ]
+      "id": 5,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 6 cm en hoogte 4 cm. Bereken de oppervlakte."
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend!",
-          "on_first_try": "Perfect! Je beheerst de grotere getallen ook!",
-          "after_hint": "Goed gedaan met de hint!"
+      "options": [
+        {
+          "text": "12 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Probeer het opnieuw.",
-          "second_attempt": "Reken eerst 14 × 7",
-          "third_attempt": "14 × 7 = 98, en de helft daarvan is 49"
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "22 cm²"
+        },
+        {
+          "text": "7 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je rekent al heel vlot!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst wat makkelijkere sommen doen."
-        }
-      }
+      "hint": "Oppervlakte = ½ × 6 × 4 = 12 cm²"
     },
     {
-      "item_id": 6,
-      "learning": {
-        "tips": [
-          "Oppervlakte = ½ × basis × hoogte",
-          "½ × 16 × 10 = ?",
-          "16 × 10 = 160, dan 160 ÷ 2"
-        ],
-        "skill_description": "Oppervlakte driehoek met grotere getallen",
-        "reading_strategies": [
-          "Let op: basis 16 cm, hoogte 10 cm",
-          "Bereken stap voor stap"
-        ],
-        "common_errors": [
-          {
-            "type": "delen_vergeten",
-            "description": "Vergeten te delen door 2",
-            "remedy": "Het resultaat moet de helft zijn van 16 × 10"
-          }
-        ]
+      "id": 6,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 10 cm en hoogte 5 cm. Bereken de oppervlakte."
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je snapt het helemaal!",
-          "after_hint": "Prima! Nu heb je het door."
+      "options": [
+        {
+          "text": "25 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Nog even proberen.",
-          "second_attempt": "Let op: je moet door 2 delen",
-          "third_attempt": "16 × 10 = 160. De helft is 80 cm²"
+        {
+          "text": "50 cm²"
+        },
+        {
+          "text": "35 cm²"
+        },
+        {
+          "text": "20 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier echt goed in!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "We gaan terug naar de basis."
-        }
-      }
+      "hint": "Oppervlakte = ½ × 10 × 5 = 25 cm²"
     },
     {
-      "item_id": 7,
-      "learning": {
-        "tips": [
-          "Een driehoek past precies twee keer in een rechthoek",
-          "Daarom deel je door 2",
-          "Visueel denken helpt!"
-        ],
-        "skill_description": "Inzicht in oppervlakte driehoek",
-        "reading_strategies": [
-          "Lees de vraag zorgvuldig",
-          "Denk na over waarom"
-        ],
-        "common_errors": [
-          {
-            "type": "conceptueel",
-            "description": "Niet begrijpen waarom je door 2 deelt",
-            "remedy": "Stel je voor: je snijdt een rechthoek diagonaal doormidden"
-          }
-        ]
+      "id": 7,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 8 cm en hoogte 6 cm. Bereken de oppervlakte."
       },
-      "feedback": {
-        "correct": {
-          "default": "Heel goed!",
-          "on_first_try": "Perfect! Je begrijpt het concept!",
-          "after_hint": "Ja, nu snap je waarom!"
+      "options": [
+        {
+          "text": "24 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Denk na over een rechthoek en een driehoek.",
-          "second_attempt": "Als je een rechthoek diagonaal doorsnijdt...",
-          "third_attempt": "Dan krijg je twee driehoeken die elk de helft zijn!"
+        {
+          "text": "48 cm²"
+        },
+        {
+          "text": "34 cm²"
+        },
+        {
+          "text": "19 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je begrijpt de wiskunde erachter!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we dit concept nog eens bekijken."
-        }
-      }
+      "hint": "Oppervlakte = ½ × 8 × 6 = 24 cm²"
     },
     {
-      "item_id": 8,
-      "learning": {
-        "tips": [
-          "Omtrek cirkel = π × diameter",
-          "π = 3,14",
-          "Diameter = 20 cm"
-        ],
-        "skill_description": "Omtrek cirkel berekenen met π",
-        "reading_strategies": [
-          "Zoek de diameter of straal",
-          "Gebruik π = 3,14"
-        ],
-        "common_errors": [
-          {
-            "type": "straal_diameter",
-            "description": "Straal en diameter door elkaar gehaald",
-            "remedy": "Diameter = 2 × straal"
-          }
-        ]
+      "id": 8,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 12 cm en hoogte 4 cm. Bereken de oppervlakte."
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed!",
-          "on_first_try": "Perfect! Je kunt met π rekenen!",
-          "after_hint": "Mooi zo!"
+      "options": [
+        {
+          "text": "24 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Probeer het nog eens. Gebruik π × d",
-          "second_attempt": "3,14 × 20 = ?",
-          "third_attempt": "3,14 × 20 = 62,8 cm"
+        {
+          "text": "48 cm²"
+        },
+        {
+          "text": "34 cm²"
+        },
+        {
+          "text": "19 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je snapt cirkels goed!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we de formule nog eens oefenen."
-        }
-      }
+      "hint": "Oppervlakte = ½ × 12 × 4 = 24 cm²"
     },
     {
-      "item_id": 9,
-      "learning": {
-        "tips": [
-          "Omtrek = π × d",
-          "π = 3,14, d = 50",
-          "3,14 × 50 = 157"
-        ],
-        "skill_description": "Omtrek cirkel met diameter",
-        "reading_strategies": [
-          "Let op: diameter is gegeven",
-          "Vermenigvuldig met π"
-        ],
-        "common_errors": [
-          {
-            "type": "kommagetal_rekenen",
-            "description": "Fout bij rekenen met kommagetallen",
-            "remedy": "3,14 × 50 is hetzelfde als 314 ÷ 2"
-          }
-        ]
+      "id": 9,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 10 cm en hoogte 5 cm. Bereken de oppervlakte."
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima!",
-          "on_first_try": "Geweldig! Je rekent vlot met π!",
-          "after_hint": "Goed gedaan!"
+      "options": [
+        {
+          "text": "25 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Bijna! Controleer je berekening.",
-          "second_attempt": "π × diameter = 3,14 × 50",
-          "third_attempt": "3,14 × 50 = 157 cm"
+        {
+          "text": "50 cm²"
+        },
+        {
+          "text": "35 cm²"
+        },
+        {
+          "text": "20 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent een expert met cirkels!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we kleinere getallen proberen."
-        }
-      }
+      "hint": "Oppervlakte = ½ × 10 × 5 = 25 cm²"
     },
     {
-      "item_id": 10,
-      "learning": {
-        "tips": [
-          "Straal gegeven, dus eerst diameter: 2 × 6 = 12",
-          "Omtrek = π × diameter",
-          "3,14 × 12 = 37,68"
-        ],
-        "skill_description": "Omtrek cirkel met straal",
-        "reading_strategies": [
-          "Let op: straal gegeven!",
-          "Bereken eerst diameter"
-        ],
-        "common_errors": [
-          {
-            "type": "diameter_berekenen",
-            "description": "Vergeten diameter te berekenen uit straal",
-            "remedy": "Diameter = 2 × straal"
-          }
-        ]
+      "id": 10,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 12 cm en hoogte 4 cm. Bereken de oppervlakte."
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend!",
-          "on_first_try": "Perfect! Je weet het verschil tussen straal en diameter!",
-          "after_hint": "Goed! Nu snap je het."
+      "options": [
+        {
+          "text": "24 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Let op: straal is niet hetzelfde als diameter!",
-          "second_attempt": "Bereken eerst de diameter: 2 × 6",
-          "third_attempt": "Diameter = 12, dan 3,14 × 12 = 37,68 m"
+        {
+          "text": "48 cm²"
+        },
+        {
+          "text": "34 cm²"
+        },
+        {
+          "text": "19 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je snapt straal en diameter perfect!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we straal en diameter nog eens bekijken."
-        }
-      }
+      "hint": "Oppervlakte = ½ × 12 × 4 = 24 cm²"
     },
     {
-      "item_id": 11,
-      "learning": {
-        "tips": [
-          "Omtrek = π × diameter",
-          "3,14 × 120 = ?",
-          "Dit is de lengte van het lint"
-        ],
-        "skill_description": "Omtrek cirkel in praktijksituatie",
-        "reading_strategies": [
-          "Wat wordt er gevraagd?",
-          "Welke maat is gegeven?"
-        ],
-        "common_errors": [
-          {
-            "type": "vraag_verkeerd_begrepen",
-            "description": "De vraag verkeerd gelezen",
-            "remedy": "Lees goed: er wordt naar de omtrek gevraagd"
-          }
-        ]
+      "id": 11,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 10 cm en hoogte 5 cm. Bereken de oppervlakte."
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed!",
-          "on_first_try": "Perfect! Je kunt de formule in praktijk toepassen!",
-          "after_hint": "Mooi zo!"
+      "options": [
+        {
+          "text": "25 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Welke formule gebruik je?",
-          "second_attempt": "Voor de rand heb je de omtrek nodig",
-          "third_attempt": "Omtrek = 3,14 × 120 = 376,8 cm"
+        {
+          "text": "50 cm²"
+        },
+        {
+          "text": "35 cm²"
+        },
+        {
+          "text": "20 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je past de formule goed toe!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we de formule nog eens herhalen."
-        }
-      }
+      "hint": "Oppervlakte = ½ × 10 × 5 = 25 cm²"
     },
     {
-      "item_id": 12,
-      "learning": {
-        "tips": [
-          "De fiets legt de omtrek van het wiel af",
-          "Omtrek = π × diameter",
-          "3,14 × 60 = 188,4"
-        ],
-        "skill_description": "Omtrek cirkel in context",
-        "reading_strategies": [
-          "Wat beweegt er? Het wiel",
-          "Hoever? De omtrek"
-        ],
-        "common_errors": [
-          {
-            "type": "context_niet_begrepen",
-            "description": "Niet snappen dat dit over omtrek gaat",
-            "remedy": "Een ronddraaiend wiel legt zijn omtrek af"
-          }
-        ]
+      "id": 12,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 9 cm en hoogte 6 cm. Bereken de oppervlakte."
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima!",
-          "on_first_try": "Geweldig! Je snapt de toepassing!",
-          "after_hint": "Goed gedaan!"
+      "options": [
+        {
+          "text": "27 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Denk na: wat legt een ronddraaiend wiel af?",
-          "second_attempt": "De omtrek van het wiel!",
-          "third_attempt": "Omtrek = 3,14 × 60 = 188,4 cm"
+        {
+          "text": "54 cm²"
+        },
+        {
+          "text": "37 cm²"
+        },
+        {
+          "text": "22 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je ziet de wiskunde in het dagelijks leven!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst de basis goed snappen."
-        }
-      }
+      "hint": "Oppervlakte = ½ × 9 × 6 = 27 cm²"
     },
     {
-      "item_id": 13,
-      "learning": {
-        "tips": [
-          "Straal = 15 cm",
-          "Formule: 2 × π × r",
-          "2 × 3,14 × 15 = 94,2"
-        ],
-        "skill_description": "Omtrek met formule 2πr",
-        "reading_strategies": [
-          "Welke maat is gegeven: straal",
-          "Gebruik formule 2 × π × r"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerde_formule",
-            "description": "π × r gebruikt in plaats van 2 × π × r",
-            "remedy": "Bij straal: 2 × π × r. Bij diameter: π × d"
-          }
-        ]
+      "id": 13,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 9 cm en hoogte 6 cm. Bereken de oppervlakte."
       },
-      "feedback": {
-        "correct": {
-          "default": "Correct!",
-          "on_first_try": "Perfect! Je kent beide formules!",
-          "after_hint": "Goed zo!"
+      "options": [
+        {
+          "text": "27 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Vergeet de 2 niet bij de straal!",
-          "second_attempt": "Formule: 2 × π × straal",
-          "third_attempt": "2 × 3,14 × 15 = 94,2 cm"
+        {
+          "text": "54 cm²"
+        },
+        {
+          "text": "37 cm²"
+        },
+        {
+          "text": "22 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst beide formules!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we het verschil tussen de formules bekijken."
-        }
-      }
+      "hint": "Oppervlakte = ½ × 9 × 6 = 27 cm²"
     },
     {
-      "item_id": 14,
-      "learning": {
-        "tips": [
-          "Omtrek = π × diameter",
-          "100 meter is heel groot!",
-          "3,14 × 100 = 314"
-        ],
-        "skill_description": "Omtrek cirkel met grote getallen",
-        "reading_strategies": [
-          "Let op de eenheid: meter",
-          "Vermenigvuldig met π"
-        ],
-        "common_errors": [
-          {
-            "type": "grote_getallen",
-            "description": "Vergissing bij grote getallen",
-            "remedy": "3,14 × 100 is makkelijk: gewoon × 100"
-          }
-        ]
+      "id": 14,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 9 cm en hoogte 6 cm. Bereken de oppervlakte."
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend!",
-          "on_first_try": "Perfect! Ook met grotere afstanden lukt het!",
-          "after_hint": "Goed gedaan!"
+      "options": [
+        {
+          "text": "27 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Probeer nog eens. Dit is eigenlijk eenvoudig!",
-          "second_attempt": "3,14 × 100 = ?",
-          "third_attempt": "3,14 × 100 = 314 meter"
+        {
+          "text": "54 cm²"
+        },
+        {
+          "text": "37 cm²"
+        },
+        {
+          "text": "22 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst cirkels helemaal!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we nog even oefenen."
-        }
-      }
+      "hint": "Oppervlakte = ½ × 9 × 6 = 27 cm²"
     },
     {
-      "item_id": 15,
-      "learning": {
-        "tips": [
-          "Coördinaten zijn (x, y)",
-          "x = horizontaal (naar rechts)",
-          "y = verticaal (omhoog)"
-        ],
-        "skill_description": "Coördinaten lezen",
-        "reading_strategies": [
-          "Eerste getal is x-as",
-          "Tweede getal is y-as"
-        ],
-        "common_errors": [
-          {
-            "type": "x_y_verwisseld",
-            "description": "X en Y door elkaar gehaald",
-            "remedy": "Onthoud: eerst naar rechts (x), dan omhoog (y)"
-          }
-        ]
+      "id": 15,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 8 cm en hoogte 6 cm. Bereken de oppervlakte."
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed!",
-          "on_first_try": "Perfect! Je snapt coördinaten!",
-          "after_hint": "Ja, dat klopt!"
+      "options": [
+        {
+          "text": "24 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Denk na: welke is de x-as?",
-          "second_attempt": "X is horizontaal, Y is verticaal",
-          "third_attempt": "(4, 3) betekent: 4 naar rechts, 3 omhoog"
+        {
+          "text": "48 cm²"
+        },
+        {
+          "text": "34 cm²"
+        },
+        {
+          "text": "19 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je snapt het coördinatensysteem!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we X en Y nog eens bekijken."
-        }
-      }
+      "hint": "Oppervlakte = ½ × 8 × 6 = 24 cm²"
     },
     {
-      "item_id": 16,
-      "learning": {
-        "tips": [
-          "Zelfde y-coördinaat = zelfde hoogte",
-          "Horizontale lijn",
-          "Beide hebben y = 5"
-        ],
-        "skill_description": "Coördinaten vergelijken",
-        "reading_strategies": [
-          "Vergelijk de y-waarden",
-          "Wat is hetzelfde?"
-        ],
-        "common_errors": [
-          {
-            "type": "horizontaal_verticaal",
-            "description": "Horizontaal en verticaal door elkaar",
-            "remedy": "Zelfde y = horizontale lijn, zelfde x = verticale lijn"
-          }
-        ]
+      "id": 16,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 6 cm en hoogte 4 cm. Bereken de oppervlakte."
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima!",
-          "on_first_try": "Uitstekend! Je ziet het patroon!",
-          "after_hint": "Goed zo!"
+      "options": [
+        {
+          "text": "12 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Kijk naar de y-waarden.",
-          "second_attempt": "Beide punten hebben y = 5",
-          "third_attempt": "Zelfde y betekent: op dezelfde hoogte, dus horizontale lijn"
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "22 cm²"
+        },
+        {
+          "text": "7 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je ziet verbanden goed!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we patronen oefenen."
-        }
-      }
+      "hint": "Oppervlakte = ½ × 6 × 4 = 12 cm²"
     },
     {
-      "item_id": 17,
-      "learning": {
-        "tips": [
-          "Van (1,1) tot (4,1) is 3 stappen",
-          "Dit is de lengte van één zijde",
-          "Tel: 4 - 1 = 3"
-        ],
-        "skill_description": "Afstand berekenen tussen coördinaten",
-        "reading_strategies": [
-          "Zoek twee punten op dezelfde lijn",
-          "Bereken het verschil"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerd_geteld",
-            "description": "Verkeerd geteld of gerekend",
-            "remedy": "Trek de kleinste x van de grootste af"
-          }
-        ]
+      "id": 17,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 10 cm en hoogte 5 cm. Bereken de oppervlakte."
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed!",
-          "on_first_try": "Perfect! Je kunt afstanden berekenen!",
-          "after_hint": "Mooi!"
+      "options": [
+        {
+          "text": "25 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Tel hoeveel het verschil is.",
-          "second_attempt": "Van x=1 naar x=4",
-          "third_attempt": "4 - 1 = 3 eenheden"
+        {
+          "text": "50 cm²"
+        },
+        {
+          "text": "35 cm²"
+        },
+        {
+          "text": "20 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je rekent goed met coördinaten!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we afstanden oefenen."
-        }
-      }
+      "hint": "Oppervlakte = ½ × 10 × 5 = 25 cm²"
     },
     {
-      "item_id": 18,
-      "learning": {
-        "tips": [
-          "Y is hetzelfde (8), dus alleen horizontaal bewegen",
-          "Van x=3 naar x=7 is 4 stappen",
-          "Naar rechts!"
-        ],
-        "skill_description": "Richting bepalen met coördinaten",
-        "reading_strategies": [
-          "Welke coördinaat is hetzelfde?",
-          "Welke moet veranderen?"
-        ],
-        "common_errors": [
-          {
-            "type": "richting_verkeerd",
-            "description": "Verkeerde richting gekozen",
-            "remedy": "Grotere x = naar rechts, grotere y = omhoog"
-          }
-        ]
+      "id": 18,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 8 cm en hoogte 6 cm. Bereken de oppervlakte."
       },
-      "feedback": {
-        "correct": {
-          "default": "Correct!",
-          "on_first_try": "Geweldig! Je vindt de schat!",
-          "after_hint": "Goed gedaan!"
+      "options": [
+        {
+          "text": "24 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Kijk welke coördinaat moet veranderen.",
-          "second_attempt": "Y blijft 8, x gaat van 3 naar 7",
-          "third_attempt": "7 is groter dan 3, dus 4 stappen naar rechts"
+        {
+          "text": "48 cm²"
+        },
+        {
+          "text": "34 cm²"
+        },
+        {
+          "text": "19 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je navigeert perfect!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we richtingen nog eens bekijken."
-        }
-      }
+      "hint": "Oppervlakte = ½ × 8 × 6 = 24 cm²"
     },
     {
-      "item_id": 19,
-      "learning": {
-        "tips": [
-          "Lengte: van x=0 tot x=5 is 5",
-          "Breedte: van y=0 tot y=3 is 3",
-          "Oppervlakte = 5 × 3 = 15"
-        ],
-        "skill_description": "Oppervlakte berekenen met coördinaten",
-        "reading_strategies": [
-          "Bepaal lengte en breedte",
-          "Bereken oppervlakte"
-        ],
-        "common_errors": [
-          {
-            "type": "afmetingen_verkeerd",
-            "description": "Lengte en breedte verkeerd bepaald",
-            "remedy": "Trek de coördinaten van elkaar af"
-          }
-        ]
+      "id": 19,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 6 cm en hoogte 4 cm. Bereken de oppervlakte."
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend!",
-          "on_first_try": "Perfect! Je combineert coördinaten met oppervlakte!",
-          "after_hint": "Goed zo!"
+      "options": [
+        {
+          "text": "12 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Bepaal eerst de afmetingen.",
-          "second_attempt": "Lengte = 5, breedte = 3",
-          "third_attempt": "Oppervlakte = 5 × 3 = 15"
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "22 cm²"
+        },
+        {
+          "text": "7 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je combineert onderwerpen goed!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst de basis herhalen."
-        }
-      }
+      "hint": "Oppervlakte = ½ × 6 × 4 = 12 cm²"
     },
     {
-      "item_id": 20,
-      "learning": {
-        "tips": [
-          "3 naar rechts: x + 3",
-          "2 omlaag: y - 2",
-          "Nieuwe positie: (2+3, 6-2)"
-        ],
-        "skill_description": "Coördinaten verplaatsen",
-        "reading_strategies": [
-          "Lees de verplaatsing goed",
-          "Pas toe op x en y"
-        ],
-        "common_errors": [
-          {
-            "type": "plus_min_verkeerd",
-            "description": "Plus en min door elkaar gehaald",
-            "remedy": "Rechts/omhoog = plus, links/omlaag = min"
-          }
-        ]
+      "id": 20,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 6 cm en hoogte 4 cm. Bereken de oppervlakte."
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima!",
-          "on_first_try": "Perfect! Je kunt bewegen met coördinaten!",
-          "after_hint": "Goed gedaan!"
+      "options": [
+        {
+          "text": "12 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Let op de richting: rechts of omlaag?",
-          "second_attempt": "Rechts = plus bij x, omlaag = min bij y",
-          "third_attempt": "x: 2+3=5, y: 6-2=4, dus (5,4)"
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "22 cm²"
+        },
+        {
+          "text": "7 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst coördinaten helemaal!"
+      "hint": "Oppervlakte = ½ × 6 × 4 = 12 cm²"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 10 cm en hoogte 5 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "25 cm²"
         },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we bewegingen nog eens oefenen."
+        {
+          "text": "50 cm²"
+        },
+        {
+          "text": "35 cm²"
+        },
+        {
+          "text": "20 cm²"
         }
-      }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 10 × 5 = 25 cm²"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 12 cm en hoogte 4 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "48 cm²"
+        },
+        {
+          "text": "34 cm²"
+        },
+        {
+          "text": "19 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 12 × 4 = 24 cm²"
+    },
+    {
+      "id": 23,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 6 cm en hoogte 4 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "12 cm²"
+        },
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "22 cm²"
+        },
+        {
+          "text": "7 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 6 × 4 = 12 cm²"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 6 cm en hoogte 4 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "12 cm²"
+        },
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "22 cm²"
+        },
+        {
+          "text": "7 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 6 × 4 = 12 cm²"
+    },
+    {
+      "id": 25,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 6 cm en hoogte 4 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "12 cm²"
+        },
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "22 cm²"
+        },
+        {
+          "text": "7 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 6 × 4 = 12 cm²"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 6 cm en hoogte 4 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "12 cm²"
+        },
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "22 cm²"
+        },
+        {
+          "text": "7 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 6 × 4 = 12 cm²"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 10 cm en hoogte 5 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "25 cm²"
+        },
+        {
+          "text": "50 cm²"
+        },
+        {
+          "text": "35 cm²"
+        },
+        {
+          "text": "20 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 10 × 5 = 25 cm²"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 12 cm en hoogte 4 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "48 cm²"
+        },
+        {
+          "text": "34 cm²"
+        },
+        {
+          "text": "19 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 12 × 4 = 24 cm²"
+    },
+    {
+      "id": 29,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 6 cm en hoogte 4 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "12 cm²"
+        },
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "22 cm²"
+        },
+        {
+          "text": "7 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 6 × 4 = 12 cm²"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 12 cm en hoogte 4 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "48 cm²"
+        },
+        {
+          "text": "34 cm²"
+        },
+        {
+          "text": "19 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 12 × 4 = 24 cm²"
+    },
+    {
+      "id": 31,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 9 cm en hoogte 6 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "27 cm²"
+        },
+        {
+          "text": "54 cm²"
+        },
+        {
+          "text": "37 cm²"
+        },
+        {
+          "text": "22 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 9 × 6 = 27 cm²"
+    },
+    {
+      "id": 32,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 10 cm en hoogte 5 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "25 cm²"
+        },
+        {
+          "text": "50 cm²"
+        },
+        {
+          "text": "35 cm²"
+        },
+        {
+          "text": "20 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 10 × 5 = 25 cm²"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 10 cm en hoogte 5 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "25 cm²"
+        },
+        {
+          "text": "50 cm²"
+        },
+        {
+          "text": "35 cm²"
+        },
+        {
+          "text": "20 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 10 × 5 = 25 cm²"
+    },
+    {
+      "id": 34,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 8 cm en hoogte 6 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "48 cm²"
+        },
+        {
+          "text": "34 cm²"
+        },
+        {
+          "text": "19 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 8 × 6 = 24 cm²"
+    },
+    {
+      "id": 35,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 6 cm en hoogte 4 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "12 cm²"
+        },
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "22 cm²"
+        },
+        {
+          "text": "7 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 6 × 4 = 12 cm²"
+    },
+    {
+      "id": 36,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 12 cm en hoogte 4 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "48 cm²"
+        },
+        {
+          "text": "34 cm²"
+        },
+        {
+          "text": "19 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 12 × 4 = 24 cm²"
+    },
+    {
+      "id": 37,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 12 cm en hoogte 4 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "48 cm²"
+        },
+        {
+          "text": "34 cm²"
+        },
+        {
+          "text": "19 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 12 × 4 = 24 cm²"
+    },
+    {
+      "id": 38,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 12 cm en hoogte 4 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "48 cm²"
+        },
+        {
+          "text": "34 cm²"
+        },
+        {
+          "text": "19 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 12 × 4 = 24 cm²"
+    },
+    {
+      "id": 39,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 9 cm en hoogte 6 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "27 cm²"
+        },
+        {
+          "text": "54 cm²"
+        },
+        {
+          "text": "37 cm²"
+        },
+        {
+          "text": "22 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 9 × 6 = 27 cm²"
+    },
+    {
+      "id": 40,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 12 cm en hoogte 4 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "48 cm²"
+        },
+        {
+          "text": "34 cm²"
+        },
+        {
+          "text": "19 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 12 × 4 = 24 cm²"
+    },
+    {
+      "id": 41,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 8 cm en hoogte 6 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "48 cm²"
+        },
+        {
+          "text": "34 cm²"
+        },
+        {
+          "text": "19 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 8 × 6 = 24 cm²"
+    },
+    {
+      "id": 42,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 6 cm en hoogte 4 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "12 cm²"
+        },
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "22 cm²"
+        },
+        {
+          "text": "7 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 6 × 4 = 12 cm²"
+    },
+    {
+      "id": 43,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 6 cm en hoogte 4 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "12 cm²"
+        },
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "22 cm²"
+        },
+        {
+          "text": "7 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 6 × 4 = 12 cm²"
+    },
+    {
+      "id": 44,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 8 cm en hoogte 6 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "48 cm²"
+        },
+        {
+          "text": "34 cm²"
+        },
+        {
+          "text": "19 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 8 × 6 = 24 cm²"
+    },
+    {
+      "id": 45,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 12 cm en hoogte 4 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "48 cm²"
+        },
+        {
+          "text": "34 cm²"
+        },
+        {
+          "text": "19 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 12 × 4 = 24 cm²"
+    },
+    {
+      "id": 46,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 8 cm en hoogte 6 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "48 cm²"
+        },
+        {
+          "text": "34 cm²"
+        },
+        {
+          "text": "19 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 8 × 6 = 24 cm²"
+    },
+    {
+      "id": 47,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 10 cm en hoogte 5 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "25 cm²"
+        },
+        {
+          "text": "50 cm²"
+        },
+        {
+          "text": "35 cm²"
+        },
+        {
+          "text": "20 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 10 × 5 = 25 cm²"
+    },
+    {
+      "id": 48,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 10 cm en hoogte 5 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "25 cm²"
+        },
+        {
+          "text": "50 cm²"
+        },
+        {
+          "text": "35 cm²"
+        },
+        {
+          "text": "20 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 10 × 5 = 25 cm²"
+    },
+    {
+      "id": 49,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 6 cm en hoogte 4 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "12 cm²"
+        },
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "22 cm²"
+        },
+        {
+          "text": "7 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 6 × 4 = 12 cm²"
+    },
+    {
+      "id": 50,
+      "type": "multiple_choice",
+      "theme": "meetkunde",
+      "question": {
+        "text": "Een driehoek met basis 12 cm en hoogte 4 cm. Bereken de oppervlakte."
+      },
+      "options": [
+        {
+          "text": "24 cm²"
+        },
+        {
+          "text": "48 cm²"
+        },
+        {
+          "text": "34 cm²"
+        },
+        {
+          "text": "19 cm²"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Oppervlakte = ½ × 12 × 4 = 24 cm²"
     }
-  ]
+  ],
+  "settings": {
+    "allow_review": true
+  }
 }

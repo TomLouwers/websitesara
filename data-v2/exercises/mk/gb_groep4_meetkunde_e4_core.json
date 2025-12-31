@@ -27,7 +27,7 @@
     }
   },
   "display": {
-    "title": "Meetkunde Groep 4"
+    "title": "Meetkunde en Geld Groep 4"
   },
   "content": {
     "instruction": "Kies het goede antwoord:"
@@ -42,138 +42,57 @@
       },
       "options": [
         {
-          "text": "10 cm"
-        },
-        {
-          "text": "15 cm"
-        },
-        {
           "text": "20 cm"
         },
         {
+          "text": "10 cm"
+        },
+        {
           "text": "25 cm"
+        },
+        {
+          "text": "15 cm"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 2
+        "correct_index": 0
       },
-      "hint": "Omtrek vierkant = 4 × zijde. 4 × 5 = 20 cm"
+      "hint": "Omtrek vierkant = 4 × zijde = 4 × 5"
     },
     {
       "id": 2,
       "type": "multiple_choice",
       "theme": "omtrek",
       "question": {
-        "text": "Een rechthoek is 6 cm lang en 4 cm breed. Wat is de omtrek?"
+        "text": "Een rechthoek is 6 cm lang en 3 cm breed. Wat is de omtrek?"
       },
       "options": [
         {
-          "text": "10 cm"
+          "text": "9 cm"
         },
         {
-          "text": "20 cm"
+          "text": "18 cm"
         },
         {
-          "text": "24 cm"
+          "text": "12 cm"
         },
         {
-          "text": "16 cm"
+          "text": "15 cm"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Omtrek = 2 × lengte + 2 × breedte. 2 × 6 + 2 × 4 = 12 + 8 = 20 cm"
+      "hint": "Omtrek = 2 × (lengte + breedte) = 2 × 9"
     },
     {
       "id": 3,
       "type": "multiple_choice",
       "theme": "omtrek",
       "question": {
-        "text": "Jouw tuin is vierkant met zijden van 8 meter. Hoeveel meter hek heb je nodig om de tuin helemaal rond te zetten?"
-      },
-      "options": [
-        {
-          "text": "16 meter"
-        },
-        {
-          "text": "24 meter"
-        },
-        {
-          "text": "32 meter"
-        },
-        {
-          "text": "64 meter"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "De omtrek van een vierkant = 4 × zijde. 4 × 8 = 32 meter"
-    },
-    {
-      "id": 4,
-      "type": "multiple_choice",
-      "theme": "omtrek",
-      "question": {
-        "text": "Een rechthoek heeft lengte 10 cm en breedte 5 cm. Bereken de omtrek."
-      },
-      "options": [
-        {
-          "text": "15 cm"
-        },
-        {
-          "text": "20 cm"
-        },
-        {
-          "text": "30 cm"
-        },
-        {
-          "text": "50 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Omtrek = 2 × (lengte + breedte). 2 × (10 + 5) = 2 × 15 = 30 cm"
-    },
-    {
-      "id": 5,
-      "type": "multiple_choice",
-      "theme": "omtrek",
-      "question": {
-        "text": "Een speelveld is rechthoekig: 20 meter lang en 15 meter breed. Wat is de omtrek?"
-      },
-      "options": [
-        {
-          "text": "35 meter"
-        },
-        {
-          "text": "70 meter"
-        },
-        {
-          "text": "50 meter"
-        },
-        {
-          "text": "300 meter"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "2 × 20 + 2 × 15 = 40 + 30 = 70 meter"
-    },
-    {
-      "id": 6,
-      "type": "multiple_choice",
-      "theme": "omtrek",
-      "question": {
-        "text": "Een vierkant heeft omtrek 24 cm. Hoe lang is één zijde?"
+        "text": "Een vierkant heeft een omtrek van 24 cm. Hoe lang is één zijde?"
       },
       "options": [
         {
@@ -193,14 +112,230 @@
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Omtrek vierkant = 4 × zijde. Dus zijde = 24 : 4 = 6 cm"
+      "hint": "Zijde = 24 : 4 = 6"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "theme": "omtrek",
+      "question": {
+        "text": "Een rechthoek is 10 cm lang en 4 cm breed. Bereken de omtrek."
+      },
+      "options": [
+        {
+          "text": "14 cm"
+        },
+        {
+          "text": "24 cm"
+        },
+        {
+          "text": "28 cm"
+        },
+        {
+          "text": "40 cm"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "2 × (10 + 4) = 2 × 14 = 28"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "theme": "omtrek",
+      "question": {
+        "text": "Een vierkant speelveld heeft zijden van 8 meter. Hoeveel meter hek heb je nodig eromheen?"
+      },
+      "options": [
+        {
+          "text": "16 m"
+        },
+        {
+          "text": "24 m"
+        },
+        {
+          "text": "32 m"
+        },
+        {
+          "text": "64 m"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "4 × 8 = 32 meter"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "theme": "omtrek",
+      "question": {
+        "text": "De omtrek van een rechthoek is 30 cm. De lengte is 10 cm. Wat is de breedte?"
+      },
+      "options": [
+        {
+          "text": "5 cm"
+        },
+        {
+          "text": "10 cm"
+        },
+        {
+          "text": "15 cm"
+        },
+        {
+          "text": "20 cm"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "30 = 2 × (10 + breedte). Dus breedte = 5"
     },
     {
       "id": 7,
       "type": "multiple_choice",
       "theme": "omtrek",
       "question": {
-        "text": "Een rechthoekige lijst voor een foto is 12 cm lang en 8 cm breed. Hoeveel cm rand heb je nodig?"
+        "text": "Een vierkante tuin heeft zijden van 12 meter. Wat kost het hek als 1 meter €5 kost?"
+      },
+      "options": [
+        {
+          "text": "€48"
+        },
+        {
+          "text": "€60"
+        },
+        {
+          "text": "€240"
+        },
+        {
+          "text": "€144"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Omtrek = 48 m. Kosten = 48 × €5 = €240"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "theme": "omtrek",
+      "question": {
+        "text": "Welke rechthoek heeft de grootste omtrek?"
+      },
+      "options": [
+        {
+          "text": "6 × 2 cm"
+        },
+        {
+          "text": "5 × 3 cm"
+        },
+        {
+          "text": "4 × 4 cm"
+        },
+        {
+          "text": "7 × 1 cm"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 3
+      },
+      "hint": "Bereken: 16, 16, 16, 16 cm - ze zijn gelijk!"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "theme": "omtrek",
+      "question": {
+        "text": "Een rechthoekige kamer is 5 meter lang en 4 meter breed. Hoeveel plint heb je nodig?"
+      },
+      "options": [
+        {
+          "text": "9 m"
+        },
+        {
+          "text": "18 m"
+        },
+        {
+          "text": "20 m"
+        },
+        {
+          "text": "25 m"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "2 × (5 + 4) = 18"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "theme": "omtrek",
+      "question": {
+        "text": "De omtrek van een vierkant is 36 cm. Wat is de lengte van één zijde?"
+      },
+      "options": [
+        {
+          "text": "6 cm"
+        },
+        {
+          "text": "9 cm"
+        },
+        {
+          "text": "12 cm"
+        },
+        {
+          "text": "18 cm"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "36 : 4 = 9"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "theme": "omtrek",
+      "question": {
+        "text": "Een rechthoek heeft een omtrek van 20 cm. De breedte is 3 cm. Wat is de lengte?"
+      },
+      "options": [
+        {
+          "text": "7 cm"
+        },
+        {
+          "text": "10 cm"
+        },
+        {
+          "text": "14 cm"
+        },
+        {
+          "text": "17 cm"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "20 = 2 × (lengte + 3). Dus lengte = 7"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "theme": "omtrek",
+      "question": {
+        "text": "Twee vierkanten hebben elk zijden van 5 cm. Wat is de totale omtrek van beide?"
       },
       "options": [
         {
@@ -210,348 +345,699 @@
           "text": "40 cm"
         },
         {
-          "text": "96 cm"
+          "text": "50 cm"
         },
         {
-          "text": "32 cm"
+          "text": "100 cm"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "De rand is de omtrek. 2 × 12 + 2 × 8 = 24 + 16 = 40 cm"
+      "hint": "2 × (4 × 5) = 40"
     },
     {
-      "id": 8,
+      "id": 13,
       "type": "multiple_choice",
-      "theme": "ruimtefiguren",
+      "theme": "omtrek",
+      "question": {
+        "text": "Een rechthoekig veld is 15 meter lang en 10 meter breed. Bereken de omtrek."
+      },
+      "options": [
+        {
+          "text": "25 m"
+        },
+        {
+          "text": "50 m"
+        },
+        {
+          "text": "150 m"
+        },
+        {
+          "text": "30 m"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "2 × (15 + 10) = 50"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "theme": "omtrek",
+      "question": {
+        "text": "Een vierkant heeft een zijde van 7 cm. Wat is de omtrek?"
+      },
+      "options": [
+        {
+          "text": "14 cm"
+        },
+        {
+          "text": "21 cm"
+        },
+        {
+          "text": "28 cm"
+        },
+        {
+          "text": "49 cm"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "4 × 7 = 28"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "theme": "omtrek",
+      "question": {
+        "text": "De omtrek van een rechthoek is 40 cm. De lengte is 12 cm. Wat is de breedte?"
+      },
+      "options": [
+        {
+          "text": "4 cm"
+        },
+        {
+          "text": "8 cm"
+        },
+        {
+          "text": "14 cm"
+        },
+        {
+          "text": "16 cm"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "40 = 2 × (12 + breedte). Dus breedte = 8"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "theme": "ruimtelijke_figuren",
       "question": {
         "text": "Hoeveel vlakken heeft een kubus?"
       },
       "options": [
         {
-          "text": "4 vlakken"
+          "text": "4"
         },
         {
-          "text": "6 vlakken"
+          "text": "6"
         },
         {
-          "text": "8 vlakken"
+          "text": "8"
         },
         {
-          "text": "12 vlakken"
+          "text": "12"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Denk aan een dobbelsteen: voor, achter, links, rechts, boven, onder = 6"
+      "hint": "Tel de vlakken: voor, achter, boven, onder, links, rechts = 6"
     },
     {
-      "id": 9,
+      "id": 17,
       "type": "multiple_choice",
-      "theme": "ruimtefiguren",
+      "theme": "ruimtelijke_figuren",
       "question": {
-        "text": "Welke vorm heeft een voetbal?"
+        "text": "Hoeveel ribben heeft een kubus?"
       },
       "options": [
         {
-          "text": "kubus"
+          "text": "6"
         },
         {
-          "text": "balk"
+          "text": "8"
         },
         {
-          "text": "bol"
+          "text": "10"
         },
         {
-          "text": "cilinder"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Een voetbal is rond, dat is een bol"
-    },
-    {
-      "id": 10,
-      "type": "multiple_choice",
-      "theme": "ruimtefiguren",
-      "question": {
-        "text": "Een blikje soep heeft de vorm van een ..."
-      },
-      "options": [
-        {
-          "text": "kubus"
-        },
-        {
-          "text": "balk"
-        },
-        {
-          "text": "cilinder"
-        },
-        {
-          "text": "piramide"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Een blikje is rond met ronde bovenkant en onderkant"
-    },
-    {
-      "id": 11,
-      "type": "multiple_choice",
-      "theme": "ruimtefiguren",
-      "question": {
-        "text": "Hoeveel hoeken heeft een kubus?"
-      },
-      "options": [
-        {
-          "text": "4 hoeken"
-        },
-        {
-          "text": "6 hoeken"
-        },
-        {
-          "text": "8 hoeken"
-        },
-        {
-          "text": "12 hoeken"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Tel de hoekpunten: 4 boven en 4 onder = 8 hoeken"
-    },
-    {
-      "id": 12,
-      "type": "multiple_choice",
-      "theme": "ruimtefiguren",
-      "question": {
-        "text": "Een doosje cornflakes heeft de vorm van een ..."
-      },
-      "options": [
-        {
-          "text": "kubus"
-        },
-        {
-          "text": "balk"
-        },
-        {
-          "text": "cilinder"
-        },
-        {
-          "text": "bol"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Een balk lijkt op een doos met rechthoekige vlakken"
-    },
-    {
-      "id": 13,
-      "type": "multiple_choice",
-      "theme": "ruimtefiguren",
-      "question": {
-        "text": "Welke ruimtelijke figuur rolt?"
-      },
-      "options": [
-        {
-          "text": "kubus"
-        },
-        {
-          "text": "balk"
-        },
-        {
-          "text": "piramide"
-        },
-        {
-          "text": "cilinder"
+          "text": "12"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 3
       },
-      "hint": "Denk aan een blikje dat je kunt laten rollen"
+      "hint": "Een kubus heeft 12 ribben"
     },
     {
-      "id": 14,
+      "id": 18,
       "type": "multiple_choice",
-      "theme": "ruimtefiguren",
+      "theme": "ruimtelijke_figuren",
       "question": {
-        "text": "Een bol heeft ..."
+        "text": "Hoeveel hoekpunten heeft een balk?"
       },
       "options": [
         {
-          "text": "geen hoeken en geen vlakken"
+          "text": "4"
         },
         {
-          "text": "6 vlakken"
+          "text": "6"
         },
         {
-          "text": "8 hoeken"
+          "text": "8"
         },
         {
-          "text": "12 ribben"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Een bol is helemaal rond, zonder hoeken of platte vlakken"
-    },
-    {
-      "id": 15,
-      "type": "multiple_choice",
-      "theme": "geld",
-      "question": {
-        "text": "Je koopt een boek voor €12,50 en betaalt met een briefje van €20. Hoeveel wisselgeld krijg je?"
-      },
-      "options": [
-        {
-          "text": "€7,50"
-        },
-        {
-          "text": "€8,50"
-        },
-        {
-          "text": "€6,50"
-        },
-        {
-          "text": "€32,50"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "€20 - €12,50 = €7,50"
-    },
-    {
-      "id": 16,
-      "type": "multiple_choice",
-      "theme": "geld",
-      "question": {
-        "text": "Je koopt 3 schriften van €2,50 elk. Wat betaal je in totaal?"
-      },
-      "options": [
-        {
-          "text": "€5,00"
-        },
-        {
-          "text": "€6,00"
-        },
-        {
-          "text": "€7,50"
-        },
-        {
-          "text": "€10,00"
+          "text": "12"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 2
       },
-      "hint": "3 × €2,50 = €7,50"
-    },
-    {
-      "id": 17,
-      "type": "multiple_choice",
-      "theme": "geld",
-      "question": {
-        "text": "Een speelgoedauto kost €23,75. Je betaalt met €25. Hoeveel wisselgeld?"
-      },
-      "options": [
-        {
-          "text": "€1,25"
-        },
-        {
-          "text": "€2,25"
-        },
-        {
-          "text": "€1,75"
-        },
-        {
-          "text": "€2,00"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "€25,00 - €23,75 = €1,25"
-    },
-    {
-      "id": 18,
-      "type": "multiple_choice",
-      "theme": "geld",
-      "question": {
-        "text": "Je hebt €50 en koopt schoenen voor €38,50. Hoeveel houd je over?"
-      },
-      "options": [
-        {
-          "text": "€11,50"
-        },
-        {
-          "text": "€12,50"
-        },
-        {
-          "text": "€21,50"
-        },
-        {
-          "text": "€88,50"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "€50 - €38,50 = €11,50"
+      "hint": "Een balk heeft 8 hoekpunten"
     },
     {
       "id": 19,
       "type": "multiple_choice",
-      "theme": "geld",
+      "theme": "ruimtelijke_figuren",
       "question": {
-        "text": "Een t-shirt kost €15,95 en een broek €24,50. Wat is het totaal?"
+        "text": "Welke figuur heeft geen hoeken?"
       },
       "options": [
         {
-          "text": "€39,45"
+          "text": "kubus"
         },
         {
-          "text": "€40,45"
+          "text": "balk"
         },
         {
-          "text": "€40,00"
+          "text": "bol"
         },
         {
-          "text": "€39,95"
+          "text": "piramide"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Een bol is rond en heeft geen hoeken"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "theme": "ruimtelijke_figuren",
+      "question": {
+        "text": "Een dobbelsteen heeft de vorm van een..."
+      },
+      "options": [
+        {
+          "text": "balk"
+        },
+        {
+          "text": "kubus"
+        },
+        {
+          "text": "bol"
+        },
+        {
+          "text": "cilinder"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 1
       },
-      "hint": "€15,95 + €24,50 = €40,45"
+      "hint": "Een dobbelsteen is een kubus"
     },
     {
-      "id": 20,
+      "id": 21,
+      "type": "multiple_choice",
+      "theme": "ruimtelijke_figuren",
+      "question": {
+        "text": "Hoeveel vlakken heeft een cilinder?"
+      },
+      "options": [
+        {
+          "text": "1"
+        },
+        {
+          "text": "2"
+        },
+        {
+          "text": "3"
+        },
+        {
+          "text": "4"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "2 cirkels + 1 gebogen vlak = 3"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "theme": "ruimtelijke_figuren",
+      "question": {
+        "text": "Welke figuur heeft 1 hoekpunt?"
+      },
+      "options": [
+        {
+          "text": "kegel"
+        },
+        {
+          "text": "cilinder"
+        },
+        {
+          "text": "bol"
+        },
+        {
+          "text": "kubus"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Een kegel heeft 1 punt bovenaan"
+    },
+    {
+      "id": 23,
+      "type": "multiple_choice",
+      "theme": "ruimtelijke_figuren",
+      "question": {
+        "text": "Een conservenblik heeft de vorm van een..."
+      },
+      "options": [
+        {
+          "text": "kubus"
+        },
+        {
+          "text": "balk"
+        },
+        {
+          "text": "cilinder"
+        },
+        {
+          "text": "bol"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Een blik is cilindrisch"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "theme": "ruimtelijke_figuren",
+      "question": {
+        "text": "Hoeveel ribben heeft een balk?"
+      },
+      "options": [
+        {
+          "text": "8"
+        },
+        {
+          "text": "10"
+        },
+        {
+          "text": "12"
+        },
+        {
+          "text": "14"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Een balk heeft 12 ribben, net als een kubus"
+    },
+    {
+      "id": 25,
+      "type": "multiple_choice",
+      "theme": "ruimtelijke_figuren",
+      "question": {
+        "text": "Welke figuur kan rollen?"
+      },
+      "options": [
+        {
+          "text": "kubus"
+        },
+        {
+          "text": "balk"
+        },
+        {
+          "text": "cilinder"
+        },
+        {
+          "text": "piramide"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Een cilinder kan rollen"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "theme": "ruimtelijke_figuren",
+      "question": {
+        "text": "Een tennisbal heeft de vorm van een..."
+      },
+      "options": [
+        {
+          "text": "kubus"
+        },
+        {
+          "text": "balk"
+        },
+        {
+          "text": "bol"
+        },
+        {
+          "text": "cilinder"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Een bal is bolvormig"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "theme": "ruimtelijke_figuren",
+      "question": {
+        "text": "Hoeveel vlakken heeft een piramide met een vierkant grondvlak?"
+      },
+      "options": [
+        {
+          "text": "4"
+        },
+        {
+          "text": "5"
+        },
+        {
+          "text": "6"
+        },
+        {
+          "text": "8"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "1 grondvlak + 4 zijvlakken = 5"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "theme": "ruimtelijke_figuren",
+      "question": {
+        "text": "Welke twee figuren hebben evenveel vlakken?"
+      },
+      "options": [
+        {
+          "text": "kubus en balk"
+        },
+        {
+          "text": "cilinder en kegel"
+        },
+        {
+          "text": "bol en kubus"
+        },
+        {
+          "text": "piramide en cilinder"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Beide hebben 6 vlakken"
+    },
+    {
+      "id": 29,
+      "type": "multiple_choice",
+      "theme": "ruimtelijke_figuren",
+      "question": {
+        "text": "Een schoenendoos heeft de vorm van een..."
+      },
+      "options": [
+        {
+          "text": "kubus"
+        },
+        {
+          "text": "balk"
+        },
+        {
+          "text": "cilinder"
+        },
+        {
+          "text": "bol"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "Een doos is meestal een balk"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "theme": "ruimtelijke_figuren",
+      "question": {
+        "text": "Hoeveel hoekpunten heeft een cilinder?"
+      },
+      "options": [
+        {
+          "text": "0"
+        },
+        {
+          "text": "2"
+        },
+        {
+          "text": "4"
+        },
+        {
+          "text": "8"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Een cilinder heeft geen hoekpunten"
+    },
+    {
+      "id": 31,
+      "type": "multiple_choice",
+      "theme": "ruimtelijke_figuren",
+      "question": {
+        "text": "Welke figuur heeft alleen vlakke vlakken?"
+      },
+      "options": [
+        {
+          "text": "bol"
+        },
+        {
+          "text": "cilinder"
+        },
+        {
+          "text": "kubus"
+        },
+        {
+          "text": "kegel"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Een kubus heeft alleen vlakke kanten"
+    },
+    {
+      "id": 32,
+      "type": "multiple_choice",
+      "theme": "ruimtelijke_figuren",
+      "question": {
+        "text": "Een piramide in Egypte heeft hoeveel zijvlakken?"
+      },
+      "options": [
+        {
+          "text": "3"
+        },
+        {
+          "text": "4"
+        },
+        {
+          "text": "5"
+        },
+        {
+          "text": "6"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "4 driehoekige zijvlakken"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "theme": "ruimtelijke_figuren",
+      "question": {
+        "text": "Hoeveel hoekpunten heeft een piramide met een vierkant grondvlak?"
+      },
+      "options": [
+        {
+          "text": "4"
+        },
+        {
+          "text": "5"
+        },
+        {
+          "text": "6"
+        },
+        {
+          "text": "8"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "4 op het grondvlak + 1 bovenaan = 5"
+    },
+    {
+      "id": 34,
+      "type": "multiple_choice",
+      "theme": "ruimtelijke_figuren",
+      "question": {
+        "text": "Welke figuur kun je maken door een vierkant rond te draaien?"
+      },
+      "options": [
+        {
+          "text": "kubus"
+        },
+        {
+          "text": "balk"
+        },
+        {
+          "text": "cilinder"
+        },
+        {
+          "text": "bol"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Door een vierkant rond zijn as te draaien krijg je een cilinder"
+    },
+    {
+      "id": 35,
+      "type": "multiple_choice",
+      "theme": "ruimtelijke_figuren",
+      "question": {
+        "text": "Een Mars-reep verpakking is welke vorm?"
+      },
+      "options": [
+        {
+          "text": "kubus"
+        },
+        {
+          "text": "cilinder"
+        },
+        {
+          "text": "balk"
+        },
+        {
+          "text": "bol"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "De meeste repen zijn balkvormig verpakt"
+    },
+    {
+      "id": 36,
       "type": "multiple_choice",
       "theme": "geld",
       "question": {
-        "text": "Je hebt €100 en geeft €67,80 uit. Hoeveel heb je nog?"
+        "text": "Je koopt iets voor €47,50 en betaalt met €50. Hoeveel wisselgeld krijg je?"
+      },
+      "options": [
+        {
+          "text": "€2,50"
+        },
+        {
+          "text": "€3,50"
+        },
+        {
+          "text": "€12,50"
+        },
+        {
+          "text": "€97,50"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "€50 - €47,50 = €2,50"
+    },
+    {
+      "id": 37,
+      "type": "multiple_choice",
+      "theme": "geld",
+      "question": {
+        "text": "Een boek kost €15,75. Een schrift kost €3,25. Hoeveel betaal je samen?"
+      },
+      "options": [
+        {
+          "text": "€18,00"
+        },
+        {
+          "text": "€19,00"
+        },
+        {
+          "text": "€19,50"
+        },
+        {
+          "text": "€12,50"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "€15,75 + €3,25 = €19,00"
+    },
+    {
+      "id": 38,
+      "type": "multiple_choice",
+      "theme": "geld",
+      "question": {
+        "text": "Je hebt €100. Je koopt iets voor €67,80. Hoeveel houd je over?"
       },
       "options": [
         {
@@ -572,6 +1058,330 @@
         "correct_index": 0
       },
       "hint": "€100 - €67,80 = €32,20"
+    },
+    {
+      "id": 39,
+      "type": "multiple_choice",
+      "theme": "geld",
+      "question": {
+        "text": "3 pakken melk kosten elk €2,35. Hoeveel betaal je in totaal?"
+      },
+      "options": [
+        {
+          "text": "€6,35"
+        },
+        {
+          "text": "€7,05"
+        },
+        {
+          "text": "€9,35"
+        },
+        {
+          "text": "€7,35"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "3 × €2,35 = €7,05"
+    },
+    {
+      "id": 40,
+      "type": "multiple_choice",
+      "theme": "geld",
+      "question": {
+        "text": "Je koopt iets voor €23,75 en iets voor €18,50. Wat is het totaal?"
+      },
+      "options": [
+        {
+          "text": "€41,25"
+        },
+        {
+          "text": "€42,25"
+        },
+        {
+          "text": "€42,50"
+        },
+        {
+          "text": "€5,25"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "€23,75 + €18,50 = €42,25"
+    },
+    {
+      "id": 41,
+      "type": "multiple_choice",
+      "theme": "geld",
+      "question": {
+        "text": "Een speelgoed kost €45,99. Je betaalt met €50. Hoeveel wisselgeld?"
+      },
+      "options": [
+        {
+          "text": "€3,01"
+        },
+        {
+          "text": "€4,01"
+        },
+        {
+          "text": "€5,01"
+        },
+        {
+          "text": "€14,01"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "€50 - €45,99 = €4,01"
+    },
+    {
+      "id": 42,
+      "type": "multiple_choice",
+      "theme": "geld",
+      "question": {
+        "text": "Je hebt €20. Je koopt 2 artikelen van €7,50. Hoeveel houd je over?"
+      },
+      "options": [
+        {
+          "text": "€5"
+        },
+        {
+          "text": "€12,50"
+        },
+        {
+          "text": "€15"
+        },
+        {
+          "text": "€27,50"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "2 × €7,50 = €15. €20 - €15 = €5"
+    },
+    {
+      "id": 43,
+      "type": "multiple_choice",
+      "theme": "geld",
+      "question": {
+        "text": "Een pen kost €1,85. Hoeveel kosten 4 pennen?"
+      },
+      "options": [
+        {
+          "text": "€7,20"
+        },
+        {
+          "text": "€7,40"
+        },
+        {
+          "text": "€8,40"
+        },
+        {
+          "text": "€4,85"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "4 × €1,85 = €7,40"
+    },
+    {
+      "id": 44,
+      "type": "multiple_choice",
+      "theme": "geld",
+      "question": {
+        "text": "Je betaalt €56,30 met een briefje van €100. Wat krijg je terug?"
+      },
+      "options": [
+        {
+          "text": "€43,70"
+        },
+        {
+          "text": "€44,70"
+        },
+        {
+          "text": "€53,70"
+        },
+        {
+          "text": "€156,30"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "€100 - €56,30 = €43,70"
+    },
+    {
+      "id": 45,
+      "type": "multiple_choice",
+      "theme": "geld",
+      "question": {
+        "text": "Twee artikelen kosten €12,50 en €18,75. Wat is het verschil?"
+      },
+      "options": [
+        {
+          "text": "€6,25"
+        },
+        {
+          "text": "€31,25"
+        },
+        {
+          "text": "€5,25"
+        },
+        {
+          "text": "€7,25"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "€18,75 - €12,50 = €6,25"
+    },
+    {
+      "id": 46,
+      "type": "multiple_choice",
+      "theme": "geld",
+      "question": {
+        "text": "Je koopt iets voor €8,95. Je betaalt met €10. Hoeveel wisselgeld?"
+      },
+      "options": [
+        {
+          "text": "€1,05"
+        },
+        {
+          "text": "€1,15"
+        },
+        {
+          "text": "€2,05"
+        },
+        {
+          "text": "€18,95"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "€10 - €8,95 = €1,05"
+    },
+    {
+      "id": 47,
+      "type": "multiple_choice",
+      "theme": "geld",
+      "question": {
+        "text": "5 broodjes kosten elk €2,20. Hoeveel betaal je?"
+      },
+      "options": [
+        {
+          "text": "€10"
+        },
+        {
+          "text": "€10,20"
+        },
+        {
+          "text": "€11"
+        },
+        {
+          "text": "€12"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "5 × €2,20 = €11,00"
+    },
+    {
+      "id": 48,
+      "type": "multiple_choice",
+      "theme": "geld",
+      "question": {
+        "text": "Je hebt €75. Je geeft €48,65 uit. Hoeveel blijft er over?"
+      },
+      "options": [
+        {
+          "text": "€26,35"
+        },
+        {
+          "text": "€27,35"
+        },
+        {
+          "text": "€36,35"
+        },
+        {
+          "text": "€123,65"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "€75 - €48,65 = €26,35"
+    },
+    {
+      "id": 49,
+      "type": "multiple_choice",
+      "theme": "geld",
+      "question": {
+        "text": "Een game kost €39,99. Je betaalt met 2 briefjes van €20. Hoeveel wisselgeld?"
+      },
+      "options": [
+        {
+          "text": "€0,01"
+        },
+        {
+          "text": "€0,10"
+        },
+        {
+          "text": "€1,01"
+        },
+        {
+          "text": "€20,01"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "€40 - €39,99 = €0,01"
+    },
+    {
+      "id": 50,
+      "type": "multiple_choice",
+      "theme": "geld",
+      "question": {
+        "text": "Je koopt 3 artikelen: €15, €23,50 en €11,75. Wat is het totaal?"
+      },
+      "options": [
+        {
+          "text": "€49,25"
+        },
+        {
+          "text": "€50,25"
+        },
+        {
+          "text": "€51,25"
+        },
+        {
+          "text": "€38,50"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
+      },
+      "hint": "€15 + €23,50 + €11,75 = €50,25"
     }
   ],
   "settings": {

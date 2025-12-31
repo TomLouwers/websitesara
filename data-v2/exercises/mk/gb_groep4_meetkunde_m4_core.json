@@ -9,18 +9,9 @@
     "language": "nl-NL",
     "domain": "meetkunde",
     "slo_alignment": {
-      "kerndoelen": [
-        "K32"
-      ],
-      "rekendomeinen": [
-        "meten"
-      ],
-      "tussendoelen": [
-        "4MM1",
-        "4MM2",
-        "4MM3",
-        "4MM4"
-      ],
+      "kerndoelen": ["K32"],
+      "rekendomeinen": ["meten"],
+      "tussendoelen": ["4MM1", "4MM2", "4MM3", "4MM4"],
       "referentieniveau": "1F",
       "cognitive_level": "toepassen"
     }
@@ -36,541 +27,451 @@
       "id": 1,
       "type": "multiple_choice",
       "theme": "lengte",
-      "question": {
-        "text": "Een potlood is 15 cm lang. Hoeveel mm is dat?"
-      },
-      "options": [
-        {
-          "text": "150 mm"
-        },
-        {
-          "text": "15 mm"
-        },
-        {
-          "text": "1500 mm"
-        },
-        {
-          "text": "1,5 mm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
+      "question": {"text": "Een potlood is 15 cm lang. Hoeveel mm is dat?"},
+      "options": [{"text": "150 mm"}, {"text": "15 mm"}, {"text": "1500 mm"}, {"text": "1,5 mm"}],
+      "answer": {"type": "single", "correct_index": 0},
       "hint": "1 cm = 10 mm, dus je vermenigvuldigt met 10"
     },
     {
       "id": 2,
       "type": "multiple_choice",
       "theme": "lengte",
-      "question": {
-        "text": "De tafel is 120 cm lang. Hoeveel dm is dat?"
-      },
-      "options": [
-        {
-          "text": "1200 dm"
-        },
-        {
-          "text": "12 dm"
-        },
-        {
-          "text": "1,2 dm"
-        },
-        {
-          "text": "120 dm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
+      "question": {"text": "De tafel is 120 cm lang. Hoeveel dm is dat?"},
+      "options": [{"text": "1200 dm"}, {"text": "12 dm"}, {"text": "1,2 dm"}, {"text": "120 dm"}],
+      "answer": {"type": "single", "correct_index": 1},
       "hint": "10 cm = 1 dm, dus deel door 10"
     },
     {
       "id": 3,
       "type": "multiple_choice",
       "theme": "lengte",
-      "question": {
-        "text": "De gang is 8 meter lang. Hoeveel cm is dat?"
-      },
-      "options": [
-        {
-          "text": "80 cm"
-        },
-        {
-          "text": "8 cm"
-        },
-        {
-          "text": "800 cm"
-        },
-        {
-          "text": "8000 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
+      "question": {"text": "De gang is 8 meter lang. Hoeveel cm is dat?"},
+      "options": [{"text": "80 cm"}, {"text": "8 cm"}, {"text": "800 cm"}, {"text": "8000 cm"}],
+      "answer": {"type": "single", "correct_index": 2},
       "hint": "1 meter = 100 cm"
     },
     {
       "id": 4,
       "type": "multiple_choice",
       "theme": "lengte",
-      "question": {
-        "text": "Welke eenheid gebruik je voor de dikte van een boek?"
-      },
-      "options": [
-        {
-          "text": "millimeter"
-        },
-        {
-          "text": "meter"
-        },
-        {
-          "text": "kilometer"
-        },
-        {
-          "text": "decimeter"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
+      "question": {"text": "Welke eenheid gebruik je voor de dikte van een boek?"},
+      "options": [{"text": "millimeter"}, {"text": "meter"}, {"text": "kilometer"}, {"text": "decimeter"}],
+      "answer": {"type": "single", "correct_index": 0},
       "hint": "Een boek is maar een paar kleine streepjes dik"
     },
     {
       "id": 5,
       "type": "multiple_choice",
       "theme": "lengte",
-      "question": {
-        "text": "4 dm + 3 dm = ?"
-      },
-      "options": [
-        {
-          "text": "7 cm"
-        },
-        {
-          "text": "70 dm"
-        },
-        {
-          "text": "7 dm"
-        },
-        {
-          "text": "7 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
+      "question": {"text": "4 dm + 3 dm = ?"},
+      "options": [{"text": "7 cm"}, {"text": "70 dm"}, {"text": "7 dm"}, {"text": "7 m"}],
+      "answer": {"type": "single", "correct_index": 2},
       "hint": "Tel de decimeters bij elkaar op"
     },
     {
       "id": 6,
       "type": "multiple_choice",
-      "theme": "gewicht",
-      "question": {
-        "text": "Een pak suiker weegt 500 gram. Hoeveel wegen 2 pakken?"
-      },
-      "options": [
-        {
-          "text": "1 kg"
-        },
-        {
-          "text": "100 gram"
-        },
-        {
-          "text": "250 gram"
-        },
-        {
-          "text": "2 kg"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "500 + 500 = 1000 gram = 1 kg"
+      "theme": "lengte",
+      "question": {"text": "35 mm = ... cm"},
+      "options": [{"text": "3,5 cm"}, {"text": "35 cm"}, {"text": "350 cm"}, {"text": "0,35 cm"}],
+      "answer": {"type": "single", "correct_index": 0},
+      "hint": "Deel door 10: 35 : 10 = 3,5"
     },
     {
       "id": 7,
       "type": "multiple_choice",
-      "theme": "gewicht",
-      "question": {
-        "text": "Een appel weegt ongeveer 150 gram. Hoeveel appels zitten er ongeveer in 1 kg?"
-      },
-      "options": [
-        {
-          "text": "15 appels"
-        },
-        {
-          "text": "150 appels"
-        },
-        {
-          "text": "6 of 7 appels"
-        },
-        {
-          "text": "2 appels"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1 kg = 1000 gram. Hoeveel keer past 150 gram in 1000 gram?"
+      "theme": "lengte",
+      "question": {"text": "Een deur is 2 meter hoog. Hoeveel dm is dat?"},
+      "options": [{"text": "2 dm"}, {"text": "20 dm"}, {"text": "200 dm"}, {"text": "0,2 dm"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "1 meter = 10 dm"
     },
     {
       "id": 8,
       "type": "multiple_choice",
-      "theme": "gewicht",
-      "question": {
-        "text": "3 kg = ... gram"
-      },
-      "options": [
-        {
-          "text": "300 gram"
-        },
-        {
-          "text": "30 gram"
-        },
-        {
-          "text": "3000 gram"
-        },
-        {
-          "text": "30000 gram"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1 kg = 1000 gram, dus 3 kg = 3 × 1000"
+      "theme": "lengte",
+      "question": {"text": "Welke eenheid gebruik je voor de lengte van een potlood?"},
+      "options": [{"text": "millimeter"}, {"text": "centimeter"}, {"text": "meter"}, {"text": "kilometer"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "Een potlood is ongeveer 15-20 van deze eenheid"
     },
     {
       "id": 9,
       "type": "multiple_choice",
-      "theme": "gewicht",
-      "question": {
-        "text": "Een pak melk weegt 1 kg. Wat weegt een half pak melk?"
-      },
-      "options": [
-        {
-          "text": "2 kg"
-        },
-        {
-          "text": "500 gram"
-        },
-        {
-          "text": "100 gram"
-        },
-        {
-          "text": "50 gram"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "De helft van 1000 gram is 500 gram"
+      "theme": "lengte",
+      "question": {"text": "Een liniaal is 30 cm. Dat is hetzelfde als ... dm"},
+      "options": [{"text": "3 dm"}, {"text": "30 dm"}, {"text": "300 dm"}, {"text": "0,3 dm"}],
+      "answer": {"type": "single", "correct_index": 0},
+      "hint": "Deel 30 door 10"
     },
     {
       "id": 10,
       "type": "multiple_choice",
-      "theme": "gewicht",
-      "question": {
-        "text": "750 gram + 250 gram = ?"
-      },
-      "options": [
-        {
-          "text": "100 gram"
-        },
-        {
-          "text": "500 gram"
-        },
-        {
-          "text": "1 kg"
-        },
-        {
-          "text": "2 kg"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "750 + 250 = 1000 gram = 1 kg"
+      "theme": "lengte",
+      "question": {"text": "5 meter + 50 cm = ... cm"},
+      "options": [{"text": "55 cm"}, {"text": "100 cm"}, {"text": "550 cm"}, {"text": "500 cm"}],
+      "answer": {"type": "single", "correct_index": 2},
+      "hint": "5 meter = 500 cm. Tel daarbij 50 cm op"
     },
     {
       "id": 11,
       "type": "multiple_choice",
-      "theme": "inhoud",
-      "question": {
-        "text": "Een fles cola bevat 2 liter. Hoeveel liter zit er in 3 flessen?"
-      },
-      "options": [
-        {
-          "text": "5 liter"
-        },
-        {
-          "text": "6 liter"
-        },
-        {
-          "text": "23 liter"
-        },
-        {
-          "text": "3 liter"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "3 flessen × 2 liter = 6 liter"
+      "theme": "gewicht",
+      "question": {"text": "Een pak suiker weegt 500 gram. Hoeveel wegen 2 pakken?"},
+      "options": [{"text": "1 kg"}, {"text": "100 gram"}, {"text": "250 gram"}, {"text": "2 kg"}],
+      "answer": {"type": "single", "correct_index": 0},
+      "hint": "500 + 500 = 1000 gram = 1 kg"
     },
     {
       "id": 12,
       "type": "multiple_choice",
-      "theme": "inhoud",
-      "question": {
-        "text": "Een emmer kan 10 liter water bevatten. Hoeveel emmers heb je nodig voor 30 liter?"
-      },
-      "options": [
-        {
-          "text": "2 emmers"
-        },
-        {
-          "text": "3 emmers"
-        },
-        {
-          "text": "30 emmers"
-        },
-        {
-          "text": "10 emmers"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "30 gedeeld door 10 = 3"
+      "theme": "gewicht",
+      "question": {"text": "Een appel weegt ongeveer 150 gram. Hoeveel appels zitten er ongeveer in 1 kg?"},
+      "options": [{"text": "15 appels"}, {"text": "150 appels"}, {"text": "6 of 7 appels"}, {"text": "2 appels"}],
+      "answer": {"type": "single", "correct_index": 2},
+      "hint": "1 kg = 1000 gram. Hoeveel keer past 150 gram in 1000 gram?"
     },
     {
       "id": 13,
       "type": "multiple_choice",
-      "theme": "inhoud",
-      "question": {
-        "text": "Schat de inhoud van een groot aquarium:"
-      },
-      "options": [
-        {
-          "text": "1 liter"
-        },
-        {
-          "text": "50 liter"
-        },
-        {
-          "text": "500 liter"
-        },
-        {
-          "text": "5000 liter"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Een aquarium is groter dan een fles, maar kleiner dan een zwembad"
+      "theme": "gewicht",
+      "question": {"text": "3 kg = ... gram"},
+      "options": [{"text": "300 gram"}, {"text": "30 gram"}, {"text": "3000 gram"}, {"text": "30000 gram"}],
+      "answer": {"type": "single", "correct_index": 2},
+      "hint": "1 kg = 1000 gram, dus 3 kg = 3 × 1000"
     },
     {
       "id": 14,
       "type": "multiple_choice",
-      "theme": "inhoud",
-      "question": {
-        "text": "2 flessen van 1,5 liter samen is ... liter"
-      },
-      "options": [
-        {
-          "text": "2 liter"
-        },
-        {
-          "text": "1,5 liter"
-        },
-        {
-          "text": "3 liter"
-        },
-        {
-          "text": "4 liter"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1,5 + 1,5 = 3"
+      "theme": "gewicht",
+      "question": {"text": "Een pak melk weegt 1 kg. Wat weegt een half pak melk?"},
+      "options": [{"text": "2 kg"}, {"text": "500 gram"}, {"text": "100 gram"}, {"text": "50 gram"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "De helft van 1000 gram is 500 gram"
     },
     {
       "id": 15,
       "type": "multiple_choice",
-      "theme": "tijd",
-      "question": {
-        "text": "Het is nu 14:30. Hoe laat is het over een half uur?"
-      },
-      "options": [
-        {
-          "text": "15:00"
-        },
-        {
-          "text": "14:00"
-        },
-        {
-          "text": "15:30"
-        },
-        {
-          "text": "16:00"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Een half uur = 30 minuten. 14:30 + 30 minuten"
+      "theme": "gewicht",
+      "question": {"text": "750 gram + 250 gram = ?"},
+      "options": [{"text": "100 gram"}, {"text": "500 gram"}, {"text": "1 kg"}, {"text": "2 kg"}],
+      "answer": {"type": "single", "correct_index": 2},
+      "hint": "750 + 250 = 1000 gram = 1 kg"
     },
     {
       "id": 16,
       "type": "multiple_choice",
-      "theme": "tijd",
-      "question": {
-        "text": "De les begint om 9:00 uur en duurt 45 minuten. Hoe laat is de les afgelopen?"
-      },
-      "options": [
-        {
-          "text": "9:45 uur"
-        },
-        {
-          "text": "10:00 uur"
-        },
-        {
-          "text": "9:30 uur"
-        },
-        {
-          "text": "10:45 uur"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "9:00 + 45 minuten = 9:45"
+      "theme": "gewicht",
+      "question": {"text": "2500 gram = ... kg"},
+      "options": [{"text": "2,5 kg"}, {"text": "25 kg"}, {"text": "0,25 kg"}, {"text": "250 kg"}],
+      "answer": {"type": "single", "correct_index": 0},
+      "hint": "Deel door 1000: 2500 : 1000 = 2,5"
     },
     {
       "id": 17,
       "type": "multiple_choice",
-      "theme": "tijd",
-      "question": {
-        "text": "Hoeveel minuten zitten er tussen 10:15 en 10:45?"
-      },
-      "options": [
-        {
-          "text": "15 minuten"
-        },
-        {
-          "text": "30 minuten"
-        },
-        {
-          "text": "45 minuten"
-        },
-        {
-          "text": "60 minuten"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Tel van 15 naar 45, dat is 30"
+      "theme": "gewicht",
+      "question": {"text": "Een kilo aardappelen kost €2. Hoeveel kost 500 gram?"},
+      "options": [{"text": "€1"}, {"text": "€2"}, {"text": "€4"}, {"text": "€0,50"}],
+      "answer": {"type": "single", "correct_index": 0},
+      "hint": "500 gram is de helft van 1 kg. De helft van €2 is €1"
     },
     {
       "id": 18,
       "type": "multiple_choice",
-      "theme": "tijd",
-      "question": {
-        "text": "De pauze is van 10:30 tot 10:45. Hoe lang duurt de pauze?"
-      },
-      "options": [
-        {
-          "text": "10 minuten"
-        },
-        {
-          "text": "15 minuten"
-        },
-        {
-          "text": "30 minuten"
-        },
-        {
-          "text": "45 minuten"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Van 30 naar 45 is 15 minuten"
+      "theme": "gewicht",
+      "question": {"text": "Een brood weegt 800 gram. Hoeveel wegen 2 broden?"},
+      "options": [{"text": "1,6 kg"}, {"text": "16 kg"}, {"text": "800 gram"}, {"text": "400 gram"}],
+      "answer": {"type": "single", "correct_index": 0},
+      "hint": "800 + 800 = 1600 gram = 1,6 kg"
     },
     {
       "id": 19,
       "type": "multiple_choice",
-      "theme": "tijd",
-      "question": {
-        "text": "Het is 13:20. Over 20 minuten begint de gymles. Hoe laat begint de gymles?"
-      },
-      "options": [
-        {
-          "text": "13:00"
-        },
-        {
-          "text": "13:40"
-        },
-        {
-          "text": "14:20"
-        },
-        {
-          "text": "13:30"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "13:20 + 20 minuten = 13:40"
+      "theme": "gewicht",
+      "question": {"text": "Welke eenheid gebruik je voor het gewicht van een auto?"},
+      "options": [{"text": "gram"}, {"text": "kilogram"}, {"text": "milligram"}, {"text": "liter"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "Een auto is heel zwaar, duizenden..."
     },
     {
       "id": 20,
       "type": "multiple_choice",
+      "theme": "gewicht",
+      "question": {"text": "Je hebt 1 kg appels. Je eet 200 gram op. Hoeveel blijft er over?"},
+      "options": [{"text": "800 gram"}, {"text": "200 gram"}, {"text": "1,2 kg"}, {"text": "700 gram"}],
+      "answer": {"type": "single", "correct_index": 0},
+      "hint": "1 kg = 1000 gram. 1000 - 200 = 800"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "theme": "inhoud",
+      "question": {"text": "Een fles cola bevat 2 liter. Hoeveel liter zit er in 3 flessen?"},
+      "options": [{"text": "5 liter"}, {"text": "6 liter"}, {"text": "23 liter"}, {"text": "3 liter"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "3 flessen × 2 liter = 6 liter"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "theme": "inhoud",
+      "question": {"text": "Een emmer kan 10 liter water bevatten. Hoeveel emmers heb je nodig voor 30 liter?"},
+      "options": [{"text": "2 emmers"}, {"text": "3 emmers"}, {"text": "30 emmers"}, {"text": "10 emmers"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "30 gedeeld door 10 = 3"
+    },
+    {
+      "id": 23,
+      "type": "multiple_choice",
+      "theme": "inhoud",
+      "question": {"text": "Schat de inhoud van een groot aquarium:"},
+      "options": [{"text": "1 liter"}, {"text": "50 liter"}, {"text": "500 liter"}, {"text": "5000 liter"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "Een aquarium is groter dan een fles, maar kleiner dan een zwembad"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "theme": "inhoud",
+      "question": {"text": "2 flessen van 1,5 liter samen is ... liter"},
+      "options": [{"text": "2 liter"}, {"text": "1,5 liter"}, {"text": "3 liter"}, {"text": "4 liter"}],
+      "answer": {"type": "single", "correct_index": 2},
+      "hint": "1,5 + 1,5 = 3"
+    },
+    {
+      "id": 25,
+      "type": "multiple_choice",
+      "theme": "inhoud",
+      "question": {"text": "Een pak melk bevat meestal... liter"},
+      "options": [{"text": "0,5 liter"}, {"text": "1 liter"}, {"text": "5 liter"}, {"text": "10 liter"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "De meeste melkpakken bevatten 1 liter"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "theme": "inhoud",
+      "question": {"text": "Een badkuip kan ongeveer... liter water bevatten"},
+      "options": [{"text": "10 liter"}, {"text": "50 liter"}, {"text": "150 liter"}, {"text": "500 liter"}],
+      "answer": {"type": "single", "correct_index": 2},
+      "hint": "Een badkuip is heel groot en bevat veel water"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "theme": "inhoud",
+      "question": {"text": "Je hebt 5 liter limonade. Je schenkt 2 liter in. Hoeveel blijft er over?"},
+      "options": [{"text": "2 liter"}, {"text": "3 liter"}, {"text": "7 liter"}, {"text": "10 liter"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "5 - 2 = 3"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "theme": "inhoud",
+      "question": {"text": "Welke eenheid gebruik je voor de inhoud van een zwembad?"},
+      "options": [{"text": "milliliter"}, {"text": "centiliter"}, {"text": "liter"}, {"text": "gram"}],
+      "answer": {"type": "single", "correct_index": 2},
+      "hint": "Een zwembad bevat heel veel water, duizenden..."
+    },
+    {
+      "id": 29,
+      "type": "multiple_choice",
+      "theme": "inhoud",
+      "question": {"text": "4 bekers van elk 250 ml samen is ... ml"},
+      "options": [{"text": "500 ml"}, {"text": "750 ml"}, {"text": "1000 ml"}, {"text": "2000 ml"}],
+      "answer": {"type": "single", "correct_index": 2},
+      "hint": "4 × 250 = 1000"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "theme": "inhoud",
+      "question": {"text": "Een gieter bevat 8 liter. Je giet er 3 liter uit. Hoeveel blijft er over?"},
+      "options": [{"text": "3 liter"}, {"text": "5 liter"}, {"text": "11 liter"}, {"text": "4 liter"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "8 - 3 = 5"
+    },
+    {
+      "id": 31,
+      "type": "multiple_choice",
       "theme": "tijd",
-      "question": {
-        "text": "Je vertrekt om 14:10 en fietst 25 minuten naar het zwembad. Hoe laat kom je aan?"
-      },
-      "options": [
-        {
-          "text": "14:35"
-        },
-        {
-          "text": "14:25"
-        },
-        {
-          "text": "15:10"
-        },
-        {
-          "text": "13:45"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
+      "question": {"text": "Het is nu 14:30. Hoe laat is het over een half uur?"},
+      "options": [{"text": "15:00"}, {"text": "14:00"}, {"text": "15:30"}, {"text": "16:00"}],
+      "answer": {"type": "single", "correct_index": 0},
+      "hint": "Een half uur = 30 minuten. 14:30 + 30 minuten"
+    },
+    {
+      "id": 32,
+      "type": "multiple_choice",
+      "theme": "tijd",
+      "question": {"text": "De les begint om 9:00 uur en duurt 45 minuten. Hoe laat is de les afgelopen?"},
+      "options": [{"text": "9:45 uur"}, {"text": "10:00 uur"}, {"text": "9:30 uur"}, {"text": "10:45 uur"}],
+      "answer": {"type": "single", "correct_index": 0},
+      "hint": "9:00 + 45 minuten = 9:45"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "theme": "tijd",
+      "question": {"text": "Hoeveel minuten zitten er tussen 10:15 en 10:45?"},
+      "options": [{"text": "15 minuten"}, {"text": "30 minuten"}, {"text": "45 minuten"}, {"text": "60 minuten"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "Tel van 15 naar 45, dat is 30"
+    },
+    {
+      "id": 34,
+      "type": "multiple_choice",
+      "theme": "tijd",
+      "question": {"text": "De pauze is van 10:30 tot 10:45. Hoe lang duurt de pauze?"},
+      "options": [{"text": "10 minuten"}, {"text": "15 minuten"}, {"text": "30 minuten"}, {"text": "45 minuten"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "Van 30 naar 45 is 15 minuten"
+    },
+    {
+      "id": 35,
+      "type": "multiple_choice",
+      "theme": "tijd",
+      "question": {"text": "Het is 13:20. Over 20 minuten begint de gymles. Hoe laat begint de gymles?"},
+      "options": [{"text": "13:00"}, {"text": "13:40"}, {"text": "14:20"}, {"text": "13:30"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "13:20 + 20 minuten = 13:40"
+    },
+    {
+      "id": 36,
+      "type": "multiple_choice",
+      "theme": "tijd",
+      "question": {"text": "Je vertrekt om 14:10 en fietst 25 minuten naar het zwembad. Hoe laat kom je aan?"},
+      "options": [{"text": "14:35"}, {"text": "14:25"}, {"text": "15:10"}, {"text": "13:45"}],
+      "answer": {"type": "single", "correct_index": 0},
       "hint": "14:10 + 25 minuten. Tel eerst 20 minuten erbij (14:30), dan nog 5 (14:35)"
+    },
+    {
+      "id": 37,
+      "type": "multiple_choice",
+      "theme": "tijd",
+      "question": {"text": "Een film begint om 19:00 en duurt 90 minuten. Hoe laat is de film afgelopen?"},
+      "options": [{"text": "20:00"}, {"text": "20:30"}, {"text": "21:00"}, {"text": "19:90"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "90 minuten = 1 uur en 30 minuten. 19:00 + 1:30 = 20:30"
+    },
+    {
+      "id": 38,
+      "type": "multiple_choice",
+      "theme": "tijd",
+      "question": {"text": "Hoeveel minuten zitten er tussen 8:45 en 9:15?"},
+      "options": [{"text": "15 minuten"}, {"text": "30 minuten"}, {"text": "45 minuten"}, {"text": "70 minuten"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "Van 8:45 naar 9:00 is 15 minuten, dan nog 15 minuten naar 9:15. Totaal 30 minuten"
+    },
+    {
+      "id": 39,
+      "type": "multiple_choice",
+      "theme": "tijd",
+      "question": {"text": "Je begint om 11:00 met huiswerk en bent om 11:50 klaar. Hoelang heb je gewerkt?"},
+      "options": [{"text": "30 minuten"}, {"text": "40 minuten"}, {"text": "50 minuten"}, {"text": "60 minuten"}],
+      "answer": {"type": "single", "correct_index": 2},
+      "hint": "Van 11:00 naar 11:50 is 50 minuten"
+    },
+    {
+      "id": 40,
+      "type": "multiple_choice",
+      "theme": "tijd",
+      "question": {"text": "Een uur heeft 60 minuten. Een half uur heeft... minuten"},
+      "options": [{"text": "20 minuten"}, {"text": "30 minuten"}, {"text": "40 minuten"}, {"text": "50 minuten"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "De helft van 60 is 30"
+    },
+    {
+      "id": 41,
+      "type": "multiple_choice",
+      "theme": "lengte",
+      "question": {"text": "Een krijtje is 80 mm lang. Hoeveel cm is dat?"},
+      "options": [{"text": "8 cm"}, {"text": "80 cm"}, {"text": "0,8 cm"}, {"text": "800 cm"}],
+      "answer": {"type": "single", "correct_index": 0},
+      "hint": "Deel door 10: 80 : 10 = 8"
+    },
+    {
+      "id": 42,
+      "type": "multiple_choice",
+      "theme": "lengte",
+      "question": {"text": "Welke eenheid gebruik je voor de hoogte van een deur?"},
+      "options": [{"text": "millimeter"}, {"text": "centimeter"}, {"text": "meter"}, {"text": "kilometer"}],
+      "answer": {"type": "single", "correct_index": 2},
+      "hint": "Een deur is ongeveer 2 van deze eenheid hoog"
+    },
+    {
+      "id": 43,
+      "type": "multiple_choice",
+      "theme": "lengte",
+      "question": {"text": "6 dm = ... cm"},
+      "options": [{"text": "6 cm"}, {"text": "60 cm"}, {"text": "600 cm"}, {"text": "0,6 cm"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "Vermenigvuldig met 10: 6 × 10 = 60"
+    },
+    {
+      "id": 44,
+      "type": "multiple_choice",
+      "theme": "gewicht",
+      "question": {"text": "4 kg = ... gram"},
+      "options": [{"text": "40 gram"}, {"text": "400 gram"}, {"text": "4000 gram"}, {"text": "40000 gram"}],
+      "answer": {"type": "single", "correct_index": 2},
+      "hint": "Vermenigvuldig met 1000: 4 × 1000 = 4000"
+    },
+    {
+      "id": 45,
+      "type": "multiple_choice",
+      "theme": "gewicht",
+      "question": {"text": "Een cake weegt 600 gram. Je snijdt hem in 3 gelijke stukken. Hoeveel weegt elk stuk?"},
+      "options": [{"text": "100 gram"}, {"text": "200 gram"}, {"text": "300 gram"}, {"text": "600 gram"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "Deel door 3: 600 : 3 = 200"
+    },
+    {
+      "id": 46,
+      "type": "multiple_choice",
+      "theme": "inhoud",
+      "question": {"text": "Je drinkt 3 bekers van elk 200 ml. Hoeveel ml heb je gedronken?"},
+      "options": [{"text": "200 ml"}, {"text": "400 ml"}, {"text": "600 ml"}, {"text": "900 ml"}],
+      "answer": {"type": "single", "correct_index": 2},
+      "hint": "Vermenigvuldig: 3 × 200 = 600"
+    },
+    {
+      "id": 47,
+      "type": "multiple_choice",
+      "theme": "inhoud",
+      "question": {"text": "Een jerrycan bevat 20 liter benzine. Je tankt er 12 liter uit. Hoeveel blijft er over?"},
+      "options": [{"text": "6 liter"}, {"text": "8 liter"}, {"text": "10 liter"}, {"text": "32 liter"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "Trek af: 20 - 12 = 8"
+    },
+    {
+      "id": 48,
+      "type": "multiple_choice",
+      "theme": "tijd",
+      "question": {"text": "De trein vertrekt om 16:25 en komt om 17:10 aan. Hoelang duurt de reis?"},
+      "options": [{"text": "30 minuten"}, {"text": "35 minuten"}, {"text": "45 minuten"}, {"text": "85 minuten"}],
+      "answer": {"type": "single", "correct_index": 2},
+      "hint": "Van 16:25 naar 17:00 is 35 minuten, dan nog 10 minuten naar 17:10. Totaal 45 minuten"
+    },
+    {
+      "id": 49,
+      "type": "multiple_choice",
+      "theme": "tijd",
+      "question": {"text": "Je gaat om 20:15 slapen. Je leest nog 20 minuten. Hoe laat doe je het licht uit?"},
+      "options": [{"text": "20:25"}, {"text": "20:35"}, {"text": "20:45"}, {"text": "21:00"}],
+      "answer": {"type": "single", "correct_index": 1},
+      "hint": "20:15 + 20 minuten = 20:35"
+    },
+    {
+      "id": 50,
+      "type": "multiple_choice",
+      "theme": "lengte",
+      "question": {"text": "250 cm = ... meter"},
+      "options": [{"text": "2,5 meter"}, {"text": "25 meter"}, {"text": "0,25 meter"}, {"text": "250 meter"}],
+      "answer": {"type": "single", "correct_index": 0},
+      "hint": "Deel door 100: 250 : 100 = 2,5"
     }
   ],
   "settings": {
