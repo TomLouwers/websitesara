@@ -10,8 +10,6 @@
     "domain": "meetkunde",
     "slo_alignment": {
       "kerndoelen": [
-        "K28",
-        "K32",
         "K33"
       ],
       "rekendomeinen": [
@@ -40,10 +38,10 @@
       },
       "options": [
         {
-          "text": "471 cm²"
+          "text": "706,5 cm²"
         },
         {
-          "text": "706,5 cm²"
+          "text": "471 cm²"
         },
         {
           "text": "94,2 cm²"
@@ -54,7 +52,7 @@
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 0
       },
       "hint": "Oppervlakte cirkel = π × r². Dus: 3,14 × 15² = 3,14 × 225"
     },
@@ -76,14 +74,14 @@
           "text": "11,30 m²"
         },
         {
-          "text": "4,52 m²"
+          "text": "0,45 m²"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Diameter = 120 cm, dus straal = 60 cm = 0,6 m. Oppervlakte = π × 0,6²"
+      "hint": "Diameter = 120 cm, dus straal = 60 cm = 0,6 m. Oppervlakte = π × 0,6² = 3,14 × 0,36"
     },
     {
       "id": 3,
@@ -137,7 +135,7 @@
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Diameter = 10 m, dus straal = 5 m. Oppervlakte = π × 5²"
+      "hint": "Diameter = 10 m, dus straal = 5 m. Oppervlakte = π × 5² = 3,14 × 25"
     },
     {
       "id": 5,
@@ -169,250 +167,142 @@
     {
       "id": 6,
       "type": "multiple_choice",
-      "theme": "oppervlakte_cirkel",
+      "theme": "diagonalen_meten",
       "question": {
-        "text": "Een ronde klok heeft een straal van 12 cm. Bereken de oppervlakte van het klokoppervlak. Gebruik π = 3,14."
+        "text": "Je meet de diagonaal van een rechthoek met een liniaal. De diagonaal is 13 cm. De lengte is 12 cm. Schat de breedte."
       },
       "options": [
         {
-          "text": "452,16 cm²"
+          "text": "Ongeveer 5 cm"
         },
         {
-          "text": "75,36 cm²"
+          "text": "Ongeveer 10 cm"
         },
         {
-          "text": "37,68 cm²"
+          "text": "Ongeveer 15 cm"
         },
         {
-          "text": "144 cm²"
+          "text": "Ongeveer 1 cm"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Oppervlakte = π × r² = 3,14 × 12² = 3,14 × 144"
+      "hint": "De diagonaal (13 cm) is iets langer dan de lengte (12 cm). De breedte moet kleiner zijn dan de lengte."
     },
     {
       "id": 7,
       "type": "multiple_choice",
-      "theme": "oppervlakte_cirkel",
+      "theme": "diagonalen_meten",
       "question": {
-        "text": "Een cirkelvormig zwembad heeft een diameter van 6 meter. Hoeveel m² moet er betegeld worden? Gebruik π = 3,14."
+        "text": "Een voetbalveld is 100 meter lang en 60 meter breed. Schat de diagonaal van het veld."
       },
       "options": [
         {
-          "text": "28,26 m²"
+          "text": "Ongeveer 115 meter"
         },
         {
-          "text": "113,04 m²"
+          "text": "Ongeveer 160 meter"
         },
         {
-          "text": "18,84 m²"
+          "text": "Ongeveer 80 meter"
         },
         {
-          "text": "36 m²"
+          "text": "Ongeveer 200 meter"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Diameter = 6 m, dus straal = 3 m. Oppervlakte = π × 3²"
+      "hint": "De diagonaal is altijd langer dan de langste zijde (100 m), maar niet veel langer. Schat tussen 100 en 120 meter."
     },
     {
       "id": 8,
       "type": "multiple_choice",
-      "theme": "pythagoras",
+      "theme": "diagonalen_meten",
       "question": {
-        "text": "Een rechthoekige driehoek heeft rechthoekszijden van 3 cm en 4 cm. Bereken de lengte van de schuine zijde."
+        "text": "Hoeveel diagonalen heeft een rechthoek?"
       },
       "options": [
         {
-          "text": "5 cm"
+          "text": "2 diagonalen"
         },
         {
-          "text": "7 cm"
+          "text": "4 diagonalen"
         },
         {
-          "text": "6 cm"
+          "text": "1 diagonaal"
         },
         {
-          "text": "3,5 cm"
+          "text": "3 diagonalen"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Gebruik a² + b² = c². Dus: 3² + 4² = 9 + 16 = 25. Dus c = √25 = 5"
+      "hint": "Een rechthoek heeft twee diagonalen die even lang zijn en elkaar snijden."
     },
     {
       "id": 9,
       "type": "multiple_choice",
-      "theme": "pythagoras",
+      "theme": "diagonalen_meten",
       "question": {
-        "text": "Een ladder van 5 meter staat met de voet 3 meter van de muur. Hoe hoog reikt de ladder tegen de muur?"
+        "text": "Een vierkant heeft zijden van 10 cm. Schat de lengte van de diagonaal."
       },
       "options": [
         {
-          "text": "4 meter"
+          "text": "Ongeveer 14 cm"
         },
         {
-          "text": "8 meter"
+          "text": "Ongeveer 10 cm"
         },
         {
-          "text": "2 meter"
+          "text": "Ongeveer 20 cm"
         },
         {
-          "text": "5,8 meter"
+          "text": "Ongeveer 5 cm"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Dit is een rechthoekige driehoek: 3² + h² = 5². Dus 9 + h² = 25"
+      "hint": "De diagonaal van een vierkant is ongeveer 1,4 keer zo lang als de zijde. Dus 10 × 1,4 = 14 cm."
     },
     {
       "id": 10,
       "type": "multiple_choice",
-      "theme": "pythagoras",
+      "theme": "diagonalen_meten",
       "question": {
-        "text": "Een rechthoek is 6 cm lang en 8 cm breed. Bereken de lengte van de diagonaal."
+        "text": "Je tekent een rechthoek van 8 cm bij 6 cm op roosterpapier. Meet met een liniaal: welke lengte heeft de diagonaal ongeveer?"
       },
       "options": [
         {
-          "text": "10 cm"
+          "text": "Ongeveer 10 cm"
         },
         {
-          "text": "14 cm"
+          "text": "Ongeveer 14 cm"
         },
         {
-          "text": "7 cm"
+          "text": "Ongeveer 7 cm"
         },
         {
-          "text": "12 cm"
+          "text": "Ongeveer 16 cm"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 0
       },
-      "hint": "De diagonaal deelt de rechthoek in twee gelijke driehoeken: 6² + 8² = d²"
+      "hint": "Teken de rechthoek en meet de diagonaal met een liniaal. De diagonaal is langer dan 8 cm maar niet veel langer."
     },
     {
       "id": 11,
       "type": "multiple_choice",
-      "theme": "pythagoras",
-      "question": {
-        "text": "Een rechthoekige driehoek heeft rechthoekszijden van 5 cm en 12 cm. Hoe lang is de schuine zijde?"
-      },
-      "options": [
-        {
-          "text": "13 cm"
-        },
-        {
-          "text": "17 cm"
-        },
-        {
-          "text": "11,9 cm"
-        },
-        {
-          "text": "15 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "a² + b² = c². Dus: 5² + 12² = 25 + 144 = 169. Dus c = √169"
-    },
-    {
-      "id": 12,
-      "type": "multiple_choice",
-      "theme": "pythagoras",
-      "question": {
-        "text": "Een televisie heeft een scherm van 60 cm breed en 80 cm hoog. Hoeveel cm is de beeldschermdiagonaal?"
-      },
-      "options": [
-        {
-          "text": "100 cm"
-        },
-        {
-          "text": "140 cm"
-        },
-        {
-          "text": "70 cm"
-        },
-        {
-          "text": "110 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "60² + 80² = 3600 + 6400 = 10000. Dus diagonaal = √10000"
-    },
-    {
-      "id": 13,
-      "type": "multiple_choice",
-      "theme": "pythagoras",
-      "question": {
-        "text": "Een rechthoekige driehoek heeft één rechthoekszijde van 6 cm en een schuine zijde van 10 cm. Bereken de andere rechthoekszijde."
-      },
-      "options": [
-        {
-          "text": "8 cm"
-        },
-        {
-          "text": "4 cm"
-        },
-        {
-          "text": "11,7 cm"
-        },
-        {
-          "text": "7 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "6² + b² = 10². Dus 36 + b² = 100. Dus b² = 64"
-    },
-    {
-      "id": 14,
-      "type": "multiple_choice",
-      "theme": "pythagoras",
-      "question": {
-        "text": "Is een driehoek met zijden van 8 cm, 15 cm en 17 cm een rechthoekige driehoek?"
-      },
-      "options": [
-        {
-          "text": "Ja, want 8² + 15² = 17²"
-        },
-        {
-          "text": "Nee, want 8 + 15 ≠ 17"
-        },
-        {
-          "text": "Ja, want 8 + 15 > 17"
-        },
-        {
-          "text": "Nee, want 8² + 15² ≠ 17²"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Controleer: 8² + 15² = 64 + 225 = 289 en 17² = 289"
-    },
-    {
-      "id": 15,
-      "type": "multiple_choice",
-      "theme": "hoeken",
+      "theme": "hoeksoorten",
       "question": {
         "text": "Een hoek meet 75°. Welk type hoek is dit?"
       },
@@ -434,12 +324,12 @@
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Scherpe hoek: < 90°. Rechte hoek: = 90°. Stompe hoek: > 90° en < 180°"
+      "hint": "Scherpe hoek: < 90°. Rechte hoek: = 90°. Stompe hoek: > 90° en < 180°."
     },
     {
-      "id": 16,
+      "id": 12,
       "type": "multiple_choice",
-      "theme": "hoeken",
+      "theme": "hoeksoorten",
       "question": {
         "text": "Een hoek meet 135°. Welk type hoek is dit?"
       },
@@ -461,73 +351,16 @@
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Deze hoek is groter dan 90° maar kleiner dan 180°"
+      "hint": "Deze hoek is groter dan 90° maar kleiner dan 180°, dus een stompe hoek."
     },
     {
-      "id": 17,
+      "id": 13,
       "type": "multiple_choice",
-      "theme": "hoeken",
+      "theme": "hoeksoorten",
       "question": {
-        "text": "Twee hoeken samen vormen een rechte hoek van 90°. De ene hoek is 35°. Hoe groot is de andere hoek?"
+        "text": "Welke hoek is een rechte hoek?"
       },
       "options": [
-        {
-          "text": "55°"
-        },
-        {
-          "text": "125°"
-        },
-        {
-          "text": "45°"
-        },
-        {
-          "text": "65°"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "90° - 35° = ?"
-    },
-    {
-      "id": 18,
-      "type": "multiple_choice",
-      "theme": "hoeken",
-      "question": {
-        "text": "In een driehoek zijn twee hoeken 45° en 65°. Hoe groot is de derde hoek?"
-      },
-      "options": [
-        {
-          "text": "70°"
-        },
-        {
-          "text": "110°"
-        },
-        {
-          "text": "80°"
-        },
-        {
-          "text": "60°"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "De som van alle hoeken in een driehoek is 180°. Dus: 180° - 45° - 65°"
-    },
-    {
-      "id": 19,
-      "type": "multiple_choice",
-      "theme": "hoeken",
-      "question": {
-        "text": "Een driehoek heeft drie gelijke hoeken. Hoe groot is elke hoek?"
-      },
-      "options": [
-        {
-          "text": "60°"
-        },
         {
           "text": "90°"
         },
@@ -536,40 +369,205 @@
         },
         {
           "text": "120°"
+        },
+        {
+          "text": "180°"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 0
       },
-      "hint": "180° ÷ 3 = ?"
+      "hint": "Een rechte hoek is precies 90 graden, zoals de hoek van een vierkant."
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "theme": "hoeksoorten",
+      "question": {
+        "text": "Een driehoek heeft hoeken van 60°, 60° en 60°. Welk type hoeken zijn dit allemaal?"
+      },
+      "options": [
+        {
+          "text": "Scherpe hoeken"
+        },
+        {
+          "text": "Rechte hoeken"
+        },
+        {
+          "text": "Stompe hoeken"
+        },
+        {
+          "text": "Gestrekte hoeken"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Alle hoeken zijn 60°, wat kleiner is dan 90°, dus scherpe hoeken."
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "theme": "hoeksoorten",
+      "question": {
+        "text": "Hoeveel rechte hoeken vind je in een klaslokaal? Denk aan hoeken van muren, ramen en deuren."
+      },
+      "options": [
+        {
+          "text": "Heel veel rechte hoeken"
+        },
+        {
+          "text": "Geen enkele rechte hoek"
+        },
+        {
+          "text": "Alleen stompe hoeken"
+        },
+        {
+          "text": "Alleen scherpe hoeken"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Muren ontmoeten elkaar meestal in rechte hoeken van 90°. Ook ramen en deuren hebben rechte hoeken."
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "theme": "coördinaten",
+      "question": {
+        "text": "Een punt heeft coördinaat (3, 5). Welke waarde is de x-coördinaat?"
+      },
+      "options": [
+        {
+          "text": "3"
+        },
+        {
+          "text": "5"
+        },
+        {
+          "text": "8"
+        },
+        {
+          "text": "2"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Bij coördinaten (x, y) is het eerste getal de x-coördinaat (horizontaal)."
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "theme": "coördinaten",
+      "question": {
+        "text": "Op een rooster staat punt A op (2, 4) en punt B op (6, 4). Hoe ver liggen deze punten horizontaal uit elkaar?"
+      },
+      "options": [
+        {
+          "text": "4 eenheden"
+        },
+        {
+          "text": "0 eenheden"
+        },
+        {
+          "text": "8 eenheden"
+        },
+        {
+          "text": "2 eenheden"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Trek de x-coördinaten van elkaar af: 6 - 2 = 4. De y-coördinaten zijn gelijk, dus ze liggen op dezelfde hoogte."
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "theme": "coördinaten",
+      "question": {
+        "text": "Je tekent punten (1, 1), (4, 1), (4, 3) en (1, 3) en verbindt ze. Welke figuur ontstaat er?"
+      },
+      "options": [
+        {
+          "text": "Een rechthoek"
+        },
+        {
+          "text": "Een driehoek"
+        },
+        {
+          "text": "Een cirkel"
+        },
+        {
+          "text": "Een vijfhoek"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Teken de punten op roosterpapier en verbind ze in volgorde. Je krijgt een rechthoek van 3 bij 2 eenheden."
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "theme": "coördinaten",
+      "question": {
+        "text": "Een schaakbord gebruikt letters (a-h) en cijfers (1-8) voor coördinaten. Is dit een voorbeeld van een coördinatenstelsel?"
+      },
+      "options": [
+        {
+          "text": "Ja, dit is een coördinatenstelsel"
+        },
+        {
+          "text": "Nee, dit is geen coördinatenstelsel"
+        },
+        {
+          "text": "Alleen als je met zwart speelt"
+        },
+        {
+          "text": "Alleen als je met wit speelt"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Een coördinatenstelsel gebruikt twee waarden (zoals letter en cijfer) om een positie aan te geven."
     },
     {
       "id": 20,
       "type": "multiple_choice",
-      "theme": "hoeken",
+      "theme": "coördinaten",
       "question": {
-        "text": "Welke uitspraak is waar over een stompe hoek?"
+        "text": "Punt P ligt op coördinaat (5, 3). Je verschuift het punt 2 eenheden naar rechts. Wat is de nieuwe coördinaat?"
       },
       "options": [
         {
-          "text": "Een stompe hoek is groter dan 90° en kleiner dan 180°"
+          "text": "(7, 3)"
         },
         {
-          "text": "Een stompe hoek is kleiner dan 90°"
+          "text": "(5, 5)"
         },
         {
-          "text": "Een stompe hoek is precies 90°"
+          "text": "(3, 3)"
         },
         {
-          "text": "Een stompe hoek is gelijk aan 180°"
+          "text": "(5, 1)"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Denk aan de definitie: stomp betekent meer dan recht (90°) maar niet gestrekt (180°)"
+      "hint": "Naar rechts verschuiven betekent de x-coördinaat verhogen. 5 + 2 = 7. De y-coördinaat blijft 3."
     }
   ],
   "settings": {

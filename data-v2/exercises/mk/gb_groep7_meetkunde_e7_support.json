@@ -1,947 +1,576 @@
 {
   "schema_version": "2.0.0",
-  "exercise_id": "gb_groep7_meetkunde_e7",
+  "metadata": {
+    "id": "gb_groep7_meetkunde_e7_support",
+    "type": "multiple_choice",
+    "category": "gb",
+    "grade": 7,
+    "level": "E7",
+    "language": "nl-NL",
+    "domain": "meetkunde",
+    "slo_alignment": {
+      "kerndoelen": [
+        "K33"
+      ],
+      "rekendomeinen": [
+        "meetkunde"
+      ],
+      "tussendoelen": [
+        "7R_meetkunde_e7"
+      ],
+      "referentieniveau": "1F",
+      "cognitive_level": "toepassen"
+    }
+  },
+  "display": {
+    "title": "Meetkunde Groep 7 - Eind schooljaar Ondersteuning"
+  },
+  "content": {
+    "instruction": "Kies het goede antwoord:"
+  },
   "items": [
     {
-      "item_id": 1,
-      "learning": {
-        "tips": [
-          "Negatieve x betekent naar links",
-          "Positieve y betekent omhoog",
-          "Coördinaat: (x, y)"
-        ],
-        "skill_description": "Negatieve coördinaten begrijpen",
-        "reading_strategies": [
-          "Let op het minteken",
-          "x komt altijd eerst, dan y"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerde_richting",
-            "description": "Links en rechts verwisseld",
-            "remedy": "Negatief x = links, positief x = rechts"
-          }
-        ]
+      "id": 1,
+      "type": "multiple_choice",
+      "theme": "coördinatenstelsel_4kwadranten",
+      "question": {
+        "text": "In welk kwadrant ligt het punt (3, 4)?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend! Je begrijpt negatieve coördinaten.",
-          "on_first_try": "Perfect! -3 betekent 3 naar links.",
-          "after_hint": "Goed! Negatieve getallen zijn nu duidelijk."
+      "options": [
+        {
+          "text": "Kwadrant I (rechts boven)"
         },
-        "incorrect": {
-          "first_attempt": "Let op het minteken bij -3.",
-          "second_attempt": "Negatief x betekent naar links.",
-          "third_attempt": "-3 is 3 naar links, +5 is 5 omhoog."
+        {
+          "text": "Kwadrant II (links boven)"
         },
-        "explanation": {
-          "text": "(-3, 5) betekent: 3 naar links, 5 omhoog"
+        {
+          "text": "Kwadrant III (links onder)"
+        },
+        {
+          "text": "Kwadrant IV (rechts onder)"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst negatieve coördinaten goed!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst met positieve coördinaten."
-        }
-      }
+      "hint": "Beide coördinaten zijn positief, dus rechts en boven de oorsprong."
     },
     {
-      "item_id": 2,
-      "learning": {
-        "tips": [
-          "Kwadrant I: (+, +) rechts boven",
-          "Kwadrant II: (-, +) links boven",
-          "Kwadrant III: (-, -) links onder",
-          "Kwadrant IV: (+, -) rechts onder"
-        ],
-        "skill_description": "Kwadranten herkennen",
-        "reading_strategies": [
-          "Check beide tekens",
-          "Beide negatief = links onder"
-        ],
-        "common_errors": [
-          {
-            "type": "kwadranten_verwisseld",
-            "description": "Verkeerd kwadrant gekozen",
-            "remedy": "Beide negatief betekent kwadrant III"
-          }
-        ]
+      "id": 2,
+      "type": "multiple_choice",
+      "theme": "coördinatenstelsel_4kwadranten",
+      "question": {
+        "text": "In welk kwadrant ligt het punt (-2, 3)?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima! Je kent de vier kwadranten.",
-          "on_first_try": "Uitstekend! Beide negatief = kwadrant III.",
-          "after_hint": "Goed! De kwadranten zijn nu helder."
+      "options": [
+        {
+          "text": "Kwadrant II (links boven)"
         },
-        "incorrect": {
-          "first_attempt": "Check beide coördinaten: zijn ze + of -?",
-          "second_attempt": "Beide negatief betekent links en onder.",
-          "third_attempt": "Links onder is kwadrant III."
+        {
+          "text": "Kwadrant I (rechts boven)"
         },
-        "explanation": {
-          "text": "(-4, -2): beide negatief, dus links onder = kwadrant III"
+        {
+          "text": "Kwadrant III (links onder)"
+        },
+        {
+          "text": "Kwadrant IV (rechts onder)"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Kwadranten zijn geen probleem voor jou!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen de vier kwadranten nog eens."
-        }
-      }
+      "hint": "Negatief x (links), positief y (boven) = kwadrant II."
     },
     {
-      "item_id": 3,
-      "learning": {
-        "tips": [
-          "Spiegeling in x-as: y verandert van teken",
-          "x blijft gelijk",
-          "(5, -3) wordt (5, 3)"
-        ],
-        "skill_description": "Spiegelen in de x-as",
-        "reading_strategies": [
-          "Welke as? x of y?",
-          "Welke coördinaat verandert?"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerde_as",
-            "description": "x en y door elkaar",
-            "remedy": "x-as: y verandert. y-as: x verandert"
-          }
-        ]
+      "id": 3,
+      "type": "multiple_choice",
+      "theme": "coördinatenstelsel_4kwadranten",
+      "question": {
+        "text": "Punt (5, -2) ligt in welk kwadrant?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed! Je begrijpt spiegeling in de x-as.",
-          "on_first_try": "Perfect! y verandert van teken, x niet.",
-          "after_hint": "Mooi! Spiegeling is nu duidelijk."
+      "options": [
+        {
+          "text": "Kwadrant IV (rechts onder)"
         },
-        "incorrect": {
-          "first_attempt": "Bij x-as spiegeling: y verandert van teken.",
-          "second_attempt": "x blijft 5, y wordt +3 in plaats van -3.",
-          "third_attempt": "(5, -3) gespiegeld in x-as = (5, 3)."
+        {
+          "text": "Kwadrant I (rechts boven)"
         },
-        "explanation": {
-          "text": "Spiegelen in x-as: y verandert van teken. (5, -3) → (5, 3)"
+        {
+          "text": "Kwadrant II (links boven)"
+        },
+        {
+          "text": "Kwadrant III (links onder)"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst spiegelingen!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen spiegeling zonder negatieve getallen."
-        }
-      }
+      "hint": "Positief x (rechts), negatief y (onder) = kwadrant IV."
     },
     {
-      "item_id": 4,
-      "learning": {
-        "tips": [
-          "Beide punten hebben x = 2",
-          "Verticale lijn langs de y-as",
-          "Afstand = verschil in y: 3 - (-5)"
-        ],
-        "skill_description": "Afstand berekenen op verticale lijn",
-        "reading_strategies": [
-          "Zelfde x-waarde = verticale lijn",
-          "Bereken verschil in y"
-        ],
-        "common_errors": [
-          {
-            "type": "negatief_vergeten",
-            "description": "3 - 5 in plaats van 3 - (-5)",
-            "remedy": "Min min wordt plus: 3 - (-5) = 3 + 5"
-          }
-        ]
+      "id": 4,
+      "type": "multiple_choice",
+      "theme": "coördinatenstelsel_4kwadranten",
+      "question": {
+        "text": "Welke coördinaat ligt op de x-as?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend! Je kunt afstand met negatieve getallen berekenen.",
-          "on_first_try": "Perfect! 3 - (-5) = 8 eenheden.",
-          "after_hint": "Goed! Min min = plus is nu duidelijk."
+      "options": [
+        {
+          "text": "(4, 0)"
         },
-        "incorrect": {
-          "first_attempt": "Bereken: 3 - (-5).",
-          "second_attempt": "Min min wordt plus: 3 + 5.",
-          "third_attempt": "3 - (-5) = 3 + 5 = 8 eenheden."
+        {
+          "text": "(0, 4)"
         },
-        "explanation": {
-          "text": "Afstand = 3 - (-5) = 3 + 5 = 8 eenheden"
+        {
+          "text": "(4, 4)"
+        },
+        {
+          "text": "(-4, 4)"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je kunt goed afstanden berekenen!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst met positieve getallen."
-        }
-      }
+      "hint": "Op de x-as is de y-coördinaat altijd 0."
     },
     {
-      "item_id": 5,
-      "learning": {
-        "tips": [
-          "Vierkant van (0,0) tot (4,4)",
-          "Zijde = 4 eenheden",
-          "Oppervlakte = 4 × 4"
-        ],
-        "skill_description": "Oppervlakte bepalen met coördinaten",
-        "reading_strategies": [
-          "Teken de figuur in je hoofd",
-          "Bepaal de zijden"
-        ],
-        "common_errors": [
-          {
-            "type": "omtrek_berekend",
-            "description": "4 + 4 + 4 + 4 in plaats van 4 × 4",
-            "remedy": "Oppervlakte = zijde × zijde"
-          }
-        ]
+      "id": 5,
+      "type": "multiple_choice",
+      "theme": "coördinatenstelsel_4kwadranten",
+      "question": {
+        "text": "Welke coördinaat ligt op de y-as?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima! Je combineert coördinaten met oppervlakte.",
-          "on_first_try": "Uitstekend! Zijde 4, dus 4 × 4 = 16.",
-          "after_hint": "Goed! Oppervlakte berekenen lukt nu."
+      "options": [
+        {
+          "text": "(0, -3)"
         },
-        "incorrect": {
-          "first_attempt": "Bepaal eerst de zijde van het vierkant.",
-          "second_attempt": "Van 0 tot 4 is 4 eenheden.",
-          "third_attempt": "Oppervlakte = 4 × 4 = 16."
+        {
+          "text": "(3, 0)"
         },
-        "explanation": {
-          "text": "Zijde = 4 eenheden. Oppervlakte = 4 × 4 = 16"
+        {
+          "text": "(3, 3)"
+        },
+        {
+          "text": "(-3, 3)"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je combineert meetkunde en coördinaten goed!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst simpele figuren tekenen."
-        }
-      }
+      "hint": "Op de y-as is de x-coördinaat altijd 0."
     },
     {
-      "item_id": 6,
-      "learning": {
-        "tips": [
-          "Verschuiving in x-richting: 1 - (-2)",
-          "-2 naar 1 is naar rechts",
-          "1 - (-2) = 1 + 2 = 3"
-        ],
-        "skill_description": "Verschuiving berekenen",
-        "reading_strategies": [
-          "Kijk alleen naar x voor horizontale verschuiving",
-          "Eindpunt - beginpunt"
-        ],
-        "common_errors": [
-          {
-            "type": "y_gebruikt",
-            "description": "y-verschuiving gegeven bij x-vraag",
-            "remedy": "Vraag is naar rechts = x-richting"
-          }
-        ]
+      "id": 6,
+      "type": "multiple_choice",
+      "theme": "volume_cilinder",
+      "question": {
+        "text": "Een cilinder heeft een straal van 3 cm en een hoogte van 10 cm. Bereken het volume. Gebruik π = 3,14."
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed! Je kunt verschuivingen berekenen.",
-          "on_first_try": "Perfect! 1 - (-2) = 3 eenheden naar rechts.",
-          "after_hint": "Mooi! Verschuiving is nu helder."
+      "options": [
+        {
+          "text": "282,6 cm³"
         },
-        "incorrect": {
-          "first_attempt": "Bereken: nieuwe x - oude x.",
-          "second_attempt": "1 - (-2) = ?",
-          "third_attempt": "1 - (-2) = 1 + 2 = 3 eenheden."
+        {
+          "text": "94,2 cm³"
         },
-        "explanation": {
-          "text": "x-verschuiving: 1 - (-2) = 3 eenheden naar rechts"
+        {
+          "text": "188,4 cm³"
+        },
+        {
+          "text": "565,2 cm³"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Verschuivingen zijn geen probleem!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst eenvoudige verschuivingen."
-        }
-      }
+      "hint": "Volume cilinder = π × r² × h = 3,14 × 3² × 10 = 3,14 × 9 × 10"
     },
     {
-      "item_id": 7,
-      "learning": {
-        "tips": [
-          "Negatief x = links",
-          "Positief y = boven",
-          "Dat is kwadrant II"
-        ],
-        "skill_description": "Kwadranten met tekencombinaties",
-        "reading_strategies": [
-          "Bepaal eerst links of rechts (x)",
-          "Dan boven of onder (y)"
-        ],
-        "common_errors": [
-          {
-            "type": "kwadrant_nummer_vergeten",
-            "description": "Richting weten maar kwadrant niet",
-            "remedy": "Links boven = II"
-          }
-        ]
+      "id": 7,
+      "type": "multiple_choice",
+      "theme": "volume_cilinder",
+      "question": {
+        "text": "Een cilinder heeft een straal van 5 cm en een hoogte van 8 cm. Wat is het volume? Gebruik π = 3,14."
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend! Je kent de kwadrant-regels.",
-          "on_first_try": "Perfect! (-, +) = kwadrant II.",
-          "after_hint": "Goed! De logica is nu duidelijk."
+      "options": [
+        {
+          "text": "628 cm³"
         },
-        "incorrect": {
-          "first_attempt": "Negatief x en positief y betekent...",
-          "second_attempt": "Links en boven = kwadrant II.",
-          "third_attempt": "(-, +) = links boven = kwadrant II."
+        {
+          "text": "125,6 cm³"
         },
-        "explanation": {
-          "text": "Negatief x (links), positief y (boven) = kwadrant II"
+        {
+          "text": "314 cm³"
+        },
+        {
+          "text": "1256 cm³"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst alle kwadranten perfect!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Teken een assenstelsel met de vier kwadranten."
-        }
-      }
+      "hint": "Volume = π × r² × h = 3,14 × 5² × 8 = 3,14 × 25 × 8"
     },
     {
-      "item_id": 8,
-      "learning": {
-        "tips": [
-          "Volume cilinder = π × r² × h",
-          "Eerst oppervlakte grondvlak: π × r²",
-          "Dan × hoogte"
-        ],
-        "skill_description": "Volume cilinder berekenen",
-        "reading_strategies": [
-          "Zoek straal en hoogte",
-          "Gebruik π = 3,14"
-        ],
-        "common_errors": [
-          {
-            "type": "formule_vergeten",
-            "description": "Hoogte vergeten of verkeerd",
-            "remedy": "Volume = (π × r²) × h"
-          }
-        ]
+      "id": 8,
+      "type": "multiple_choice",
+      "theme": "volume_cilinder",
+      "question": {
+        "text": "Een cilinder heeft een diameter van 6 cm en een hoogte van 10 cm. Bereken het volume. Gebruik π = 3,14."
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend! Je beheerst de formule voor volume cilinder.",
-          "on_first_try": "Perfect! π × 4² × 10 = 502,4 cm³.",
-          "after_hint": "Goed! De formule is nu duidelijk."
+      "options": [
+        {
+          "text": "282,6 cm³"
         },
-        "incorrect": {
-          "first_attempt": "Gebruik: π × r² × h.",
-          "second_attempt": "3,14 × 16 × 10 = ?",
-          "third_attempt": "3,14 × 4² × 10 = 502,4 cm³."
+        {
+          "text": "1130,4 cm³"
         },
-        "explanation": {
-          "text": "Volume = π × r² × h = 3,14 × 4² × 10 = 502,4 cm³"
+        {
+          "text": "188,4 cm³"
+        },
+        {
+          "text": "565,2 cm³"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst volume cilinder goed!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst oppervlakte cirkel."
-        }
-      }
+      "hint": "Diameter = 6 cm, dus straal = 3 cm. Volume = π × 3² × 10"
     },
     {
-      "item_id": 9,
-      "learning": {
-        "tips": [
-          "Diameter = 8 cm, dus straal = 4 cm",
-          "Volume = π × r² × h",
-          "= 3,14 × 4² × 12"
-        ],
-        "skill_description": "Volume cilinder met diameter",
-        "reading_strategies": [
-          "Let op: diameter of straal?",
-          "Diameter ÷ 2 = straal"
-        ],
-        "common_errors": [
-          {
-            "type": "diameter_gebruiken",
-            "description": "8 gebruikt in plaats van 4",
-            "remedy": "Eerst diameter ÷ 2 = straal"
-          }
-        ]
+      "id": 9,
+      "type": "multiple_choice",
+      "theme": "volume_cilinder",
+      "question": {
+        "text": "Een blik heeft een straal van 4 cm en een hoogte van 15 cm. Hoeveel cm³ past erin? Gebruik π = 3,14."
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima! Je weet diameter om te zetten.",
-          "on_first_try": "Uitstekend! Straal 4, dan × hoogte 12.",
-          "after_hint": "Goed! Diameter herkennen lukt nu."
+      "options": [
+        {
+          "text": "753,6 cm³"
         },
-        "incorrect": {
-          "first_attempt": "Let op: diameter 8 betekent straal 4.",
-          "second_attempt": "Volume = π × 4² × 12.",
-          "third_attempt": "3,14 × 16 × 12 = 602,88 cm³."
+        {
+          "text": "188,4 cm³"
         },
-        "explanation": {
-          "text": "Straal = 4 cm. Volume = π × 4² × 12 = 602,88 cm³"
+        {
+          "text": "376,8 cm³"
+        },
+        {
+          "text": "1507,2 cm³"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Diameter is geen probleem meer!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen met straal gegeven."
-        }
-      }
+      "hint": "Volume = π × r² × h = 3,14 × 4² × 15 = 3,14 × 16 × 15"
     },
     {
-      "item_id": 10,
-      "learning": {
-        "tips": [
-          "Straal = 2,5 m",
-          "Volume = π × 2,5² × 6",
-          "2,5² = 6,25"
-        ],
-        "skill_description": "Volume cilinder met kommagetallen",
-        "reading_strategies": [
-          "Werk nauwkeurig met kommagetallen",
-          "Controleer je berekening"
-        ],
-        "common_errors": [
-          {
-            "type": "komma_fout",
-            "description": "Fout bij kwadrateren kommagetal",
-            "remedy": "2,5 × 2,5 = 6,25"
-          }
-        ]
+      "id": 10,
+      "type": "multiple_choice",
+      "theme": "volume_cilinder",
+      "question": {
+        "text": "Welke formule gebruik je om het volume van een cilinder te berekenen?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed! Je kunt met kommagetallen rekenen.",
-          "on_first_try": "Perfect! 3,14 × 6,25 × 6 = 117,75 m³.",
-          "after_hint": "Mooi! Kommagetallen kloppen nu."
+      "options": [
+        {
+          "text": "π × r² × h"
         },
-        "incorrect": {
-          "first_attempt": "Bereken eerst 2,5².",
-          "second_attempt": "2,5² = 6,25. Dan × 6 × 3,14.",
-          "third_attempt": "3,14 × 6,25 × 6 = 117,75 m³."
+        {
+          "text": "π × r × h"
         },
-        "explanation": {
-          "text": "Volume = π × r² × h = 3,14 × 6,25 × 6 = 117,75 m³"
+        {
+          "text": "2 × π × r × h"
+        },
+        {
+          "text": "π × d × h"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Kommagetallen zijn geen probleem!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen met ronde getallen."
-        }
-      }
+      "hint": "Volume cilinder = oppervlakte grondvlak × hoogte = π × r² × h"
     },
     {
-      "item_id": 11,
-      "learning": {
-        "tips": [
-          "Straal = 5 cm, lengte = 50 cm",
-          "Volume = π × 5² × 50",
-          "= 3,14 × 25 × 50"
-        ],
-        "skill_description": "Volume pijp (cilinder)",
-        "reading_strategies": [
-          "Pijp = horizontale cilinder",
-          "Lengte = hoogte"
-        ],
-        "common_errors": [
-          {
-            "type": "begrip_context",
-            "description": "Lengte en hoogte verward",
-            "remedy": "Bij pijp is lengte de 'hoogte' in formule"
-          }
-        ]
+      "id": 11,
+      "type": "multiple_choice",
+      "theme": "spiegeling",
+      "question": {
+        "text": "Punt (3, 2) wordt gespiegeld in de x-as. Wat zijn de nieuwe coördinaten?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima! Je past volume toe in context.",
-          "on_first_try": "Uitstekend! 3,14 × 25 × 50 = 3925 cm³.",
-          "after_hint": "Goed! Praktijktoepassing lukt nu."
+      "options": [
+        {
+          "text": "(3, -2)"
         },
-        "incorrect": {
-          "first_attempt": "Gebruik: π × r² × lengte.",
-          "second_attempt": "π × 5² × 50 = ?",
-          "third_attempt": "3,14 × 25 × 50 = 3925 cm³."
+        {
+          "text": "(-3, 2)"
         },
-        "explanation": {
-          "text": "Volume = π × r² × h = 3,14 × 5² × 50 = 3925 cm³"
+        {
+          "text": "(-3, -2)"
+        },
+        {
+          "text": "(2, 3)"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je past volume toe in verschillende contexten!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst met 'normale' cilinders."
-        }
-      }
+      "hint": "Bij spiegeling in de x-as blijft x gelijk, y verandert van teken."
     },
     {
-      "item_id": 12,
-      "learning": {
-        "tips": [
-          "Diameter = 10 cm, straal = 5 cm",
-          "Volume = π × 5² × 15 = 1177,5 cm³",
-          "1177,5 cm³ ≈ 1,18 liter"
-        ],
-        "skill_description": "Volume cilinder met eenhedenomrekening",
-        "reading_strategies": [
-          "Let op eenheid in vraag: liters",
-          "1000 cm³ = 1 liter"
-        ],
-        "common_errors": [
-          {
-            "type": "eenheid_vergeten",
-            "description": "cm³ niet omgerekend naar liter",
-            "remedy": "Deel door 1000 voor liters"
-          }
-        ]
+      "id": 12,
+      "type": "multiple_choice",
+      "theme": "spiegeling",
+      "question": {
+        "text": "Punt (4, 5) wordt gespiegeld in de y-as. Wat zijn de nieuwe coördinaten?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed! Je kunt eenheden omrekenen.",
-          "on_first_try": "Perfect! 1177,5 cm³ = 1,18 liter.",
-          "after_hint": "Mooi! Omrekenen lukt nu goed."
+      "options": [
+        {
+          "text": "(-4, 5)"
         },
-        "incorrect": {
-          "first_attempt": "Bereken eerst volume in cm³, dan ÷ 1000.",
-          "second_attempt": "Volume = 1177,5 cm³ ≈ 1,18 liter.",
-          "third_attempt": "π × 5² × 15 = 1177,5 cm³ = 1,18 liter."
+        {
+          "text": "(4, -5)"
         },
-        "explanation": {
-          "text": "Volume = 3,14 × 5² × 15 = 1177,5 cm³ ≈ 1,18 liter"
+        {
+          "text": "(-4, -5)"
+        },
+        {
+          "text": "(5, 4)"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Eenhedenomrekening is geen probleem!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen omrekenen cm³ naar liter."
-        }
-      }
+      "hint": "Bij spiegeling in de y-as blijft y gelijk, x verandert van teken."
     },
     {
-      "item_id": 13,
-      "learning": {
-        "tips": [
-          "Straal = 6 cm, hoogte = 20 cm",
-          "Volume = π × 6² × 20",
-          "= 3,14 × 36 × 20"
-        ],
-        "skill_description": "Volume cilinder met grotere getallen",
-        "reading_strategies": [
-          "Werk systematisch",
-          "Controleer je berekening"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij grotere getallen",
-            "remedy": "36 × 20 = 720, dan × 3,14"
-          }
-        ]
+      "id": 13,
+      "type": "multiple_choice",
+      "theme": "spiegeling",
+      "question": {
+        "text": "Welke uitspraak over spiegeling in de x-as is waar?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend! Grote getallen zijn geen probleem.",
-          "on_first_try": "Perfect! 3,14 × 36 × 20 = 2260,8 cm³.",
-          "after_hint": "Goed! Je rekent nauwkeurig."
+      "options": [
+        {
+          "text": "De y-coördinaat verandert van teken"
         },
-        "incorrect": {
-          "first_attempt": "Bereken: π × 6² × 20.",
-          "second_attempt": "6² = 36. Dan: 36 × 20 × 3,14.",
-          "third_attempt": "3,14 × 36 × 20 = 2260,8 cm³."
+        {
+          "text": "De x-coördinaat verandert van teken"
         },
-        "explanation": {
-          "text": "Volume = π × r² × h = 3,14 × 36 × 20 = 2260,8 cm³"
+        {
+          "text": "Beide coördinaten veranderen van teken"
+        },
+        {
+          "text": "Geen enkele coördinaat verandert"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je rekent goed met grotere getallen!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen met kleinere getallen."
-        }
-      }
+      "hint": "Bij spiegeling in de x-as verandert alleen de y-coördinaat van teken."
     },
     {
-      "item_id": 14,
-      "learning": {
-        "tips": [
-          "Straal = hoogte = 8 cm",
-          "Volume = π × 8² × 8",
-          "= π × 64 × 8"
-        ],
-        "skill_description": "Volume cilinder met gelijke afmetingen",
-        "reading_strategies": [
-          "Let op: r = h",
-          "Gebruik 8 twee keer in formule"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerd_lezen",
-            "description": "Niet gezien dat r = h",
-            "remedy": "Lees goed: 'dezelfde straal als hoogte'"
-          }
-        ]
+      "id": 14,
+      "type": "multiple_choice",
+      "theme": "spiegeling",
+      "question": {
+        "text": "Punt (-2, 3) wordt gespiegeld in de x-as. Wat zijn de nieuwe coördinaten?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima! Je leest de vraag goed.",
-          "on_first_try": "Uitstekend! 3,14 × 64 × 8 = 1607,68 cm³.",
-          "after_hint": "Goed! Aandachtig lezen werkt nu."
+      "options": [
+        {
+          "text": "(-2, -3)"
         },
-        "incorrect": {
-          "first_attempt": "Let op: straal én hoogte zijn beide 8.",
-          "second_attempt": "Volume = π × 8² × 8.",
-          "third_attempt": "3,14 × 64 × 8 = 1607,68 cm³."
+        {
+          "text": "(2, 3)"
         },
-        "explanation": {
-          "text": "r = h = 8 cm. Volume = π × 8² × 8 = 1607,68 cm³"
+        {
+          "text": "(2, -3)"
+        },
+        {
+          "text": "(-2, 3)"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je leest vraagstukken nauwkeurig!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Onderstreep belangrijke informatie in de vraag."
-        }
-      }
+      "hint": "x-as spiegeling: x blijft -2, y verandert van 3 naar -3."
     },
     {
-      "item_id": 15,
-      "learning": {
-        "tips": [
-          "Spiegeling in y-as: x verandert van teken",
-          "y blijft gelijk",
-          "(5, 3) wordt (-5, 3)"
-        ],
-        "skill_description": "Spiegelen in de y-as",
-        "reading_strategies": [
-          "y-as: x verandert",
-          "x-as: y verandert"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerde_as",
-            "description": "x en y door elkaar",
-            "remedy": "y-as betekent x verandert"
-          }
-        ]
+      "id": 15,
+      "type": "multiple_choice",
+      "theme": "spiegeling",
+      "question": {
+        "text": "Punt (5, -4) wordt gespiegeld in de y-as. Wat zijn de nieuwe coördinaten?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed! Je begrijpt spiegeling in y-as.",
-          "on_first_try": "Perfect! Bij y-as: x verandert van teken.",
-          "after_hint": "Mooi! Y-as spiegeling is nu duidelijk."
+      "options": [
+        {
+          "text": "(-5, -4)"
         },
-        "incorrect": {
-          "first_attempt": "Bij y-as: x verandert van teken.",
-          "second_attempt": "(5, 3) wordt (-5, 3).",
-          "third_attempt": "x verandert: 5 → -5. y blijft 3."
+        {
+          "text": "(5, 4)"
         },
-        "explanation": {
-          "text": "Spiegelen in y-as: x verandert. (5, 3) → (-5, 3)"
+        {
+          "text": "(-5, 4)"
+        },
+        {
+          "text": "(4, -5)"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst beide spiegelingen!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen x-as en y-as spiegeling apart."
-        }
-      }
+      "hint": "y-as spiegeling: x verandert van 5 naar -5, y blijft -4."
     },
     {
-      "item_id": 16,
-      "learning": {
-        "tips": [
-          "90° rechtsom: (x, y) → (y, -x)",
-          "(4, 2) wordt (2, -4)",
-          "x en y wisselen, x wordt negatief"
-        ],
-        "skill_description": "90° rotatie rechtsom",
-        "reading_strategies": [
-          "Onthoud de regel: (x, y) → (y, -x)",
-          "Oefen met voorbeelden"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerde_regel",
-            "description": "Rotatie-regel verkeerd toegepast",
-            "remedy": "Rechtsom 90°: wissel x en y, maak x negatief"
-          }
-        ]
+      "id": 16,
+      "type": "multiple_choice",
+      "theme": "rotatie",
+      "question": {
+        "text": "Punt (3, 0) wordt 90° rechtsom geroteerd om de oorsprong. Wat zijn de nieuwe coördinaten?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend! Je beheerst 90° rotatie.",
-          "on_first_try": "Perfect! (4, 2) → (2, -4).",
-          "after_hint": "Goed! De rotatie-regel is duidelijk."
+      "options": [
+        {
+          "text": "(0, -3)"
         },
-        "incorrect": {
-          "first_attempt": "Bij 90° rechtsom: (x, y) → (y, -x).",
-          "second_attempt": "x en y wisselen: (4, 2) → (2, 4), dan x negatief.",
-          "third_attempt": "(4, 2) wordt (2, -4)."
+        {
+          "text": "(0, 3)"
         },
-        "explanation": {
-          "text": "90° rechtsom: (x, y) → (y, -x). (4, 2) → (2, -4)"
+        {
+          "text": "(-3, 0)"
+        },
+        {
+          "text": "(3, 3)"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Rotaties zijn geen probleem!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst met tekeningen."
-        }
-      }
+      "hint": "Bij 90° rotatie rechtsom wordt (x, y) → (y, -x). Dus (3, 0) → (0, -3)."
     },
     {
-      "item_id": 17,
-      "learning": {
-        "tips": [
-          "180° rotatie: (x, y) → (-x, -y)",
-          "Beide coördinaten veranderen van teken",
-          "Punt komt aan andere kant oorsprong"
-        ],
-        "skill_description": "180° rotatie",
-        "reading_strategies": [
-          "180° = halve draai",
-          "Beide tekens omdraaien"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerde_regel",
-            "description": "Niet beide getallen negatief gemaakt",
-            "remedy": "Bij 180°: beide tekens veranderen"
-          }
-        ]
+      "id": 17,
+      "type": "multiple_choice",
+      "theme": "rotatie",
+      "question": {
+        "text": "Punt (2, 3) wordt 180° geroteerd om de oorsprong. Wat zijn de nieuwe coördinaten?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima! Je begrijpt 180° rotatie.",
-          "on_first_try": "Uitstekend! Beide tekens veranderen.",
-          "after_hint": "Goed! 180° rotatie is nu helder."
+      "options": [
+        {
+          "text": "(-2, -3)"
         },
-        "incorrect": {
-          "first_attempt": "Bij 180°: beide coördinaten veranderen van teken.",
-          "second_attempt": "(x, y) wordt (-x, -y).",
-          "third_attempt": "Beide + wordt -, of beide - wordt +."
+        {
+          "text": "(2, -3)"
         },
-        "explanation": {
-          "text": "180° rotatie: (x, y) → (-x, -y). Beide tekens veranderen."
+        {
+          "text": "(-2, 3)"
+        },
+        {
+          "text": "(3, 2)"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst alle rotaties!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst 90° rotatie."
-        }
-      }
+      "hint": "Bij 180° rotatie veranderen beide coördinaten van teken: (2, 3) → (-2, -3)."
     },
     {
-      "item_id": 18,
-      "learning": {
-        "tips": [
-          "Verschuiving: tel op bij coördinaten",
-          "Rechts = + bij x, beneden = - bij y",
-          "(-3, 5) + (4, -2) = (1, 3)"
-        ],
-        "skill_description": "Verschuiving (translatie)",
-        "reading_strategies": [
-          "Rechts/links beïnvloedt x",
-          "Boven/beneden beïnvloedt y"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerde_richting",
-            "description": "Beneden als + in plaats van -",
-            "remedy": "Beneden = min bij y-coördinaat"
-          }
-        ]
+      "id": 18,
+      "type": "multiple_choice",
+      "theme": "rotatie",
+      "question": {
+        "text": "Punt (0, 4) wordt 90° linksom geroteerd. Wat zijn de nieuwe coördinaten?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed! Je kunt verschuivingen toepassen.",
-          "on_first_try": "Perfect! (-3, 5) + (4, -2) = (1, 3).",
-          "after_hint": "Mooi! Verschuivingen zijn nu duidelijk."
+      "options": [
+        {
+          "text": "(-4, 0)"
         },
-        "incorrect": {
-          "first_attempt": "Rechts +4 bij x, beneden -2 bij y.",
-          "second_attempt": "x: -3 + 4 = 1. y: 5 - 2 = 3.",
-          "third_attempt": "Nieuwe coördinaat: (1, 3)."
+        {
+          "text": "(4, 0)"
         },
-        "explanation": {
-          "text": "Verschuiving: x: -3 + 4 = 1, y: 5 - 2 = 3. Dus (1, 3)"
+        {
+          "text": "(0, -4)"
+        },
+        {
+          "text": "(4, 4)"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Verschuivingen zijn geen probleem!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst zonder negatieve getallen."
-        }
-      }
+      "hint": "Bij 90° rotatie linksom wordt (x, y) → (-y, x). Dus (0, 4) → (-4, 0)."
     },
     {
-      "item_id": 19,
-      "learning": {
-        "tips": [
-          "Lijn van (0,0) naar (4,4)",
-          "Spiegeling in x-as: y wordt -y",
-          "(4, 4) wordt (4, -4)"
-        ],
-        "skill_description": "Lijn spiegelen",
-        "reading_strategies": [
-          "Kies een punt op de lijn",
-          "Spiegel dat punt"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerde_as",
-            "description": "y-as gebruikt in plaats van x-as",
-            "remedy": "x-as: y verandert, niet x"
-          }
-        ]
+      "id": 19,
+      "type": "multiple_choice",
+      "theme": "rotatie",
+      "question": {
+        "text": "Welke uitspraak over 180° rotatie is waar?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima! Je kunt lijnen spiegelen.",
-          "on_first_try": "Uitstekend! (4, 4) in x-as = (4, -4).",
-          "after_hint": "Goed! Lijnen spiegelen lukt nu."
+      "options": [
+        {
+          "text": "Beide coördinaten veranderen van teken"
         },
-        "incorrect": {
-          "first_attempt": "Spiegel punt (4, 4) in de x-as.",
-          "second_attempt": "x-as: y verandert van teken.",
-          "third_attempt": "(4, 4) wordt (4, -4)."
+        {
+          "text": "Alleen x verandert van teken"
         },
-        "explanation": {
-          "text": "Punt (4, 4) gespiegeld in x-as wordt (4, -4)"
+        {
+          "text": "Alleen y verandert van teken"
+        },
+        {
+          "text": "De coördinaten blijven hetzelfde"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je past transformaties toe op lijnen!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst met losse punten."
-        }
-      }
+      "hint": "Bij 180° rotatie: (x, y) → (-x, -y). Beide tekens veranderen."
     },
     {
-      "item_id": 20,
-      "learning": {
-        "tips": [
-          "270° linksom = 90° rechtsom",
-          "Rechthoek in kwadrant I (rechts boven)",
-          "Na 90° rechtsom: kwadrant IV (rechts onder)"
-        ],
-        "skill_description": "Complexe rotatie met figuren",
-        "reading_strategies": [
-          "270° links = 90° rechts",
-          "Bepaal uitgangskwadrant eerst"
-        ],
-        "common_errors": [
-          {
-            "type": "rotatie_richting",
-            "description": "Linksom en rechtsom verward",
-            "remedy": "270° linksom = 90° rechtsom"
-          }
-        ]
+      "id": 20,
+      "type": "multiple_choice",
+      "theme": "rotatie",
+      "question": {
+        "text": "Een punt in kwadrant I wordt 90° rechtsom geroteerd. In welk kwadrant ligt het nu?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend! Je beheerst complexe rotaties.",
-          "on_first_try": "Perfect! 270° links = 90° rechts, dus kwadrant IV.",
-          "after_hint": "Goed! Complexe transformaties lukken nu."
+      "options": [
+        {
+          "text": "Kwadrant IV (rechts onder)"
         },
-        "incorrect": {
-          "first_attempt": "270° linksom = 90° rechtsom.",
-          "second_attempt": "Rechthoek start in kwadrant I.",
-          "third_attempt": "Na 90° rechtsom: kwadrant IV."
+        {
+          "text": "Kwadrant I (rechts boven)"
         },
-        "explanation": {
-          "text": "270° linksom = 90° rechtsom. Van kwadrant I naar kwadrant IV"
+        {
+          "text": "Kwadrant II (links boven)"
+        },
+        {
+          "text": "Kwadrant III (links onder)"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst alle transformaties perfect!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst eenvoudige rotaties."
-        }
-      }
+      "hint": "90° rechtsom: kwadrant I (rechts boven) gaat naar kwadrant IV (rechts onder)."
     }
-  ]
+  ],
+  "settings": {
+    "allow_review": true
+  }
 }

@@ -1,888 +1,577 @@
 {
   "schema_version": "2.0.0",
-  "exercise_id": "gb_groep8_meetkunde_m8",
+  "metadata": {
+    "id": "gb_groep8_meetkunde_m8_support",
+    "type": "multiple_choice",
+    "category": "gb",
+    "grade": 8,
+    "level": "M8",
+    "language": "nl-NL",
+    "domain": "meetkunde",
+    "slo_alignment": {
+      "kerndoelen": [
+        "K32",
+        "K33"
+      ],
+      "rekendomeinen": [
+        "meetkunde"
+      ],
+      "tussendoelen": [
+        "8R_meetkunde_m8"
+      ],
+      "referentieniveau": "1S",
+      "cognitive_level": "toepassen"
+    }
+  },
+  "display": {
+    "title": "Meetkunde Groep 8 - Ondersteuning"
+  },
+  "content": {
+    "instruction": "Kies het goede antwoord:"
+  },
   "items": [
     {
-      "item_id": 1,
-      "learning": {
-        "tips": [
-          "Deel samengestelde figuren op in bekende vormen",
-          "Bereken elke oppervlakte apart",
-          "Tel alle oppervlaktes bij elkaar op"
-        ],
-        "skill_description": "Samengestelde oppervlaktes berekenen",
-        "reading_strategies": [
-          "Teken een schets van de figuur",
-          "Markeer de afmetingen op de tekening"
-        ],
-        "common_errors": [
-          {
-            "type": "vergeten_deel",
-            "description": "Een deel van de figuur vergeten",
-            "remedy": "Tel systematisch alle delen"
-          }
-        ]
+      "id": 1,
+      "type": "multiple_choice",
+      "theme": "complexe_oppervlakte",
+      "question": {
+        "text": "Een L-vormige figuur bestaat uit twee rechthoeken. De eerste is 6 bij 4 meter. De tweede is 3 bij 2 meter. Wat is de totale oppervlakte?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan!",
-          "on_first_try": "Uitstekend! Je kunt samengestelde oppervlaktes goed berekenen!",
-          "after_hint": "Mooi! De hint heeft je geholpen."
+      "options": [
+        {
+          "text": "24 m²"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Heb je alle delen meegeteld?",
-          "second_attempt": "Denk goed na. Wil je een hint?",
-          "third_attempt": "Laten we samen kijken naar de figuur."
+        {
+          "text": "30 m²"
+        },
+        {
+          "text": "36 m²"
+        },
+        {
+          "text": "42 m²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent hier goed in! Laten we het wat uitdagender maken."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we eerst eenvoudiger samengestelde figuren oefenen."
-        }
-      }
+      "hint": "Eerste rechthoek: 6×4 = 24 m². Tweede rechthoek: 3×2 = 6 m². Totaal: 24 + 6 = 30 m²"
     },
     {
-      "item_id": 2,
-      "learning": {
-        "tips": [
-          "Oppervlakte rechthoek = lengte × breedte",
-          "Oppervlakte halve cirkel = (π × r²) ÷ 2",
-          "Tel beide oppervlaktes op voor het totaal"
-        ],
-        "skill_description": "Oppervlakte met cirkels berekenen",
-        "reading_strategies": [
-          "Identificeer welke delen de figuur heeft",
-          "Noteer de formules die je nodig hebt"
-        ],
-        "common_errors": [
-          {
-            "type": "straal_diameter_verwarring",
-            "description": "Straal en diameter verwarren",
-            "remedy": "Straal = diameter ÷ 2"
-          }
-        ]
+      "id": 2,
+      "type": "multiple_choice",
+      "theme": "eigenschappen_figuren",
+      "question": {
+        "text": "Hoeveel vlakken heeft een kubus?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima gedaan!",
-          "on_first_try": "Geweldig! Je beheerst formules met π goed!",
-          "after_hint": "Goed zo!"
+      "options": [
+        {
+          "text": "4 vlakken"
         },
-        "incorrect": {
-          "first_attempt": "Let op straal en diameter.",
-          "second_attempt": "Controleer je berekening met π.",
-          "third_attempt": "Laten we stap voor stap de berekening doen."
+        {
+          "text": "6 vlakken"
+        },
+        {
+          "text": "8 vlakken"
+        },
+        {
+          "text": "12 vlakken"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je werkt nauwkeurig met π!"
-        },
-        "if_wrong_multiple": {
-          "action": "provide_formula_sheet",
-          "message": "Hier is een formuleblad om te helpen."
-        }
-      }
+      "hint": "Een kubus heeft 6 vierkante vlakken: voor, achter, links, rechts, boven en onder"
     },
     {
-      "item_id": 3,
-      "learning": {
-        "tips": [
-          "Bij uitsparing: trek de kleine oppervlakte af",
-          "Vierkant: zijde × zijde",
-          "Driehoek: ½ × basis × hoogte"
-        ],
-        "skill_description": "Oppervlakte met uitsparing berekenen",
-        "reading_strategies": [
-          "Bepaal wat de grote en kleine vorm zijn",
-          "Let op het woord 'uitsparing' - dit betekent aftrekken"
-        ],
-        "common_errors": [
-          {
-            "type": "optellen_in_plaats_van_aftrekken",
-            "description": "Oppervlaktes opgeteld in plaats van afgetrokken",
-            "remedy": "Uitsparing betekent: haal eraf, dus aftrekken"
-          }
-        ]
+      "id": 3,
+      "type": "multiple_choice",
+      "theme": "schaalmodellen",
+      "question": {
+        "text": "Op een tekening met schaal 1:50 is een tafel 2 cm lang getekend. Hoe lang is de tafel in het echt?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Correct!",
-          "on_first_try": "Perfect! Je snapt uitsparingen goed!",
-          "after_hint": "Goed gedaan!"
+      "options": [
+        {
+          "text": "50 cm"
         },
-        "incorrect": {
-          "first_attempt": "Let op: uitsparing betekent aftrekken.",
-          "second_attempt": "Bereken eerst beide oppervlaktes apart.",
-          "third_attempt": "Grote oppervlakte min kleine oppervlakte."
+        {
+          "text": "1 meter"
+        },
+        {
+          "text": "2 meter"
+        },
+        {
+          "text": "10 meter"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je begrijpt uitsparingen prima!"
-        },
-        "if_wrong_multiple": {
-          "action": "visual_support",
-          "message": "Kijk naar de tekening om te zien wat wordt weggehaald."
-        }
-      }
+      "hint": "Schaal 1:50 betekent: 1 cm = 50 cm. Dus 2 cm × 50 = 100 cm = 1 meter"
     },
     {
-      "item_id": 4,
-      "learning": {
-        "tips": [
-          "4 kwart cirkels = 1 hele cirkel",
-          "Oppervlakte cirkel = π × r²",
-          "Trek de cirkel af van de rechthoek"
-        ],
-        "skill_description": "Complexe samengestelde figuren met cirkels",
-        "reading_strategies": [
-          "Tel hoeveel kwart cirkels er zijn",
-          "Reken ze om naar hele cirkels"
-        ],
-        "common_errors": [
-          {
-            "type": "kwarten_niet_samengevoegd",
-            "description": "Kwart cirkels niet samenvoegen tot hele cirkels",
-            "remedy": "4 kwarten = 1 geheel"
-          }
-        ]
+      "id": 4,
+      "type": "multiple_choice",
+      "theme": "complexe_oppervlakte",
+      "question": {
+        "text": "Een figuur bestaat uit een vierkant van 5×5 meter met een driehoekige uitsparing. De driehoek heeft een basis van 2 meter en een hoogte van 2 meter. Hoeveel m² blijft er over?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend!",
-          "on_first_try": "Perfect! Je kunt kwart cirkels goed samenvoegen!",
-          "after_hint": "Goed gedaan!"
+      "options": [
+        {
+          "text": "21 m²"
         },
-        "incorrect": {
-          "first_attempt": "Hoeveel kwart cirkels samen vormen 1 hele cirkel?",
-          "second_attempt": "Probeer de kwarten samen te voegen.",
-          "third_attempt": "4 kwart cirkels = 1 hele cirkel."
+        {
+          "text": "23 m²"
+        },
+        {
+          "text": "24 m²"
+        },
+        {
+          "text": "25 m²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst cirkeldelen uitstekend!"
-        },
-        "if_wrong_multiple": {
-          "action": "simplify",
-          "message": "Laten we eerst oefenen met halve cirkels."
-        }
-      }
+      "hint": "Vierkant: 5×5 = 25 m². Driehoek: ½×2×2 = 2 m². Rest: 25 - 2 = 23 m²"
     },
     {
-      "item_id": 5,
-      "learning": {
-        "tips": [
-          "Pythagoras: a² + b² = c²",
-          "c is altijd de langste zijde (schuine zijde)",
-          "Vul de bekende waarden in en reken uit"
-        ],
-        "skill_description": "Pythagoras toepassen in praktijksituaties",
-        "reading_strategies": [
-          "Maak een schets van de situatie",
-          "Zoek de rechthoekige driehoek",
-          "Label de zijden a, b en c"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerde_zijde_als_c",
-            "description": "Niet de schuine zijde als c gebruiken",
-            "remedy": "c is altijd de langste zijde, de schuine zijde"
-          }
-        ]
+      "id": 5,
+      "type": "multiple_choice",
+      "theme": "eigenschappen_figuren",
+      "question": {
+        "text": "Hoeveel hoekpunten heeft een kubus?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima!",
-          "on_first_try": "Uitstekend! Je beheerst Pythagoras goed!",
-          "after_hint": "Goed zo!"
+      "options": [
+        {
+          "text": "4 hoekpunten"
         },
-        "incorrect": {
-          "first_attempt": "Welke zijde is de schuine zijde?",
-          "second_attempt": "Vul de formule a² + b² = c² in.",
-          "third_attempt": "De ladder is de schuine zijde (c)."
+        {
+          "text": "6 hoekpunten"
+        },
+        {
+          "text": "8 hoekpunten"
+        },
+        {
+          "text": "12 hoekpunten"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je past Pythagoras goed toe!"
-        },
-        "if_wrong_multiple": {
-          "action": "formula_support",
-          "message": "Gebruik de formule: a² + b² = c²"
-        }
-      }
+      "hint": "Een kubus heeft 8 hoekpunten: 4 boven en 4 onder"
     },
     {
-      "item_id": 6,
-      "learning": {
-        "tips": [
-          "Diagonaal = schuine zijde van driehoek",
-          "Gebruik: lengte² + breedte² = diagonaal²",
-          "Neem de wortel voor het eindantwoord"
-        ],
-        "skill_description": "Diagonaal berekenen met Pythagoras",
-        "reading_strategies": [
-          "Teken de rechthoek met de diagonaal",
-          "Zie de rechthoekige driehoek"
-        ],
-        "common_errors": [
-          {
-            "type": "wortel_vergeten",
-            "description": "Vergeten de wortel te trekken",
-            "remedy": "√(a² + b²) geeft de diagonaal"
-          }
-        ]
+      "id": 6,
+      "type": "multiple_choice",
+      "theme": "schaalmodellen",
+      "question": {
+        "text": "Een speelgoedauto is gemaakt op schaal 1:20. De echte auto is 4 meter lang. Hoe lang is de speelgoedauto?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Correct!",
-          "on_first_try": "Perfect! Je kunt diagonalen berekenen!",
-          "after_hint": "Goed gedaan!"
+      "options": [
+        {
+          "text": "10 cm"
         },
-        "incorrect": {
-          "first_attempt": "Heb je de wortel getrokken?",
-          "second_attempt": "12² + 9² = ?",
-          "third_attempt": "√(144 + 81) = √225 = 15"
+        {
+          "text": "20 cm"
+        },
+        {
+          "text": "40 cm"
+        },
+        {
+          "text": "80 cm"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je rekent vlot met Pythagoras!"
-        },
-        "if_wrong_multiple": {
-          "action": "calculator_support",
-          "message": "Je mag een rekenmachine gebruiken."
-        }
-      }
+      "hint": "4 meter = 400 cm. Delen door 20: 400 ÷ 20 = 20 cm"
     },
     {
-      "item_id": 7,
-      "learning": {
-        "tips": [
-          "Kortste afstand = diagonaal (rechtstreeks)",
-          "Twee loodrechte wegen vormen een rechthoekige driehoek",
-          "Pythagoras: a² + b² = c²"
-        ],
-        "skill_description": "Pythagoras in afstandsproblemen",
-        "reading_strategies": [
-          "Teken de situatie als driehoek",
-          "Identificeer de rechte hoek"
-        ],
-        "common_errors": [
-          {
-            "type": "afstanden_optellen",
-            "description": "Afstanden bij elkaar opgeteld in plaats van Pythagoras",
-            "remedy": "Kortste = diagonaal, niet de som"
-          }
-        ]
+      "id": 7,
+      "type": "multiple_choice",
+      "theme": "complexe_oppervlakte",
+      "question": {
+        "text": "Een rechthoek is 8 meter bij 6 meter met een halve cirkel aan de korte kant (straal 3 meter). Wat is de totale oppervlakte? (gebruik π = 3,14)"
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima!",
-          "on_first_try": "Uitstekend! Je ziet de driehoek in het probleem!",
-          "after_hint": "Goed zo!"
+      "options": [
+        {
+          "text": "48 m²"
         },
-        "incorrect": {
-          "first_attempt": "Gaat het om de kortste afstand?",
-          "second_attempt": "Teken de situatie als driehoek.",
-          "third_attempt": "Gebruik Pythagoras: 400² + 300² = c²"
+        {
+          "text": "54 m²"
+        },
+        {
+          "text": "62,13 m²"
+        },
+        {
+          "text": "72 m²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je lost Pythagoras-problemen goed op!"
-        },
-        "if_wrong_multiple": {
-          "action": "visual_support",
-          "message": "Teken eerst de situatie."
-        }
-      }
+      "hint": "Rechthoek: 8×6 = 48 m². Halve cirkel: (3,14×3²)/2 = 14,13 m². Totaal: 48 + 14,13 = 62,13 m²"
     },
     {
-      "item_id": 8,
-      "learning": {
-        "tips": [
-          "Kabel = schuine zijde (hypotenusa)",
-          "Hoogte en afstand zijn de rechthoekszijden",
-          "√(8² + 6²) = √(64 + 36) = √100"
-        ],
-        "skill_description": "Pythagoras met verschillende contexten",
-        "reading_strategies": [
-          "Visualiseer de driehoek",
-          "Bepaal welke zijde gevraagd wordt"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerde_zijden",
-            "description": "Verkeerde zijden gebruiken in formule",
-            "remedy": "Kabel is c, hoogte en afstand zijn a en b"
-          }
-        ]
+      "id": 8,
+      "type": "multiple_choice",
+      "theme": "eigenschappen_figuren",
+      "question": {
+        "text": "Wat is de som van alle hoeken in een vierhoek?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Correct!",
-          "on_first_try": "Perfect! Je herkent Pythagoras-situaties!",
-          "after_hint": "Goed gedaan!"
+      "options": [
+        {
+          "text": "180°"
         },
-        "incorrect": {
-          "first_attempt": "Welke zijde is de schuine zijde?",
-          "second_attempt": "De kabel is de langste zijde.",
-          "third_attempt": "√(64 + 36) = √100 = 10"
+        {
+          "text": "270°"
+        },
+        {
+          "text": "360°"
+        },
+        {
+          "text": "450°"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je werkt nauwkeurig met Pythagoras!"
-        },
-        "if_wrong_multiple": {
-          "action": "step_by_step",
-          "message": "Laten we het stap voor stap doen."
-        }
-      }
+      "hint": "De som van alle hoeken in elke vierhoek is altijd 360°"
     },
     {
-      "item_id": 9,
-      "learning": {
-        "tips": [
-          "Schaal 1:100 betekent 1 cm = 100 cm = 1 m",
-          "Vermenigvuldig tekening met schaalgetal",
-          "Maak een overzichtelijke berekening"
-        ],
-        "skill_description": "Schaal omrekenen van plattegrond naar werkelijkheid",
-        "reading_strategies": [
-          "Identificeer de schaal",
-          "Bepaal wat je moet berekenen (tekening naar echt of andersom)"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerde_richting",
-            "description": "Delen in plaats van vermenigvuldigen of andersom",
-            "remedy": "Tekening × schaalgetal = werkelijkheid"
-          }
-        ]
+      "id": 9,
+      "type": "multiple_choice",
+      "theme": "schaalmodellen",
+      "question": {
+        "text": "Op een kaart met schaal 1:10.000 is de afstand 5 cm. Hoe groot is de echte afstand?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed!",
-          "on_first_try": "Perfect! Je begrijpt schaal goed!",
-          "after_hint": "Prima gedaan!"
+      "options": [
+        {
+          "text": "50 meter"
         },
-        "incorrect": {
-          "first_attempt": "Let op de schaal: 1:100",
-          "second_attempt": "1 cm op tekening = hoeveel in het echt?",
-          "third_attempt": "6 cm × 100 = 600 cm = 6 m"
+        {
+          "text": "500 meter"
+        },
+        {
+          "text": "5 kilometer"
+        },
+        {
+          "text": "50 kilometer"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je werkt goed met schalen!"
-        },
-        "if_wrong_multiple": {
-          "action": "explain_scale",
-          "message": "Schaal 1:100 betekent dat alles 100× kleiner is getekend."
-        }
-      }
+      "hint": "5 cm × 10.000 = 50.000 cm = 500 meter"
     },
     {
-      "item_id": 10,
-      "learning": {
-        "tips": [
-          "Van echt naar model: delen door schaalgetal",
-          "15 m = 1500 cm",
-          "1500 ÷ 50 = 30 cm"
-        ],
-        "skill_description": "Schaal omrekenen van werkelijkheid naar model",
-        "reading_strategies": [
-          "Zet alle maten in dezelfde eenheid",
-          "Bepaal of je moet delen of vermenigvuldigen"
-        ],
-        "common_errors": [
-          {
-            "type": "eenheden_niet_omgezet",
-            "description": "Meters niet omgezet naar centimeters",
-            "remedy": "Werk altijd in cm bij schaalberekeningen"
-          }
-        ]
+      "id": 10,
+      "type": "multiple_choice",
+      "theme": "complexe_oppervlakte",
+      "question": {
+        "text": "Een T-vorm bestaat uit twee rechthoeken. De eerste is 10×2 meter (verticaal). De tweede is 6×2 meter (horizontaal). Wat is de totale oppervlakte?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend!",
-          "on_first_try": "Perfect! Je kunt beide richtingen met schaal rekenen!",
-          "after_hint": "Goed zo!"
+      "options": [
+        {
+          "text": "28 m²"
         },
-        "incorrect": {
-          "first_attempt": "Moet je delen of vermenigvuldigen?",
-          "second_attempt": "Van groot naar klein = delen.",
-          "third_attempt": "1500 cm ÷ 50 = 30 cm"
+        {
+          "text": "32 m²"
+        },
+        {
+          "text": "36 m²"
+        },
+        {
+          "text": "40 m²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst schaalberekeningen!"
-        },
-        "if_wrong_multiple": {
-          "action": "formula_reminder",
-          "message": "Echt ÷ schaalgetal = model"
-        }
-      }
+      "hint": "Eerste: 10×2 = 20 m². Tweede: 6×2 = 12 m². Totaal: 20 + 12 = 32 m²"
     },
     {
-      "item_id": 11,
-      "learning": {
-        "tips": [
-          "Reken in stappen: cm → m → km",
-          "8 cm × 25.000 = 200.000 cm",
-          "200.000 cm = 2.000 m = 2 km"
-        ],
-        "skill_description": "Schaal met grote getallen en eenheden omrekenen",
-        "reading_strategies": [
-          "Noteer de berekening stap voor stap",
-          "Let op alle nullen bij grote schaalgetallen"
-        ],
-        "common_errors": [
-          {
-            "type": "nullen_vergeten",
-            "description": "Fouten met nullen bij grote getallen",
-            "remedy": "Tel de nullen zorgvuldig"
-          }
-        ]
+      "id": 11,
+      "type": "multiple_choice",
+      "theme": "eigenschappen_figuren",
+      "question": {
+        "text": "Een vierkant heeft 4 gelijke zijden van elk 5 cm. Wat is de omtrek?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima!",
-          "on_first_try": "Geweldig! Je werkt nauwkeurig met grote schaalgetallen!",
-          "after_hint": "Goed gedaan!"
+      "options": [
+        {
+          "text": "10 cm"
         },
-        "incorrect": {
-          "first_attempt": "Controleer je nullen.",
-          "second_attempt": "8 × 25.000 = ?",
-          "third_attempt": "200.000 cm = 2.000 m = 2 km"
+        {
+          "text": "15 cm"
+        },
+        {
+          "text": "20 cm"
+        },
+        {
+          "text": "25 cm"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent goed in schaalberekeningen met kaarten!"
-        },
-        "if_wrong_multiple": {
-          "action": "step_by_step",
-          "message": "Werk stap voor stap: eerst cm, dan m, dan km."
-        }
-      }
+      "hint": "Omtrek vierkant: 4 × zijde = 4 × 5 = 20 cm"
     },
     {
-      "item_id": 12,
-      "learning": {
-        "tips": [
-          "Van echt naar tekening: delen door schaalgetal",
-          "20 m = 2000 cm, 2000 ÷ 200 = 10 cm",
-          "15 m = 1500 cm, 1500 ÷ 200 = 7,5 cm"
-        ],
-        "skill_description": "Tekenafmetingen berekenen op schaal",
-        "reading_strategies": [
-          "Bereken beide afmetingen apart",
-          "Controleer of je antwoord logisch is"
-        ],
-        "common_errors": [
-          {
-            "type": "vergeten_om_te_rekenen",
-            "description": "Eén afmeting vergeten om te rekenen",
-            "remedy": "Reken beide lengte en breedte om"
-          }
-        ]
+      "id": 12,
+      "type": "multiple_choice",
+      "theme": "schaalmodellen",
+      "question": {
+        "text": "Een plattegrond heeft schaal 1:100. Een raam is op de tekening 1,5 cm breed. Hoe breed is het echte raam?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Correct!",
-          "on_first_try": "Perfect! Je kunt beide afmetingen goed berekenen!",
-          "after_hint": "Goed zo!"
+      "options": [
+        {
+          "text": "15 cm"
         },
-        "incorrect": {
-          "first_attempt": "Heb je beide afmetingen berekend?",
-          "second_attempt": "2000 ÷ 200 = ?",
-          "third_attempt": "10 cm bij 7,5 cm"
+        {
+          "text": "1,5 meter"
+        },
+        {
+          "text": "15 meter"
+        },
+        {
+          "text": "150 meter"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je werkt systematisch!"
-        },
-        "if_wrong_multiple": {
-          "action": "checklist",
-          "message": "Maak eerst beide afmetingen apart."
-        }
-      }
+      "hint": "1,5 cm × 100 = 150 cm = 1,5 meter"
     },
     {
-      "item_id": 13,
-      "learning": {
-        "tips": [
-          "Rechthoek: 80 × 60 cm²",
-          "Halve cirkel: (π × 30²) ÷ 2",
-          "Tel beide oppervlaktes op"
-        ],
-        "skill_description": "Complexe samengestelde figuren met precisie",
-        "reading_strategies": [
-          "Let op: diameter 60 cm betekent straal 30 cm",
-          "Werk netjes met π = 3,14"
-        ],
-        "common_errors": [
-          {
-            "type": "diameter_als_straal",
-            "description": "Diameter gebruikt als straal",
-            "remedy": "Straal = diameter ÷ 2"
-          }
-        ]
+      "id": 13,
+      "type": "multiple_choice",
+      "theme": "eigenschappen_figuren",
+      "question": {
+        "text": "Hoeveel ribben heeft een piramide met een vierkant grondvlak?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend!",
-          "on_first_try": "Perfect! Je werkt nauwkeurig met samengestelde figuren!",
-          "after_hint": "Goed gedaan!"
+      "options": [
+        {
+          "text": "4 ribben"
         },
-        "incorrect": {
-          "first_attempt": "Is de straal 60 of 30 cm?",
-          "second_attempt": "Diameter = 2 × straal",
-          "third_attempt": "Straal = 30 cm, dus oppervlakte halve cirkel = (π × 900) ÷ 2"
+        {
+          "text": "6 ribben"
+        },
+        {
+          "text": "8 ribben"
+        },
+        {
+          "text": "10 ribben"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst complexe oppervlaktes!"
-        },
-        "if_wrong_multiple": {
-          "action": "visual_support",
-          "message": "Teken de straal in de cirkel."
-        }
-      }
+      "hint": "4 ribben aan het grondvlak en 4 ribben naar de top = 8 ribben"
     },
     {
-      "item_id": 14,
-      "learning": {
-        "tips": [
-          "Groot deel: 120 × 80 = 9600 cm²",
-          "Klein deel: 40 × 80 = 3200 cm² (×2)",
-          "Totaal in cm², dan omrekenen naar m²"
-        ],
-        "skill_description": "Meerdere delen optellen en eenheden omrekenen",
-        "reading_strategies": [
-          "Tel eerst alle delen in cm²",
-          "10.000 cm² = 1 m²"
-        ],
-        "common_errors": [
-          {
-            "type": "eenheid_niet_omgerekend",
-            "description": "Antwoord in cm² in plaats van m²",
-            "remedy": "Deel door 10.000 voor m²"
-          }
-        ]
+      "id": 14,
+      "type": "multiple_choice",
+      "theme": "complexe_oppervlakte",
+      "question": {
+        "text": "Een plein is een vierkant van 10×10 meter met een ronde vijver (straal 2 meter) in het midden. Wat is de oppervlakte van het plein buiten de vijver? (gebruik π = 3,14)"
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima!",
-          "on_first_try": "Geweldig! Je kunt goed omrekenen tussen cm² en m²!",
-          "after_hint": "Goed zo!"
+      "options": [
+        {
+          "text": "87,44 m²"
         },
-        "incorrect": {
-          "first_attempt": "Hoeveel cm² is 1 m²?",
-          "second_attempt": "Reken eerst alles in cm².",
-          "third_attempt": "16.000 cm² ÷ 10.000 = 1,6 m²"
+        {
+          "text": "92,00 m²"
+        },
+        {
+          "text": "95,50 m²"
+        },
+        {
+          "text": "100,00 m²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je werkt goed met eenheden!"
-        },
-        "if_wrong_multiple": {
-          "action": "conversion_chart",
-          "message": "Gebruik een omrekentabel: 10.000 cm² = 1 m²"
-        }
-      }
+      "hint": "Vierkant: 10×10 = 100 m². Cirkel: 3,14×2² = 12,56 m². Rest: 100 - 12,56 = 87,44 m²"
     },
     {
-      "item_id": 15,
-      "learning": {
-        "tips": [
-          "Controleer met Pythagoras: a² + b² = c²",
-          "5² + 12² = 25 + 144 = 169 = 13²",
-          "Het klopt, dus het is een rechthoekige driehoek"
-        ],
-        "skill_description": "Pythagoras gebruiken voor controle",
-        "reading_strategies": [
-          "Identificeer de langste zijde (c)",
-          "Bereken a² + b² en c² apart",
-          "Vergelijk de uitkomsten"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerde_redenering",
-            "description": "Denken dat som van zijden moet kloppen",
-            "remedy": "Pythagoras gaat over kwadraten, niet over som"
-          }
-        ]
+      "id": 15,
+      "type": "multiple_choice",
+      "theme": "eigenschappen_figuren",
+      "question": {
+        "text": "In een driehoek zijn twee hoeken 50° en 60°. Hoe groot is de derde hoek?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Correct!",
-          "on_first_try": "Perfect! Je kunt Pythagoras gebruiken voor controle!",
-          "after_hint": "Goed gedaan!"
+      "options": [
+        {
+          "text": "60°"
         },
-        "incorrect": {
-          "first_attempt": "Probeer a² + b² = c² te controleren.",
-          "second_attempt": "5² + 12² = 25 + 144 = ?",
-          "third_attempt": "169 = 13², dus ja!"
+        {
+          "text": "70°"
+        },
+        {
+          "text": "80°"
+        },
+        {
+          "text": "90°"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je begrijpt Pythagoras uitstekend!"
-        },
-        "if_wrong_multiple": {
-          "action": "formula_reminder",
-          "message": "Pythagoras: a² + b² = c²"
-        }
-      }
+      "hint": "Som = 180°. Dus: 180° - 50° - 60° = 70°"
     },
     {
-      "item_id": 16,
-      "learning": {
-        "tips": [
-          "Pythagoras: a² + b² = c²",
-          "Gegeven: b = 15 en c = 17",
-          "a² + 15² = 17², dus a² + 225 = 289"
-        ],
-        "skill_description": "Pythagoras met ontbrekende rechthoekzijde",
-        "reading_strategies": [
-          "Bepaal welke zijde je moet berekenen",
-          "Kabel is altijd de schuine zijde (c)"
-        ],
-        "common_errors": [
-          {
-            "type": "formule_verkeerd_toepassen",
-            "description": "Verkeerde zijde in formule gebruiken",
-            "remedy": "c² - b² = a² (als je a zoekt)"
-          }
-        ]
+      "id": 16,
+      "type": "multiple_choice",
+      "theme": "schaalmodellen",
+      "question": {
+        "text": "Een fietsroute van 6 kilometer wordt op een kaart met schaal 1:20.000 getekend. Hoe lang is de route op de kaart?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend!",
-          "on_first_try": "Perfect! Je kunt alle zijden berekenen met Pythagoras!",
-          "after_hint": "Goed zo!"
+      "options": [
+        {
+          "text": "3 cm"
         },
-        "incorrect": {
-          "first_attempt": "Welke zijde moet je berekenen?",
-          "second_attempt": "a² = c² - b²",
-          "third_attempt": "a² = 289 - 225 = 64, dus a = 8"
+        {
+          "text": "15 cm"
+        },
+        {
+          "text": "30 cm"
+        },
+        {
+          "text": "60 cm"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst Pythagoras in alle vormen!"
-        },
-        "if_wrong_multiple": {
-          "action": "step_by_step",
-          "message": "Laten we de formule stap voor stap toepassen."
-        }
-      }
+      "hint": "6 km = 600.000 cm. Delen door 20.000 = 30 cm"
     },
     {
-      "item_id": 17,
-      "learning": {
-        "tips": [
-          "Schaal 1:50 betekent: × 50 voor echt",
-          "4 cm × 50 = 200 cm = 2 meter",
-          "Let op eenheden"
-        ],
-        "skill_description": "Schaal toepassen met bouwtekeningen",
-        "reading_strategies": [
-          "Identificeer of het om de hoogte of breedte gaat",
-          "Reken om naar een logische eenheid (meters)"
-        ],
-        "common_errors": [
-          {
-            "type": "antwoord_in_cm",
-            "description": "Antwoord geven in cm terwijl m gevraagd is",
-            "remedy": "200 cm = 2 meter"
-          }
-        ]
+      "id": 17,
+      "type": "multiple_choice",
+      "theme": "complexe_oppervlakte",
+      "question": {
+        "text": "Een trapezium heeft evenwijdige zijden van 6 meter en 10 meter, en een hoogte van 4 meter. Wat is de oppervlakte?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima!",
-          "on_first_try": "Geweldig! Je werkt goed met schalen!",
-          "after_hint": "Goed gedaan!"
+      "options": [
+        {
+          "text": "24 m²"
         },
-        "incorrect": {
-          "first_attempt": "Reken om naar meters.",
-          "second_attempt": "4 × 50 = 200 cm",
-          "third_attempt": "200 cm = 2 meter"
+        {
+          "text": "28 m²"
+        },
+        {
+          "text": "32 m²"
+        },
+        {
+          "text": "40 m²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je werkt nauwkeurig met schalen!"
-        },
-        "if_wrong_multiple": {
-          "action": "unit_conversion_support",
-          "message": "100 cm = 1 meter"
-        }
-      }
+      "hint": "Trapezium: ½ × (6 + 10) × 4 = ½ × 16 × 4 = 32 m²"
     },
     {
-      "item_id": 18,
-      "learning": {
-        "tips": [
-          "Van km naar cm: × 100.000",
-          "Van cm naar schaalafstand: ÷ 50.000",
-          "7,5 km = 750.000 cm ÷ 50.000 = 15 cm"
-        ],
-        "skill_description": "Schaal met kilometers en centimeters",
-        "reading_strategies": [
-          "Werk systematisch: eerst omrekenen, dan schaal",
-          "Controleer of het antwoord logisch is"
-        ],
-        "common_errors": [
-          {
-            "type": "tussensta­ppen_overslaan",
-            "description": "Direct proberen zonder om te rekenen",
-            "remedy": "Werk altijd in cm bij schaalberekeningen"
-          }
-        ]
+      "id": 18,
+      "type": "multiple_choice",
+      "theme": "eigenschappen_figuren",
+      "question": {
+        "text": "Hoeveel symmetrie-assen heeft een gelijkbenige driehoek?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Correct!",
-          "on_first_try": "Perfect! Je werkt systematisch met grote afstanden!",
-          "after_hint": "Goed zo!"
+      "options": [
+        {
+          "text": "0 symmetrie-assen"
         },
-        "incorrect": {
-          "first_attempt": "Reken eerst km om naar cm.",
-          "second_attempt": "7,5 km = 750.000 cm",
-          "third_attempt": "750.000 ÷ 50.000 = 15 cm"
+        {
+          "text": "1 symmetrie-as"
+        },
+        {
+          "text": "2 symmetrie-assen"
+        },
+        {
+          "text": "3 symmetrie-assen"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst complexe schaalberekeningen!"
-        },
-        "if_wrong_multiple": {
-          "action": "step_by_step",
-          "message": "Stap 1: km → cm, Stap 2: ÷ schaalgetal"
-        }
-      }
+      "hint": "Een gelijkbenige driehoek heeft 1 symmetrie-as: de loodlijn door de top naar de basis"
     },
     {
-      "item_id": 19,
-      "learning": {
-        "tips": [
-          "Trapezium: ½ × (basis1 + basis2) × hoogte",
-          "Tel eerst de evenwijdige zijden op",
-          "Vermenigvuldig met de hoogte en deel door 2"
-        ],
-        "skill_description": "Oppervlakte trapezium berekenen",
-        "reading_strategies": [
-          "Identificeer de evenwijdige zijden (boven en onder)",
-          "Zoek de loodrechte hoogte"
-        ],
-        "common_errors": [
-          {
-            "type": "formule_verkeerd",
-            "description": "Verkeerde formule gebruiken (rechthoek of driehoek)",
-            "remedy": "Trapezium heeft 2 evenwijdige zijden: gemiddelde × hoogte"
-          }
-        ]
+      "id": 19,
+      "type": "multiple_choice",
+      "theme": "schaalmodellen",
+      "question": {
+        "text": "Op schaal 1:25 moet een kast van 2 meter hoog getekend worden. Hoe hoog wordt de tekening?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend!",
-          "on_first_try": "Perfect! Je beheerst de trapeziumformule!",
-          "after_hint": "Goed gedaan!"
+      "options": [
+        {
+          "text": "4 cm"
         },
-        "incorrect": {
-          "first_attempt": "Welke formule gebruik je voor een trapezium?",
-          "second_attempt": "½ × (8 + 12) × 5 = ?",
-          "third_attempt": "½ × 20 × 5 = 50 m²"
+        {
+          "text": "8 cm"
+        },
+        {
+          "text": "16 cm"
+        },
+        {
+          "text": "20 cm"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst verschillende figuren!"
-        },
-        "if_wrong_multiple": {
-          "action": "formula_sheet",
-          "message": "Gebruik de formule: ½ × (b1 + b2) × h"
-        }
-      }
+      "hint": "2 meter = 200 cm. Delen door 25: 200 ÷ 25 = 8 cm"
     },
     {
-      "item_id": 20,
-      "learning": {
-        "tips": [
-          "Vierkant: 20 × 20 = 400 m²",
-          "Cirkel: π × r² (met r = 3)",
-          "Gras = vierkant - cirkel"
-        ],
-        "skill_description": "Complexe samengestelde oppervlakte-opgave",
-        "reading_strategies": [
-          "Let op: diameter 6 m betekent straal 3 m",
-          "Bepaal wat je moet berekenen (gras = rest)"
-        ],
-        "common_errors": [
-          {
-            "type": "cirkel_bij_veld_opgeteld",
-            "description": "Cirkel opgeteld in plaats van afgetrokken",
-            "remedy": "Zandbak is IN het veld, dus trek af"
-          }
-        ]
+      "id": 20,
+      "type": "multiple_choice",
+      "theme": "eigenschappen_figuren",
+      "question": {
+        "text": "Hoeveel vlakken heeft een driehoekige piramide?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Geweldig!",
-          "on_first_try": "Perfect! Je beheerst complexe samengestelde oppervlaktes!",
-          "after_hint": "Uitstekend!"
+      "options": [
+        {
+          "text": "3 vlakken"
         },
-        "incorrect": {
-          "first_attempt": "Is de zandbak erbij of eraf?",
-          "second_attempt": "Zandbak zit IN het veld.",
-          "third_attempt": "400 - 28,26 = 371,74 m²"
+        {
+          "text": "4 vlakken"
+        },
+        {
+          "text": "5 vlakken"
+        },
+        {
+          "text": "6 vlakken"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 1
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je bent klaar voor CITO-niveau opgaven!"
-        },
-        "if_wrong_multiple": {
-          "action": "visual_support",
-          "message": "Teken de situatie om te zien wat erbij en eraf gaat."
-        }
-      }
+      "hint": "Een driehoekige piramide heeft 4 vlakken: 1 driehoekig grondvlak en 3 driehoekige zijvlakken"
     }
-  ]
+  ],
+  "settings": {
+    "allow_review": true
+  }
 }

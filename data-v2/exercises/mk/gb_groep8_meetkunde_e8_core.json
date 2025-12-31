@@ -10,7 +10,6 @@
     "domain": "meetkunde",
     "slo_alignment": {
       "kerndoelen": [
-        "K28",
         "K32",
         "K33"
       ],
@@ -34,7 +33,7 @@
     {
       "id": 1,
       "type": "multiple_choice",
-      "theme": "meeteenheden_omrekenen",
+      "theme": "alle_meeteenheden",
       "question": {
         "text": "Een zwembad heeft een lengte van 2,5 kilometer, een breedte van 125 decimeter en een diepte van 200 centimeter. Hoeveel meter is de lengte, breedte en diepte samen?"
       },
@@ -56,12 +55,12 @@
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Reken alles om naar meters: 2,5 km = 2500 m, 125 dm = 12,5 m, 200 cm = 2 m. Som: 2500 + 12,5 + 2 = 2514,5"
+      "hint": "Reken alles om naar meters: 2,5 km = 2500 m, 125 dm = 12,5 m, 200 cm = 2 m. Som: 2500 + 12,5 + 2 = 2514,5 meter"
     },
     {
       "id": 2,
       "type": "multiple_choice",
-      "theme": "meeteenheden_gewicht",
+      "theme": "alle_meeteenheden",
       "question": {
         "text": "Een vrachtwagen weegt 2,5 ton. Er worden 450 kilogram appels en 75.000 gram aardappelen geladen. Wat is het totale gewicht in kilogram?"
       },
@@ -83,12 +82,12 @@
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Reken alles om: 2,5 ton = 2500 kg, 75.000 gram = 75 kg. Totaal: 2500 + 450 + 75"
+      "hint": "Reken alles om naar kg: 2,5 ton = 2500 kg, 75.000 gram = 75 kg. Totaal: 2500 + 450 + 75 = 3025 kg"
     },
     {
       "id": 3,
       "type": "multiple_choice",
-      "theme": "meeteenheden_inhoud",
+      "theme": "alle_meeteenheden",
       "question": {
         "text": "Een aquarium bevat 45 liter water. Er wordt 2500 milliliter toegevoegd en daarna 75 centiliter afgevoerd. Hoeveel liter water zit er nu in het aquarium?"
       },
@@ -115,7 +114,7 @@
     {
       "id": 4,
       "type": "multiple_choice",
-      "theme": "oppervlakte_cirkel",
+      "theme": "alle_figuren",
       "question": {
         "text": "Een ronde vijver heeft een diameter van 8 meter. Eromheen ligt een pad van 1 meter breed. Wat is de oppervlakte van het pad? (gebruik π = 3,14)"
       },
@@ -135,14 +134,14 @@
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 0
       },
-      "hint": "Grote cirkel (straal 5): π×5² = 78,5 m². Kleine cirkel (straal 4): π×4² = 50,24 m². Pad: 78,5 - 50,24"
+      "hint": "Grote cirkel (straal 5): π×5² = 78,5 m². Kleine cirkel (straal 4): π×4² = 50,24 m². Pad: 78,5 - 50,24 = 28,26 m²"
     },
     {
       "id": 5,
       "type": "multiple_choice",
-      "theme": "volume_cilinder",
+      "theme": "alle_figuren",
       "question": {
         "text": "Een cilindrische regenton heeft een diameter van 60 cm en een hoogte van 80 cm. Hoeveel liter water past erin? (gebruik π = 3,14 en 1 liter = 1000 cm³)"
       },
@@ -164,14 +163,14 @@
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Straal = 30 cm. Volume = π×r²×h = 3,14×30²×80 = 226.080 cm³ ≈ 226 liter"
+      "hint": "Straal = 30 cm. Volume = π×r²×h = 3,14×30²×80 = 3,14×900×80 = 226.080 cm³ ≈ 226 liter"
     },
     {
       "id": 6,
       "type": "multiple_choice",
-      "theme": "samengesteld_figuur",
+      "theme": "alle_figuren",
       "question": {
-        "text": "Een monument bestaat uit een kubus met ribben van 3 meter met daarop een piramide met een hoogte van 2 meter. Het grondvlak van de piramide is gelijk aan de bovenkant van de kubus. Wat is het volume van de kubus? (volume piramide = ⅓ × grondvlak × hoogte)"
+        "text": "Een monument bestaat uit een kubus met ribben van 3 meter met daarop een piramide met een hoogte van 2 meter. Wat is het volume van de kubus?"
       },
       "options": [
         {
@@ -191,39 +190,12 @@
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Volume kubus = 3³ = 27 m³. De vraag gaat alleen over de kubus!"
+      "hint": "Volume kubus = zijde³ = 3³ = 3×3×3 = 27 m³. De vraag gaat alleen over de kubus!"
     },
     {
       "id": 7,
       "type": "multiple_choice",
-      "theme": "pythagoras_toepassing",
-      "question": {
-        "text": "Een bouwkraan staat 24 meter van een gebouw. De haak hangt 32 meter boven de grond. Hoe lang is de kabel van de top van de kraan tot de haak minimaal? (De kraan is even hoog als de haak)"
-      },
-      "options": [
-        {
-          "text": "30 meter"
-        },
-        {
-          "text": "40 meter"
-        },
-        {
-          "text": "50 meter"
-        },
-        {
-          "text": "56 meter"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Pythagoras: √(24² + 32²) = √(576 + 1024) = √1600 = 40 meter"
-    },
-    {
-      "id": 8,
-      "type": "multiple_choice",
-      "theme": "schaal_berekening",
+      "theme": "CITO_niveau_1F_1S",
       "question": {
         "text": "Op een plattegrond van schaal 1:250 is een tuin 12 cm bij 8 cm getekend. Hoeveel m² is de werkelijke oppervlakte van de tuin?"
       },
@@ -248,9 +220,9 @@
       "hint": "Werkelijk: 12 cm × 250 = 3000 cm = 30 m en 8 cm × 250 = 2000 cm = 20 m. Oppervlakte: 30 × 20 = 600 m²"
     },
     {
-      "id": 9,
+      "id": 8,
       "type": "multiple_choice",
-      "theme": "omtrek_samengesteld",
+      "theme": "alle_figuren",
       "question": {
         "text": "Een atletiekbaan bestaat uit twee rechte stukken van 100 meter en twee halve cirkels met een diameter van 64 meter. Wat is de totale lengte van de baan? (gebruik π = 3,14)"
       },
@@ -272,12 +244,12 @@
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Rechte stukken: 2 × 100 = 200 m. Twee halve cirkels = 1 cirkel: π×d = 3,14×64 = 200,96 m. Totaal: 200 + 200,96"
+      "hint": "Rechte stukken: 2 × 100 = 200 m. Twee halve cirkels = 1 cirkel: π×d = 3,14×64 = 200,96 m. Totaal: 200 + 200,96 = 400,96 m"
     },
     {
-      "id": 10,
+      "id": 9,
       "type": "multiple_choice",
-      "theme": "tijd_berekening",
+      "theme": "alle_meeteenheden",
       "question": {
         "text": "Een trein vertrekt om 13:47 uur en komt aan om 16:23 uur. Onderweg staat de trein 2 keer 8 minuten stil. Hoeveel minuten was de trein rijdend?"
       },
@@ -289,10 +261,10 @@
           "text": "156 minuten"
         },
         {
-          "text": "140 minuten"
+          "text": "120 minuten"
         },
         {
-          "text": "120 minuten"
+          "text": "124 minuten"
         }
       ],
       "answer": {
@@ -302,9 +274,9 @@
       "hint": "Totale reistijd: 13:47 tot 16:23 = 2 uur 36 min = 156 min. Stiltijd: 2×8 = 16 min. Rijdend: 156 - 16 = 140 min"
     },
     {
-      "id": 11,
+      "id": 10,
       "type": "multiple_choice",
-      "theme": "volume_balk",
+      "theme": "alle_figuren",
       "question": {
         "text": "Een zwembad is 25 meter lang, 10 meter breed en gemiddeld 1,6 meter diep. Hoeveel kubieke meter water past erin?"
       },
@@ -326,12 +298,12 @@
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Volume = lengte × breedte × hoogte = 25 × 10 × 1,6 = 400 m³"
+      "hint": "Volume = lengte × breedte × diepte = 25 × 10 × 1,6 = 400 m³"
     },
     {
-      "id": 12,
+      "id": 11,
       "type": "multiple_choice",
-      "theme": "oppervlakte_driehoek",
+      "theme": "alle_figuren",
       "question": {
         "text": "Een driehoekig zeil heeft een basis van 4,5 meter en een hoogte van 6 meter. De eigenaar wil er 2 dezelfde zeilen maken. Hoeveel m² stof is er in totaal nodig?"
       },
@@ -346,7 +318,7 @@
           "text": "54 m²"
         },
         {
-          "text": "27 m²"
+          "text": "18 m²"
         }
       ],
       "answer": {
@@ -356,9 +328,9 @@
       "hint": "Oppervlakte 1 zeil: ½ × 4,5 × 6 = 13,5 m². Voor 2 zeilen: 13,5 × 2 = 27 m²"
     },
     {
-      "id": 13,
+      "id": 12,
       "type": "multiple_choice",
-      "theme": "ruimtelijk_inzicht",
+      "theme": "CITO_niveau_1F_1S",
       "question": {
         "text": "Een stapel kubussen is 3 breed, 4 lang en 5 hoog. Hoeveel kubussen zitten er in de stapel?"
       },
@@ -380,12 +352,12 @@
         "type": "single",
         "correct_index": 2
       },
-      "hint": "Aantal kubussen = breedte × lengte × hoogte = 3 × 4 × 5 = 60"
+      "hint": "Aantal kubussen = breedte × lengte × hoogte = 3 × 4 × 5 = 60 kubussen"
     },
     {
-      "id": 14,
+      "id": 13,
       "type": "multiple_choice",
-      "theme": "meeteenheden_complex",
+      "theme": "alle_meeteenheden",
       "question": {
         "text": "Een hardloper rent 15 kilometer in 75 minuten. Hoeveel meter rent hij gemiddeld per minuut?"
       },
@@ -410,9 +382,9 @@
       "hint": "15 km = 15.000 meter. Per minuut: 15.000 ÷ 75 = 200 meter"
     },
     {
-      "id": 15,
+      "id": 14,
       "type": "multiple_choice",
-      "theme": "oppervlakte_samengesteld_cito",
+      "theme": "CITO_niveau_1F_1S",
       "question": {
         "text": "Een voetbalveld is 105 meter lang en 68 meter breed. In het midden is een cirkel met een straal van 9,15 meter. Wat is de oppervlakte van het veld buiten de cirkel? (gebruik π = 3,14)"
       },
@@ -434,12 +406,12 @@
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Veld: 105 × 68 = 7140 m². Cirkel: π × 9,15² = 3,14 × 83,72 = 263,13 m². Buiten cirkel: 7140 - 263,13"
+      "hint": "Veld: 105 × 68 = 7140 m². Cirkel: π × 9,15² = 3,14 × 83,7225 ≈ 263,13 m². Buiten cirkel: 7140 - 263,13 = 6876,87 m²"
     },
     {
-      "id": 16,
+      "id": 15,
       "type": "multiple_choice",
-      "theme": "hoeken",
+      "theme": "alle_figuren",
       "question": {
         "text": "In een driehoek zijn twee hoeken 35° en 75°. Hoe groot is de derde hoek?"
       },
@@ -464,9 +436,9 @@
       "hint": "Som van hoeken in driehoek = 180°. Dus: 180° - 35° - 75° = 70°"
     },
     {
-      "id": 17,
+      "id": 16,
       "type": "multiple_choice",
-      "theme": "schaal_oppervlakte",
+      "theme": "CITO_niveau_1F_1S",
       "question": {
         "text": "Op een kaart met schaal 1:10.000 is een bos 5 cm bij 4 cm getekend. Hoeveel hectare is het bos? (1 hectare = 10.000 m²)"
       },
@@ -488,12 +460,12 @@
         "type": "single",
         "correct_index": 1
       },
-      "hint": "Echt: 5 cm × 10.000 = 50.000 cm = 500 m en 4 cm × 10.000 = 40.000 cm = 400 m. Opp: 500 × 400 = 200.000 m² = 20 hectare"
+      "hint": "Echt: 5 cm × 10.000 = 50.000 cm = 500 m en 4 cm × 10.000 = 40.000 cm = 400 m. Oppervlakte: 500 × 400 = 200.000 m² = 20 hectare"
     },
     {
-      "id": 18,
+      "id": 17,
       "type": "multiple_choice",
-      "theme": "symmetrie",
+      "theme": "alle_figuren",
       "question": {
         "text": "Hoeveel symmetrie-assen heeft een regelmatige zeshoek?"
       },
@@ -518,9 +490,9 @@
       "hint": "Een regelmatige zeshoek heeft 6 symmetrie-assen: 3 door tegenoverliggende hoekpunten en 3 door tegenoverliggende zijden"
     },
     {
-      "id": 19,
+      "id": 18,
       "type": "multiple_choice",
-      "theme": "complexe_toepassing",
+      "theme": "CITO_niveau_1F_1S",
       "question": {
         "text": "Een rechthoekig veldje van 50 bij 30 meter moet ingezaaid worden. 1 zak zaad is genoeg voor 25 m². Een zak kost €12,50. Wat kosten alle zakken samen?"
       },
@@ -545,9 +517,36 @@
       "hint": "Oppervlakte: 50 × 30 = 1500 m². Aantal zakken: 1500 ÷ 25 = 60. Kosten: 60 × €12,50 = €750"
     },
     {
+      "id": 19,
+      "type": "multiple_choice",
+      "theme": "alle_figuren",
+      "question": {
+        "text": "Een balk heeft afmetingen van 5 cm bij 3 cm bij 4 cm. Wat is het volume?"
+      },
+      "options": [
+        {
+          "text": "12 cm³"
+        },
+        {
+          "text": "20 cm³"
+        },
+        {
+          "text": "60 cm³"
+        },
+        {
+          "text": "48 cm³"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 2
+      },
+      "hint": "Volume balk = lengte × breedte × hoogte = 5 × 3 × 4 = 60 cm³"
+    },
+    {
       "id": 20,
       "type": "multiple_choice",
-      "theme": "cito_eindtoets",
+      "theme": "CITO_niveau_1F_1S",
       "question": {
         "text": "Een waterreservoir in de vorm van een cilinder heeft een diameter van 4 meter en is 3 meter hoog. Het reservoir is voor 75% gevuld. Hoeveel liter water zit erin? (gebruik π = 3,14 en 1 m³ = 1000 liter)"
       },
