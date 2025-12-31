@@ -10,8 +10,6 @@
     "domain": "meetkunde",
     "slo_alignment": {
       "kerndoelen": [
-        "K28",
-        "K32",
         "K33"
       ],
       "rekendomeinen": [
@@ -25,7 +23,7 @@
     }
   },
   "display": {
-    "title": "Meetkunde Groep 7"
+    "title": "Meetkunde Groep 7 - Eind schooljaar"
   },
   "content": {
     "instruction": "Kies het goede antwoord:"
@@ -34,7 +32,7 @@
     {
       "id": 1,
       "type": "multiple_choice",
-      "theme": "coordinaten",
+      "theme": "coördinatenstelsel_4kwadranten",
       "question": {
         "text": "Welk punt ligt op coördinaat (-3, 5) in het coördinatenstelsel?"
       },
@@ -56,12 +54,12 @@
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Negatieve x-waarde betekent naar links, positieve y-waarde betekent omhoog"
+      "hint": "Negatieve x-waarde betekent naar links, positieve y-waarde betekent omhoog."
     },
     {
       "id": 2,
       "type": "multiple_choice",
-      "theme": "coordinaten",
+      "theme": "coördinatenstelsel_4kwadranten",
       "question": {
         "text": "In welk kwadrant ligt het punt (-4, -2)?"
       },
@@ -83,12 +81,12 @@
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Beide coördinaten zijn negatief, dus links en onder de oorsprong"
+      "hint": "Beide coördinaten zijn negatief, dus links en onder de oorsprong."
     },
     {
       "id": 3,
       "type": "multiple_choice",
-      "theme": "coordinaten",
+      "theme": "coördinatenstelsel_4kwadranten",
       "question": {
         "text": "Een punt ligt op (5, -3). Als je dit punt spiegelt in de x-as, wat zijn dan de nieuwe coördinaten?"
       },
@@ -110,93 +108,12 @@
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Bij spiegeling in de x-as blijft de x-waarde gelijk, de y-waarde verandert van teken"
+      "hint": "Bij spiegeling in de x-as blijft de x-waarde gelijk, de y-waarde verandert van teken."
     },
     {
       "id": 4,
       "type": "multiple_choice",
-      "theme": "coordinaten",
-      "question": {
-        "text": "Bereken de afstand tussen punt A (2, 3) en punt B (2, -5) op de y-as."
-      },
-      "options": [
-        {
-          "text": "8 eenheden"
-        },
-        {
-          "text": "2 eenheden"
-        },
-        {
-          "text": "5 eenheden"
-        },
-        {
-          "text": "10 eenheden"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "De punten liggen op dezelfde verticale lijn. Afstand = 3 - (-5) = 3 + 5"
-    },
-    {
-      "id": 5,
-      "type": "multiple_choice",
-      "theme": "coordinaten",
-      "question": {
-        "text": "Een vierkant heeft hoekpunten op (0,0), (4,0), (4,4) en (0,4). Wat is de oppervlakte?"
-      },
-      "options": [
-        {
-          "text": "16 vierkante eenheden"
-        },
-        {
-          "text": "8 vierkante eenheden"
-        },
-        {
-          "text": "12 vierkante eenheden"
-        },
-        {
-          "text": "20 vierkante eenheden"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "De zijde van het vierkant is 4 eenheden. Oppervlakte = 4 × 4"
-    },
-    {
-      "id": 6,
-      "type": "multiple_choice",
-      "theme": "coordinaten",
-      "question": {
-        "text": "Een punt verschuift van (-2, 3) naar (1, -4). Hoeveel eenheden is het naar rechts verplaatst?"
-      },
-      "options": [
-        {
-          "text": "3 eenheden"
-        },
-        {
-          "text": "7 eenheden"
-        },
-        {
-          "text": "1 eenheid"
-        },
-        {
-          "text": "5 eenheden"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Verschuiving in x-richting: 1 - (-2) = 1 + 2"
-    },
-    {
-      "id": 7,
-      "type": "multiple_choice",
-      "theme": "coordinaten",
+      "theme": "coördinatenstelsel_4kwadranten",
       "question": {
         "text": "In welk kwadrant liggen punten met een negatieve x-coördinaat en een positieve y-coördinaat?"
       },
@@ -218,10 +135,37 @@
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Negatief x betekent links, positief y betekent boven"
+      "hint": "Negatief x betekent links, positief y betekent boven."
     },
     {
-      "id": 8,
+      "id": 5,
+      "type": "multiple_choice",
+      "theme": "coördinatenstelsel_4kwadranten",
+      "question": {
+        "text": "Bereken de afstand tussen punt A (2, 3) en punt B (2, -5) op de y-as."
+      },
+      "options": [
+        {
+          "text": "8 eenheden"
+        },
+        {
+          "text": "2 eenheden"
+        },
+        {
+          "text": "5 eenheden"
+        },
+        {
+          "text": "10 eenheden"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "De punten liggen op dezelfde verticale lijn. Afstand = 3 - (-5) = 3 + 5 = 8."
+    },
+    {
+      "id": 6,
       "type": "multiple_choice",
       "theme": "volume_cilinder",
       "question": {
@@ -248,7 +192,7 @@
       "hint": "Volume cilinder = π × r² × h = 3,14 × 4² × 10 = 3,14 × 16 × 10"
     },
     {
-      "id": 9,
+      "id": 7,
       "type": "multiple_choice",
       "theme": "volume_cilinder",
       "question": {
@@ -272,10 +216,10 @@
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Diameter = 8 cm, dus straal = 4 cm. Volume = π × 4² × 12"
+      "hint": "Diameter = 8 cm, dus straal = 4 cm. Volume = π × 4² × 12 = 3,14 × 16 × 12"
     },
     {
-      "id": 10,
+      "id": 8,
       "type": "multiple_choice",
       "theme": "volume_cilinder",
       "question": {
@@ -302,7 +246,7 @@
       "hint": "Volume = π × r² × h = 3,14 × 2,5² × 6 = 3,14 × 6,25 × 6"
     },
     {
-      "id": 11,
+      "id": 9,
       "type": "multiple_choice",
       "theme": "volume_cilinder",
       "question": {
@@ -329,7 +273,7 @@
       "hint": "Volume = π × r² × h = 3,14 × 5² × 50 = 3,14 × 25 × 50"
     },
     {
-      "id": 12,
+      "id": 10,
       "type": "multiple_choice",
       "theme": "volume_cilinder",
       "question": {
@@ -356,63 +300,9 @@
       "hint": "Straal = 5 cm. Volume = 3,14 × 5² × 15 = 1177,5 cm³ ≈ 1,18 liter"
     },
     {
-      "id": 13,
+      "id": 11,
       "type": "multiple_choice",
-      "theme": "volume_cilinder",
-      "question": {
-        "text": "Een cilindervormige vaas heeft een straal van 6 cm en een hoogte van 20 cm. Hoeveel cm³ water past erin? Gebruik π = 3,14."
-      },
-      "options": [
-        {
-          "text": "2260,8 cm³"
-        },
-        {
-          "text": "753,6 cm³"
-        },
-        {
-          "text": "1130,4 cm³"
-        },
-        {
-          "text": "4521,6 cm³"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Volume = π × r² × h = 3,14 × 6² × 20 = 3,14 × 36 × 20"
-    },
-    {
-      "id": 14,
-      "type": "multiple_choice",
-      "theme": "volume_cilinder",
-      "question": {
-        "text": "Een cilinder heeft dezelfde straal als hoogte, beide 8 cm. Wat is het volume? Gebruik π = 3,14."
-      },
-      "options": [
-        {
-          "text": "1607,68 cm³"
-        },
-        {
-          "text": "200,96 cm³"
-        },
-        {
-          "text": "803,84 cm³"
-        },
-        {
-          "text": "512 cm³"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Volume = π × r² × h = 3,14 × 8² × 8 = 3,14 × 64 × 8"
-    },
-    {
-      "id": 15,
-      "type": "multiple_choice",
-      "theme": "transformaties",
+      "theme": "spiegeling",
       "question": {
         "text": "Een driehoek met hoekpunten A(2,3), B(5,3) en C(2,6) wordt gespiegeld in de y-as. Wat zijn de nieuwe coördinaten van punt B?"
       },
@@ -434,93 +324,12 @@
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Bij spiegeling in de y-as verandert de x-coördinaat van teken, y blijft gelijk"
+      "hint": "Bij spiegeling in de y-as verandert de x-coördinaat van teken, y blijft gelijk."
     },
     {
-      "id": 16,
+      "id": 12,
       "type": "multiple_choice",
-      "theme": "transformaties",
-      "question": {
-        "text": "Een punt (4, 2) wordt 90° rechtsom geroteerd om de oorsprong. Wat zijn de nieuwe coördinaten?"
-      },
-      "options": [
-        {
-          "text": "(2, -4)"
-        },
-        {
-          "text": "(-2, 4)"
-        },
-        {
-          "text": "(-4, -2)"
-        },
-        {
-          "text": "(4, -2)"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Bij 90° rotatie rechtsom wordt (x, y) → (y, -x)"
-    },
-    {
-      "id": 17,
-      "type": "multiple_choice",
-      "theme": "transformaties",
-      "question": {
-        "text": "Een vierkant wordt 180° geroteerd om de oorsprong. Welke uitspraak is waar?"
-      },
-      "options": [
-        {
-          "text": "Alle coördinaten veranderen van teken"
-        },
-        {
-          "text": "Alleen de x-coördinaten veranderen van teken"
-        },
-        {
-          "text": "Alleen de y-coördinaten veranderen van teken"
-        },
-        {
-          "text": "De coördinaten blijven gelijk"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Bij 180° rotatie wordt (x, y) → (-x, -y)"
-    },
-    {
-      "id": 18,
-      "type": "multiple_choice",
-      "theme": "transformaties",
-      "question": {
-        "text": "Een punt (-3, 5) wordt verschoven 4 naar rechts en 2 naar beneden. Wat zijn de nieuwe coördinaten?"
-      },
-      "options": [
-        {
-          "text": "(1, 3)"
-        },
-        {
-          "text": "(-7, 7)"
-        },
-        {
-          "text": "(1, 7)"
-        },
-        {
-          "text": "(-7, 3)"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Verschuiving: x + 4 = -3 + 4, y - 2 = 5 - 2"
-    },
-    {
-      "id": 19,
-      "type": "multiple_choice",
-      "theme": "transformaties",
+      "theme": "spiegeling",
       "question": {
         "text": "Een lijn loopt van punt (0, 0) naar punt (4, 4). Deze lijn wordt gespiegeld in de x-as. Welk punt ligt nu op de gespiegelde lijn?"
       },
@@ -542,34 +351,223 @@
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Punt (4, 4) gespiegeld in de x-as wordt (4, -4)"
+      "hint": "Punt (4, 4) gespiegeld in de x-as wordt (4, -4). De y-waarde verandert van teken."
     },
     {
-      "id": 20,
+      "id": 13,
       "type": "multiple_choice",
-      "theme": "transformaties",
+      "theme": "spiegeling",
       "question": {
-        "text": "Een rechthoek met hoekpunten (1,1), (5,1), (5,3) en (1,3) wordt 270° linksom geroteerd om de oorsprong. In welk kwadrant ligt de rechthoek nu voornamelijk?"
+        "text": "Welke figuur ziet er na spiegeling in de x-as hetzelfde uit als ervoor?"
       },
       "options": [
         {
-          "text": "Kwadrant IV (rechts onder)"
+          "text": "Een figuur met horizontale symmetrie-as"
         },
         {
-          "text": "Kwadrant I (rechts boven)"
+          "text": "Elke willekeurige figuur"
         },
         {
-          "text": "Kwadrant II (links boven)"
+          "text": "Alleen een cirkel"
         },
         {
-          "text": "Kwadrant III (links onder)"
+          "text": "Geen enkele figuur"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 0
       },
-      "hint": "270° linksom = 90° rechtsom. Punten uit kwadrant I gaan naar kwadrant IV"
+      "hint": "Een figuur met een horizontale symmetrie-as ziet er gespiegeld in de x-as hetzelfde uit."
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "theme": "spiegeling",
+      "question": {
+        "text": "Punt (3, -2) wordt gespiegeld in de y-as. Wat zijn de nieuwe coördinaten?"
+      },
+      "options": [
+        {
+          "text": "(-3, -2)"
+        },
+        {
+          "text": "(3, 2)"
+        },
+        {
+          "text": "(-3, 2)"
+        },
+        {
+          "text": "(2, -3)"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Bij spiegeling in de y-as verandert alleen de x-coördinaat van teken."
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "theme": "spiegeling",
+      "question": {
+        "text": "Een vierkant met hoekpunten (1,1), (3,1), (3,3) en (1,3) wordt gespiegeld in de x-as. Wat zijn de nieuwe coördinaten van hoekpunt (3,3)?"
+      },
+      "options": [
+        {
+          "text": "(3, -3)"
+        },
+        {
+          "text": "(-3, 3)"
+        },
+        {
+          "text": "(-3, -3)"
+        },
+        {
+          "text": "(3, 3)"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Spiegeling in de x-as: x blijft gelijk, y verandert van teken. Dus (3, 3) wordt (3, -3)."
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "theme": "rotatie",
+      "question": {
+        "text": "Een punt (4, 2) wordt 90° rechtsom geroteerd om de oorsprong. Wat zijn de nieuwe coördinaten?"
+      },
+      "options": [
+        {
+          "text": "(2, -4)"
+        },
+        {
+          "text": "(-2, 4)"
+        },
+        {
+          "text": "(-4, -2)"
+        },
+        {
+          "text": "(4, -2)"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Bij 90° rotatie rechtsom wordt (x, y) → (y, -x). Dus (4, 2) → (2, -4)."
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "theme": "rotatie",
+      "question": {
+        "text": "Een vierkant wordt 180° geroteerd om de oorsprong. Welke uitspraak is waar?"
+      },
+      "options": [
+        {
+          "text": "Alle coördinaten veranderen van teken"
+        },
+        {
+          "text": "Alleen de x-coördinaten veranderen van teken"
+        },
+        {
+          "text": "Alleen de y-coördinaten veranderen van teken"
+        },
+        {
+          "text": "De coördinaten blijven gelijk"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Bij 180° rotatie wordt (x, y) → (-x, -y). Beide coördinaten veranderen van teken."
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "theme": "rotatie",
+      "question": {
+        "text": "Een punt (3, 0) wordt 90° linksom geroteerd om de oorsprong. Wat zijn de nieuwe coördinaten?"
+      },
+      "options": [
+        {
+          "text": "(0, 3)"
+        },
+        {
+          "text": "(0, -3)"
+        },
+        {
+          "text": "(-3, 0)"
+        },
+        {
+          "text": "(3, 3)"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Bij 90° rotatie linksom wordt (x, y) → (-y, x). Dus (3, 0) → (0, 3)."
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "theme": "rotatie",
+      "question": {
+        "text": "Een rechthoek in kwadrant I wordt 270° rechtsom geroteerd om de oorsprong. In welk kwadrant ligt de rechthoek nu?"
+      },
+      "options": [
+        {
+          "text": "Kwadrant II (links boven)"
+        },
+        {
+          "text": "Kwadrant I (rechts boven)"
+        },
+        {
+          "text": "Kwadrant III (links onder)"
+        },
+        {
+          "text": "Kwadrant IV (rechts onder)"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "270° rechtsom = 90° linksom. Kwadrant I (rechts boven) gaat naar kwadrant II (links boven)."
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "theme": "rotatie",
+      "question": {
+        "text": "Een punt (-2, 5) wordt 180° geroteerd om de oorsprong. Wat zijn de nieuwe coördinaten?"
+      },
+      "options": [
+        {
+          "text": "(2, -5)"
+        },
+        {
+          "text": "(-2, -5)"
+        },
+        {
+          "text": "(2, 5)"
+        },
+        {
+          "text": "(5, -2)"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Bij 180° rotatie veranderen beide coördinaten van teken: (-2, 5) → (2, -5)."
     }
   ],
   "settings": {

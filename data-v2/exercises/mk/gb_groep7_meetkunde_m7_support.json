@@ -1,956 +1,576 @@
 {
   "schema_version": "2.0.0",
-  "exercise_id": "gb_groep7_meetkunde_m7",
+  "metadata": {
+    "id": "gb_groep7_meetkunde_m7_support",
+    "type": "multiple_choice",
+    "category": "gb",
+    "grade": 7,
+    "level": "M7",
+    "language": "nl-NL",
+    "domain": "meetkunde",
+    "slo_alignment": {
+      "kerndoelen": [
+        "K33"
+      ],
+      "rekendomeinen": [
+        "meetkunde"
+      ],
+      "tussendoelen": [
+        "7R_meetkunde_m7"
+      ],
+      "referentieniveau": "1F",
+      "cognitive_level": "toepassen"
+    }
+  },
+  "display": {
+    "title": "Meetkunde Groep 7 - Ondersteuning"
+  },
+  "content": {
+    "instruction": "Kies het goede antwoord:"
+  },
   "items": [
     {
-      "item_id": 1,
-      "learning": {
-        "tips": [
-          "Oppervlakte cirkel = π × r²",
-          "Eerst de straal kwadrateren: r²",
-          "Dan vermenigvuldigen met π (3,14)"
-        ],
-        "skill_description": "Oppervlakte van een cirkel berekenen",
-        "reading_strategies": [
-          "Let op: is straal of diameter gegeven?",
-          "Onderstreep de straal in de vraag"
-        ],
-        "common_errors": [
-          {
-            "type": "formule_vergeten",
-            "description": "Vergeten om straal te kwadrateren",
-            "remedy": "Onthoud: eerst r², dan × π"
-          },
-          {
-            "type": "diameter_verwarring",
-            "description": "Diameter gebruikt in plaats van straal",
-            "remedy": "Straal = diameter ÷ 2"
-          }
-        ]
+      "id": 1,
+      "type": "multiple_choice",
+      "theme": "oppervlakte_cirkel",
+      "question": {
+        "text": "Een ronde pizza heeft een straal van 10 cm. Bereken de oppervlakte. Gebruik π = 3,14."
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend! Je beheerst de formule voor oppervlakte cirkel.",
-          "on_first_try": "Perfect! Je hebt π × r² goed toegepast.",
-          "after_hint": "Goed gedaan! De formule is nu duidelijk."
+      "options": [
+        {
+          "text": "314 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Nog niet helemaal. Gebruik de formule π × r².",
-          "second_attempt": "Denk aan: eerst r kwadrateren, dan × 3,14.",
-          "third_attempt": "Laten we stap voor stap rekenen: straal² × π."
+        {
+          "text": "31,4 cm²"
         },
-        "explanation": {
-          "text": "Oppervlakte = π × r² = 3,14 × 15² = 3,14 × 225 = 706,5 cm²"
+        {
+          "text": "62,8 cm²"
+        },
+        {
+          "text": "100 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst cirkeloppervlakte! Klaar voor meer uitdaging."
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we de formule π × r² nog eens oefenen."
-        }
-      }
+      "hint": "Oppervlakte cirkel = π × r². Dus: 3,14 × 10² = 3,14 × 100 = 314 cm²"
     },
     {
-      "item_id": 2,
-      "learning": {
-        "tips": [
-          "Als diameter gegeven is: eerst ÷ 2 voor straal",
-          "Werk in dezelfde eenheid: cm of m",
-          "Oppervlakte cirkel = π × r²"
-        ],
-        "skill_description": "Oppervlakte cirkel met eenhedenomrekening",
-        "reading_strategies": [
-          "Controleer: diameter of straal?",
-          "Let op de eenheid in het antwoord"
-        ],
-        "common_errors": [
-          {
-            "type": "eenheid_vergeten",
-            "description": "Vergeten om cm naar m om te rekenen",
-            "remedy": "120 cm = 1,2 m of 60 cm = 0,6 m"
-          },
-          {
-            "type": "diameter_gebruiken",
-            "description": "Diameter direct in formule gebruikt",
-            "remedy": "Straal = diameter ÷ 2"
-          }
-        ]
+      "id": 2,
+      "type": "multiple_choice",
+      "theme": "oppervlakte_cirkel",
+      "question": {
+        "text": "Een cirkel heeft een straal van 5 cm. Wat is de oppervlakte? Gebruik π = 3,14."
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima! Je weet diameter om te zetten naar straal.",
-          "on_first_try": "Uitstekend! Diameter gehalveerd en goed gerekend.",
-          "after_hint": "Goed! Nu snap je diameter ÷ 2 = straal."
+      "options": [
+        {
+          "text": "78,5 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Let op: diameter ÷ 2 = straal.",
-          "second_attempt": "Vergeet niet: 120 cm = 1,2 m, dus straal = 0,6 m.",
-          "third_attempt": "Stap 1: straal = 60 cm = 0,6 m. Stap 2: π × 0,6²."
+        {
+          "text": "15,7 cm²"
         },
-        "explanation": {
-          "text": "Diameter = 120 cm = 1,2 m. Straal = 0,6 m. Oppervlakte = 3,14 × 0,6² = 1,13 m²"
+        {
+          "text": "31,4 cm²"
+        },
+        {
+          "text": "25 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je kunt goed omrekenen en de formule toepassen!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst eenvoudiger cirkeloppervlaktes."
-        }
-      }
+      "hint": "Oppervlakte = π × r² = 3,14 × 5² = 3,14 × 25"
     },
     {
-      "item_id": 3,
-      "learning": {
-        "tips": [
-          "Oppervlakte cirkel = π × r²",
-          "8² = 64",
-          "π = 3,14"
-        ],
-        "skill_description": "Oppervlakte cirkel toepassen in context",
-        "reading_strategies": [
-          "Herken de cirkel in de situatie",
-          "Zoek de straal in de tekst"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij kwadrateren of vermenigvuldigen",
-            "remedy": "Controleer: 8 × 8 = 64, dan × 3,14"
-          }
-        ]
+      "id": 3,
+      "type": "multiple_choice",
+      "theme": "oppervlakte_cirkel",
+      "question": {
+        "text": "Een ronde klok heeft een straal van 8 cm. Bereken de oppervlakte. Gebruik π = 3,14."
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed gedaan! Je past de formule goed toe.",
-          "on_first_try": "Perfect! π × 8² = 200,96 m².",
-          "after_hint": "Mooi! De berekening klopt nu."
+      "options": [
+        {
+          "text": "200,96 cm²"
         },
-        "incorrect": {
-          "first_attempt": "Probeer de formule π × r² te gebruiken.",
-          "second_attempt": "Bereken eerst 8², dan × 3,14.",
-          "third_attempt": "8² = 64. Dan: 64 × 3,14 = 200,96."
+        {
+          "text": "25,12 cm²"
         },
-        "explanation": {
-          "text": "Oppervlakte = π × r² = 3,14 × 8² = 3,14 × 64 = 200,96 m²"
+        {
+          "text": "50,24 cm²"
+        },
+        {
+          "text": "64 cm²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je kunt de formule zelfstandig toepassen!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we de stappen nog eens doornemen."
-        }
-      }
+      "hint": "Oppervlakte = π × r² = 3,14 × 8² = 3,14 × 64"
     },
     {
-      "item_id": 4,
-      "learning": {
-        "tips": [
-          "Diameter = 10 m, dus straal = 5 m",
-          "Oppervlakte = π × 5²",
-          "5² = 25"
-        ],
-        "skill_description": "Van diameter naar oppervlakte",
-        "reading_strategies": [
-          "Zoek de diameter in de vraag",
-          "Bereken eerst de straal"
-        ],
-        "common_errors": [
-          {
-            "type": "diameter_gebruiken",
-            "description": "10 direct in formule gebruikt",
-            "remedy": "Straal = diameter ÷ 2 = 5 m"
-          }
-        ]
+      "id": 4,
+      "type": "multiple_choice",
+      "theme": "oppervlakte_cirkel",
+      "question": {
+        "text": "Een cirkel heeft een diameter van 6 meter. Bereken de oppervlakte. Gebruik π = 3,14."
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima! Je hebt diameter correct omgezet.",
-          "on_first_try": "Uitstekend! Diameter ÷ 2, dan π × r².",
-          "after_hint": "Goed! Nu weet je hoe diameter werkt."
+      "options": [
+        {
+          "text": "28,26 m²"
         },
-        "incorrect": {
-          "first_attempt": "Let op: straal = diameter ÷ 2.",
-          "second_attempt": "Diameter 10 m betekent straal 5 m.",
-          "third_attempt": "Straal = 5 m. Dan: π × 5² = 78,5 m²."
+        {
+          "text": "18,84 m²"
         },
-        "explanation": {
-          "text": "Straal = 10 ÷ 2 = 5 m. Oppervlakte = π × 5² = 3,14 × 25 = 78,5 m²"
+        {
+          "text": "113,04 m²"
+        },
+        {
+          "text": "36 m²"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je begrijpt het verschil tussen diameter en straal!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst met alleen straal gegeven."
-        }
-      }
+      "hint": "Diameter = 6 m, dus straal = 3 m. Oppervlakte = π × 3² = 3,14 × 9"
     },
     {
-      "item_id": 5,
-      "learning": {
-        "tips": [
-          "Straal = 3,5 m",
-          "3,5² = 12,25",
-          "Vermenigvuldig met π = 3,14"
-        ],
-        "skill_description": "Oppervlakte cirkel met kommagetallen",
-        "reading_strategies": [
-          "Let op kommagetallen",
-          "Bereken nauwkeurig"
-        ],
-        "common_errors": [
-          {
-            "type": "komma_fout",
-            "description": "Fout bij rekenen met kommagetallen",
-            "remedy": "3,5 × 3,5 = 12,25, dan × 3,14"
-          }
-        ]
+      "id": 5,
+      "type": "multiple_choice",
+      "theme": "oppervlakte_cirkel",
+      "question": {
+        "text": "Welke formule gebruik je om de oppervlakte van een cirkel te berekenen?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed! Je kunt met kommagetallen rekenen.",
-          "on_first_try": "Perfect! 3,5² × 3,14 = 38,47 m².",
-          "after_hint": "Mooi! Kommagetallen kloppen nu."
+      "options": [
+        {
+          "text": "π × r²"
         },
-        "incorrect": {
-          "first_attempt": "Let op de komma bij 3,5.",
-          "second_attempt": "Bereken: 3,5 × 3,5 = 12,25.",
-          "third_attempt": "3,5² = 12,25. Dan: 12,25 × 3,14 = 38,47."
+        {
+          "text": "π × d"
         },
-        "explanation": {
-          "text": "Oppervlakte = π × r² = 3,14 × 3,5² = 3,14 × 12,25 = 38,47 m²"
+        {
+          "text": "2 × π × r"
+        },
+        {
+          "text": "r × r"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Kommagetallen zijn geen probleem voor jou!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst met ronde getallen."
-        }
-      }
+      "hint": "De oppervlakte van een cirkel bereken je met π × straal × straal, oftewel π × r²"
     },
     {
-      "item_id": 6,
-      "learning": {
-        "tips": [
-          "Straal = 12 cm",
-          "12² = 144",
-          "144 × 3,14 = 452,16"
-        ],
-        "skill_description": "Cirkeloppervlakte met grotere getallen",
-        "reading_strategies": [
-          "Check je berekening twee keer",
-          "Gebruik een rekenmachine indien nodig"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij vermenigvuldigen",
-            "remedy": "12 × 12 = 144, dan × 3,14"
-          }
-        ]
+      "id": 6,
+      "type": "multiple_choice",
+      "theme": "diagonalen_meten",
+      "question": {
+        "text": "Hoeveel diagonalen heeft een vierkant?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend! Grote getallen zijn geen probleem.",
-          "on_first_try": "Perfect! 12² × 3,14 = 452,16 cm².",
-          "after_hint": "Goed! Je berekening klopt."
+      "options": [
+        {
+          "text": "2 diagonalen"
         },
-        "incorrect": {
-          "first_attempt": "Controleer je rekenwerk.",
-          "second_attempt": "12² = 144. Dan × 3,14.",
-          "third_attempt": "144 × 3,14 = 452,16 cm²."
+        {
+          "text": "4 diagonalen"
         },
-        "explanation": {
-          "text": "Oppervlakte = π × r² = 3,14 × 12² = 3,14 × 144 = 452,16 cm²"
+        {
+          "text": "1 diagonaal"
+        },
+        {
+          "text": "0 diagonalen"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je rekent nauwkeurig met grotere getallen!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen met kleinere getallen eerst."
-        }
-      }
+      "hint": "Een vierkant heeft twee diagonalen die even lang zijn en elkaar in het midden kruisen."
     },
     {
-      "item_id": 7,
-      "learning": {
-        "tips": [
-          "Diameter = 6 m, dus straal = 3 m",
-          "Oppervlakte = π × 3²",
-          "3² = 9"
-        ],
-        "skill_description": "Cirkeloppervlakte in praktijkcontext",
-        "reading_strategies": [
-          "Herken de cirkel (zwembad)",
-          "Zoek diameter en bereken straal"
-        ],
-        "common_errors": [
-          {
-            "type": "diameter_gebruiken",
-            "description": "6 direct gebruikt in plaats van 3",
-            "remedy": "Straal = 6 ÷ 2 = 3 m"
-          }
-        ]
+      "id": 7,
+      "type": "multiple_choice",
+      "theme": "diagonalen_meten",
+      "question": {
+        "text": "Een rechthoek is 5 cm lang en 3 cm breed. De diagonaal is ongeveer..."
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima! Je past het toe in een praktijkvoorbeeld.",
-          "on_first_try": "Uitstekend! Straal 3 m, oppervlakte 28,26 m².",
-          "after_hint": "Goed! Je begrijpt de toepassing nu."
+      "options": [
+        {
+          "text": "6 cm"
         },
-        "incorrect": {
-          "first_attempt": "Vergeet niet: straal = diameter ÷ 2.",
-          "second_attempt": "Diameter 6 m = straal 3 m.",
-          "third_attempt": "Straal = 3 m. π × 3² = 28,26 m²."
+        {
+          "text": "8 cm"
         },
-        "explanation": {
-          "text": "Straal = 6 ÷ 2 = 3 m. Oppervlakte = π × 3² = 3,14 × 9 = 28,26 m²"
+        {
+          "text": "3 cm"
+        },
+        {
+          "text": "10 cm"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je kunt cirkeloppervlakte goed toepassen!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we diameter en straal nog eens oefenen."
-        }
-      }
+      "hint": "De diagonaal is iets langer dan de langste zijde. Meet met een liniaal of schat: net iets meer dan 5 cm."
     },
     {
-      "item_id": 8,
-      "learning": {
-        "tips": [
-          "Stelling van Pythagoras: a² + b² = c²",
-          "3² + 4² = 9 + 16 = 25",
-          "√25 = 5"
-        ],
-        "skill_description": "Pythagoras toepassen (3-4-5 driehoek)",
-        "reading_strategies": [
-          "Zoek de rechthoekszijden",
-          "De schuine zijde is het langst"
-        ],
-        "common_errors": [
-          {
-            "type": "optellen_in_plaats_van_kwadrateren",
-            "description": "3 + 4 = 7 in plaats van 3² + 4²",
-            "remedy": "Kwadrateer eerst beide zijden"
-          }
-        ]
+      "id": 8,
+      "type": "multiple_choice",
+      "theme": "diagonalen_meten",
+      "question": {
+        "text": "Je meet de diagonaal van een vierkant met zijden van 6 cm. De diagonaal is ongeveer..."
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend! Je kent de stelling van Pythagoras.",
-          "on_first_try": "Perfect! 3² + 4² = 5² klopt precies.",
-          "after_hint": "Goed! De 3-4-5 driehoek is nu duidelijk."
+      "options": [
+        {
+          "text": "Ongeveer 8,5 cm"
         },
-        "incorrect": {
-          "first_attempt": "Gebruik a² + b² = c².",
-          "second_attempt": "Bereken: 3² + 4² = 9 + 16.",
-          "third_attempt": "9 + 16 = 25. √25 = 5 cm."
+        {
+          "text": "Ongeveer 6 cm"
         },
-        "explanation": {
-          "text": "a² + b² = c². Dus 3² + 4² = 9 + 16 = 25. √25 = 5 cm"
+        {
+          "text": "Ongeveer 12 cm"
+        },
+        {
+          "text": "Ongeveer 3 cm"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst Pythagoras goed!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Laten we de formule a² + b² = c² oefenen."
-        }
-      }
+      "hint": "De diagonaal van een vierkant is ongeveer 1,4 keer de zijde. Dus 6 × 1,4 ≈ 8,5 cm."
     },
     {
-      "item_id": 9,
-      "learning": {
-        "tips": [
-          "Dit is een rechthoekige driehoek",
-          "3² + h² = 5²",
-          "9 + h² = 25, dus h² = 16"
-        ],
-        "skill_description": "Pythagoras in praktijkcontext (ladder)",
-        "reading_strategies": [
-          "Teken een schets van de situatie",
-          "Herken de rechthoekige driehoek"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerde_zijde",
-            "description": "Verkeerde zijde als c² gebruikt",
-            "remedy": "De schuine zijde (ladder) is altijd c"
-          }
-        ]
+      "id": 9,
+      "type": "multiple_choice",
+      "theme": "diagonalen_meten",
+      "question": {
+        "text": "Welke uitspraak over diagonalen is waar?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima! Je past Pythagoras toe in een praktijksituatie.",
-          "on_first_try": "Uitstekend! Ladder-probleem perfect opgelost.",
-          "after_hint": "Goed! Je ziet nu de rechthoekige driehoek."
+      "options": [
+        {
+          "text": "Een diagonaal verbindt twee hoekpunten die niet naast elkaar liggen"
         },
-        "incorrect": {
-          "first_attempt": "Denk aan: 3² + h² = 5².",
-          "second_attempt": "9 + h² = 25. Los h² op.",
-          "third_attempt": "h² = 25 - 9 = 16. √16 = 4 meter."
+        {
+          "text": "Een diagonaal is altijd korter dan de zijden"
         },
-        "explanation": {
-          "text": "3² + h² = 5². Dus 9 + h² = 25. h² = 16, dus h = 4 meter"
+        {
+          "text": "Een cirkel heeft twee diagonalen"
+        },
+        {
+          "text": "Een driehoek heeft één diagonaal"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je herkent Pythagoras in praktijksituaties!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst met eenvoudige driehoeken."
-        }
-      }
+      "hint": "Een diagonaal is een lijn die twee hoekpunten verbindt die niet aan elkaar grenzen."
     },
     {
-      "item_id": 10,
-      "learning": {
-        "tips": [
-          "Diagonaal deelt rechthoek in 2 driehoeken",
-          "6² + 8² = d²",
-          "36 + 64 = 100"
-        ],
-        "skill_description": "Pythagoras voor diagonaal berekenen",
-        "reading_strategies": [
-          "Zie de rechthoek als driehoek",
-          "Lengte en breedte zijn rechthoekszijden"
-        ],
-        "common_errors": [
-          {
-            "type": "omtrek_berekenen",
-            "description": "6 + 8 = 14 in plaats van Pythagoras",
-            "remedy": "Gebruik a² + b² = c², niet a + b"
-          }
-        ]
+      "id": 10,
+      "type": "multiple_choice",
+      "theme": "diagonalen_meten",
+      "question": {
+        "text": "Een klaslokaal is 8 meter lang en 6 meter breed. Schat de diagonaal."
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed! Je begrijpt diagonalen met Pythagoras.",
-          "on_first_try": "Perfect! 6² + 8² = 10².",
-          "after_hint": "Mooi! Diagonaal berekenen lukt nu."
+      "options": [
+        {
+          "text": "Ongeveer 10 meter"
         },
-        "incorrect": {
-          "first_attempt": "Gebruik Pythagoras: 6² + 8² = d².",
-          "second_attempt": "36 + 64 = 100. √100 = ?",
-          "third_attempt": "6² + 8² = 100. √100 = 10 cm."
+        {
+          "text": "Ongeveer 14 meter"
         },
-        "explanation": {
-          "text": "Diagonaal: 6² + 8² = 36 + 64 = 100. √100 = 10 cm"
+        {
+          "text": "Ongeveer 6 meter"
+        },
+        {
+          "text": "Ongeveer 20 meter"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Diagonalen zijn geen probleem voor jou!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst basis Pythagoras."
-        }
-      }
+      "hint": "De diagonaal is langer dan 8 meter maar niet veel langer. Schat tussen 9 en 11 meter."
     },
     {
-      "item_id": 11,
-      "learning": {
-        "tips": [
-          "5² + 12² = c²",
-          "25 + 144 = 169",
-          "√169 = 13"
-        ],
-        "skill_description": "Pythagoras met 5-12-13 driehoek",
-        "reading_strategies": [
-          "Herken de Pythagorese driehoek",
-          "Controleer je antwoord"
-        ],
-        "common_errors": [
-          {
-            "type": "rekenfouten",
-            "description": "Fout bij kwadrateren of optellen",
-            "remedy": "5² = 25, 12² = 144, samen 169"
-          }
-        ]
+      "id": 11,
+      "type": "multiple_choice",
+      "theme": "hoeksoorten",
+      "question": {
+        "text": "Een hoek van 90° is een..."
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend! Je kent de 5-12-13 driehoek.",
-          "on_first_try": "Perfect! 25 + 144 = 169, √169 = 13.",
-          "after_hint": "Goed! De berekening klopt nu."
+      "options": [
+        {
+          "text": "Rechte hoek"
         },
-        "incorrect": {
-          "first_attempt": "Bereken: 5² + 12² = c².",
-          "second_attempt": "25 + 144 = 169.",
-          "third_attempt": "√169 = 13 cm."
+        {
+          "text": "Scherpe hoek"
         },
-        "explanation": {
-          "text": "5² + 12² = 25 + 144 = 169. √169 = 13 cm"
+        {
+          "text": "Stompe hoek"
+        },
+        {
+          "text": "Gestrekte hoek"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je herkent Pythagorese drietallen!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen met kleinere getallen."
-        }
-      }
+      "hint": "Een rechte hoek is precies 90°, zoals de hoeken in een vierkant of rechthoek."
     },
     {
-      "item_id": 12,
-      "learning": {
-        "tips": [
-          "TV-scherm is een rechthoek",
-          "60² + 80² = d²",
-          "3600 + 6400 = 10000"
-        ],
-        "skill_description": "Pythagoras met grote getallen",
-        "reading_strategies": [
-          "Herken de praktijktoepassing",
-          "Werk netjes met grote getallen"
-        ],
-        "common_errors": [
-          {
-            "type": "grote_getallen",
-            "description": "Fout bij rekenen met grote getallen",
-            "remedy": "Gebruik rekenmachine: 60² = 3600, 80² = 6400"
-          }
-        ]
+      "id": 12,
+      "type": "multiple_choice",
+      "theme": "hoeksoorten",
+      "question": {
+        "text": "Een hoek van 45° is een..."
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima! Grote getallen zijn geen probleem.",
-          "on_first_try": "Uitstekend! 60² + 80² = 100².",
-          "after_hint": "Goed! Je kunt met grote getallen rekenen."
+      "options": [
+        {
+          "text": "Scherpe hoek"
         },
-        "incorrect": {
-          "first_attempt": "Bereken: 60² + 80².",
-          "second_attempt": "3600 + 6400 = 10000.",
-          "third_attempt": "√10000 = 100 cm."
+        {
+          "text": "Rechte hoek"
         },
-        "explanation": {
-          "text": "60² + 80² = 3600 + 6400 = 10000. √10000 = 100 cm"
+        {
+          "text": "Stompe hoek"
+        },
+        {
+          "text": "Gestrekte hoek"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je past Pythagoras toe met grote getallen!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen met kleinere, ronde getallen."
-        }
-      }
+      "hint": "Een scherpe hoek is kleiner dan 90°. 45° is kleiner dan 90°."
     },
     {
-      "item_id": 13,
-      "learning": {
-        "tips": [
-          "6² + b² = 10²",
-          "36 + b² = 100",
-          "b² = 64, dus b = 8"
-        ],
-        "skill_description": "Rechthoekszijde berekenen met Pythagoras",
-        "reading_strategies": [
-          "Let op: nu zoek je een rechthoekszijde",
-          "c² - a² = b²"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerde_bewerking",
-            "description": "6² + 10² in plaats van 10² - 6²",
-            "remedy": "c² - a² = b². Dus: 100 - 36 = 64"
-          }
-        ]
+      "id": 13,
+      "type": "multiple_choice",
+      "theme": "hoeksoorten",
+      "question": {
+        "text": "Een hoek van 120° is een..."
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed! Je kunt een rechthoekszijde berekenen.",
-          "on_first_try": "Perfect! 10² - 6² = 8².",
-          "after_hint": "Mooi! Aftrekken werkt nu goed."
+      "options": [
+        {
+          "text": "Stompe hoek"
         },
-        "incorrect": {
-          "first_attempt": "Nu moet je aftrekken: 10² - 6².",
-          "second_attempt": "100 - 36 = 64.",
-          "third_attempt": "b² = 64, dus b = 8 cm."
+        {
+          "text": "Rechte hoek"
         },
-        "explanation": {
-          "text": "6² + b² = 10². Dus b² = 100 - 36 = 64. b = 8 cm"
+        {
+          "text": "Scherpe hoek"
+        },
+        {
+          "text": "Gestrekte hoek"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst Pythagoras in alle varianten!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst met schuine zijde berekenen."
-        }
-      }
+      "hint": "Een stompe hoek is groter dan 90° maar kleiner dan 180°. 120° past daarbij."
     },
     {
-      "item_id": 14,
-      "learning": {
-        "tips": [
-          "Controleer: 8² + 15² = 17²?",
-          "64 + 225 = 289",
-          "17² = 289, dus het klopt!"
-        ],
-        "skill_description": "Rechthoekige driehoek controleren",
-        "reading_strategies": [
-          "Test of a² + b² = c²",
-          "Langste zijde is altijd c"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerde_volgorde",
-            "description": "Verkeerde zijde als c gebruikt",
-            "remedy": "Langste zijde (17) is de schuine zijde"
-          }
-        ]
+      "id": 14,
+      "type": "multiple_choice",
+      "theme": "hoeksoorten",
+      "question": {
+        "text": "Welke hoek is scherp?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend! Je kunt een driehoek controleren.",
-          "on_first_try": "Perfect! 64 + 225 = 289 = 17².",
-          "after_hint": "Goed! Je controleert nu correct."
+      "options": [
+        {
+          "text": "30°"
         },
-        "incorrect": {
-          "first_attempt": "Controleer: 8² + 15² = 17²?",
-          "second_attempt": "64 + 225 = 289. Is dat gelijk aan 17²?",
-          "third_attempt": "17² = 289. Dus 8² + 15² = 17². Het is rechthoekig!"
+        {
+          "text": "90°"
         },
-        "explanation": {
-          "text": "8² + 15² = 64 + 225 = 289. 17² = 289. Dus ja, het is een rechthoekige driehoek."
+        {
+          "text": "100°"
+        },
+        {
+          "text": "180°"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je kunt Pythagoras ook gebruiken om te controleren!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst met eenvoudige drietallen."
-        }
-      }
+      "hint": "Scherpe hoeken zijn kleiner dan 90°. Alleen 30° is kleiner dan 90°."
     },
     {
-      "item_id": 15,
-      "learning": {
-        "tips": [
-          "Scherpe hoek: < 90°",
-          "Rechte hoek: = 90°",
-          "Stompe hoek: > 90° en < 180°"
-        ],
-        "skill_description": "Hoeksoorten herkennen",
-        "reading_strategies": [
-          "Vergelijk met 90°",
-          "Kleiner of groter?"
-        ],
-        "common_errors": [
-          {
-            "type": "definitie_vergeten",
-            "description": "Hoeksoorten door elkaar halen",
-            "remedy": "Onthoud: scherp = klein, stomp = groot"
-          }
-        ]
+      "id": 15,
+      "type": "multiple_choice",
+      "theme": "hoeksoorten",
+      "question": {
+        "text": "De hoek van een muur met de vloer is meestal..."
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed! Je kent de hoeksoorten.",
-          "on_first_try": "Perfect! 75° < 90°, dus scherp.",
-          "after_hint": "Mooi! De hoeksoorten zijn nu duidelijk."
+      "options": [
+        {
+          "text": "Een rechte hoek (90°)"
         },
-        "incorrect": {
-          "first_attempt": "Is 75° kleiner of groter dan 90°?",
-          "second_attempt": "75° < 90°, dus het is een scherpe hoek.",
-          "third_attempt": "Scherp betekent kleiner dan 90°."
+        {
+          "text": "Een scherpe hoek (< 90°)"
         },
-        "explanation": {
-          "text": "75° is kleiner dan 90°, dus het is een scherpe hoek."
+        {
+          "text": "Een stompe hoek (> 90°)"
+        },
+        {
+          "text": "Een gestrekte hoek (180°)"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je herkent hoeksoorten snel!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen de definities nog eens."
-        }
-      }
+      "hint": "Muren staan meestal recht op de vloer, wat een hoek van 90° geeft."
     },
     {
-      "item_id": 16,
-      "learning": {
-        "tips": [
-          "Stompe hoek: tussen 90° en 180°",
-          "135° > 90°",
-          "Dus stompe hoek"
-        ],
-        "skill_description": "Stompe hoeken herkennen",
-        "reading_strategies": [
-          "Check: groter dan 90°?",
-          "Maar kleiner dan 180°?"
-        ],
-        "common_errors": [
-          {
-            "type": "verwarring_gestrekt",
-            "description": "Stomp en gestrekt door elkaar",
-            "remedy": "Gestrekt is precies 180°, stomp is minder"
-          }
-        ]
+      "id": 16,
+      "type": "multiple_choice",
+      "theme": "coördinaten",
+      "question": {
+        "text": "Bij coördinaat (4, 2) is de x-coördinaat..."
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima! Je herkent stompe hoeken.",
-          "on_first_try": "Uitstekend! 135° > 90°, dus stomp.",
-          "after_hint": "Goed! Stomp is nu duidelijk."
+      "options": [
+        {
+          "text": "4"
         },
-        "incorrect": {
-          "first_attempt": "Is 135° groter of kleiner dan 90°?",
-          "second_attempt": "135° > 90°, dus stompe hoek.",
-          "third_attempt": "Stomp betekent tussen 90° en 180°."
+        {
+          "text": "2"
         },
-        "explanation": {
-          "text": "135° is groter dan 90° maar kleiner dan 180°, dus een stompe hoek."
+        {
+          "text": "6"
+        },
+        {
+          "text": "8"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Stompe hoeken zijn geen probleem!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen met duidelijkere voorbeelden."
-        }
-      }
+      "hint": "Bij (x, y) is het eerste getal altijd de x-coördinaat. Dus bij (4, 2) is x = 4."
     },
     {
-      "item_id": 17,
-      "learning": {
-        "tips": [
-          "Twee hoeken vormen samen 90°",
-          "90° - 35° = 55°",
-          "Complementaire hoeken"
-        ],
-        "skill_description": "Hoeken berekenen die samen 90° vormen",
-        "reading_strategies": [
-          "Zoek de gegeven hoek",
-          "Trek af van 90°"
-        ],
-        "common_errors": [
-          {
-            "type": "optellen",
-            "description": "90 + 35 in plaats van 90 - 35",
-            "remedy": "Als ze samen 90° zijn: aftrekken"
-          }
-        ]
+      "id": 17,
+      "type": "multiple_choice",
+      "theme": "coördinaten",
+      "question": {
+        "text": "Bij coördinaat (3, 7) is de y-coördinaat..."
       },
-      "feedback": {
-        "correct": {
-          "default": "Goed! Je kunt complementaire hoeken berekenen.",
-          "on_first_try": "Perfect! 90° - 35° = 55°.",
-          "after_hint": "Mooi! Aftrekken werkt nu goed."
+      "options": [
+        {
+          "text": "7"
         },
-        "incorrect": {
-          "first_attempt": "Trek 35° af van 90°.",
-          "second_attempt": "90° - 35° = ?",
-          "third_attempt": "90° - 35° = 55°."
+        {
+          "text": "3"
         },
-        "explanation": {
-          "text": "Samen 90°. De andere hoek = 90° - 35° = 55°"
+        {
+          "text": "10"
+        },
+        {
+          "text": "4"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst complementaire hoeken!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst eenvoudige aftrekkingen."
-        }
-      }
+      "hint": "Bij (x, y) is het tweede getal altijd de y-coördinaat. Dus bij (3, 7) is y = 7."
     },
     {
-      "item_id": 18,
-      "learning": {
-        "tips": [
-          "Som hoeken in driehoek = 180°",
-          "180° - 45° - 65° = 70°",
-          "Drie hoeken tellen op tot 180°"
-        ],
-        "skill_description": "Derde hoek in driehoek berekenen",
-        "reading_strategies": [
-          "Onthoud: driehoek = 180°",
-          "Tel de gegeven hoeken op"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerde_som",
-            "description": "360° gebruikt in plaats van 180°",
-            "remedy": "Driehoek heeft altijd 180°"
-          }
-        ]
+      "id": 18,
+      "type": "multiple_choice",
+      "theme": "coördinaten",
+      "question": {
+        "text": "Punt A heeft coördinaat (2, 3). Welke richting moet je om naar punt (5, 3) te gaan?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend! Je weet dat driehoek = 180°.",
-          "on_first_try": "Perfect! 180° - 45° - 65° = 70°.",
-          "after_hint": "Goed! De driehoeksregel is duidelijk."
+      "options": [
+        {
+          "text": "3 naar rechts"
         },
-        "incorrect": {
-          "first_attempt": "Driehoek heeft altijd 180°. Trek 45° en 65° af.",
-          "second_attempt": "180° - 45° - 65° = ?",
-          "third_attempt": "180° - 45° - 65° = 70°."
+        {
+          "text": "3 naar links"
         },
-        "explanation": {
-          "text": "Som hoeken driehoek = 180°. Dus 180° - 45° - 65° = 70°"
+        {
+          "text": "3 omhoog"
+        },
+        {
+          "text": "3 omlaag"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je beheerst de driehoeksregel!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Onthoud: driehoek = altijd 180°."
-        }
-      }
+      "hint": "De x-coördinaat verandert van 2 naar 5, dat is +3. Naar rechts betekent x verhogen."
     },
     {
-      "item_id": 19,
-      "learning": {
-        "tips": [
-          "Gelijkzijdige driehoek = 3 gelijke hoeken",
-          "180° ÷ 3 = 60°",
-          "Elk hoek is 60°"
-        ],
-        "skill_description": "Gelijkzijdige driehoek",
-        "reading_strategies": [
-          "Drie gelijke hoeken betekent delen door 3",
-          "Totaal blijft 180°"
-        ],
-        "common_errors": [
-          {
-            "type": "verkeerd_delen",
-            "description": "360° ÷ 3 in plaats van 180° ÷ 3",
-            "remedy": "Driehoek = 180°, niet 360°"
-          }
-        ]
+      "id": 19,
+      "type": "multiple_choice",
+      "theme": "coördinaten",
+      "question": {
+        "text": "De oorsprong in een coördinatenstelsel heeft coördinaat..."
       },
-      "feedback": {
-        "correct": {
-          "default": "Prima! Je kent gelijkzijdige driehoeken.",
-          "on_first_try": "Uitstekend! 180° ÷ 3 = 60°.",
-          "after_hint": "Goed! Gelijk delen werkt nu."
+      "options": [
+        {
+          "text": "(0, 0)"
         },
-        "incorrect": {
-          "first_attempt": "Deel 180° door 3.",
-          "second_attempt": "180° ÷ 3 = ?",
-          "third_attempt": "180° ÷ 3 = 60°. Elke hoek is 60°."
+        {
+          "text": "(1, 1)"
         },
-        "explanation": {
-          "text": "3 gelijke hoeken in driehoek: 180° ÷ 3 = 60°"
+        {
+          "text": "(0, 1)"
+        },
+        {
+          "text": "(1, 0)"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Gelijkzijdige driehoeken zijn duidelijk!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Oefen eerst met ongelijke hoeken."
-        }
-      }
+      "hint": "De oorsprong is het punt waar de x-as en y-as elkaar snijden, op (0, 0)."
     },
     {
-      "item_id": 20,
-      "learning": {
-        "tips": [
-          "Stompe hoek: tussen 90° en 180°",
-          "Niet kleiner dan 90°",
-          "Niet gelijk aan 180°"
-        ],
-        "skill_description": "Definitie stompe hoek begrijpen",
-        "reading_strategies": [
-          "Lees alle opties zorgvuldig",
-          "Denk aan de grenzen: 90° en 180°"
-        ],
-        "common_errors": [
-          {
-            "type": "definitie_onduidelijk",
-            "description": "Grenzen niet duidelijk",
-            "remedy": "Stomp: meer dan 90°, minder dan 180°"
-          }
-        ]
+      "id": 20,
+      "type": "multiple_choice",
+      "theme": "coördinaten",
+      "question": {
+        "text": "Je tekent punten (1, 2), (1, 5), (4, 5) en (4, 2). Welke figuur maak je?"
       },
-      "feedback": {
-        "correct": {
-          "default": "Uitstekend! Je begrijpt de definitie van stompe hoek.",
-          "on_first_try": "Perfect! Stomp is tussen 90° en 180°.",
-          "after_hint": "Goed! De definitie is nu helder."
+      "options": [
+        {
+          "text": "Een rechthoek"
         },
-        "incorrect": {
-          "first_attempt": "Denk aan: stomp betekent groter dan recht.",
-          "second_attempt": "Stompe hoek is groter dan 90° maar niet 180°.",
-          "third_attempt": "Stomp: tussen 90° en 180°."
+        {
+          "text": "Een driehoek"
         },
-        "explanation": {
-          "text": "Een stompe hoek is groter dan 90° en kleiner dan 180°"
+        {
+          "text": "Een cirkel"
+        },
+        {
+          "text": "Een lijn"
         }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
       },
-      "adaptive": {
-        "if_correct_quickly": {
-          "action": "increase_difficulty",
-          "message": "Je kent alle hoeksoorten perfect!"
-        },
-        "if_wrong_multiple": {
-          "action": "decrease_difficulty",
-          "message": "Bestudeer de definities nog eens goed."
-        }
-      }
+      "hint": "Teken de vier punten en verbind ze. Je krijgt een rechthoek van 3 bij 3 eenheden."
     }
-  ]
+  ],
+  "settings": {
+    "allow_review": true
+  }
 }
