@@ -18,16 +18,14 @@
         "meten"
       ],
       "tussendoelen": [
-        "3MM4_meter_centimeter",
-        "3MM5_vlakke_figuren",
-        "3MM6_tijd_kwartieren"
+        "3MM_meetkunde_e3"
       ],
       "referentieniveau": "1F",
       "cognitive_level": "toepassen"
     }
   },
   "display": {
-    "title": "Meetkunde Groep 3 - Vormen & Meten"
+    "title": "Meetkunde Groep 3"
   },
   "content": {
     "instruction": "Kies het goede antwoord:"
@@ -36,19 +34,154 @@
     {
       "id": 1,
       "type": "multiple_choice",
-      "theme": "meter_centimeter",
+      "theme": "lengte_omrekenen",
       "question": {
-        "text": "Een tafel is 150 cm lang. Hoeveel meter en centimeter is dat?"
+        "text": "1 meter is hoeveel centimeter?"
       },
       "options": [
         {
-          "text": "1 m en 5 cm"
+          "text": "100 cm"
         },
+        {
+          "text": "110 cm"
+        },
+        {
+          "text": "90 cm"
+        },
+        {
+          "text": "10 cm"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "1 meter = 100 cm, dus 1 × 100 = 100 cm"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "theme": "lengte_omrekenen",
+      "question": {
+        "text": "2 meter is hoeveel centimeter?"
+      },
+      "options": [
+        {
+          "text": "200 cm"
+        },
+        {
+          "text": "210 cm"
+        },
+        {
+          "text": "190 cm"
+        },
+        {
+          "text": "20 cm"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "1 meter = 100 cm, dus 2 × 100 = 200 cm"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "theme": "lengte_omrekenen",
+      "question": {
+        "text": "3 meter is hoeveel centimeter?"
+      },
+      "options": [
+        {
+          "text": "300 cm"
+        },
+        {
+          "text": "310 cm"
+        },
+        {
+          "text": "290 cm"
+        },
+        {
+          "text": "30 cm"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "1 meter = 100 cm, dus 3 × 100 = 300 cm"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "theme": "lengte_omrekenen",
+      "question": {
+        "text": "4 meter is hoeveel centimeter?"
+      },
+      "options": [
+        {
+          "text": "400 cm"
+        },
+        {
+          "text": "410 cm"
+        },
+        {
+          "text": "390 cm"
+        },
+        {
+          "text": "40 cm"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "1 meter = 100 cm, dus 4 × 100 = 400 cm"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "theme": "lengte_omrekenen",
+      "question": {
+        "text": "5 meter is hoeveel centimeter?"
+      },
+      "options": [
+        {
+          "text": "500 cm"
+        },
+        {
+          "text": "510 cm"
+        },
+        {
+          "text": "490 cm"
+        },
+        {
+          "text": "50 cm"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "1 meter = 100 cm, dus 5 × 100 = 500 cm"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "theme": "lengte_omrekenen",
+      "question": {
+        "text": "150 cm is hoeveel meter en centimeter?"
+      },
+      "options": [
         {
           "text": "1 m en 50 cm"
         },
         {
-          "text": "15 m"
+          "text": "2 m en 50 cm"
+        },
+        {
+          "text": "1 m en 60 cm"
         },
         {
           "text": "150 m"
@@ -56,269 +189,323 @@
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 0
       },
-      "hint": "100 cm = 1 meter, dus 150 cm = 100 cm + 50 cm = 1 m en 50 cm"
-    },
-    {
-      "id": 2,
-      "type": "multiple_choice",
-      "theme": "meter_centimeter",
-      "question": {
-        "text": "Hoeveel centimeter is 2 meter?"
-      },
-      "options": [
-        {
-          "text": "20 cm"
-        },
-        {
-          "text": "100 cm"
-        },
-        {
-          "text": "200 cm"
-        },
-        {
-          "text": "2000 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1 meter = 100 cm, dus 2 meter = 2 × 100 cm = 200 cm"
-    },
-    {
-      "id": 3,
-      "type": "multiple_choice",
-      "theme": "vlakke_figuren",
-      "question": {
-        "text": "Welke figuur heeft 3 hoeken?"
-      },
-      "options": [
-        {
-          "text": "vierkant"
-        },
-        {
-          "text": "driehoek"
-        },
-        {
-          "text": "cirkel"
-        },
-        {
-          "text": "rechthoek"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Drie-hoek = 3 hoeken"
-    },
-    {
-      "id": 4,
-      "type": "multiple_choice",
-      "theme": "vlakke_figuren",
-      "question": {
-        "text": "Een vierkant heeft 4 zijden die allemaal even lang zijn. Hoeveel hoeken heeft een vierkant?"
-      },
-      "options": [
-        {
-          "text": "2"
-        },
-        {
-          "text": "3"
-        },
-        {
-          "text": "4"
-        },
-        {
-          "text": "5"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Een vierkant heeft evenveel hoeken als zijden"
-    },
-    {
-      "id": 5,
-      "type": "multiple_choice",
-      "theme": "tijd_kwartieren",
-      "question": {
-        "text": "Het is kwart over 3. Hoe laat is het op de digitale klok?"
-      },
-      "options": [
-        {
-          "text": "2:45"
-        },
-        {
-          "text": "3:15"
-        },
-        {
-          "text": "3:30"
-        },
-        {
-          "text": "3:45"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Kwart over 3 = 3 uur en 15 minuten = 3:15"
-    },
-    {
-      "id": 6,
-      "type": "multiple_choice",
-      "theme": "tijd_kwartieren",
-      "question": {
-        "text": "De klok wijst 8:45 aan. Hoe zeg je dat?"
-      },
-      "options": [
-        {
-          "text": "kwart over acht"
-        },
-        {
-          "text": "half negen"
-        },
-        {
-          "text": "kwart voor negen"
-        },
-        {
-          "text": "negen uur"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "8:45 = nog 15 minuten tot 9 uur = kwart voor negen"
+      "hint": "100 cm = 1 m, dus 150 cm = 1 m en 50 cm"
     },
     {
       "id": 7,
       "type": "multiple_choice",
-      "theme": "meter_centimeter",
+      "theme": "lengte_omrekenen",
       "question": {
-        "text": "Je meet de lengte van een klas. Gebruik je meters of centimeters?"
+        "text": "230 cm is hoeveel meter en centimeter?"
       },
       "options": [
         {
-          "text": "centimeters"
+          "text": "2 m en 30 cm"
         },
         {
-          "text": "meters"
+          "text": "3 m en 30 cm"
         },
         {
-          "text": "millimeters"
+          "text": "2 m en 40 cm"
         },
         {
-          "text": "kilometers"
+          "text": "230 m"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 0
       },
-      "hint": "Voor grote dingen (klas, kamer) gebruik je meters"
+      "hint": "100 cm = 1 m, dus 230 cm = 2 m en 30 cm"
     },
     {
       "id": 8,
       "type": "multiple_choice",
-      "theme": "vlakke_figuren",
+      "theme": "lengte_omrekenen",
       "question": {
-        "text": "Welke figuur heeft GEEN hoeken?"
+        "text": "175 cm is hoeveel meter en centimeter?"
       },
       "options": [
         {
-          "text": "vierkant"
+          "text": "1 m en 75 cm"
         },
         {
-          "text": "driehoek"
+          "text": "2 m en 75 cm"
         },
         {
-          "text": "cirkel"
+          "text": "1 m en 85 cm"
         },
         {
-          "text": "rechthoek"
+          "text": "175 m"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 2
+        "correct_index": 0
       },
-      "hint": "Een cirkel is rond en heeft geen hoeken"
+      "hint": "100 cm = 1 m, dus 175 cm = 1 m en 75 cm"
     },
     {
       "id": 9,
       "type": "multiple_choice",
-      "theme": "tijd_kwartieren",
+      "theme": "lengte_omrekenen",
       "question": {
-        "text": "Van 2:00 naar 2:15 is..."
+        "text": "280 cm is hoeveel meter en centimeter?"
       },
       "options": [
         {
-          "text": "een half uur"
+          "text": "2 m en 80 cm"
         },
         {
-          "text": "een kwartier"
+          "text": "3 m en 80 cm"
         },
         {
-          "text": "een uur"
+          "text": "2 m en 90 cm"
         },
         {
-          "text": "5 minuten"
+          "text": "280 m"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 0
       },
-      "hint": "Een kwartier = 15 minuten"
+      "hint": "100 cm = 1 m, dus 280 cm = 2 m en 80 cm"
     },
     {
       "id": 10,
       "type": "multiple_choice",
-      "theme": "meter_centimeter",
+      "theme": "lengte_omrekenen",
       "question": {
-        "text": "1 meter en 25 cm = ? centimeter"
+        "text": "310 cm is hoeveel meter en centimeter?"
       },
       "options": [
         {
-          "text": "25 cm"
+          "text": "3 m en 10 cm"
         },
         {
-          "text": "100 cm"
+          "text": "4 m en 10 cm"
         },
         {
-          "text": "125 cm"
+          "text": "3 m en 20 cm"
         },
         {
-          "text": "225 cm"
+          "text": "310 m"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 2
+        "correct_index": 0
       },
-      "hint": "1 meter = 100 cm, dus 100 cm + 25 cm = 125 cm"
+      "hint": "100 cm = 1 m, dus 310 cm = 3 m en 10 cm"
     },
     {
       "id": 11,
       "type": "multiple_choice",
-      "theme": "vlakke_figuren",
+      "theme": "lengte_omrekenen",
       "question": {
-        "text": "Een rechthoek heeft 4 hoeken. Hoeveel zijden heeft een rechthoek?"
+        "text": "265 cm is hoeveel meter en centimeter?"
       },
       "options": [
         {
-          "text": "2"
+          "text": "2 m en 65 cm"
+        },
+        {
+          "text": "3 m en 65 cm"
+        },
+        {
+          "text": "2 m en 75 cm"
+        },
+        {
+          "text": "265 m"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "100 cm = 1 m, dus 265 cm = 2 m en 65 cm"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "theme": "lengte_omrekenen",
+      "question": {
+        "text": "145 cm is hoeveel meter en centimeter?"
+      },
+      "options": [
+        {
+          "text": "1 m en 45 cm"
+        },
+        {
+          "text": "2 m en 45 cm"
+        },
+        {
+          "text": "1 m en 55 cm"
+        },
+        {
+          "text": "145 m"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "100 cm = 1 m, dus 145 cm = 1 m en 45 cm"
+    },
+    {
+      "id": 13,
+      "type": "multiple_choice",
+      "theme": "lengte_omrekenen",
+      "question": {
+        "text": "190 cm is hoeveel meter en centimeter?"
+      },
+      "options": [
+        {
+          "text": "1 m en 90 cm"
+        },
+        {
+          "text": "2 m en 90 cm"
+        },
+        {
+          "text": "1 m en 100 cm"
+        },
+        {
+          "text": "190 m"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "100 cm = 1 m, dus 190 cm = 1 m en 90 cm"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "theme": "lengte_omrekenen",
+      "question": {
+        "text": "320 cm is hoeveel meter en centimeter?"
+      },
+      "options": [
+        {
+          "text": "3 m en 20 cm"
+        },
+        {
+          "text": "4 m en 20 cm"
+        },
+        {
+          "text": "3 m en 30 cm"
+        },
+        {
+          "text": "320 m"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "100 cm = 1 m, dus 320 cm = 3 m en 20 cm"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "theme": "lengte_omrekenen",
+      "question": {
+        "text": "255 cm is hoeveel meter en centimeter?"
+      },
+      "options": [
+        {
+          "text": "2 m en 55 cm"
+        },
+        {
+          "text": "3 m en 55 cm"
+        },
+        {
+          "text": "2 m en 65 cm"
+        },
+        {
+          "text": "255 m"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "100 cm = 1 m, dus 255 cm = 2 m en 55 cm"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "theme": "lengte_omrekenen",
+      "question": {
+        "text": "185 cm is hoeveel meter en centimeter?"
+      },
+      "options": [
+        {
+          "text": "1 m en 85 cm"
+        },
+        {
+          "text": "2 m en 85 cm"
+        },
+        {
+          "text": "1 m en 95 cm"
+        },
+        {
+          "text": "185 m"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "100 cm = 1 m, dus 185 cm = 1 m en 85 cm"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "theme": "lengte_omrekenen",
+      "question": {
+        "text": "295 cm is hoeveel meter en centimeter?"
+      },
+      "options": [
+        {
+          "text": "2 m en 95 cm"
+        },
+        {
+          "text": "3 m en 95 cm"
+        },
+        {
+          "text": "2 m en 105 cm"
+        },
+        {
+          "text": "295 m"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "100 cm = 1 m, dus 295 cm = 2 m en 95 cm"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "theme": "vlakke_figuren",
+      "question": {
+        "text": "Hoeveel hoeken heeft een vierkant?"
+      },
+      "options": [
+        {
+          "text": "4"
         },
         {
           "text": "3"
         },
         {
-          "text": "4"
+          "text": "5"
         },
         {
           "text": "6"
@@ -326,525 +513,12 @@
       ],
       "answer": {
         "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Tel de zijden van een rechthoek: boven, onder, links, rechts = 4 zijden"
-    },
-    {
-      "id": 12,
-      "type": "multiple_choice",
-      "theme": "tijd_kwartieren",
-      "question": {
-        "text": "Het is 5:30. Een kwartier later is het..."
-      },
-      "options": [
-        {
-          "text": "5:15"
-        },
-        {
-          "text": "5:45"
-        },
-        {
-          "text": "6:00"
-        },
-        {
-          "text": "6:30"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Tel 15 minuten bij 5:30 op: 5:30 + 15 = 5:45"
-    },
-    {
-      "id": 13,
-      "type": "multiple_choice",
-      "theme": "meter_centimeter",
-      "question": {
-        "text": "Een deur is ongeveer 2 meter hoog. Is dat meer of minder dan 150 cm?"
-      },
-      "options": [
-        {
-          "text": "meer"
-        },
-        {
-          "text": "minder"
-        },
-        {
-          "text": "even veel"
-        },
-        {
-          "text": "kan ik niet weten"
-        }
-      ],
-      "answer": {
-        "type": "single",
         "correct_index": 0
       },
-      "hint": "2 meter = 200 cm. 200 cm is meer dan 150 cm"
-    },
-    {
-      "id": 14,
-      "type": "multiple_choice",
-      "theme": "vlakke_figuren",
-      "question": {
-        "text": "Wat is het verschil tussen een vierkant en een rechthoek?"
-      },
-      "options": [
-        {
-          "text": "Een vierkant heeft 3 hoeken, een rechthoek heeft 4 hoeken"
-        },
-        {
-          "text": "Bij een vierkant zijn alle zijden even lang"
-        },
-        {
-          "text": "Een rechthoek heeft geen hoeken"
-        },
-        {
-          "text": "Er is geen verschil"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Bij een vierkant zijn alle 4 zijden even lang, bij een rechthoek niet"
-    },
-    {
-      "id": 15,
-      "type": "multiple_choice",
-      "theme": "tijd_kwartieren",
-      "question": {
-        "text": "Kwart voor 7 is hetzelfde als..."
-      },
-      "options": [
-        {
-          "text": "6:15"
-        },
-        {
-          "text": "6:30"
-        },
-        {
-          "text": "6:45"
-        },
-        {
-          "text": "7:15"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Kwart voor 7 = nog 15 minuten tot 7 uur = 6:45"
-    },
-    {
-      "id": 16,
-      "type": "multiple_choice",
-      "theme": "vlakke_figuren",
-      "question": {
-        "text": "Welke vorm heeft een voetbal?"
-      },
-      "options": [
-        {
-          "text": "driehoek"
-        },
-        {
-          "text": "vierkant"
-        },
-        {
-          "text": "cirkel"
-        },
-        {
-          "text": "rechthoek"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Een voetbal is rond, dus een cirkel (plat gezien)"
-    },
-    {
-      "id": 17,
-      "type": "multiple_choice",
-      "theme": "meter_centimeter",
-      "question": {
-        "text": "3 meter = ? centimeter"
-      },
-      "options": [
-        {
-          "text": "30 cm"
-        },
-        {
-          "text": "100 cm"
-        },
-        {
-          "text": "200 cm"
-        },
-        {
-          "text": "300 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 3
-      },
-      "hint": "1 meter = 100 cm, dus 3 meter = 3 × 100 = 300 cm"
-    },
-    {
-      "id": 18,
-      "type": "multiple_choice",
-      "theme": "tijd_kwartieren",
-      "question": {
-        "text": "De les begint om kwart over 9. De les duurt tot half 10. Hoelang duurt de les?"
-      },
-      "options": [
-        {
-          "text": "15 minuten"
-        },
-        {
-          "text": "30 minuten"
-        },
-        {
-          "text": "45 minuten"
-        },
-        {
-          "text": "60 minuten"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Van 9:15 naar 9:30 = 15 minuten"
+      "hint": "Een vierkant heeft 4 hoeken"
     },
     {
       "id": 19,
-      "type": "multiple_choice",
-      "theme": "vlakke_figuren",
-      "question": {
-        "text": "Je tekent een figuur met 4 zijden die allemaal even lang zijn en 4 hoeken. Welke figuur teken je?"
-      },
-      "options": [
-        {
-          "text": "driehoek"
-        },
-        {
-          "text": "vierkant"
-        },
-        {
-          "text": "cirkel"
-        },
-        {
-          "text": "rechthoek"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "4 zijden die allemaal even lang zijn = vierkant"
-    },
-    {
-      "id": 20,
-      "type": "multiple_choice",
-      "theme": "meter_centimeter",
-      "question": {
-        "text": "250 cm is hetzelfde als..."
-      },
-      "options": [
-        {
-          "text": "2 m en 5 cm"
-        },
-        {
-          "text": "2 m en 50 cm"
-        },
-        {
-          "text": "25 m"
-        },
-        {
-          "text": "250 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "250 cm = 200 cm + 50 cm = 2 m + 50 cm"
-    },
-    {
-      "id": 21,
-      "type": "multiple_choice",
-      "theme": "meter_centimeter",
-      "question": {
-        "text": "Een deur is 200 cm hoog. Hoeveel meter is dat?"
-      },
-      "options": [
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "2 m"
-        },
-        {
-          "text": "20 m"
-        },
-        {
-          "text": "200 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "200 cm = 2 × 100 cm = 2 meter"
-    },
-    {
-      "id": 22,
-      "type": "multiple_choice",
-      "theme": "meter_centimeter",
-      "question": {
-        "text": "3 meter is hoeveel centimeter?"
-      },
-      "options": [
-        {
-          "text": "30 cm"
-        },
-        {
-          "text": "100 cm"
-        },
-        {
-          "text": "300 cm"
-        },
-        {
-          "text": "3000 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "3 × 100 cm = 300 cm"
-    },
-    {
-      "id": 23,
-      "type": "multiple_choice",
-      "theme": "meter_centimeter",
-      "question": {
-        "text": "Een bank is 2 meter en 30 cm lang. Hoeveel cm is dat samen?"
-      },
-      "options": [
-        {
-          "text": "32 cm"
-        },
-        {
-          "text": "230 cm"
-        },
-        {
-          "text": "203 cm"
-        },
-        {
-          "text": "2030 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "2 m = 200 cm, dus 200 + 30 = 230 cm"
-    },
-    {
-      "id": 24,
-      "type": "multiple_choice",
-      "theme": "meter_centimeter",
-      "question": {
-        "text": "Hoeveel meter is 100 cm?"
-      },
-      "options": [
-        {
-          "text": "10 m"
-        },
-        {
-          "text": "1 m"
-        },
-        {
-          "text": "0,1 m"
-        },
-        {
-          "text": "100 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "100 cm = 1 meter"
-    },
-    {
-      "id": 25,
-      "type": "multiple_choice",
-      "theme": "meter_centimeter",
-      "question": {
-        "text": "Een touw is 250 cm. Dat is... meter en... cm"
-      },
-      "options": [
-        {
-          "text": "2 m en 5 cm"
-        },
-        {
-          "text": "2 m en 50 cm"
-        },
-        {
-          "text": "25 m"
-        },
-        {
-          "text": "250 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "250 cm = 200 cm + 50 cm = 2 m en 50 cm"
-    },
-    {
-      "id": 26,
-      "type": "multiple_choice",
-      "theme": "meter_centimeter",
-      "question": {
-        "text": "4 meter = ? centimeter"
-      },
-      "options": [
-        {
-          "text": "40 cm"
-        },
-        {
-          "text": "400 cm"
-        },
-        {
-          "text": "4000 cm"
-        },
-        {
-          "text": "4 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "4 × 100 = 400 cm"
-    },
-    {
-      "id": 27,
-      "type": "multiple_choice",
-      "theme": "meter_centimeter",
-      "question": {
-        "text": "Een boom is 5 meter hoog. Hoeveel cm is dat?"
-      },
-      "options": [
-        {
-          "text": "50 cm"
-        },
-        {
-          "text": "500 cm"
-        },
-        {
-          "text": "5000 cm"
-        },
-        {
-          "text": "5 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "5 × 100 = 500 cm"
-    },
-    {
-      "id": 28,
-      "type": "multiple_choice",
-      "theme": "meter_centimeter",
-      "question": {
-        "text": "180 cm = ? m en ? cm"
-      },
-      "options": [
-        {
-          "text": "1 m en 8 cm"
-        },
-        {
-          "text": "1 m en 80 cm"
-        },
-        {
-          "text": "18 m"
-        },
-        {
-          "text": "180 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "180 = 100 + 80 = 1 m en 80 cm"
-    },
-    {
-      "id": 29,
-      "type": "multiple_choice",
-      "theme": "meter_centimeter",
-      "question": {
-        "text": "Welke is langer: 2 meter of 150 cm?"
-      },
-      "options": [
-        {
-          "text": "150 cm"
-        },
-        {
-          "text": "2 meter"
-        },
-        {
-          "text": "Even lang"
-        },
-        {
-          "text": "Weet niet"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "2 m = 200 cm, dat is meer dan 150 cm"
-    },
-    {
-      "id": 30,
-      "type": "multiple_choice",
-      "theme": "meter_centimeter",
-      "question": {
-        "text": "Een gang is 3 m en 50 cm. Hoeveel cm totaal?"
-      },
-      "options": [
-        {
-          "text": "35 cm"
-        },
-        {
-          "text": "53 cm"
-        },
-        {
-          "text": "350 cm"
-        },
-        {
-          "text": "305 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "3 m = 300 cm, dus 300 + 50 = 350 cm"
-    },
-    {
-      "id": 31,
       "type": "multiple_choice",
       "theme": "vlakke_figuren",
       "question": {
@@ -852,8 +526,32 @@
       },
       "options": [
         {
-          "text": "2"
+          "text": "4"
         },
+        {
+          "text": "3"
+        },
+        {
+          "text": "5"
+        },
+        {
+          "text": "2"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Een rechthoek heeft 4 hoeken"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "theme": "vlakke_figuren",
+      "question": {
+        "text": "Hoeveel hoeken heeft een driehoek?"
+      },
+      "options": [
         {
           "text": "3"
         },
@@ -861,17 +559,101 @@
           "text": "4"
         },
         {
+          "text": "2"
+        },
+        {
           "text": "5"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 2
+        "correct_index": 0
       },
-      "hint": "Een rechthoek heeft 4 hoeken"
+      "hint": "Een driehoek heeft 3 hoeken"
     },
     {
-      "id": 32,
+      "id": 21,
+      "type": "multiple_choice",
+      "theme": "vlakke_figuren",
+      "question": {
+        "text": "Hoeveel hoeken heeft een cirkel?"
+      },
+      "options": [
+        {
+          "text": "0"
+        },
+        {
+          "text": "1"
+        },
+        {
+          "text": "2"
+        },
+        {
+          "text": "4"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Een cirkel heeft geen hoeken"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "theme": "vlakke_figuren",
+      "question": {
+        "text": "Hoeveel zijden heeft een vierkant?"
+      },
+      "options": [
+        {
+          "text": "4"
+        },
+        {
+          "text": "3"
+        },
+        {
+          "text": "5"
+        },
+        {
+          "text": "6"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Een vierkant heeft 4 zijden"
+    },
+    {
+      "id": 23,
+      "type": "multiple_choice",
+      "theme": "vlakke_figuren",
+      "question": {
+        "text": "Hoeveel zijden heeft een driehoek?"
+      },
+      "options": [
+        {
+          "text": "3"
+        },
+        {
+          "text": "4"
+        },
+        {
+          "text": "2"
+        },
+        {
+          "text": "5"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Een driehoek heeft 3 zijden"
+    },
+    {
+      "id": 24,
       "type": "multiple_choice",
       "theme": "vlakke_figuren",
       "question": {
@@ -879,10 +661,91 @@
       },
       "options": [
         {
+          "text": "cirkel"
+        },
+        {
           "text": "vierkant"
         },
         {
           "text": "driehoek"
+        },
+        {
+          "text": "rechthoek"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Een cirkel is rond"
+    },
+    {
+      "id": 25,
+      "type": "multiple_choice",
+      "theme": "vlakke_figuren",
+      "question": {
+        "text": "Een vierkant heeft..."
+      },
+      "options": [
+        {
+          "text": "4 gelijke zijden"
+        },
+        {
+          "text": "3 gelijke zijden"
+        },
+        {
+          "text": "2 gelijke zijden"
+        },
+        {
+          "text": "geen gelijke zijden"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Alle zijden zijn even lang"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "theme": "vlakke_figuren",
+      "question": {
+        "text": "Een rechthoek heeft..."
+      },
+      "options": [
+        {
+          "text": "4 rechte hoeken"
+        },
+        {
+          "text": "3 rechte hoeken"
+        },
+        {
+          "text": "2 rechte hoeken"
+        },
+        {
+          "text": "geen rechte hoeken"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Alle hoeken zijn 90°"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "theme": "vlakke_figuren",
+      "question": {
+        "text": "Welke figuur heeft 3 hoeken?"
+      },
+      "options": [
+        {
+          "text": "driehoek"
+        },
+        {
+          "text": "vierkant"
         },
         {
           "text": "cirkel"
@@ -893,93 +756,12 @@
       ],
       "answer": {
         "type": "single",
-        "correct_index": 2
+        "correct_index": 0
       },
-      "hint": "Een cirkel heeft geen hoeken"
+      "hint": "Drie-hoek = 3 hoeken"
     },
     {
-      "id": 33,
-      "type": "multiple_choice",
-      "theme": "vlakke_figuren",
-      "question": {
-        "text": "Een vierkant heeft... gelijke zijden"
-      },
-      "options": [
-        {
-          "text": "2"
-        },
-        {
-          "text": "3"
-        },
-        {
-          "text": "4"
-        },
-        {
-          "text": "geen"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Een vierkant heeft 4 gelijke zijden"
-    },
-    {
-      "id": 34,
-      "type": "multiple_choice",
-      "theme": "vlakke_figuren",
-      "question": {
-        "text": "Welke figuur heeft 3 zijden?"
-      },
-      "options": [
-        {
-          "text": "vierkant"
-        },
-        {
-          "text": "driehoek"
-        },
-        {
-          "text": "cirkel"
-        },
-        {
-          "text": "rechthoek"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Een driehoek heeft 3 zijden"
-    },
-    {
-      "id": 35,
-      "type": "multiple_choice",
-      "theme": "vlakke_figuren",
-      "question": {
-        "text": "Hoeveel zijden heeft een rechthoek?"
-      },
-      "options": [
-        {
-          "text": "2"
-        },
-        {
-          "text": "3"
-        },
-        {
-          "text": "4"
-        },
-        {
-          "text": "5"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Een rechthoek heeft 4 zijden"
-    },
-    {
-      "id": 36,
+      "id": 28,
       "type": "multiple_choice",
       "theme": "vlakke_figuren",
       "question": {
@@ -996,21 +778,48 @@
           "text": "driehoekig"
         },
         {
-          "text": "lang"
+          "text": "rechthoekig"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Een cirkel is rond"
+      "hint": "Een cirkel heeft geen hoeken"
     },
     {
-      "id": 37,
+      "id": 29,
       "type": "multiple_choice",
       "theme": "vlakke_figuren",
       "question": {
-        "text": "Welke figuur kun je het best rollen?"
+        "text": "Hoeveel rechte hoeken heeft een vierkant?"
+      },
+      "options": [
+        {
+          "text": "4"
+        },
+        {
+          "text": "3"
+        },
+        {
+          "text": "2"
+        },
+        {
+          "text": "1"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Alle hoeken zijn recht"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "theme": "vlakke_figuren",
+      "question": {
+        "text": "Welke figuur heeft 4 zijden?"
       },
       "options": [
         {
@@ -1023,115 +832,142 @@
           "text": "cirkel"
         },
         {
-          "text": "rechthoek"
+          "text": "geen"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 2
+        "correct_index": 0
       },
-      "hint": "Een cirkel kun je rollen"
+      "hint": "Vier-kant = 4 zijden"
     },
     {
-      "id": 38,
+      "id": 31,
       "type": "multiple_choice",
       "theme": "vlakke_figuren",
       "question": {
-        "text": "Een vierkant heeft hoeken van... graden"
+        "text": "Een driehoek heeft hoeveel punten?"
       },
       "options": [
-        {
-          "text": "45"
-        },
-        {
-          "text": "60"
-        },
-        {
-          "text": "90"
-        },
-        {
-          "text": "180"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Elke hoek in een vierkant is 90 graden (een rechte hoek)"
-    },
-    {
-      "id": 39,
-      "type": "multiple_choice",
-      "theme": "vlakke_figuren",
-      "question": {
-        "text": "Hoeveel hoeken heeft een driehoek?"
-      },
-      "options": [
-        {
-          "text": "1"
-        },
-        {
-          "text": "2"
-        },
         {
           "text": "3"
         },
         {
           "text": "4"
+        },
+        {
+          "text": "2"
+        },
+        {
+          "text": "5"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 2
+        "correct_index": 0
       },
-      "hint": "Een driehoek heeft 3 hoeken"
+      "hint": "3 hoekpunten"
     },
     {
-      "id": 40,
+      "id": 32,
       "type": "multiple_choice",
       "theme": "vlakke_figuren",
       "question": {
-        "text": "Bij een rechthoek zijn tegenoverliggende zijden..."
+        "text": "Welke figuur kun je met een passer tekenen?"
       },
       "options": [
         {
-          "text": "verschillend"
+          "text": "cirkel"
         },
         {
-          "text": "gelijk"
+          "text": "vierkant"
         },
         {
-          "text": "rond"
+          "text": "driehoek"
         },
         {
-          "text": "schuin"
+          "text": "rechthoek"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 0
       },
-      "hint": "Tegenoverliggende zijden zijn gelijk"
+      "hint": "Een passer maakt ronde vormen"
     },
     {
-      "id": 41,
+      "id": 33,
+      "type": "multiple_choice",
+      "theme": "vlakke_figuren",
+      "question": {
+        "text": "Hoeveel gelijke zijden heeft een vierkant?"
+      },
+      "options": [
+        {
+          "text": "4"
+        },
+        {
+          "text": "3"
+        },
+        {
+          "text": "2"
+        },
+        {
+          "text": "geen"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Alle 4 zijden zijn gelijk"
+    },
+    {
+      "id": 34,
+      "type": "multiple_choice",
+      "theme": "vlakke_figuren",
+      "question": {
+        "text": "Welke figuur heeft evenwijdige zijden?"
+      },
+      "options": [
+        {
+          "text": "rechthoek"
+        },
+        {
+          "text": "driehoek"
+        },
+        {
+          "text": "cirkel"
+        },
+        {
+          "text": "geen"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Rechthoek heeft 2 paar evenwijdige zijden"
+    },
+    {
+      "id": 35,
       "type": "multiple_choice",
       "theme": "tijd_kwartieren",
       "question": {
-        "text": "Het is kwart over 3. Hoe laat is dat met cijfers?"
+        "text": "Hoe laat is kwart over 3? Schrijf met cijfers."
       },
       "options": [
         {
           "text": "3:15"
         },
         {
-          "text": "3:30"
-        },
-        {
-          "text": "3:45"
+          "text": "3:00"
         },
         {
           "text": "4:00"
+        },
+        {
+          "text": "3:30"
         }
       ],
       "answer": {
@@ -1141,202 +977,151 @@
       "hint": "Kwart over 3 = 3:15"
     },
     {
-      "id": 42,
+      "id": 36,
       "type": "multiple_choice",
       "theme": "tijd_kwartieren",
       "question": {
-        "text": "Het is 5:45. Hoe zeg je dat anders?"
+        "text": "Hoe laat is kwart voor 8? Schrijf met cijfers."
       },
       "options": [
-        {
-          "text": "kwart over 5"
-        },
-        {
-          "text": "half vijf"
-        },
-        {
-          "text": "kwart voor 6"
-        },
-        {
-          "text": "vijf uur"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "5:45 = kwart voor 6"
-    },
-    {
-      "id": 43,
-      "type": "multiple_choice",
-      "theme": "tijd_kwartieren",
-      "question": {
-        "text": "Kwart voor 8 is..."
-      },
-      "options": [
-        {
-          "text": "7:15"
-        },
-        {
-          "text": "7:30"
-        },
         {
           "text": "7:45"
         },
         {
-          "text": "8:15"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Kwart voor 8 = 7:45"
-    },
-    {
-      "id": 44,
-      "type": "multiple_choice",
-      "theme": "tijd_kwartieren",
-      "question": {
-        "text": "Het is 2:15. Is dat kwart over of kwart voor?"
-      },
-      "options": [
-        {
-          "text": "kwart over 2"
+          "text": "7:00"
         },
         {
-          "text": "kwart voor 2"
+          "text": "8:00"
         },
         {
-          "text": "kwart voor 3"
-        },
-        {
-          "text": "half 2"
+          "text": "7:30"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 0
       },
-      "hint": "2:15 = kwart over 2"
+      "hint": "Kwart voor 8 = 7:45"
     },
     {
-      "id": 45,
+      "id": 37,
       "type": "multiple_choice",
       "theme": "tijd_kwartieren",
       "question": {
-        "text": "Hoeveel minuten is een kwartier?"
+        "text": "Hoe laat is half 4? Schrijf met cijfers."
       },
       "options": [
         {
-          "text": "10 minuten"
+          "text": "3:30"
         },
         {
-          "text": "15 minuten"
+          "text": "3:00"
         },
         {
-          "text": "20 minuten"
+          "text": "4:00"
         },
         {
-          "text": "30 minuten"
+          "text": "3:15"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 0
       },
-      "hint": "Een kwartier = 15 minuten"
+      "hint": "Half 4 = 3:30"
     },
     {
-      "id": 46,
+      "id": 38,
       "type": "multiple_choice",
       "theme": "tijd_kwartieren",
       "question": {
-        "text": "Het is half 4. Kwart uur later is het..."
+        "text": "Hoe laat is kwart over 7? Schrijf met cijfers."
       },
       "options": [
-        {
-          "text": "kwart over 4"
-        },
-        {
-          "text": "kwart voor 4"
-        },
-        {
-          "text": "kwart voor 5"
-        },
-        {
-          "text": "half 5"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Half 4 = 3:30, plus 15 minuten = 3:45 = kwart voor 4"
-    },
-    {
-      "id": 47,
-      "type": "multiple_choice",
-      "theme": "tijd_kwartieren",
-      "question": {
-        "text": "Kwart over 7 is..."
-      },
-      "options": [
-        {
-          "text": "6:45"
-        },
         {
           "text": "7:15"
         },
         {
-          "text": "7:30"
+          "text": "7:00"
         },
         {
-          "text": "7:45"
+          "text": "8:00"
+        },
+        {
+          "text": "7:30"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 0
       },
       "hint": "Kwart over 7 = 7:15"
     },
     {
-      "id": 48,
+      "id": 39,
       "type": "multiple_choice",
       "theme": "tijd_kwartieren",
       "question": {
-        "text": "Van 4:00 tot 4:15 is... tijd"
+        "text": "Hoe laat is kwart voor 5? Schrijf met cijfers."
       },
       "options": [
         {
-          "text": "een half uur"
+          "text": "4:45"
         },
         {
-          "text": "een kwartier"
+          "text": "4:00"
         },
         {
-          "text": "drie kwartier"
+          "text": "5:00"
         },
         {
-          "text": "een uur"
+          "text": "4:30"
         }
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 0
       },
-      "hint": "Van 4:00 tot 4:15 is 15 minuten = een kwartier"
+      "hint": "Kwart voor 5 = 4:45"
     },
     {
-      "id": 49,
+      "id": 40,
       "type": "multiple_choice",
       "theme": "tijd_kwartieren",
       "question": {
-        "text": "Het is 10:45. Over een kwartier is het..."
+        "text": "Hoe laat is kwart over 9? Schrijf met cijfers."
       },
       "options": [
+        {
+          "text": "9:15"
+        },
+        {
+          "text": "9:00"
+        },
+        {
+          "text": "10:00"
+        },
+        {
+          "text": "9:30"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Kwart over 9 = 9:15"
+    },
+    {
+      "id": 41,
+      "type": "multiple_choice",
+      "theme": "tijd_kwartieren",
+      "question": {
+        "text": "Hoe laat is kwart voor 11? Schrijf met cijfers."
+      },
+      "options": [
+        {
+          "text": "10:45"
+        },
         {
           "text": "10:00"
         },
@@ -1344,7 +1129,193 @@
           "text": "11:00"
         },
         {
-          "text": "11:15"
+          "text": "10:30"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Kwart voor 11 = 10:45"
+    },
+    {
+      "id": 42,
+      "type": "multiple_choice",
+      "theme": "tijd_kwartieren",
+      "question": {
+        "text": "Hoe laat is kwart over 2? Schrijf met cijfers."
+      },
+      "options": [
+        {
+          "text": "2:15"
+        },
+        {
+          "text": "2:00"
+        },
+        {
+          "text": "3:00"
+        },
+        {
+          "text": "2:30"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Kwart over 2 = 2:15"
+    },
+    {
+      "id": 43,
+      "type": "multiple_choice",
+      "theme": "tijd_kwartieren",
+      "question": {
+        "text": "Hoe laat is kwart voor 3? Schrijf met cijfers."
+      },
+      "options": [
+        {
+          "text": "2:45"
+        },
+        {
+          "text": "2:00"
+        },
+        {
+          "text": "3:00"
+        },
+        {
+          "text": "2:30"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Kwart voor 3 = 2:45"
+    },
+    {
+      "id": 44,
+      "type": "multiple_choice",
+      "theme": "tijd_kwartieren",
+      "question": {
+        "text": "Hoe laat is half 9? Schrijf met cijfers."
+      },
+      "options": [
+        {
+          "text": "8:30"
+        },
+        {
+          "text": "8:00"
+        },
+        {
+          "text": "9:00"
+        },
+        {
+          "text": "8:15"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Half 9 = 8:30"
+    },
+    {
+      "id": 45,
+      "type": "multiple_choice",
+      "theme": "tijd_kwartieren",
+      "question": {
+        "text": "Hoe laat is kwart over 5? Schrijf met cijfers."
+      },
+      "options": [
+        {
+          "text": "5:15"
+        },
+        {
+          "text": "5:00"
+        },
+        {
+          "text": "6:00"
+        },
+        {
+          "text": "5:30"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Kwart over 5 = 5:15"
+    },
+    {
+      "id": 46,
+      "type": "multiple_choice",
+      "theme": "tijd_kwartieren",
+      "question": {
+        "text": "Hoe laat is kwart voor 6? Schrijf met cijfers."
+      },
+      "options": [
+        {
+          "text": "5:45"
+        },
+        {
+          "text": "5:00"
+        },
+        {
+          "text": "6:00"
+        },
+        {
+          "text": "5:30"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Kwart voor 6 = 5:45"
+    },
+    {
+      "id": 47,
+      "type": "multiple_choice",
+      "theme": "tijd_kwartieren",
+      "question": {
+        "text": "Hoe laat is half 7? Schrijf met cijfers."
+      },
+      "options": [
+        {
+          "text": "6:30"
+        },
+        {
+          "text": "6:00"
+        },
+        {
+          "text": "7:00"
+        },
+        {
+          "text": "6:15"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Half 7 = 6:30"
+    },
+    {
+      "id": 48,
+      "type": "multiple_choice",
+      "theme": "tijd_kwartieren",
+      "question": {
+        "text": "Hoe laat is kwart over 10? Schrijf met cijfers."
+      },
+      "options": [
+        {
+          "text": "10:15"
+        },
+        {
+          "text": "10:00"
+        },
+        {
+          "text": "11:00"
         },
         {
           "text": "10:30"
@@ -1352,36 +1323,63 @@
       ],
       "answer": {
         "type": "single",
-        "correct_index": 1
+        "correct_index": 0
       },
-      "hint": "10:45 + 15 minuten = 11:00"
+      "hint": "Kwart over 10 = 10:15"
     },
     {
-      "id": 50,
+      "id": 49,
       "type": "multiple_choice",
       "theme": "tijd_kwartieren",
       "question": {
-        "text": "Welke tijd komt eerst: kwart over 5 of half 6?"
+        "text": "Hoe laat is kwart voor 12? Schrijf met cijfers."
       },
       "options": [
         {
-          "text": "kwart over 5"
+          "text": "11:45"
         },
         {
-          "text": "half 6"
+          "text": "11:00"
         },
         {
-          "text": "gelijk"
+          "text": "12:00"
         },
         {
-          "text": "weet niet"
+          "text": "11:30"
         }
       ],
       "answer": {
         "type": "single",
         "correct_index": 0
       },
-      "hint": "Kwart over 5 = 5:15, half 6 = 5:30, dus kwart over 5 komt eerst"
+      "hint": "Kwart voor 12 = 11:45"
+    },
+    {
+      "id": 50,
+      "type": "multiple_choice",
+      "theme": "tijd_kwartieren",
+      "question": {
+        "text": "Hoe laat is half 2? Schrijf met cijfers."
+      },
+      "options": [
+        {
+          "text": "1:30"
+        },
+        {
+          "text": "1:00"
+        },
+        {
+          "text": "2:00"
+        },
+        {
+          "text": "1:15"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correct_index": 0
+      },
+      "hint": "Half 2 = 1:30"
     }
   ],
   "settings": {
