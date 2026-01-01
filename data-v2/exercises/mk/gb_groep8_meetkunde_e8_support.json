@@ -14,7 +14,8 @@
         "K33"
       ],
       "rekendomeinen": [
-        "meetkunde"
+        "meetkunde",
+        "meten"
       ],
       "tussendoelen": [
         "8MM4",
@@ -26,1361 +27,711 @@
     }
   },
   "display": {
-    "title": "Meetkunde Groep 8 - Ondersteuning"
+    "title": "Meetkunde Groep 8"
   },
   "content": {
     "instruction": "Kies het goede antwoord:"
   },
   "items": [
     {
-      "id": 1,
-      "type": "multiple_choice",
-      "theme": "alle_meeteenheden",
+      "id": "ex_000001",
       "question": {
-        "text": "Een touw is 3 kilometer, 50 meter en 250 centimeter lang. Hoeveel meter is dat in totaal?"
+        "text": "2.5 ton = hoeveel kg?"
       },
       "options": [
-        {
-          "text": "3052,5 meter"
-        },
-        {
-          "text": "3050 meter"
-        },
-        {
-          "text": "3302,5 meter"
-        },
-        {
-          "text": "3055 meter"
-        }
+        "25000 kg",
+        "2000 kg",
+        "250 kg",
+        "2500 kg"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "3 km = 3000 m, 50 m = 50 m, 250 cm = 2,5 m. Totaal: 3000 + 50 + 2,5 = 3052,5 meter"
+      "correct_answer": "2500 kg",
+      "theme": "alle_eenheden"
     },
     {
-      "id": 2,
-      "type": "multiple_choice",
-      "theme": "alle_meeteenheden",
+      "id": "ex_000002",
       "question": {
-        "text": "Een pakket weegt 1,5 kilogram en er wordt nog 500 gram bijgedaan. Hoeveel gram weegt het pakket nu?"
+        "text": "375 cl = hoeveel liter?"
       },
       "options": [
-        {
-          "text": "1500 gram"
-        },
-        {
-          "text": "2000 gram"
-        },
-        {
-          "text": "2500 gram"
-        },
-        {
-          "text": "3000 gram"
-        }
+        "37.5 liter",
+        "0.375 liter",
+        "3.75 liter",
+        "375 liter"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1,5 kg = 1500 gram. 1500 + 500 = 2000 gram"
+      "correct_answer": "3.75 liter",
+      "theme": "alle_eenheden"
     },
     {
-      "id": 3,
-      "type": "multiple_choice",
-      "theme": "alle_meeteenheden",
+      "id": "ex_000003",
       "question": {
-        "text": "Een emmer bevat 12 liter water. Er wordt 500 milliliter toegevoegd. Hoeveel liter zit er nu in de emmer?"
+        "text": "90 minuten = hoeveel uur?"
       },
       "options": [
-        {
-          "text": "12,5 liter"
-        },
-        {
-          "text": "13 liter"
-        },
-        {
-          "text": "17 liter"
-        },
-        {
-          "text": "62 liter"
-        }
+        "9 uur",
+        "1.5 uur",
+        "1 uur",
+        "0.9 uur"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "500 ml = 0,5 l. 12 + 0,5 = 12,5 liter"
+      "correct_answer": "1.5 uur",
+      "theme": "alle_eenheden"
     },
     {
-      "id": 4,
-      "type": "multiple_choice",
-      "theme": "alle_figuren",
+      "id": "ex_000004",
       "question": {
-        "text": "Een cirkel heeft een straal van 5 meter. Wat is de oppervlakte? (gebruik π = 3,14)"
+        "text": "5.5 km = hoeveel meter?"
       },
       "options": [
-        {
-          "text": "15,7 m²"
-        },
-        {
-          "text": "31,4 m²"
-        },
-        {
-          "text": "78,5 m²"
-        },
-        {
-          "text": "157 m²"
-        }
+        "55 meter",
+        "55000 meter",
+        "5500 meter",
+        "550 meter"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Oppervlakte cirkel = π × r² = 3,14 × 5² = 3,14 × 25 = 78,5 m²"
+      "correct_answer": "5500 meter",
+      "theme": "alle_eenheden"
     },
     {
-      "id": 5,
-      "type": "multiple_choice",
-      "theme": "alle_figuren",
+      "id": "ex_000005",
       "question": {
-        "text": "Een cilinder heeft een straal van 4 cm en een hoogte van 10 cm. Wat is het volume? (gebruik π = 3,14)"
+        "text": "250 ml = hoeveel liter?"
       },
       "options": [
-        {
-          "text": "125,6 cm³"
-        },
-        {
-          "text": "251,2 cm³"
-        },
-        {
-          "text": "502,4 cm³"
-        },
-        {
-          "text": "628 cm³"
-        }
+        "0.025 liter",
+        "2.5 liter",
+        "25 liter",
+        "0.25 liter"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Volume = π × r² × h = 3,14 × 4² × 10 = 3,14 × 16 × 10 = 502,4 cm³"
+      "correct_answer": "0.25 liter",
+      "theme": "alle_eenheden"
     },
     {
-      "id": 6,
-      "type": "multiple_choice",
-      "theme": "alle_figuren",
+      "id": "ex_000006",
       "question": {
-        "text": "Een kubus heeft ribben van 4 cm. Wat is het volume?"
+        "text": "3500 gram = hoeveel kg?"
       },
       "options": [
-        {
-          "text": "16 cm³"
-        },
-        {
-          "text": "32 cm³"
-        },
-        {
-          "text": "48 cm³"
-        },
-        {
-          "text": "64 cm³"
-        }
+        "350 kg",
+        "0.35 kg",
+        "3.5 kg",
+        "35 kg"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 3
-      },
-      "hint": "Volume kubus = zijde³ = 4³ = 4 × 4 × 4 = 64 cm³"
+      "correct_answer": "3.5 kg",
+      "theme": "alle_eenheden"
     },
     {
-      "id": 7,
-      "type": "multiple_choice",
-      "theme": "CITO_niveau_1F_1S",
+      "id": "ex_000007",
       "question": {
-        "text": "Op een tekening met schaal 1:100 is een kamer 8 cm bij 6 cm. Wat is de echte oppervlakte in m²?"
+        "text": "15 dm = hoeveel meter?"
       },
       "options": [
-        {
-          "text": "48 m²"
-        },
-        {
-          "text": "84 m²"
-        },
-        {
-          "text": "480 m²"
-        },
-        {
-          "text": "4800 m²"
-        }
+        "15 m",
+        "1.5 m",
+        "150 m",
+        "0.15 m"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "8 cm × 100 = 800 cm = 8 m en 6 cm × 100 = 600 cm = 6 m. Oppervlakte: 8 × 6 = 48 m²"
+      "correct_answer": "1.5 m",
+      "theme": "alle_eenheden"
     },
     {
-      "id": 8,
-      "type": "multiple_choice",
-      "theme": "alle_figuren",
+      "id": "ex_000008",
       "question": {
-        "text": "Een cirkel heeft een diameter van 10 meter. Wat is de omtrek? (gebruik π = 3,14)"
+        "text": "120 minuten = hoeveel uur?"
       },
       "options": [
-        {
-          "text": "15,7 meter"
-        },
-        {
-          "text": "31,4 meter"
-        },
-        {
-          "text": "62,8 meter"
-        },
-        {
-          "text": "78,5 meter"
-        }
+        "12 uur",
+        "2 uur",
+        "1 uur",
+        "1.2 uur"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Omtrek = π × diameter = 3,14 × 10 = 31,4 meter"
+      "correct_answer": "2 uur",
+      "theme": "alle_eenheden"
     },
     {
-      "id": 9,
-      "type": "multiple_choice",
-      "theme": "alle_meeteenheden",
+      "id": "ex_000009",
       "question": {
-        "text": "Een bus vertrekt om 14:30 en rijdt 2 uur en 45 minuten. Hoe laat komt de bus aan?"
+        "text": "4.2 km = hoeveel meter?"
       },
       "options": [
-        {
-          "text": "16:15"
-        },
-        {
-          "text": "16:45"
-        },
-        {
-          "text": "17:15"
-        },
-        {
-          "text": "17:45"
-        }
+        "42000 meter",
+        "42 meter",
+        "420 meter",
+        "4200 meter"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "14:30 + 2 uur = 16:30. 16:30 + 45 minuten = 17:15"
+      "correct_answer": "4200 meter",
+      "theme": "alle_eenheden"
     },
     {
-      "id": 10,
-      "type": "multiple_choice",
-      "theme": "alle_figuren",
+      "id": "ex_000010",
       "question": {
-        "text": "Een bak is 20 cm lang, 10 cm breed en 5 cm hoog. Hoeveel cm³ past erin?"
+        "text": "800 gram = hoeveel kg?"
       },
       "options": [
-        {
-          "text": "200 cm³"
-        },
-        {
-          "text": "500 cm³"
-        },
-        {
-          "text": "1000 cm³"
-        },
-        {
-          "text": "2000 cm³"
-        }
+        "8 kg",
+        "80 kg",
+        "0.08 kg",
+        "0.8 kg"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Volume = 20 × 10 × 5 = 1000 cm³"
+      "correct_answer": "0.8 kg",
+      "theme": "alle_eenheden"
     },
     {
-      "id": 11,
-      "type": "multiple_choice",
-      "theme": "alle_figuren",
+      "id": "ex_000011",
       "question": {
-        "text": "Een driehoek heeft een basis van 8 meter en een hoogte van 5 meter. Wat is de oppervlakte?"
+        "text": "50 cl = hoeveel ml?"
       },
       "options": [
-        {
-          "text": "13 m²"
-        },
-        {
-          "text": "20 m²"
-        },
-        {
-          "text": "40 m²"
-        },
-        {
-          "text": "80 m²"
-        }
+        "500 ml",
+        "50 ml",
+        "5000 ml",
+        "5 ml"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Oppervlakte driehoek = ½ × basis × hoogte = ½ × 8 × 5 = 20 m²"
+      "correct_answer": "500 ml",
+      "theme": "alle_eenheden"
     },
     {
-      "id": 12,
-      "type": "multiple_choice",
-      "theme": "CITO_niveau_1F_1S",
+      "id": "ex_000012",
       "question": {
-        "text": "Een stapel kubussen is 2 breed, 3 lang en 4 hoog. Hoeveel kubussen zijn er?"
+        "text": "2.5 kg = hoeveel gram?"
       },
       "options": [
-        {
-          "text": "9 kubussen"
-        },
-        {
-          "text": "12 kubussen"
-        },
-        {
-          "text": "18 kubussen"
-        },
-        {
-          "text": "24 kubussen"
-        }
+        "25000 gram",
+        "2500 gram",
+        "25 gram",
+        "250 gram"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 3
-      },
-      "hint": "Aantal = 2 × 3 × 4 = 24 kubussen"
+      "correct_answer": "2500 gram",
+      "theme": "alle_eenheden"
     },
     {
-      "id": 13,
-      "type": "multiple_choice",
-      "theme": "alle_meeteenheden",
+      "id": "ex_000013",
       "question": {
-        "text": "Een fietser rijdt 12 kilometer in 40 minuten. Hoeveel meter per minuut is dat?"
+        "text": "75 cm = hoeveel meter?"
       },
       "options": [
-        {
-          "text": "200 meter"
-        },
-        {
-          "text": "250 meter"
-        },
-        {
-          "text": "300 meter"
-        },
-        {
-          "text": "400 meter"
-        }
+        "0.075 m",
+        "0.75 m",
+        "75 m",
+        "7.5 m"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "12 km = 12.000 meter. 12.000 ÷ 40 = 300 meter per minuut"
+      "correct_answer": "0.75 m",
+      "theme": "alle_eenheden"
     },
     {
-      "id": 14,
-      "type": "multiple_choice",
-      "theme": "CITO_niveau_1F_1S",
+      "id": "ex_000014",
       "question": {
-        "text": "Een vierkant speelveld heeft zijden van 50 meter. In het midden ligt een rond grasveld met straal 10 meter. Wat is de oppervlakte van het speelveld buiten het grasveld? (gebruik π = 3,14)"
+        "text": "1.5 ton = hoeveel kg?"
       },
       "options": [
-        {
-          "text": "2186 m²"
-        },
-        {
-          "text": "2314 m²"
-        },
-        {
-          "text": "2500 m²"
-        },
-        {
-          "text": "2814 m²"
-        }
+        "15 kg",
+        "150 kg",
+        "1500 kg",
+        "15000 kg"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Vierkant: 50 × 50 = 2500 m². Cirkel: 3,14 × 10² = 314 m². Rest: 2500 - 314 = 2186 m²"
+      "correct_answer": "1500 kg",
+      "theme": "alle_eenheden"
     },
     {
-      "id": 15,
-      "type": "multiple_choice",
-      "theme": "alle_figuren",
+      "id": "ex_000015",
       "question": {
-        "text": "In een driehoek zijn twee hoeken 40° en 60°. Hoe groot is de derde hoek?"
+        "text": "200 cl = hoeveel liter?"
       },
       "options": [
-        {
-          "text": "60°"
-        },
-        {
-          "text": "70°"
-        },
-        {
-          "text": "80°"
-        },
-        {
-          "text": "90°"
-        }
+        "20 liter",
+        "200 liter",
+        "0.2 liter",
+        "2 liter"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Som = 180°. Dus: 180° - 40° - 60° = 80°"
+      "correct_answer": "2 liter",
+      "theme": "alle_eenheden"
     },
     {
-      "id": 16,
-      "type": "multiple_choice",
-      "theme": "CITO_niveau_1F_1S",
+      "id": "ex_000016",
       "question": {
-        "text": "Op een kaart met schaal 1:1.000 is een park 12 cm bij 10 cm. Hoeveel m² is het echte park?"
+        "text": "45 minuten = hoeveel uur?"
       },
       "options": [
-        {
-          "text": "2.400 m²"
-        },
-        {
-          "text": "12.000 m²"
-        },
-        {
-          "text": "24.000 m²"
-        },
-        {
-          "text": "48.000 m²"
-        }
+        "7.5 uur",
+        "4.5 uur",
+        "0.45 uur",
+        "0.75 uur"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "12 cm × 1.000 = 12.000 cm = 120 m en 10 cm × 1.000 = 10.000 cm = 100 m. Oppervlakte: 120 × 100 = 12.000 m²"
+      "correct_answer": "0.75 uur",
+      "theme": "alle_eenheden"
     },
     {
-      "id": 17,
-      "type": "multiple_choice",
-      "theme": "alle_figuren",
+      "id": "ex_000017",
       "question": {
-        "text": "Hoeveel symmetrie-assen heeft een rechthoek?"
+        "text": "3.8 km = hoeveel meter?"
       },
       "options": [
-        {
-          "text": "0"
-        },
-        {
-          "text": "1"
-        },
-        {
-          "text": "2"
-        },
-        {
-          "text": "4"
-        }
+        "380 meter",
+        "38000 meter",
+        "38 meter",
+        "3800 meter"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Een rechthoek heeft 2 symmetrie-assen: door de middelpunten van de tegenoverliggende zijden"
+      "correct_answer": "3800 meter",
+      "theme": "alle_eenheden"
     },
     {
-      "id": 18,
-      "type": "multiple_choice",
-      "theme": "CITO_niveau_1F_1S",
+      "id": "ex_000018",
       "question": {
-        "text": "Een tuin van 40 bij 25 meter moet ingezaaid worden. 1 zak zaad is genoeg voor 50 m². Een zak kost €15. Wat kosten alle zakken?"
+        "text": "Kubus ribbe 6 cm. Volume?"
       },
       "options": [
-        {
-          "text": "€200"
-        },
-        {
-          "text": "€250"
-        },
-        {
-          "text": "€300"
-        },
-        {
-          "text": "€350"
-        }
+        "226 cm³",
+        "36 cm³",
+        "216 cm³",
+        "206 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Oppervlakte: 40 × 25 = 1000 m². Zakken: 1000 ÷ 50 = 20. Kosten: 20 × €15 = €300"
+      "correct_answer": "216 cm³",
+      "theme": "alle_figuren"
     },
     {
-      "id": 19,
-      "type": "multiple_choice",
-      "theme": "alle_figuren",
+      "id": "ex_000019",
       "question": {
-        "text": "Een rechthoek is 12 cm lang en 8 cm breed. Wat is de omtrek?"
+        "text": "Driehoek basis 11 cm, hoogte 8 cm. Oppervlakte?"
       },
       "options": [
-        {
-          "text": "20 cm"
-        },
-        {
-          "text": "32 cm"
-        },
-        {
-          "text": "40 cm"
-        },
-        {
-          "text": "96 cm"
-        }
+        "44 cm²",
+        "49.0 cm²",
+        "39.0 cm²",
+        "88 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Omtrek = 2 × (lengte + breedte) = 2 × (12 + 8) = 2 × 20 = 40 cm"
+      "correct_answer": "44 cm²",
+      "theme": "alle_figuren"
     },
     {
-      "id": 20,
-      "type": "multiple_choice",
-      "theme": "CITO_niveau_1F_1S",
+      "id": "ex_000020",
       "question": {
-        "text": "Een cilinder heeft een diameter van 6 meter en een hoogte van 4 meter. Het is voor 50% gevuld met water. Hoeveel m³ water zit erin? (gebruik π = 3,14)"
+        "text": "Rechthoek 9×7 cm. Omtrek?"
       },
       "options": [
-        {
-          "text": "28,26 m³"
-        },
-        {
-          "text": "56,52 m³"
-        },
-        {
-          "text": "75,36 m³"
-        },
-        {
-          "text": "113,04 m³"
-        }
+        "63 cm",
+        "32 cm",
+        "34 cm",
+        "30 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Straal = 3 m. Volume = 3,14 × 3² × 4 = 3,14 × 9 × 4 = 113,04 m³. 50% = 113,04 ÷ 2 = 56,52 m³"
+      "correct_answer": "32 cm",
+      "theme": "alle_figuren"
     },
     {
-      "id": 21,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000021",
       "question": {
-        "text": "L-vorm: 10×6 m + 4×3 m. Oppervlakte?"
+        "text": "Rechthoek 8×6 cm. Omtrek?"
       },
       "options": [
-        {
-          "text": "72 m²"
-        },
-        {
-          "text": "77 m²"
-        },
-        {
-          "text": "67 m²"
-        },
-        {
-          "text": "144 m²"
-        }
+        "28 cm",
+        "48 cm",
+        "30 cm",
+        "26 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Beide delen optellen"
+      "correct_answer": "28 cm",
+      "theme": "alle_figuren"
     },
     {
-      "id": 22,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000022",
       "question": {
-        "text": "Kubus heeft hoeveel ribben?"
+        "text": "Balk 4×3×3 cm. Volume?"
       },
       "options": [
-        {
-          "text": "12"
-        },
-        {
-          "text": "22"
-        },
-        {
-          "text": "2"
-        },
-        {
-          "text": "24"
-        }
+        "51 cm³",
+        "12 cm³",
+        "36 cm³",
+        "21 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Kubus = 12 ribben"
+      "correct_answer": "36 cm³",
+      "theme": "alle_figuren"
     },
     {
-      "id": 23,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000023",
       "question": {
-        "text": "4 ton = ? kilogram"
+        "text": "Kubus ribbe 5 cm. Volume?"
       },
       "options": [
-        {
-          "text": "4000 kg"
-        },
-        {
-          "text": "4005 kg"
-        },
-        {
-          "text": "3995 kg"
-        },
-        {
-          "text": "8000 kg"
-        }
+        "135 cm³",
+        "125 cm³",
+        "115 cm³",
+        "30 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "1 ton = 1000 kg"
+      "correct_answer": "125 cm³",
+      "theme": "alle_figuren"
     },
     {
-      "id": 24,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000024",
       "question": {
-        "text": "L-vormige ruimte: eerste deel 10×6 m, tweede deel 4×3 m. Totale oppervlakte?"
+        "text": "Rechthoek 11×10 cm. Omtrek?"
       },
       "options": [
-        {
-          "text": "72 m²"
-        },
-        {
-          "text": "60 m²"
-        },
-        {
-          "text": "92 m²"
-        },
-        {
-          "text": "52 m²"
-        }
+        "42 cm",
+        "110 cm",
+        "40 cm",
+        "44 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "(10×6) + (4×3) = 60 + 12 = 72 m²"
+      "correct_answer": "42 cm",
+      "theme": "alle_figuren"
     },
     {
-      "id": 25,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000025",
       "question": {
-        "text": "L-vormige ruimte: eerste deel 12×5 m, tweede deel 6×4 m. Totale oppervlakte?"
+        "text": "Cirkel diameter 12 cm. Omtrek? (π=3,14)"
       },
       "options": [
-        {
-          "text": "84 m²"
-        },
-        {
-          "text": "60 m²"
-        },
-        {
-          "text": "104 m²"
-        },
-        {
-          "text": "64 m²"
-        }
+        "452.16 cm",
+        "42.68 cm",
+        "32.68 cm",
+        "37.68 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "(12×5) + (6×4) = 60 + 24 = 84 m²"
+      "correct_answer": "37.68 cm",
+      "theme": "alle_figuren"
     },
     {
-      "id": 26,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000026",
       "question": {
-        "text": "L-vormige ruimte: eerste deel 8×7 m, tweede deel 5×3 m. Totale oppervlakte?"
+        "text": "Driehoek basis 7 cm, hoogte 3 cm. Oppervlakte?"
       },
       "options": [
-        {
-          "text": "71 m²"
-        },
-        {
-          "text": "56 m²"
-        },
-        {
-          "text": "91 m²"
-        },
-        {
-          "text": "51 m²"
-        }
+        "10.5 cm²",
+        "15.5 cm²",
+        "5.5 cm²",
+        "21 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "(8×7) + (5×3) = 56 + 15 = 71 m²"
+      "correct_answer": "10.5 cm²",
+      "theme": "alle_figuren"
     },
     {
-      "id": 27,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000027",
       "question": {
-        "text": "L-vormige tuin: 12×9 m + 6×2 m. Totale oppervlakte?"
+        "text": "Cirkel diameter 11 cm. Omtrek? (π=3,14)"
       },
       "options": [
-        {
-          "text": "120 m²"
-        },
-        {
-          "text": "108 m²"
-        },
-        {
-          "text": "12 m²"
-        },
-        {
-          "text": "140 m²"
-        }
+        "379.94 cm",
+        "29.54 cm",
+        "34.54 cm",
+        "39.54 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (12×9) + (6×2)"
+      "correct_answer": "34.54 cm",
+      "theme": "alle_figuren"
     },
     {
-      "id": 28,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000028",
       "question": {
-        "text": "L-vormige tuin: 9×6 m + 7×3 m. Totale oppervlakte?"
+        "text": "Kubus ribbe 8 cm. Volume?"
       },
       "options": [
-        {
-          "text": "75 m²"
-        },
-        {
-          "text": "54 m²"
-        },
-        {
-          "text": "21 m²"
-        },
-        {
-          "text": "95 m²"
-        }
+        "522 cm³",
+        "512 cm³",
+        "502 cm³",
+        "48 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (9×6) + (7×3)"
+      "correct_answer": "512 cm³",
+      "theme": "alle_figuren"
     },
     {
-      "id": 29,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000029",
       "question": {
-        "text": "L-vormige tuin: 8×5 m + 6×4 m. Totale oppervlakte?"
+        "text": "Rechthoek 9×6 cm. Oppervlakte?"
       },
       "options": [
-        {
-          "text": "64 m²"
-        },
-        {
-          "text": "40 m²"
-        },
-        {
-          "text": "24 m²"
-        },
-        {
-          "text": "84 m²"
-        }
+        "59 cm²",
+        "49 cm²",
+        "54 cm²",
+        "30 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (8×5) + (6×4)"
+      "correct_answer": "54 cm²",
+      "theme": "alle_figuren"
     },
     {
-      "id": 30,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000030",
       "question": {
-        "text": "L-vormige tuin: 10×6 m + 6×5 m. Totale oppervlakte?"
+        "text": "Balk 8×3×7 cm. Volume?"
       },
       "options": [
-        {
-          "text": "90 m²"
-        },
-        {
-          "text": "60 m²"
-        },
-        {
-          "text": "30 m²"
-        },
-        {
-          "text": "110 m²"
-        }
+        "153 cm³",
+        "24 cm³",
+        "183 cm³",
+        "168 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (10×6) + (6×5)"
+      "correct_answer": "168 cm³",
+      "theme": "alle_figuren"
     },
     {
-      "id": 31,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000031",
       "question": {
-        "text": "L-vormige tuin: 8×6 m + 5×2 m. Totale oppervlakte?"
+        "text": "Cirkel diameter 15 cm. Omtrek? (π=3,14)"
       },
       "options": [
-        {
-          "text": "58 m²"
-        },
-        {
-          "text": "48 m²"
-        },
-        {
-          "text": "10 m²"
-        },
-        {
-          "text": "78 m²"
-        }
+        "47.10 cm",
+        "706.50 cm",
+        "52.10 cm",
+        "42.10 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (8×6) + (5×2)"
+      "correct_answer": "47.10 cm",
+      "theme": "alle_figuren"
     },
     {
-      "id": 32,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000032",
       "question": {
-        "text": "L-vormige tuin: 14×9 m + 5×2 m. Totale oppervlakte?"
+        "text": "Kubus ribbe 3 cm. Volume?"
       },
       "options": [
-        {
-          "text": "136 m²"
-        },
-        {
-          "text": "126 m²"
-        },
-        {
-          "text": "10 m²"
-        },
-        {
-          "text": "156 m²"
-        }
+        "18 cm³",
+        "37 cm³",
+        "17 cm³",
+        "27 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (14×9) + (5×2)"
+      "correct_answer": "27 cm³",
+      "theme": "alle_figuren"
     },
     {
-      "id": 33,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000033",
       "question": {
-        "text": "L-vormige tuin: 8×6 m + 7×2 m. Totale oppervlakte?"
+        "text": "Driehoek basis 8 cm, hoogte 8 cm. Oppervlakte?"
       },
       "options": [
-        {
-          "text": "62 m²"
-        },
-        {
-          "text": "48 m²"
-        },
-        {
-          "text": "14 m²"
-        },
-        {
-          "text": "82 m²"
-        }
+        "64 cm²",
+        "32 cm²",
+        "27.0 cm²",
+        "37.0 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (8×6) + (7×2)"
+      "correct_answer": "32 cm²",
+      "theme": "alle_figuren"
     },
     {
-      "id": 34,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000034",
       "question": {
-        "text": "L-vormige tuin: 13×8 m + 6×5 m. Totale oppervlakte?"
+        "text": "Kubus ribbe 4 cm. Volume?"
       },
       "options": [
-        {
-          "text": "134 m²"
-        },
-        {
-          "text": "104 m²"
-        },
-        {
-          "text": "30 m²"
-        },
-        {
-          "text": "154 m²"
-        }
+        "74 cm³",
+        "24 cm³",
+        "64 cm³",
+        "54 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (13×8) + (6×5)"
+      "correct_answer": "64 cm³",
+      "theme": "alle_figuren"
     },
     {
-      "id": 35,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000035",
       "question": {
-        "text": "L-vormige tuin: 12×5 m + 7×5 m. Totale oppervlakte?"
+        "text": "Een plattegrond heeft schaal 1:200. Een kamer is op de tekening 6 cm. Echte lengte?"
       },
       "options": [
-        {
-          "text": "95 m²"
-        },
-        {
-          "text": "60 m²"
-        },
-        {
-          "text": "35 m²"
-        },
-        {
-          "text": "115 m²"
-        }
+        "120 meter",
+        "6 meter",
+        "12 meter",
+        "1.2 meter"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (12×5) + (7×5)"
+      "correct_answer": "12 meter",
+      "theme": "cito_niveau"
     },
     {
-      "id": 36,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000036",
       "question": {
-        "text": "L-vormige tuin: 13×9 m + 3×5 m. Totale oppervlakte?"
+        "text": "Een rechthoekige tuin is 15×8 m. Hoeveel meter hek rondom?"
       },
       "options": [
-        {
-          "text": "132 m²"
-        },
-        {
-          "text": "117 m²"
-        },
-        {
-          "text": "15 m²"
-        },
-        {
-          "text": "152 m²"
-        }
+        "30 meter",
+        "23 meter",
+        "46 meter",
+        "120 m²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (13×9) + (3×5)"
+      "correct_answer": "46 meter",
+      "theme": "cito_niveau"
     },
     {
-      "id": 37,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000037",
       "question": {
-        "text": "L-vormige tuin: 13×7 m + 6×3 m. Totale oppervlakte?"
+        "text": "Volume van een balk 10×5×4 cm?"
       },
       "options": [
-        {
-          "text": "109 m²"
-        },
-        {
-          "text": "91 m²"
-        },
-        {
-          "text": "18 m²"
-        },
-        {
-          "text": "129 m²"
-        }
+        "40 cm³",
+        "200 cm³",
+        "50 cm³",
+        "100 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (13×7) + (6×3)"
+      "correct_answer": "200 cm³",
+      "theme": "cito_niveau"
     },
     {
-      "id": 38,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000038",
       "question": {
-        "text": "L-vormige tuin: 10×8 m + 4×4 m. Totale oppervlakte?"
+        "text": "Een cirkel heeft diameter 20 cm. Omtrek? (π≈3,14)"
       },
       "options": [
-        {
-          "text": "96 m²"
-        },
-        {
-          "text": "80 m²"
-        },
-        {
-          "text": "16 m²"
-        },
-        {
-          "text": "116 m²"
-        }
+        "31,4 cm",
+        "40 cm",
+        "62,8 cm",
+        "125,6 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (10×8) + (4×4)"
+      "correct_answer": "62,8 cm",
+      "theme": "cito_niveau"
     },
     {
-      "id": 39,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000039",
       "question": {
-        "text": "L-vormige tuin: 11×5 m + 4×2 m. Totale oppervlakte?"
+        "text": "L-vorm: rechthoek 8×6 m + rechthoek 4×3 m. Totale oppervlakte?"
       },
       "options": [
-        {
-          "text": "63 m²"
-        },
-        {
-          "text": "55 m²"
-        },
-        {
-          "text": "8 m²"
-        },
-        {
-          "text": "83 m²"
-        }
+        "36 m²",
+        "72 m²",
+        "48 m²",
+        "60 m²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (11×5) + (4×2)"
+      "correct_answer": "60 m²",
+      "theme": "cito_niveau"
     },
     {
-      "id": 40,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000040",
       "question": {
-        "text": "L-vormige tuin: 10×6 m + 4×3 m. Totale oppervlakte?"
+        "text": "Een kubus heeft ribbe 5 cm. Volume?"
       },
       "options": [
-        {
-          "text": "72 m²"
-        },
-        {
-          "text": "60 m²"
-        },
-        {
-          "text": "12 m²"
-        },
-        {
-          "text": "92 m²"
-        }
+        "100 cm³",
+        "75 cm³",
+        "25 cm³",
+        "125 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (10×6) + (4×3)"
+      "correct_answer": "125 cm³",
+      "theme": "cito_niveau"
     },
     {
-      "id": 41,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000041",
       "question": {
-        "text": "L-vormige tuin: 10×7 m + 7×5 m. Totale oppervlakte?"
+        "text": "Driehoek basis 12 cm, hoogte 8 cm. Oppervlakte?"
       },
       "options": [
-        {
-          "text": "105 m²"
-        },
-        {
-          "text": "70 m²"
-        },
-        {
-          "text": "35 m²"
-        },
-        {
-          "text": "125 m²"
-        }
+        "96 cm²",
+        "48 cm²",
+        "24 cm²",
+        "20 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (10×7) + (7×5)"
+      "correct_answer": "48 cm²",
+      "theme": "cito_niveau"
     },
     {
-      "id": 42,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000042",
       "question": {
-        "text": "L-vormige tuin: 14×6 m + 3×2 m. Totale oppervlakte?"
+        "text": "3,5 km hardlopen = hoeveel meter?"
       },
       "options": [
-        {
-          "text": "90 m²"
-        },
-        {
-          "text": "84 m²"
-        },
-        {
-          "text": "6 m²"
-        },
-        {
-          "text": "110 m²"
-        }
+        "35 meter",
+        "35000 meter",
+        "3500 meter",
+        "350 meter"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (14×6) + (3×2)"
+      "correct_answer": "3500 meter",
+      "theme": "cito_niveau"
     },
     {
-      "id": 43,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000043",
       "question": {
-        "text": "L-vormige tuin: 11×7 m + 5×4 m. Totale oppervlakte?"
+        "text": "Een cilinder: straal 4 cm, hoogte 10 cm. Volume? (π≈3,14)"
       },
       "options": [
-        {
-          "text": "97 m²"
-        },
-        {
-          "text": "77 m²"
-        },
-        {
-          "text": "20 m²"
-        },
-        {
-          "text": "117 m²"
-        }
+        "502,4 cm³",
+        "251,2 cm³",
+        "40 cm³",
+        "125,6 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (11×7) + (5×4)"
+      "correct_answer": "502,4 cm³",
+      "theme": "cito_niveau"
     },
     {
-      "id": 44,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000044",
       "question": {
-        "text": "L-vormige tuin: 11×9 m + 4×2 m. Totale oppervlakte?"
+        "text": "Vierkant zijde 9 cm. Diagonaal ongeveer?"
       },
       "options": [
-        {
-          "text": "107 m²"
-        },
-        {
-          "text": "99 m²"
-        },
-        {
-          "text": "8 m²"
-        },
-        {
-          "text": "127 m²"
-        }
+        "9 cm",
+        "18 cm",
+        "4,5 cm",
+        "13 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (11×9) + (4×2)"
+      "correct_answer": "13 cm",
+      "theme": "cito_niveau"
     },
     {
-      "id": 45,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000045",
       "question": {
-        "text": "L-vormige tuin: 13×7 m + 5×4 m. Totale oppervlakte?"
+        "text": "Rechthoek 6×8 cm. Diagonaal ongeveer?"
       },
       "options": [
-        {
-          "text": "111 m²"
-        },
-        {
-          "text": "91 m²"
-        },
-        {
-          "text": "20 m²"
-        },
-        {
-          "text": "131 m²"
-        }
+        "10 cm",
+        "8 cm",
+        "14 cm",
+        "6 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (13×7) + (5×4)"
+      "correct_answer": "10 cm",
+      "theme": "cito_niveau"
     },
     {
-      "id": 46,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000046",
       "question": {
-        "text": "L-vormige tuin: 10×6 m + 7×3 m. Totale oppervlakte?"
+        "text": "Punt (4, -3) in kwadrant?"
       },
       "options": [
-        {
-          "text": "81 m²"
-        },
-        {
-          "text": "60 m²"
-        },
-        {
-          "text": "21 m²"
-        },
-        {
-          "text": "101 m²"
-        }
+        "II",
+        "III",
+        "I",
+        "IV"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (10×6) + (7×3)"
+      "correct_answer": "IV",
+      "theme": "cito_niveau"
     },
     {
-      "id": 47,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000047",
       "question": {
-        "text": "L-vormige tuin: 12×7 m + 4×3 m. Totale oppervlakte?"
+        "text": "Een hoek van 125° is..."
       },
       "options": [
-        {
-          "text": "96 m²"
-        },
-        {
-          "text": "84 m²"
-        },
-        {
-          "text": "12 m²"
-        },
-        {
-          "text": "116 m²"
-        }
+        "stomp",
+        "gestrekt",
+        "scherp",
+        "recht"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (12×7) + (4×3)"
+      "correct_answer": "stomp",
+      "theme": "cito_niveau"
     },
     {
-      "id": 48,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000048",
       "question": {
-        "text": "L-vormige tuin: 14×5 m + 5×3 m. Totale oppervlakte?"
+        "text": "Kubus: hoeveel ribben?"
       },
       "options": [
-        {
-          "text": "85 m²"
-        },
-        {
-          "text": "70 m²"
-        },
-        {
-          "text": "15 m²"
-        },
-        {
-          "text": "105 m²"
-        }
+        "8",
+        "6",
+        "12",
+        "10"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (14×5) + (5×3)"
+      "correct_answer": "12",
+      "theme": "cito_niveau"
     },
     {
-      "id": 49,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000049",
       "question": {
-        "text": "L-vormige tuin: 8×8 m + 3×3 m. Totale oppervlakte?"
+        "text": "Som van hoeken in driehoek?"
       },
       "options": [
-        {
-          "text": "73 m²"
-        },
-        {
-          "text": "64 m²"
-        },
-        {
-          "text": "9 m²"
-        },
-        {
-          "text": "93 m²"
-        }
+        "180°",
+        "270°",
+        "90°",
+        "360°"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (8×8) + (3×3)"
+      "correct_answer": "180°",
+      "theme": "cito_niveau"
     },
     {
-      "id": 50,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000050",
       "question": {
-        "text": "L-vormige tuin: 10×8 m + 5×3 m. Totale oppervlakte?"
+        "text": "4,5 ton = hoeveel kg?"
       },
       "options": [
-        {
-          "text": "95 m²"
-        },
-        {
-          "text": "80 m²"
-        },
-        {
-          "text": "15 m²"
-        },
-        {
-          "text": "115 m²"
-        }
+        "45000 kg",
+        "450 kg",
+        "45 kg",
+        "4500 kg"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (10×8) + (5×3)"
+      "correct_answer": "4500 kg",
+      "theme": "cito_niveau"
     }
   ],
   "settings": {

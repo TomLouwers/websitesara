@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0.0",
   "metadata": {
-    "id": "gb_groep5_meetkunde_m5",
+    "id": "gb_groep5_meetkunde_m5_core",
     "type": "multiple_choice",
     "category": "gb",
     "grade": 5,
@@ -10,12 +10,12 @@
     "domain": "meetkunde",
     "slo_alignment": {
       "kerndoelen": [
-        "K28",
         "K32",
         "K33"
       ],
       "rekendomeinen": [
-        "meetkunde"
+        "meetkunde",
+        "meten"
       ],
       "tussendoelen": [
         "5MM1",
@@ -35,1354 +35,704 @@
   },
   "items": [
     {
-      "id": 1,
-      "type": "multiple_choice",
-      "theme": "kilometer",
+      "id": "ex_000001",
       "question": {
-        "text": "De afstand van Amsterdam naar Utrecht is ongeveer 45 km. Hoeveel meter is dat?"
+        "text": "Hoeveel meter is 1 kilometer?"
       },
       "options": [
-        {
-          "text": "450 meter"
-        },
-        {
-          "text": "4500 meter"
-        },
-        {
-          "text": "45000 meter"
-        },
-        {
-          "text": "450000 meter"
-        }
+        "100 meter",
+        "500 meter",
+        "10000 meter",
+        "1000 meter"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1 kilometer = 1000 meter. Dus 45 × 1000 = ?"
+      "correct_answer": "1000 meter",
+      "theme": "kilometer"
     },
     {
-      "id": 2,
-      "type": "multiple_choice",
-      "theme": "kilometer",
+      "id": "ex_000002",
       "question": {
-        "text": "Sanne fietst een rondje van 3 kilometer. Hoeveel meter is dat?"
+        "text": "5000 meter = hoeveel kilometer?"
       },
       "options": [
-        {
-          "text": "30 meter"
-        },
-        {
-          "text": "300 meter"
-        },
-        {
-          "text": "3000 meter"
-        },
-        {
-          "text": "30000 meter"
-        }
+        "4.5 km",
+        "50.0 km",
+        "5.5 km",
+        "5 km"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Vermenigvuldig het aantal kilometers met 1000"
+      "correct_answer": "5 km",
+      "theme": "kilometer"
     },
     {
-      "id": 3,
-      "type": "multiple_choice",
-      "theme": "kilometer",
+      "id": "ex_000003",
       "question": {
-        "text": "Een atletiekbaan is 400 meter lang. Hoeveel kilometer moet je lopen voor 2,5 kilometer?"
+        "text": "2000 meter = hoeveel kilometer?"
       },
       "options": [
-        {
-          "text": "2 rondjes"
-        },
-        {
-          "text": "4 rondjes"
-        },
-        {
-          "text": "6 rondjes"
-        },
-        {
-          "text": "10 rondjes"
-        }
+        "2 km",
+        "1.5 km",
+        "20.0 km",
+        "2.5 km"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "2,5 km = 2500 meter. Hoeveel keer past 400 in 2500?"
+      "correct_answer": "2 km",
+      "theme": "kilometer"
     },
     {
-      "id": 4,
-      "type": "multiple_choice",
-      "theme": "ton",
+      "id": "ex_000004",
       "question": {
-        "text": "Een olifant weegt ongeveer 5 ton. Hoeveel kilogram is dat?"
+        "text": "2500 meter = hoeveel kilometer?"
       },
       "options": [
-        {
-          "text": "50 kg"
-        },
-        {
-          "text": "500 kg"
-        },
-        {
-          "text": "5000 kg"
-        },
-        {
-          "text": "50000 kg"
-        }
+        "2.0 km",
+        "3.0 km",
+        "25.0 km",
+        "2.5 km"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1 ton = 1000 kilogram. Dus 5 × 1000 = ?"
+      "correct_answer": "2.5 km",
+      "theme": "kilometer"
     },
     {
-      "id": 5,
-      "type": "multiple_choice",
-      "theme": "ton",
+      "id": "ex_000005",
       "question": {
-        "text": "Een vrachtwagen mag maximaal 12 ton vervoeren. Hoeveel kilogram is dat?"
+        "text": "1 km = hoeveel meter?"
       },
       "options": [
-        {
-          "text": "1200 kg"
-        },
-        {
-          "text": "12000 kg"
-        },
-        {
-          "text": "120000 kg"
-        },
-        {
-          "text": "1200000 kg"
-        }
+        "100 meter",
+        "1000 meter",
+        "900 meter",
+        "1100 meter"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Vermenigvuldig het aantal tonnen met 1000"
+      "correct_answer": "1000 meter",
+      "theme": "kilometer"
     },
     {
-      "id": 6,
-      "type": "multiple_choice",
-      "theme": "ton",
+      "id": "ex_000006",
       "question": {
-        "text": "Een kleine auto weegt 1500 kg. Hoeveel ton is dat?"
+        "text": "1000 meter = hoeveel kilometer?"
       },
       "options": [
-        {
-          "text": "0,5 ton"
-        },
-        {
-          "text": "1,5 ton"
-        },
-        {
-          "text": "15 ton"
-        },
-        {
-          "text": "150 ton"
-        }
+        "1.5 km",
+        "2.0 km",
+        "1 km",
+        "10.0 km"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Deel het aantal kilogram door 1000"
+      "correct_answer": "1 km",
+      "theme": "kilometer"
     },
     {
-      "id": 7,
-      "type": "multiple_choice",
-      "theme": "inhoud",
+      "id": "ex_000007",
       "question": {
-        "text": "Een fles frisdrank bevat 500 ml. Hoeveel centiliter is dat?"
+        "text": "2 km = hoeveel meter?"
       },
       "options": [
-        {
-          "text": "5 cl"
-        },
-        {
-          "text": "50 cl"
-        },
-        {
-          "text": "500 cl"
-        },
-        {
-          "text": "5000 cl"
-        }
+        "200 meter",
+        "2000 meter",
+        "1900 meter",
+        "2100 meter"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1 cl = 10 ml. Dus 500 ml = 50 cl"
+      "correct_answer": "2000 meter",
+      "theme": "kilometer"
     },
     {
-      "id": 8,
-      "type": "multiple_choice",
-      "theme": "inhoud",
+      "id": "ex_000008",
       "question": {
-        "text": "Een pak melk bevat 1 liter. Hoeveel milliliter is dat?"
+        "text": "8 km = hoeveel meter?"
       },
       "options": [
-        {
-          "text": "10 ml"
-        },
-        {
-          "text": "100 ml"
-        },
-        {
-          "text": "1000 ml"
-        },
-        {
-          "text": "10000 ml"
-        }
+        "800 meter",
+        "8100 meter",
+        "8000 meter",
+        "7900 meter"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1 liter = 1000 milliliter"
+      "correct_answer": "8000 meter",
+      "theme": "kilometer"
     },
     {
-      "id": 9,
-      "type": "multiple_choice",
-      "theme": "inhoud",
+      "id": "ex_000009",
       "question": {
-        "text": "Een glas water bevat 2,5 deciliter. Hoeveel milliliter is dat?"
+        "text": "9 km = hoeveel meter?"
       },
       "options": [
-        {
-          "text": "25 ml"
-        },
-        {
-          "text": "250 ml"
-        },
-        {
-          "text": "2500 ml"
-        },
-        {
-          "text": "25000 ml"
-        }
+        "9100 meter",
+        "900 meter",
+        "9000 meter",
+        "8900 meter"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1 dl = 100 ml. Dus 2,5 × 100 = ?"
+      "correct_answer": "9000 meter",
+      "theme": "kilometer"
     },
     {
-      "id": 10,
-      "type": "multiple_choice",
-      "theme": "inhoud",
+      "id": "ex_000010",
       "question": {
-        "text": "Een drinkbeker bevat 200 ml. Hoeveel liter is dat?"
+        "text": "4000 meter = hoeveel kilometer?"
       },
       "options": [
-        {
-          "text": "0,02 liter"
-        },
-        {
-          "text": "0,2 liter"
-        },
-        {
-          "text": "2 liter"
-        },
-        {
-          "text": "20 liter"
-        }
+        "4 km",
+        "40.0 km",
+        "4.5 km",
+        "3.5 km"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1 liter = 1000 ml. Deel 200 door 1000"
+      "correct_answer": "4 km",
+      "theme": "kilometer"
     },
     {
-      "id": 11,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_begrip",
+      "id": "ex_000011",
       "question": {
-        "text": "Hoeveel vierkante centimeters (cm²) bedekt deze rechthoek op het rooster? (5 hokjes lang en 3 hokjes breed)"
+        "text": "500 meter = hoeveel kilometer?"
       },
       "options": [
-        {
-          "text": "8 cm²"
-        },
-        {
-          "text": "12 cm²"
-        },
-        {
-          "text": "15 cm²"
-        },
-        {
-          "text": "18 cm²"
-        }
+        "1.5 km",
+        "1.0 km",
+        "5.0 km",
+        "0.5 km"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Tel alle hokjes in de rechthoek: 5 × 3 = ?"
+      "correct_answer": "0.5 km",
+      "theme": "kilometer"
     },
     {
-      "id": 12,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_begrip",
+      "id": "ex_000012",
       "question": {
-        "text": "Een vierkant op roosterpapier is 4 hokjes lang en 4 hokjes breed. Hoeveel cm² is de oppervlakte?"
+        "text": "4 km = hoeveel meter?"
       },
       "options": [
-        {
-          "text": "8 cm²"
-        },
-        {
-          "text": "12 cm²"
-        },
-        {
-          "text": "16 cm²"
-        },
-        {
-          "text": "20 cm²"
-        }
+        "400 meter",
+        "4000 meter",
+        "4100 meter",
+        "3900 meter"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Tel alle hokjes: 4 × 4 = ?"
+      "correct_answer": "4000 meter",
+      "theme": "kilometer"
     },
     {
-      "id": 13,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_begrip",
+      "id": "ex_000013",
       "question": {
-        "text": "Een L-vorm op roosterpapier bestaat uit 6 hokjes. Hoeveel cm² is de oppervlakte?"
+        "text": "6 km = hoeveel meter?"
       },
       "options": [
-        {
-          "text": "3 cm²"
-        },
-        {
-          "text": "6 cm²"
-        },
-        {
-          "text": "9 cm²"
-        },
-        {
-          "text": "12 cm²"
-        }
+        "5900 meter",
+        "6000 meter",
+        "6100 meter",
+        "600 meter"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Tel elk hokje: elk hokje is 1 cm²"
+      "correct_answer": "6000 meter",
+      "theme": "kilometer"
     },
     {
-      "id": 14,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_begrip",
+      "id": "ex_000014",
       "question": {
-        "text": "Welke rechthoek heeft de grootste oppervlakte?"
+        "text": "2000 kg = hoeveel ton?"
       },
       "options": [
-        {
-          "text": "6 hokjes lang en 2 hokjes breed"
-        },
-        {
-          "text": "5 hokjes lang en 3 hokjes breed"
-        },
-        {
-          "text": "4 hokjes lang en 4 hokjes breed"
-        },
-        {
-          "text": "7 hokjes lang en 2 hokjes breed"
-        }
+        "2.5 ton",
+        "1.5 ton",
+        "20.0 ton",
+        "2 ton"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Bereken: A=12, B=15, C=16, D=14. Welke is het grootst?"
+      "correct_answer": "2 ton",
+      "theme": "ton"
     },
     {
-      "id": 15,
-      "type": "multiple_choice",
-      "theme": "kilometer",
+      "id": "ex_000015",
       "question": {
-        "text": "De Elfstedentocht is 200 km lang. Hoeveel meter is dat?"
+        "text": "1000 kg = hoeveel ton?"
       },
       "options": [
-        {
-          "text": "2000 meter"
-        },
-        {
-          "text": "20000 meter"
-        },
-        {
-          "text": "200000 meter"
-        },
-        {
-          "text": "2000000 meter"
-        }
+        "2.0 ton",
+        "1.5 ton",
+        "1 ton",
+        "10.0 ton"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Vermenigvuldig 200 met 1000"
+      "correct_answer": "1 ton",
+      "theme": "ton"
     },
     {
-      "id": 16,
-      "type": "multiple_choice",
-      "theme": "ton",
+      "id": "ex_000016",
       "question": {
-        "text": "Een container weegt 8500 kg. Hoeveel ton is dat?"
+        "text": "5000 kg = hoeveel ton?"
       },
       "options": [
-        {
-          "text": "0,85 ton"
-        },
-        {
-          "text": "8,5 ton"
-        },
-        {
-          "text": "85 ton"
-        },
-        {
-          "text": "850 ton"
-        }
+        "50.0 ton",
+        "5.5 ton",
+        "4.5 ton",
+        "5 ton"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Deel 8500 door 1000"
+      "correct_answer": "5 ton",
+      "theme": "ton"
     },
     {
-      "id": 17,
-      "type": "multiple_choice",
-      "theme": "inhoud",
+      "id": "ex_000017",
       "question": {
-        "text": "Een medicijnflesje bevat 75 cl. Hoeveel milliliter is dat?"
+        "text": "Hoeveel kilogram is 1 ton?"
       },
       "options": [
-        {
-          "text": "7,5 ml"
-        },
-        {
-          "text": "75 ml"
-        },
-        {
-          "text": "750 ml"
-        },
-        {
-          "text": "7500 ml"
-        }
+        "10000 kg",
+        "100 kg",
+        "500 kg",
+        "1000 kg"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1 cl = 10 ml. Dus 75 × 10 = ?"
+      "correct_answer": "1000 kg",
+      "theme": "ton"
     },
     {
-      "id": 18,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_begrip",
+      "id": "ex_000018",
       "question": {
-        "text": "Een trapvorm op roosterpapier heeft 10 hokjes. Hoeveel cm² is dat?"
+        "text": "5 ton = hoeveel kilogram?"
       },
       "options": [
-        {
-          "text": "5 cm²"
-        },
-        {
-          "text": "10 cm²"
-        },
-        {
-          "text": "15 cm²"
-        },
-        {
-          "text": "20 cm²"
-        }
+        "5100 kg",
+        "4900 kg",
+        "500 kg",
+        "5000 kg"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Tel de hokjes. Elk hokje is 1 cm²"
+      "correct_answer": "5000 kg",
+      "theme": "ton"
     },
     {
-      "id": 19,
-      "type": "multiple_choice",
-      "theme": "kilometer",
+      "id": "ex_000019",
       "question": {
-        "text": "Een marathon is 42 km en 195 meter. Hoeveel meter is de hele marathon?"
+        "text": "2 ton = hoeveel kilogram?"
       },
       "options": [
-        {
-          "text": "4195 meter"
-        },
-        {
-          "text": "42195 meter"
-        },
-        {
-          "text": "421950 meter"
-        },
-        {
-          "text": "4219500 meter"
-        }
+        "1900 kg",
+        "2100 kg",
+        "200 kg",
+        "2000 kg"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "42 km = 42000 meter. Tel er 195 meter bij op"
+      "correct_answer": "2000 kg",
+      "theme": "ton"
     },
     {
-      "id": 20,
-      "type": "multiple_choice",
-      "theme": "inhoud",
+      "id": "ex_000020",
       "question": {
-        "text": "Een beker soep bevat 3 deciliter. Hoeveel liter is dat?"
+        "text": "1 ton = hoeveel kilogram?"
       },
       "options": [
-        {
-          "text": "0,03 liter"
-        },
-        {
-          "text": "0,3 liter"
-        },
-        {
-          "text": "3 liter"
-        },
-        {
-          "text": "30 liter"
-        }
+        "100 kg",
+        "1000 kg",
+        "1100 kg",
+        "900 kg"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "10 dl = 1 liter. Dus 3 dl = ?"
+      "correct_answer": "1000 kg",
+      "theme": "ton"
     },
     {
-      "id": 21,
-      "type": "multiple_choice",
-      "theme": "kilometer",
+      "id": "ex_000021",
       "question": {
-        "text": "Een fietstocht is 8 km lang. Hoeveel meter is dat?"
+        "text": "500 kg = hoeveel ton?"
       },
       "options": [
-        {
-          "text": "80 meter"
-        },
-        {
-          "text": "800 meter"
-        },
-        {
-          "text": "8000 meter"
-        },
-        {
-          "text": "80000 meter"
-        }
+        "0.5 ton",
+        "1.0 ton",
+        "1.5 ton",
+        "5.0 ton"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "8 × 1000 = 8000 meter"
+      "correct_answer": "0.5 ton",
+      "theme": "ton"
     },
     {
-      "id": 22,
-      "type": "multiple_choice",
-      "theme": "ton",
+      "id": "ex_000022",
       "question": {
-        "text": "Een walvis weegt ongeveer 20 ton. Hoeveel kilogram is dat?"
+        "text": "2500 kg = hoeveel ton?"
       },
       "options": [
-        {
-          "text": "200 kg"
-        },
-        {
-          "text": "2000 kg"
-        },
-        {
-          "text": "20000 kg"
-        },
-        {
-          "text": "200000 kg"
-        }
+        "25.0 ton",
+        "2.0 ton",
+        "2.5 ton",
+        "3.0 ton"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "20 × 1000 = 20000 kg"
+      "correct_answer": "2.5 ton",
+      "theme": "ton"
     },
     {
-      "id": 23,
-      "type": "multiple_choice",
-      "theme": "inhoud",
+      "id": "ex_000023",
       "question": {
-        "text": "Een medicijnlepel bevat 10 ml. Hoeveel cl is dat?"
+        "text": "1500 kg = hoeveel ton?"
       },
       "options": [
-        {
-          "text": "0,1 cl"
-        },
-        {
-          "text": "1 cl"
-        },
-        {
-          "text": "10 cl"
-        },
-        {
-          "text": "100 cl"
-        }
+        "15.0 ton",
+        "1.5 ton",
+        "2.0 ton",
+        "1.0 ton"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "10 ml = 1 cl"
+      "correct_answer": "1.5 ton",
+      "theme": "ton"
     },
     {
-      "id": 24,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_begrip",
+      "id": "ex_000024",
       "question": {
-        "text": "Een rechthoek op roosterpapier is 8 hokjes lang en 3 hokjes breed. Hoeveel cm² is dat?"
+        "text": "3 ton = hoeveel kilogram?"
       },
       "options": [
-        {
-          "text": "11 cm²"
-        },
-        {
-          "text": "22 cm²"
-        },
-        {
-          "text": "24 cm²"
-        },
-        {
-          "text": "30 cm²"
-        }
+        "3000 kg",
+        "2900 kg",
+        "3100 kg",
+        "300 kg"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Tel alle hokjes: 8 × 3 = 24"
+      "correct_answer": "3000 kg",
+      "theme": "ton"
     },
     {
-      "id": 25,
-      "type": "multiple_choice",
-      "theme": "kilometer",
+      "id": "ex_000025",
       "question": {
-        "text": "De afstand van jouw huis naar oma is 12 km en 500 meter. Hoeveel meter is dat samen?"
+        "text": "4 ton = hoeveel kilogram?"
       },
       "options": [
-        {
-          "text": "1250 meter"
-        },
-        {
-          "text": "12500 meter"
-        },
-        {
-          "text": "125000 meter"
-        },
-        {
-          "text": "1250000 meter"
-        }
+        "4000 kg",
+        "3900 kg",
+        "4100 kg",
+        "400 kg"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "12 km = 12000 meter. Plus 500 meter = ?"
+      "correct_answer": "4000 kg",
+      "theme": "ton"
     },
     {
-      "id": 26,
-      "type": "multiple_choice",
-      "theme": "ton",
+      "id": "ex_000026",
       "question": {
-        "text": "Een bestelbus weegt 3500 kg. Hoeveel ton is dat?"
+        "text": "3000 kg = hoeveel ton?"
       },
       "options": [
-        {
-          "text": "0,35 ton"
-        },
-        {
-          "text": "3,5 ton"
-        },
-        {
-          "text": "35 ton"
-        },
-        {
-          "text": "350 ton"
-        }
+        "30.0 ton",
+        "2.5 ton",
+        "3 ton",
+        "3.5 ton"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Deel 3500 door 1000"
+      "correct_answer": "3 ton",
+      "theme": "ton"
     },
     {
-      "id": 27,
-      "type": "multiple_choice",
-      "theme": "inhoud",
+      "id": "ex_000027",
       "question": {
-        "text": "Een badkuip bevat 120 liter water. Hoeveel deciliter is dat?"
+        "text": "251 ml = hoeveel cl?"
       },
       "options": [
-        {
-          "text": "12 dl"
-        },
-        {
-          "text": "120 dl"
-        },
-        {
-          "text": "1200 dl"
-        },
-        {
-          "text": "12000 dl"
-        }
+        "251 cl",
+        "26.10 cl",
+        "24.10 cl",
+        "25.10 cl"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1 liter = 10 dl. Dus 120 × 10 = ?"
+      "correct_answer": "25.10 cl",
+      "theme": "inhoud_eenheden"
     },
     {
-      "id": 28,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_begrip",
+      "id": "ex_000028",
       "question": {
-        "text": "Een vierkant op roosterpapier is 6 hokjes lang en 6 hokjes breed. Hoeveel cm² is de oppervlakte?"
+        "text": "70 cl = hoeveel l?"
       },
       "options": [
-        {
-          "text": "12 cm²"
-        },
-        {
-          "text": "24 cm²"
-        },
-        {
-          "text": "30 cm²"
-        },
-        {
-          "text": "36 cm²"
-        }
+        "1.70 l",
+        "2.70 l",
+        "70 l",
+        "0.70 l"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 3
-      },
-      "hint": "Tel alle hokjes: 6 × 6 = 36"
+      "correct_answer": "0.70 l",
+      "theme": "inhoud_eenheden"
     },
     {
-      "id": 29,
-      "type": "multiple_choice",
-      "theme": "kilometer",
+      "id": "ex_000029",
       "question": {
-        "text": "Een autorit is 75 km. Hoeveel meter is dat?"
+        "text": "256 ml = hoeveel cl?"
       },
       "options": [
-        {
-          "text": "750 meter"
-        },
-        {
-          "text": "7500 meter"
-        },
-        {
-          "text": "75000 meter"
-        },
-        {
-          "text": "750000 meter"
-        }
+        "24.60 cl",
+        "25.60 cl",
+        "256 cl",
+        "26.60 cl"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Vermenigvuldig 75 met 1000"
+      "correct_answer": "25.60 cl",
+      "theme": "inhoud_eenheden"
     },
     {
-      "id": 30,
-      "type": "multiple_choice",
-      "theme": "ton",
+      "id": "ex_000030",
       "question": {
-        "text": "Een hijskraan kan 15 ton tillen. Hoeveel kilogram is dat?"
+        "text": "216 ml = hoeveel cl?"
       },
       "options": [
-        {
-          "text": "150 kg"
-        },
-        {
-          "text": "1500 kg"
-        },
-        {
-          "text": "15000 kg"
-        },
-        {
-          "text": "150000 kg"
-        }
+        "21.60 cl",
+        "22.60 cl",
+        "216 cl",
+        "20.60 cl"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "15 × 1000 = 15000 kg"
+      "correct_answer": "21.60 cl",
+      "theme": "inhoud_eenheden"
     },
     {
-      "id": 31,
-      "type": "multiple_choice",
-      "theme": "inhoud",
+      "id": "ex_000031",
       "question": {
-        "text": "Een fles shampoo bevat 250 ml. Hoeveel deciliter is dat?"
+        "text": "508 ml = hoeveel l?"
       },
       "options": [
-        {
-          "text": "0,25 dl"
-        },
-        {
-          "text": "2,5 dl"
-        },
-        {
-          "text": "25 dl"
-        },
-        {
-          "text": "250 dl"
-        }
+        "0.51 l",
+        "2.51 l",
+        "10.51 l",
+        "508 l"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1 dl = 100 ml. Dus 250 ml = 2,5 dl"
+      "correct_answer": "0.51 l",
+      "theme": "inhoud_eenheden"
     },
     {
-      "id": 32,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_begrip",
+      "id": "ex_000032",
       "question": {
-        "text": "Hoeveel cm² is een H-vorm die bestaat uit 11 hokjes?"
+        "text": "732 ml = hoeveel l?"
       },
       "options": [
-        {
-          "text": "8 cm²"
-        },
-        {
-          "text": "10 cm²"
-        },
-        {
-          "text": "11 cm²"
-        },
-        {
-          "text": "14 cm²"
-        }
+        "0.73 l",
+        "2.73 l",
+        "732 l",
+        "10.73 l"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Tel elk hokje. Elk hokje = 1 cm²"
+      "correct_answer": "0.73 l",
+      "theme": "inhoud_eenheden"
     },
     {
-      "id": 33,
-      "type": "multiple_choice",
-      "theme": "kilometer",
+      "id": "ex_000033",
       "question": {
-        "text": "Een renbaan is 5000 meter lang. Hoeveel kilometer is dat?"
+        "text": "81 cl = hoeveel dl?"
       },
       "options": [
-        {
-          "text": "0,5 km"
-        },
-        {
-          "text": "5 km"
-        },
-        {
-          "text": "50 km"
-        },
-        {
-          "text": "500 km"
-        }
+        "7.10 dl",
+        "8.10 dl",
+        "81 dl",
+        "9.10 dl"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Deel 5000 door 1000"
+      "correct_answer": "8.10 dl",
+      "theme": "inhoud_eenheden"
     },
     {
-      "id": 34,
-      "type": "multiple_choice",
-      "theme": "ton",
+      "id": "ex_000034",
       "question": {
-        "text": "Een neushoorn weegt 2200 kg. Hoeveel ton is dat?"
+        "text": "544 ml = hoeveel l?"
       },
       "options": [
-        {
-          "text": "0,22 ton"
-        },
-        {
-          "text": "2,2 ton"
-        },
-        {
-          "text": "22 ton"
-        },
-        {
-          "text": "220 ton"
-        }
+        "10.54 l",
+        "2.54 l",
+        "544 l",
+        "0.54 l"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Deel 2200 door 1000"
+      "correct_answer": "0.54 l",
+      "theme": "inhoud_eenheden"
     },
     {
-      "id": 35,
-      "type": "multiple_choice",
-      "theme": "inhoud",
+      "id": "ex_000035",
       "question": {
-        "text": "Een aquarium bevat 80 liter. Hoeveel centiliter is dat?"
+        "text": "-8 dl = hoeveel l?"
       },
       "options": [
-        {
-          "text": "80 cl"
-        },
-        {
-          "text": "800 cl"
-        },
-        {
-          "text": "8000 cl"
-        },
-        {
-          "text": "80000 cl"
-        }
+        "0.20 l",
+        "-8 l",
+        "-0.80 l",
+        "1.20 l"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "1 liter = 100 cl. Dus 80 × 100 = ?"
+      "correct_answer": "-0.80 l",
+      "theme": "inhoud_eenheden"
     },
     {
-      "id": 36,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_begrip",
+      "id": "ex_000036",
       "question": {
-        "text": "Een rechthoek op roosterpapier is 9 hokjes lang en 4 hokjes breed. Hoeveel cm²?"
+        "text": "96 cl = hoeveel dl?"
       },
       "options": [
-        {
-          "text": "13 cm²"
-        },
-        {
-          "text": "26 cm²"
-        },
-        {
-          "text": "36 cm²"
-        },
-        {
-          "text": "45 cm²"
-        }
+        "10.60 dl",
+        "9.60 dl",
+        "8.60 dl",
+        "96 dl"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "9 × 4 = 36 cm²"
+      "correct_answer": "9.60 dl",
+      "theme": "inhoud_eenheden"
     },
     {
-      "id": 37,
-      "type": "multiple_choice",
-      "theme": "kilometer",
+      "id": "ex_000037",
       "question": {
-        "text": "Een wielerwedstrijd is 150 km. Hoeveel meter moeten de renners fietsen?"
+        "text": "249 ml = hoeveel cl?"
       },
       "options": [
-        {
-          "text": "1500 meter"
-        },
-        {
-          "text": "15000 meter"
-        },
-        {
-          "text": "150000 meter"
-        },
-        {
-          "text": "1500000 meter"
-        }
+        "25.90 cl",
+        "249 cl",
+        "24.90 cl",
+        "23.90 cl"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "150 × 1000 = 150000 meter"
+      "correct_answer": "24.90 cl",
+      "theme": "inhoud_eenheden"
     },
     {
-      "id": 38,
-      "type": "multiple_choice",
-      "theme": "ton",
+      "id": "ex_000038",
       "question": {
-        "text": "Een trein weegt 400 ton. Hoeveel kilogram is dat?"
+        "text": "487 ml = hoeveel l?"
       },
       "options": [
-        {
-          "text": "4000 kg"
-        },
-        {
-          "text": "40000 kg"
-        },
-        {
-          "text": "400000 kg"
-        },
-        {
-          "text": "4000000 kg"
-        }
+        "487 l",
+        "2.49 l",
+        "0.49 l",
+        "10.49 l"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "400 × 1000 = 400000 kg"
+      "correct_answer": "0.49 l",
+      "theme": "inhoud_eenheden"
     },
     {
-      "id": 39,
-      "type": "multiple_choice",
-      "theme": "inhoud",
+      "id": "ex_000039",
       "question": {
-        "text": "Een fles azijn bevat 5 deciliter. Hoeveel milliliter is dat?"
+        "text": "Een rechthoek op roosterpapier is 7 hokjes lang en 6 hokjes breed. Hoeveel cm² bedekt deze figuur?"
       },
       "options": [
-        {
-          "text": "50 ml"
-        },
-        {
-          "text": "500 ml"
-        },
-        {
-          "text": "5000 ml"
-        },
-        {
-          "text": "50000 ml"
-        }
+        "44 cm²",
+        "42 cm²",
+        "40 cm²",
+        "13 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1 dl = 100 ml. Dus 5 × 100 = ?"
+      "correct_answer": "42 cm²",
+      "theme": "oppervlakte_tellen"
     },
     {
-      "id": 40,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_begrip",
+      "id": "ex_000040",
       "question": {
-        "text": "Een C-vorm op roosterpapier heeft 9 hokjes. Hoeveel cm²?"
+        "text": "Een rechthoek op roosterpapier is 8 hokjes lang en 5 hokjes breed. Hoeveel cm² bedekt deze figuur?"
       },
       "options": [
-        {
-          "text": "6 cm²"
-        },
-        {
-          "text": "8 cm²"
-        },
-        {
-          "text": "9 cm²"
-        },
-        {
-          "text": "12 cm²"
-        }
+        "38 cm²",
+        "40 cm²",
+        "42 cm²",
+        "13 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Tel elk hokje. 9 hokjes = 9 cm²"
+      "correct_answer": "40 cm²",
+      "theme": "oppervlakte_tellen"
     },
     {
-      "id": 41,
-      "type": "multiple_choice",
-      "theme": "kilometer",
+      "id": "ex_000041",
       "question": {
-        "text": "Je loopt 3500 meter. Hoeveel kilometer is dat?"
+        "text": "Een rechthoek op roosterpapier is 8 hokjes lang en 4 hokjes breed. Hoeveel cm² bedekt deze figuur?"
       },
       "options": [
-        {
-          "text": "0,35 km"
-        },
-        {
-          "text": "3,5 km"
-        },
-        {
-          "text": "35 km"
-        },
-        {
-          "text": "350 km"
-        }
+        "34 cm²",
+        "32 cm²",
+        "12 cm²",
+        "30 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Deel 3500 door 1000"
+      "correct_answer": "32 cm²",
+      "theme": "oppervlakte_tellen"
     },
     {
-      "id": 42,
-      "type": "multiple_choice",
-      "theme": "ton",
+      "id": "ex_000042",
       "question": {
-        "text": "Een zandberg weegt 50 ton. Hoeveel kilogram zand is dat?"
+        "text": "Een rechthoek op roosterpapier is 5 hokjes lang en 2 hokjes breed. Hoeveel cm² bedekt deze figuur?"
       },
       "options": [
-        {
-          "text": "500 kg"
-        },
-        {
-          "text": "5000 kg"
-        },
-        {
-          "text": "50000 kg"
-        },
-        {
-          "text": "500000 kg"
-        }
+        "7 cm²",
+        "10 cm²",
+        "8 cm²",
+        "12 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "50 × 1000 = 50000 kg"
+      "correct_answer": "10 cm²",
+      "theme": "oppervlakte_tellen"
     },
     {
-      "id": 43,
-      "type": "multiple_choice",
-      "theme": "inhoud",
+      "id": "ex_000043",
       "question": {
-        "text": "Een waterkan bevat 1,8 liter. Hoeveel deciliter is dat?"
+        "text": "Een rechthoek op roosterpapier is 8 hokjes lang en 6 hokjes breed. Hoeveel cm² bedekt deze figuur?"
       },
       "options": [
-        {
-          "text": "1,8 dl"
-        },
-        {
-          "text": "18 dl"
-        },
-        {
-          "text": "180 dl"
-        },
-        {
-          "text": "1800 dl"
-        }
+        "46 cm²",
+        "50 cm²",
+        "48 cm²",
+        "14 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1 liter = 10 dl. Dus 1,8 × 10 = ?"
+      "correct_answer": "48 cm²",
+      "theme": "oppervlakte_tellen"
     },
     {
-      "id": 44,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_begrip",
+      "id": "ex_000044",
       "question": {
-        "text": "Een vierkant is 7 hokjes lang. Wat is de oppervlakte?"
+        "text": "Een rechthoek op roosterpapier is 4 hokjes lang en 2 hokjes breed. Hoeveel cm² bedekt deze figuur?"
       },
       "options": [
-        {
-          "text": "14 cm²"
-        },
-        {
-          "text": "28 cm²"
-        },
-        {
-          "text": "49 cm²"
-        },
-        {
-          "text": "56 cm²"
-        }
+        "6 cm²",
+        "6 cm²",
+        "8 cm²",
+        "10 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "7 × 7 = 49 cm²"
+      "correct_answer": "8 cm²",
+      "theme": "oppervlakte_tellen"
     },
     {
-      "id": 45,
-      "type": "multiple_choice",
-      "theme": "kilometer",
+      "id": "ex_000045",
       "question": {
-        "text": "Een bergpad is 6 km en 250 meter. Hoeveel meter is dat totaal?"
+        "text": "Een rechthoek op roosterpapier is 5 hokjes lang en 6 hokjes breed. Hoeveel cm² bedekt deze figuur?"
       },
       "options": [
-        {
-          "text": "625 meter"
-        },
-        {
-          "text": "6250 meter"
-        },
-        {
-          "text": "62500 meter"
-        },
-        {
-          "text": "625000 meter"
-        }
+        "30 cm²",
+        "11 cm²",
+        "28 cm²",
+        "32 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "6 km = 6000 meter. Plus 250 meter = ?"
+      "correct_answer": "30 cm²",
+      "theme": "oppervlakte_tellen"
     },
     {
-      "id": 46,
-      "type": "multiple_choice",
-      "theme": "inhoud",
+      "id": "ex_000046",
       "question": {
-        "text": "Een medicijnflesje bevat 125 ml. Hoeveel cl is dat?"
+        "text": "Een rechthoek op roosterpapier is 4 hokjes lang en 3 hokjes breed. Hoeveel cm² bedekt deze figuur?"
       },
       "options": [
-        {
-          "text": "1,25 cl"
-        },
-        {
-          "text": "12,5 cl"
-        },
-        {
-          "text": "125 cl"
-        },
-        {
-          "text": "1250 cl"
-        }
+        "14 cm²",
+        "7 cm²",
+        "12 cm²",
+        "10 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "1 cl = 10 ml. Dus 125 ml = 12,5 cl"
+      "correct_answer": "12 cm²",
+      "theme": "oppervlakte_tellen"
     },
     {
-      "id": 47,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_begrip",
+      "id": "ex_000047",
       "question": {
-        "text": "Een rechthoek is 10 hokjes lang en 5 hokjes breed. Wat is de oppervlakte?"
+        "text": "Een rechthoek op roosterpapier is 3 hokjes lang en 2 hokjes breed. Hoeveel cm² bedekt deze figuur?"
       },
       "options": [
-        {
-          "text": "15 cm²"
-        },
-        {
-          "text": "30 cm²"
-        },
-        {
-          "text": "50 cm²"
-        },
-        {
-          "text": "100 cm²"
-        }
+        "5 cm²",
+        "4 cm²",
+        "8 cm²",
+        "6 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "10 × 5 = 50 cm²"
+      "correct_answer": "6 cm²",
+      "theme": "oppervlakte_tellen"
     },
     {
-      "id": 48,
-      "type": "multiple_choice",
-      "theme": "ton",
+      "id": "ex_000048",
       "question": {
-        "text": "Een giraffenkalf weegt 70 kg. Hoeveel ton is dat?"
+        "text": "Een rechthoek op roosterpapier is 6 hokjes lang en 2 hokjes breed. Hoeveel cm² bedekt deze figuur?"
       },
       "options": [
-        {
-          "text": "0,007 ton"
-        },
-        {
-          "text": "0,07 ton"
-        },
-        {
-          "text": "0,7 ton"
-        },
-        {
-          "text": "7 ton"
-        }
+        "8 cm²",
+        "10 cm²",
+        "14 cm²",
+        "12 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Deel 70 door 1000"
+      "correct_answer": "12 cm²",
+      "theme": "oppervlakte_tellen"
     },
     {
-      "id": 49,
-      "type": "multiple_choice",
-      "theme": "kilometer",
+      "id": "ex_000049",
       "question": {
-        "text": "Een treinreis is 225 km. Hoeveel meter is dat?"
+        "text": "Een rechthoek op roosterpapier is 8 hokjes lang en 3 hokjes breed. Hoeveel cm² bedekt deze figuur?"
       },
       "options": [
-        {
-          "text": "2250 meter"
-        },
-        {
-          "text": "22500 meter"
-        },
-        {
-          "text": "225000 meter"
-        },
-        {
-          "text": "2250000 meter"
-        }
+        "11 cm²",
+        "26 cm²",
+        "22 cm²",
+        "24 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "225 × 1000 = 225000 meter"
+      "correct_answer": "24 cm²",
+      "theme": "oppervlakte_tellen"
     },
     {
-      "id": 50,
-      "type": "multiple_choice",
-      "theme": "inhoud",
+      "id": "ex_000050",
       "question": {
-        "text": "Een vaas bevat 400 ml water. Hoeveel liter is dat?"
+        "text": "Een rechthoek op roosterpapier is 3 hokjes lang en 3 hokjes breed. Hoeveel cm² bedekt deze figuur?"
       },
       "options": [
-        {
-          "text": "0,04 liter"
-        },
-        {
-          "text": "0,4 liter"
-        },
-        {
-          "text": "4 liter"
-        },
-        {
-          "text": "40 liter"
-        }
+        "7 cm²",
+        "6 cm²",
+        "11 cm²",
+        "9 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Deel 400 door 1000"
+      "correct_answer": "9 cm²",
+      "theme": "oppervlakte_tellen"
     }
   ],
   "settings": {
