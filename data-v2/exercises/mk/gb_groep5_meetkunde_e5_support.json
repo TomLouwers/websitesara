@@ -10,12 +10,12 @@
     "domain": "meetkunde",
     "slo_alignment": {
       "kerndoelen": [
-        "K28",
         "K32",
         "K33"
       ],
       "rekendomeinen": [
-        "meetkunde"
+        "meetkunde",
+        "meten"
       ],
       "tussendoelen": [
         "5MM5",
@@ -23,1365 +23,715 @@
         "5MM7"
       ],
       "referentieniveau": "1F",
-      "cognitive_level": "begrijpen"
+      "cognitive_level": "toepassen"
     }
   },
   "display": {
-    "title": "Meetkunde Groep 5 - Extra Oefening"
+    "title": "Meetkunde Groep 5"
   },
   "content": {
     "instruction": "Kies het goede antwoord:"
   },
   "items": [
     {
-      "id": 1,
-      "type": "multiple_choice",
-      "theme": "tijd",
+      "id": "ex_000001",
       "question": {
-        "text": "Een wedstrijd begint om 13:30 en duurt 90 minuten. Hoe laat is de wedstrijd afgelopen?"
+        "text": "Van 16:00 tot 17:00 is hoeveel tijd?"
       },
       "options": [
-        {
-          "text": "14:30"
-        },
-        {
-          "text": "15:00"
-        },
-        {
-          "text": "15:30"
-        },
-        {
-          "text": "16:00"
-        }
+        "2 uur",
+        "1 uur",
+        "45 minuten",
+        "90 minuten"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "90 minuten = 1,5 uur. Tel 1 uur en 30 minuten bij 13:30 op"
+      "correct_answer": "1 uur",
+      "theme": "tijd_berekenen"
     },
     {
-      "id": 2,
-      "type": "multiple_choice",
-      "theme": "tijd",
+      "id": "ex_000002",
       "question": {
-        "text": "De bus vertrekt om 08:50 en rijdt 25 minuten. Hoe laat komt de bus aan?"
+        "text": "Van 15:47 tot 16:17 is hoeveel tijd?"
       },
       "options": [
-        {
-          "text": "09:05"
-        },
-        {
-          "text": "09:15"
-        },
-        {
-          "text": "09:25"
-        },
-        {
-          "text": "09:35"
-        }
+        "60 minuten",
+        "30 minuten",
+        "60 minuten",
+        "15 minuten"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Tel 25 minuten bij 08:50 op"
+      "correct_answer": "30 minuten",
+      "theme": "tijd_berekenen"
     },
     {
-      "id": 3,
-      "type": "multiple_choice",
-      "theme": "tijd",
+      "id": "ex_000003",
       "question": {
-        "text": "Van 11:40 tot 13:15 is hoeveel tijd?"
+        "text": "Van 11:59 tot 13:29 is hoeveel tijd?"
       },
       "options": [
-        {
-          "text": "1 uur en 25 minuten"
-        },
-        {
-          "text": "1 uur en 35 minuten"
-        },
-        {
-          "text": "1 uur en 45 minuten"
-        },
-        {
-          "text": "2 uur en 35 minuten"
-        }
+        "75 minuten",
+        "120 minuten",
+        "1 uur en 30 minuten",
+        "2 uur"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Van 11:40 naar 12:40 is 1 uur. Van 12:40 naar 13:15 is 35 minuten"
+      "correct_answer": "1 uur en 30 minuten",
+      "theme": "tijd_berekenen"
     },
     {
-      "id": 4,
-      "type": "multiple_choice",
-      "theme": "tijd",
+      "id": "ex_000004",
       "question": {
-        "text": "De digitale klok toont 14:15. Hoe laat is het analoog?"
+        "text": "Van 15:56 tot 16:41 is hoeveel tijd?"
       },
       "options": [
-        {
-          "text": "Half drie 's middags"
-        },
-        {
-          "text": "Kwart over twee 's middags"
-        },
-        {
-          "text": "Kwart voor drie 's middags"
-        },
-        {
-          "text": "Half vier 's middags"
-        }
+        "75 minuten",
+        "75 minuten",
+        "45 minuten",
+        "30 minuten"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "14:15 is kwart over twee in de middag"
+      "correct_answer": "45 minuten",
+      "theme": "tijd_berekenen"
     },
     {
-      "id": 5,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_formule",
+      "id": "ex_000005",
       "question": {
-        "text": "Een parkeerplaats is 15 meter lang en 6 meter breed. Wat is de oppervlakte?"
+        "text": "Van 11:15 tot 11:45 is hoeveel tijd?"
       },
       "options": [
-        {
-          "text": "21 m²"
-        },
-        {
-          "text": "42 m²"
-        },
-        {
-          "text": "90 m²"
-        },
-        {
-          "text": "120 m²"
-        }
+        "60 minuten",
+        "30 minuten",
+        "15 minuten",
+        "60 minuten"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Oppervlakte = 15 × 6 = ?"
+      "correct_answer": "30 minuten",
+      "theme": "tijd_berekenen"
     },
     {
-      "id": 6,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_formule",
+      "id": "ex_000006",
       "question": {
-        "text": "Een tafelblad is 180 cm lang en 90 cm breed. Wat is de oppervlakte?"
+        "text": "Van 11:02 tot 11:47 is hoeveel tijd?"
       },
       "options": [
-        {
-          "text": "270 cm²"
-        },
-        {
-          "text": "540 cm²"
-        },
-        {
-          "text": "16200 cm²"
-        },
-        {
-          "text": "18000 cm²"
-        }
+        "75 minuten",
+        "75 minuten",
+        "45 minuten",
+        "30 minuten"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Bereken 180 × 90"
+      "correct_answer": "45 minuten",
+      "theme": "tijd_berekenen"
     },
     {
-      "id": 7,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_formule",
+      "id": "ex_000007",
       "question": {
-        "text": "Een vierkante zandbak heeft zijden van 2,5 meter. Bereken de oppervlakte."
+        "text": "Van 11:06 tot 11:36 is hoeveel tijd?"
       },
       "options": [
-        {
-          "text": "5 m²"
-        },
-        {
-          "text": "6,25 m²"
-        },
-        {
-          "text": "10 m²"
-        },
-        {
-          "text": "12,5 m²"
-        }
+        "30 minuten",
+        "60 minuten",
+        "15 minuten",
+        "60 minuten"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Oppervlakte vierkant = 2,5 × 2,5 = ?"
+      "correct_answer": "30 minuten",
+      "theme": "tijd_berekenen"
     },
     {
-      "id": 8,
-      "type": "multiple_choice",
-      "theme": "symmetrie",
+      "id": "ex_000008",
       "question": {
-        "text": "Welke letter heeft een horizontale symmetrie-as?"
+        "text": "Van 13:11 tot 15:11 is hoeveel tijd?"
       },
       "options": [
-        {
-          "text": "A"
-        },
-        {
-          "text": "B"
-        },
-        {
-          "text": "C"
-        },
-        {
-          "text": "M"
-        }
+        "2 uur",
+        "150 minuten",
+        "3 uur",
+        "105 minuten"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "De letter C kun je horizontaal in twee gelijke helften verdelen"
+      "correct_answer": "2 uur",
+      "theme": "tijd_berekenen"
     },
     {
-      "id": 9,
-      "type": "multiple_choice",
-      "theme": "symmetrie",
+      "id": "ex_000009",
       "question": {
-        "text": "Hoeveel symmetrie-assen heeft een cirkel?"
+        "text": "Van 16:12 tot 16:57 is hoeveel tijd?"
       },
       "options": [
-        {
-          "text": "1"
-        },
-        {
-          "text": "2"
-        },
-        {
-          "text": "4"
-        },
-        {
-          "text": "Oneindig veel"
-        }
+        "75 minuten",
+        "45 minuten",
+        "30 minuten",
+        "75 minuten"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 3
-      },
-      "hint": "Elke lijn door het middelpunt is een symmetrie-as"
+      "correct_answer": "45 minuten",
+      "theme": "tijd_berekenen"
     },
     {
-      "id": 10,
-      "type": "multiple_choice",
-      "theme": "symmetrie",
+      "id": "ex_000010",
       "question": {
-        "text": "Welke figuur heeft geen symmetrie-as?"
+        "text": "Van 15:16 tot 16:16 is hoeveel tijd?"
       },
       "options": [
-        {
-          "text": "Een gelijkbenige driehoek"
-        },
-        {
-          "text": "Een willekeurige vierhoek"
-        },
-        {
-          "text": "Een ster"
-        },
-        {
-          "text": "Een hart"
-        }
+        "1 uur",
+        "2 uur",
+        "90 minuten",
+        "45 minuten"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Een willekeurige vierhoek heeft meestal geen symmetrie"
+      "correct_answer": "1 uur",
+      "theme": "tijd_berekenen"
     },
     {
-      "id": 11,
-      "type": "multiple_choice",
-      "theme": "tijd",
+      "id": "ex_000011",
       "question": {
-        "text": "Een concert duurt van 20:00 tot 22:30. Hoe lang duurt het concert?"
+        "text": "Van 15:27 tot 16:42 is hoeveel tijd?"
       },
       "options": [
-        {
-          "text": "1 uur en 30 minuten"
-        },
-        {
-          "text": "2 uur"
-        },
-        {
-          "text": "2 uur en 30 minuten"
-        },
-        {
-          "text": "3 uur"
-        }
+        "105 minuten",
+        "2 uur",
+        "60 minuten",
+        "1 uur en 15 minuten"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Van 20:00 naar 22:00 is 2 uur. Dan nog 30 minuten erbij"
+      "correct_answer": "1 uur en 15 minuten",
+      "theme": "tijd_berekenen"
     },
     {
-      "id": 12,
-      "type": "multiple_choice",
-      "theme": "tijd",
+      "id": "ex_000012",
       "question": {
-        "text": "Het is nu 17:50. Over een half uur eten we. Hoe laat eten we?"
+        "text": "Van 15:05 tot 15:50 is hoeveel tijd?"
       },
       "options": [
-        {
-          "text": "18:00"
-        },
-        {
-          "text": "18:10"
-        },
-        {
-          "text": "18:20"
-        },
-        {
-          "text": "18:30"
-        }
+        "45 minuten",
+        "75 minuten",
+        "30 minuten",
+        "75 minuten"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Tel 30 minuten bij 17:50 op"
+      "correct_answer": "45 minuten",
+      "theme": "tijd_berekenen"
     },
     {
-      "id": 13,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_formule",
+      "id": "ex_000013",
       "question": {
-        "text": "Een tennisbaan is 23,8 meter lang en 8,2 meter breed. Wat is ongeveer de oppervlakte?"
+        "text": "Van 10:02 tot 11:17 is hoeveel tijd?"
       },
       "options": [
-        {
-          "text": "32 m²"
-        },
-        {
-          "text": "64 m²"
-        },
-        {
-          "text": "195 m²"
-        },
-        {
-          "text": "240 m²"
-        }
+        "2 uur",
+        "60 minuten",
+        "105 minuten",
+        "1 uur en 15 minuten"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Rond af naar 24 × 8 = 192, dus ongeveer 195 m²"
+      "correct_answer": "1 uur en 15 minuten",
+      "theme": "tijd_berekenen"
     },
     {
-      "id": 14,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_formule",
+      "id": "ex_000014",
       "question": {
-        "text": "Een poster is 50 cm breed en 70 cm hoog. Bereken de oppervlakte."
+        "text": "Van 16:31 tot 17:46 is hoeveel tijd?"
       },
       "options": [
-        {
-          "text": "120 cm²"
-        },
-        {
-          "text": "240 cm²"
-        },
-        {
-          "text": "3500 cm²"
-        },
-        {
-          "text": "5000 cm²"
-        }
+        "2 uur",
+        "60 minuten",
+        "105 minuten",
+        "1 uur en 15 minuten"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Oppervlakte = 50 × 70 = ?"
+      "correct_answer": "1 uur en 15 minuten",
+      "theme": "tijd_berekenen"
     },
     {
-      "id": 15,
-      "type": "multiple_choice",
-      "theme": "symmetrie",
+      "id": "ex_000015",
       "question": {
-        "text": "Welke Nederlandse vlag is symmetrisch?"
+        "text": "Van 10:33 tot 12:33 is hoeveel tijd?"
       },
       "options": [
-        {
-          "text": "Ja, verticaal symmetrisch"
-        },
-        {
-          "text": "Ja, horizontaal symmetrisch"
-        },
-        {
-          "text": "Ja, beide richtingen"
-        },
-        {
-          "text": "Nee, niet symmetrisch"
-        }
+        "2 uur",
+        "105 minuten",
+        "150 minuten",
+        "3 uur"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "De Nederlandse vlag heeft drie horizontale banen"
+      "correct_answer": "2 uur",
+      "theme": "tijd_berekenen"
     },
     {
-      "id": 16,
-      "type": "multiple_choice",
-      "theme": "symmetrie",
+      "id": "ex_000016",
       "question": {
-        "text": "Welke letter heeft zowel een verticale als horizontale symmetrie-as?"
+        "text": "Van 10:22 tot 10:52 is hoeveel tijd?"
       },
       "options": [
-        {
-          "text": "H"
-        },
-        {
-          "text": "X"
-        },
-        {
-          "text": "T"
-        },
-        {
-          "text": "L"
-        }
+        "60 minuten",
+        "30 minuten",
+        "60 minuten",
+        "15 minuten"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "De letter X is symmetrisch in beide richtingen"
+      "correct_answer": "30 minuten",
+      "theme": "tijd_berekenen"
     },
     {
-      "id": 17,
-      "type": "multiple_choice",
-      "theme": "tijd",
+      "id": "ex_000017",
       "question": {
-        "text": "Een vliegtuig vertrekt om 06:45 en landt om 09:20. Hoe lang duurt de vlucht?"
+        "text": "Van 15:42 tot 17:42 is hoeveel tijd?"
       },
       "options": [
-        {
-          "text": "2 uur en 15 minuten"
-        },
-        {
-          "text": "2 uur en 25 minuten"
-        },
-        {
-          "text": "2 uur en 35 minuten"
-        },
-        {
-          "text": "3 uur en 35 minuten"
-        }
+        "105 minuten",
+        "150 minuten",
+        "3 uur",
+        "2 uur"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Van 06:45 naar 08:45 is 2 uur. Van 08:45 naar 09:20 is 35 minuten"
+      "correct_answer": "2 uur",
+      "theme": "tijd_berekenen"
     },
     {
-      "id": 18,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_formule",
+      "id": "ex_000018",
       "question": {
-        "text": "Een voetbalveld is 100 meter lang en 64 meter breed. Wat is de oppervlakte?"
+        "text": "Een vierkant heeft zijde 4 cm. Wat is de oppervlakte?"
       },
       "options": [
-        {
-          "text": "164 m²"
-        },
-        {
-          "text": "328 m²"
-        },
-        {
-          "text": "6400 m²"
-        },
-        {
-          "text": "10000 m²"
-        }
+        "21 cm²",
+        "16 cm²",
+        "16 cm²",
+        "11 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Bereken 100 × 64"
+      "correct_answer": "16 cm²",
+      "theme": "oppervlakte_formule"
     },
     {
-      "id": 19,
-      "type": "multiple_choice",
-      "theme": "tijd",
+      "id": "ex_000019",
       "question": {
-        "text": "De analoge klok wijst kwart voor 8. Hoe laat is het digitaal?"
+        "text": "Een vierkant heeft zijde 8 cm. Wat is de oppervlakte?"
       },
       "options": [
-        {
-          "text": "07:15"
-        },
-        {
-          "text": "07:45"
-        },
-        {
-          "text": "08:15"
-        },
-        {
-          "text": "08:45"
-        }
+        "64 cm²",
+        "32 cm²",
+        "69 cm²",
+        "59 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Kwart voor 8 is 15 minuten voor 8 uur = 07:45"
+      "correct_answer": "64 cm²",
+      "theme": "oppervlakte_formule"
     },
     {
-      "id": 20,
-      "type": "multiple_choice",
-      "theme": "symmetrie",
+      "id": "ex_000020",
       "question": {
-        "text": "Je tekent de linkerhelft van een vlinder. Waar moet je de symmetrie-as tekenen om de vlinder compleet te maken?"
+        "text": "Een rechthoek heeft lengte 13 cm en breedte 5 cm. Wat is de oppervlakte?"
       },
       "options": [
-        {
-          "text": "Bovenaan horizontaal"
-        },
-        {
-          "text": "In het midden verticaal"
-        },
-        {
-          "text": "Onderaan horizontaal"
-        },
-        {
-          "text": "Diagonaal"
-        }
+        "60 cm²",
+        "70 cm²",
+        "36 cm²",
+        "65 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "De vlinder is symmetrisch langs het midden van zijn lichaam"
+      "correct_answer": "65 cm²",
+      "theme": "oppervlakte_formule"
     },
     {
-      "id": 21,
-      "type": "multiple_choice",
-      "theme": "tijd",
+      "id": "ex_000021",
       "question": {
-        "text": "Het is 13:45. Na 0 uur en 45 minuten is het...?"
+        "text": "Een rechthoek heeft lengte 5 cm en breedte 3 cm. Wat is de oppervlakte?"
       },
       "options": [
-        {
-          "text": "14:30"
-        },
-        {
-          "text": "15:30"
-        },
-        {
-          "text": "14:40"
-        },
-        {
-          "text": "13:30"
-        }
+        "16 cm²",
+        "10 cm²",
+        "15 cm²",
+        "20 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel 0 uur en 45 minuten bij 13:45 op"
+      "correct_answer": "15 cm²",
+      "theme": "oppervlakte_formule"
     },
     {
-      "id": 22,
-      "type": "multiple_choice",
-      "theme": "oppervlakte",
+      "id": "ex_000022",
       "question": {
-        "text": "Rechthoek van 6 cm × 4 cm heeft welke oppervlakte?"
+        "text": "Een vierkant heeft zijde 5 cm. Wat is de oppervlakte?"
       },
       "options": [
-        {
-          "text": "24 cm²"
-        },
-        {
-          "text": "29 cm²"
-        },
-        {
-          "text": "19 cm²"
-        },
-        {
-          "text": "10 cm²"
-        }
+        "30 cm²",
+        "25 cm²",
+        "20 cm²",
+        "20 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = 6 × 4 = ?"
+      "correct_answer": "25 cm²",
+      "theme": "oppervlakte_formule"
     },
     {
-      "id": 23,
-      "type": "multiple_choice",
-      "theme": "symmetrie",
+      "id": "ex_000023",
+      "question": {
+        "text": "Een vierkant heeft zijde 6 cm. Wat is de oppervlakte?"
+      },
+      "options": [
+        "41 cm²",
+        "36 cm²",
+        "31 cm²",
+        "24 cm²"
+      ],
+      "correct_answer": "36 cm²",
+      "theme": "oppervlakte_formule"
+    },
+    {
+      "id": "ex_000024",
+      "question": {
+        "text": "Een rechthoek heeft lengte 11 cm en breedte 7 cm. Wat is de oppervlakte?"
+      },
+      "options": [
+        "77 cm²",
+        "72 cm²",
+        "82 cm²",
+        "36 cm²"
+      ],
+      "correct_answer": "77 cm²",
+      "theme": "oppervlakte_formule"
+    },
+    {
+      "id": "ex_000025",
+      "question": {
+        "text": "Een rechthoek heeft lengte 15 cm en breedte 3 cm. Wat is de oppervlakte?"
+      },
+      "options": [
+        "45 cm²",
+        "50 cm²",
+        "40 cm²",
+        "36 cm²"
+      ],
+      "correct_answer": "45 cm²",
+      "theme": "oppervlakte_formule"
+    },
+    {
+      "id": "ex_000026",
+      "question": {
+        "text": "Een rechthoek heeft lengte 11 cm en breedte 3 cm. Wat is de oppervlakte?"
+      },
+      "options": [
+        "33 cm²",
+        "28 cm²",
+        "28 cm²",
+        "38 cm²"
+      ],
+      "correct_answer": "33 cm²",
+      "theme": "oppervlakte_formule"
+    },
+    {
+      "id": "ex_000027",
+      "question": {
+        "text": "Een vierkant heeft zijde 10 cm. Wat is de oppervlakte?"
+      },
+      "options": [
+        "105 cm²",
+        "95 cm²",
+        "100 cm²",
+        "40 cm²"
+      ],
+      "correct_answer": "100 cm²",
+      "theme": "oppervlakte_formule"
+    },
+    {
+      "id": "ex_000028",
+      "question": {
+        "text": "Een vierkant heeft zijde 11 cm. Wat is de oppervlakte?"
+      },
+      "options": [
+        "126 cm²",
+        "121 cm²",
+        "116 cm²",
+        "44 cm²"
+      ],
+      "correct_answer": "121 cm²",
+      "theme": "oppervlakte_formule"
+    },
+    {
+      "id": "ex_000029",
+      "question": {
+        "text": "Een rechthoek heeft lengte 12 cm en breedte 4 cm. Wat is de oppervlakte?"
+      },
+      "options": [
+        "43 cm²",
+        "48 cm²",
+        "53 cm²",
+        "32 cm²"
+      ],
+      "correct_answer": "48 cm²",
+      "theme": "oppervlakte_formule"
+    },
+    {
+      "id": "ex_000030",
+      "question": {
+        "text": "Een rechthoek heeft lengte 5 cm en breedte 6 cm. Wat is de oppervlakte?"
+      },
+      "options": [
+        "25 cm²",
+        "30 cm²",
+        "35 cm²",
+        "22 cm²"
+      ],
+      "correct_answer": "30 cm²",
+      "theme": "oppervlakte_formule"
+    },
+    {
+      "id": "ex_000031",
+      "question": {
+        "text": "Een vierkant heeft zijde 9 cm. Wat is de oppervlakte?"
+      },
+      "options": [
+        "76 cm²",
+        "36 cm²",
+        "81 cm²",
+        "86 cm²"
+      ],
+      "correct_answer": "81 cm²",
+      "theme": "oppervlakte_formule"
+    },
+    {
+      "id": "ex_000032",
+      "question": {
+        "text": "Een rechthoek heeft lengte 8 cm en breedte 3 cm. Wat is de oppervlakte?"
+      },
+      "options": [
+        "29 cm²",
+        "19 cm²",
+        "22 cm²",
+        "24 cm²"
+      ],
+      "correct_answer": "24 cm²",
+      "theme": "oppervlakte_formule"
+    },
+    {
+      "id": "ex_000033",
+      "question": {
+        "text": "Een rechthoek heeft lengte 12 cm en breedte 7 cm. Wat is de oppervlakte?"
+      },
+      "options": [
+        "84 cm²",
+        "79 cm²",
+        "89 cm²",
+        "38 cm²"
+      ],
+      "correct_answer": "84 cm²",
+      "theme": "oppervlakte_formule"
+    },
+    {
+      "id": "ex_000034",
+      "question": {
+        "text": "Een rechthoek heeft lengte 9 cm en breedte 5 cm. Wat is de oppervlakte?"
+      },
+      "options": [
+        "40 cm²",
+        "50 cm²",
+        "45 cm²",
+        "28 cm²"
+      ],
+      "correct_answer": "45 cm²",
+      "theme": "oppervlakte_formule"
+    },
+    {
+      "id": "ex_000035",
+      "question": {
+        "text": "Is een vierkant symmetrisch?"
+      },
+      "options": [
+        "Nee",
+        "Soms",
+        "Alleen diagonaal",
+        "Ja"
+      ],
+      "correct_answer": "Ja",
+      "theme": "symmetrie"
+    },
+    {
+      "id": "ex_000036",
+      "question": {
+        "text": "Hoeveel symmetrie-assen heeft een vierkant?"
+      },
+      "options": [
+        "2",
+        "4",
+        "1",
+        "8"
+      ],
+      "correct_answer": "4",
+      "theme": "symmetrie"
+    },
+    {
+      "id": "ex_000037",
       "question": {
         "text": "Hoeveel symmetrie-assen heeft een rechthoek?"
       },
       "options": [
-        {
-          "text": "1"
-        },
-        {
-          "text": "2"
-        },
-        {
-          "text": "3"
-        },
-        {
-          "text": "4"
-        }
+        "1",
+        "2",
+        "4",
+        "0"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Een rechthoek heeft 2 symmetrie-assen door de middens"
+      "correct_answer": "2",
+      "theme": "symmetrie"
     },
     {
-      "id": 24,
-      "type": "multiple_choice",
-      "theme": "tijd",
+      "id": "ex_000038",
       "question": {
-        "text": "Het is 11:30. Na 2 uur en 15 minuten is het...?"
+        "text": "Hoeveel symmetrie-assen heeft een cirkel?"
       },
       "options": [
-        {
-          "text": "13:45"
-        },
-        {
-          "text": "14:45"
-        },
-        {
-          "text": "13:55"
-        },
-        {
-          "text": "12:45"
-        }
+        "4",
+        "1",
+        "2",
+        "Oneindig veel"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel 2 uur en 15 minuten bij 11:30 op"
+      "correct_answer": "Oneindig veel",
+      "theme": "symmetrie"
     },
     {
-      "id": 25,
-      "type": "multiple_choice",
-      "theme": "tijd",
+      "id": "ex_000039",
       "question": {
-        "text": "Het is 10:15. Na 1 uur en 30 minuten is het...?"
+        "text": "Welke letter is symmetrisch?"
       },
       "options": [
-        {
-          "text": "11:45"
-        },
-        {
-          "text": "12:45"
-        },
-        {
-          "text": "11:55"
-        },
-        {
-          "text": "10:45"
-        }
+        "A",
+        "B",
+        "R",
+        "F"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel 1 uur en 30 minuten bij 10:15 op"
+      "correct_answer": "A",
+      "theme": "symmetrie"
     },
     {
-      "id": 26,
-      "type": "multiple_choice",
-      "theme": "oppervlakte",
+      "id": "ex_000040",
       "question": {
-        "text": "Rechthoek van 8 cm × 3 cm heeft welke oppervlakte?"
+        "text": "Is de letter B symmetrisch?"
       },
       "options": [
-        {
-          "text": "24 cm²"
-        },
-        {
-          "text": "29 cm²"
-        },
-        {
-          "text": "19 cm²"
-        },
-        {
-          "text": "11 cm²"
-        }
+        "Alleen verticaal",
+        "Nee",
+        "Ja",
+        "Alleen horizontaal"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = 8 × 3 = ?"
+      "correct_answer": "Nee",
+      "theme": "symmetrie"
     },
     {
-      "id": 27,
-      "type": "multiple_choice",
-      "theme": "tijd",
+      "id": "ex_000041",
       "question": {
-        "text": "Het is 13:45. Na 2 uur en 15 minuten is het...?"
+        "text": "Een vlinder is meestal..."
       },
       "options": [
-        {
-          "text": "16:00"
-        },
-        {
-          "text": "17:00"
-        },
-        {
-          "text": "16:10"
-        },
-        {
-          "text": "15:00"
-        }
+        "rond",
+        "vierkant",
+        "asymmetrisch",
+        "symmetrisch"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel 2 uur en 15 minuten bij 13:45 op"
+      "correct_answer": "symmetrisch",
+      "theme": "symmetrie"
     },
     {
-      "id": 28,
-      "type": "multiple_choice",
-      "theme": "oppervlakte",
+      "id": "ex_000042",
       "question": {
-        "text": "Rechthoek van 9 cm × 4 cm heeft welke oppervlakte?"
+        "text": "Hoeveel symmetrie-assen heeft een gelijkzijdige driehoek?"
       },
       "options": [
-        {
-          "text": "36 cm²"
-        },
-        {
-          "text": "41 cm²"
-        },
-        {
-          "text": "31 cm²"
-        },
-        {
-          "text": "13 cm²"
-        }
+        "1",
+        "3",
+        "2",
+        "4"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = 9 × 4 = ?"
+      "correct_answer": "3",
+      "theme": "symmetrie"
     },
     {
-      "id": 29,
-      "type": "multiple_choice",
-      "theme": "tijd",
+      "id": "ex_000043",
       "question": {
-        "text": "Het is 10:15. Na 2 uur en 15 minuten is het...?"
+        "text": "Een hart is symmetrisch. Hoeveel assen?"
       },
       "options": [
-        {
-          "text": "12:30"
-        },
-        {
-          "text": "13:30"
-        },
-        {
-          "text": "12:40"
-        },
-        {
-          "text": "11:30"
-        }
+        "1",
+        "4",
+        "2",
+        "0"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel 2 uur en 15 minuten bij 10:15 op"
+      "correct_answer": "1",
+      "theme": "symmetrie"
     },
     {
-      "id": 30,
-      "type": "multiple_choice",
-      "theme": "oppervlakte",
+      "id": "ex_000044",
       "question": {
-        "text": "Rechthoek van 7 cm × 5 cm heeft welke oppervlakte?"
+        "text": "De letter M heeft hoeveel symmetrie-assen?"
       },
       "options": [
-        {
-          "text": "35 cm²"
-        },
-        {
-          "text": "40 cm²"
-        },
-        {
-          "text": "30 cm²"
-        },
-        {
-          "text": "12 cm²"
-        }
+        "4",
+        "1",
+        "2",
+        "0"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = 7 × 5 = ?"
+      "correct_answer": "1",
+      "theme": "symmetrie"
     },
     {
-      "id": 31,
-      "type": "multiple_choice",
-      "theme": "tijd",
+      "id": "ex_000045",
       "question": {
-        "text": "Het is 11:30. Na 0 uur en 45 minuten is het...?"
+        "text": "Een ster (vijfpuntig) heeft hoeveel symmetrie-assen?"
       },
       "options": [
-        {
-          "text": "12:15"
-        },
-        {
-          "text": "13:15"
-        },
-        {
-          "text": "12:25"
-        },
-        {
-          "text": "11:15"
-        }
+        "2",
+        "1",
+        "10",
+        "5"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel 0 uur en 45 minuten bij 11:30 op"
+      "correct_answer": "5",
+      "theme": "symmetrie"
     },
     {
-      "id": 32,
-      "type": "multiple_choice",
-      "theme": "tijd",
+      "id": "ex_000046",
       "question": {
-        "text": "Het is 10:15. Na 0 uur en 45 minuten is het...?"
+        "text": "Is een vierkant verticaal symmetrisch?"
       },
       "options": [
-        {
-          "text": "11:00"
-        },
-        {
-          "text": "12:00"
-        },
-        {
-          "text": "11:10"
-        },
-        {
-          "text": "10:00"
-        }
+        "Soms",
+        "Nooit",
+        "Nee",
+        "Ja"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel 0 uur en 45 minuten bij 10:15 op"
+      "correct_answer": "Ja",
+      "theme": "symmetrie"
     },
     {
-      "id": 33,
-      "type": "multiple_choice",
-      "theme": "tijd",
+      "id": "ex_000047",
       "question": {
-        "text": "Het is 11:30. Na 1 uur en 30 minuten is het...?"
+        "text": "Welke figuur heeft de meeste symmetrie-assen?"
       },
       "options": [
-        {
-          "text": "13:00"
-        },
-        {
-          "text": "14:00"
-        },
-        {
-          "text": "13:10"
-        },
-        {
-          "text": "12:00"
-        }
+        "rechthoek",
+        "driehoek",
+        "cirkel",
+        "vierkant"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel 1 uur en 30 minuten bij 11:30 op"
+      "correct_answer": "cirkel",
+      "theme": "symmetrie"
     },
     {
-      "id": 34,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000048",
       "question": {
-        "text": "Je rent 8 kilometer. Dat is hoeveel meter?"
+        "text": "Een symmetrie-as deelt een figuur in..."
       },
       "options": [
-        {
-          "text": "8000 m"
-        },
-        {
-          "text": "8500 m"
-        },
-        {
-          "text": "7500 m"
-        },
-        {
-          "text": "800 m"
-        }
+        "twee gelijke delen",
+        "twee ongelijke delen",
+        "drie delen",
+        "vier delen"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "8 × 1000 = 8000 meter"
+      "correct_answer": "twee gelijke delen",
+      "theme": "symmetrie"
     },
     {
-      "id": 35,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_530171",
       "question": {
-        "text": "Je rent 4 kilometer. Dat is hoeveel meter?"
+        "text": "Een rechthoek heeft lengte 9 cm en breedte 4 cm. Bereken de oppervlakte."
       },
       "options": [
-        {
-          "text": "4000 m"
-        },
-        {
-          "text": "4500 m"
-        },
-        {
-          "text": "3500 m"
-        },
-        {
-          "text": "400 m"
-        }
+        "26 cm²",
+        "40 cm²",
+        "36 cm²",
+        "32 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "4 × 1000 = 4000 meter"
+      "correct_answer": "36 cm²",
+      "theme": "oppervlakte_formule"
     },
     {
-      "id": 36,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_121709",
       "question": {
-        "text": "Je rent 7 kilometer. Dat is hoeveel meter?"
+        "text": "Bereken de oppervlakte van een rechthoek: lengte 12 cm, breedte 5 cm."
       },
       "options": [
-        {
-          "text": "7000 m"
-        },
-        {
-          "text": "7500 m"
-        },
-        {
-          "text": "6500 m"
-        },
-        {
-          "text": "700 m"
-        }
+        "60 cm²",
+        "17 cm²",
+        "70 cm²",
+        "34 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "7 × 1000 = 7000 meter"
-    },
-    {
-      "id": 37,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Je rent 5 kilometer. Dat is hoeveel meter?"
-      },
-      "options": [
-        {
-          "text": "5000 m"
-        },
-        {
-          "text": "5500 m"
-        },
-        {
-          "text": "4500 m"
-        },
-        {
-          "text": "500 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "5 × 1000 = 5000 meter"
-    },
-    {
-      "id": 38,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "839 ml is hoeveel liter?"
-      },
-      "options": [
-        {
-          "text": "0.839 l"
-        },
-        {
-          "text": "8.39 l"
-        },
-        {
-          "text": "1.678 l"
-        },
-        {
-          "text": "839 l"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de omrekenformule"
-    },
-    {
-      "id": 39,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Rechthoek: 6 × 7 cm. Oppervlakte?"
-      },
-      "options": [
-        {
-          "text": "42 cm²"
-        },
-        {
-          "text": "13 cm²"
-        },
-        {
-          "text": "52 cm²"
-        },
-        {
-          "text": "26 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de omrekenformule"
-    },
-    {
-      "id": 40,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Je loopt 6 km. Hoeveel meter is dat?"
-      },
-      "options": [
-        {
-          "text": "6000 m"
-        },
-        {
-          "text": "600 m"
-        },
-        {
-          "text": "3000 m"
-        },
-        {
-          "text": "60 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de omrekenformule"
-    },
-    {
-      "id": 41,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Rechthoek: 5 × 5 cm. Oppervlakte?"
-      },
-      "options": [
-        {
-          "text": "25 cm²"
-        },
-        {
-          "text": "10 cm²"
-        },
-        {
-          "text": "35 cm²"
-        },
-        {
-          "text": "20 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de omrekenformule"
-    },
-    {
-      "id": 42,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Je loopt 5 km. Hoeveel meter is dat?"
-      },
-      "options": [
-        {
-          "text": "5000 m"
-        },
-        {
-          "text": "500 m"
-        },
-        {
-          "text": "2500 m"
-        },
-        {
-          "text": "50 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de omrekenformule"
-    },
-    {
-      "id": 43,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Rechthoek: 8 × 5 cm. Oppervlakte?"
-      },
-      "options": [
-        {
-          "text": "40 cm²"
-        },
-        {
-          "text": "13 cm²"
-        },
-        {
-          "text": "50 cm²"
-        },
-        {
-          "text": "26 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de omrekenformule"
-    },
-    {
-      "id": 44,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Je loopt 2 km. Hoeveel meter is dat?"
-      },
-      "options": [
-        {
-          "text": "2000 m"
-        },
-        {
-          "text": "200 m"
-        },
-        {
-          "text": "1000 m"
-        },
-        {
-          "text": "20 m"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de omrekenformule"
-    },
-    {
-      "id": 45,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "651 ml is hoeveel liter?"
-      },
-      "options": [
-        {
-          "text": "0.651 l"
-        },
-        {
-          "text": "6.51 l"
-        },
-        {
-          "text": "1.302 l"
-        },
-        {
-          "text": "651 l"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de omrekenformule"
-    },
-    {
-      "id": 46,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "678 ml is hoeveel liter?"
-      },
-      "options": [
-        {
-          "text": "0.678 l"
-        },
-        {
-          "text": "6.78 l"
-        },
-        {
-          "text": "1.356 l"
-        },
-        {
-          "text": "678 l"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de omrekenformule"
-    },
-    {
-      "id": 47,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Rechthoek: 7 × 3 cm. Oppervlakte?"
-      },
-      "options": [
-        {
-          "text": "21 cm²"
-        },
-        {
-          "text": "10 cm²"
-        },
-        {
-          "text": "31 cm²"
-        },
-        {
-          "text": "20 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de omrekenformule"
-    },
-    {
-      "id": 48,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Rechthoek: 9 × 6 cm. Oppervlakte?"
-      },
-      "options": [
-        {
-          "text": "54 cm²"
-        },
-        {
-          "text": "15 cm²"
-        },
-        {
-          "text": "64 cm²"
-        },
-        {
-          "text": "30 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de omrekenformule"
-    },
-    {
-      "id": 49,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Rechthoek: 9 × 7 cm. Oppervlakte?"
-      },
-      "options": [
-        {
-          "text": "63 cm²"
-        },
-        {
-          "text": "16 cm²"
-        },
-        {
-          "text": "73 cm²"
-        },
-        {
-          "text": "32 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de omrekenformule"
-    },
-    {
-      "id": 50,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Rechthoek: 9 × 5 cm. Oppervlakte?"
-      },
-      "options": [
-        {
-          "text": "45 cm²"
-        },
-        {
-          "text": "14 cm²"
-        },
-        {
-          "text": "55 cm²"
-        },
-        {
-          "text": "28 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de omrekenformule"
+      "correct_answer": "60 cm²",
+      "theme": "oppervlakte_formule"
     }
   ],
   "settings": {

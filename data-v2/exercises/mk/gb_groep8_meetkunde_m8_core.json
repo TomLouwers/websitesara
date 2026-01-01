@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0.0",
   "metadata": {
-    "id": "gb_groep8_meetkunde_m8",
+    "id": "gb_groep8_meetkunde_m8_core",
     "type": "multiple_choice",
     "category": "gb",
     "grade": 8,
@@ -14,7 +14,8 @@
         "K33"
       ],
       "rekendomeinen": [
-        "meetkunde"
+        "meetkunde",
+        "meten"
       ],
       "tussendoelen": [
         "8MM1",
@@ -33,1354 +34,704 @@
   },
   "items": [
     {
-      "id": 1,
-      "type": "multiple_choice",
-      "theme": "complexe_oppervlakte",
+      "id": "ex_000001",
       "question": {
-        "text": "Een L-vormige tuin bestaat uit twee rechthoeken. Het grote deel is 8 meter bij 5 meter. Het kleine deel is 3 meter bij 2 meter. Wat is de totale oppervlakte van de tuin?"
+        "text": "Een L-vorm bestaat uit twee rechthoeken: 5×3 cm en 4×5 cm. Totale oppervlakte?"
       },
       "options": [
-        {
-          "text": "34 m²"
-        },
-        {
-          "text": "46 m²"
-        },
-        {
-          "text": "40 m²"
-        },
-        {
-          "text": "52 m²"
-        }
+        "45 cm²",
+        "25 cm²",
+        "72 cm²",
+        "35 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Bereken eerst beide oppervlaktes apart: 8×5 = 40 m² en 3×2 = 6 m², en tel ze bij elkaar op: 40 + 6 = 46 m²"
+      "correct_answer": "35 cm²",
+      "theme": "complexe_oppervlakte"
     },
     {
-      "id": 2,
-      "type": "multiple_choice",
-      "theme": "complexe_oppervlakte",
+      "id": "ex_000002",
       "question": {
-        "text": "Een zwembad heeft de vorm van een rechthoek met een halve cirkel aan één kant. De rechthoek is 10 meter lang en 6 meter breed. De halve cirkel heeft een straal van 3 meter. Wat is de oppervlakte? (gebruik π = 3,14)"
+        "text": "Een L-vorm bestaat uit twee rechthoeken: 7×8 cm en 8×2 cm. Totale oppervlakte?"
       },
       "options": [
-        {
-          "text": "74,13 m²"
-        },
-        {
-          "text": "78,26 m²"
-        },
-        {
-          "text": "82,39 m²"
-        },
-        {
-          "text": "70,00 m²"
-        }
+        "82 cm²",
+        "62 cm²",
+        "72 cm²",
+        "150 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Rechthoek: 10×6 = 60 m². Halve cirkel: (π×3²)/2 = (3,14×9)/2 = 14,13 m². Totaal: 60 + 14,13 = 74,13 m²"
+      "correct_answer": "72 cm²",
+      "theme": "complexe_oppervlakte"
     },
     {
-      "id": 3,
-      "type": "multiple_choice",
-      "theme": "complexe_oppervlakte",
+      "id": "ex_000003",
       "question": {
-        "text": "Een vloer heeft de vorm van een vierkant van 6 bij 6 meter met een driehoekige uitsparing. De driehoek heeft een basis van 2 meter en een hoogte van 3 meter. Hoeveel m² vloer moet er betegeld worden?"
+        "text": "Een L-vorm bestaat uit twee rechthoeken: 11×3 cm en 3×3 cm. Totale oppervlakte?"
       },
       "options": [
-        {
-          "text": "30 m²"
-        },
-        {
-          "text": "33 m²"
-        },
-        {
-          "text": "36 m²"
-        },
-        {
-          "text": "39 m²"
-        }
+        "52 cm²",
+        "42 cm²",
+        "32 cm²",
+        "84 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Vierkant: 6×6 = 36 m². Driehoek: ½×2×3 = 3 m². Vloer (na aftrek): 36 - 3 = 33 m²"
+      "correct_answer": "42 cm²",
+      "theme": "complexe_oppervlakte"
     },
     {
-      "id": 4,
-      "type": "multiple_choice",
-      "theme": "eigenschappen_figuren",
+      "id": "ex_000004",
+      "question": {
+        "text": "Een L-vorm bestaat uit twee rechthoeken: 11×3 cm en 4×2 cm. Totale oppervlakte?"
+      },
+      "options": [
+        "75 cm²",
+        "31 cm²",
+        "41 cm²",
+        "51 cm²"
+      ],
+      "correct_answer": "41 cm²",
+      "theme": "complexe_oppervlakte"
+    },
+    {
+      "id": "ex_000005",
+      "question": {
+        "text": "Een L-vorm bestaat uit twee rechthoeken: 5×7 cm en 3×2 cm. Totale oppervlakte?"
+      },
+      "options": [
+        "41 cm²",
+        "31 cm²",
+        "51 cm²",
+        "72 cm²"
+      ],
+      "correct_answer": "41 cm²",
+      "theme": "complexe_oppervlakte"
+    },
+    {
+      "id": "ex_000006",
+      "question": {
+        "text": "Een L-vorm bestaat uit twee rechthoeken: 6×3 cm en 4×2 cm. Totale oppervlakte?"
+      },
+      "options": [
+        "16 cm²",
+        "50 cm²",
+        "26 cm²",
+        "36 cm²"
+      ],
+      "correct_answer": "26 cm²",
+      "theme": "complexe_oppervlakte"
+    },
+    {
+      "id": "ex_000007",
+      "question": {
+        "text": "Een L-vorm bestaat uit twee rechthoeken: 5×3 cm en 3×4 cm. Totale oppervlakte?"
+      },
+      "options": [
+        "37 cm²",
+        "56 cm²",
+        "17 cm²",
+        "27 cm²"
+      ],
+      "correct_answer": "27 cm²",
+      "theme": "complexe_oppervlakte"
+    },
+    {
+      "id": "ex_000008",
+      "question": {
+        "text": "Een L-vorm bestaat uit twee rechthoeken: 7×7 cm en 3×4 cm. Totale oppervlakte?"
+      },
+      "options": [
+        "51 cm²",
+        "71 cm²",
+        "61 cm²",
+        "110 cm²"
+      ],
+      "correct_answer": "61 cm²",
+      "theme": "complexe_oppervlakte"
+    },
+    {
+      "id": "ex_000009",
+      "question": {
+        "text": "Een L-vorm bestaat uit twee rechthoeken: 10×7 cm en 6×5 cm. Totale oppervlakte?"
+      },
+      "options": [
+        "90 cm²",
+        "100 cm²",
+        "110 cm²",
+        "192 cm²"
+      ],
+      "correct_answer": "100 cm²",
+      "theme": "complexe_oppervlakte"
+    },
+    {
+      "id": "ex_000010",
+      "question": {
+        "text": "Een L-vorm bestaat uit twee rechthoeken: 8×4 cm en 7×4 cm. Totale oppervlakte?"
+      },
+      "options": [
+        "50 cm²",
+        "120 cm²",
+        "60 cm²",
+        "70 cm²"
+      ],
+      "correct_answer": "60 cm²",
+      "theme": "complexe_oppervlakte"
+    },
+    {
+      "id": "ex_000011",
+      "question": {
+        "text": "Een L-vorm bestaat uit twee rechthoeken: 9×6 cm en 6×6 cm. Totale oppervlakte?"
+      },
+      "options": [
+        "100 cm²",
+        "80 cm²",
+        "180 cm²",
+        "90 cm²"
+      ],
+      "correct_answer": "90 cm²",
+      "theme": "complexe_oppervlakte"
+    },
+    {
+      "id": "ex_000012",
+      "question": {
+        "text": "Een L-vorm bestaat uit twee rechthoeken: 5×3 cm en 6×5 cm. Totale oppervlakte?"
+      },
+      "options": [
+        "88 cm²",
+        "35 cm²",
+        "45 cm²",
+        "55 cm²"
+      ],
+      "correct_answer": "45 cm²",
+      "theme": "complexe_oppervlakte"
+    },
+    {
+      "id": "ex_000013",
+      "question": {
+        "text": "Een L-vorm bestaat uit twee rechthoeken: 7×7 cm en 5×5 cm. Totale oppervlakte?"
+      },
+      "options": [
+        "84 cm²",
+        "74 cm²",
+        "64 cm²",
+        "144 cm²"
+      ],
+      "correct_answer": "74 cm²",
+      "theme": "complexe_oppervlakte"
+    },
+    {
+      "id": "ex_000014",
+      "question": {
+        "text": "Een L-vorm bestaat uit twee rechthoeken: 6×7 cm en 7×2 cm. Totale oppervlakte?"
+      },
+      "options": [
+        "46 cm²",
+        "66 cm²",
+        "117 cm²",
+        "56 cm²"
+      ],
+      "correct_answer": "56 cm²",
+      "theme": "complexe_oppervlakte"
+    },
+    {
+      "id": "ex_000015",
+      "question": {
+        "text": "Een L-vorm bestaat uit twee rechthoeken: 9×6 cm en 3×6 cm. Totale oppervlakte?"
+      },
+      "options": [
+        "144 cm²",
+        "72 cm²",
+        "62 cm²",
+        "82 cm²"
+      ],
+      "correct_answer": "72 cm²",
+      "theme": "complexe_oppervlakte"
+    },
+    {
+      "id": "ex_000016",
+      "question": {
+        "text": "Een L-vorm bestaat uit twee rechthoeken: 5×6 cm en 7×2 cm. Totale oppervlakte?"
+      },
+      "options": [
+        "44 cm²",
+        "34 cm²",
+        "54 cm²",
+        "96 cm²"
+      ],
+      "correct_answer": "44 cm²",
+      "theme": "complexe_oppervlakte"
+    },
+    {
+      "id": "ex_000017",
+      "question": {
+        "text": "Een L-vorm bestaat uit twee rechthoeken: 5×4 cm en 4×2 cm. Totale oppervlakte?"
+      },
+      "options": [
+        "54 cm²",
+        "38 cm²",
+        "28 cm²",
+        "18 cm²"
+      ],
+      "correct_answer": "28 cm²",
+      "theme": "complexe_oppervlakte"
+    },
+    {
+      "id": "ex_000018",
       "question": {
         "text": "Hoeveel ribben heeft een kubus?"
       },
       "options": [
-        {
-          "text": "6 ribben"
-        },
-        {
-          "text": "8 ribben"
-        },
-        {
-          "text": "10 ribben"
-        },
-        {
-          "text": "12 ribben"
-        }
+        "10",
+        "6",
+        "8",
+        "12"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 3
-      },
-      "hint": "Een kubus heeft 12 ribben: 4 ribben boven, 4 ribben onder en 4 verticale ribben"
+      "correct_answer": "12",
+      "theme": "eigenschappen_figuren"
     },
     {
-      "id": 5,
-      "type": "multiple_choice",
-      "theme": "eigenschappen_figuren",
+      "id": "ex_000019",
       "question": {
-        "text": "Wat is de som van de hoeken in een driehoek?"
+        "text": "Wat is de som van hoeken in een driehoek?"
       },
       "options": [
-        {
-          "text": "90°"
-        },
-        {
-          "text": "180°"
-        },
-        {
-          "text": "270°"
-        },
-        {
-          "text": "360°"
-        }
+        "270°",
+        "360°",
+        "180°",
+        "90°"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "De som van alle hoeken in elke driehoek is altijd 180°"
+      "correct_answer": "180°",
+      "theme": "eigenschappen_figuren"
     },
     {
-      "id": 6,
-      "type": "multiple_choice",
-      "theme": "eigenschappen_figuren",
-      "question": {
-        "text": "Hoeveel vlakken heeft een balk?"
-      },
-      "options": [
-        {
-          "text": "4 vlakken"
-        },
-        {
-          "text": "5 vlakken"
-        },
-        {
-          "text": "6 vlakken"
-        },
-        {
-          "text": "8 vlakken"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Een balk heeft 6 vlakken: bovenkant, onderkant en 4 zijkanten"
-    },
-    {
-      "id": 7,
-      "type": "multiple_choice",
-      "theme": "schaalmodellen",
-      "question": {
-        "text": "Op een plattegrond met schaal 1:100 is een kamer 6 cm lang. Hoe lang is de kamer in werkelijkheid?"
-      },
-      "options": [
-        {
-          "text": "60 cm"
-        },
-        {
-          "text": "6 meter"
-        },
-        {
-          "text": "60 meter"
-        },
-        {
-          "text": "600 meter"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Schaal 1:100 betekent: 1 cm op tekening = 100 cm in werkelijkheid. Dus 6 cm × 100 = 600 cm = 6 meter"
-    },
-    {
-      "id": 8,
-      "type": "multiple_choice",
-      "theme": "schaalmodellen",
-      "question": {
-        "text": "Een maquette van een gebouw is gemaakt op schaal 1:50. Het echte gebouw is 15 meter hoog. Hoe hoog is de maquette?"
-      },
-      "options": [
-        {
-          "text": "15 cm"
-        },
-        {
-          "text": "30 cm"
-        },
-        {
-          "text": "50 cm"
-        },
-        {
-          "text": "75 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Schaal 1:50 betekent: werkelijke maat delen door 50. 15 meter = 1500 cm. 1500 ÷ 50 = 30 cm"
-    },
-    {
-      "id": 9,
-      "type": "multiple_choice",
-      "theme": "complexe_oppervlakte",
-      "question": {
-        "text": "Een terras heeft een trapeziumvorm met evenwijdige zijden van 8 en 12 meter, en een hoogte van 5 meter. Wat is de oppervlakte?"
-      },
-      "options": [
-        {
-          "text": "40 m²"
-        },
-        {
-          "text": "50 m²"
-        },
-        {
-          "text": "60 m²"
-        },
-        {
-          "text": "100 m²"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Trapezium: ½ × (basis1 + basis2) × hoogte = ½ × (8 + 12) × 5 = ½ × 20 × 5 = 50 m²"
-    },
-    {
-      "id": 10,
-      "type": "multiple_choice",
-      "theme": "eigenschappen_figuren",
-      "question": {
-        "text": "Een rechthoek heeft 4 hoeken. Hoe groot is elke hoek?"
-      },
-      "options": [
-        {
-          "text": "45°"
-        },
-        {
-          "text": "60°"
-        },
-        {
-          "text": "90°"
-        },
-        {
-          "text": "180°"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Een rechthoek heeft 4 rechte hoeken. Elke rechte hoek is 90°"
-    },
-    {
-      "id": 11,
-      "type": "multiple_choice",
-      "theme": "complexe_oppervlakte",
-      "question": {
-        "text": "Een schoolplein bestaat uit een rechthoek van 25 bij 15 meter met in elke hoek een kwart cirkel (straal 2 meter) die uit het plein gehaald is. Wat is de oppervlakte van het plein? (gebruik π = 3,14)"
-      },
-      "options": [
-        {
-          "text": "362,44 m²"
-        },
-        {
-          "text": "375,00 m²"
-        },
-        {
-          "text": "387,56 m²"
-        },
-        {
-          "text": "350,00 m²"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Rechthoek: 25×15 = 375 m². Vier kwart cirkels = 1 hele cirkel: π×2² = 12,56 m². Plein: 375 - 12,56 = 362,44 m²"
-    },
-    {
-      "id": 12,
-      "type": "multiple_choice",
-      "theme": "eigenschappen_figuren",
-      "question": {
-        "text": "Hoeveel hoekpunten heeft een cilinder?"
-      },
-      "options": [
-        {
-          "text": "0 hoekpunten"
-        },
-        {
-          "text": "2 hoekpunten"
-        },
-        {
-          "text": "4 hoekpunten"
-        },
-        {
-          "text": "8 hoekpunten"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Een cilinder heeft ronde vlakken en geen hoeken, dus 0 hoekpunten"
-    },
-    {
-      "id": 13,
-      "type": "multiple_choice",
-      "theme": "schaalmodellen",
-      "question": {
-        "text": "Een tuin van 20 bij 15 meter moet op schaal 1:200 getekend worden. Hoe groot wordt de tekening?"
-      },
-      "options": [
-        {
-          "text": "5 cm bij 3,75 cm"
-        },
-        {
-          "text": "10 cm bij 7,5 cm"
-        },
-        {
-          "text": "15 cm bij 10 cm"
-        },
-        {
-          "text": "20 cm bij 15 cm"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "20 m = 2000 cm ÷ 200 = 10 cm. 15 m = 1500 cm ÷ 200 = 7,5 cm"
-    },
-    {
-      "id": 14,
-      "type": "multiple_choice",
-      "theme": "eigenschappen_figuren",
-      "question": {
-        "text": "In een driehoek zijn twee hoeken 35° en 75°. Hoe groot is de derde hoek?"
-      },
-      "options": [
-        {
-          "text": "60°"
-        },
-        {
-          "text": "70°"
-        },
-        {
-          "text": "80°"
-        },
-        {
-          "text": "90°"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Som van hoeken in driehoek = 180°. Dus: 180° - 35° - 75° = 70°"
-    },
-    {
-      "id": 15,
-      "type": "multiple_choice",
-      "theme": "complexe_oppervlakte",
-      "question": {
-        "text": "Een schilderij heeft de vorm van een rechthoek van 80 cm bij 60 cm met aan de bovenkant een halve cirkel (straal 30 cm). Wat is de totale oppervlakte? (gebruik π = 3,14)"
-      },
-      "options": [
-        {
-          "text": "4800 cm²"
-        },
-        {
-          "text": "6213 cm²"
-        },
-        {
-          "text": "6213 cm²"
-        },
-        {
-          "text": "6000 cm²"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "Rechthoek: 80×60 = 4800 cm². Halve cirkel: (π×30²)/2 = 1413 cm². Totaal: 4800 + 1413 = 6213 cm²"
-    },
-    {
-      "id": 16,
-      "type": "multiple_choice",
-      "theme": "eigenschappen_figuren",
-      "question": {
-        "text": "Hoeveel symmetrie-assen heeft een vierkant?"
-      },
-      "options": [
-        {
-          "text": "2 symmetrie-assen"
-        },
-        {
-          "text": "3 symmetrie-assen"
-        },
-        {
-          "text": "4 symmetrie-assen"
-        },
-        {
-          "text": "8 symmetrie-assen"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Een vierkant heeft 4 symmetrie-assen: 2 door de hoeken en 2 door de zijden"
-    },
-    {
-      "id": 17,
-      "type": "multiple_choice",
-      "theme": "schaalmodellen",
-      "question": {
-        "text": "Op een bouwtekening met schaal 1:50 is een deur 4 cm hoog getekend. Hoe hoog is de echte deur?"
-      },
-      "options": [
-        {
-          "text": "50 cm"
-        },
-        {
-          "text": "1 meter"
-        },
-        {
-          "text": "2 meter"
-        },
-        {
-          "text": "4 meter"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Schaal 1:50 betekent: 1 cm op tekening = 50 cm werkelijk. Dus 4 cm × 50 = 200 cm = 2 meter"
-    },
-    {
-      "id": 18,
-      "type": "multiple_choice",
-      "theme": "complexe_oppervlakte",
-      "question": {
-        "text": "Een speeltuin bestaat uit een vierkant van 20×20 meter met in het midden een rond zandbak met een diameter van 6 meter. Wat is de oppervlakte van het gras? (gebruik π = 3,14)"
-      },
-      "options": [
-        {
-          "text": "371,74 m²"
-        },
-        {
-          "text": "380,00 m²"
-        },
-        {
-          "text": "390,00 m²"
-        },
-        {
-          "text": "400,00 m²"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Vierkant: 20×20 = 400 m². Cirkel met straal 3: π×3² = 28,26 m². Gras: 400 - 28,26 = 371,74 m²"
-    },
-    {
-      "id": 19,
-      "type": "multiple_choice",
-      "theme": "eigenschappen_figuren",
+      "id": "ex_000020",
       "question": {
         "text": "Hoeveel vlakken heeft een cilinder?"
       },
       "options": [
-        {
-          "text": "1 vlak"
-        },
-        {
-          "text": "2 vlakken"
-        },
-        {
-          "text": "3 vlakken"
-        },
-        {
-          "text": "4 vlakken"
-        }
+        "1",
+        "4",
+        "3 (2 cirkels + 1 gebogen)",
+        "2"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 2
-      },
-      "hint": "Een cilinder heeft 3 vlakken: 2 cirkelvormige vlakken (boven en onder) en 1 gebogen zijvlak"
+      "correct_answer": "3 (2 cirkels + 1 gebogen)",
+      "theme": "eigenschappen_figuren"
     },
     {
-      "id": 20,
-      "type": "multiple_choice",
-      "theme": "schaalmodellen",
+      "id": "ex_000021",
       "question": {
-        "text": "Op een landkaart met schaal 1:25.000 is de afstand tussen twee dorpen 8 cm. Wat is de werkelijke afstand?"
+        "text": "Een rechthoek heeft..."
       },
       "options": [
-        {
-          "text": "200 meter"
-        },
-        {
-          "text": "2 kilometer"
-        },
-        {
-          "text": "20 kilometer"
-        },
-        {
-          "text": "200 kilometer"
-        }
+        "geen evenwijdige zijden",
+        "4 rechte hoeken en 2 paar evenwijdige zijden",
+        "alleen scherpe hoeken",
+        "3 hoeken"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 1
-      },
-      "hint": "8 cm × 25.000 = 200.000 cm = 2.000 meter = 2 kilometer"
+      "correct_answer": "4 rechte hoeken en 2 paar evenwijdige zijden",
+      "theme": "eigenschappen_figuren"
     },
     {
-      "id": 21,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000022",
       "question": {
-        "text": "Kubus heeft hoeveel ribben?"
+        "text": "Een kubus en een balk: overeenkomst?"
       },
       "options": [
-        {
-          "text": "12"
-        },
-        {
-          "text": "17"
-        },
-        {
-          "text": "7"
-        },
-        {
-          "text": "24"
-        }
+        "Beide zijn rond",
+        "Beide hebben 4 vlakken",
+        "Beide hebben 6 vlakken",
+        "Geen overeenkomst"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Kubus = 12 ribben"
+      "correct_answer": "Beide hebben 6 vlakken",
+      "theme": "eigenschappen_figuren"
     },
     {
-      "id": 22,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000023",
       "question": {
-        "text": "L-vorm: 10×6 m + 4×3 m. Oppervlakte?"
+        "text": "Een vijfhoek heeft hoeveel hoeken?"
       },
       "options": [
-        {
-          "text": "72 m²"
-        },
-        {
-          "text": "77 m²"
-        },
-        {
-          "text": "67 m²"
-        },
-        {
-          "text": "144 m²"
-        }
+        "4",
+        "5",
+        "3",
+        "6"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Beide delen optellen"
+      "correct_answer": "5",
+      "theme": "eigenschappen_figuren"
     },
     {
-      "id": 23,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000024",
       "question": {
-        "text": "4 ton = ? kilogram"
+        "text": "Hoeveel symmetrie-assen heeft een vierkant?"
       },
       "options": [
-        {
-          "text": "4000 kg"
-        },
-        {
-          "text": "4005 kg"
-        },
-        {
-          "text": "3995 kg"
-        },
-        {
-          "text": "8000 kg"
-        }
+        "8",
+        "2",
+        "1",
+        "4"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "1 ton = 1000 kg"
+      "correct_answer": "4",
+      "theme": "eigenschappen_figuren"
     },
     {
-      "id": 24,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000025",
       "question": {
-        "text": "L-vormige ruimte: eerste deel 8×7 m, tweede deel 5×3 m. Totale oppervlakte?"
+        "text": "Welke ruimtelijke figuur heeft geen hoekpunten?"
       },
       "options": [
-        {
-          "text": "71 m²"
-        },
-        {
-          "text": "56 m²"
-        },
-        {
-          "text": "91 m²"
-        },
-        {
-          "text": "51 m²"
-        }
+        "balk",
+        "bol",
+        "piramide",
+        "kubus"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "(8×7) + (5×3) = 56 + 15 = 71 m²"
+      "correct_answer": "bol",
+      "theme": "eigenschappen_figuren"
     },
     {
-      "id": 25,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000026",
       "question": {
-        "text": "L-vormige ruimte: eerste deel 10×6 m, tweede deel 4×3 m. Totale oppervlakte?"
+        "text": "Een rechthoek heeft hoeveel symmetrie-assen?"
       },
       "options": [
-        {
-          "text": "72 m²"
-        },
-        {
-          "text": "60 m²"
-        },
-        {
-          "text": "92 m²"
-        },
-        {
-          "text": "52 m²"
-        }
+        "1",
+        "0",
+        "2",
+        "4"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "(10×6) + (4×3) = 60 + 12 = 72 m²"
+      "correct_answer": "2",
+      "theme": "eigenschappen_figuren"
     },
     {
-      "id": 26,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000027",
       "question": {
-        "text": "L-vormige ruimte: eerste deel 12×5 m, tweede deel 6×4 m. Totale oppervlakte?"
+        "text": "Hoeveel hoekpunten heeft een piramide met vierkant grondvlak?"
       },
       "options": [
-        {
-          "text": "84 m²"
-        },
-        {
-          "text": "60 m²"
-        },
-        {
-          "text": "104 m²"
-        },
-        {
-          "text": "64 m²"
-        }
+        "5",
+        "4",
+        "8",
+        "6"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "(12×5) + (6×4) = 60 + 24 = 84 m²"
+      "correct_answer": "5",
+      "theme": "eigenschappen_figuren"
     },
     {
-      "id": 27,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000028",
       "question": {
-        "text": "L-vormige tuin: 14×9 m + 4×2 m. Totale oppervlakte?"
+        "text": "Een parallellogram heeft..."
       },
       "options": [
-        {
-          "text": "134 m²"
-        },
-        {
-          "text": "126 m²"
-        },
-        {
-          "text": "8 m²"
-        },
-        {
-          "text": "154 m²"
-        }
+        "2 paar evenwijdige zijden",
+        "4 rechte hoeken",
+        "1 paar evenwijdige zijden",
+        "geen evenwijdige zijden"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (14×9) + (4×2)"
+      "correct_answer": "2 paar evenwijdige zijden",
+      "theme": "eigenschappen_figuren"
     },
     {
-      "id": 28,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000029",
       "question": {
-        "text": "L-vormige tuin: 13×7 m + 6×4 m. Totale oppervlakte?"
+        "text": "Een ruit heeft..."
       },
       "options": [
-        {
-          "text": "115 m²"
-        },
-        {
-          "text": "91 m²"
-        },
-        {
-          "text": "24 m²"
-        },
-        {
-          "text": "135 m²"
-        }
+        "4 gelijke zijden",
+        "3 gelijke zijden",
+        "geen gelijke zijden",
+        "4 verschillende zijden"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (13×7) + (6×4)"
+      "correct_answer": "4 gelijke zijden",
+      "theme": "eigenschappen_figuren"
     },
     {
-      "id": 29,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000030",
       "question": {
-        "text": "L-vormige tuin: 10×9 m + 7×3 m. Totale oppervlakte?"
+        "text": "Een trapezium heeft..."
       },
       "options": [
-        {
-          "text": "111 m²"
-        },
-        {
-          "text": "90 m²"
-        },
-        {
-          "text": "21 m²"
-        },
-        {
-          "text": "131 m²"
-        }
+        "4 rechte hoeken",
+        "geen evenwijdige zijden",
+        "minstens 1 paar evenwijdige zijden",
+        "4 gelijke zijden"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (10×9) + (7×3)"
+      "correct_answer": "minstens 1 paar evenwijdige zijden",
+      "theme": "eigenschappen_figuren"
     },
     {
-      "id": 30,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000031",
       "question": {
-        "text": "L-vormige tuin: 10×8 m + 5×2 m. Totale oppervlakte?"
+        "text": "Hoeveel diagonalen heeft een vijfhoek?"
       },
       "options": [
-        {
-          "text": "90 m²"
-        },
-        {
-          "text": "80 m²"
-        },
-        {
-          "text": "10 m²"
-        },
-        {
-          "text": "110 m²"
-        }
+        "5",
+        "3",
+        "2",
+        "10"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (10×8) + (5×2)"
+      "correct_answer": "5",
+      "theme": "eigenschappen_figuren"
     },
     {
-      "id": 31,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000032",
       "question": {
-        "text": "L-vormige tuin: 10×6 m + 3×5 m. Totale oppervlakte?"
+        "text": "Een regelmatige zeshoek heeft hoeveel symmetrie-assen?"
       },
       "options": [
-        {
-          "text": "75 m²"
-        },
-        {
-          "text": "60 m²"
-        },
-        {
-          "text": "15 m²"
-        },
-        {
-          "text": "95 m²"
-        }
+        "3",
+        "2",
+        "12",
+        "6"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (10×6) + (3×5)"
+      "correct_answer": "6",
+      "theme": "eigenschappen_figuren"
     },
     {
-      "id": 32,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000033",
       "question": {
-        "text": "L-vormige tuin: 9×7 m + 6×3 m. Totale oppervlakte?"
+        "text": "Een cilinder heeft hoeveel ribben?"
       },
       "options": [
-        {
-          "text": "81 m²"
-        },
-        {
-          "text": "63 m²"
-        },
-        {
-          "text": "18 m²"
-        },
-        {
-          "text": "101 m²"
-        }
+        "1",
+        "4",
+        "2 (randen van de cirkels)",
+        "0"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (9×7) + (6×3)"
+      "correct_answer": "2 (randen van de cirkels)",
+      "theme": "eigenschappen_figuren"
     },
     {
-      "id": 33,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000034",
       "question": {
-        "text": "L-vormige tuin: 13×5 m + 5×5 m. Totale oppervlakte?"
+        "text": "Een kegel heeft hoeveel vlakken?"
       },
       "options": [
-        {
-          "text": "90 m²"
-        },
-        {
-          "text": "65 m²"
-        },
-        {
-          "text": "25 m²"
-        },
-        {
-          "text": "110 m²"
-        }
+        "1",
+        "0",
+        "3",
+        "2 (1 cirkel + 1 gebogen)"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (13×5) + (5×5)"
+      "correct_answer": "2 (1 cirkel + 1 gebogen)",
+      "theme": "eigenschappen_figuren"
     },
     {
-      "id": 34,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000035",
       "question": {
-        "text": "L-vormige tuin: 8×7 m + 7×2 m. Totale oppervlakte?"
+        "text": "Een kamer is 7 meter. Op schaal 1:50, hoeveel cm op tekening?"
       },
       "options": [
-        {
-          "text": "70 m²"
-        },
-        {
-          "text": "56 m²"
-        },
-        {
-          "text": "14 m²"
-        },
-        {
-          "text": "90 m²"
-        }
+        "14 cm",
+        "12.0 cm",
+        "16 cm",
+        "7 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (8×7) + (7×2)"
+      "correct_answer": "14 cm",
+      "theme": "schaalmodellen"
     },
     {
-      "id": 35,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000036",
       "question": {
-        "text": "L-vormige tuin: 14×6 m + 3×4 m. Totale oppervlakte?"
+        "text": "Een schaalmodel op schaal 1:100. Het model is 12 cm. Echte afmeting in meters?"
       },
       "options": [
-        {
-          "text": "96 m²"
-        },
-        {
-          "text": "84 m²"
-        },
-        {
-          "text": "12 m²"
-        },
-        {
-          "text": "116 m²"
-        }
+        "11.50 m",
+        "12 m",
+        "12.50 m",
+        "12 m"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (14×6) + (3×4)"
+      "correct_answer": "12 m",
+      "theme": "schaalmodellen"
     },
     {
-      "id": 36,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000037",
       "question": {
-        "text": "L-vormige tuin: 14×9 m + 7×5 m. Totale oppervlakte?"
+        "text": "Een kamer is 5 meter. Op schaal 1:200, hoeveel cm op tekening?"
       },
       "options": [
-        {
-          "text": "161 m²"
-        },
-        {
-          "text": "126 m²"
-        },
-        {
-          "text": "35 m²"
-        },
-        {
-          "text": "181 m²"
-        }
+        "4.5 cm",
+        "5 cm",
+        "6.5 cm",
+        "2.5 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (14×9) + (7×5)"
+      "correct_answer": "2.5 cm",
+      "theme": "schaalmodellen"
     },
     {
-      "id": 37,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000038",
       "question": {
-        "text": "L-vormige tuin: 9×8 m + 4×3 m. Totale oppervlakte?"
+        "text": "Een kamer is 3 meter. Op schaal 1:200, hoeveel cm op tekening?"
       },
       "options": [
-        {
-          "text": "84 m²"
-        },
-        {
-          "text": "72 m²"
-        },
-        {
-          "text": "12 m²"
-        },
-        {
-          "text": "104 m²"
-        }
+        "5.5 cm",
+        "1.5 cm",
+        "3.5 cm",
+        "3 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (9×8) + (4×3)"
+      "correct_answer": "1.5 cm",
+      "theme": "schaalmodellen"
     },
     {
-      "id": 38,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000039",
       "question": {
-        "text": "L-vormige tuin: 10×9 m + 5×3 m. Totale oppervlakte?"
+        "text": "Een schaalmodel op schaal 1:50. Het model is 14 cm. Echte afmeting in meters?"
       },
       "options": [
-        {
-          "text": "105 m²"
-        },
-        {
-          "text": "90 m²"
-        },
-        {
-          "text": "15 m²"
-        },
-        {
-          "text": "125 m²"
-        }
+        "7 m",
+        "7.50 m",
+        "6.50 m",
+        "14 m"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (10×9) + (5×3)"
+      "correct_answer": "7 m",
+      "theme": "schaalmodellen"
     },
     {
-      "id": 39,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000040",
       "question": {
-        "text": "L-vormige tuin: 12×5 m + 7×2 m. Totale oppervlakte?"
+        "text": "Een kamer is 13 meter. Op schaal 1:100, hoeveel cm op tekening?"
       },
       "options": [
-        {
-          "text": "74 m²"
-        },
-        {
-          "text": "60 m²"
-        },
-        {
-          "text": "14 m²"
-        },
-        {
-          "text": "94 m²"
-        }
+        "13 cm",
+        "11.0 cm",
+        "15 cm",
+        "13 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (12×5) + (7×2)"
+      "correct_answer": "13 cm",
+      "theme": "schaalmodellen"
     },
     {
-      "id": 40,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000041",
       "question": {
-        "text": "L-vormige tuin: 9×5 m + 7×5 m. Totale oppervlakte?"
+        "text": "Een schaalmodel op schaal 1:100. Het model is 11 cm. Echte afmeting in meters?"
       },
       "options": [
-        {
-          "text": "80 m²"
-        },
-        {
-          "text": "45 m²"
-        },
-        {
-          "text": "35 m²"
-        },
-        {
-          "text": "100 m²"
-        }
+        "11 m",
+        "11.50 m",
+        "11 m",
+        "10.50 m"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (9×5) + (7×5)"
+      "correct_answer": "11 m",
+      "theme": "schaalmodellen"
     },
     {
-      "id": 41,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000042",
       "question": {
-        "text": "L-vormige tuin: 9×5 m + 5×4 m. Totale oppervlakte?"
+        "text": "Een schaalmodel op schaal 1:100. Het model is 10 cm. Echte afmeting in meters?"
       },
       "options": [
-        {
-          "text": "65 m²"
-        },
-        {
-          "text": "45 m²"
-        },
-        {
-          "text": "20 m²"
-        },
-        {
-          "text": "85 m²"
-        }
+        "9.50 m",
+        "10.50 m",
+        "10 m",
+        "10 m"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (9×5) + (5×4)"
+      "correct_answer": "10 m",
+      "theme": "schaalmodellen"
     },
     {
-      "id": 42,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000043",
       "question": {
-        "text": "L-vormige tuin: 12×8 m + 7×2 m. Totale oppervlakte?"
+        "text": "Een kamer is 14 meter. Op schaal 1:100, hoeveel cm op tekening?"
       },
       "options": [
-        {
-          "text": "110 m²"
-        },
-        {
-          "text": "96 m²"
-        },
-        {
-          "text": "14 m²"
-        },
-        {
-          "text": "130 m²"
-        }
+        "14 cm",
+        "14 cm",
+        "16 cm",
+        "12.0 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (12×8) + (7×2)"
+      "correct_answer": "14 cm",
+      "theme": "schaalmodellen"
     },
     {
-      "id": 43,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000044",
       "question": {
-        "text": "L-vormige tuin: 10×8 m + 7×2 m. Totale oppervlakte?"
+        "text": "Een schaalmodel op schaal 1:100. Het model is 23 cm. Echte afmeting in meters?"
       },
       "options": [
-        {
-          "text": "94 m²"
-        },
-        {
-          "text": "80 m²"
-        },
-        {
-          "text": "14 m²"
-        },
-        {
-          "text": "114 m²"
-        }
+        "23 m",
+        "23 m",
+        "23.50 m",
+        "22.50 m"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (10×8) + (7×2)"
+      "correct_answer": "23 m",
+      "theme": "schaalmodellen"
     },
     {
-      "id": 44,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000045",
       "question": {
-        "text": "L-vormige tuin: 9×6 m + 5×4 m. Totale oppervlakte?"
+        "text": "Een kamer is 6 meter. Op schaal 1:200, hoeveel cm op tekening?"
       },
       "options": [
-        {
-          "text": "74 m²"
-        },
-        {
-          "text": "54 m²"
-        },
-        {
-          "text": "20 m²"
-        },
-        {
-          "text": "94 m²"
-        }
+        "5 cm",
+        "3 cm",
+        "6 cm",
+        "7.0 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (9×6) + (5×4)"
+      "correct_answer": "3 cm",
+      "theme": "schaalmodellen"
     },
     {
-      "id": 45,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000046",
       "question": {
-        "text": "L-vormige tuin: 11×8 m + 3×5 m. Totale oppervlakte?"
+        "text": "Een kamer is 5 meter. Op schaal 1:100, hoeveel cm op tekening?"
       },
       "options": [
-        {
-          "text": "103 m²"
-        },
-        {
-          "text": "88 m²"
-        },
-        {
-          "text": "15 m²"
-        },
-        {
-          "text": "123 m²"
-        }
+        "7 cm",
+        "5 cm",
+        "9.0 cm",
+        "5 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (11×8) + (3×5)"
+      "correct_answer": "5 cm",
+      "theme": "schaalmodellen"
     },
     {
-      "id": 46,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000047",
       "question": {
-        "text": "L-vormige tuin: 12×7 m + 6×4 m. Totale oppervlakte?"
+        "text": "Een schaalmodel op schaal 1:100. Het model is 16 cm. Echte afmeting in meters?"
       },
       "options": [
-        {
-          "text": "108 m²"
-        },
-        {
-          "text": "84 m²"
-        },
-        {
-          "text": "24 m²"
-        },
-        {
-          "text": "128 m²"
-        }
+        "16 m",
+        "16.50 m",
+        "15.50 m",
+        "16 m"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (12×7) + (6×4)"
+      "correct_answer": "16 m",
+      "theme": "schaalmodellen"
     },
     {
-      "id": 47,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000048",
       "question": {
-        "text": "L-vormige tuin: 14×5 m + 5×4 m. Totale oppervlakte?"
+        "text": "Een kamer is 4 meter. Op schaal 1:100, hoeveel cm op tekening?"
       },
       "options": [
-        {
-          "text": "90 m²"
-        },
-        {
-          "text": "70 m²"
-        },
-        {
-          "text": "20 m²"
-        },
-        {
-          "text": "110 m²"
-        }
+        "4 cm",
+        "4 cm",
+        "8.0 cm",
+        "6 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (14×5) + (5×4)"
+      "correct_answer": "4 cm",
+      "theme": "schaalmodellen"
     },
     {
-      "id": 48,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000049",
       "question": {
-        "text": "L-vormige tuin: 8×5 m + 5×3 m. Totale oppervlakte?"
+        "text": "Een schaalmodel op schaal 1:50. Het model is 26 cm. Echte afmeting in meters?"
       },
       "options": [
-        {
-          "text": "55 m²"
-        },
-        {
-          "text": "40 m²"
-        },
-        {
-          "text": "15 m²"
-        },
-        {
-          "text": "75 m²"
-        }
+        "13 m",
+        "13.50 m",
+        "26 m",
+        "12.50 m"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (8×5) + (5×3)"
+      "correct_answer": "13 m",
+      "theme": "schaalmodellen"
     },
     {
-      "id": 49,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000050",
       "question": {
-        "text": "L-vormige tuin: 14×5 m + 5×5 m. Totale oppervlakte?"
+        "text": "Een kamer is 15 meter. Op schaal 1:200, hoeveel cm op tekening?"
       },
       "options": [
-        {
-          "text": "95 m²"
-        },
-        {
-          "text": "70 m²"
-        },
-        {
-          "text": "25 m²"
-        },
-        {
-          "text": "115 m²"
-        }
+        "9.5 cm",
+        "5.5 cm",
+        "7.5 cm",
+        "15 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (14×5) + (5×5)"
-    },
-    {
-      "id": 50,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "L-vormige tuin: 8×5 m + 3×2 m. Totale oppervlakte?"
-      },
-      "options": [
-        {
-          "text": "46 m²"
-        },
-        {
-          "text": "40 m²"
-        },
-        {
-          "text": "6 m²"
-        },
-        {
-          "text": "66 m²"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Tel beide delen op: (8×5) + (3×2)"
+      "correct_answer": "7.5 cm",
+      "theme": "schaalmodellen"
     }
   ],
   "settings": {

@@ -10,10 +10,12 @@
     "domain": "meetkunde",
     "slo_alignment": {
       "kerndoelen": [
+        "K32",
         "K33"
       ],
       "rekendomeinen": [
-        "meetkunde"
+        "meetkunde",
+        "meten"
       ],
       "tussendoelen": [
         "7MM1",
@@ -25,1361 +27,711 @@
     }
   },
   "display": {
-    "title": "Meetkunde Groep 7 - Ondersteuning"
+    "title": "Meetkunde Groep 7"
   },
   "content": {
     "instruction": "Kies het goede antwoord:"
   },
   "items": [
     {
-      "id": 1,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_cirkel",
+      "id": "ex_000001",
       "question": {
-        "text": "Een ronde pizza heeft een straal van 10 cm. Bereken de oppervlakte. Gebruik π = 3,14."
+        "text": "Een cirkel heeft straal 4 cm. Wat is de oppervlakte? (gebruik π = 3,14)"
       },
       "options": [
-        {
-          "text": "314 cm²"
-        },
-        {
-          "text": "31,4 cm²"
-        },
-        {
-          "text": "62,8 cm²"
-        },
-        {
-          "text": "100 cm²"
-        }
+        "40.24 cm²",
+        "25.12 cm²",
+        "60.24 cm²",
+        "50.24 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte cirkel = π × r². Dus: 3,14 × 10² = 3,14 × 100 = 314 cm²"
+      "correct_answer": "50.24 cm²",
+      "theme": "oppervlakte_cirkel"
     },
     {
-      "id": 2,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_cirkel",
+      "id": "ex_000002",
       "question": {
-        "text": "Een cirkel heeft een straal van 5 cm. Wat is de oppervlakte? Gebruik π = 3,14."
+        "text": "Een cirkel heeft straal 15 cm. Wat is de oppervlakte? (gebruik π = 3,14)"
       },
       "options": [
-        {
-          "text": "78,5 cm²"
-        },
-        {
-          "text": "15,7 cm²"
-        },
-        {
-          "text": "31,4 cm²"
-        },
-        {
-          "text": "25 cm²"
-        }
+        "706.50 cm²",
+        "94.20 cm²",
+        "696.50 cm²",
+        "716.50 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × r² = 3,14 × 5² = 3,14 × 25"
+      "correct_answer": "706.50 cm²",
+      "theme": "oppervlakte_cirkel"
     },
     {
-      "id": 3,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_cirkel",
+      "id": "ex_000003",
       "question": {
-        "text": "Een ronde klok heeft een straal van 8 cm. Bereken de oppervlakte. Gebruik π = 3,14."
+        "text": "Een cirkel heeft straal 12 cm. Wat is de oppervlakte? (gebruik π = 3,14)"
       },
       "options": [
-        {
-          "text": "200,96 cm²"
-        },
-        {
-          "text": "25,12 cm²"
-        },
-        {
-          "text": "50,24 cm²"
-        },
-        {
-          "text": "64 cm²"
-        }
+        "75.36 cm²",
+        "462.16 cm²",
+        "452.16 cm²",
+        "442.16 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × r² = 3,14 × 8² = 3,14 × 64"
+      "correct_answer": "452.16 cm²",
+      "theme": "oppervlakte_cirkel"
     },
     {
-      "id": 4,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_cirkel",
+      "id": "ex_000004",
       "question": {
-        "text": "Een cirkel heeft een diameter van 6 meter. Bereken de oppervlakte. Gebruik π = 3,14."
+        "text": "Een cirkel heeft straal 5 cm. Wat is de oppervlakte? (gebruik π = 3,14)"
       },
       "options": [
-        {
-          "text": "28,26 m²"
-        },
-        {
-          "text": "18,84 m²"
-        },
-        {
-          "text": "113,04 m²"
-        },
-        {
-          "text": "36 m²"
-        }
+        "68.50 cm²",
+        "88.50 cm²",
+        "31.40 cm²",
+        "78.50 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Diameter = 6 m, dus straal = 3 m. Oppervlakte = π × 3² = 3,14 × 9"
+      "correct_answer": "78.50 cm²",
+      "theme": "oppervlakte_cirkel"
     },
     {
-      "id": 5,
-      "type": "multiple_choice",
-      "theme": "oppervlakte_cirkel",
+      "id": "ex_000005",
       "question": {
-        "text": "Welke formule gebruik je om de oppervlakte van een cirkel te berekenen?"
+        "text": "Een cirkel heeft straal 11 cm. Wat is de oppervlakte? (gebruik π = 3,14)"
       },
       "options": [
-        {
-          "text": "π × r²"
-        },
-        {
-          "text": "π × d"
-        },
-        {
-          "text": "2 × π × r"
-        },
-        {
-          "text": "r × r"
-        }
+        "379.94 cm²",
+        "69.08 cm²",
+        "369.94 cm²",
+        "389.94 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "De oppervlakte van een cirkel bereken je met π × straal × straal, oftewel π × r²"
+      "correct_answer": "379.94 cm²",
+      "theme": "oppervlakte_cirkel"
     },
     {
-      "id": 6,
-      "type": "multiple_choice",
-      "theme": "diagonalen_meten",
+      "id": "ex_000006",
+      "question": {
+        "text": "Een cirkel heeft straal 14 cm. Wat is de oppervlakte? (gebruik π = 3,14)"
+      },
+      "options": [
+        "625.44 cm²",
+        "605.44 cm²",
+        "87.92 cm²",
+        "615.44 cm²"
+      ],
+      "correct_answer": "615.44 cm²",
+      "theme": "oppervlakte_cirkel"
+    },
+    {
+      "id": "ex_000007",
+      "question": {
+        "text": "Een cirkel heeft straal 8 cm. Wat is de oppervlakte? (gebruik π = 3,14)"
+      },
+      "options": [
+        "190.96 cm²",
+        "200.96 cm²",
+        "50.24 cm²",
+        "210.96 cm²"
+      ],
+      "correct_answer": "200.96 cm²",
+      "theme": "oppervlakte_cirkel"
+    },
+    {
+      "id": "ex_000008",
+      "question": {
+        "text": "Een cirkel heeft straal 6 cm. Wat is de oppervlakte? (gebruik π = 3,14)"
+      },
+      "options": [
+        "123.04 cm²",
+        "103.04 cm²",
+        "37.68 cm²",
+        "113.04 cm²"
+      ],
+      "correct_answer": "113.04 cm²",
+      "theme": "oppervlakte_cirkel"
+    },
+    {
+      "id": "ex_000009",
+      "question": {
+        "text": "Een cirkel heeft straal 9 cm. Wat is de oppervlakte? (gebruik π = 3,14)"
+      },
+      "options": [
+        "244.34 cm²",
+        "254.34 cm²",
+        "56.52 cm²",
+        "264.34 cm²"
+      ],
+      "correct_answer": "254.34 cm²",
+      "theme": "oppervlakte_cirkel"
+    },
+    {
+      "id": "ex_000010",
+      "question": {
+        "text": "Een cirkel heeft straal 7 cm. Wat is de oppervlakte? (gebruik π = 3,14)"
+      },
+      "options": [
+        "143.86 cm²",
+        "153.86 cm²",
+        "43.96 cm²",
+        "163.86 cm²"
+      ],
+      "correct_answer": "153.86 cm²",
+      "theme": "oppervlakte_cirkel"
+    },
+    {
+      "id": "ex_000011",
+      "question": {
+        "text": "Een cirkel heeft straal 10 cm. Wat is de oppervlakte? (gebruik π = 3,14)"
+      },
+      "options": [
+        "314.00 cm²",
+        "62.80 cm²",
+        "304.00 cm²",
+        "324.00 cm²"
+      ],
+      "correct_answer": "314.00 cm²",
+      "theme": "oppervlakte_cirkel"
+    },
+    {
+      "id": "ex_000012",
+      "question": {
+        "text": "Een cirkel heeft straal 3 cm. Wat is de oppervlakte? (gebruik π = 3,14)"
+      },
+      "options": [
+        "18.84 cm²",
+        "38.26 cm²",
+        "28.26 cm²",
+        "18.26 cm²"
+      ],
+      "correct_answer": "28.26 cm²",
+      "theme": "oppervlakte_cirkel"
+    },
+    {
+      "id": "ex_000013",
+      "question": {
+        "text": "Een cirkel heeft straal 13 cm. Wat is de oppervlakte? (gebruik π = 3,14)"
+      },
+      "options": [
+        "530.66 cm²",
+        "540.66 cm²",
+        "81.64 cm²",
+        "520.66 cm²"
+      ],
+      "correct_answer": "530.66 cm²",
+      "theme": "oppervlakte_cirkel"
+    },
+    {
+      "id": "ex_000014",
+      "question": {
+        "text": "Een vierkant met zijde 10 cm. Schat de diagonaal."
+      },
+      "options": [
+        "5 cm",
+        "10 cm",
+        "ongeveer 14 cm",
+        "20 cm"
+      ],
+      "correct_answer": "ongeveer 14 cm",
+      "theme": "diagonalen"
+    },
+    {
+      "id": "ex_000015",
+      "question": {
+        "text": "Hoeveel diagonalen heeft een rechthoek?"
+      },
+      "options": [
+        "2",
+        "1",
+        "4",
+        "0"
+      ],
+      "correct_answer": "2",
+      "theme": "diagonalen"
+    },
+    {
+      "id": "ex_000016",
+      "question": {
+        "text": "De diagonalen in een rechthoek zijn..."
+      },
+      "options": [
+        "even lang",
+        "verschillend lang",
+        "geen van allen",
+        "loodrecht"
+      ],
+      "correct_answer": "even lang",
+      "theme": "diagonalen"
+    },
+    {
+      "id": "ex_000017",
+      "question": {
+        "text": "Een vierkant met zijde 5 cm. Diagonaal is ongeveer..."
+      },
+      "options": [
+        "10 cm",
+        "5 cm",
+        "7 cm",
+        "3 cm"
+      ],
+      "correct_answer": "7 cm",
+      "theme": "diagonalen"
+    },
+    {
+      "id": "ex_000018",
+      "question": {
+        "text": "Meet de diagonaal van een rechthoek 6×8 cm. Ongeveer..."
+      },
+      "options": [
+        "6 cm",
+        "8 cm",
+        "14 cm",
+        "10 cm"
+      ],
+      "correct_answer": "10 cm",
+      "theme": "diagonalen"
+    },
+    {
+      "id": "ex_000019",
+      "question": {
+        "text": "Een vierkant met zijde 8 cm heeft diagonaal van ongeveer..."
+      },
+      "options": [
+        "11 cm",
+        "4 cm",
+        "16 cm",
+        "8 cm"
+      ],
+      "correct_answer": "11 cm",
+      "theme": "diagonalen"
+    },
+    {
+      "id": "ex_000020",
+      "question": {
+        "text": "Diagonalen in een vierkant zijn..."
+      },
+      "options": [
+        "kort",
+        "lang",
+        "verschillend",
+        "even lang"
+      ],
+      "correct_answer": "even lang",
+      "theme": "diagonalen"
+    },
+    {
+      "id": "ex_000021",
+      "question": {
+        "text": "Een rechthoek 3×4 cm. Diagonaal ongeveer..."
+      },
+      "options": [
+        "5 cm",
+        "4 cm",
+        "3 cm",
+        "7 cm"
+      ],
+      "correct_answer": "5 cm",
+      "theme": "diagonalen"
+    },
+    {
+      "id": "ex_000022",
       "question": {
         "text": "Hoeveel diagonalen heeft een vierkant?"
       },
       "options": [
-        {
-          "text": "2 diagonalen"
-        },
-        {
-          "text": "4 diagonalen"
-        },
-        {
-          "text": "1 diagonaal"
-        },
-        {
-          "text": "0 diagonalen"
-        }
+        "8",
+        "1",
+        "2",
+        "4"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Een vierkant heeft twee diagonalen die even lang zijn en elkaar in het midden kruisen."
+      "correct_answer": "2",
+      "theme": "diagonalen"
     },
     {
-      "id": 7,
-      "type": "multiple_choice",
-      "theme": "diagonalen_meten",
+      "id": "ex_000023",
       "question": {
-        "text": "Een rechthoek is 5 cm lang en 3 cm breed. De diagonaal is ongeveer..."
+        "text": "De diagonaal van een vierkant is... dan de zijde"
       },
       "options": [
-        {
-          "text": "6 cm"
-        },
-        {
-          "text": "8 cm"
-        },
-        {
-          "text": "3 cm"
-        },
-        {
-          "text": "10 cm"
-        }
+        "half",
+        "even lang",
+        "korter",
+        "langer"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "De diagonaal is iets langer dan de langste zijde. Meet met een liniaal of schat: net iets meer dan 5 cm."
+      "correct_answer": "langer",
+      "theme": "diagonalen"
     },
     {
-      "id": 8,
-      "type": "multiple_choice",
-      "theme": "diagonalen_meten",
+      "id": "ex_000024",
       "question": {
-        "text": "Je meet de diagonaal van een vierkant met zijden van 6 cm. De diagonaal is ongeveer..."
+        "text": "Een rechthoek 5×12 cm. Diagonaal ongeveer..."
       },
       "options": [
-        {
-          "text": "Ongeveer 8,5 cm"
-        },
-        {
-          "text": "Ongeveer 6 cm"
-        },
-        {
-          "text": "Ongeveer 12 cm"
-        },
-        {
-          "text": "Ongeveer 3 cm"
-        }
+        "5 cm",
+        "17 cm",
+        "13 cm",
+        "12 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "De diagonaal van een vierkant is ongeveer 1,4 keer de zijde. Dus 6 × 1,4 ≈ 8,5 cm."
+      "correct_answer": "13 cm",
+      "theme": "diagonalen"
     },
     {
-      "id": 9,
-      "type": "multiple_choice",
-      "theme": "diagonalen_meten",
+      "id": "ex_000025",
       "question": {
-        "text": "Welke uitspraak over diagonalen is waar?"
+        "text": "Vierkant zijde 12 cm. Diagonaal ongeveer..."
       },
       "options": [
-        {
-          "text": "Een diagonaal verbindt twee hoekpunten die niet naast elkaar liggen"
-        },
-        {
-          "text": "Een diagonaal is altijd korter dan de zijden"
-        },
-        {
-          "text": "Een cirkel heeft twee diagonalen"
-        },
-        {
-          "text": "Een driehoek heeft één diagonaal"
-        }
+        "6 cm",
+        "12 cm",
+        "17 cm",
+        "24 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Een diagonaal is een lijn die twee hoekpunten verbindt die niet aan elkaar grenzen."
+      "correct_answer": "17 cm",
+      "theme": "diagonalen"
     },
     {
-      "id": 10,
-      "type": "multiple_choice",
-      "theme": "diagonalen_meten",
+      "id": "ex_000026",
       "question": {
-        "text": "Een klaslokaal is 8 meter lang en 6 meter breed. Schat de diagonaal."
+        "text": "Een vierkant zijde 6 cm. Diagonaal is ongeveer..."
       },
       "options": [
-        {
-          "text": "Ongeveer 10 meter"
-        },
-        {
-          "text": "Ongeveer 14 meter"
-        },
-        {
-          "text": "Ongeveer 6 meter"
-        },
-        {
-          "text": "Ongeveer 20 meter"
-        }
+        "8 cm",
+        "12 cm",
+        "6 cm",
+        "3 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "De diagonaal is langer dan 8 meter maar niet veel langer. Schat tussen 9 en 11 meter."
+      "correct_answer": "8 cm",
+      "theme": "diagonalen"
     },
     {
-      "id": 11,
-      "type": "multiple_choice",
-      "theme": "hoeksoorten",
+      "id": "ex_000027",
       "question": {
-        "text": "Een hoek van 90° is een..."
+        "text": "Rechthoek 8×15 cm. Diagonaal ongeveer..."
       },
       "options": [
-        {
-          "text": "Rechte hoek"
-        },
-        {
-          "text": "Scherpe hoek"
-        },
-        {
-          "text": "Stompe hoek"
-        },
-        {
-          "text": "Gestrekte hoek"
-        }
+        "8 cm",
+        "15 cm",
+        "17 cm",
+        "23 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Een rechte hoek is precies 90°, zoals de hoeken in een vierkant of rechthoek."
+      "correct_answer": "17 cm",
+      "theme": "diagonalen"
     },
     {
-      "id": 12,
-      "type": "multiple_choice",
-      "theme": "hoeksoorten",
+      "id": "ex_000028",
       "question": {
-        "text": "Een hoek van 45° is een..."
+        "text": "Diagonaal van vierkant zijde 20 cm is ongeveer..."
       },
       "options": [
-        {
-          "text": "Scherpe hoek"
-        },
-        {
-          "text": "Rechte hoek"
-        },
-        {
-          "text": "Stompe hoek"
-        },
-        {
-          "text": "Gestrekte hoek"
-        }
+        "20 cm",
+        "40 cm",
+        "28 cm",
+        "10 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Een scherpe hoek is kleiner dan 90°. 45° is kleiner dan 90°."
+      "correct_answer": "28 cm",
+      "theme": "diagonalen"
     },
     {
-      "id": 13,
-      "type": "multiple_choice",
-      "theme": "hoeksoorten",
+      "id": "ex_000029",
       "question": {
-        "text": "Een hoek van 120° is een..."
+        "text": "Een rechthoek 9×12 cm. Diagonaal ongeveer..."
       },
       "options": [
-        {
-          "text": "Stompe hoek"
-        },
-        {
-          "text": "Rechte hoek"
-        },
-        {
-          "text": "Scherpe hoek"
-        },
-        {
-          "text": "Gestrekte hoek"
-        }
+        "9 cm",
+        "21 cm",
+        "12 cm",
+        "15 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Een stompe hoek is groter dan 90° maar kleiner dan 180°. 120° past daarbij."
+      "correct_answer": "15 cm",
+      "theme": "diagonalen"
     },
     {
-      "id": 14,
-      "type": "multiple_choice",
-      "theme": "hoeksoorten",
+      "id": "ex_000030",
+      "question": {
+        "text": "Vierkant zijde 15 cm. Diagonaal ongeveer..."
+      },
+      "options": [
+        "30 cm",
+        "15 cm",
+        "21 cm",
+        "7 cm"
+      ],
+      "correct_answer": "21 cm",
+      "theme": "diagonalen"
+    },
+    {
+      "id": "ex_000031",
+      "question": {
+        "text": "Een hoek van 45° is..."
+      },
+      "options": [
+        "recht",
+        "scherp",
+        "stomp",
+        "gestrekt"
+      ],
+      "correct_answer": "scherp",
+      "theme": "hoeksoorten"
+    },
+    {
+      "id": "ex_000032",
+      "question": {
+        "text": "Een hoek van 90° is..."
+      },
+      "options": [
+        "stomp",
+        "scherp",
+        "recht",
+        "gestrekt"
+      ],
+      "correct_answer": "recht",
+      "theme": "hoeksoorten"
+    },
+    {
+      "id": "ex_000033",
+      "question": {
+        "text": "Een hoek van 120° is..."
+      },
+      "options": [
+        "scherp",
+        "stomp",
+        "gestrekt",
+        "recht"
+      ],
+      "correct_answer": "stomp",
+      "theme": "hoeksoorten"
+    },
+    {
+      "id": "ex_000034",
+      "question": {
+        "text": "Een hoek van 180° is..."
+      },
+      "options": [
+        "stomp",
+        "scherp",
+        "gestrekt",
+        "recht"
+      ],
+      "correct_answer": "gestrekt",
+      "theme": "hoeksoorten"
+    },
+    {
+      "id": "ex_000035",
       "question": {
         "text": "Welke hoek is scherp?"
       },
       "options": [
-        {
-          "text": "30°"
-        },
-        {
-          "text": "90°"
-        },
-        {
-          "text": "100°"
-        },
-        {
-          "text": "180°"
-        }
+        "90°",
+        "60°",
+        "180°",
+        "120°"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Scherpe hoeken zijn kleiner dan 90°. Alleen 30° is kleiner dan 90°."
+      "correct_answer": "60°",
+      "theme": "hoeksoorten"
     },
     {
-      "id": 15,
-      "type": "multiple_choice",
-      "theme": "hoeksoorten",
+      "id": "ex_000036",
       "question": {
-        "text": "De hoek van een muur met de vloer is meestal..."
+        "text": "Welke hoek is stomp?"
       },
       "options": [
-        {
-          "text": "Een rechte hoek (90°)"
-        },
-        {
-          "text": "Een scherpe hoek (< 90°)"
-        },
-        {
-          "text": "Een stompe hoek (> 90°)"
-        },
-        {
-          "text": "Een gestrekte hoek (180°)"
-        }
+        "90°",
+        "45°",
+        "60°",
+        "135°"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Muren staan meestal recht op de vloer, wat een hoek van 90° geeft."
+      "correct_answer": "135°",
+      "theme": "hoeksoorten"
     },
     {
-      "id": 16,
-      "type": "multiple_choice",
-      "theme": "coördinaten",
+      "id": "ex_000037",
       "question": {
-        "text": "Bij coördinaat (4, 2) is de x-coördinaat..."
+        "text": "Een scherpe hoek is..."
       },
       "options": [
-        {
-          "text": "4"
-        },
-        {
-          "text": "2"
-        },
-        {
-          "text": "6"
-        },
-        {
-          "text": "8"
-        }
+        "= 90°",
+        "< 90°",
+        "= 180°",
+        "> 90°"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Bij (x, y) is het eerste getal altijd de x-coördinaat. Dus bij (4, 2) is x = 4."
+      "correct_answer": "< 90°",
+      "theme": "hoeksoorten"
     },
     {
-      "id": 17,
-      "type": "multiple_choice",
-      "theme": "coördinaten",
+      "id": "ex_000038",
       "question": {
-        "text": "Bij coördinaat (3, 7) is de y-coördinaat..."
+        "text": "Een stompe hoek is..."
       },
       "options": [
-        {
-          "text": "7"
-        },
-        {
-          "text": "3"
-        },
-        {
-          "text": "10"
-        },
-        {
-          "text": "4"
-        }
+        "< 90°",
+        "= 90°",
+        "= 180°",
+        "> 90° en < 180°"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Bij (x, y) is het tweede getal altijd de y-coördinaat. Dus bij (3, 7) is y = 7."
+      "correct_answer": "> 90° en < 180°",
+      "theme": "hoeksoorten"
     },
     {
-      "id": 18,
-      "type": "multiple_choice",
-      "theme": "coördinaten",
+      "id": "ex_000039",
       "question": {
-        "text": "Punt A heeft coördinaat (2, 3). Welke richting moet je om naar punt (5, 3) te gaan?"
+        "text": "30° is een..."
       },
       "options": [
-        {
-          "text": "3 naar rechts"
-        },
-        {
-          "text": "3 naar links"
-        },
-        {
-          "text": "3 omhoog"
-        },
-        {
-          "text": "3 omlaag"
-        }
+        "gestrekte hoek",
+        "scherpe hoek",
+        "rechte hoek",
+        "stompe hoek"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "De x-coördinaat verandert van 2 naar 5, dat is +3. Naar rechts betekent x verhogen."
+      "correct_answer": "scherpe hoek",
+      "theme": "hoeksoorten"
     },
     {
-      "id": 19,
-      "type": "multiple_choice",
-      "theme": "coördinaten",
+      "id": "ex_000040",
       "question": {
-        "text": "De oorsprong in een coördinatenstelsel heeft coördinaat..."
+        "text": "150° is een..."
       },
       "options": [
-        {
-          "text": "(0, 0)"
-        },
-        {
-          "text": "(1, 1)"
-        },
-        {
-          "text": "(0, 1)"
-        },
-        {
-          "text": "(1, 0)"
-        }
+        "gestrekte hoek",
+        "scherpe hoek",
+        "rechte hoek",
+        "stompe hoek"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "De oorsprong is het punt waar de x-as en y-as elkaar snijden, op (0, 0)."
+      "correct_answer": "stompe hoek",
+      "theme": "hoeksoorten"
     },
     {
-      "id": 20,
-      "type": "multiple_choice",
-      "theme": "coördinaten",
+      "id": "ex_000041",
       "question": {
-        "text": "Je tekent punten (1, 2), (1, 5), (4, 5) en (4, 2). Welke figuur maak je?"
+        "text": "75° is een..."
       },
       "options": [
-        {
-          "text": "Een rechthoek"
-        },
-        {
-          "text": "Een driehoek"
-        },
-        {
-          "text": "Een cirkel"
-        },
-        {
-          "text": "Een lijn"
-        }
+        "stompe hoek",
+        "gestrekte hoek",
+        "rechte hoek",
+        "scherpe hoek"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Teken de vier punten en verbind ze. Je krijgt een rechthoek van 3 bij 3 eenheden."
+      "correct_answer": "scherpe hoek",
+      "theme": "hoeksoorten"
     },
     {
-      "id": 21,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000042",
       "question": {
-        "text": "Cirkel straal 6 cm, oppervlakte? (π=3,14)"
+        "text": "Een driehoek met hoeken 60°, 60°, 60° heeft..."
       },
       "options": [
-        {
-          "text": "113.0 cm²"
-        },
-        {
-          "text": "123.0 cm²"
-        },
-        {
-          "text": "108.0 cm²"
-        },
-        {
-          "text": "226.0 cm²"
-        }
+        "een stompe hoek",
+        "alleen scherpe hoeken",
+        "een gestrekte hoek",
+        "een rechte hoek"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "π × r²"
+      "correct_answer": "alleen scherpe hoeken",
+      "theme": "hoeksoorten"
     },
     {
-      "id": 22,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000043",
       "question": {
-        "text": "Hoek van 45° is een...?"
+        "text": "Een driehoek met hoeken 90°, 45°, 45° heeft..."
       },
       "options": [
-        {
-          "text": "scherpe hoek"
-        },
-        {
-          "text": "rechte hoek"
-        },
-        {
-          "text": "stompe hoek"
-        },
-        {
-          "text": "gestrekte hoek"
-        }
+        "alleen scherpe hoeken",
+        "geen rechte hoek",
+        "een stompe hoek",
+        "een rechte hoek"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "< 90° = scherp"
+      "correct_answer": "een rechte hoek",
+      "theme": "hoeksoorten"
     },
     {
-      "id": 23,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000044",
       "question": {
-        "text": "Cilinder straal 3 cm, hoogte 10 cm, volume? (π=3,14)"
+        "text": "110° is een..."
       },
       "options": [
-        {
-          "text": "282.6 cm³"
-        },
-        {
-          "text": "287.6 cm³"
-        },
-        {
-          "text": "277.6 cm³"
-        },
-        {
-          "text": "565.2 cm³"
-        }
+        "scherpe hoek",
+        "stompe hoek",
+        "gestrekte hoek",
+        "rechte hoek"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "π × r² × h"
+      "correct_answer": "stompe hoek",
+      "theme": "hoeksoorten"
     },
     {
-      "id": 24,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000045",
       "question": {
-        "text": "Bereken de oppervlakte van een cirkel met straal 6 cm (π = 3,14)"
+        "text": "25° is een..."
       },
       "options": [
-        {
-          "text": "113.04 cm²"
-        },
-        {
-          "text": "133.04000000000002 cm²"
-        },
-        {
-          "text": "93.04 cm²"
-        },
-        {
-          "text": "60 cm²"
-        }
+        "rechte hoek",
+        "gestrekte hoek",
+        "stompe hoek",
+        "scherpe hoek"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × 6² = 3,14 × 36 ≈ 113.04 cm²"
+      "correct_answer": "scherpe hoek",
+      "theme": "hoeksoorten"
     },
     {
-      "id": 25,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000046",
       "question": {
-        "text": "Bereken de oppervlakte van een cirkel met straal 3 cm (π = 3,14)"
+        "text": "Een hoek van 170° is..."
       },
       "options": [
-        {
-          "text": "28.26 cm²"
-        },
-        {
-          "text": "48.260000000000005 cm²"
-        },
-        {
-          "text": "8.260000000000002 cm²"
-        },
-        {
-          "text": "30 cm²"
-        }
+        "gestrekte hoek",
+        "scherpe hoek",
+        "stompe hoek",
+        "rechte hoek"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × 3² = 3,14 × 9 ≈ 28.26 cm²"
+      "correct_answer": "stompe hoek",
+      "theme": "hoeksoorten"
     },
     {
-      "id": 26,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_502223",
       "question": {
-        "text": "Bereken de oppervlakte van een cirkel met straal 5 cm (π = 3,14)"
+        "text": "Een cirkel heeft straal 6 cm. Bereken de oppervlakte. Gebruik π = 3,14."
       },
       "options": [
-        {
-          "text": "78.5 cm²"
-        },
-        {
-          "text": "98.5 cm²"
-        },
-        {
-          "text": "58.5 cm²"
-        },
-        {
-          "text": "50 cm²"
-        }
+        "37,68 cm²",
+        "150,72 cm²",
+        "75,36 cm²",
+        "113,04 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × 5² = 3,14 × 25 ≈ 78.5 cm²"
+      "correct_answer": "113,04 cm²",
+      "theme": "oppervlakte_cirkel"
     },
     {
-      "id": 27,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_678565",
       "question": {
-        "text": "Bereken de oppervlakte van een cirkel met straal 7 cm (π = 3,14)"
+        "text": "Een cirkel heeft diameter 10 cm. Bereken eerst de straal, dan de oppervlakte. Gebruik π = 3,14."
       },
       "options": [
-        {
-          "text": "153.86 cm²"
-        },
-        {
-          "text": "173.86 cm²"
-        },
-        {
-          "text": "133.86 cm²"
-        },
-        {
-          "text": "70 cm²"
-        }
+        "78,5 cm²",
+        "157 cm²",
+        "31,4 cm²",
+        "314 cm²"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × 7² = 3,14 × 49 ≈ 153.86 cm²"
+      "correct_answer": "78,5 cm²",
+      "theme": "oppervlakte_cirkel"
     },
     {
-      "id": 28,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_122202",
       "question": {
-        "text": "Bereken de oppervlakte van een cirkel met straal 4 cm (π = 3,14)"
+        "text": "Meet de diagonaal van deze rechthoek (8 cm × 6 cm) met een liniaal. Schat eerst."
       },
       "options": [
-        {
-          "text": "50.24 cm²"
-        },
-        {
-          "text": "70.24000000000001 cm²"
-        },
-        {
-          "text": "30.240000000000002 cm²"
-        },
-        {
-          "text": "40 cm²"
-        }
+        "ongeveer 10 cm",
+        "ongeveer 14 cm",
+        "ongeveer 5 cm",
+        "ongeveer 7 cm"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × 4² = 3,14 × 16 ≈ 50.24 cm²"
+      "correct_answer": "ongeveer 10 cm",
+      "theme": "diagonalen_meten"
     },
     {
-      "id": 29,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_645227",
       "question": {
-        "text": "Een hoek van 30° is een..."
+        "text": "Deze hoek meet 125°. Welk type hoek is dit?"
       },
       "options": [
-        {
-          "text": "scherpe hoek"
-        },
-        {
-          "text": "rechte hoek"
-        },
-        {
-          "text": "stompe hoek"
-        },
-        {
-          "text": "gestrekte hoek"
-        }
+        "stompe hoek",
+        "gestrekte hoek",
+        "scherpe hoek",
+        "rechte hoek"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de formule"
-    },
-    {
-      "id": 30,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Een hoek van 75° is een..."
-      },
-      "options": [
-        {
-          "text": "scherpe hoek"
-        },
-        {
-          "text": "rechte hoek"
-        },
-        {
-          "text": "stompe hoek"
-        },
-        {
-          "text": "gestrekte hoek"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de formule"
-    },
-    {
-      "id": 31,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Een hoek van 60° is een..."
-      },
-      "options": [
-        {
-          "text": "scherpe hoek"
-        },
-        {
-          "text": "rechte hoek"
-        },
-        {
-          "text": "stompe hoek"
-        },
-        {
-          "text": "gestrekte hoek"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de formule"
-    },
-    {
-      "id": 32,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Cirkel met straal 8 cm. Oppervlakte? (gebruik π = 3,14)"
-      },
-      "options": [
-        {
-          "text": "201.0 cm²"
-        },
-        {
-          "text": "25.1 cm²"
-        },
-        {
-          "text": "64 cm²"
-        },
-        {
-          "text": "216.0 cm²"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × r² = 3,14 × 8²"
-    },
-    {
-      "id": 33,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Cirkel met straal 5 cm. Oppervlakte? (gebruik π = 3,14)"
-      },
-      "options": [
-        {
-          "text": "78.5 cm²"
-        },
-        {
-          "text": "15.7 cm²"
-        },
-        {
-          "text": "25 cm²"
-        },
-        {
-          "text": "93.5 cm²"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × r² = 3,14 × 5²"
-    },
-    {
-      "id": 34,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Cirkel met straal 4 cm. Oppervlakte? (gebruik π = 3,14)"
-      },
-      "options": [
-        {
-          "text": "50.2 cm²"
-        },
-        {
-          "text": "12.6 cm²"
-        },
-        {
-          "text": "16 cm²"
-        },
-        {
-          "text": "65.2 cm²"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × r² = 3,14 × 4²"
-    },
-    {
-      "id": 35,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Cirkel met straal 9 cm. Oppervlakte? (gebruik π = 3,14)"
-      },
-      "options": [
-        {
-          "text": "254.3 cm²"
-        },
-        {
-          "text": "28.3 cm²"
-        },
-        {
-          "text": "81 cm²"
-        },
-        {
-          "text": "269.3 cm²"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × r² = 3,14 × 9²"
-    },
-    {
-      "id": 36,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Cirkel met straal 6 cm. Oppervlakte? (gebruik π = 3,14)"
-      },
-      "options": [
-        {
-          "text": "113.0 cm²"
-        },
-        {
-          "text": "18.8 cm²"
-        },
-        {
-          "text": "36 cm²"
-        },
-        {
-          "text": "128.0 cm²"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × r² = 3,14 × 6²"
-    },
-    {
-      "id": 37,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
-      "question": {
-        "text": "Cirkel met straal 7 cm. Oppervlakte? (gebruik π = 3,14)"
-      },
-      "options": [
-        {
-          "text": "153.9 cm²"
-        },
-        {
-          "text": "22.0 cm²"
-        },
-        {
-          "text": "49 cm²"
-        },
-        {
-          "text": "168.9 cm²"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × r² = 3,14 × 7²"
-    },
-    {
-      "id": 38,
-      "type": "multiple_choice",
-      "theme": "coordinates",
-      "question": {
-        "text": "In welk kwadrant ligt punt (-2, 4)?"
-      },
-      "options": [
-        {
-          "text": "kwadrant II"
-        },
-        {
-          "text": "kwadrant I"
-        },
-        {
-          "text": "kwadrant II"
-        },
-        {
-          "text": "kwadrant III"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Kijk naar de tekens van x en y"
-    },
-    {
-      "id": 39,
-      "type": "multiple_choice",
-      "theme": "circle_area",
-      "question": {
-        "text": "Cirkel met straal 7 cm. Bereken de oppervlakte (π = 3,14)"
-      },
-      "options": [
-        {
-          "text": "153.9 cm²"
-        },
-        {
-          "text": "22.0 cm²"
-        },
-        {
-          "text": "49 cm²"
-        },
-        {
-          "text": "307.8 cm²"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "π × r² = 3,14 × 7² ≈ 153.9"
-    },
-    {
-      "id": 40,
-      "type": "multiple_choice",
-      "theme": "cylinder",
-      "question": {
-        "text": "Cilinder: straal 4 cm, hoogte 10 cm. Volume? (π = 3,14)"
-      },
-      "options": [
-        {
-          "text": "502.4 cm³"
-        },
-        {
-          "text": "125.6 cm³"
-        },
-        {
-          "text": "160 cm³"
-        },
-        {
-          "text": "251.2 cm³"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "π × r² × h = 3,14 × 4² × 10"
-    },
-    {
-      "id": 41,
-      "type": "multiple_choice",
-      "theme": "coordinates",
-      "question": {
-        "text": "In welk kwadrant ligt punt (5, 0)?"
-      },
-      "options": [
-        {
-          "text": "kwadrant IV"
-        },
-        {
-          "text": "kwadrant I"
-        },
-        {
-          "text": "kwadrant II"
-        },
-        {
-          "text": "kwadrant III"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Kijk naar de tekens van x en y"
-    },
-    {
-      "id": 42,
-      "type": "multiple_choice",
-      "theme": "circle_area",
-      "question": {
-        "text": "Cirkel met straal 6 cm. Bereken de oppervlakte (π = 3,14)"
-      },
-      "options": [
-        {
-          "text": "113.0 cm²"
-        },
-        {
-          "text": "18.8 cm²"
-        },
-        {
-          "text": "36 cm²"
-        },
-        {
-          "text": "226.0 cm²"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "π × r² = 3,14 × 6² ≈ 113.0"
-    },
-    {
-      "id": 43,
-      "type": "multiple_choice",
-      "theme": "circle_area",
-      "question": {
-        "text": "Cirkel met straal 10 cm. Bereken de oppervlakte (π = 3,14)"
-      },
-      "options": [
-        {
-          "text": "314.0 cm²"
-        },
-        {
-          "text": "31.4 cm²"
-        },
-        {
-          "text": "100 cm²"
-        },
-        {
-          "text": "628.0 cm²"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "π × r² = 3,14 × 10² ≈ 314.0"
-    },
-    {
-      "id": 44,
-      "type": "multiple_choice",
-      "theme": "coordinates",
-      "question": {
-        "text": "In welk kwadrant ligt punt (5, 5)?"
-      },
-      "options": [
-        {
-          "text": "kwadrant I"
-        },
-        {
-          "text": "kwadrant IV"
-        },
-        {
-          "text": "kwadrant II"
-        },
-        {
-          "text": "kwadrant III"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Kijk naar de tekens van x en y"
-    },
-    {
-      "id": 45,
-      "type": "multiple_choice",
-      "theme": "coordinates",
-      "question": {
-        "text": "In welk kwadrant ligt punt (-4, -4)?"
-      },
-      "options": [
-        {
-          "text": "kwadrant III"
-        },
-        {
-          "text": "kwadrant I"
-        },
-        {
-          "text": "kwadrant II"
-        },
-        {
-          "text": "kwadrant III"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Kijk naar de tekens van x en y"
-    },
-    {
-      "id": 46,
-      "type": "multiple_choice",
-      "theme": "cylinder",
-      "question": {
-        "text": "Cilinder: straal 7 cm, hoogte 8 cm. Volume? (π = 3,14)"
-      },
-      "options": [
-        {
-          "text": "1230.9 cm³"
-        },
-        {
-          "text": "175.8 cm³"
-        },
-        {
-          "text": "392 cm³"
-        },
-        {
-          "text": "615.5 cm³"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "π × r² × h = 3,14 × 7² × 8"
-    },
-    {
-      "id": 47,
-      "type": "multiple_choice",
-      "theme": "coordinates",
-      "question": {
-        "text": "In welk kwadrant ligt punt (2, 5)?"
-      },
-      "options": [
-        {
-          "text": "kwadrant I"
-        },
-        {
-          "text": "kwadrant IV"
-        },
-        {
-          "text": "kwadrant II"
-        },
-        {
-          "text": "kwadrant III"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Kijk naar de tekens van x en y"
-    },
-    {
-      "id": 48,
-      "type": "multiple_choice",
-      "theme": "circle_area",
-      "question": {
-        "text": "Cirkel met straal 8 cm. Bereken de oppervlakte (π = 3,14)"
-      },
-      "options": [
-        {
-          "text": "201.0 cm²"
-        },
-        {
-          "text": "25.1 cm²"
-        },
-        {
-          "text": "64 cm²"
-        },
-        {
-          "text": "402.0 cm²"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "π × r² = 3,14 × 8² ≈ 201.0"
-    },
-    {
-      "id": 49,
-      "type": "multiple_choice",
-      "theme": "circle_area",
-      "question": {
-        "text": "Cirkel met straal 5 cm. Bereken de oppervlakte (π = 3,14)"
-      },
-      "options": [
-        {
-          "text": "78.5 cm²"
-        },
-        {
-          "text": "15.7 cm²"
-        },
-        {
-          "text": "25 cm²"
-        },
-        {
-          "text": "157.0 cm²"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "π × r² = 3,14 × 5² ≈ 78.5"
-    },
-    {
-      "id": 50,
-      "type": "multiple_choice",
-      "theme": "angles",
-      "question": {
-        "text": "Een hoek van 135° is een..."
-      },
-      "options": [
-        {
-          "text": "stompe hoek"
-        },
-        {
-          "text": "rechte hoek"
-        },
-        {
-          "text": "scherpe hoek"
-        },
-        {
-          "text": "gestrekte hoek"
-        }
-      ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "> 90° = stomp"
+      "correct_answer": "stompe hoek",
+      "theme": "hoeken_soorten"
     }
   ],
   "settings": {

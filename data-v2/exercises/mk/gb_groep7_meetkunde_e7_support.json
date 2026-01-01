@@ -10,10 +10,12 @@
     "domain": "meetkunde",
     "slo_alignment": {
       "kerndoelen": [
+        "K32",
         "K33"
       ],
       "rekendomeinen": [
-        "meetkunde"
+        "meetkunde",
+        "meten"
       ],
       "tussendoelen": [
         "7MM4",
@@ -25,1361 +27,711 @@
     }
   },
   "display": {
-    "title": "Meetkunde Groep 7 - Eind schooljaar Ondersteuning"
+    "title": "Meetkunde Groep 7"
   },
   "content": {
     "instruction": "Kies het goede antwoord:"
   },
   "items": [
     {
-      "id": 1,
-      "type": "multiple_choice",
-      "theme": "coördinatenstelsel_4kwadranten",
+      "id": "ex_000001",
       "question": {
-        "text": "In welk kwadrant ligt het punt (3, 4)?"
+        "text": "Punt B ligt op (5, 3). Wat is de y-coördinaat?"
       },
       "options": [
-        {
-          "text": "Kwadrant I (rechts boven)"
-        },
-        {
-          "text": "Kwadrant II (links boven)"
-        },
-        {
-          "text": "Kwadrant III (links onder)"
-        },
-        {
-          "text": "Kwadrant IV (rechts onder)"
-        }
+        "-3",
+        "3",
+        "4",
+        "5"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Beide coördinaten zijn positief, dus rechts en boven de oorsprong."
+      "correct_answer": "3",
+      "theme": "coordinatenstelsel"
     },
     {
-      "id": 2,
-      "type": "multiple_choice",
-      "theme": "coördinatenstelsel_4kwadranten",
+      "id": "ex_000002",
       "question": {
-        "text": "In welk kwadrant ligt het punt (-2, 3)?"
+        "text": "In welk kwadrant ligt punt (2, -7)?"
       },
       "options": [
-        {
-          "text": "Kwadrant II (links boven)"
-        },
-        {
-          "text": "Kwadrant I (rechts boven)"
-        },
-        {
-          "text": "Kwadrant III (links onder)"
-        },
-        {
-          "text": "Kwadrant IV (rechts onder)"
-        }
+        "I (eerste)",
+        "IV (vierde)",
+        "II (tweede)",
+        "III (derde)"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Negatief x (links), positief y (boven) = kwadrant II."
+      "correct_answer": "IV (vierde)",
+      "theme": "coordinatenstelsel"
     },
     {
-      "id": 3,
-      "type": "multiple_choice",
-      "theme": "coördinatenstelsel_4kwadranten",
+      "id": "ex_000003",
       "question": {
-        "text": "Punt (5, -2) ligt in welk kwadrant?"
+        "text": "Punt B ligt op (-1, 10). Wat is de y-coördinaat?"
       },
       "options": [
-        {
-          "text": "Kwadrant IV (rechts onder)"
-        },
-        {
-          "text": "Kwadrant I (rechts boven)"
-        },
-        {
-          "text": "Kwadrant II (links boven)"
-        },
-        {
-          "text": "Kwadrant III (links onder)"
-        }
+        "11",
+        "-10",
+        "10",
+        "-1"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Positief x (rechts), negatief y (onder) = kwadrant IV."
+      "correct_answer": "10",
+      "theme": "coordinatenstelsel"
     },
     {
-      "id": 4,
-      "type": "multiple_choice",
-      "theme": "coördinatenstelsel_4kwadranten",
+      "id": "ex_000004",
       "question": {
-        "text": "Welke coördinaat ligt op de x-as?"
+        "text": "In welk kwadrant ligt punt (-5, -8)?"
       },
       "options": [
-        {
-          "text": "(4, 0)"
-        },
-        {
-          "text": "(0, 4)"
-        },
-        {
-          "text": "(4, 4)"
-        },
-        {
-          "text": "(-4, 4)"
-        }
+        "IV (vierde)",
+        "II (tweede)",
+        "III (derde)",
+        "I (eerste)"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Op de x-as is de y-coördinaat altijd 0."
+      "correct_answer": "III (derde)",
+      "theme": "coordinatenstelsel"
     },
     {
-      "id": 5,
-      "type": "multiple_choice",
-      "theme": "coördinatenstelsel_4kwadranten",
+      "id": "ex_000005",
       "question": {
-        "text": "Welke coördinaat ligt op de y-as?"
+        "text": "Punt A ligt op (2, 9). Wat is de x-coördinaat?"
       },
       "options": [
-        {
-          "text": "(0, -3)"
-        },
-        {
-          "text": "(3, 0)"
-        },
-        {
-          "text": "(3, 3)"
-        },
-        {
-          "text": "(-3, 3)"
-        }
+        "2",
+        "-2",
+        "9",
+        "3"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Op de y-as is de x-coördinaat altijd 0."
+      "correct_answer": "2",
+      "theme": "coordinatenstelsel"
     },
     {
-      "id": 6,
-      "type": "multiple_choice",
-      "theme": "volume_cilinder",
+      "id": "ex_000006",
       "question": {
-        "text": "Een cilinder heeft een straal van 3 cm en een hoogte van 10 cm. Bereken het volume. Gebruik π = 3,14."
+        "text": "Punt B ligt op (-8, -8). Wat is de y-coördinaat?"
       },
       "options": [
-        {
-          "text": "282,6 cm³"
-        },
-        {
-          "text": "94,2 cm³"
-        },
-        {
-          "text": "188,4 cm³"
-        },
-        {
-          "text": "565,2 cm³"
-        }
+        "8",
+        "-8",
+        "-7",
+        "-8"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Volume cilinder = π × r² × h = 3,14 × 3² × 10 = 3,14 × 9 × 10"
+      "correct_answer": "-8",
+      "theme": "coordinatenstelsel"
     },
     {
-      "id": 7,
-      "type": "multiple_choice",
-      "theme": "volume_cilinder",
+      "id": "ex_000007",
       "question": {
-        "text": "Een cilinder heeft een straal van 5 cm en een hoogte van 8 cm. Wat is het volume? Gebruik π = 3,14."
+        "text": "In welk kwadrant ligt punt (6, 7)?"
       },
       "options": [
-        {
-          "text": "628 cm³"
-        },
-        {
-          "text": "125,6 cm³"
-        },
-        {
-          "text": "314 cm³"
-        },
-        {
-          "text": "1256 cm³"
-        }
+        "III (derde)",
+        "IV (vierde)",
+        "I (eerste)",
+        "II (tweede)"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Volume = π × r² × h = 3,14 × 5² × 8 = 3,14 × 25 × 8"
+      "correct_answer": "I (eerste)",
+      "theme": "coordinatenstelsel"
     },
     {
-      "id": 8,
-      "type": "multiple_choice",
-      "theme": "volume_cilinder",
+      "id": "ex_000008",
       "question": {
-        "text": "Een cilinder heeft een diameter van 6 cm en een hoogte van 10 cm. Bereken het volume. Gebruik π = 3,14."
+        "text": "Punt A ligt op (7, -9). Wat is de x-coördinaat?"
       },
       "options": [
-        {
-          "text": "282,6 cm³"
-        },
-        {
-          "text": "1130,4 cm³"
-        },
-        {
-          "text": "188,4 cm³"
-        },
-        {
-          "text": "565,2 cm³"
-        }
+        "8",
+        "-9",
+        "-7",
+        "7"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Diameter = 6 cm, dus straal = 3 cm. Volume = π × 3² × 10"
+      "correct_answer": "7",
+      "theme": "coordinatenstelsel"
     },
     {
-      "id": 9,
-      "type": "multiple_choice",
-      "theme": "volume_cilinder",
+      "id": "ex_000009",
       "question": {
-        "text": "Een blik heeft een straal van 4 cm en een hoogte van 15 cm. Hoeveel cm³ past erin? Gebruik π = 3,14."
+        "text": "In welk kwadrant ligt punt (2, -6)?"
       },
       "options": [
-        {
-          "text": "753,6 cm³"
-        },
-        {
-          "text": "188,4 cm³"
-        },
-        {
-          "text": "376,8 cm³"
-        },
-        {
-          "text": "1507,2 cm³"
-        }
+        "I (eerste)",
+        "IV (vierde)",
+        "II (tweede)",
+        "III (derde)"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Volume = π × r² × h = 3,14 × 4² × 15 = 3,14 × 16 × 15"
+      "correct_answer": "IV (vierde)",
+      "theme": "coordinatenstelsel"
     },
     {
-      "id": 10,
-      "type": "multiple_choice",
-      "theme": "volume_cilinder",
+      "id": "ex_000010",
       "question": {
-        "text": "Welke formule gebruik je om het volume van een cilinder te berekenen?"
+        "text": "Punt B ligt op (-5, -7). Wat is de y-coördinaat?"
       },
       "options": [
-        {
-          "text": "π × r² × h"
-        },
-        {
-          "text": "π × r × h"
-        },
-        {
-          "text": "2 × π × r × h"
-        },
-        {
-          "text": "π × d × h"
-        }
+        "-5",
+        "-6",
+        "-7",
+        "7"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Volume cilinder = oppervlakte grondvlak × hoogte = π × r² × h"
+      "correct_answer": "-7",
+      "theme": "coordinatenstelsel"
     },
     {
-      "id": 11,
-      "type": "multiple_choice",
-      "theme": "spiegeling",
+      "id": "ex_000011",
       "question": {
-        "text": "Punt (3, 2) wordt gespiegeld in de x-as. Wat zijn de nieuwe coördinaten?"
+        "text": "Punt B ligt op (8, -5). Wat is de y-coördinaat?"
       },
       "options": [
-        {
-          "text": "(3, -2)"
-        },
-        {
-          "text": "(-3, 2)"
-        },
-        {
-          "text": "(-3, -2)"
-        },
-        {
-          "text": "(2, 3)"
-        }
+        "8",
+        "-5",
+        "5",
+        "-4"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Bij spiegeling in de x-as blijft x gelijk, y verandert van teken."
+      "correct_answer": "-5",
+      "theme": "coordinatenstelsel"
     },
     {
-      "id": 12,
-      "type": "multiple_choice",
-      "theme": "spiegeling",
+      "id": "ex_000012",
       "question": {
-        "text": "Punt (4, 5) wordt gespiegeld in de y-as. Wat zijn de nieuwe coördinaten?"
+        "text": "In welk kwadrant ligt punt (10, 10)?"
       },
       "options": [
-        {
-          "text": "(-4, 5)"
-        },
-        {
-          "text": "(4, -5)"
-        },
-        {
-          "text": "(-4, -5)"
-        },
-        {
-          "text": "(5, 4)"
-        }
+        "IV (vierde)",
+        "II (tweede)",
+        "I (eerste)",
+        "III (derde)"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Bij spiegeling in de y-as blijft y gelijk, x verandert van teken."
+      "correct_answer": "I (eerste)",
+      "theme": "coordinatenstelsel"
     },
     {
-      "id": 13,
-      "type": "multiple_choice",
-      "theme": "spiegeling",
+      "id": "ex_000013",
       "question": {
-        "text": "Welke uitspraak over spiegeling in de x-as is waar?"
+        "text": "Punt A ligt op (-8, 5). Wat is de x-coördinaat?"
       },
       "options": [
-        {
-          "text": "De y-coördinaat verandert van teken"
-        },
-        {
-          "text": "De x-coördinaat verandert van teken"
-        },
-        {
-          "text": "Beide coördinaten veranderen van teken"
-        },
-        {
-          "text": "Geen enkele coördinaat verandert"
-        }
+        "5",
+        "-7",
+        "8",
+        "-8"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Bij spiegeling in de x-as verandert alleen de y-coördinaat van teken."
+      "correct_answer": "-8",
+      "theme": "coordinatenstelsel"
     },
     {
-      "id": 14,
-      "type": "multiple_choice",
-      "theme": "spiegeling",
+      "id": "ex_000014",
       "question": {
-        "text": "Punt (-2, 3) wordt gespiegeld in de x-as. Wat zijn de nieuwe coördinaten?"
+        "text": "Punt B ligt op (8, -7). Wat is de y-coördinaat?"
       },
       "options": [
-        {
-          "text": "(-2, -3)"
-        },
-        {
-          "text": "(2, 3)"
-        },
-        {
-          "text": "(2, -3)"
-        },
-        {
-          "text": "(-2, 3)"
-        }
+        "8",
+        "7",
+        "-6",
+        "-7"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "x-as spiegeling: x blijft -2, y verandert van 3 naar -3."
+      "correct_answer": "-7",
+      "theme": "coordinatenstelsel"
     },
     {
-      "id": 15,
-      "type": "multiple_choice",
-      "theme": "spiegeling",
+      "id": "ex_000015",
       "question": {
-        "text": "Punt (5, -4) wordt gespiegeld in de y-as. Wat zijn de nieuwe coördinaten?"
+        "text": "Punt B ligt op (-3, 4). Wat is de y-coördinaat?"
       },
       "options": [
-        {
-          "text": "(-5, -4)"
-        },
-        {
-          "text": "(5, 4)"
-        },
-        {
-          "text": "(-5, 4)"
-        },
-        {
-          "text": "(4, -5)"
-        }
+        "-3",
+        "4",
+        "-4",
+        "5"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "y-as spiegeling: x verandert van 5 naar -5, y blijft -4."
+      "correct_answer": "4",
+      "theme": "coordinatenstelsel"
     },
     {
-      "id": 16,
-      "type": "multiple_choice",
-      "theme": "rotatie",
+      "id": "ex_000016",
       "question": {
-        "text": "Punt (3, 0) wordt 90° rechtsom geroteerd om de oorsprong. Wat zijn de nieuwe coördinaten?"
+        "text": "Punt A ligt op (8, 9). Wat is de x-coördinaat?"
       },
       "options": [
-        {
-          "text": "(0, -3)"
-        },
-        {
-          "text": "(0, 3)"
-        },
-        {
-          "text": "(-3, 0)"
-        },
-        {
-          "text": "(3, 3)"
-        }
+        "9",
+        "-8",
+        "8",
+        "9"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Bij 90° rotatie rechtsom wordt (x, y) → (y, -x). Dus (3, 0) → (0, -3)."
+      "correct_answer": "8",
+      "theme": "coordinatenstelsel"
     },
     {
-      "id": 17,
-      "type": "multiple_choice",
-      "theme": "rotatie",
+      "id": "ex_000017",
       "question": {
-        "text": "Punt (2, 3) wordt 180° geroteerd om de oorsprong. Wat zijn de nieuwe coördinaten?"
+        "text": "Punt A ligt op (-6, 7). Wat is de x-coördinaat?"
       },
       "options": [
-        {
-          "text": "(-2, -3)"
-        },
-        {
-          "text": "(2, -3)"
-        },
-        {
-          "text": "(-2, 3)"
-        },
-        {
-          "text": "(3, 2)"
-        }
+        "6",
+        "7",
+        "-6",
+        "-5"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Bij 180° rotatie veranderen beide coördinaten van teken: (2, 3) → (-2, -3)."
+      "correct_answer": "-6",
+      "theme": "coordinatenstelsel"
     },
     {
-      "id": 18,
-      "type": "multiple_choice",
-      "theme": "rotatie",
+      "id": "ex_000018",
       "question": {
-        "text": "Punt (0, 4) wordt 90° linksom geroteerd. Wat zijn de nieuwe coördinaten?"
+        "text": "Een cilinder heeft straal 5 cm en hoogte 8 cm. Wat is het volume? (π = 3,14)"
       },
       "options": [
-        {
-          "text": "(-4, 0)"
-        },
-        {
-          "text": "(4, 0)"
-        },
-        {
-          "text": "(0, -4)"
-        },
-        {
-          "text": "(4, 4)"
-        }
+        "678.00 cm³",
+        "578.00 cm³",
+        "125.60 cm³",
+        "628.00 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Bij 90° rotatie linksom wordt (x, y) → (-y, x). Dus (0, 4) → (-4, 0)."
+      "correct_answer": "628.00 cm³",
+      "theme": "volume_cilinder"
     },
     {
-      "id": 19,
-      "type": "multiple_choice",
-      "theme": "rotatie",
+      "id": "ex_000019",
       "question": {
-        "text": "Welke uitspraak over 180° rotatie is waar?"
+        "text": "Een cilinder heeft straal 4 cm en hoogte 11 cm. Wat is het volume? (π = 3,14)"
       },
       "options": [
-        {
-          "text": "Beide coördinaten veranderen van teken"
-        },
-        {
-          "text": "Alleen x verandert van teken"
-        },
-        {
-          "text": "Alleen y verandert van teken"
-        },
-        {
-          "text": "De coördinaten blijven hetzelfde"
-        }
+        "502.64 cm³",
+        "138.16 cm³",
+        "552.64 cm³",
+        "602.64 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Bij 180° rotatie: (x, y) → (-x, -y). Beide tekens veranderen."
+      "correct_answer": "552.64 cm³",
+      "theme": "volume_cilinder"
     },
     {
-      "id": 20,
-      "type": "multiple_choice",
-      "theme": "rotatie",
+      "id": "ex_000020",
       "question": {
-        "text": "Een punt in kwadrant I wordt 90° rechtsom geroteerd. In welk kwadrant ligt het nu?"
+        "text": "Een cilinder heeft straal 6 cm en hoogte 12 cm. Wat is het volume? (π = 3,14)"
       },
       "options": [
-        {
-          "text": "Kwadrant IV (rechts onder)"
-        },
-        {
-          "text": "Kwadrant I (rechts boven)"
-        },
-        {
-          "text": "Kwadrant II (links boven)"
-        },
-        {
-          "text": "Kwadrant III (links onder)"
-        }
+        "1356.48 cm³",
+        "1406.48 cm³",
+        "1306.48 cm³",
+        "226.08 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "90° rechtsom: kwadrant I (rechts boven) gaat naar kwadrant IV (rechts onder)."
+      "correct_answer": "1356.48 cm³",
+      "theme": "volume_cilinder"
     },
     {
-      "id": 21,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000021",
       "question": {
-        "text": "Cirkel straal 6 cm, oppervlakte? (π=3,14)"
+        "text": "Een cilinder heeft straal 8 cm en hoogte 10 cm. Wat is het volume? (π = 3,14)"
       },
       "options": [
-        {
-          "text": "113.0 cm²"
-        },
-        {
-          "text": "123.0 cm²"
-        },
-        {
-          "text": "108.0 cm²"
-        },
-        {
-          "text": "226.0 cm²"
-        }
+        "2059.60 cm³",
+        "2009.60 cm³",
+        "1959.60 cm³",
+        "251.20 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "π × r²"
+      "correct_answer": "2009.60 cm³",
+      "theme": "volume_cilinder"
     },
     {
-      "id": 22,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000022",
       "question": {
-        "text": "Cilinder straal 3 cm, hoogte 10 cm, volume? (π=3,14)"
+        "text": "Een cilinder heeft straal 10 cm en hoogte 12 cm. Wat is het volume? (π = 3,14)"
       },
       "options": [
-        {
-          "text": "282.6 cm³"
-        },
-        {
-          "text": "292.6 cm³"
-        },
-        {
-          "text": "277.6 cm³"
-        },
-        {
-          "text": "565.2 cm³"
-        }
+        "3818.00 cm³",
+        "3768.00 cm³",
+        "3718.00 cm³",
+        "376.80 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "π × r² × h"
+      "correct_answer": "3768.00 cm³",
+      "theme": "volume_cilinder"
     },
     {
-      "id": 23,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000023",
       "question": {
-        "text": "Hoek van 45° is een...?"
+        "text": "Een cilinder heeft straal 5 cm en hoogte 13 cm. Wat is het volume? (π = 3,14)"
       },
       "options": [
-        {
-          "text": "scherpe hoek"
-        },
-        {
-          "text": "rechte hoek"
-        },
-        {
-          "text": "stompe hoek"
-        },
-        {
-          "text": "gestrekte hoek"
-        }
+        "970.50 cm³",
+        "204.10 cm³",
+        "1020.50 cm³",
+        "1070.50 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "< 90° = scherp"
+      "correct_answer": "1020.50 cm³",
+      "theme": "volume_cilinder"
     },
     {
-      "id": 24,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000024",
       "question": {
-        "text": "Bereken de oppervlakte van een cirkel met straal 4 cm (π = 3,14)"
+        "text": "Een cilinder heeft straal 7 cm en hoogte 17 cm. Wat is het volume? (π = 3,14)"
       },
       "options": [
-        {
-          "text": "50.24 cm²"
-        },
-        {
-          "text": "70.24000000000001 cm²"
-        },
-        {
-          "text": "30.240000000000002 cm²"
-        },
-        {
-          "text": "40 cm²"
-        }
+        "373.66 cm³",
+        "2665.62 cm³",
+        "2565.62 cm³",
+        "2615.62 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × 4² = 3,14 × 16 ≈ 50.24 cm²"
+      "correct_answer": "2615.62 cm³",
+      "theme": "volume_cilinder"
     },
     {
-      "id": 25,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000025",
       "question": {
-        "text": "Bereken de oppervlakte van een cirkel met straal 7 cm (π = 3,14)"
+        "text": "Een cilinder heeft straal 5 cm en hoogte 7 cm. Wat is het volume? (π = 3,14)"
       },
       "options": [
-        {
-          "text": "153.86 cm²"
-        },
-        {
-          "text": "173.86 cm²"
-        },
-        {
-          "text": "133.86 cm²"
-        },
-        {
-          "text": "70 cm²"
-        }
+        "109.90 cm³",
+        "599.50 cm³",
+        "549.50 cm³",
+        "499.50 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × 7² = 3,14 × 49 ≈ 153.86 cm²"
+      "correct_answer": "549.50 cm³",
+      "theme": "volume_cilinder"
     },
     {
-      "id": 26,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000026",
       "question": {
-        "text": "Bereken de oppervlakte van een cirkel met straal 3 cm (π = 3,14)"
+        "text": "Een cilinder heeft straal 5 cm en hoogte 12 cm. Wat is het volume? (π = 3,14)"
       },
       "options": [
-        {
-          "text": "28.26 cm²"
-        },
-        {
-          "text": "48.260000000000005 cm²"
-        },
-        {
-          "text": "8.260000000000002 cm²"
-        },
-        {
-          "text": "30 cm²"
-        }
+        "992.00 cm³",
+        "942.00 cm³",
+        "892.00 cm³",
+        "188.40 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × 3² = 3,14 × 9 ≈ 28.26 cm²"
+      "correct_answer": "942.00 cm³",
+      "theme": "volume_cilinder"
     },
     {
-      "id": 27,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000027",
       "question": {
-        "text": "Bereken de oppervlakte van een cirkel met straal 6 cm (π = 3,14)"
+        "text": "Een cilinder heeft straal 8 cm en hoogte 20 cm. Wat is het volume? (π = 3,14)"
       },
       "options": [
-        {
-          "text": "113.04 cm²"
-        },
-        {
-          "text": "133.04000000000002 cm²"
-        },
-        {
-          "text": "93.04 cm²"
-        },
-        {
-          "text": "60 cm²"
-        }
+        "4069.20 cm³",
+        "502.40 cm³",
+        "3969.20 cm³",
+        "4019.20 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × 6² = 3,14 × 36 ≈ 113.04 cm²"
+      "correct_answer": "4019.20 cm³",
+      "theme": "volume_cilinder"
     },
     {
-      "id": 28,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000028",
       "question": {
-        "text": "Bereken de oppervlakte van een cirkel met straal 5 cm (π = 3,14)"
+        "text": "Een cilinder heeft straal 10 cm en hoogte 7 cm. Wat is het volume? (π = 3,14)"
       },
       "options": [
-        {
-          "text": "78.5 cm²"
-        },
-        {
-          "text": "98.5 cm²"
-        },
-        {
-          "text": "58.5 cm²"
-        },
-        {
-          "text": "50 cm²"
-        }
+        "219.80 cm³",
+        "2248.00 cm³",
+        "2148.00 cm³",
+        "2198.00 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × 5² = 3,14 × 25 ≈ 78.5 cm²"
+      "correct_answer": "2198.00 cm³",
+      "theme": "volume_cilinder"
     },
     {
-      "id": 29,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000029",
       "question": {
-        "text": "Een hoek van 60° is een..."
+        "text": "Een cilinder heeft straal 3 cm en hoogte 15 cm. Wat is het volume? (π = 3,14)"
       },
       "options": [
-        {
-          "text": "scherpe hoek"
-        },
-        {
-          "text": "rechte hoek"
-        },
-        {
-          "text": "stompe hoek"
-        },
-        {
-          "text": "gestrekte hoek"
-        }
+        "141.30 cm³",
+        "373.90 cm³",
+        "473.90 cm³",
+        "423.90 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de formule"
+      "correct_answer": "423.90 cm³",
+      "theme": "volume_cilinder"
     },
     {
-      "id": 30,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000030",
       "question": {
-        "text": "Een hoek van 45° is een..."
+        "text": "Een cilinder heeft straal 9 cm en hoogte 20 cm. Wat is het volume? (π = 3,14)"
       },
       "options": [
-        {
-          "text": "scherpe hoek"
-        },
-        {
-          "text": "rechte hoek"
-        },
-        {
-          "text": "stompe hoek"
-        },
-        {
-          "text": "gestrekte hoek"
-        }
+        "5136.80 cm³",
+        "5086.80 cm³",
+        "5036.80 cm³",
+        "565.20 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de formule"
+      "correct_answer": "5086.80 cm³",
+      "theme": "volume_cilinder"
     },
     {
-      "id": 31,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000031",
       "question": {
-        "text": "Een hoek van 75° is een..."
+        "text": "Een cilinder heeft straal 8 cm en hoogte 15 cm. Wat is het volume? (π = 3,14)"
       },
       "options": [
-        {
-          "text": "scherpe hoek"
-        },
-        {
-          "text": "rechte hoek"
-        },
-        {
-          "text": "stompe hoek"
-        },
-        {
-          "text": "gestrekte hoek"
-        }
+        "2964.40 cm³",
+        "3064.40 cm³",
+        "376.80 cm³",
+        "3014.40 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de formule"
+      "correct_answer": "3014.40 cm³",
+      "theme": "volume_cilinder"
     },
     {
-      "id": 32,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000032",
       "question": {
-        "text": "Een hoek van 30° is een..."
+        "text": "Een cilinder heeft straal 10 cm en hoogte 5 cm. Wat is het volume? (π = 3,14)"
       },
       "options": [
-        {
-          "text": "scherpe hoek"
-        },
-        {
-          "text": "rechte hoek"
-        },
-        {
-          "text": "stompe hoek"
-        },
-        {
-          "text": "gestrekte hoek"
-        }
+        "1620.00 cm³",
+        "157.00 cm³",
+        "1570.00 cm³",
+        "1520.00 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Gebruik de formule"
+      "correct_answer": "1570.00 cm³",
+      "theme": "volume_cilinder"
     },
     {
-      "id": 33,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000033",
       "question": {
-        "text": "Cirkel met straal 4 cm. Oppervlakte? (gebruik π = 3,14)"
+        "text": "Een cilinder heeft straal 3 cm en hoogte 20 cm. Wat is het volume? (π = 3,14)"
       },
       "options": [
-        {
-          "text": "50.2 cm²"
-        },
-        {
-          "text": "12.6 cm²"
-        },
-        {
-          "text": "16 cm²"
-        },
-        {
-          "text": "65.2 cm²"
-        }
+        "615.20 cm³",
+        "515.20 cm³",
+        "565.20 cm³",
+        "188.40 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × r² = 3,14 × 4²"
+      "correct_answer": "565.20 cm³",
+      "theme": "volume_cilinder"
     },
     {
-      "id": 34,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000034",
       "question": {
-        "text": "Cirkel met straal 9 cm. Oppervlakte? (gebruik π = 3,14)"
+        "text": "Een cilinder heeft straal 8 cm en hoogte 13 cm. Wat is het volume? (π = 3,14)"
       },
       "options": [
-        {
-          "text": "254.3 cm²"
-        },
-        {
-          "text": "28.3 cm²"
-        },
-        {
-          "text": "81 cm²"
-        },
-        {
-          "text": "269.3 cm²"
-        }
+        "2562.48 cm³",
+        "326.56 cm³",
+        "2612.48 cm³",
+        "2662.48 cm³"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × r² = 3,14 × 9²"
+      "correct_answer": "2612.48 cm³",
+      "theme": "volume_cilinder"
     },
     {
-      "id": 35,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000035",
       "question": {
-        "text": "Cirkel met straal 5 cm. Oppervlakte? (gebruik π = 3,14)"
+        "text": "Punt (3, 4) gespiegeld in x-as wordt..."
       },
       "options": [
-        {
-          "text": "78.5 cm²"
-        },
-        {
-          "text": "15.7 cm²"
-        },
-        {
-          "text": "25 cm²"
-        },
-        {
-          "text": "93.5 cm²"
-        }
+        "(-3, -4)",
+        "(3, -4)",
+        "(-3, 4)",
+        "(4, 3)"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × r² = 3,14 × 5²"
+      "correct_answer": "(3, -4)",
+      "theme": "transformaties"
     },
     {
-      "id": 36,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000036",
       "question": {
-        "text": "Cirkel met straal 7 cm. Oppervlakte? (gebruik π = 3,14)"
+        "text": "Punt (5, 2) gespiegeld in y-as wordt..."
       },
       "options": [
-        {
-          "text": "153.9 cm²"
-        },
-        {
-          "text": "22.0 cm²"
-        },
-        {
-          "text": "49 cm²"
-        },
-        {
-          "text": "168.9 cm²"
-        }
+        "(2, 5)",
+        "(-5, 2)",
+        "(5, -2)",
+        "(-5, -2)"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × r² = 3,14 × 7²"
+      "correct_answer": "(-5, 2)",
+      "theme": "transformaties"
     },
     {
-      "id": 37,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000037",
       "question": {
-        "text": "Cirkel met straal 8 cm. Oppervlakte? (gebruik π = 3,14)"
+        "text": "Punt (-2, 3) gespiegeld in x-as wordt..."
       },
       "options": [
-        {
-          "text": "201.0 cm²"
-        },
-        {
-          "text": "25.1 cm²"
-        },
-        {
-          "text": "64 cm²"
-        },
-        {
-          "text": "216.0 cm²"
-        }
+        "(3, -2)",
+        "(-2, -3)",
+        "(2, -3)",
+        "(2, 3)"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × r² = 3,14 × 8²"
+      "correct_answer": "(-2, -3)",
+      "theme": "transformaties"
     },
     {
-      "id": 38,
-      "type": "multiple_choice",
-      "theme": "meetkunde",
+      "id": "ex_000038",
       "question": {
-        "text": "Cirkel met straal 6 cm. Oppervlakte? (gebruik π = 3,14)"
+        "text": "Punt (4, -1) gespiegeld in y-as wordt..."
       },
       "options": [
-        {
-          "text": "113.0 cm²"
-        },
-        {
-          "text": "18.8 cm²"
-        },
-        {
-          "text": "36 cm²"
-        },
-        {
-          "text": "128.0 cm²"
-        }
+        "(-1, 4)",
+        "(-4, -1)",
+        "(-4, 1)",
+        "(4, 1)"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Oppervlakte = π × r² = 3,14 × 6²"
+      "correct_answer": "(-4, -1)",
+      "theme": "transformaties"
     },
     {
-      "id": 39,
-      "type": "multiple_choice",
-      "theme": "cylinder",
+      "id": "ex_000039",
       "question": {
-        "text": "Cilinder: straal 3 cm, hoogte 12 cm. Volume? (π = 3,14)"
+        "text": "Punt (6, 0) gespiegeld in x-as wordt..."
       },
       "options": [
-        {
-          "text": "339.1 cm³"
-        },
-        {
-          "text": "113.0 cm³"
-        },
-        {
-          "text": "108 cm³"
-        },
-        {
-          "text": "169.6 cm³"
-        }
+        "(6, 0)",
+        "(0, 6)",
+        "(0, -6)",
+        "(-6, 0)"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "π × r² × h = 3,14 × 3² × 12"
+      "correct_answer": "(6, 0)",
+      "theme": "transformaties"
     },
     {
-      "id": 40,
-      "type": "multiple_choice",
-      "theme": "circle_area",
+      "id": "ex_000040",
       "question": {
-        "text": "Cirkel met straal 10 cm. Bereken de oppervlakte (π = 3,14)"
+        "text": "Punt (0, 5) gespiegeld in y-as wordt..."
       },
       "options": [
-        {
-          "text": "314.0 cm²"
-        },
-        {
-          "text": "31.4 cm²"
-        },
-        {
-          "text": "100 cm²"
-        },
-        {
-          "text": "628.0 cm²"
-        }
+        "(0, -5)",
+        "(-5, 0)",
+        "(0, 5)",
+        "(5, 0)"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "π × r² = 3,14 × 10² ≈ 314.0"
+      "correct_answer": "(0, 5)",
+      "theme": "transformaties"
     },
     {
-      "id": 41,
-      "type": "multiple_choice",
-      "theme": "circle_area",
+      "id": "ex_000041",
       "question": {
-        "text": "Cirkel met straal 9 cm. Bereken de oppervlakte (π = 3,14)"
+        "text": "Spiegelen in x-as verandert..."
       },
       "options": [
-        {
-          "text": "254.3 cm²"
-        },
-        {
-          "text": "28.3 cm²"
-        },
-        {
-          "text": "81 cm²"
-        },
-        {
-          "text": "508.6 cm²"
-        }
+        "de y-coördinaat",
+        "beide",
+        "de x-coördinaat",
+        "geen"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "π × r² = 3,14 × 9² ≈ 254.3"
+      "correct_answer": "de y-coördinaat",
+      "theme": "transformaties"
     },
     {
-      "id": 42,
-      "type": "multiple_choice",
-      "theme": "cylinder",
+      "id": "ex_000042",
       "question": {
-        "text": "Cilinder: straal 6 cm, hoogte 15 cm. Volume? (π = 3,14)"
+        "text": "Spiegelen in y-as verandert..."
       },
       "options": [
-        {
-          "text": "1695.6 cm³"
-        },
-        {
-          "text": "282.6 cm³"
-        },
-        {
-          "text": "540 cm³"
-        },
-        {
-          "text": "847.8 cm³"
-        }
+        "geen",
+        "de x-coördinaat",
+        "de y-coördinaat",
+        "beide"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "π × r² × h = 3,14 × 6² × 15"
+      "correct_answer": "de x-coördinaat",
+      "theme": "transformaties"
     },
     {
-      "id": 43,
-      "type": "multiple_choice",
-      "theme": "coordinates",
+      "id": "ex_000043",
       "question": {
-        "text": "In welk kwadrant ligt punt (1, -3)?"
+        "text": "Punt (3, 3) 90° draaien tegen de klok in om oorsprong wordt..."
       },
       "options": [
-        {
-          "text": "kwadrant IV"
-        },
-        {
-          "text": "kwadrant I"
-        },
-        {
-          "text": "kwadrant II"
-        },
-        {
-          "text": "kwadrant III"
-        }
+        "(-3, -3)",
+        "(-3, 3)",
+        "(3, -3)",
+        "(3, 3)"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Kijk naar de tekens van x en y"
+      "correct_answer": "(-3, 3)",
+      "theme": "transformaties"
     },
     {
-      "id": 44,
-      "type": "multiple_choice",
-      "theme": "coordinates",
+      "id": "ex_000044",
       "question": {
-        "text": "In welk kwadrant ligt punt (1, -1)?"
+        "text": "Punt (4, 0) 180° draaien om oorsprong wordt..."
       },
       "options": [
-        {
-          "text": "kwadrant IV"
-        },
-        {
-          "text": "kwadrant I"
-        },
-        {
-          "text": "kwadrant II"
-        },
-        {
-          "text": "kwadrant III"
-        }
+        "(-4, 0)",
+        "(4, 0)",
+        "(0, -4)",
+        "(0, 4)"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Kijk naar de tekens van x en y"
+      "correct_answer": "(-4, 0)",
+      "theme": "transformaties"
     },
     {
-      "id": 45,
-      "type": "multiple_choice",
-      "theme": "coordinates",
+      "id": "ex_000045",
       "question": {
-        "text": "In welk kwadrant ligt punt (3, -4)?"
+        "text": "Punt (2, 5) 180° draaien om oorsprong wordt..."
       },
       "options": [
-        {
-          "text": "kwadrant IV"
-        },
-        {
-          "text": "kwadrant I"
-        },
-        {
-          "text": "kwadrant II"
-        },
-        {
-          "text": "kwadrant III"
-        }
+        "(-2, -5)",
+        "(-2, 5)",
+        "(2, -5)",
+        "(5, 2)"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Kijk naar de tekens van x en y"
+      "correct_answer": "(-2, -5)",
+      "theme": "transformaties"
     },
     {
-      "id": 46,
-      "type": "multiple_choice",
-      "theme": "cylinder",
+      "id": "ex_000046",
       "question": {
-        "text": "Cilinder: straal 3 cm, hoogte 15 cm. Volume? (π = 3,14)"
+        "text": "Een figuur spiegelen in de x-as: y wordt..."
       },
       "options": [
-        {
-          "text": "423.9 cm³"
-        },
-        {
-          "text": "141.3 cm³"
-        },
-        {
-          "text": "135 cm³"
-        },
-        {
-          "text": "211.9 cm³"
-        }
+        "y",
+        "x",
+        "-y",
+        "-x"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "π × r² × h = 3,14 × 3² × 15"
+      "correct_answer": "-y",
+      "theme": "transformaties"
     },
     {
-      "id": 47,
-      "type": "multiple_choice",
-      "theme": "coordinates",
+      "id": "ex_000047",
       "question": {
-        "text": "In welk kwadrant ligt punt (-5, -2)?"
+        "text": "Een figuur spiegelen in de y-as: x wordt..."
       },
       "options": [
-        {
-          "text": "kwadrant III"
-        },
-        {
-          "text": "kwadrant I"
-        },
-        {
-          "text": "kwadrant II"
-        },
-        {
-          "text": "kwadrant III"
-        }
+        "-x",
+        "y",
+        "x",
+        "-y"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Kijk naar de tekens van x en y"
+      "correct_answer": "-x",
+      "theme": "transformaties"
     },
     {
-      "id": 48,
-      "type": "multiple_choice",
-      "theme": "cylinder",
+      "id": "ex_000048",
       "question": {
-        "text": "Cilinder: straal 7 cm, hoogte 9 cm. Volume? (π = 3,14)"
+        "text": "Punt (-3, -2) gespiegeld in x-as wordt..."
       },
       "options": [
-        {
-          "text": "1384.7 cm³"
-        },
-        {
-          "text": "197.8 cm³"
-        },
-        {
-          "text": "441 cm³"
-        },
-        {
-          "text": "692.4 cm³"
-        }
+        "(3, -2)",
+        "(-2, -3)",
+        "(3, 2)",
+        "(-3, 2)"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "π × r² × h = 3,14 × 7² × 9"
+      "correct_answer": "(-3, 2)",
+      "theme": "transformaties"
     },
     {
-      "id": 49,
-      "type": "multiple_choice",
-      "theme": "coordinates",
+      "id": "ex_000049",
       "question": {
-        "text": "In welk kwadrant ligt punt (1, 5)?"
+        "text": "Punt (7, -3) gespiegeld in y-as wordt..."
       },
       "options": [
-        {
-          "text": "kwadrant I"
-        },
-        {
-          "text": "kwadrant IV"
-        },
-        {
-          "text": "kwadrant II"
-        },
-        {
-          "text": "kwadrant III"
-        }
+        "(7, 3)",
+        "(-3, 7)",
+        "(-7, -3)",
+        "(-7, 3)"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "Kijk naar de tekens van x en y"
+      "correct_answer": "(-7, -3)",
+      "theme": "transformaties"
     },
     {
-      "id": 50,
-      "type": "multiple_choice",
-      "theme": "cylinder",
+      "id": "ex_000050",
       "question": {
-        "text": "Cilinder: straal 5 cm, hoogte 14 cm. Volume? (π = 3,14)"
+        "text": "180° rotatie verandert (x, y) in..."
       },
       "options": [
-        {
-          "text": "1099.0 cm³"
-        },
-        {
-          "text": "219.8 cm³"
-        },
-        {
-          "text": "350 cm³"
-        },
-        {
-          "text": "549.5 cm³"
-        }
+        "(-y, -x)",
+        "(x, -y)",
+        "(y, x)",
+        "(-x, -y)"
       ],
-      "answer": {
-        "type": "single",
-        "correct_index": 0
-      },
-      "hint": "π × r² × h = 3,14 × 5² × 14"
+      "correct_answer": "(-x, -y)",
+      "theme": "transformaties"
     }
   ],
   "settings": {
