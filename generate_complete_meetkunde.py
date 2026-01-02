@@ -857,38 +857,35 @@ def generate_6MM1_exercises(count=13):
     return exercises[:count]
 
 def generate_6MM2_exercises(count=12):
-    """6MM2: Omtrek cirkel"""
+    """6MM2: Cirkel: diameter en straal (NO π formulas!)"""
     exercises = []
     seen = set()
 
-    for _ in range(count * 10):
-        if len(exercises) >= count:
-            break
+    objects = ["wiel", "deksel", "tafel", "vijver", "bord", "munt", "klok", "pizza", "cd"]
 
-        choice = random.choice(['diameter', 'straal'])
+    questions_pool = [
+        ("De diameter van een cirkel is 10 cm. Hoe lang is de straal?", ["5 cm", "10 cm", "20 cm", "2,5 cm"], 0),
+        ("De straal van een cirkel is 6 cm. Hoe lang is de diameter?", ["12 cm", "6 cm", "3 cm", "18 cm"], 0),
+        ("De diameter van een cirkel is 8 cm. Hoe lang is de straal?", ["4 cm", "8 cm", "16 cm", "2 cm"], 0),
+        ("De straal van een cirkel is 5 cm. Hoe lang is de diameter?", ["10 cm", "5 cm", "15 cm", "2,5 cm"], 0),
+        ("Welke lijn gaat van het middelpunt naar de rand?", ["straal", "diameter", "omtrek", "boog"], 0),
+        ("Welke lijn gaat door het middelpunt van rand naar rand?", ["diameter", "straal", "omtrek", "boog"], 0),
+        ("De diameter is altijd... keer zo lang als de straal", ["2", "3", "4", "1"], 0),
+        ("De straal is... zo lang als de diameter", ["de helft", "hetzelfde", "het dubbele", "een derde"], 0),
+        ("De diameter van een cirkel is 14 cm. Hoe lang is de straal?", ["7 cm", "14 cm", "28 cm", "3,5 cm"], 0),
+        ("De straal van een cirkel is 9 cm. Hoe lang is de diameter?", ["18 cm", "9 cm", "27 cm", "4,5 cm"], 0),
+        ("Meet de diameter van deze cirkel met je liniaal. Hij is 12 cm. Wat is de straal?", ["6 cm", "12 cm", "24 cm", "3 cm"], 0),
+        ("De straal van een wiel is 8 cm. Wat is de diameter?", ["16 cm", "8 cm", "4 cm", "24 cm"], 0),
+    ]
 
-        if choice == 'diameter':
-            diameter = random.randint(5, 20)
-            omtrek = round(3.14 * diameter, 2)
-            q = f"Een cirkel heeft diameter {diameter} cm. Wat is de omtrek? (gebruik π = 3,14)"
-            correct = f"{omtrek:.2f} cm"
-        else:  # straal
-            straal = random.randint(3, 15)
-            omtrek = round(2 * 3.14 * straal, 2)
-            q = f"Een cirkel heeft straal {straal} cm. Wat is de omtrek? (gebruik π = 3,14)"
-            correct = f"{omtrek:.2f} cm"
-
+    for i, (q, opts, correct_idx) in enumerate(questions_pool[:count]):
         if q in seen:
             continue
         seen.add(q)
 
-        wrong = [
-            f"{omtrek+5:.2f} cm",
-            f"{omtrek-5:.2f} cm" if omtrek > 10 else f"{omtrek+10:.2f} cm",
-            f"{omtrek*2:.2f} cm"
-        ]
-
-        exercises.append(create_exercise(q, correct, wrong, "omtrek_cirkel"))
+        correct = opts[correct_idx]
+        wrong = [opt for j, opt in enumerate(opts) if j != correct_idx]
+        exercises.append(create_exercise(q, correct, wrong, "cirkel_diameter_straal"))
 
     return exercises[:count]
 
@@ -1066,30 +1063,38 @@ def generate_6MM7_exercises(count=11):
 # ============================================================================
 
 def generate_7MM1_exercises(count=17):
-    """7MM1: Oppervlakte cirkel"""
+    """7MM1: Cirkel omtrek praktisch meten (NO π formulas!)"""
     exercises = []
     seen = set()
 
-    for _ in range(count * 10):
-        if len(exercises) >= count:
-            break
+    questions_pool = [
+        ("Je meet de omtrek van een rond bord met een touwtje. Het touwtje is 31 cm. De diameter is 10 cm. Wat is de omtrek ongeveer?", ["31 cm", "10 cm", "20 cm", "40 cm"], 0),
+        ("Welk meetinstrument gebruik je om de omtrek van een ronde tafel te meten?", ["meetlint of touwtje", "liniaal", "gradenboog", "passer"], 0),
+        ("De diameter van een wiel is 20 cm. Je meet met touwtje: omtrek is ongeveer...", ["60 cm", "20 cm", "40 cm", "80 cm"], 0),
+        ("Leg een touwtje rond een cirkel en meet. Het touwtje is 25 cm. Wat is de omtrek?", ["25 cm", "12,5 cm", "50 cm", "8 cm"], 0),
+        ("De omtrek van een cirkel is ongeveer... keer de diameter", ["3", "2", "4", "5"], 0),
+        ("Meet een deksel met diameter 6 cm met touwtje. Omtrek is ongeveer...", ["18 cm", "6 cm", "12 cm", "24 cm"], 0),
+        ("De diameter is 8 cm. Schat de omtrek (omtrek ≈ 3 × diameter)", ["24 cm", "8 cm", "16 cm", "32 cm"], 0),
+        ("Hoe meet je de omtrek van een rond voorwerp?", ["touwtje eromheen en dan meten", "diameter × 2", "met liniaal", "met gradenboog"], 0),
+        ("De diameter van een pizza is 30 cm. Schat de omtrek.", ["90 cm", "30 cm", "60 cm", "120 cm"], 0),
+        ("Een cirkel heeft diameter 12 cm. Ontdek: omtrek is ongeveer...", ["36 cm", "12 cm", "24 cm", "48 cm"], 0),
+        ("Meet met meetlint: omtrek van wiel is 94 cm. Diameter is ongeveer...", ["30 cm", "94 cm", "47 cm", "188 cm"], 0),
+        ("Je meet een ronde tafel. Diameter 50 cm. Schat omtrek.", ["150 cm", "50 cm", "100 cm", "200 cm"], 0),
+        ("De omtrek van een cirkel meet je door...", ["touwtje rond leggen en meten", "diameter te meten", "straal × 2", "met passer"], 0),
+        ("Diameter 14 cm. Schat omtrek (gebruik omtrek ≈ 3 × diameter)", ["42 cm", "14 cm", "28 cm", "56 cm"], 0),
+        ("Een rond bord heeft diameter 25 cm. Omtrek is ongeveer...", ["75 cm", "25 cm", "50 cm", "100 cm"], 0),
+        ("Meet met touwtje: omtrek van munt is 6 cm. Wat is de omtrek?", ["6 cm", "3 cm", "12 cm", "2 cm"], 0),
+        ("De omtrek is ongeveer 3 keer de diameter. Diameter 10 cm → omtrek?", ["30 cm", "10 cm", "20 cm", "40 cm"], 0),
+    ]
 
-        straal = random.randint(3, 15)
-        opp = round(3.14 * straal * straal, 2)
-
-        q = f"Een cirkel heeft straal {straal} cm. Wat is de oppervlakte? (gebruik π = 3,14)"
+    for i, (q, opts, correct_idx) in enumerate(questions_pool[:count]):
         if q in seen:
             continue
         seen.add(q)
 
-        correct = f"{opp:.2f} cm²"
-        wrong = [
-            f"{opp+10:.2f} cm²",
-            f"{opp-10:.2f} cm²" if opp > 20 else f"{opp+20:.2f} cm²",
-            f"{round(2*3.14*straal, 2):.2f} cm²"  # Common mistake: using circumference formula
-        ]
-
-        exercises.append(create_exercise(q, correct, wrong, "oppervlakte_cirkel"))
+        correct = opts[correct_idx]
+        wrong = [opt for j, opt in enumerate(opts) if j != correct_idx]
+        exercises.append(create_exercise(q, correct, wrong, "cirkel_omtrek_praktisch"))
 
     return exercises[:count]
 
@@ -1215,33 +1220,38 @@ def generate_7MM4_exercises(count=17):
     return exercises[:count]
 
 def generate_7MM5_exercises(count=17):
-    """7MM5: Volume cilinder"""
+    """7MM5: Volume tellen (NO cylinder formulas with π!)"""
     exercises = []
     seen = set()
 
-    for _ in range(count * 10):
-        if len(exercises) >= count:
-            break
+    questions_pool = [
+        ("Hoeveel kubusjes zitten in deze stapel: 3 lang × 3 breed × 2 hoog?", ["18 kubusjes", "9 kubusjes", "12 kubusjes", "27 kubusjes"], 0),
+        ("Een balk is 5×4×3 cm. Bereken volume met l×b×h.", ["60 cm³", "12 cm³", "20 cm³", "120 cm³"], 0),
+        ("Tel de blokjes: 4 lang × 2 breed × 3 hoog = ?", ["24 kubusjes", "9 kubusjes", "12 kubusjes", "16 kubusjes"], 0),
+        ("Volume van balk 6×3×4 cm?", ["72 cm³", "13 cm³", "24 cm³", "36 cm³"], 0),
+        ("Een stapel is 5×5 breed en 3 lagen hoog. Hoeveel blokjes?", ["75 kubusjes", "25 kubusjes", "15 kubusjes", "125 kubusjes"], 0),
+        ("Balk: lengte 8 cm, breedte 3 cm, hoogte 5 cm. Volume?", ["120 cm³", "16 cm³", "40 cm³", "24 cm³"], 0),
+        ("Hoeveel blokjes van 1 cm³ passen in doos 4×5×6 cm?", ["120 kubusjes", "15 kubusjes", "60 kubusjes", "24 kubusjes"], 0),
+        ("Volume kubus met ribbe 4 cm?", ["64 cm³", "16 cm³", "12 cm³", "48 cm³"], 0),
+        ("Een stapel: 6 lang, 4 breed, 2 hoog. Tel de blokjes.", ["48 kubusjes", "12 kubusjes", "24 kubusjes", "96 kubusjes"], 0),
+        ("Bereken: balk 7×5×2 cm heeft volume...", ["70 cm³", "14 cm³", "35 cm³", "140 cm³"], 0),
+        ("Hoeveel kubusjes in stapel 3×4×5?", ["60 kubusjes", "12 kubusjes", "20 kubusjes", "15 kubusjes"], 0),
+        ("Volume van balk 10×2×5 cm?", ["100 cm³", "17 cm³", "50 cm³", "200 cm³"], 0),
+        ("Een doos is 8×6×3 cm. Hoeveel cm³?", ["144 cm³", "17 cm³", "48 cm³", "72 cm³"], 0),
+        ("Kubus met ribbe 5 cm. Volume met z×z×z?", ["125 cm³", "25 cm³", "15 cm³", "75 cm³"], 0),
+        ("Stapel van 7×3×4 blokjes. Hoeveel in totaal?", ["84 kubusjes", "14 kubusjes", "21 kubusjes", "28 kubusjes"], 0),
+        ("Balk 9×4×2 cm. Volume berekenen.", ["72 cm³", "15 cm³", "36 cm³", "144 cm³"], 0),
+        ("Hoeveel blokjes in 5×5×4 stapel?", ["100 kubusjes", "25 kubusjes", "20 kubusjes", "50 kubusjes"], 0),
+    ]
 
-        straal = random.randint(3, 10)
-        hoogte = random.randint(5, 20)
-
-        # Volume = π × r² × h
-        volume = round(3.14 * straal * straal * hoogte, 2)
-
-        q = f"Een cilinder heeft straal {straal} cm en hoogte {hoogte} cm. Wat is het volume? (π = 3,14)"
+    for i, (q, opts, correct_idx) in enumerate(questions_pool[:count]):
         if q in seen:
             continue
         seen.add(q)
 
-        correct = f"{volume:.2f} cm³"
-        wrong = [
-            f"{volume+50:.2f} cm³",
-            f"{volume-50:.2f} cm³" if volume > 100 else f"{volume+100:.2f} cm³",
-            f"{round(3.14*straal*hoogte, 2):.2f} cm³"  # Mistake: forgot r²
-        ]
-
-        exercises.append(create_exercise(q, correct, wrong, "volume_cilinder"))
+        correct = opts[correct_idx]
+        wrong = [opt for j, opt in enumerate(opts) if j != correct_idx]
+        exercises.append(create_exercise(q, correct, wrong, "volume_tellen"))
 
     return exercises[:count]
 
@@ -1285,7 +1295,7 @@ def generate_7MM6_exercises(count=16):
 # ============================================================================
 
 def generate_8MM1_exercises(count=17):
-    """8MM1: Complexe oppervlaktes (samengestelde figuren)"""
+    """8MM1: Complexe oppervlaktes - ONLY rectangles and triangles (NO half circles!)"""
     exercises = []
     seen = set()
 
@@ -1293,25 +1303,76 @@ def generate_8MM1_exercises(count=17):
         if len(exercises) >= count:
             break
 
-        # L-vorm: two rectangles
-        r1_l = random.randint(5, 12)
-        r1_b = random.randint(3, 8)
-        r2_l = random.randint(3, 8)
-        r2_b = random.randint(2, 6)
+        shape_type = random.choice(['L_vorm', 'rechthoek_plus_driehoek', 'rechthoek_min_driehoek', 'huis_vorm'])
 
-        opp_total = r1_l * r1_b + r2_l * r2_b
+        if shape_type == 'L_vorm':
+            # L-vorm: two rectangles
+            r1_l = random.randint(5, 12)
+            r1_b = random.randint(3, 8)
+            r2_l = random.randint(3, 8)
+            r2_b = random.randint(2, 6)
+            opp_total = r1_l * r1_b + r2_l * r2_b
+            q = f"Een L-vorm bestaat uit twee rechthoeken: {r1_l}×{r1_b} cm en {r2_l}×{r2_b} cm. Totale oppervlakte?"
+            correct = f"{opp_total} cm²"
+            wrong = [
+                f"{opp_total+10} cm²",
+                f"{opp_total-10} cm²" if opp_total > 20 else f"{opp_total+20} cm²",
+                f"{(r1_l+r2_l)*(r1_b+r2_b)} cm²"
+            ]
 
-        q = f"Een L-vorm bestaat uit twee rechthoeken: {r1_l}×{r1_b} cm en {r2_l}×{r2_b} cm. Totale oppervlakte?"
+        elif shape_type == 'rechthoek_plus_driehoek':
+            # Rectangle + triangle
+            r_l = random.randint(6, 12)
+            r_b = random.randint(4, 8)
+            t_basis = random.randint(4, 10)
+            t_hoogte = random.randint(3, 8)
+            opp_r = r_l * r_b
+            opp_t = (t_basis * t_hoogte) / 2
+            opp_total = opp_r + opp_t
+            q = f"Een figuur heeft een rechthoek ({r_l}×{r_b} cm) en een driehoek (basis {t_basis} cm, hoogte {t_hoogte} cm). Totale oppervlakte?"
+            correct = f"{opp_total:.1f} cm²" if opp_total % 1 != 0 else f"{int(opp_total)} cm²"
+            wrong = [
+                f"{opp_total+15:.1f} cm²" if opp_total % 1 != 0 else f"{int(opp_total)+15} cm²",
+                f"{opp_r} cm²",  # Forgot triangle
+                f"{opp_r + t_basis*t_hoogte} cm²"  # Forgot to divide by 2
+            ]
+
+        elif shape_type == 'rechthoek_min_driehoek':
+            # Rectangle minus triangle (cutout)
+            r_l = random.randint(8, 15)
+            r_b = random.randint(6, 12)
+            t_basis = random.randint(3, int(r_l/2))
+            t_hoogte = random.randint(2, int(r_b/2))
+            opp_r = r_l * r_b
+            opp_t = (t_basis * t_hoogte) / 2
+            opp_total = opp_r - opp_t
+            q = f"Een rechthoek ({r_l}×{r_b} cm) heeft een driehoekige uitsparing (basis {t_basis} cm, hoogte {t_hoogte} cm). Resterende oppervlakte?"
+            correct = f"{opp_total:.1f} cm²" if opp_total % 1 != 0 else f"{int(opp_total)} cm²"
+            wrong = [
+                f"{opp_r} cm²",  # Forgot cutout
+                f"{opp_total+10:.1f} cm²" if opp_total % 1 != 0 else f"{int(opp_total)+10} cm²",
+                f"{opp_r - t_basis*t_hoogte} cm²"  # Forgot to divide by 2
+            ]
+
+        else:  # huis_vorm
+            # House shape: rectangle with triangle roof
+            r_l = random.randint(6, 12)
+            r_b = random.randint(5, 10)
+            t_hoogte = random.randint(3, 6)
+            opp_r = r_l * r_b
+            opp_t = (r_l * t_hoogte) / 2  # Triangle has same base as rectangle width
+            opp_total = opp_r + opp_t
+            q = f"Een huis-vorm: rechthoek {r_l}×{r_b} cm met driehoekig dak (basis {r_l} cm, hoogte {t_hoogte} cm). Totale oppervlakte?"
+            correct = f"{opp_total:.1f} cm²" if opp_total % 1 != 0 else f"{int(opp_total)} cm²"
+            wrong = [
+                f"{opp_r} cm²",  # Forgot roof
+                f"{opp_total+12:.1f} cm²" if opp_total % 1 != 0 else f"{int(opp_total)+12} cm²",
+                f"{opp_r + r_l*t_hoogte} cm²"  # Forgot to divide by 2
+            ]
+
         if q in seen:
             continue
         seen.add(q)
-
-        correct = f"{opp_total} cm²"
-        wrong = [
-            f"{opp_total+10} cm²",
-            f"{opp_total-10} cm²" if opp_total > 20 else f"{opp_total+20} cm²",
-            f"{(r1_l+r2_l)*(r1_b+r2_b)} cm²"
-        ]
 
         exercises.append(create_exercise(q, correct, wrong, "complexe_oppervlakte"))
 
@@ -1433,17 +1494,17 @@ def generate_8MM4_exercises(count=17):
     return exercises[:count]
 
 def generate_8MM5_exercises(count=17):
-    """8MM5: Alle figuren (omtrek, oppervlakte, volume)"""
+    """8MM5: Alle figuren (omtrek, oppervlakte, volume) - NO π formulas!"""
     exercises = []
     seen = set()
 
-    # Mix of all formulas
+    # Mix of all formulas - rectangles, triangles, cubes, balken only
     for _ in range(count * 10):
         if len(exercises) >= count:
             break
 
         choice = random.choice(['omtrek_rechthoek', 'opp_rechthoek', 'opp_driehoek',
-                               'opp_cirkel', 'omtrek_cirkel', 'volume_kubus', 'volume_balk'])
+                               'cirkel_diameter_straal', 'volume_kubus', 'volume_balk'])
 
         if choice == 'omtrek_rechthoek':
             l = random.randint(5, 15)
@@ -1469,19 +1530,19 @@ def generate_8MM5_exercises(count=17):
             correct = f"{result:.1f} cm²" if result % 1 != 0 else f"{int(result)} cm²"
             wrong = [f"{basis*hoogte} cm²", f"{result+5:.1f} cm²", f"{result-5:.1f} cm²" if result > 10 else f"{result+10:.1f} cm²"]
 
-        elif choice == 'opp_cirkel':
-            r = random.randint(3, 10)
-            result = round(3.14 * r * r, 2)
-            q = f"Cirkel straal {r} cm. Oppervlakte? (π=3,14)"
-            correct = f"{result:.2f} cm²"
-            wrong = [f"{result+10:.2f} cm²", f"{result-10:.2f} cm²", f"{round(2*3.14*r, 2):.2f} cm²"]
-
-        elif choice == 'omtrek_cirkel':
-            d = random.randint(5, 15)
-            result = round(3.14 * d, 2)
-            q = f"Cirkel diameter {d} cm. Omtrek? (π=3,14)"
-            correct = f"{result:.2f} cm"
-            wrong = [f"{result+5:.2f} cm", f"{result-5:.2f} cm", f"{round(3.14*d*d, 2):.2f} cm"]
+        elif choice == 'cirkel_diameter_straal':
+            # Only diameter/straal recognition, NO formulas
+            d = random.randint(6, 20)
+            r = d // 2
+            q_type = random.choice(['d_to_r', 'r_to_d'])
+            if q_type == 'd_to_r':
+                q = f"Een cirkel heeft diameter {d} cm. Wat is de straal?"
+                correct = f"{r} cm"
+                wrong = [f"{d} cm", f"{d*2} cm", f"{r//2} cm" if r > 2 else f"{r+2} cm"]
+            else:
+                q = f"Een cirkel heeft straal {r} cm. Wat is de diameter?"
+                correct = f"{d} cm"
+                wrong = [f"{r} cm", f"{r*4} cm", f"{d//2} cm"]
 
         elif choice == 'volume_kubus':
             r = random.randint(3, 8)
@@ -1508,11 +1569,11 @@ def generate_8MM5_exercises(count=17):
     return exercises[:count]
 
 def generate_8MM6_exercises(count=16):
-    """8MM6: CITO-niveau meetkunde"""
+    """8MM6: CITO-niveau meetkunde (NO π formulas!)"""
     exercises = []
     seen = set()
 
-    # Complex CITO-style questions
+    # Complex CITO-style questions - basisonderwijs appropriate
     questions_pool = [
         ("Een plattegrond heeft schaal 1:200. Een kamer is op de tekening 6 cm. Echte lengte?",
          ["12 meter", "6 meter", "120 meter", "1.2 meter"], 0),
@@ -1523,8 +1584,8 @@ def generate_8MM6_exercises(count=16):
         ("Volume van een balk 10×5×4 cm?",
          ["200 cm³", "50 cm³", "100 cm³", "40 cm³"], 0),
 
-        ("Een cirkel heeft diameter 20 cm. Omtrek? (π≈3,14)",
-         ["62,8 cm", "31,4 cm", "125,6 cm", "40 cm"], 0),
+        ("Een cirkel heeft diameter 18 cm. Wat is de straal?",
+         ["9 cm", "18 cm", "36 cm", "4,5 cm"], 0),
 
         ("L-vorm: rechthoek 8×6 m + rechthoek 4×3 m. Totale oppervlakte?",
          ["60 m²", "48 m²", "72 m²", "36 m²"], 0),
@@ -1538,8 +1599,8 @@ def generate_8MM6_exercises(count=16):
         ("3,5 km hardlopen = hoeveel meter?",
          ["3500 meter", "350 meter", "35 meter", "35000 meter"], 0),
 
-        ("Een cilinder: straal 4 cm, hoogte 10 cm. Volume? (π≈3,14)",
-         ["502,4 cm³", "125,6 cm³", "251,2 cm³", "40 cm³"], 0),
+        ("Een balk 6×4×5 cm. Volume met l×b×h?",
+         ["120 cm³", "15 cm³", "60 cm³", "24 cm³"], 0),
 
         ("Vierkant zijde 9 cm. Diagonaal ongeveer?",
          ["13 cm", "9 cm", "18 cm", "4,5 cm"], 0),
@@ -1561,6 +1622,12 @@ def generate_8MM6_exercises(count=16):
 
         ("4,5 ton = hoeveel kg?",
          ["4500 kg", "450 kg", "45 kg", "45000 kg"], 0),
+
+        ("Een cirkel heeft straal 7 cm. Wat is de diameter?",
+         ["14 cm", "7 cm", "21 cm", "3,5 cm"], 0),
+
+        ("Rechthoek 9×7 cm. Oppervlakte?",
+         ["63 cm²", "32 cm²", "16 cm²", "72 cm²"], 0),
     ]
 
     for i, (q, opts, correct_idx) in enumerate(questions_pool[:count]):
