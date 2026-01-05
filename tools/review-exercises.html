@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Review Tool | OefenPlatform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+    <!-- KaTeX for math rendering in preview -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-main: #f8f9fa;
+            --bg-white: #ffffff;
+            --primary: #FF8A34;
+            --success: #38C172;
+            --danger: #dc3545;
+            --warning: #ffc107;
+            --info: #2196f3;
+            --text-dark: #2c3e50;
+            --text-muted: #6c757d;
+            --border: #dee2e6;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-hover: 0 4px 12px rgba(0,0,0,0.12);
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--bg-main);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--bg-white);
+            padding: 20px 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header h1 .material-icons {
+            color: var(--primary);
+            font-size: 36px;
+        }
+
+        /* File Upload Section */
+        .upload-section {
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .upload-area {
+            border: 3px dashed var(--border);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .upload-area:hover {
+            border-color: var(--primary);
+            background: #fff8f3;
+        }
+
+        .upload-area.dragover {
+            border-color: var(--primary);
+            background: #fff8f3;
+        }
+
+        .upload-area .material-icons {
+            font-size: 64px;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .upload-area h3 {
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .upload-area p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: var(--bg-white);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .stat-card .number {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .stat-card .label {
+            color: var(--text-muted);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-card.pending .number { color: var(--info); }
+        .stat-card.approved .number { color: var(--success); }
+        .stat-card.rejected .number { color: var(--danger); }
+        .stat-card.flagged .number { color: var(--warning); }
+
+        /* Main Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        /* Exercise Editor */
+        .editor-panel {
+            background: var(--bg-white);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            position: sticky;
+            top: 20px;
+        }
+
+        .editor-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .editor-header h2 {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .exercise-counter {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .editor-body {
+            padding: 30px;
+            max-height: calc(100vh - 300px);
+            overflow-y: auto;
+        }
+
+        .code-editor {
+            width: 100%;
+            min-height: 500px;
+            font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+            font-size: 13px;
+            padding: 16px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            resize: vertical;
+            background: #f8f9fa;
+            line-height: 1.5;
+        }
+
+        .code-editor:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: white;
+        }
+
+        /* Preview Panel */
+        .preview-panel {
+            background: var(--bg-white);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            position: sticky;
+            top: 20px;
+        }
+
+        .preview-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px 30px;
+        }
+
+        .preview-header h2 {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .preview-body {
+            padding: 30px;
+            max-height: calc(100vh - 300px);
+            overflow-y: auto;
+        }
+
+        /* Question Preview */
+        .question-preview {
+            background: #fffdf8;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            border: 2px solid #f0f0f0;
+        }
+
+        .question-text {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .option-preview {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .option-preview:hover {
+            border-color: var(--primary);
+            transform: translateX(4px);
+        }
+
+        .option-preview.correct {
+            border-color: var(--success);
+            background: #f0fdf4;
+        }
+
+        .hint-preview {
+            background: #e7f3ff;
+            border-left: 4px solid var(--info);
+            padding: 16px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .hint-preview strong {
+            color: var(--info);
+        }
+
+        .metadata-preview {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+
+        .metadata-preview .badge {
+            display: inline-block;
+            background: #e9ecef;
+            padding: 4px 10px;
+            border-radius: 12px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-top: 1px solid var(--border);
+        }
+
+        .btn {
+            flex: 1;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-approve {
+            background: var(--success);
+            color: white;
+        }
+
+        .btn-approve:hover {
+            background: #2ea05e;
+        }
+
+        .btn-reject {
+            background: var(--danger);
+            color: white;
+        }
+
+        .btn-reject:hover {
+            background: #c82333;
+        }
+
+        .btn-flag {
+            background: var(--warning);
+            color: white;
+        }
+
+        .btn-flag:hover {
+            background: #e0a800;
+        }
+
+        .btn-skip {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-skip:hover {
+            background: #5a6268;
+        }
+
+        /* Navigation */
+        .nav-buttons {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Validation Errors */
+        .validation-errors {
+            background: #fff3cd;
+            border: 2px solid var(--warning);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .validation-errors h4 {
+            color: #856404;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .error-item {
+            padding: 8px;
+            margin-bottom: 6px;
+            background: white;
+            border-radius: 4px;
+            font-size: 14px;
+            display: flex;
+            align-items: start;
+            gap: 8px;
+        }
+
+        .error-item .material-icons {
+            font-size: 18px;
+            margin-top: 2px;
+        }
+
+        .error-item.critical { color: var(--danger); }
+        .error-item.error { color: #dc3545; }
+        .error-item.warning { color: #856404; }
+
+        /* Quality Score */
+        .quality-score {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .quality-score .score {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .quality-score .label {
+            font-size: 14px;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .quality-high { background: linear-gradient(135deg, #38C172 0%, #2ea05e 100%) !important; }
+        .quality-medium { background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%) !important; }
+        .quality-low { background: linear-gradient(135deg, #dc3545 0%, #c82333 100%) !important; }
+
+        /* Export Section */
+        .export-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: var(--bg-white);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .export-section h3 {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .export-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .export-btn {
+            padding: 12px 24px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .export-btn:hover {
+            background: #e67827;
+            transform: translateY(-2px);
+        }
+
+        /* Toast Notifications */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .toast.success { border-left: 4px solid var(--success); }
+        .toast.error { border-left: 4px solid var(--danger); }
+        .toast.warning { border-left: 4px solid var(--warning); }
+        .toast.info { border-left: 4px solid var(--info); }
+
+        .toast .material-icons {
+            font-size: 24px;
+        }
+
+        .toast.success .material-icons { color: var(--success); }
+        .toast.error .material-icons { color: var(--danger); }
+        .toast.warning .material-icons { color: var(--warning); }
+        .toast.info .material-icons { color: var(--info); }
+
+        /* Keyboard Shortcuts Help */
+        .shortcuts-help {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .shortcuts-help kbd {
+            background: #f8f9fa;
+            border: 1px solid var(--border);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 0 4px;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .empty-state .material-icons {
+            font-size: 80px;
+            color: var(--text-muted);
+            opacity: 0.5;
+            margin-bottom: 20px;
+        }
+
+        .empty-state h3 {
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .empty-state p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>
+                <span class="material-icons">fact_check</span>
+                Exercise Review Tool
+            </h1>
+            <div class="shortcuts-help">
+                <kbd>A</kbd> Approve
+                <kbd>R</kbd> Reject
+                <kbd>F</kbd> Flag
+                <kbd>←</kbd><kbd>→</kbd> Navigate
+            </div>
+        </div>
+
+        <!-- Upload Section -->
+        <div class="upload-section" id="uploadSection">
+            <div class="upload-area" id="uploadArea">
+                <span class="material-icons">cloud_upload</span>
+                <h3>Upload Exercise Files</h3>
+                <p>Drag & drop JSON files here or click to browse</p>
+                <p style="margin-top: 8px; font-size: 12px;">Supports both _core.json and _support.json files</p>
+                <input type="file" id="fileInput" class="file-input" multiple accept=".json">
+            </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar" id="statsBar" style="display: none;">
+            <div class="stat-card pending">
+                <div class="number" id="statPending">0</div>
+                <div class="label">Pending</div>
+            </div>
+            <div class="stat-card approved">
+                <div class="number" id="statApproved">0</div>
+                <div class="label">Approved</div>
+            </div>
+            <div class="stat-card rejected">
+                <div class="number" id="statRejected">0</div>
+                <div class="label">Rejected</div>
+            </div>
+            <div class="stat-card flagged">
+                <div class="number" id="statFlagged">0</div>
+                <div class="label">Flagged</div>
+            </div>
+        </div>
+
+        <!-- Main Review Interface -->
+        <div id="reviewInterface" style="display: none;">
+            <!-- Navigation -->
+            <div class="nav-buttons">
+                <button class="nav-btn" id="prevBtn" onclick="navigateExercise(-1)">
+                    <span class="material-icons">chevron_left</span>
+                    Previous
+                </button>
+                <button class="nav-btn" id="nextBtn" onclick="navigateExercise(1)">
+                    Next
+                    <span class="material-icons">chevron_right</span>
+                </button>
+            </div>
+
+            <!-- Main Layout -->
+            <div class="main-layout">
+                <!-- Editor Panel -->
+                <div class="editor-panel">
+                    <div class="editor-header">
+                        <h2>
+                            <span class="material-icons">edit_note</span>
+                            JSON Editor
+                        </h2>
+                        <span class="exercise-counter" id="exerciseCounter">1 / 1</span>
+                    </div>
+                    <div class="editor-body">
+                        <textarea class="code-editor" id="codeEditor" spellcheck="false"></textarea>
+                    </div>
+                </div>
+
+                <!-- Preview Panel -->
+                <div class="preview-panel">
+                    <div class="preview-header">
+                        <h2>
+                            <span class="material-icons">visibility</span>
+                            Live Preview
+                        </h2>
+                    </div>
+                    <div class="preview-body" id="previewBody">
+                        <!-- Quality Score -->
+                        <div class="quality-score" id="qualityScore">
+                            <div class="score" id="qualityScoreValue">--</div>
+                            <div class="label">Quality Score</div>
+                        </div>
+
+                        <!-- Validation Errors -->
+                        <div class="validation-errors" id="validationErrors" style="display: none;">
+                            <h4>
+                                <span class="material-icons">warning</span>
+                                Validation Issues
+                            </h4>
+                            <div id="errorsList"></div>
+                        </div>
+
+                        <!-- Question Preview -->
+                        <div id="questionsPreview"></div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button class="btn btn-approve" onclick="approveExercise()">
+                            <span class="material-icons">check_circle</span>
+                            Approve (A)
+                        </button>
+                        <button class="btn btn-reject" onclick="rejectExercise()">
+                            <span class="material-icons">cancel</span>
+                            Reject (R)
+                        </button>
+                        <button class="btn btn-flag" onclick="flagExercise()">
+                            <span class="material-icons">flag</span>
+                            Flag (F)
+                        </button>
+                        <button class="btn btn-skip" onclick="navigateExercise(1)">
+                            <span class="material-icons">skip_next</span>
+                            Skip
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Export Section -->
+            <div class="export-section">
+                <h3>
+                    <span class="material-icons">download</span>
+                    Export Approved Exercises
+                </h3>
+                <div class="export-buttons">
+                    <button class="export-btn" onclick="exportApproved()">
+                        <span class="material-icons">file_download</span>
+                        Download Approved JSON
+                    </button>
+                    <button class="export-btn" onclick="exportReport()">
+                        <span class="material-icons">assessment</span>
+                        Download Review Report
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // State
+        let exercises = [];
+        let currentIndex = 0;
+        let stats = {
+            pending: 0,
+            approved: 0,
+            rejected: 0,
+            flagged: 0
+        };
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            setupUpload();
+            setupKeyboardShortcuts();
+        });
+
+        // Upload handling
+        function setupUpload() {
+            const uploadArea = document.getElementById('uploadArea');
+            const fileInput = document.getElementById('fileInput');
+
+            uploadArea.addEventListener('click', () => fileInput.click());
+
+            uploadArea.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadArea.classList.add('dragover');
+            });
+
+            uploadArea.addEventListener('dragleave', () => {
+                uploadArea.classList.remove('dragover');
+            });
+
+            uploadArea.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadArea.classList.remove('dragover');
+                handleFiles(e.dataTransfer.files);
+            });
+
+            fileInput.addEventListener('change', (e) => {
+                handleFiles(e.target.files);
+            });
+        }
+
+        async function handleFiles(files) {
+            const fileArray = Array.from(files);
+            const jsonFiles = fileArray.filter(f => f.name.endsWith('.json'));
+
+            if (jsonFiles.length === 0) {
+                showToast('No JSON files found', 'error');
+                return;
+            }
+
+            exercises = [];
+
+            for (const file of jsonFiles) {
+                try {
+                    const text = await file.text();
+                    const data = JSON.parse(text);
+
+                    // Determine if it's a core or support file
+                    const isCore = file.name.includes('_core');
+                    const baseName = file.name.replace('_core.json', '').replace('_support.json', '');
+
+                    // Find or create exercise entry
+                    let exercise = exercises.find(ex => ex.baseName === baseName);
+                    if (!exercise) {
+                        exercise = {
+                            baseName: baseName,
+                            core: null,
+                            support: null,
+                            status: 'pending',
+                            notes: ''
+                        };
+                        exercises.push(exercise);
+                    }
+
+                    if (isCore) {
+                        exercise.core = data;
+                    } else {
+                        exercise.support = data;
+                    }
+                } catch (e) {
+                    console.error('Error parsing file:', file.name, e);
+                    showToast(`Error parsing ${file.name}`, 'error');
+                }
+            }
+
+            if (exercises.length > 0) {
+                updateStats();
+                showReviewInterface();
+                loadExercise(0);
+                showToast(`Loaded ${exercises.length} exercises`, 'success');
+            }
+        }
+
+        function showReviewInterface() {
+            document.getElementById('uploadSection').style.display = 'none';
+            document.getElementById('statsBar').style.display = 'grid';
+            document.getElementById('reviewInterface').style.display = 'block';
+        }
+
+        function loadExercise(index) {
+            if (index < 0 || index >= exercises.length) return;
+
+            currentIndex = index;
+            const exercise = exercises[currentIndex];
+
+            // Update counter
+            document.getElementById('exerciseCounter').textContent = `${currentIndex + 1} / ${exercises.length}`;
+
+            // Load JSON in editor
+            const jsonData = exercise.core || {};
+            document.getElementById('codeEditor').value = JSON.stringify(jsonData, null, 2);
+
+            // Update preview
+            updatePreview(exercise);
+
+            // Update navigation buttons
+            document.getElementById('prevBtn').disabled = currentIndex === 0;
+            document.getElementById('nextBtn').disabled = currentIndex === exercises.length - 1;
+        }
+
+        function updatePreview(exercise) {
+            const preview = document.getElementById('questionsPreview');
+            preview.innerHTML = '';
+
+            if (!exercise.core) {
+                preview.innerHTML = '<div class="empty-state"><span class="material-icons">error_outline</span><h3>No core data</h3></div>';
+                return;
+            }
+
+            const core = exercise.core;
+            const support = exercise.support || {};
+
+            // Calculate quality score (simplified)
+            const qualityScore = calculateQualityScore(core, support);
+            updateQualityScore(qualityScore);
+
+            // Validate
+            const errors = validateExercise(core, support);
+            if (errors.length > 0) {
+                displayErrors(errors);
+            } else {
+                document.getElementById('validationErrors').style.display = 'none';
+            }
+
+            // Preview items
+            const items = core.items || [];
+            const supportItems = support.items || [];
+
+            items.slice(0, 3).forEach((item, idx) => {
+                const supportItem = supportItems.find(s => s.item_id === item.id) || {};
+                const questionDiv = createQuestionPreview(item, supportItem, idx);
+                preview.appendChild(questionDiv);
+            });
+
+            if (items.length > 3) {
+                const moreDiv = document.createElement('div');
+                moreDiv.className = 'metadata-preview';
+                moreDiv.style.textAlign = 'center';
+                moreDiv.style.padding = '20px';
+                moreDiv.textContent = `... and ${items.length - 3} more questions`;
+                preview.appendChild(moreDiv);
+            }
+        }
+
+        function createQuestionPreview(item, supportItem, index) {
+            const div = document.createElement('div');
+            div.className = 'question-preview';
+
+            // Question text
+            const questionText = document.createElement('div');
+            questionText.className = 'question-text';
+            questionText.innerHTML = renderMath(item.question?.text || 'No question text');
+            div.appendChild(questionText);
+
+            // Options
+            if (item.options) {
+                item.options.forEach((opt, optIdx) => {
+                    const optDiv = document.createElement('div');
+                    optDiv.className = 'option-preview';
+                    if (optIdx === item.answer?.correct_index) {
+                        optDiv.classList.add('correct');
+                    }
+                    optDiv.innerHTML = renderMath(opt.text || opt);
+                    div.appendChild(optDiv);
+                });
+            }
+
+            // Hints
+            if (supportItem.hints && supportItem.hints.length > 0) {
+                const hintDiv = document.createElement('div');
+                hintDiv.className = 'hint-preview';
+                hintDiv.innerHTML = `<strong>Hints (${supportItem.hints.length}):</strong> ${renderMath(supportItem.hints[0].text || supportItem.hints[0])}`;
+                div.appendChild(hintDiv);
+            }
+
+            // Metadata
+            const metaDiv = document.createElement('div');
+            metaDiv.className = 'metadata-preview';
+
+            const metadata = item.metadata || {};
+            if (item.theme) {
+                const badge = document.createElement('span');
+                badge.className = 'badge';
+                badge.textContent = item.theme;
+                metaDiv.appendChild(badge);
+            }
+
+            div.appendChild(metaDiv);
+
+            return div;
+        }
+
+        function renderMath(text) {
+            if (!text || typeof text !== 'string') return text || '';
+
+            try {
+                // Inline math $...$
+                let result = text.replace(/\$([^\$]+)\$/g, (match, latex) => {
+                    try {
+                        return katex.renderToString(latex.trim(), { throwOnError: false });
+                    } catch (e) {
+                        return match;
+                    }
+                });
+                return result;
+            } catch (e) {
+                return text;
+            }
+        }
+
+        function calculateQualityScore(core, support) {
+            let score = 100;
+            const items = core.items || [];
+            const supportItems = support.items || [];
+
+            if (items.length === 0) return 0;
+
+            // Check each item for quality features
+            let hasHints = 0;
+            let hasMultipleHints = 0;
+            let hasPerOptionFeedback = 0;
+            let hasStrategies = 0;
+
+            items.forEach(item => {
+                const sup = supportItems.find(s => s.item_id === item.id);
+                if (!sup) return;
+
+                if (sup.hints && sup.hints.length > 0) hasHints++;
+                if (sup.hints && sup.hints.length >= 3) hasMultipleHints++;
+                if (sup.feedback?.per_option) hasPerOptionFeedback++;
+                if (sup.learning?.reading_strategies || sup.learning?.math_strategies) hasStrategies++;
+            });
+
+            const itemCount = items.length;
+
+            // Calculate percentage-based bonuses
+            score = 0;
+            score += (hasMultipleHints / itemCount) * 20; // Progressive hints
+            score += (hasPerOptionFeedback / itemCount) * 20; // Per-option feedback
+            score += (hasStrategies / itemCount) * 10; // Learning strategies
+
+            if (core.metadata?.slo_alignment) score += 10; // SLO alignment
+
+            return Math.round(score);
+        }
+
+        function updateQualityScore(score) {
+            const scoreEl = document.getElementById('qualityScoreValue');
+            const scoreCard = document.getElementById('qualityScore');
+
+            scoreEl.textContent = `${score}%`;
+
+            scoreCard.className = 'quality-score';
+            if (score >= 70) {
+                scoreCard.classList.add('quality-high');
+            } else if (score >= 40) {
+                scoreCard.classList.add('quality-medium');
+            } else {
+                scoreCard.classList.add('quality-low');
+            }
+        }
+
+        function validateExercise(core, support) {
+            const errors = [];
+
+            // Basic validation
+            if (!core.metadata) {
+                errors.push({ severity: 'critical', message: 'Missing metadata' });
+            }
+
+            if (!core.items || core.items.length === 0) {
+                errors.push({ severity: 'critical', message: 'No items found' });
+            }
+
+            if (core.items) {
+                core.items.forEach((item, idx) => {
+                    if (!item.question?.text) {
+                        errors.push({ severity: 'error', message: `Item ${idx + 1}: Missing question text` });
+                    }
+
+                    if (!item.answer) {
+                        errors.push({ severity: 'error', message: `Item ${idx + 1}: Missing answer` });
+                    }
+
+                    if (item.options && item.options.length < 2) {
+                        errors.push({ severity: 'error', message: `Item ${idx + 1}: Need at least 2 options` });
+                    }
+                });
+            }
+
+            return errors;
+        }
+
+        function displayErrors(errors) {
+            const errorsDiv = document.getElementById('validationErrors');
+            const errorsList = document.getElementById('errorsList');
+
+            errorsDiv.style.display = 'block';
+            errorsList.innerHTML = '';
+
+            errors.forEach(error => {
+                const errorDiv = document.createElement('div');
+                errorDiv.className = `error-item ${error.severity}`;
+
+                const icon = document.createElement('span');
+                icon.className = 'material-icons';
+                icon.textContent = error.severity === 'critical' ? 'error' :
+                                  error.severity === 'error' ? 'warning' : 'info';
+
+                errorDiv.appendChild(icon);
+                errorDiv.appendChild(document.createTextNode(error.message));
+                errorsList.appendChild(errorDiv);
+            });
+        }
+
+        // Actions
+        function approveExercise() {
+            exercises[currentIndex].status = 'approved';
+            updateStats();
+            showToast('Exercise approved!', 'success');
+            navigateExercise(1);
+        }
+
+        function rejectExercise() {
+            exercises[currentIndex].status = 'rejected';
+            updateStats();
+            showToast('Exercise rejected', 'error');
+            navigateExercise(1);
+        }
+
+        function flagExercise() {
+            exercises[currentIndex].status = 'flagged';
+            exercises[currentIndex].notes = prompt('Add a note (optional):') || '';
+            updateStats();
+            showToast('Exercise flagged for review', 'warning');
+            navigateExercise(1);
+        }
+
+        function navigateExercise(direction) {
+            const newIndex = currentIndex + direction;
+            if (newIndex >= 0 && newIndex < exercises.length) {
+                loadExercise(newIndex);
+            }
+        }
+
+        // Stats
+        function updateStats() {
+            stats = {
+                pending: exercises.filter(ex => ex.status === 'pending').length,
+                approved: exercises.filter(ex => ex.status === 'approved').length,
+                rejected: exercises.filter(ex => ex.status === 'rejected').length,
+                flagged: exercises.filter(ex => ex.status === 'flagged').length
+            };
+
+            document.getElementById('statPending').textContent = stats.pending;
+            document.getElementById('statApproved').textContent = stats.approved;
+            document.getElementById('statRejected').textContent = stats.rejected;
+            document.getElementById('statFlagged').textContent = stats.flagged;
+        }
+
+        // Export
+        function exportApproved() {
+            const approved = exercises.filter(ex => ex.status === 'approved');
+
+            if (approved.length === 0) {
+                showToast('No approved exercises to export', 'warning');
+                return;
+            }
+
+            approved.forEach(exercise => {
+                // Download core file
+                if (exercise.core) {
+                    downloadJSON(exercise.core, `${exercise.baseName}_core.json`);
+                }
+                // Download support file
+                if (exercise.support) {
+                    downloadJSON(exercise.support, `${exercise.baseName}_support.json`);
+                }
+            });
+
+            showToast(`Exported ${approved.length} approved exercises`, 'success');
+        }
+
+        function exportReport() {
+            const report = {
+                timestamp: new Date().toISOString(),
+                total: exercises.length,
+                stats: stats,
+                exercises: exercises.map(ex => ({
+                    baseName: ex.baseName,
+                    status: ex.status,
+                    notes: ex.notes,
+                    hasCore: !!ex.core,
+                    hasSupport: !!ex.support
+                }))
+            };
+
+            downloadJSON(report, `review-report-${new Date().toISOString().split('T')[0]}.json`);
+            showToast('Report downloaded', 'success');
+        }
+
+        function downloadJSON(data, filename) {
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Keyboard shortcuts
+        function setupKeyboardShortcuts() {
+            document.addEventListener('keydown', (e) => {
+                // Ignore if typing in editor
+                if (e.target.tagName === 'TEXTAREA') return;
+
+                switch(e.key.toLowerCase()) {
+                    case 'a':
+                        e.preventDefault();
+                        approveExercise();
+                        break;
+                    case 'r':
+                        e.preventDefault();
+                        rejectExercise();
+                        break;
+                    case 'f':
+                        e.preventDefault();
+                        flagExercise();
+                        break;
+                    case 'arrowleft':
+                        e.preventDefault();
+                        navigateExercise(-1);
+                        break;
+                    case 'arrowright':
+                        e.preventDefault();
+                        navigateExercise(1);
+                        break;
+                }
+            });
+        }
+
+        // Toast notifications
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+
+            const icon = document.createElement('span');
+            icon.className = 'material-icons';
+            icon.textContent = type === 'success' ? 'check_circle' :
+                              type === 'error' ? 'error' :
+                              type === 'warning' ? 'warning' : 'info';
+
+            toast.appendChild(icon);
+            toast.appendChild(document.createTextNode(message));
+
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.animation = 'slideIn 0.3s ease reverse';
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        // Auto-update preview when editing
+        document.addEventListener('DOMContentLoaded', () => {
+            const editor = document.getElementById('codeEditor');
+            let timeout;
+
+            editor?.addEventListener('input', () => {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => {
+                    try {
+                        const data = JSON.parse(editor.value);
+                        exercises[currentIndex].core = data;
+                        updatePreview(exercises[currentIndex]);
+                    } catch (e) {
+                        // Invalid JSON, ignore
+                    }
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
