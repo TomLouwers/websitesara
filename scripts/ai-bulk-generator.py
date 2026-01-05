@@ -226,12 +226,23 @@ class AIExerciseGenerator:
         return """Je bent een expert onderwijsontwerper voor het Nederlandse basisonderwijs.
 
 Je taak is om hoogwaardige oefeningen te genereren die:
-1. Aansluiten bij de Nederlandse SLO-kerndoelen
+1. Aansluiten bij de Nederlandse SLO-kerndoelen en inhoudslijnen
 2. Leeftijd-geschikt zijn (groep 1-8, leeftijd 4-12 jaar)
-3. De juiste moeilijkheidsgraad hebben voor het niveau
+3. De juiste moeilijkheidsgraad hebben voor het niveau (M of E)
 4. Pedagogisch verantwoord zijn met scaffolding (progressieve hints)
 5. Concrete, herkenbare Nederlandse contexten gebruiken
 6. Inclusief en divers zijn (namen, situaties)
+
+**BELANGRIJK - Niveau M vs E:**
+- **M (Midden)**: Halverwege het schooljaar (CITO toets januari)
+  → Basis van het leerdoel, introductie nieuwe stof, meer ondersteuning
+  → Leerlingen zijn nog aan het oefenen, meer scaffolding nodig
+
+- **E (Eind)**: Einde schooljaar (CITO toets mei/juni)
+  → Beheersing van het leerdoel, complexere toepassingen
+  → Leerlingen moeten de stof beheersen, minder scaffolding
+
+De moeilijkheidsgraad en verwachtingen moeten precies aansluiten bij het M/E niveau!
 
 Je genereert JSON in exact dit formaat (schema versie 2.0.0):
 
@@ -239,17 +250,20 @@ Je genereert JSON in exact dit formaat (schema versie 2.0.0):
 {
   "schema_version": "2.0.0",
   "metadata": {
-    "id": "gb_groep4_m4_1",
+    "id": "gb_groep4_m_4g1",
     "type": "multiple_choice",
     "category": "gb",
     "grade": 4,
-    "level": "M4",
-    "language": "nl-NL",
+    "level": "M",
+    "language": "nl",
+    "title": "Beschrijvende titel",
+    "description": "Beschrijving van de oefening",
     "slo_alignment": {
-      "kerndoelen": ["K28", "K29"],
-      "rekendomeinen": ["getallen"],
-      "referentieniveau": "1F",
-      "cognitive_level": "toepassen"
+      "kerndoel": "K28",
+      "kerndoel_description": "Inzicht in getalsysteem en rekenen tot 100",
+      "inhoudslijn": "Getallen - Getalbegrip - Plaatswaarde",
+      "leerdoel_code": "4G1",
+      "leerdoel_description": "Eenheden en tientallen onderscheiden"
     }
   },
   "display": {
@@ -283,8 +297,14 @@ Je genereert JSON in exact dit formaat (schema versie 2.0.0):
 **SUPPORT FILE** (hints, feedback, pedagogie):
 {
   "schema_version": "2.0.0",
-  "exercise_id": "gb_groep4_m4_1",
-  "items": [
+  "metadata": {
+    "id": "gb_groep4_m_4g1",
+    "exercise_id": "gb_groep4_m_4g1",
+    "category": "gb",
+    "grade": 4,
+    "level": "M"
+  },
+  "support_items": [
     {
       "item_id": 1,
       "hints": [
@@ -352,6 +372,26 @@ Genereer ALLEEN VALIDE JSON. Geen tekst ervoor of erna."""
 
     def _build_user_prompt(self, task: GenerationTask) -> str:
         """Build user prompt from task"""
+        # Determine CITO context based on level
+        if task.level == "M":
+            cito_context = """
+**NIVEAU M (Midden schooljaar - CITO januari):**
+- Leerlingen zijn halverwege het schooljaar
+- Stof is relatief nieuw, basis moet gelegd worden
+- Meer scaffolding en ondersteuning nodig
+- Focus op kennismaking en eerste toepassing
+- Hints moeten uitgebreider en concreter zijn
+- Verwachting: basis beheersing, nog niet volledig geautomatiseerd"""
+        else:  # E
+            cito_context = """
+**NIVEAU E (Eind schooljaar - CITO mei/juni):**
+- Leerlingen zijn aan het einde van het schooljaar
+- Stof moet beheerst worden voor overgang naar volgende groep
+- Complexere vraagstellingen en toepassingen
+- Meer zelfstandigheid verwacht
+- Hints kunnen korter en meer strategisch gericht zijn
+- Verwachting: beheersing en automatisering van vaardigheden"""
+
         return f"""{task.prompt_template}
 
 **EXTRA SPECIFICATIES:**
@@ -361,6 +401,28 @@ Genereer ALLEEN VALIDE JSON. Geen tekst ervoor of erna."""
 - Code: {task.code}
 - Beschrijving: {task.beschrijving}
 - Toelichting: {task.toelichting}
+{cito_context}
+
+**BELANGRIJK VOOR SLO-ALIGNMENT:**
+Zorg dat de oefeningen qua moeilijkheidsgraad, complexiteit en verwachtingen
+EXACT aansluiten bij het {task.level}-niveau. Dit betekent:
+- Juiste kerndoel uit de prompt gebruiken
+- Juiste inhoudslijn vermelden in metadata
+- Leerdoel code ({task.code}) opnemen
+- Moeilijkheidsgraad aanpassen aan M (basis/oefenen) of E (beheersing/toepassing)
+
+**METADATA VEREISTEN:**
+- id: {task.category}_groep{task.groep}_{task.level.lower()}_{task.code.lower()}
+- category: {task.category}
+- grade: {task.groep}
+- level: {task.level}
+- language: nl
+- slo_alignment moet bevatten:
+  * kerndoel (bijv. "K28")
+  * kerndoel_description
+  * inhoudslijn (bijv. "Getallen - Getalbegrip - Plaatswaarde")
+  * leerdoel_code: {task.code}
+  * leerdoel_description: {task.beschrijving}
 
 **OUTPUT FORMAAT:**
 Genereer 2 JSON objecten gescheiden door "---SPLIT---":

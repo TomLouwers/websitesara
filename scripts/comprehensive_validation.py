@@ -278,6 +278,27 @@ class ExerciseValidator:
                 "metadata.grade"
             ))
 
+        # Validate level (M or E for CITO alignment)
+        level = metadata.get('level')
+        if level:
+            if level not in ['M', 'E']:
+                issues.append(ValidationIssue(
+                    Severity.WARNING,
+                    "metadata",
+                    f"Level should be 'M' (Midden - CITO januari) or 'E' (Eind - CITO mei/juni), got: {level}",
+                    "metadata.level",
+                    "Use 'M' for middle of school year or 'E' for end of school year"
+                ))
+        else:
+            # Level is recommended but not required for all exercise types
+            issues.append(ValidationIssue(
+                Severity.INFO,
+                "metadata",
+                "Level not specified - recommended for CITO alignment (M or E)",
+                "metadata",
+                "Add level: 'M' (midden schooljaar) or 'E' (eind schooljaar)"
+            ))
+
         # Check SLO alignment (recommended)
         if 'slo_alignment' not in metadata:
             issues.append(ValidationIssue(
