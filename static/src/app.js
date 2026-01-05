@@ -48,6 +48,77 @@ let currentQuestionInText = 0; // Which question within current text
 let currentTextGroup = null;   // Current active text group
 let useTextGrouping = false;   // Flag to indicate if we should use text grouping
 
+// ===================================================================
+// KATEX MATH RENDERING UTILITY
+// ===================================================================
+
+/**
+ * Render math notation in text using KaTeX
+ * Converts text with $...$ (inline) or $$...$$ (display) to rendered math
+ *
+ * Examples:
+ *   "Bereken: $\frac{3}{4} + \frac{1}{2}$" → Bereken: ¾ + ½ (rendered beautifully)
+ *   "Hoeveel is $5 \times 6$?" → Hoeveel is 5 × 6? (rendered)
+ *
+ * @param {string} text - Text that may contain LaTeX math notation
+ * @returns {string} HTML with rendered math
+ */
+function renderMathInText(text) {
+    if (!text || typeof text !== 'string') {
+        return text || '';
+    }
+
+    // Check if KaTeX is loaded
+    if (typeof katex === 'undefined') {
+        // KaTeX not loaded yet, return escaped text
+        return escapeHtml(text);
+    }
+
+    try {
+        // Replace inline math: $...$
+        let result = text.replace(/\$([^\$]+)\$/g, (match, latex) => {
+            try {
+                return katex.renderToString(latex.trim(), {
+                    throwOnError: false,
+                    displayMode: false
+                });
+            } catch (e) {
+                console.warn('KaTeX inline render error:', e, 'for:', latex);
+                return match; // Return original if error
+            }
+        });
+
+        // Replace display math: $$...$$
+        result = result.replace(/\$\$([^\$]+)\$\$/g, (match, latex) => {
+            try {
+                return katex.renderToString(latex.trim(), {
+                    throwOnError: false,
+                    displayMode: true
+                });
+            } catch (e) {
+                console.warn('KaTeX display render error:', e, 'for:', latex);
+                return match; // Return original if error
+            }
+        });
+
+        return result;
+    } catch (e) {
+        console.error('Error rendering math:', e);
+        return escapeHtml(text);
+    }
+}
+
+/**
+ * Escape HTML to prevent XSS when setting innerHTML
+ * @param {string} text - Text to escape
+ * @returns {string} Escaped HTML
+ */
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
 // Progress tracker by category
 let categoryProgress = {};
 let lovaClickCount = 0; // Track L.O.V.A. button clicks
@@ -1636,10 +1707,10 @@ function loadTextGroupQuestion() {
     // Display question metadata (skill, strategy)
     displayQuestionMetadata(currentQuestion);
 
-    // Display question text
+    // Display question text (with math rendering)
     const questionTextNew = document.getElementById('questionTextNew');
     if (questionTextNew) {
-        questionTextNew.textContent = currentQuestion.question;
+        questionTextNew.innerHTML = renderMathInText(currentQuestion.question);
     }
 
     // Hide hint initially
@@ -1656,7 +1727,7 @@ function loadTextGroupQuestion() {
 
     if (currentQuestion.hint && hintPillBtn && hintDisplay && hintDisplayText) {
         // Question has a hint - prepare button (will show after 12s via timer)
-        hintDisplayText.textContent = currentQuestion.hint;
+        hintDisplayText.innerHTML = renderMathInText(currentQuestion.hint);
         // Hide the hint display by default (user needs to click to see it)
         hintDisplay.style.display = 'none';
         // Button visibility controlled by delayed affordance timer
@@ -1791,7 +1862,8 @@ function renderAnswerOptions(question) {
         if (typeof option === 'object') {
             optionDiv.setAttribute('data-option', JSON.stringify(option));
         }
-        optionDiv.textContent = optionText;
+        // Render math notation in option text
+        optionDiv.innerHTML = renderMathInText(optionText);
 
         optionDiv.onclick = () => selectOption(index);
         container.appendChild(optionDiv);
