@@ -1,0 +1,11 @@
+# Requirements for AI-powered exercise generation
+# Install with: pip install -r scripts/requirements-ai-generation.txt
+
+# Anthropic Claude API (recommended)
+anthropic>=0.25.0
+
+# OpenAI GPT API (alternative)
+openai>=1.0.0
+
+# For validation after generation
+textstat>=0.7.3
