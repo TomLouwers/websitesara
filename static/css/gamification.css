@@ -1,0 +1,732 @@
+/**
+ * Gamification CSS - Styling for all gamification UI components
+ * @version 2.0.0
+ */
+
+/* =============================================================================
+   PLAYER PROFILE
+   ============================================================================= */
+
+.player-profile {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 24px;
+    color: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    margin-bottom: 24px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.avatar-container {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.player-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    background: white;
+}
+
+.level-badge {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background: #fbbf24;
+    color: #78350f;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.player-name {
+    margin: 0 0 12px 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.xp-bar-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    height: 28px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.xp-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #34d399, #10b981);
+    border-radius: 14px;
+    transition: width 0.5s ease;
+}
+
+.xp-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.stat-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.stat-icon {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 11px;
+    opacity: 0.9;
+}
+
+/* =============================================================================
+   DAILY CHALLENGES
+   ============================================================================= */
+
+.daily-challenges {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+}
+
+.challenges-title {
+    margin: 0 0 16px 0;
+    font-size: 20px;
+    color: #1f2937;
+}
+
+.challenges-list {
+    display: grid;
+    gap: 16px;
+}
+
+.challenge-card {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 16px;
+    border: 2px solid #e5e7eb;
+    transition: all 0.2s;
+}
+
+.challenge-card:hover {
+    border-color: #8b5cf6;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+}
+
+.challenge-card.completed {
+    background: #ecfdf5;
+    border-color: #10b981;
+}
+
+.challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.challenge-title {
+    font-weight: 600;
+    color: #1f2937;
+    font-size: 16px;
+}
+
+.challenge-badge {
+    color: #10b981;
+    font-size: 20px;
+}
+
+.challenge-description {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 0 0 12px 0;
+}
+
+.challenge-progress {
+    margin-bottom: 12px;
+}
+
+.progress-bar {
+    background: #e5e7eb;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.challenge-reward {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #f59e0b;
+    font-weight: 600;
+}
+
+.reward-icon {
+    font-size: 16px;
+}
+
+/* =============================================================================
+   ACHIEVEMENTS GALLERY
+   ============================================================================= */
+
+.achievements-gallery {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+}
+
+.gallery-title {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    color: #1f2937;
+}
+
+.gallery-subtitle {
+    margin: 0 0 20px 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.achievement-card {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    transition: all 0.2s;
+    border: 2px solid #e5e7eb;
+}
+
+.achievement-card.unlocked {
+    background: white;
+    border-color: #fbbf24;
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.2);
+}
+
+.achievement-card.locked {
+    opacity: 0.5;
+    filter: grayscale(1);
+}
+
+.achievement-card:hover {
+    transform: translateY(-4px);
+}
+
+.achievement-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.achievement-title {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 4px;
+    font-size: 15px;
+}
+
+.achievement-description {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* =============================================================================
+   STATS DASHBOARD
+   ============================================================================= */
+
+.stats-dashboard {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+}
+
+.dashboard-title {
+    margin: 0 0 24px 0;
+    font-size: 20px;
+    color: #1f2937;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.stat-card {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #e5e7eb;
+}
+
+.stat-card.highlight {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+}
+
+.stat-card-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.stat-card-value {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.stat-card-label {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.stats-by-category h4 {
+    margin: 0 0 16px 0;
+    color: #1f2937;
+    font-size: 18px;
+}
+
+.category-stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.category-stat-item {
+    display: grid;
+    grid-template-columns: 150px 1fr 80px;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #f9fafb;
+    border-radius: 8px;
+}
+
+.category-name {
+    font-weight: 600;
+    color: #1f2937;
+    font-size: 14px;
+}
+
+.category-progress-bar {
+    position: relative;
+    background: #e5e7eb;
+    height: 24px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.category-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #10b981, #34d399);
+    border-radius: 12px;
+    transition: width 0.5s ease;
+}
+
+.category-accuracy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.category-count {
+    text-align: right;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* =============================================================================
+   NOTIFICATIONS
+   ============================================================================= */
+
+.gamification-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transform: translateX(400px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 10000;
+    max-width: 320px;
+}
+
+.gamification-notification.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.notification-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-title {
+    font-weight: 700;
+    color: #1f2937;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.notification-message {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.notification-reward {
+    font-size: 12px;
+    color: #f59e0b;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.achievement-notification {
+    border-left: 4px solid #fbbf24;
+}
+
+.challenge-notification {
+    border-left: 4px solid #8b5cf6;
+}
+
+.xp-notification {
+    border-left: 4px solid #10b981;
+}
+
+/* =============================================================================
+   LEVEL-UP CELEBRATION
+   ============================================================================= */
+
+.gamification-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    width: 90%;
+}
+
+.level-up-celebration {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.celebration-animation {
+    font-size: 64px;
+    margin-bottom: 20px;
+    animation: bounce 0.6s infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-20px); }
+}
+
+.celebration-title {
+    margin: 0 0 16px 0;
+    font-size: 32px;
+    color: #1f2937;
+}
+
+.new-level-display {
+    font-size: 72px;
+    font-weight: 900;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 16px;
+}
+
+.celebration-message {
+    font-size: 18px;
+    color: #6b7280;
+    margin-bottom: 24px;
+}
+
+.unlocks-list {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.unlocks-list h3 {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    color: #1f2937;
+}
+
+.unlock-item {
+    padding: 8px 0;
+    font-size: 14px;
+    color: #10b981;
+    font-weight: 600;
+}
+
+.celebration-close-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.celebration-close-btn:hover {
+    transform: scale(1.05);
+}
+
+/* =============================================================================
+   STREAK UPDATE POPUP
+   ============================================================================= */
+
+.streak-update-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    border-radius: 16px;
+    padding: 32px 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 9999;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.streak-update-popup.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.streak-emoji {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+.streak-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.streak-count {
+    font-size: 18px;
+    color: #6b7280;
+}
+
+/* =============================================================================
+   MINI PROFILE (Header/Navbar)
+   ============================================================================= */
+
+.mini-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px 4px 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+}
+
+.mini-avatar {
+    position: relative;
+    width: 36px;
+    height: 36px;
+}
+
+.mini-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.mini-level {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    background: #fbbf24;
+    color: #78350f;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+.mini-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mini-xp {
+    width: 80px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.mini-xp-bar {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #34d399, #10b981);
+    border-radius: 2px;
+}
+
+.mini-streak {
+    font-size: 11px;
+    color: white;
+    font-weight: 600;
+}
+
+/* =============================================================================
+   RESPONSIVE
+   ============================================================================= */
+
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievements-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+
+    .category-stat-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .gamification-notification {
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+}
