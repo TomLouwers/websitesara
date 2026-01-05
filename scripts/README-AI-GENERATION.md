@@ -31,10 +31,24 @@ python3 scripts/ai-bulk-generator.py \
   --row 15 \
   --validate
 
-# Generate all Groep 4 exercises
+# Generate all Groep 4 exercises (both M and E levels)
 python3 scripts/ai-bulk-generator.py \
   --csv docs/reference/rekenen-getallen.csv \
   --grade 4 \
+  --validate
+
+# Generate only Groep 4 M-level (Midden - CITO januari)
+python3 scripts/ai-bulk-generator.py \
+  --csv docs/reference/rekenen-getallen.csv \
+  --grade 4 \
+  --level M \
+  --validate
+
+# Generate only Groep 4 E-level (Eind - CITO mei/juni)
+python3 scripts/ai-bulk-generator.py \
+  --csv docs/reference/rekenen-getallen.csv \
+  --grade 4 \
+  --level E \
   --validate
 
 # Batch generate entire CSV
@@ -69,6 +83,45 @@ Generated exercises include:
 - ✅ Diverse contexts and names
 
 Target quality score: **70-85%** on first generation
+
+## Understanding M/E Levels
+
+The Dutch educational system uses **CITO toetsen** at two key moments in the school year:
+
+### 📅 M-Level (Midden - Middle of School Year)
+- **CITO periode:** Januari (January)
+- **Timing:** Halverwege het schooljaar
+- **Purpose:** Check op voortgang, basis moet gelegd zijn
+- **Characteristics:**
+  - Introductie van nieuwe leerstof
+  - Meer scaffolding en ondersteuning nodig
+  - Focus op kennismaking en eerste toepassing
+  - Leerlingen zijn nog aan het oefenen
+  - Uitgebreidere hints en stapsgewijze uitleg
+
+### 📅 E-Level (Eind - End of School Year)
+- **CITO periode:** Mei/Juni (May/June)
+- **Timing:** Einde van het schooljaar
+- **Purpose:** Beheersing voor overgang naar volgende groep
+- **Characteristics:**
+  - Beheersing van leerstof verwacht
+  - Complexere vraagstellingen en toepassingen
+  - Meer zelfstandigheid
+  - Leerlingen moeten stof geautomatiseerd hebben
+  - Kortere, meer strategische hints
+
+### 🎯 Impact on Exercise Generation
+
+When generating exercises, the AI automatically adjusts:
+- **Difficulty level:** M is easier/introductory, E is mastery/application
+- **Question complexity:** M has simpler contexts, E has multi-step problems
+- **Hint detail:** M has more detailed scaffolding, E assumes more prior knowledge
+- **Expected automatization:** M allows calculation, E expects memorization (e.g., times tables)
+- **SLO alignment:** Different leerdoelen for M vs E within same grade
+
+**Example - Groep 4 Tafels:**
+- **M (4G1):** Introducing all multiplication tables 1-10, focus on understanding and practice
+- **E (4G6):** Using strategies, expecting full automatization within 3 seconds
 
 ## Usage Guide
 
