@@ -3,236 +3,437 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voor Ouders & Leraren - Oefenplatform Basisonderwijs</title>
+    <title>Voor Ouders & Leraren - OefenPlatform</title>
     <!-- Preconnect to Google Fonts for faster loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/src/styles.css">
+    <link rel="stylesheet" href="static/css/styles.min.css?v=20260106-mobile">
     <style>
-        .info-page {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
+        /* Override base styles for this page */
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: #f8f9fa;
         }
 
-        .info-hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+        /* Parent-specific Hero */
+        .parent-hero {
+            background: linear-gradient(135deg, #FF8A34 0%, #FF6B9D 100%);
             color: white;
-            padding: 60px 40px;
-            border-radius: var(--border-radius-card);
+            padding: 80px 40px;
+            border-radius: 24px;
+            margin: 30px auto;
+            max-width: 1200px;
+            box-shadow: 0 10px 40px rgba(255, 138, 52, 0.2);
+        }
+
+        .parent-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
             text-align: center;
-            margin-bottom: 40px;
-            box-shadow: var(--shadow-elevation-2);
         }
 
-        .info-hero h1 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
+        .parent-badges {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .parent-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
             font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        .info-hero p {
-            font-size: 1.2em;
-            opacity: 0.95;
-            font-weight: 300;
-        }
-
-        .info-section {
-            background-color: var(--surface-color);
-            border-radius: var(--border-radius-card);
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: var(--shadow-elevation-1);
-        }
-
-        .info-section h2 {
-            color: var(--primary-color);
-            font-size: 2em;
+        .parent-hero h1 {
+            font-size: 48px;
+            font-weight: 800;
             margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .parent-hero-subtitle {
+            font-size: 20px;
+            opacity: 0.95;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* Stats Grid */
+        .stats-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 20px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+            border-color: #FF8A34;
+        }
+
+        .stat-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .stat-number {
+            font-size: 44px;
+            font-weight: 800;
+            color: #FF8A34;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: #6c757d;
             font-weight: 600;
+        }
+
+        /* Content Section */
+        .content-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: #2c3e50;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #6c757d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Benefit Cards */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .benefit-card {
+            background: white;
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #FF8A34;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .benefit-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .benefit-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 12px;
+        }
+
+        .benefit-description {
+            font-size: 16px;
+            color: #6c757d;
+            line-height: 1.7;
+        }
+
+        /* Feature List */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 32px 0;
+        }
+
+        .feature-item {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            display: flex;
+            align-items: start;
+            gap: 16px;
+        }
+
+        .feature-check {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #38C172 0%, #2ea05e 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .feature-text {
+            flex: 1;
+        }
+
+        .feature-text strong {
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 4px;
+            font-size: 18px;
+        }
+
+        .feature-text p {
+            color: #6c757d;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question {
+            padding: 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            font-size: 18px;
+            color: #2c3e50;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+
+        .faq-icon {
+            font-size: 24px;
+            transition: transform 0.3s ease;
+            color: #FF8A34;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 24px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 24px 24px 24px;
+        }
+
+        .faq-answer-content {
+            color: #6c757d;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 40px;
+            border-radius: 24px;
+            text-align: center;
+            margin: 60px auto;
+            max-width: 1200px;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .cta-section h2 {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            opacity: 0.95;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 18px 48px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 48px;
+            margin: 48px 0;
+        }
+
+        .column-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .column-card h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 24px;
             display: flex;
             align-items: center;
             gap: 12px;
         }
 
-        .info-section h3 {
-            color: var(--text-color-dark);
-            font-size: 1.4em;
-            margin: 25px 0 15px;
-            font-weight: 500;
-        }
-
-        .info-section p {
-            color: var(--text-color-dark);
-            line-height: 1.8;
-            font-size: 1.05em;
-            margin-bottom: 15px;
-        }
-
-        .info-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .info-section li {
-            padding: 12px 0 12px 35px;
-            position: relative;
-            color: var(--text-color-dark);
-            line-height: 1.7;
-            font-size: 1.05em;
-        }
-
-        .info-section li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--color-correct);
-            font-weight: bold;
-            font-size: 1.3em;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .stat-card {
-            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
-            color: white;
-            padding: 30px 20px;
-            border-radius: var(--border-radius-button);
-            text-align: center;
-            box-shadow: var(--shadow-elevation-1);
-        }
-
-        .stat-number {
-            font-size: 3em;
-            font-weight: 700;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 1em;
-            opacity: 0.95;
-            font-weight: 400;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
-        }
-
-        .feature-card {
-            background-color: #f8f8f8;
-            border-radius: var(--border-radius-button);
-            padding: 25px;
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .feature-card h4 {
-            color: var(--primary-color);
-            font-size: 1.2em;
-            margin-bottom: 12px;
+        .column-card .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: center;
+            font-size: 24px;
         }
 
-        .feature-card p {
-            font-size: 0.95em;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .faq-item {
-            background-color: #f8f8f8;
-            border-radius: var(--border-radius-button);
-            padding: 20px 25px;
-            margin-bottom: 15px;
-            border-left: 4px solid var(--secondary-color);
-        }
-
-        .faq-question {
-            font-weight: 600;
-            color: var(--text-color-dark);
-            font-size: 1.1em;
-            margin-bottom: 10px;
-        }
-
-        .faq-answer {
-            color: var(--text-color-medium);
-            line-height: 1.7;
-            margin: 0;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-dark) 100%);
-            color: white;
-            padding: 40px;
-            border-radius: var(--border-radius-card);
-            text-align: center;
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
             margin: 40px 0;
+            flex-wrap: wrap;
         }
 
-        .cta-section h2 {
-            font-size: 2em;
-            margin-bottom: 15px;
-        }
-
-        .cta-section p {
-            font-size: 1.1em;
-            margin-bottom: 25px;
-            opacity: 0.95;
-        }
-
-        .btn-cta {
-            background-color: white;
-            color: var(--secondary-dark);
-            padding: 15px 40px;
-            border-radius: var(--border-radius-button);
-            text-decoration: none;
+        .trust-badge {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 50px;
+            padding: 12px 24px;
             font-weight: 600;
-            font-size: 1.1em;
-            display: inline-block;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: var(--shadow-elevation-2);
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
 
-        .btn-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-elevation-3);
+        .trust-badge-icon {
+            font-size: 20px;
         }
 
         @media (max-width: 768px) {
-            .info-hero {
-                padding: 40px 25px;
+            .parent-hero {
+                padding: 60px 24px;
             }
 
-            .info-hero h1 {
-                font-size: 1.8em;
+            .parent-hero h1 {
+                font-size: 32px;
             }
 
-            .info-section {
-                padding: 25px;
+            .parent-hero-subtitle {
+                font-size: 16px;
             }
 
-            .info-section h2 {
-                font-size: 1.6em;
+            .section-title {
+                font-size: 28px;
             }
 
-            .stats-grid {
+            .stats-grid,
+            .benefits-grid {
                 grid-template-columns: 1fr;
             }
 
-            .feature-grid {
+            .two-column {
                 grid-template-columns: 1fr;
+            }
+
+            .cta-section {
+                padding: 60px 24px;
+            }
+
+            .cta-section h2 {
+                font-size: 28px;
             }
         }
     </style>
@@ -241,212 +442,494 @@
     <div class="container">
         <!-- Navigation -->
         <nav class="main-nav">
-            <div class="nav-brand">
-                <h2 class="logo-text">Oefenplatform Basisonderwijs</h2>
-            </div>
-            <div class="nav-links">
-                <a href="index.html">Vakken</a>
-                <a href="ouders.html">Voor Ouders & Leraren</a>
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <div class="nav-logo">
+                        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="20" fill="#FF8A34"/>
+                            <text x="20" y="28" font-family="Nunito, sans-serif" font-size="24" font-weight="800" fill="white" text-anchor="middle">O</text>
+                        </svg>
+                    </div>
+                    <div class="nav-brand-text">
+                        <div class="nav-brand-name">OefenPlatform</div>
+                        <div class="nav-brand-tagline">Leren met plezier! 🚀</div>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <a href="index.html" class="nav-link">Naar Oefeningen</a>
+                </div>
             </div>
         </nav>
 
-        <div class="info-page">
-            <!-- Hero Section -->
-            <div class="info-hero">
-                <h1>Voor Ouders & Leraren</h1>
-                <p>Betrouwbare CITO-voorbereiding voor het basisonderwijs</p>
-            </div>
-
-            <!-- About Section -->
-            <div class="info-section">
-                <h2><i class="material-icons" style="font-size: 1em;">info</i>Over het Platform</h2>
-                <p>
-                    Het Oefenplatform Basisonderwijs is een gratis educatief hulpmiddel ontwikkeld om leerlingen
-                    van groep 3 tot en met 8 te ondersteunen bij hun voorbereiding op de CITO-toetsen.
-                    Met meer dan 1.600 zorgvuldig opgestelde vragen biedt het platform een compleet oefenprogramma
-                    voor 7 kernvakgebieden.
+        <!-- Hero Section -->
+        <div class="parent-hero">
+            <div class="parent-hero-content">
+                <div class="parent-badges">
+                    <span class="parent-badge">👨‍👩‍👧‍👦 Voor Ouders</span>
+                    <span class="parent-badge">👨‍🏫 Voor Leraren</span>
+                    <span class="parent-badge">🎓 CITO-niveau</span>
+                </div>
+                <h1>De beste voorbereiding op de CITO-toets 🚀</h1>
+                <p class="parent-hero-subtitle">
+                    Meer dan 5.000 oefenvragen op CITO-niveau. Gratis, veilig en zonder advertenties.
+                    Ontwikkeld door onderwijsprofessionals speciaal voor groep 3 t/m 8.
                 </p>
-                <p>
-                    Het platform is ontworpen met oog voor toegankelijkheid: we gebruiken het dyslexievriendelijke
-                    Lexend-lettertype, een wetenschappelijk onderbouwde kleurenpallet die de focus bevordert,
-                    en voldoen aan de WCAG AAA toegankelijkheidsnormen.
-                </p>
-            </div>
-
-            <!-- Statistics Dashboard -->
-            <div class="info-section">
-                <h2><i class="material-icons" style="font-size: 1em;">assessment</i>Platform Statistieken</h2>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <span class="stat-number">1.629+</span>
-                        <span class="stat-label">Oefenvragen</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">7</span>
-                        <span class="stat-label">Vakgebieden</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">6</span>
-                        <span class="stat-label">Groepen (3-8)</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Gratis</span>
-                    </div>
-                </div>
-
-                <h3>Vakgebieden & Vragenbanken</h3>
-                <ul>
-                    <li><strong>Begrijpend Lezen</strong> - 4 vragen voor alle groepen</li>
-                    <li><strong>Geschiedenis</strong> - 50 vragen Nederlandse geschiedenis</li>
-                    <li><strong>Samenvatten</strong> - 80 vragen over tekstbegrip en samenvatten</li>
-                    <li><strong>Wereldoriëntatie</strong> - 649 vragen algemene kennis (groep 4, 5, 8)</li>
-                    <li><strong>Woordenschat</strong> - 268 vragen vocabulaire-uitbreiding (groep 4, 5, 8)</li>
-                    <li><strong>Verhaaltjessommen</strong> - 375 contextrijke rekenproblemen (groep 4, 5, 8)</li>
-                    <li><strong>Getal & Bewerking</strong> - 203 rekenkundige basisoefeningen (groep 4, 5, 8)</li>
-                </ul>
-            </div>
-
-            <!-- Features Section -->
-            <div class="info-section">
-                <h2><i class="material-icons" style="font-size: 1em;">stars</i>Unieke Kenmerken</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <h4><i class="material-icons">school</i>CITO-conform</h4>
-                        <p>Alle vragen zijn afgestemd op het CITO-niveau en de leerdoelen per groep.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4><i class="material-icons">psychology</i>L.O.V.A. Methode</h4>
-                        <p>Stappenplan voor verhaaltjessommen: Lezen, Ordenen, Vormen, Antwoorden.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4><i class="material-icons">feedback</i>Directe Feedback</h4>
-                        <p>Uitgebreide foutanalyse met reflectievragen en uitleganimaties.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4><i class="material-icons">trending_up</i>Voortgangsregistratie</h4>
-                        <p>Gedetailleerd overzicht van correcte/incorrecte antwoorden per thema.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4><i class="material-icons">accessibility</i>Toegankelijk</h4>
-                        <p>Dyslexievriendelijk lettertype en WCAG AAA compliant.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4><i class="material-icons">lock_open</i>Geen Account</h4>
-                        <p>Direct beginnen zonder registratie. Alle data blijft lokaal.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- How to Use Section -->
-            <div class="info-section">
-                <h2><i class="material-icons" style="font-size: 1em;">menu_book</i>Hoe te Gebruiken</h2>
-
-                <h3>Voor Ouders</h3>
-                <ul>
-                    <li>Laat uw kind 2-3 keer per week oefenen met een onderwerp naar keuze</li>
-                    <li>Begin met korte sessies van 10-15 minuten</li>
-                    <li>Bespreek de fouten samen na afloop - gebruik de uitleg in de app</li>
-                    <li>Monitor de voortgang via het voortgangsoverzicht tijdens de quiz</li>
-                    <li>Moedig uw kind aan om alle stappen van de L.O.V.A. methode te gebruiken bij rekensommen</li>
-                </ul>
-
-                <h3>Voor Leraren</h3>
-                <ul>
-                    <li>Gebruik het platform als huiswerkopdracht of tijdens de les op tablets</li>
-                    <li>Wijs specifieke onderwerpen toe passend bij uw lesprogramma</li>
-                    <li>Ideaal voor differentiatie: elke leerling oefent op eigen niveau (groep 4/5/8)</li>
-                    <li>Perfect voor herhaling en verdieping rondom CITO-periode</li>
-                    <li>Gebruik de foutanalyse-functie als aanleiding voor klassikale instructie</li>
-                    <li>Geen registratie of accountbeheer nodig - leerlingen kunnen direct starten</li>
-                </ul>
-            </div>
-
-            <!-- FAQ Section -->
-            <div class="info-section">
-                <h2><i class="material-icons" style="font-size: 1em;">help_outline</i>Veelgestelde Vragen</h2>
-
-                <div class="faq-item">
-                    <div class="faq-question">Is het platform echt helemaal gratis?</div>
-                    <div class="faq-answer">
-                        Ja, het Oefenplatform Basisonderwijs is 100% gratis te gebruiken. Er zijn geen verborgen
-                        kosten, premium accounts of betaalde upgrades. Alle 1.629+ vragen zijn voor iedereen
-                        toegankelijk.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">Hoe worden de gegevens van mijn kind opgeslagen?</div>
-                    <div class="faq-answer">
-                        Alle voortgang wordt lokaal opgeslagen in de browser van uw kind (localStorage).
-                        Er worden geen gegevens naar externe servers gestuurd en er is geen account nodig.
-                        De privacy van uw kind is volledig gewaarborgd.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">Zijn de vragen echt CITO-niveau?</div>
-                    <div class="faq-answer">
-                        Ja, alle vragen zijn zorgvuldig opgesteld volgens de leerdoelen en het niveau van de
-                        officiële CITO-toetsen. Ze zijn ontwikkeld met kennis van het Nederlandse
-                        onderwijssysteem en de eindtoetsen basisonderwijs.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">Voor welke groepen is het platform geschikt?</div>
-                    <div class="faq-answer">
-                        Het platform is ontworpen voor groep 3 tot en met 8. Sommige vakken hebben specifieke
-                        niveaukeuzes (groep 4, 5 of 8) voor gerichte oefening. Andere vakken zijn geschikt
-                        voor alle groepen.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">Wat is de L.O.V.A. methode?</div>
-                    <div class="faq-answer">
-                        L.O.V.A. staat voor Lezen, Ordenen, Vormen en Antwoorden. Het is een gestructureerde
-                        methode om verhaaltjessommen op te lossen. Het platform biedt interactieve begeleiding
-                        door alle vier de stappen, zodat leerlingen leren om systematisch problemen aan te pakken.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">Kan ik de voortgang van mijn kind/leerlingen exporteren?</div>
-                    <div class="faq-answer">
-                        Momenteel wordt voortgang alleen lokaal bijgehouden en getoond tijdens het maken van
-                        quizzen. Export-functionaliteit is een toekomstige uitbreiding die we overwegen.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">Werkt het platform ook op tablets en smartphones?</div>
-                    <div class="faq-answer">
-                        Ja! Het platform is volledig responsive en werkt uitstekend op tablets en smartphones.
-                        We raden aan om het op een tablet te gebruiken voor het beste leeservaring, maar
-                        smartphones werken ook prima.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">Hoe vaak worden er nieuwe vragen toegevoegd?</div>
-                    <div class="faq-answer">
-                        We werken continu aan het uitbreiden van de vragenbank en het verbeteren van bestaande
-                        vragen. Updates worden regelmatig doorgevoerd zonder dat gebruikers iets hoeven te doen.
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA Section -->
-            <div class="cta-section">
-                <h2>Klaar om te Starten?</h2>
-                <p>Begin vandaag nog met oefenen en bereid je kind optimaal voor op de CITO-toets</p>
-                <a href="index.html" class="btn-cta">Start met Oefenen</a>
             </div>
         </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="section-header">
+                <h2 class="section-title">OefenPlatform in cijfers 📊</h2>
+                <p class="section-subtitle">Een compleet oefenplatform voor alle kernvakken</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-icon">📚</span>
+                    <span class="stat-number">5.000+</span>
+                    <span class="stat-label">Oefenvragen</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">🎯</span>
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">Vakgebieden</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">👥</span>
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Groepen (3-8)</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">💚</span>
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Gratis</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Benefits Section -->
+        <div class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Waarom OefenPlatform? 💡</h2>
+                <p class="section-subtitle">Ontworpen met zorg voor kinderen én de volwassenen die hen begeleiden</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon" style="background: rgba(56, 193, 114, 0.1);">🛡️</div>
+                    <h3 class="benefit-title">100% Veilig & Privé</h3>
+                    <p class="benefit-description">
+                        Geen advertenties, geen tracking, geen afleidingen. Alle data blijft lokaal op het apparaat.
+                        Volledig veilig voor kinderen, geen account nodig.
+                    </p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon" style="background: rgba(255, 138, 52, 0.1);">🎓</div>
+                    <h3 class="benefit-title">Officieel CITO-Niveau</h3>
+                    <p class="benefit-description">
+                        Alle vragen zijn zorgvuldig opgesteld volgens de actuele CITO-leerdoelen.
+                        Ontwikkeld door onderwijsprofessionals met jarenlange ervaring.
+                    </p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon" style="background: rgba(102, 126, 234, 0.1);">💡</div>
+                    <h3 class="benefit-title">Slimme Feedback</h3>
+                    <p class="benefit-description">
+                        Uitgebreide uitleg bij elke vraag. Directe feedback helpt kinderen leren van hun fouten.
+                        Met extra hints en stappenplannen waar nodig.
+                    </p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon" style="background: rgba(183, 148, 244, 0.1);">♿</div>
+                    <h3 class="benefit-title">Voor Iedereen Toegankelijk</h3>
+                    <p class="benefit-description">
+                        Dyslexievriendelijk lettertype, instelbare tekstgrootte, focus-modus.
+                        Voldoet aan WCAG AAA toegankelijkheidsnormen.
+                    </p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon" style="background: rgba(255, 123, 184, 0.1);">📱</div>
+                    <h3 class="benefit-title">Overal & Altijd</h3>
+                    <p class="benefit-description">
+                        Werkt perfect op computer, tablet en smartphone. Geen app-installatie nodig.
+                        Gewoon de website openen en direct beginnen!
+                    </p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon" style="background: rgba(44, 198, 163, 0.1);">🎯</div>
+                    <h3 class="benefit-title">Leren met Plezier</h3>
+                    <p class="benefit-description">
+                        Vriendelijke interface, positieve feedback en motiverende beloningen.
+                        Oefenen wordt leuk in plaats van saai!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- What's Included Section -->
+        <div class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Wat zit erbij? 📦</h2>
+                <p class="section-subtitle">Complete voorbereiding op alle CITO-onderdelen</p>
+            </div>
+            <ul class="feature-list">
+                <li class="feature-item">
+                    <div class="feature-check">✓</div>
+                    <div class="feature-text">
+                        <strong>Begrijpend Lezen (1527 vragen)</strong>
+                        <p>Teksten begrijpen en vragen beantwoorden voor alle groepen</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-check">✓</div>
+                    <div class="feature-text">
+                        <strong>Woordenschat (268 vragen)</strong>
+                        <p>Vocabulaire uitbreiden met contextuele betekenissen</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-check">✓</div>
+                    <div class="feature-text">
+                        <strong>Werkwoordspelling</strong>
+                        <p>Oefen met dt, d of t en andere werkwoordspellingen via dictee</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-check">✓</div>
+                    <div class="feature-text">
+                        <strong>DMT Woordtrainer (750 woorden)</strong>
+                        <p>Train leessnelheid met verschillende moeilijkheidsgraden</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-check">✓</div>
+                    <div class="feature-text">
+                        <strong>Verhaaltjessommen (520 vragen)</strong>
+                        <p>Contextrijke rekenproblemen met L.O.V.A. stappenplan</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-check">✓</div>
+                    <div class="feature-text">
+                        <strong>Getal & Bewerking (1253 vragen)</strong>
+                        <p>Optellen, aftrekken, vermenigvuldigen en delen</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-check">✓</div>
+                    <div class="feature-text">
+                        <strong>Wereldoriëntatie (649 vragen)</strong>
+                        <p>Geschiedenis, aardrijkskunde, natuur en techniek</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- For Parents & Teachers Section -->
+        <div class="content-section">
+            <div class="two-column">
+                <div class="column-card">
+                    <h3>
+                        <span class="icon" style="background: rgba(255, 138, 52, 0.1);">👨‍👩‍👧‍👦</span>
+                        Voor Ouders
+                    </h3>
+                    <ul class="feature-list" style="margin: 0;">
+                        <li class="feature-item">
+                            <div class="feature-check">✓</div>
+                            <div class="feature-text">
+                                <p>Laat uw kind 2-3 keer per week oefenen met korte sessies van 10-15 minuten</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-check">✓</div>
+                            <div class="feature-text">
+                                <p>Bespreek de fouten samen - gebruik de uitgebreide uitleg in de app</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-check">✓</div>
+                            <div class="feature-text">
+                                <p>Geen account nodig - direct starten zonder ingewikkelde registraties</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-check">✓</div>
+                            <div class="feature-text">
+                                <p>Voortgang wordt automatisch bijgehouden tijdens het oefenen</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-check">✓</div>
+                            <div class="feature-text">
+                                <p>Werkt op alle apparaten - tablet, laptop of smartphone</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="column-card">
+                    <h3>
+                        <span class="icon" style="background: rgba(102, 126, 234, 0.1);">👨‍🏫</span>
+                        Voor Leraren
+                    </h3>
+                    <ul class="feature-list" style="margin: 0;">
+                        <li class="feature-item">
+                            <div class="feature-check">✓</div>
+                            <div class="feature-text">
+                                <p>Gebruik als huiswerk of tijdens de les op tablets/Chromebooks</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-check">✓</div>
+                            <div class="feature-text">
+                                <p>Ideaal voor differentiatie - elk niveau heeft eigen vragen</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-check">✓</div>
+                            <div class="feature-text">
+                                <p>Perfect voor herhaling rondom de CITO-periode</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-check">✓</div>
+                            <div class="feature-text">
+                                <p>Geen accountbeheer of ingewikkelde systemen - leerlingen starten direct</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-check">✓</div>
+                            <div class="feature-text">
+                                <p>Gebruik foutanalyse als aanleiding voor klassikale instructie</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <div class="section-header">
+                <h2 class="section-title">Veelgestelde vragen 💬</h2>
+                <p class="section-subtitle">Alles wat je wilt weten over OefenPlatform</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Is het platform echt helemaal gratis?</span>
+                    <i class="material-icons faq-icon">expand_more</i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Ja, OefenPlatform is 100% gratis te gebruiken. Er zijn geen verborgen kosten, premium accounts of betaalde upgrades. Alle 5.000+ vragen zijn voor iedereen toegankelijk zonder enige betaling.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Hoe worden gegevens opgeslagen?</span>
+                    <i class="material-icons faq-icon">expand_more</i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Alle voortgang wordt lokaal opgeslagen in de browser (localStorage). Er worden geen gegevens naar externe servers gestuurd en er is geen account nodig. De privacy van uw kind is volledig gewaarborgd. Als de browsercache wordt gewist, gaat wel de voortgang verloren.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Zijn de vragen echt op CITO-niveau?</span>
+                    <i class="material-icons faq-icon">expand_more</i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Ja, alle vragen zijn zorgvuldig opgesteld volgens de leerdoelen en het niveau van de officiële CITO-toetsen. Ze zijn ontwikkeld door onderwijsprofessionals met kennis van het Nederlandse onderwijssysteem en de eindtoetsen basisonderwijs.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Voor welke groepen is het platform geschikt?</span>
+                    <i class="material-icons faq-icon">expand_more</i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Het platform is ontworpen voor groep 3 tot en met 8. Sommige vakken hebben specifieke niveaukeuzes (groep 4, 5 of 8) voor gerichte oefening. Andere vakken zoals Begrijpend Lezen zijn geschikt voor alle groepen met verschillende moeilijkheidsgraden.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Wat is de L.O.V.A. methode?</span>
+                    <i class="material-icons faq-icon">expand_more</i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        L.O.V.A. staat voor <strong>L</strong>ezen, <strong>O</strong>rdenen, <strong>V</strong>ormen en <strong>A</strong>ntwoorden. Het is een gestructureerde methode om verhaaltjessommen op te lossen. Het platform biedt interactieve begeleiding door alle vier de stappen, zodat leerlingen leren systematisch problemen aan te pakken.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Werkt het op tablets en smartphones?</span>
+                    <i class="material-icons faq-icon">expand_more</i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Ja! Het platform is volledig responsive en werkt uitstekend op alle apparaten. We raden aan het op een tablet of computer te gebruiken voor de beste ervaring, maar smartphones werken ook prima. Er is geen app-installatie nodig - gewoon de website openen in de browser!
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Zijn er advertenties op het platform?</span>
+                    <i class="material-icons faq-icon">expand_more</i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Nee! Tijdens het maken van oefeningen zijn er geen advertenties. Het platform is specifiek ontworpen om kinderen niet af te leiden tijdens het oefenen. De focus ligt 100% op leren.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Hoe vaak worden nieuwe vragen toegevoegd?</span>
+                    <i class="material-icons faq-icon">expand_more</i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        We werken continu aan het uitbreiden van de vragenbank en het verbeteren van bestaande vragen. Updates worden regelmatig doorgevoerd. Gebruikers hoeven niets te doen - nieuwe content verschijnt automatisch.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Is er klantenservice beschikbaar?</span>
+                    <i class="material-icons faq-icon">expand_more</i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Voor vragen of problemen kunt u contact met ons opnemen. We proberen alle vragen zo snel mogelijk te beantwoorden. Technische problemen worden met prioriteit behandeld.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="content-section">
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <span class="trust-badge-icon">🛡️</span>
+                    <span>Veilig & Privé</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="trust-badge-icon">🎓</span>
+                    <span>CITO-niveau</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="trust-badge-icon">♿</span>
+                    <span>WCAG AAA</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="trust-badge-icon">👨‍🏫</span>
+                    <span>Door experts</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="trust-badge-icon">💚</span>
+                    <span>100% Gratis</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>Klaar om te beginnen? 🚀</h2>
+            <p>Meer dan 5.000 oefenvragen wachten op jouw kind of leerlingen. Begin vandaag nog en zie direct resultaat!</p>
+            <a href="index.html" class="cta-button">Start direct met oefenen</a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-content">
+                <!-- Left Column: Brand -->
+                <div class="footer-column footer-brand">
+                    <div class="footer-logo">
+                        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="20" fill="#FF8A34"/>
+                            <text x="20" y="28" font-family="Nunito, sans-serif" font-size="24" font-weight="800" fill="white" text-anchor="middle">O</text>
+                        </svg>
+                        <span class="footer-logo-text">OefenPlatform</span>
+                    </div>
+                    <p class="footer-description">
+                        Het leukste oefenplatform van Nederland! Speciaal gemaakt voor kinderen in groep 3 tot en met 8.
+                        CITO-niveau, zonder advertenties, met plezier leren.
+                    </p>
+                    <div class="footer-badges">
+                        <span class="footer-badge">Veilig</span>
+                        <span class="footer-badge">CITO-niveau</span>
+                        <span class="footer-badge">Gratis</span>
+                    </div>
+                </div>
+
+                <!-- Middle Column: Snel naar -->
+                <div class="footer-column">
+                    <h4 class="footer-column-title">Oefenonderwerpen</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Alle Vakken</a></li>
+                        <li><a href="level-selector.html?subject=begrijpendlezen">Begrijpend Lezen</a></li>
+                        <li><a href="level-selector.html?subject=verhaaltjessommen">Rekenen</a></li>
+                        <li><a href="level-selector.html?subject=wereldorientatie">Wereldoriëntatie</a></li>
+                    </ul>
+                </div>
+
+                <!-- Right Column: Voor Volwassenen -->
+                <div class="footer-column">
+                    <h4 class="footer-column-title">Informatie</h4>
+                    <ul class="footer-links">
+                        <li><a href="ouders.html">Voor Ouders</a></li>
+                        <li><a href="ouders.html">Voor Leraren</a></li>
+                        <li><a href="ouders.html">Veelgestelde Vragen</a></li>
+                        <li><a href="ouders.html">Over Ons</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer Bar -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 OefenPlatform. Gemaakt met ❤️ voor Nederlandse kinderen.</p>
+                <div class="footer-bottom-links">
+                    <a href="ouders.html">Privacy</a>
+                    <a href="ouders.html">Voorwaarden</a>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <script>
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+
+            // Close all other FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Toggle current FAQ
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
         // Smooth scroll for internal links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -455,6 +938,32 @@
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
+            });
+        });
+
+        // Animate on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.stat-card, .benefit-card, .feature-item, .faq-item, .column-card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
             });
         });
     </script>
