@@ -304,7 +304,7 @@ class SpellingDictee extends BaseQuizModule {
     async playAudioFile(audioPath, fallbackText) {
         try {
             await audioManager.playAudio(audioPath, fallbackText, {
-                timeout: 2000
+                timeout: 5000  // Increased from 2000ms to 5000ms to prevent premature TTS fallback
             });
         } catch (error) {
             console.warn('Audio playback failed:', error);
