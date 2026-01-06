@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/css/styles.min.css?v=20251228">
     <link rel="stylesheet" href="static/css/verhoudingstabel-widget.min.css?v=20251228">
+    <link rel="stylesheet" href="static/css/gamification.css?v=20260106">
 </head>
 <body>
     <div class="container">
@@ -592,6 +593,9 @@
             <div class="quiz-header-minimal">
                 <h2 id="quizTitle">Quiz</h2>
 
+                <!-- Gamification Mini Profile -->
+                <div id="gamification-mini-profile" style="margin-right: 12px;"></div>
+
                 <!-- Quiz Control Icons (top-right) -->
                 <div class="quiz-header-controls">
                     <button class="btn-icon" id="focusModeToggle" onclick="toggleFocusMode()" title="Focus Modus">
@@ -935,8 +939,59 @@
     <script src="static/js/utils.min.js?v=20251228" defer></script>
     <script src="static/js/verhoudingstabel-widget.min.js?v=20251228" defer></script>
     <script src="static/js/foutanalyse-modaal.min.js?v=20251228" defer></script>
+
+    <!-- Gamification system (cross-session, localStorage) -->
+    <script src="static/src/gamification.js?v=20260106"></script>
+    <script src="static/src/gamification-ui.js?v=20260106"></script>
+
     <script src="static/js/app.min.js?v=20251228" defer></script>
     <script src="static/js/accessibility.min.js?v=20251228" defer></script>
+
+    <script>
+        // Global gamification instances
+        let gamificationManager = null;
+        let gamificationUI = null;
+
+        // Initialize gamification on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                // Initialize gamification manager (works across sessions)
+                gamificationManager = new GamificationManager({
+                    grade: 4, // Default grade, will update based on quiz
+                    playerName: localStorage.getItem('playerName') || 'Leerling'
+                });
+
+                // Initialize gamification UI
+                gamificationUI = new GamificationUI(gamificationManager);
+
+                // Update daily streak
+                const streakInfo = gamificationManager.updateDailyStreak();
+                if (streakInfo.increased) {
+                    // Show streak update notification after a delay
+                    setTimeout(() => {
+                        gamificationUI.showStreakUpdate(streakInfo.currentStreak);
+                    }, 1000);
+                }
+
+                console.log('✅ Gamification system initialized', {
+                    enabled: gamificationManager.storageAvailable,
+                    level: gamificationManager.profile.level,
+                    xp: gamificationManager.profile.xp
+                });
+            } catch (error) {
+                console.warn('⚠️ Gamification initialization failed:', error);
+                // Non-critical, continue without gamification
+            }
+        });
+
+        // Listen for quiz start to render mini-profile
+        document.addEventListener('quizStarted', function() {
+            if (gamificationUI && gamificationManager.profile.totalExercisesCompleted > 0) {
+                // Only show mini-profile if user has completed at least one quiz
+                gamificationUI.renderMiniProfile('gamification-mini-profile');
+            }
+        });
+    </script>
 </body>
 
 </html>
