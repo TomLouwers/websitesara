@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="static/css/styles.min.css?v=20251228">
     <link rel="stylesheet" href="static/css/verhoudingstabel-widget.min.css?v=20251228">
     <link rel="stylesheet" href="static/css/rewards.css?v=20251228">
+    <link rel="stylesheet" href="static/css/gamification.css?v=20260106">
     <style>
         /* Quiz page specific styles */
         body {
@@ -1453,6 +1454,9 @@
                 </nav>
 
                 <div class="quiz-control-buttons">
+                    <!-- Gamification Mini Profile -->
+                    <div id="gamification-mini-profile" style="margin-right: 12px;"></div>
+
                     <button class="quiz-control-btn hulp" id="lovaHelpButtonNew" onclick="toggleLovaPanel()" title="L.O.V.A. Stappenplan" style="display: none;">
                         <span>❓</span>
                         <span>Hulp</span>
@@ -2035,10 +2039,17 @@
     <!-- Session-based reward system -->
     <script src="static/js/session-rewards.min.js?v=20251228" defer></script>
     <script src="static/js/streak-animations.min.js?v=20251228" defer></script>
+    <!-- Gamification system (cross-session, localStorage) -->
+    <script src="static/src/gamification.js?v=20260106"></script>
+    <script src="static/src/gamification-ui.js?v=20260106"></script>
     <script src="static/js/app.min.js?v=20251228" defer></script>
     <script src="static/js/accessibility.min.js?v=20251228" defer></script>
 
     <script>
+        // Global gamification instances
+        let gamificationManager = null;
+        let gamificationUI = null;
+
         // On page load, check if we have quiz data in sessionStorage
         document.addEventListener('DOMContentLoaded', function() {
             const quizState = sessionStorage.getItem('quizState');
@@ -2048,6 +2059,45 @@
                 alert('Geen quiz data gevonden. Je wordt teruggestuurd naar de homepagina.');
                 window.location.href = 'index.html';
                 return;
+            }
+
+            // Initialize gamification system
+            try {
+                const state = JSON.parse(quizState);
+                const quiz = state.currentQuiz || {};
+                const metadata = quiz.metadata || {};
+                const grade = metadata.grade || 4;
+                const category = metadata.category || '';
+
+                // Initialize gamification manager (cross-session, localStorage)
+                gamificationManager = new GamificationManager({
+                    grade: grade,
+                    playerName: localStorage.getItem('playerName') || 'Leerling'
+                });
+
+                // Initialize gamification UI
+                gamificationUI = new GamificationUI(gamificationManager);
+
+                // Render mini-profile in header
+                gamificationUI.renderMiniProfile('gamification-mini-profile');
+
+                // Update daily streak
+                const streakInfo = gamificationManager.updateDailyStreak();
+                if (streakInfo.increased) {
+                    // Show streak update notification
+                    setTimeout(() => {
+                        gamificationUI.showStreakUpdate(streakInfo.currentStreak);
+                    }, 1000);
+                }
+
+                console.log('✅ Gamification system initialized', {
+                    grade: grade,
+                    category: category,
+                    enabled: gamificationManager.storageAvailable
+                });
+            } catch (error) {
+                console.warn('⚠️ Gamification initialization failed:', error);
+                // Non-critical, continue without gamification
             }
 
             // Quiz state exists, let app.js handle loading it

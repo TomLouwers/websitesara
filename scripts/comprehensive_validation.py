@@ -445,9 +445,24 @@ class ExerciseValidator:
                 location
             ))
 
+        # Helper function to extract text from option (handles both string and object formats)
+        def get_option_text(opt):
+            if isinstance(opt, str):
+                return opt
+            elif isinstance(opt, dict):
+                text = opt.get('text', '')
+                if isinstance(text, dict):
+                    return str(text)
+                elif not isinstance(text, str):
+                    return str(text) if text is not None else ''
+                return text
+            else:
+                return str(opt) if opt is not None else ''
+
         # Check that all options have text
         for opt_idx, option in enumerate(options):
-            if not option.get('text'):
+            opt_text = get_option_text(option)
+            if not opt_text or not opt_text.strip():
                 issues.append(ValidationIssue(
                     Severity.ERROR,
                     "content",
@@ -458,12 +473,7 @@ class ExerciseValidator:
         # Check for duplicate options
         option_texts = []
         for opt in options:
-            text = opt.get('text', '')
-            # Handle cases where text might be a dict or other non-string type
-            if isinstance(text, dict):
-                text = str(text)  # Convert to string for comparison
-            elif not isinstance(text, str):
-                text = str(text) if text is not None else ''
+            text = get_option_text(opt)
             option_texts.append(text.strip().lower())
 
         if len(option_texts) != len(set(option_texts)):

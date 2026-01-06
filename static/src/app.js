@@ -2731,6 +2731,85 @@ function showResults() {
 
     // 4. QUESTION CARDS: Collapsible Accordion
     populateQuestionAccordion();
+
+    // 5. GAMIFICATION: Update cross-session progress (XP, achievements, challenges)
+    updateGamificationProgress(percentage, correctCount, incorrectCount);
+}
+
+// Helper: Update gamification system with quiz results
+function updateGamificationProgress(percentage, correctCount, incorrectCount) {
+    // Check if gamification is initialized (defined in quiz.html)
+    if (typeof gamificationManager === 'undefined' || !gamificationManager) {
+        console.log('Gamification manager not available');
+        return;
+    }
+
+    if (typeof gamificationUI === 'undefined' || !gamificationUI) {
+        console.log('Gamification UI not available');
+        return;
+    }
+
+    try {
+        // Prepare results for gamification system
+        const results = {
+            totalQuestions: totalQuestions,
+            correctCount: correctCount,
+            incorrectCount: incorrectCount,
+            percentage: percentage,
+            score: score,
+            categoryProgress: categoryProgress,
+            isPerfect: incorrectCount === 0,
+            exerciseId: currentSubject || 'unknown',
+            category: currentTheme || 'general'
+        };
+
+        console.log('📊 Updating gamification with results:', results);
+
+        // Update gamification state
+        const feedback = gamificationManager.completeExercise(results);
+
+        console.log('🎮 Gamification feedback:', feedback);
+
+        // Show notifications with delay to avoid overwhelming the results page
+        setTimeout(() => {
+            // Show XP gain notification
+            if (feedback.xpEarned > 0) {
+                gamificationUI.showXPGain(feedback.xpEarned, `${correctCount} vragen goed!`);
+            }
+
+            // Show level-up celebration (if leveled up)
+            if (feedback.leveledUp) {
+                setTimeout(() => {
+                    gamificationUI.showLevelUp(feedback.newLevel);
+                }, 1500);
+            }
+
+            // Show achievement unlocks
+            if (feedback.newAchievements && feedback.newAchievements.length > 0) {
+                feedback.newAchievements.forEach((achievement, index) => {
+                    setTimeout(() => {
+                        gamificationUI.showAchievementUnlock(achievement);
+                    }, 2000 + (index * 3500)); // Stagger by 3.5s
+                });
+            }
+
+            // Show challenge completions
+            if (feedback.completedChallenges && feedback.completedChallenges.length > 0) {
+                feedback.completedChallenges.forEach((challenge, index) => {
+                    setTimeout(() => {
+                        gamificationUI.showChallengeComplete(challenge);
+                    }, 3000 + (index * 3500)); // Stagger by 3.5s
+                });
+            }
+
+            // Refresh mini-profile to show updated stats
+            gamificationUI.renderMiniProfile('gamification-mini-profile');
+        }, 500);
+
+    } catch (error) {
+        console.error('❌ Error updating gamification:', error);
+        // Non-critical, don't disrupt user experience
+    }
 }
 
 // Helper: Populate Sticker Collection (session-based rewards)
