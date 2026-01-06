@@ -17,6 +17,19 @@ class SpellingDictee extends BaseQuizModule {
     }
 
     /**
+     * Shuffle array using Fisher-Yates algorithm
+     * @private
+     */
+    shuffleArray(array) {
+        const shuffled = [...array]; // Create a copy to avoid modifying original
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
+    }
+
+    /**
      * Initialize the quiz
      */
     async init() {
@@ -95,8 +108,11 @@ class SpellingDictee extends BaseQuizModule {
                 throw new Error('Ongeldige data structuur');
             }
 
-            // Initialize base quiz module with items
-            this.initialize(this.quizData.items);
+            // Shuffle items for random order (like other quiz pages)
+            const shuffledItems = this.shuffleArray(this.quizData.items);
+
+            // Initialize base quiz module with shuffled items
+            this.initialize(shuffledItems);
 
         } catch (error) {
             console.error('Error loading quiz data:', error);
