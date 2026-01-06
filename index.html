@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/styles.min.css?v=20251228">
+    <link rel="stylesheet" href="static/css/styles.min.css?v=20260106-mobile">
     <link rel="stylesheet" href="static/css/verhoudingstabel-widget.min.css?v=20251228">
     <link rel="stylesheet" href="static/css/gamification.css?v=20260106">
 </head>
@@ -597,39 +597,39 @@
                 <div id="gamification-mini-profile" style="margin-right: 12px;"></div>
 
                 <!-- Quiz Control Icons (top-right) -->
-                <div class="quiz-header-controls">
-                    <button class="btn-icon" id="focusModeToggle" onclick="toggleFocusMode()" title="Focus Modus">
-                        <i class="material-icons">visibility_off</i>
+                <div class="quiz-header-controls" role="toolbar" aria-label="Quiz besturing">
+                    <button class="btn-icon" id="focusModeToggle" onclick="toggleFocusMode()" title="Focus Modus" aria-label="Activeer focusmodus">
+                        <i class="material-icons" aria-hidden="true">visibility_off</i>
                     </button>
-                    <button class="btn-icon" id="lovaHelpButton" onclick="toggleLovaPanel()" title="L.O.V.A. Stappenplan" style="display: none;">
-                        <i class="material-icons">help_outline</i>
+                    <button class="btn-icon" id="lovaHelpButton" onclick="toggleLovaPanel()" title="L.O.V.A. Stappenplan" aria-label="Open L.O.V.A. hulp" style="display: none;">
+                        <i class="material-icons" aria-hidden="true">help_outline</i>
                     </button>
-                    <button class="btn-icon" onclick="pauseQuiz()" title="Pauzeer">
-                        <i class="material-icons">pause</i>
+                    <button class="btn-icon" onclick="pauseQuiz()" title="Pauzeer" aria-label="Pauzeer quiz">
+                        <i class="material-icons" aria-hidden="true">pause</i>
                     </button>
-                    <button class="btn-icon" onclick="stopQuiz()" title="Stop">
-                        <i class="material-icons">stop</i>
+                    <button class="btn-icon" onclick="stopQuiz()" title="Stop" aria-label="Stop quiz">
+                        <i class="material-icons" aria-hidden="true">stop</i>
                     </button>
                 </div>
 
                 <!-- Progress Summary (compact) -->
-                <div class="quiz-progress-summary">
-                    <span class="progress-stat correct">✓ <span id="totalCorrect">0</span> goed</span>
-                    <span class="progress-stat" style="color: var(--secondary-color);">📋 <span id="lovaClicks">0</span> hulp</span>
+                <div class="quiz-progress-summary" role="status" aria-live="polite">
+                    <span class="progress-stat correct" aria-label="Aantal goede antwoorden">✓ <span id="totalCorrect">0</span> goed</span>
+                    <span class="progress-stat" style="color: var(--secondary-color);" aria-label="Aantal keer hulp gebruikt">📋 <span id="lovaClicks">0</span> hulp</span>
                 </div>
             </div>
 
             <!-- Milestone Celebration (moved outside header for better positioning) -->
-            <div id="milestoneCelebration" class="milestone-celebration hidden">
-                <i class="material-icons celebration-icon">celebration</i>
+            <div id="milestoneCelebration" class="milestone-celebration hidden" role="alert" aria-live="assertive">
+                <i class="material-icons celebration-icon" aria-hidden="true">celebration</i>
                 <span id="milestoneMessage">Goed bezig!</span>
             </div>
 
             <!-- Question Card Container -->
-            <div class="question-card">
+            <div class="question-card" role="main" aria-labelledby="questionText">
                 <div class="question-container">
-                    <div id="readingContent" class="reading-content hidden"></div>
-                    <div class="question-text" id="questionText"></div>
+                    <div id="readingContent" class="reading-content hidden" role="article"></div>
+                    <div class="question-text" id="questionText" role="heading" aria-level="3"></div>
 
                     <!-- Hint Container (voor scaffolding hints) -->
                     <div id="hintContainer" style="text-align: center; margin: 20px 0;"></div>
@@ -695,8 +695,8 @@
                 </div>
 
                 <!-- Feedback Section -->
-                <div id="feedbackSection" class="feedback-card hidden">
-                    <div class="feedback-icon" id="feedbackIcon"></div>
+                <div id="feedbackSection" class="feedback-card hidden" role="alert" aria-live="polite">
+                    <div class="feedback-icon" id="feedbackIcon" aria-hidden="true"></div>
                     <h4 id="feedbackTitle"></h4>
                     <p id="feedbackMessage"></p>
                     <p id="correctAnswerDisplay" class="hidden"></p>
@@ -712,18 +712,18 @@
             </div>
 
             <!-- Action Buttons - Clear Hierarchy -->
-            <div class="quiz-actions">
-                <button class="btn btn-primary-action" id="submitBtn" onclick="submitAnswer()">
-                    <i class="material-icons">check_circle</i> Check mijn antwoord!
+            <div class="quiz-actions" role="group" aria-label="Quiz acties">
+                <button class="btn btn-primary-action" id="submitBtn" onclick="submitAnswer()" aria-label="Controleer je antwoord">
+                    <i class="material-icons" aria-hidden="true">check_circle</i> Check mijn antwoord!
                 </button>
-                <button class="btn btn-primary-action hidden" id="nextBtn" onclick="nextQuestion()">
-                    Volgende! <i class="material-icons">arrow_forward</i>
+                <button class="btn btn-primary-action hidden" id="nextBtn" onclick="nextQuestion()" aria-label="Ga naar de volgende vraag">
+                    Volgende! <i class="material-icons" aria-hidden="true">arrow_forward</i>
                 </button>
 
                 <!-- Secondary Actions -->
                 <div class="quiz-secondary-actions">
-                    <button class="btn-secondary-action" onclick="goToLanding()" title="Ga terug">
-                        <i class="material-icons">arrow_back</i> Ga terug
+                    <button class="btn-secondary-action" onclick="goToLanding()" title="Ga terug" aria-label="Terug naar het hoofdmenu">
+                        <i class="material-icons" aria-hidden="true">arrow_back</i> Ga terug
                     </button>
                 </div>
             </div>

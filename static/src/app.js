@@ -19,6 +19,52 @@
  *    - Success modal with L.O.V.A. 4-step breakdown for correct answers
  */
 
+// =============================================================================
+// Friendly Notification System (UI/UX Improvement)
+// =============================================================================
+
+/**
+ * Show a friendly notification instead of browser alert
+ * @param {string} message - The message to display
+ * @param {string} type - 'info', 'success', 'warning', or 'error'
+ * @param {number} duration - How long to show (ms), 0 = manual close
+ */
+function showFriendlyNotification(message, type = 'info', duration = 5000) {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `friendly-notification ${type}`;
+    notification.setAttribute('role', 'alert');
+    notification.setAttribute('aria-live', 'polite');
+
+    // Icon mapping
+    const icons = {
+        info: 'ℹ️',
+        success: '✅',
+        warning: '⚠️',
+        error: '❌'
+    };
+
+    notification.innerHTML = `
+        <span class="notification-icon">${icons[type] || icons.info}</span>
+        <span class="notification-message">${message}</span>
+        <button class="notification-close" aria-label="Sluiten" onclick="this.parentElement.remove()">×</button>
+    `;
+
+    // Add to page
+    document.body.appendChild(notification);
+
+    // Animate in
+    setTimeout(() => notification.classList.add('show'), 10);
+
+    // Auto-remove after duration
+    if (duration > 0) {
+        setTimeout(() => {
+            notification.classList.remove('show');
+            setTimeout(() => notification.remove(), 300);
+        }, duration);
+    }
+}
+
 // Quiz data will be loaded from JSON files
 let quizData = {};
 const jsonPath = CONFIG.jsonPath;
@@ -739,7 +785,7 @@ async function loadJsonFile(filename, subjectHint = null) {
         return data;
     } catch (error) {
         console.error('Error loading JSON file:', error);
-        alert('Fout bij het laden van het bestand. Controleer of de bestanden beschikbaar zijn.');
+        showFriendlyNotification('Oeps! We kunnen de quiz niet laden. Probeer het later nog eens. 😊', 'error', 7000);
         return null;
     }
 }
@@ -1340,6 +1386,12 @@ function updateQuizCardHeader(subject) {
 }
 
 function loadCurrentQuestion() {
+    // Add loading state for smooth transition
+    const quizContainer = document.querySelector('.question-card');
+    if (quizContainer) {
+        quizContainer.classList.add('transitioning');
+    }
+
     // Ensure question card wrapper is visible and reset
     const questionCard = document.getElementById('questionCardMorph');
 
@@ -1766,6 +1818,14 @@ function loadTextGroupQuestion() {
     // Start hint timer for delayed affordance (will show hint button after 12s of inactivity)
     clearHintTimer();
     startHintTimer();
+
+    // Remove loading state after content is loaded
+    setTimeout(() => {
+        const quizContainer = document.querySelector('.question-card');
+        if (quizContainer) {
+            quizContainer.classList.remove('transitioning');
+        }
+    }, 50); // Small delay to ensure smooth transition
 }
 
 // Helper: Calculate how many questions we've completed so far
@@ -2274,7 +2334,7 @@ function submitAnswer() {
     if (currentQuestion.options) {
         // Multiple choice
         if (selectedAnswer === null) {
-            alert(CONFIG.feedback.noAnswer.multipleChoice);
+            showFriendlyNotification('Kies eerst een antwoord voordat je controleert! 😊', 'info', 4000);
             feedbackSection.classList.add('hidden'); // Hide if no answer selected
             if (feedbackSectionNew) {
                 feedbackSectionNew.classList.add('hidden');
@@ -3196,8 +3256,8 @@ function pauseQuiz() {
     };
 
     localStorage.setItem('pausedQuiz', JSON.stringify(quizState));
-    alert('Quiz gepauzeerd! Je kunt later doorgaan waar je gebleven bent.');
-    goToLanding();
+    showFriendlyNotification('Quiz gepauzeerd! Je kunt later doorgaan waar je gebleven bent. 👍', 'success', 5000);
+    setTimeout(() => goToLanding(), 1000); // Small delay so notification is visible
 }
 
 // Check if there's a paused quiz
@@ -3265,7 +3325,7 @@ function resumePausedQuiz() {
 
     } catch (e) {
         console.error('Error resuming quiz:', e);
-        alert('Fout bij het hervatten van de quiz. De opgeslagen data is mogelijk beschadigd.');
+        showFriendlyNotification('Helaas kunnen we je quiz niet hervatten. Probeer een nieuwe quiz te starten! 🔄', 'warning', 6000);
         localStorage.removeItem('pausedQuiz');
     }
 }
