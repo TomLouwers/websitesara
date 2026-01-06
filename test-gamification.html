@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamification Test Harness</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+        }
+        .test-section h2 {
+            margin-top: 0;
+            color: #34495e;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        button.danger {
+            background: #e74c3c;
+        }
+        button.danger:hover {
+            background: #c0392b;
+        }
+        button.success {
+            background: #27ae60;
+        }
+        button.success:hover {
+            background: #229954;
+        }
+        .output {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            max-height: 400px;
+            overflow-y: auto;
+            margin-top: 15px;
+        }
+        .output .pass { color: #2ecc71; }
+        .output .fail { color: #e74c3c; }
+        .output .warn { color: #f39c12; }
+        .output .info { color: #3498db; }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            border: 2px solid #ecf0f1;
+        }
+        .stat-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            color: #7f8c8d;
+            text-transform: uppercase;
+        }
+        .stat-card .value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .mini-profile-preview {
+            border: 2px dashed #3498db;
+            padding: 20px;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Gamification System Test Harness</h1>
+
+        <div class="test-section">
+            <h2>🔧 Setup</h2>
+            <button onclick="clearAllData()" class="danger">Clear All Data</button>
+            <button onclick="initializeGamification()">Initialize Gamification</button>
+            <button onclick="showCurrentState()">Show Current State</button>
+        </div>
+
+        <div class="test-section">
+            <h2>📊 Current Stats</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Level</h3>
+                    <div class="value" id="stat-level">-</div>
+                </div>
+                <div class="stat-card">
+                    <h3>XP</h3>
+                    <div class="value" id="stat-xp">-</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Exercises</h3>
+                    <div class="value" id="stat-exercises">-</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Achievements</h3>
+                    <div class="value" id="stat-achievements">-</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Streak</h3>
+                    <div class="value" id="stat-streak">-</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🎯 Simulate Quiz Completion</h2>
+            <button onclick="simulateQuiz(10, 8)">Simulate Quiz (8/10 correct)</button>
+            <button onclick="simulateQuiz(10, 10)" class="success">Simulate Perfect Quiz</button>
+            <button onclick="simulateQuiz(5, 3)">Simulate Short Quiz (3/5)</button>
+            <button onclick="simulateMultipleQuizzes()">Complete 5 Quizzes</button>
+        </div>
+
+        <div class="test-section">
+            <h2>🏆 Test Features</h2>
+            <button onclick="testAchievements()">Test Achievements</button>
+            <button onclick="testChallenges()">Test Challenges</button>
+            <button onclick="testLevelUp()">Force Level Up</button>
+            <button onclick="testStreak()">Test Streak</button>
+        </div>
+
+        <div class="test-section">
+            <h2>👤 Mini Profile Preview</h2>
+            <div class="mini-profile-preview" id="gamification-mini-profile"></div>
+            <button onclick="refreshMiniProfile()">Refresh Preview</button>
+        </div>
+
+        <div class="test-section">
+            <h2>📝 Console Output</h2>
+            <div class="output" id="console-output"></div>
+        </div>
+    </div>
+
+    <!-- Load Gamification Scripts -->
+    <script src="static/src/gamification.js"></script>
+    <script src="static/src/gamification-ui.js"></script>
+
+    <script>
+        let gamificationManager = null;
+        let gamificationUI = null;
+        const output = document.getElementById('console-output');
+
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const span = document.createElement('div');
+            span.className = type;
+            span.textContent = `[${timestamp}] ${message}`;
+            output.appendChild(span);
+            output.scrollTop = output.scrollHeight;
+            console.log(message);
+        }
+
+        function clearAllData() {
+            localStorage.clear();
+            sessionStorage.clear();
+            log('✅ All localStorage and sessionStorage cleared', 'success');
+            updateStats();
+        }
+
+        function initializeGamification() {
+            try {
+                gamificationManager = new GamificationManager({
+                    grade: 4,
+                    playerName: 'Test Leerling'
+                });
+
+                gamificationUI = new GamificationUI(gamificationManager);
+
+                log('✅ Gamification system initialized', 'pass');
+                log(`   Storage available: ${gamificationManager.storageAvailable}`, 'info');
+
+                updateStats();
+                refreshMiniProfile();
+            } catch (error) {
+                log(`❌ Failed to initialize: ${error.message}`, 'fail');
+                console.error(error);
+            }
+        }
+
+        function updateStats() {
+            if (!gamificationManager) {
+                document.getElementById('stat-level').textContent = '-';
+                document.getElementById('stat-xp').textContent = '-';
+                document.getElementById('stat-exercises').textContent = '-';
+                document.getElementById('stat-achievements').textContent = '-';
+                document.getElementById('stat-streak').textContent = '-';
+                return;
+            }
+
+            const summary = gamificationManager.getPlayerSummary();
+
+            document.getElementById('stat-level').textContent = summary.profile.level;
+            document.getElementById('stat-xp').textContent = `${summary.profile.xp}/${summary.profile.xpToNextLevel}`;
+            document.getElementById('stat-exercises').textContent = summary.stats.totalExercises;
+            document.getElementById('stat-achievements').textContent = `${summary.achievements.total}/${summary.achievements.unlocked.length}`;
+            document.getElementById('stat-streak').textContent = summary.streak.current;
+        }
+
+        function refreshMiniProfile() {
+            if (!gamificationUI) {
+                log('⚠️  Gamification not initialized. Click "Initialize Gamification" first.', 'warn');
+                return;
+            }
+            gamificationUI.renderMiniProfile('gamification-mini-profile');
+            log('✅ Mini-profile refreshed', 'success');
+        }
+
+        function simulateQuiz(totalQuestions, correctCount) {
+            if (!gamificationManager) {
+                log('❌ Initialize gamification first!', 'fail');
+                return;
+            }
+
+            const results = {
+                totalQuestions: totalQuestions,
+                correctCount: correctCount,
+                incorrectCount: totalQuestions - correctCount,
+                percentage: Math.round((correctCount / totalQuestions) * 100),
+                score: correctCount,
+                categoryProgress: {
+                    'basis-rekenen': { correct: correctCount, incorrect: totalQuestions - correctCount }
+                },
+                isPerfect: correctCount === totalQuestions,
+                exerciseId: 'test_exercise_' + Date.now(),
+                category: 'gb'
+            };
+
+            log(`\n🎮 Simulating quiz: ${correctCount}/${totalQuestions} correct (${results.percentage}%)`, 'info');
+
+            const feedback = gamificationManager.completeExercise(results);
+
+            log(`   XP Earned: +${feedback.xpEarned}`, feedback.xpEarned > 0 ? 'pass' : 'info');
+
+            if (feedback.leveledUp) {
+                log(`   🎉 LEVEL UP! Now level ${feedback.newLevel}`, 'pass');
+                if (gamificationUI) {
+                    gamificationUI.showLevelUp(feedback.newLevel);
+                }
+            }
+
+            if (feedback.newAchievements && feedback.newAchievements.length > 0) {
+                feedback.newAchievements.forEach(ach => {
+                    log(`   🏆 Achievement Unlocked: ${ach.title}`, 'pass');
+                    if (gamificationUI) {
+                        setTimeout(() => gamificationUI.showAchievementUnlock(ach), 1000);
+                    }
+                });
+            }
+
+            if (feedback.completedChallenges && feedback.completedChallenges.length > 0) {
+                feedback.completedChallenges.forEach(ch => {
+                    log(`   ✅ Challenge Complete: ${ch.title} (+${ch.reward.xp} XP)`, 'pass');
+                    if (gamificationUI) {
+                        setTimeout(() => gamificationUI.showChallengeComplete(ch), 1500);
+                    }
+                });
+            }
+
+            updateStats();
+            refreshMiniProfile();
+        }
+
+        function simulateMultipleQuizzes() {
+            log('\n🚀 Simulating 5 quizzes...', 'info');
+
+            let delay = 0;
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    const total = 10;
+                    const correct = Math.floor(Math.random() * 4) + 7; // 7-10 correct
+                    simulateQuiz(total, correct);
+                }, delay);
+                delay += 2000;
+            }
+        }
+
+        function showCurrentState() {
+            if (!gamificationManager) {
+                log('❌ Initialize gamification first!', 'fail');
+                return;
+            }
+
+            log('\n📊 Current State:', 'info');
+            const summary = gamificationManager.getPlayerSummary();
+            log(JSON.stringify(summary, null, 2), 'info');
+        }
+
+        function testAchievements() {
+            if (!gamificationManager) {
+                log('❌ Initialize gamification first!', 'fail');
+                return;
+            }
+
+            log('\n🏆 Testing Achievements:', 'info');
+            const achievements = gamificationManager._getAchievementDefinitions();
+            const unlocked = JSON.parse(localStorage.getItem('sara_achievements')).unlocked;
+
+            log(`   Total achievements: ${achievements.length}`, 'info');
+            log(`   Unlocked: ${unlocked.length}`, unlocked.length > 0 ? 'pass' : 'info');
+
+            unlocked.forEach(id => {
+                const ach = achievements.find(a => a.id === id);
+                if (ach) {
+                    log(`   ✅ ${ach.emoji} ${ach.title}`, 'pass');
+                }
+            });
+        }
+
+        function testChallenges() {
+            if (!gamificationManager) {
+                log('❌ Initialize gamification first!', 'fail');
+                return;
+            }
+
+            log('\n🎯 Testing Challenges:', 'info');
+            const summary = gamificationManager.getPlayerSummary();
+
+            summary.challenges.daily.forEach(ch => {
+                const status = ch.completed ? '✅' : '⏳';
+                log(`   ${status} ${ch.title}: ${ch.progress}/${ch.target}`, ch.completed ? 'pass' : 'info');
+            });
+        }
+
+        function testLevelUp() {
+            if (!gamificationManager) {
+                log('❌ Initialize gamification first!', 'fail');
+                return;
+            }
+
+            log('\n⬆️  Force leveling up...', 'info');
+            const currentLevel = gamificationManager.profile.level;
+            const xpNeeded = gamificationManager.profile.xpToNextLevel;
+
+            gamificationManager.profile.xp += xpNeeded + 10;
+            const newLevel = gamificationManager._calculateLevel(gamificationManager.profile.xp);
+            gamificationManager.profile.level = newLevel;
+            gamificationManager.profile.xpToNextLevel = gamificationManager._getXPForLevel(newLevel + 1) - gamificationManager.profile.xp;
+            gamificationManager._saveAll();
+
+            log(`   Level ${currentLevel} → ${newLevel}`, 'pass');
+
+            if (gamificationUI) {
+                gamificationUI.showLevelUp(newLevel);
+            }
+
+            updateStats();
+            refreshMiniProfile();
+        }
+
+        function testStreak() {
+            if (!gamificationManager) {
+                log('❌ Initialize gamification first!', 'fail');
+                return;
+            }
+
+            log('\n🔥 Testing Streak:', 'info');
+            const streakInfo = gamificationManager.updateDailyStreak();
+
+            log(`   Current streak: ${streakInfo.currentStreak} days`, 'pass');
+            log(`   Increased today: ${streakInfo.increased}`, streakInfo.increased ? 'pass' : 'info');
+            log(`   Last active: ${streakInfo.lastActiveDate}`, 'info');
+
+            if (gamificationUI && streakInfo.increased) {
+                gamificationUI.showStreakUpdate(streakInfo.currentStreak);
+            }
+        }
+
+        // Auto-initialize on load
+        window.addEventListener('DOMContentLoaded', () => {
+            log('🎮 Gamification Test Harness Loaded', 'success');
+            log('Click "Initialize Gamification" to begin testing', 'info');
+        });
+    </script>
+</body>
+</html>
