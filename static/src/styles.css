@@ -5654,6 +5654,444 @@ a:active {
     opacity: 0.9;
 }
 
+/* =============================================================================
+   ACCESSIBILITY IMPROVEMENTS
+   ============================================================================= */
+
+/* Enhanced focus styles for keyboard navigation */
+*:focus {
+    outline: none; /* Remove default */
+}
+
+/* Visible focus indicator for keyboard users */
+*:focus-visible {
+    outline: 3px solid #FF8A34;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Button focus states */
+button:focus-visible,
+.btn:focus-visible,
+.btn-icon:focus-visible {
+    outline: 3px solid #FF8A34;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(255, 138, 52, 0.2);
+}
+
+/* Answer option focus states */
+.answer-option:focus-visible,
+.option:focus-visible {
+    outline: 3px solid #FF8A34;
+    outline-offset: 2px;
+    border-color: #FF8A34;
+    box-shadow: 0 0 0 4px rgba(255, 138, 52, 0.15);
+}
+
+/* Link focus states */
+a:focus-visible {
+    outline: 3px solid #FF8A34;
+    outline-offset: 2px;
+    text-decoration: underline;
+}
+
+/* Input focus states */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid #FF8A34;
+    outline-offset: 2px;
+    border-color: #FF8A34;
+}
+
+/* Skip to main content link (for screen readers) */
+.skip-to-main {
+    position: absolute;
+    left: -9999px;
+    top: 20px;
+    z-index: 999;
+    padding: 12px 20px;
+    background: #FF8A34;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.skip-to-main:focus {
+    left: 20px;
+}
+
+/* Screen reader only text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .bounce,
+    .celebration-animation {
+        animation: none !important;
+    }
+}
+
+/* Ensure keyboard navigation works for answer options */
+.answer-option,
+.option {
+    cursor: pointer;
+    position: relative;
+}
+
+.answer-option:focus,
+.option:focus {
+    z-index: 1; /* Bring focused option to front */
+}
+
+/* Make quiz controls keyboard accessible */
+.quiz-header-controls {
+    display: flex;
+    gap: 8px;
+}
+
+/* =============================================================================
+   FRIENDLY NOTIFICATION SYSTEM
+   ============================================================================= */
+
+.friendly-notification {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    max-width: 400px;
+    background: white;
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10001;
+    transform: translateX(450px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.friendly-notification.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.notification-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.notification-message {
+    flex: 1;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #1f2937;
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    color: #9ca3af;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.notification-close:hover {
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+/* Notification type variants */
+.friendly-notification.info {
+    border-left: 4px solid #3b82f6;
+}
+
+.friendly-notification.success {
+    border-left: 4px solid #10b981;
+}
+
+.friendly-notification.warning {
+    border-left: 4px solid #f59e0b;
+}
+
+.friendly-notification.error {
+    border-left: 4px solid #ef4444;
+}
+
+/* Mobile styles for notifications */
+@media (max-width: 640px) {
+    .friendly-notification {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+}
+
+/* =============================================================================
+   ENHANCED MOBILE RESPONSIVENESS (UI/UX Improvements)
+   ============================================================================= */
+
+/* Improved quiz header layout for small screens */
+@media (max-width: 640px) {
+    .quiz-header-minimal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        position: relative;
+    }
+
+    /* Stack gamification mini-profile above controls */
+    #gamification-mini-profile {
+        order: 1;
+        margin: 0 !important;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .quiz-header-minimal h2 {
+        order: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .quiz-header-controls {
+        order: 2;
+        position: static !important;
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .quiz-progress-summary {
+        order: 3;
+        width: 100%;
+    }
+
+    /* Ensure touch targets are large enough (44x44px minimum) */
+    .btn-icon {
+        min-width: 44px !important;
+        min-height: 44px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Gamification mini-profile mobile optimization */
+@media (max-width: 480px) {
+    .mini-profile {
+        padding: 6px 10px 6px 6px;
+        gap: 6px;
+    }
+
+    .mini-avatar {
+        width: 32px;
+        height: 32px;
+    }
+
+    .mini-level {
+        width: 16px;
+        height: 16px;
+        font-size: 9px;
+    }
+
+    .mini-xp {
+        width: 60px;
+    }
+
+    .mini-streak {
+        font-size: 10px;
+    }
+}
+
+/* Very small screens (< 375px) - optimize spacing */
+@media (max-width: 375px) {
+    .question-card {
+        padding: 12px;
+        margin: 8px;
+    }
+
+    .question-container {
+        padding: 12px;
+    }
+
+    .quiz-header-minimal h2 {
+        font-size: 1.2em;
+    }
+
+    .quiz-header-controls {
+        gap: 8px;
+    }
+
+    .btn-icon {
+        min-width: 42px !important;
+        min-height: 42px !important;
+    }
+
+    /* Stack quiz controls in 2 rows if needed */
+    .quiz-header-controls {
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+}
+
+/* Improved answer options touch targets */
+@media (max-width: 768px) {
+    .answer-option,
+    .option {
+        min-height: 48px;
+        padding: 14px 16px;
+        font-size: 1rem;
+        touch-action: manipulation; /* Prevents double-tap zoom */
+    }
+
+    /* Better spacing between options */
+    .answers-section {
+        gap: 12px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Landscape phone optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+    /* More compact header in landscape */
+    .quiz-header-minimal {
+        padding: 8px 12px;
+        margin-bottom: 8px;
+    }
+
+    .quiz-header-minimal h2 {
+        font-size: 1.1em;
+    }
+
+    .quiz-progress-summary {
+        font-size: 0.75em;
+    }
+
+    /* Smaller touch targets acceptable in landscape */
+    .btn-icon {
+        min-width: 38px !important;
+        min-height: 38px !important;
+    }
+}
+
+/* Improved loading states and transitions */
+.quiz-loading {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.quiz-loading.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Smooth transitions for question changes */
+.question-card {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.question-card.transitioning {
+    opacity: 0;
+    transform: scale(0.98);
+}
+
+/* Better visual feedback on mobile */
+@media (hover: none) {
+    .answer-option:active,
+    .option:active {
+        transform: scale(0.98);
+        background-color: rgba(255, 138, 52, 0.15);
+    }
+
+    .btn-icon:active {
+        transform: scale(0.95);
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+}
+
+/* Improved notification positioning on mobile */
+@media (max-width: 480px) {
+    .gamification-notification {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+
+    .streak-update-popup {
+        width: 90%;
+        max-width: 320px;
+        padding: 24px;
+    }
+
+    .streak-emoji {
+        font-size: 48px;
+    }
+
+    .streak-text {
+        font-size: 20px;
+    }
+}
+
+/* Level-up modal mobile optimization */
+@media (max-width: 480px) {
+    .level-up-celebration {
+        padding: 24px 20px;
+    }
+
+    .celebration-animation {
+        font-size: 48px;
+    }
+
+    .celebration-title {
+        font-size: 24px;
+    }
+
+    .new-level-display {
+        font-size: 56px;
+    }
+
+    .celebration-message {
+        font-size: 16px;
+    }
+}
+
 /* Print styles - hide interactive elements */
 @media print {
     .result-actions {
