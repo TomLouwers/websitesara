@@ -2221,10 +2221,10 @@ function populateEnhancedFeedback(isCorrect, currentQuestion, selectedOption = n
                 const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
                 const correctLetter = letters[correctIndex] || '';
 
-                feedbackAnswerConfirm.textContent = `Het goede antwoord was ${correctLetter} – ${correctAnswerText}`;
+                feedbackAnswerConfirm.innerHTML = `Het goede antwoord was ${correctLetter} – ${renderMathInText(correctAnswerText)}`;
             } else if (currentQuestion.possible_answer) {
                 // Open-ended question
-                feedbackAnswerConfirm.textContent = `Een goed antwoord is: ${currentQuestion.possible_answer}`;
+                feedbackAnswerConfirm.innerHTML = `Een goed antwoord is: ${renderMathInText(currentQuestion.possible_answer)}`;
             }
         }
     }
@@ -2520,18 +2520,18 @@ function submitAnswer() {
 
                 if (typeof currentQuestion.extra_info === 'string') {
                     // Simple string format (like brandaan)
-                    extraInfoDisplay.innerHTML = `<h4>Achtergrondinfo:</h4><p>${currentQuestion.extra_info}</p>`;
+                    extraInfoDisplay.innerHTML = `<h4>Achtergrondinfo:</h4><p>${renderMathInText(currentQuestion.extra_info)}</p>`;
                     extraInfoDisplay.classList.remove('hidden');
                 } else if (currentQuestion.extra_info.concept || currentQuestion.extra_info.berekening) {
                     // New format with concept and berekening
                     let infoHtml = '';
                     if (currentQuestion.extra_info.concept) {
-                        infoHtml += `<h4>Concept:</h4><p>${currentQuestion.extra_info.concept}</p>`;
+                        infoHtml += `<h4>Concept:</h4><p>${renderMathInText(currentQuestion.extra_info.concept)}</p>`;
                     }
                     if (currentQuestion.extra_info.berekening && currentQuestion.extra_info.berekening.length > 0) {
                         infoHtml += '<h4>Berekening:</h4><ul>';
                         currentQuestion.extra_info.berekening.forEach(step => {
-                            infoHtml += `<li>${step}</li>`;
+                            infoHtml += `<li>${renderMathInText(step)}</li>`;
                         });
                         infoHtml += '</ul>';
                     }
@@ -2541,7 +2541,7 @@ function submitAnswer() {
                     // Old format with tips array (like begrijpendlezen)
                     let tipsHtml = '<h4>Extra Tips:</h4><ul>';
                     currentQuestion.extra_info.tips.forEach(tip => {
-                        tipsHtml += `<li>${tip}</li>`;
+                        tipsHtml += `<li>${renderMathInText(tip)}</li>`;
                     });
                     tipsHtml += '</ul>';
                     extraInfoDisplay.innerHTML = tipsHtml;
@@ -2617,7 +2617,7 @@ function submitAnswer() {
                 showHintButton(currentQuestion.hint);
             }
 
-            correctAnswerDisplay.textContent = `Voorbeeld antwoord: "${currentQuestion.possible_answer}"`;
+            correctAnswerDisplay.innerHTML = `Voorbeeld antwoord: "${renderMathInText(currentQuestion.possible_answer)}"`;
             correctAnswerDisplay.classList.remove('hidden');
 
             // Track wrong answer for review
@@ -2632,12 +2632,12 @@ function submitAnswer() {
             // Display strategy and tips if available
             if (currentQuestion.strategy || (currentQuestion.tips && currentQuestion.tips.length > 0)) {
                 strategyAndTips.classList.remove('hidden');
-                strategyText.textContent = currentQuestion.strategy || 'Geen specifieke strategie beschikbaar.';
+                strategyText.innerHTML = renderMathInText(currentQuestion.strategy || 'Geen specifieke strategie beschikbaar.');
                 tipsList.innerHTML = '';
                 if (currentQuestion.tips && currentQuestion.tips.length > 0) {
                     currentQuestion.tips.forEach(tip => {
                         const li = document.createElement('li');
-                        li.textContent = tip;
+                        li.innerHTML = renderMathInText(tip);
                         tipsList.appendChild(li);
                     });
                 } else {
@@ -2652,7 +2652,7 @@ function submitAnswer() {
                 // Render verhoudingstabel widget if available
                 renderVerhoudingstabel(verhoudingstabelContainer, currentQuestion.extra_info);
 
-                extraInfoDisplay.textContent = `Achtergrondinfo: ${currentQuestion.extra_info}`;
+                extraInfoDisplay.innerHTML = `Achtergrondinfo: ${renderMathInText(currentQuestion.extra_info)}`;
                 extraInfoDisplay.classList.remove('hidden');
             } else {
                 extraInfoDisplay.classList.add('hidden');

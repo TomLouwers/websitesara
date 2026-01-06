@@ -76,12 +76,12 @@ function showFoutanalyseModaal(selectedOption, extraInfo, attemptNumber = 1, cur
   // Parse foutanalyse voor main text en reflection question
   const { mainText, reflectionQuestion } = parseFoutanalyse(selectedOption.foutanalyse);
 
-  document.getElementById('mainExplanation').textContent = mainText;
+  document.getElementById('mainExplanation').innerHTML = renderMathInText(mainText);
 
   // Show reflection question if exists
   const reflectionBox = document.getElementById('reflectionBox');
   if (reflectionQuestion) {
-    document.getElementById('reflectionText').textContent = reflectionQuestion;
+    document.getElementById('reflectionText').innerHTML = renderMathInText(reflectionQuestion);
     reflectionBox.style.display = 'block';
   } else {
     reflectionBox.style.display = 'none';
