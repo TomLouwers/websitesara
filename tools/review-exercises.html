@@ -6,7 +6,6 @@
     <title>Exercise Review Tool | OefenPlatform</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
-    <!-- KaTeX for math rendering in preview -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
 
@@ -40,7 +39,7 @@
         }
 
         .container {
-            max-width: 1600px;
+            max-width: 1800px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -55,6 +54,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .header h1 {
@@ -68,6 +69,34 @@
         .header h1 .material-icons {
             color: var(--primary);
             font-size: 36px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .search-box {
+            padding: 10px 16px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 14px;
+            min-width: 250px;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .filter-select {
+            padding: 10px 16px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
         }
 
         /* File Upload Section */
@@ -132,6 +161,17 @@
             border-radius: 12px;
             box-shadow: var(--shadow);
             text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .stat-card.active {
+            border: 2px solid var(--primary);
         }
 
         .stat-card .number {
@@ -160,7 +200,7 @@
             align-items: start;
         }
 
-        /* Exercise Editor */
+        /* Editor Panel */
         .editor-panel {
             background: var(--bg-white);
             border-radius: 12px;
@@ -186,6 +226,30 @@
             gap: 8px;
         }
 
+        .editor-tabs {
+            display: flex;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            padding: 4px;
+            border-radius: 8px;
+        }
+
+        .editor-tab {
+            padding: 8px 16px;
+            border: none;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .editor-tab.active {
+            background: rgba(255,255,255,0.2);
+        }
+
         .exercise-counter {
             background: rgba(255,255,255,0.2);
             padding: 4px 12px;
@@ -193,9 +257,40 @@
             font-size: 14px;
         }
 
+        .editor-toolbar {
+            background: #f8f9fa;
+            padding: 12px 20px;
+            display: flex;
+            gap: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .toolbar-btn {
+            padding: 8px 12px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .toolbar-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .toolbar-btn .material-icons {
+            font-size: 18px;
+        }
+
         .editor-body {
-            padding: 30px;
-            max-height: calc(100vh - 300px);
+            padding: 0;
+            max-height: calc(100vh - 350px);
             overflow-y: auto;
         }
 
@@ -204,18 +299,28 @@
             min-height: 500px;
             font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
             font-size: 13px;
-            padding: 16px;
-            border: 2px solid var(--border);
-            border-radius: 8px;
-            resize: vertical;
+            padding: 20px;
+            border: none;
+            resize: none;
             background: #f8f9fa;
-            line-height: 1.5;
+            line-height: 1.6;
+            color: #2c3e50;
         }
 
         .code-editor:focus {
             outline: none;
-            border-color: var(--primary);
             background: white;
+        }
+
+        .json-error {
+            background: #fff3cd;
+            border-top: 2px solid var(--danger);
+            padding: 12px 20px;
+            color: #856404;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         /* Preview Panel */
@@ -256,6 +361,17 @@
             border: 2px solid #f0f0f0;
         }
 
+        .question-number {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
         .question-text {
             font-size: 18px;
             font-weight: 600;
@@ -271,6 +387,21 @@
             margin-bottom: 12px;
             cursor: pointer;
             transition: all 0.2s ease;
+            display: flex;
+            align-items: start;
+            gap: 12px;
+        }
+
+        .option-letter {
+            background: #e9ecef;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
         }
 
         .option-preview:hover {
@@ -281,6 +412,11 @@
         .option-preview.correct {
             border-color: var(--success);
             background: #f0fdf4;
+        }
+
+        .option-preview.correct .option-letter {
+            background: var(--success);
+            color: white;
         }
 
         .hint-preview {
@@ -337,7 +473,7 @@
             gap: 8px;
         }
 
-        .btn:hover {
+        .btn:hover:not(:disabled) {
             transform: translateY(-2px);
             box-shadow: var(--shadow-hover);
         }
@@ -346,12 +482,17 @@
             transform: translateY(0);
         }
 
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
         .btn-approve {
             background: var(--success);
             color: white;
         }
 
-        .btn-approve:hover {
+        .btn-approve:hover:not(:disabled) {
             background: #2ea05e;
         }
 
@@ -360,7 +501,7 @@
             color: white;
         }
 
-        .btn-reject:hover {
+        .btn-reject:hover:not(:disabled) {
             background: #c82333;
         }
 
@@ -369,7 +510,7 @@
             color: white;
         }
 
-        .btn-flag:hover {
+        .btn-flag:hover:not(:disabled) {
             background: #e0a800;
         }
 
@@ -378,7 +519,7 @@
             color: white;
         }
 
-        .btn-skip:hover {
+        .btn-skip:hover:not(:disabled) {
             background: #5a6268;
         }
 
@@ -403,7 +544,7 @@
             gap: 6px;
         }
 
-        .nav-btn:hover {
+        .nav-btn:hover:not(:disabled) {
             border-color: var(--primary);
             color: var(--primary);
         }
@@ -496,6 +637,7 @@
         .export-buttons {
             display: flex;
             gap: 12px;
+            flex-wrap: wrap;
         }
 
         .export-btn {
@@ -517,6 +659,14 @@
             transform: translateY(-2px);
         }
 
+        .export-btn.secondary {
+            background: #6c757d;
+        }
+
+        .export-btn.secondary:hover {
+            background: #5a6268;
+        }
+
         /* Toast Notifications */
         .toast {
             position: fixed;
@@ -531,6 +681,7 @@
             gap: 12px;
             z-index: 1000;
             animation: slideIn 0.3s ease;
+            max-width: 400px;
         }
 
         @keyframes slideIn {
@@ -560,15 +711,12 @@
 
         /* Keyboard Shortcuts Help */
         .shortcuts-help {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            background: white;
+            background: rgba(255,255,255,0.95);
             padding: 12px 20px;
             border-radius: 8px;
             box-shadow: var(--shadow);
             font-size: 14px;
-            color: var(--text-muted);
+            color: var(--text-dark);
         }
 
         .shortcuts-help kbd {
@@ -602,6 +750,171 @@
             color: var(--text-muted);
             font-size: 14px;
         }
+
+        /* Auto-save Indicator */
+        .auto-save-indicator {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            padding: 6px 12px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+        }
+
+        .auto-save-indicator .material-icons {
+            font-size: 16px;
+        }
+
+        .auto-save-indicator.saving {
+            color: var(--warning);
+        }
+
+        .auto-save-indicator.saved {
+            color: var(--success);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+
+        .modal-header {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .modal-body {
+            margin-bottom: 24px;
+        }
+
+        .modal-body textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 14px;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .modal-body textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .modal-footer {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        .modal-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .modal-btn.primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .modal-btn.primary:hover {
+            background: #e67827;
+        }
+
+        .modal-btn.secondary {
+            background: #e9ecef;
+            color: var(--text-dark);
+        }
+
+        .modal-btn.secondary:hover {
+            background: #dee2e6;
+        }
+
+        /* Batch Actions Bar */
+        .batch-actions {
+            background: var(--bg-white);
+            padding: 16px 20px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .batch-actions.active {
+            display: flex;
+        }
+
+        .batch-actions-left {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .batch-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+        }
+
+        .batch-btn.approve {
+            background: var(--success);
+            color: white;
+        }
+
+        .batch-btn.reject {
+            background: var(--danger);
+            color: white;
+        }
+
+        @media (max-width: 1200px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .editor-panel, .preview-panel {
+                position: static;
+            }
+        }
     </style>
 </head>
 <body>
@@ -612,11 +925,21 @@
                 <span class="material-icons">fact_check</span>
                 Exercise Review Tool
             </h1>
-            <div class="shortcuts-help">
-                <kbd>A</kbd> Approve
-                <kbd>R</kbd> Reject
-                <kbd>F</kbd> Flag
-                <kbd>←</kbd><kbd>→</kbd> Navigate
+            <div class="header-actions">
+                <input type="text" class="search-box" id="searchBox" placeholder="Search exercises..." style="display: none;">
+                <select class="filter-select" id="filterSelect" style="display: none;">
+                    <option value="all">All Exercises</option>
+                    <option value="pending">Pending</option>
+                    <option value="approved">Approved</option>
+                    <option value="rejected">Rejected</option>
+                    <option value="flagged">Flagged</option>
+                </select>
+                <div class="shortcuts-help">
+                    <kbd>A</kbd> Approve
+                    <kbd>R</kbd> Reject
+                    <kbd>F</kbd> Flag
+                    <kbd>←</kbd><kbd>→</kbd> Navigate
+                </div>
             </div>
         </div>
 
@@ -633,22 +956,43 @@
 
         <!-- Stats Bar -->
         <div class="stats-bar" id="statsBar" style="display: none;">
-            <div class="stat-card pending">
+            <div class="stat-card all" onclick="filterByStatus('all')">
+                <div class="number" id="statTotal">0</div>
+                <div class="label">Total</div>
+            </div>
+            <div class="stat-card pending" onclick="filterByStatus('pending')">
                 <div class="number" id="statPending">0</div>
                 <div class="label">Pending</div>
             </div>
-            <div class="stat-card approved">
+            <div class="stat-card approved" onclick="filterByStatus('approved')">
                 <div class="number" id="statApproved">0</div>
                 <div class="label">Approved</div>
             </div>
-            <div class="stat-card rejected">
+            <div class="stat-card rejected" onclick="filterByStatus('rejected')">
                 <div class="number" id="statRejected">0</div>
                 <div class="label">Rejected</div>
             </div>
-            <div class="stat-card flagged">
+            <div class="stat-card flagged" onclick="filterByStatus('flagged')">
                 <div class="number" id="statFlagged">0</div>
                 <div class="label">Flagged</div>
             </div>
+        </div>
+
+        <!-- Batch Actions -->
+        <div class="batch-actions" id="batchActions">
+            <div class="batch-actions-left">
+                <button class="batch-btn approve" onclick="batchApprove()">
+                    <span class="material-icons">check_circle</span>
+                    Approve All Pending
+                </button>
+                <button class="batch-btn reject" onclick="batchReject()">
+                    <span class="material-icons">cancel</span>
+                    Reject All Flagged
+                </button>
+            </div>
+            <button class="modal-btn secondary" onclick="clearFilters()">
+                Clear Filters
+            </button>
         </div>
 
         <!-- Main Review Interface -->
@@ -663,6 +1007,10 @@
                     Next
                     <span class="material-icons">chevron_right</span>
                 </button>
+                <button class="nav-btn" onclick="goToExercise()" style="margin-left: auto;">
+                    <span class="material-icons">search</span>
+                    Go to Exercise...
+                </button>
             </div>
 
             <!-- Main Layout -->
@@ -674,10 +1022,42 @@
                             <span class="material-icons">edit_note</span>
                             JSON Editor
                         </h2>
-                        <span class="exercise-counter" id="exerciseCounter">1 / 1</span>
+                        <div style="display: flex; align-items: center; gap: 16px;">
+                            <div class="editor-tabs">
+                                <button class="editor-tab active" onclick="switchTab('core')">Core</button>
+                                <button class="editor-tab" onclick="switchTab('support')">Support</button>
+                            </div>
+                            <span class="exercise-counter" id="exerciseCounter">1 / 1</span>
+                            <div class="auto-save-indicator saved" id="autoSaveIndicator">
+                                <span class="material-icons">cloud_done</span>
+                                <span id="autoSaveText">Saved</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="editor-toolbar">
+                        <button class="toolbar-btn" onclick="formatJSON()" title="Format JSON (Ctrl+F)">
+                            <span class="material-icons">code</span>
+                            Format
+                        </button>
+                        <button class="toolbar-btn" onclick="validateJSON()" title="Validate JSON">
+                            <span class="material-icons">check_circle</span>
+                            Validate
+                        </button>
+                        <button class="toolbar-btn" onclick="undoChanges()" title="Undo Changes (Ctrl+Z)">
+                            <span class="material-icons">undo</span>
+                            Undo
+                        </button>
+                        <button class="toolbar-btn" onclick="copyJSON()" title="Copy to Clipboard">
+                            <span class="material-icons">content_copy</span>
+                            Copy
+                        </button>
                     </div>
                     <div class="editor-body">
                         <textarea class="code-editor" id="codeEditor" spellcheck="false"></textarea>
+                    </div>
+                    <div class="json-error" id="jsonError" style="display: none;">
+                        <span class="material-icons">error</span>
+                        <span id="jsonErrorText"></span>
                     </div>
                 </div>
 
@@ -735,7 +1115,7 @@
             <div class="export-section">
                 <h3>
                     <span class="material-icons">download</span>
-                    Export Approved Exercises
+                    Export & Reports
                 </h3>
                 <div class="export-buttons">
                     <button class="export-btn" onclick="exportApproved()">
@@ -746,29 +1126,73 @@
                         <span class="material-icons">assessment</span>
                         Download Review Report
                     </button>
+                    <button class="export-btn secondary" onclick="exportAll()">
+                        <span class="material-icons">archive</span>
+                        Export All (with changes)
+                    </button>
+                    <button class="export-btn secondary" onclick="saveSession()">
+                        <span class="material-icons">save</span>
+                        Save Session
+                    </button>
+                    <button class="export-btn secondary" onclick="loadSession()">
+                        <span class="material-icons">folder_open</span>
+                        Load Session
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Flag Modal -->
+    <div class="modal" id="flagModal">
+        <div class="modal-content">
+            <div class="modal-header">Flag Exercise for Review</div>
+            <div class="modal-body">
+                <p style="margin-bottom: 12px; color: var(--text-muted);">Add notes about why this exercise needs review:</p>
+                <textarea id="flagNotes" placeholder="Enter your notes here..."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn secondary" onclick="closeFlagModal()">Cancel</button>
+                <button class="modal-btn primary" onclick="submitFlag()">Flag Exercise</button>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // State
+        // ========================================
+        // STATE MANAGEMENT
+        // ========================================
         let exercises = [];
         let currentIndex = 0;
+        let currentTab = 'core'; // 'core' or 'support'
+        let currentFilter = 'all';
+        let filteredIndices = [];
+        let originalJSON = {}; // For undo functionality
         let stats = {
+            total: 0,
             pending: 0,
             approved: 0,
             rejected: 0,
             flagged: 0
         };
 
-        // Initialize
+        const STORAGE_KEY = 'exercise_review_state';
+        const AUTO_SAVE_DELAY = 1000; // ms
+        let autoSaveTimer = null;
+
+        // ========================================
+        // INITIALIZATION
+        // ========================================
         document.addEventListener('DOMContentLoaded', function() {
             setupUpload();
             setupKeyboardShortcuts();
+            setupAutoSave();
+            loadFromLocalStorage();
         });
 
-        // Upload handling
+        // ========================================
+        // FILE UPLOAD & HANDLING
+        // ========================================
         function setupUpload() {
             const uploadArea = document.getElementById('uploadArea');
             const fileInput = document.getElementById('fileInput');
@@ -805,88 +1229,201 @@
             }
 
             exercises = [];
+            const fileMap = new Map();
 
+            // Group files by base name
             for (const file of jsonFiles) {
-                try {
-                    const text = await file.text();
-                    const data = JSON.parse(text);
+                const baseName = file.name
+                    .replace('_core.json', '')
+                    .replace('_support.json', '')
+                    .replace('.json', '');
 
-                    // Determine if it's a core or support file
-                    const isCore = file.name.includes('_core');
-                    const baseName = file.name.replace('_core.json', '').replace('_support.json', '');
+                if (!fileMap.has(baseName)) {
+                    fileMap.set(baseName, { core: null, support: null });
+                }
 
-                    // Find or create exercise entry
-                    let exercise = exercises.find(ex => ex.baseName === baseName);
-                    if (!exercise) {
-                        exercise = {
-                            baseName: baseName,
-                            core: null,
-                            support: null,
-                            status: 'pending',
-                            notes: ''
-                        };
-                        exercises.push(exercise);
+                const fileData = fileMap.get(baseName);
+                if (file.name.includes('_core')) {
+                    fileData.core = file;
+                } else if (file.name.includes('_support')) {
+                    fileData.support = file;
+                } else {
+                    // Single file without core/support designation
+                    fileData.core = file;
+                }
+            }
+
+            // Parse all files
+            for (const [baseName, files] of fileMap.entries()) {
+                const exercise = {
+                    baseName: baseName,
+                    core: null,
+                    support: null,
+                    status: 'pending',
+                    notes: '',
+                    timestamp: new Date().toISOString()
+                };
+
+                if (files.core) {
+                    try {
+                        const text = await files.core.text();
+                        exercise.core = JSON.parse(text);
+                    } catch (e) {
+                        console.error('Error parsing core file:', files.core.name, e);
+                        showToast(`Error parsing ${files.core.name}`, 'error');
                     }
+                }
 
-                    if (isCore) {
-                        exercise.core = data;
-                    } else {
-                        exercise.support = data;
+                if (files.support) {
+                    try {
+                        const text = await files.support.text();
+                        exercise.support = JSON.parse(text);
+                    } catch (e) {
+                        console.error('Error parsing support file:', files.support.name, e);
+                        showToast(`Error parsing ${files.support.name}`, 'error');
                     }
-                } catch (e) {
-                    console.error('Error parsing file:', file.name, e);
-                    showToast(`Error parsing ${file.name}`, 'error');
+                }
+
+                if (exercise.core || exercise.support) {
+                    exercises.push(exercise);
                 }
             }
 
             if (exercises.length > 0) {
                 updateStats();
+                applyFilter();
                 showReviewInterface();
                 loadExercise(0);
-                showToast(`Loaded ${exercises.length} exercises`, 'success');
+                showToast(`Loaded ${exercises.length} exercise${exercises.length > 1 ? 's' : ''}`, 'success');
+                saveToLocalStorage();
             }
         }
 
+        // ========================================
+        // UI DISPLAY FUNCTIONS
+        // ========================================
         function showReviewInterface() {
             document.getElementById('uploadSection').style.display = 'none';
             document.getElementById('statsBar').style.display = 'grid';
             document.getElementById('reviewInterface').style.display = 'block';
+            document.getElementById('searchBox').style.display = 'block';
+            document.getElementById('filterSelect').style.display = 'block';
         }
 
         function loadExercise(index) {
-            if (index < 0 || index >= exercises.length) return;
+            if (exercises.length === 0) return;
 
-            currentIndex = index;
+            // Use filtered index if filter is active
+            const actualIndex = currentFilter === 'all' ? index : filteredIndices[index];
+
+            if (actualIndex < 0 || actualIndex >= exercises.length) return;
+
+            currentIndex = actualIndex;
             const exercise = exercises[currentIndex];
 
-            // Update counter
-            document.getElementById('exerciseCounter').textContent = `${currentIndex + 1} / ${exercises.length}`;
+            // Store original for undo
+            originalJSON = {
+                core: exercise.core ? JSON.parse(JSON.stringify(exercise.core)) : null,
+                support: exercise.support ? JSON.parse(JSON.stringify(exercise.support)) : null
+            };
 
-            // Load JSON in editor
-            const jsonData = exercise.core || {};
-            document.getElementById('codeEditor').value = JSON.stringify(jsonData, null, 2);
+            // Update counter
+            const displayIndex = currentFilter === 'all' ? currentIndex : filteredIndices.indexOf(currentIndex);
+            const totalDisplay = currentFilter === 'all' ? exercises.length : filteredIndices.length;
+            document.getElementById('exerciseCounter').textContent = `${displayIndex + 1} / ${totalDisplay}`;
+
+            // Load JSON in editor based on current tab
+            loadEditorContent();
 
             // Update preview
             updatePreview(exercise);
 
             // Update navigation buttons
-            document.getElementById('prevBtn').disabled = currentIndex === 0;
-            document.getElementById('nextBtn').disabled = currentIndex === exercises.length - 1;
+            const navIndex = currentFilter === 'all' ? currentIndex : filteredIndices.indexOf(currentIndex);
+            const navTotal = currentFilter === 'all' ? exercises.length : filteredIndices.length;
+            document.getElementById('prevBtn').disabled = navIndex === 0;
+            document.getElementById('nextBtn').disabled = navIndex === navTotal - 1;
+
+            // Update active tab
+            updateTabButtons();
         }
 
+        function loadEditorContent() {
+            const exercise = exercises[currentIndex];
+            const jsonData = currentTab === 'core' ? exercise.core : exercise.support;
+
+            const editor = document.getElementById('codeEditor');
+            if (jsonData) {
+                editor.value = JSON.stringify(jsonData, null, 2);
+            } else {
+                editor.value = currentTab === 'core'
+                    ? '{\n  "metadata": {},\n  "items": []\n}'
+                    : '{\n  "items": []\n}';
+            }
+
+            // Clear error state
+            document.getElementById('jsonError').style.display = 'none';
+        }
+
+        function switchTab(tab) {
+            if (tab === currentTab) return;
+
+            // Save current tab content before switching
+            saveEditorContent();
+
+            currentTab = tab;
+            loadEditorContent();
+            updateTabButtons();
+        }
+
+        function updateTabButtons() {
+            const tabs = document.querySelectorAll('.editor-tab');
+            tabs.forEach(tab => {
+                const isActive = tab.textContent.toLowerCase() === currentTab;
+                tab.classList.toggle('active', isActive);
+            });
+        }
+
+        function saveEditorContent() {
+            const editor = document.getElementById('codeEditor');
+            try {
+                const data = JSON.parse(editor.value);
+                const exercise = exercises[currentIndex];
+
+                if (currentTab === 'core') {
+                    exercise.core = data;
+                } else {
+                    exercise.support = data;
+                }
+
+                document.getElementById('jsonError').style.display = 'none';
+                updatePreview(exercise);
+                return true;
+            } catch (e) {
+                document.getElementById('jsonError').style.display = 'flex';
+                document.getElementById('jsonErrorText').textContent = e.message;
+                return false;
+            }
+        }
+
+        // ========================================
+        // PREVIEW GENERATION
+        // ========================================
         function updatePreview(exercise) {
             const preview = document.getElementById('questionsPreview');
             preview.innerHTML = '';
 
             if (!exercise.core) {
-                preview.innerHTML = '<div class="empty-state"><span class="material-icons">error_outline</span><h3>No core data</h3></div>';
+                preview.innerHTML = '<div class="empty-state"><span class="material-icons">error_outline</span><h3>No core data</h3><p>Upload or create core data to see preview</p></div>';
+                document.getElementById('qualityScoreValue').textContent = '--';
+                document.getElementById('validationErrors').style.display = 'none';
                 return;
             }
 
             const core = exercise.core;
             const support = exercise.support || {};
 
-            // Calculate quality score (simplified)
+            // Calculate quality score
             const qualityScore = calculateQualityScore(core, support);
             updateQualityScore(qualityScore);
 
@@ -902,50 +1439,83 @@
             const items = core.items || [];
             const supportItems = support.items || [];
 
-            items.slice(0, 3).forEach((item, idx) => {
+            // Show first 5 questions
+            const previewCount = Math.min(items.length, 5);
+            for (let i = 0; i < previewCount; i++) {
+                const item = items[i];
                 const supportItem = supportItems.find(s => s.item_id === item.id) || {};
-                const questionDiv = createQuestionPreview(item, supportItem, idx);
+                const questionDiv = createQuestionPreview(item, supportItem, i + 1);
                 preview.appendChild(questionDiv);
-            });
+            }
 
-            if (items.length > 3) {
+            if (items.length > previewCount) {
                 const moreDiv = document.createElement('div');
                 moreDiv.className = 'metadata-preview';
                 moreDiv.style.textAlign = 'center';
                 moreDiv.style.padding = '20px';
-                moreDiv.textContent = `... and ${items.length - 3} more questions`;
+                moreDiv.style.cursor = 'pointer';
+                moreDiv.innerHTML = `<strong>... and ${items.length - previewCount} more question${items.length - previewCount > 1 ? 's' : ''}</strong><br><small>Scroll editor to see all</small>`;
                 preview.appendChild(moreDiv);
+            }
+
+            if (items.length === 0) {
+                preview.innerHTML = '<div class="empty-state"><span class="material-icons">info</span><h3>No questions found</h3><p>Add items to the JSON to see preview</p></div>';
             }
         }
 
-        function createQuestionPreview(item, supportItem, index) {
+        function createQuestionPreview(item, supportItem, number) {
             const div = document.createElement('div');
             div.className = 'question-preview';
+
+            // Question number
+            const numberBadge = document.createElement('div');
+            numberBadge.className = 'question-number';
+            numberBadge.textContent = `Question ${number}`;
+            div.appendChild(numberBadge);
 
             // Question text
             const questionText = document.createElement('div');
             questionText.className = 'question-text';
-            questionText.innerHTML = renderMath(item.question?.text || 'No question text');
+            questionText.innerHTML = renderMath(item.question?.text || item.text || 'No question text');
             div.appendChild(questionText);
 
             // Options
-            if (item.options) {
+            if (item.options && Array.isArray(item.options)) {
+                const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
                 item.options.forEach((opt, optIdx) => {
                     const optDiv = document.createElement('div');
                     optDiv.className = 'option-preview';
-                    if (optIdx === item.answer?.correct_index) {
+
+                    const correctIndex = item.answer?.correct_index !== undefined
+                        ? item.answer.correct_index
+                        : item.correct_index;
+
+                    if (optIdx === correctIndex) {
                         optDiv.classList.add('correct');
                     }
-                    optDiv.innerHTML = renderMath(opt.text || opt);
+
+                    const letter = document.createElement('div');
+                    letter.className = 'option-letter';
+                    letter.textContent = letters[optIdx] || optIdx + 1;
+                    optDiv.appendChild(letter);
+
+                    const text = document.createElement('div');
+                    text.innerHTML = renderMath(opt.text || opt);
+                    optDiv.appendChild(text);
+
                     div.appendChild(optDiv);
                 });
             }
 
             // Hints
-            if (supportItem.hints && supportItem.hints.length > 0) {
+            const hints = supportItem.hints || [];
+            if (hints.length > 0) {
                 const hintDiv = document.createElement('div');
                 hintDiv.className = 'hint-preview';
-                hintDiv.innerHTML = `<strong>Hints (${supportItem.hints.length}):</strong> ${renderMath(supportItem.hints[0].text || supportItem.hints[0])}`;
+                hintDiv.innerHTML = `<strong>💡 Hints (${hints.length}):</strong><br>${renderMath(hints[0].text || hints[0])}`;
+                if (hints.length > 1) {
+                    hintDiv.innerHTML += `<br><small style="opacity: 0.7;">+ ${hints.length - 1} more hint${hints.length > 1 ? 's' : ''}</small>`;
+                }
                 div.appendChild(hintDiv);
             }
 
@@ -953,15 +1523,23 @@
             const metaDiv = document.createElement('div');
             metaDiv.className = 'metadata-preview';
 
-            const metadata = item.metadata || {};
-            if (item.theme) {
-                const badge = document.createElement('span');
-                badge.className = 'badge';
-                badge.textContent = item.theme;
-                metaDiv.appendChild(badge);
-            }
+            const badges = [];
+            if (item.theme) badges.push(item.theme);
+            if (item.difficulty) badges.push(`Difficulty: ${item.difficulty}`);
+            if (item.metadata?.slo_alignment) badges.push('SLO Aligned');
+            if (supportItem.learning?.reading_strategies) badges.push('Reading Strategies');
+            if (supportItem.learning?.math_strategies) badges.push('Math Strategies');
 
-            div.appendChild(metaDiv);
+            badges.forEach(badge => {
+                const badgeEl = document.createElement('span');
+                badgeEl.className = 'badge';
+                badgeEl.textContent = badge;
+                metaDiv.appendChild(badgeEl);
+            });
+
+            if (badges.length > 0) {
+                div.appendChild(metaDiv);
+            }
 
             return div;
         }
@@ -970,54 +1548,90 @@
             if (!text || typeof text !== 'string') return text || '';
 
             try {
-                // Inline math $...$
-                let result = text.replace(/\$([^\$]+)\$/g, (match, latex) => {
+                // Handle display math $$...$$
+                let result = text.replace(/\$\$([^\$]+)\$\$/g, (match, latex) => {
                     try {
-                        return katex.renderToString(latex.trim(), { throwOnError: false });
+                        return katex.renderToString(latex.trim(), {
+                            throwOnError: false,
+                            displayMode: true
+                        });
                     } catch (e) {
                         return match;
                     }
                 });
+
+                // Handle inline math $...$
+                result = result.replace(/\$([^\$]+)\$/g, (match, latex) => {
+                    try {
+                        return katex.renderToString(latex.trim(), {
+                            throwOnError: false,
+                            displayMode: false
+                        });
+                    } catch (e) {
+                        return match;
+                    }
+                });
+
                 return result;
             } catch (e) {
                 return text;
             }
         }
 
+        // ========================================
+        // QUALITY SCORING & VALIDATION
+        // ========================================
         function calculateQualityScore(core, support) {
-            let score = 100;
+            let score = 0;
             const items = core.items || [];
             const supportItems = support.items || [];
 
             if (items.length === 0) return 0;
 
-            // Check each item for quality features
-            let hasHints = 0;
-            let hasMultipleHints = 0;
-            let hasPerOptionFeedback = 0;
-            let hasStrategies = 0;
+            let metrics = {
+                hasQuestions: 0,
+                hasAnswers: 0,
+                hasMultipleOptions: 0,
+                hasHints: 0,
+                hasMultipleHints: 0,
+                hasPerOptionFeedback: 0,
+                hasStrategies: 0,
+                hasDifficulty: 0,
+                hasTheme: 0
+            };
 
             items.forEach(item => {
-                const sup = supportItems.find(s => s.item_id === item.id);
-                if (!sup) return;
+                if (item.question?.text || item.text) metrics.hasQuestions++;
+                if (item.answer || item.correct_index !== undefined) metrics.hasAnswers++;
+                if (item.options && item.options.length >= 3) metrics.hasMultipleOptions++;
+                if (item.difficulty) metrics.hasDifficulty++;
+                if (item.theme) metrics.hasTheme++;
 
-                if (sup.hints && sup.hints.length > 0) hasHints++;
-                if (sup.hints && sup.hints.length >= 3) hasMultipleHints++;
-                if (sup.feedback?.per_option) hasPerOptionFeedback++;
-                if (sup.learning?.reading_strategies || sup.learning?.math_strategies) hasStrategies++;
+                const sup = supportItems.find(s => s.item_id === item.id);
+                if (sup) {
+                    if (sup.hints && sup.hints.length > 0) metrics.hasHints++;
+                    if (sup.hints && sup.hints.length >= 3) metrics.hasMultipleHints++;
+                    if (sup.feedback?.per_option) metrics.hasPerOptionFeedback++;
+                    if (sup.learning?.reading_strategies || sup.learning?.math_strategies) metrics.hasStrategies++;
+                }
             });
 
             const itemCount = items.length;
 
-            // Calculate percentage-based bonuses
-            score = 0;
-            score += (hasMultipleHints / itemCount) * 20; // Progressive hints
-            score += (hasPerOptionFeedback / itemCount) * 20; // Per-option feedback
-            score += (hasStrategies / itemCount) * 10; // Learning strategies
+            // Weighted scoring
+            score += (metrics.hasQuestions / itemCount) * 20; // Must have questions
+            score += (metrics.hasAnswers / itemCount) * 20;   // Must have answers
+            score += (metrics.hasMultipleOptions / itemCount) * 10; // Multiple choice
+            score += (metrics.hasHints / itemCount) * 15;     // Has hints
+            score += (metrics.hasMultipleHints / itemCount) * 10; // Progressive hints
+            score += (metrics.hasPerOptionFeedback / itemCount) * 10; // Per-option feedback
+            score += (metrics.hasStrategies / itemCount) * 10; // Learning strategies
+            score += (metrics.hasDifficulty / itemCount) * 2.5; // Difficulty rating
+            score += (metrics.hasTheme / itemCount) * 2.5;    // Theme categorization
 
-            if (core.metadata?.slo_alignment) score += 10; // SLO alignment
+            if (core.metadata?.slo_alignment) score += 5; // SLO alignment
 
-            return Math.round(score);
+            return Math.min(100, Math.round(score));
         }
 
         function updateQualityScore(score) {
@@ -1039,27 +1653,91 @@
         function validateExercise(core, support) {
             const errors = [];
 
-            // Basic validation
+            // Metadata validation
             if (!core.metadata) {
-                errors.push({ severity: 'critical', message: 'Missing metadata' });
+                errors.push({ severity: 'critical', message: 'Missing metadata object' });
+            } else {
+                if (!core.metadata.title && !core.metadata.name) {
+                    errors.push({ severity: 'warning', message: 'Metadata missing title/name' });
+                }
             }
 
-            if (!core.items || core.items.length === 0) {
-                errors.push({ severity: 'critical', message: 'No items found' });
+            // Items validation
+            if (!core.items || !Array.isArray(core.items)) {
+                errors.push({ severity: 'critical', message: 'Missing or invalid items array' });
+                return errors;
             }
 
-            if (core.items) {
-                core.items.forEach((item, idx) => {
-                    if (!item.question?.text) {
-                        errors.push({ severity: 'error', message: `Item ${idx + 1}: Missing question text` });
-                    }
+            if (core.items.length === 0) {
+                errors.push({ severity: 'critical', message: 'No items found in exercise' });
+                return errors;
+            }
 
-                    if (!item.answer) {
-                        errors.push({ severity: 'error', message: `Item ${idx + 1}: Missing answer` });
-                    }
+            // Validate each item
+            core.items.forEach((item, idx) => {
+                const itemNum = idx + 1;
 
-                    if (item.options && item.options.length < 2) {
-                        errors.push({ severity: 'error', message: `Item ${idx + 1}: Need at least 2 options` });
+                // Question text
+                if (!item.question?.text && !item.text) {
+                    errors.push({
+                        severity: 'error',
+                        message: `Item ${itemNum}: Missing question text`
+                    });
+                }
+
+                // Answer validation
+                const hasAnswer = item.answer?.correct_index !== undefined || item.correct_index !== undefined;
+                if (!hasAnswer) {
+                    errors.push({
+                        severity: 'error',
+                        message: `Item ${itemNum}: Missing answer/correct_index`
+                    });
+                }
+
+                // Options validation
+                if (item.options) {
+                    if (!Array.isArray(item.options)) {
+                        errors.push({
+                            severity: 'error',
+                            message: `Item ${itemNum}: Options must be an array`
+                        });
+                    } else if (item.options.length < 2) {
+                        errors.push({
+                            severity: 'error',
+                            message: `Item ${itemNum}: Need at least 2 options`
+                        });
+                    } else {
+                        // Check correct_index is valid
+                        const correctIdx = item.answer?.correct_index ?? item.correct_index;
+                        if (correctIdx !== undefined && (correctIdx < 0 || correctIdx >= item.options.length)) {
+                            errors.push({
+                                severity: 'error',
+                                message: `Item ${itemNum}: correct_index (${correctIdx}) out of range`
+                            });
+                        }
+                    }
+                }
+
+                // ID validation
+                if (!item.id) {
+                    errors.push({
+                        severity: 'warning',
+                        message: `Item ${itemNum}: Missing ID (recommended for support file matching)`
+                    });
+                }
+            });
+
+            // Support file validation
+            if (support && support.items) {
+                const supportItems = support.items;
+                const coreItemIds = new Set(core.items.filter(i => i.id).map(i => i.id));
+
+                supportItems.forEach((supItem, idx) => {
+                    if (supItem.item_id && !coreItemIds.has(supItem.item_id)) {
+                        errors.push({
+                            severity: 'warning',
+                            message: `Support item ${idx + 1}: References non-existent item_id "${supItem.item_id}"`
+                        });
                     }
                 });
             }
@@ -1089,52 +1767,259 @@
             });
         }
 
-        // Actions
+        // ========================================
+        // ACTIONS (APPROVE, REJECT, FLAG, etc.)
+        // ========================================
         function approveExercise() {
+            saveEditorContent();
             exercises[currentIndex].status = 'approved';
+            exercises[currentIndex].reviewedAt = new Date().toISOString();
             updateStats();
+            saveToLocalStorage();
             showToast('Exercise approved!', 'success');
             navigateExercise(1);
         }
 
         function rejectExercise() {
+            saveEditorContent();
             exercises[currentIndex].status = 'rejected';
+            exercises[currentIndex].reviewedAt = new Date().toISOString();
             updateStats();
+            saveToLocalStorage();
             showToast('Exercise rejected', 'error');
             navigateExercise(1);
         }
 
         function flagExercise() {
+            document.getElementById('flagModal').classList.add('active');
+            document.getElementById('flagNotes').value = exercises[currentIndex].notes || '';
+            document.getElementById('flagNotes').focus();
+        }
+
+        function closeFlagModal() {
+            document.getElementById('flagModal').classList.remove('active');
+        }
+
+        function submitFlag() {
+            saveEditorContent();
+            const notes = document.getElementById('flagNotes').value.trim();
             exercises[currentIndex].status = 'flagged';
-            exercises[currentIndex].notes = prompt('Add a note (optional):') || '';
+            exercises[currentIndex].notes = notes;
+            exercises[currentIndex].flaggedAt = new Date().toISOString();
             updateStats();
+            saveToLocalStorage();
             showToast('Exercise flagged for review', 'warning');
+            closeFlagModal();
             navigateExercise(1);
         }
 
         function navigateExercise(direction) {
-            const newIndex = currentIndex + direction;
-            if (newIndex >= 0 && newIndex < exercises.length) {
-                loadExercise(newIndex);
+            saveEditorContent();
+
+            const currentDisplayIndex = currentFilter === 'all'
+                ? currentIndex
+                : filteredIndices.indexOf(currentIndex);
+
+            const newDisplayIndex = currentDisplayIndex + direction;
+            const maxIndex = currentFilter === 'all' ? exercises.length - 1 : filteredIndices.length - 1;
+
+            if (newDisplayIndex >= 0 && newDisplayIndex <= maxIndex) {
+                loadExercise(newDisplayIndex);
             }
         }
 
-        // Stats
+        function goToExercise() {
+            const input = prompt(`Go to exercise (1-${exercises.length}):`);
+            if (input) {
+                const num = parseInt(input);
+                if (num >= 1 && num <= exercises.length) {
+                    currentFilter = 'all';
+                    applyFilter();
+                    loadExercise(num - 1);
+                } else {
+                    showToast('Invalid exercise number', 'error');
+                }
+            }
+        }
+
+        // ========================================
+        // BATCH OPERATIONS
+        // ========================================
+        function batchApprove() {
+            if (!confirm('Approve all pending exercises?')) return;
+
+            let count = 0;
+            exercises.forEach(ex => {
+                if (ex.status === 'pending') {
+                    ex.status = 'approved';
+                    ex.reviewedAt = new Date().toISOString();
+                    count++;
+                }
+            });
+
+            updateStats();
+            applyFilter();
+            saveToLocalStorage();
+            showToast(`Approved ${count} exercise${count > 1 ? 's' : ''}`, 'success');
+        }
+
+        function batchReject() {
+            if (!confirm('Reject all flagged exercises?')) return;
+
+            let count = 0;
+            exercises.forEach(ex => {
+                if (ex.status === 'flagged') {
+                    ex.status = 'rejected';
+                    ex.reviewedAt = new Date().toISOString();
+                    count++;
+                }
+            });
+
+            updateStats();
+            applyFilter();
+            saveToLocalStorage();
+            showToast(`Rejected ${count} exercise${count > 1 ? 's' : ''}`, 'error');
+        }
+
+        // ========================================
+        // FILTERING & SEARCH
+        // ========================================
+        function filterByStatus(status) {
+            currentFilter = status;
+            applyFilter();
+
+            // Update active stat card
+            document.querySelectorAll('.stat-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            document.querySelector(`.stat-card.${status}`)?.classList.add('active');
+
+            if (filteredIndices.length > 0) {
+                loadExercise(0);
+            } else {
+                showToast(`No ${status} exercises found`, 'info');
+            }
+        }
+
+        function applyFilter() {
+            filteredIndices = [];
+
+            if (currentFilter === 'all') {
+                filteredIndices = exercises.map((_, idx) => idx);
+            } else {
+                exercises.forEach((ex, idx) => {
+                    if (ex.status === currentFilter) {
+                        filteredIndices.push(idx);
+                    }
+                });
+            }
+
+            // Update batch actions visibility
+            const shouldShowBatch = currentFilter === 'pending' || currentFilter === 'flagged';
+            document.getElementById('batchActions').classList.toggle('active', shouldShowBatch);
+        }
+
+        function clearFilters() {
+            currentFilter = 'all';
+            applyFilter();
+            document.querySelectorAll('.stat-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            loadExercise(0);
+        }
+
+        // Setup search
+        document.getElementById('searchBox')?.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            if (!query) {
+                applyFilter();
+                return;
+            }
+
+            filteredIndices = [];
+            exercises.forEach((ex, idx) => {
+                const searchText = JSON.stringify(ex).toLowerCase();
+                if (searchText.includes(query)) {
+                    filteredIndices.push(idx);
+                }
+            });
+
+            if (filteredIndices.length > 0) {
+                loadExercise(0);
+                showToast(`Found ${filteredIndices.length} matching exercise${filteredIndices.length > 1 ? 's' : ''}`, 'info');
+            } else {
+                showToast('No matches found', 'warning');
+            }
+        });
+
+        document.getElementById('filterSelect')?.addEventListener('change', (e) => {
+            filterByStatus(e.target.value);
+        });
+
+        // ========================================
+        // STATS
+        // ========================================
         function updateStats() {
             stats = {
+                total: exercises.length,
                 pending: exercises.filter(ex => ex.status === 'pending').length,
                 approved: exercises.filter(ex => ex.status === 'approved').length,
                 rejected: exercises.filter(ex => ex.status === 'rejected').length,
                 flagged: exercises.filter(ex => ex.status === 'flagged').length
             };
 
+            document.getElementById('statTotal').textContent = stats.total;
             document.getElementById('statPending').textContent = stats.pending;
             document.getElementById('statApproved').textContent = stats.approved;
             document.getElementById('statRejected').textContent = stats.rejected;
             document.getElementById('statFlagged').textContent = stats.flagged;
         }
 
-        // Export
+        // ========================================
+        // EDITOR TOOLS
+        // ========================================
+        function formatJSON() {
+            const editor = document.getElementById('codeEditor');
+            try {
+                const data = JSON.parse(editor.value);
+                editor.value = JSON.stringify(data, null, 2);
+                showToast('JSON formatted', 'success');
+                saveEditorContent();
+            } catch (e) {
+                showToast('Cannot format: Invalid JSON', 'error');
+            }
+        }
+
+        function validateJSON() {
+            if (saveEditorContent()) {
+                showToast('JSON is valid!', 'success');
+            } else {
+                showToast('JSON has syntax errors', 'error');
+            }
+        }
+
+        function undoChanges() {
+            if (!confirm('Discard all changes to this exercise?')) return;
+
+            const exercise = exercises[currentIndex];
+            exercise.core = originalJSON.core ? JSON.parse(JSON.stringify(originalJSON.core)) : null;
+            exercise.support = originalJSON.support ? JSON.parse(JSON.stringify(originalJSON.support)) : null;
+
+            loadEditorContent();
+            updatePreview(exercise);
+            showToast('Changes discarded', 'info');
+        }
+
+        function copyJSON() {
+            const editor = document.getElementById('codeEditor');
+            editor.select();
+            document.execCommand('copy');
+            showToast('JSON copied to clipboard', 'success');
+        }
+
+        // ========================================
+        // EXPORT FUNCTIONS
+        // ========================================
         function exportApproved() {
             const approved = exercises.filter(ex => ex.status === 'approved');
 
@@ -1144,35 +2029,70 @@
             }
 
             approved.forEach(exercise => {
-                // Download core file
                 if (exercise.core) {
                     downloadJSON(exercise.core, `${exercise.baseName}_core.json`);
                 }
-                // Download support file
                 if (exercise.support) {
                     downloadJSON(exercise.support, `${exercise.baseName}_support.json`);
                 }
             });
 
-            showToast(`Exported ${approved.length} approved exercises`, 'success');
+            showToast(`Exported ${approved.length} approved exercise${approved.length > 1 ? 's' : ''}`, 'success');
         }
 
         function exportReport() {
             const report = {
-                timestamp: new Date().toISOString(),
-                total: exercises.length,
-                stats: stats,
-                exercises: exercises.map(ex => ({
-                    baseName: ex.baseName,
-                    status: ex.status,
-                    notes: ex.notes,
-                    hasCore: !!ex.core,
-                    hasSupport: !!ex.support
-                }))
+                generated: new Date().toISOString(),
+                summary: {
+                    total: exercises.length,
+                    pending: stats.pending,
+                    approved: stats.approved,
+                    rejected: stats.rejected,
+                    flagged: stats.flagged
+                },
+                exercises: exercises.map(ex => {
+                    const core = ex.core || {};
+                    const support = ex.support || {};
+                    const qualityScore = calculateQualityScore(core, support);
+                    const errors = validateExercise(core, support);
+
+                    return {
+                        baseName: ex.baseName,
+                        status: ex.status,
+                        notes: ex.notes,
+                        qualityScore: qualityScore,
+                        validationErrors: errors.length,
+                        hasCore: !!ex.core,
+                        hasSupport: !!ex.support,
+                        itemCount: (core.items || []).length,
+                        timestamp: ex.timestamp,
+                        reviewedAt: ex.reviewedAt,
+                        flaggedAt: ex.flaggedAt
+                    };
+                })
             };
 
-            downloadJSON(report, `review-report-${new Date().toISOString().split('T')[0]}.json`);
+            const date = new Date().toISOString().split('T')[0];
+            downloadJSON(report, `review-report-${date}.json`);
             showToast('Report downloaded', 'success');
+        }
+
+        function exportAll() {
+            if (exercises.length === 0) {
+                showToast('No exercises to export', 'warning');
+                return;
+            }
+
+            exercises.forEach(exercise => {
+                if (exercise.core) {
+                    downloadJSON(exercise.core, `${exercise.baseName}_core.json`);
+                }
+                if (exercise.support) {
+                    downloadJSON(exercise.support, `${exercise.baseName}_support.json`);
+                }
+            });
+
+            showToast(`Exported all ${exercises.length} exercise${exercises.length > 1 ? 's' : ''}`, 'success');
         }
 
         function downloadJSON(data, filename) {
@@ -1181,15 +2101,163 @@
             const a = document.createElement('a');
             a.href = url;
             a.download = filename;
+            document.body.appendChild(a);
             a.click();
+            document.body.removeChild(a);
             URL.revokeObjectURL(url);
         }
 
-        // Keyboard shortcuts
+        // ========================================
+        // SESSION MANAGEMENT
+        // ========================================
+        function saveSession() {
+            const sessionData = {
+                exercises: exercises,
+                currentIndex: currentIndex,
+                stats: stats,
+                savedAt: new Date().toISOString()
+            };
+
+            const date = new Date().toISOString().split('T')[0];
+            downloadJSON(sessionData, `review-session-${date}.json`);
+            showToast('Session saved', 'success');
+        }
+
+        function loadSession() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.json';
+            input.onchange = async (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+
+                try {
+                    const text = await file.text();
+                    const sessionData = JSON.parse(text);
+
+                    if (sessionData.exercises && Array.isArray(sessionData.exercises)) {
+                        exercises = sessionData.exercises;
+                        currentIndex = sessionData.currentIndex || 0;
+                        updateStats();
+                        applyFilter();
+                        showReviewInterface();
+                        loadExercise(currentIndex);
+                        saveToLocalStorage();
+                        showToast('Session loaded successfully', 'success');
+                    } else {
+                        showToast('Invalid session file', 'error');
+                    }
+                } catch (e) {
+                    showToast('Error loading session', 'error');
+                    console.error(e);
+                }
+            };
+            input.click();
+        }
+
+        function saveToLocalStorage() {
+            try {
+                const data = {
+                    exercises: exercises,
+                    currentIndex: currentIndex,
+                    savedAt: new Date().toISOString()
+                };
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+            } catch (e) {
+                console.error('Error saving to localStorage:', e);
+            }
+        }
+
+        function loadFromLocalStorage() {
+            try {
+                const data = localStorage.getItem(STORAGE_KEY);
+                if (data) {
+                    const parsed = JSON.parse(data);
+                    if (parsed.exercises && parsed.exercises.length > 0) {
+                        const hoursAgo = (new Date() - new Date(parsed.savedAt)) / (1000 * 60 * 60);
+
+                        if (hoursAgo < 24) {
+                            if (confirm(`Resume previous session from ${new Date(parsed.savedAt).toLocaleString()}?`)) {
+                                exercises = parsed.exercises;
+                                currentIndex = parsed.currentIndex || 0;
+                                updateStats();
+                                applyFilter();
+                                showReviewInterface();
+                                loadExercise(currentIndex);
+                                showToast('Session resumed', 'success');
+                            }
+                        }
+                    }
+                }
+            } catch (e) {
+                console.error('Error loading from localStorage:', e);
+            }
+        }
+
+        // ========================================
+        // AUTO-SAVE
+        // ========================================
+        function setupAutoSave() {
+            const editor = document.getElementById('codeEditor');
+
+            editor?.addEventListener('input', () => {
+                setAutoSaveStatus('saving');
+
+                clearTimeout(autoSaveTimer);
+                autoSaveTimer = setTimeout(() => {
+                    if (saveEditorContent()) {
+                        saveToLocalStorage();
+                        setAutoSaveStatus('saved');
+                    } else {
+                        setAutoSaveStatus('error');
+                    }
+                }, AUTO_SAVE_DELAY);
+            });
+        }
+
+        function setAutoSaveStatus(status) {
+            const indicator = document.getElementById('autoSaveIndicator');
+            const text = document.getElementById('autoSaveText');
+            const icon = indicator.querySelector('.material-icons');
+
+            indicator.className = 'auto-save-indicator';
+
+            switch(status) {
+                case 'saving':
+                    indicator.classList.add('saving');
+                    icon.textContent = 'cloud_sync';
+                    text.textContent = 'Saving...';
+                    break;
+                case 'saved':
+                    indicator.classList.add('saved');
+                    icon.textContent = 'cloud_done';
+                    text.textContent = 'Saved';
+                    break;
+                case 'error':
+                    indicator.classList.add('saving');
+                    icon.textContent = 'cloud_off';
+                    text.textContent = 'Error';
+                    break;
+            }
+        }
+
+        // ========================================
+        // KEYBOARD SHORTCUTS
+        // ========================================
         function setupKeyboardShortcuts() {
             document.addEventListener('keydown', (e) => {
-                // Ignore if typing in editor
-                if (e.target.tagName === 'TEXTAREA') return;
+                // Ignore if typing in editor or modal
+                if (e.target.tagName === 'TEXTAREA' || document.querySelector('.modal.active')) {
+                    // Allow some shortcuts even in editor
+                    if (e.target.tagName === 'TEXTAREA' && e.ctrlKey) {
+                        if (e.key === 'f' || e.key === 'F') {
+                            e.preventDefault();
+                            formatJSON();
+                            return;
+                        }
+                    }
+                    return;
+                }
 
                 switch(e.key.toLowerCase()) {
                     case 'a':
@@ -1212,11 +2280,21 @@
                         e.preventDefault();
                         navigateExercise(1);
                         break;
+                    case 's':
+                        if (e.ctrlKey || e.metaKey) {
+                            e.preventDefault();
+                            saveEditorContent();
+                            saveToLocalStorage();
+                            showToast('Saved', 'success');
+                        }
+                        break;
                 }
             });
         }
 
-        // Toast notifications
+        // ========================================
+        // TOAST NOTIFICATIONS
+        // ========================================
         function showToast(message, type = 'info') {
             const toast = document.createElement('div');
             toast.className = `toast ${type}`;
@@ -1227,8 +2305,11 @@
                               type === 'error' ? 'error' :
                               type === 'warning' ? 'warning' : 'info';
 
+            const text = document.createElement('span');
+            text.textContent = message;
+
             toast.appendChild(icon);
-            toast.appendChild(document.createTextNode(message));
+            toast.appendChild(text);
 
             document.body.appendChild(toast);
 
@@ -1237,25 +2318,6 @@
                 setTimeout(() => toast.remove(), 300);
             }, 3000);
         }
-
-        // Auto-update preview when editing
-        document.addEventListener('DOMContentLoaded', () => {
-            const editor = document.getElementById('codeEditor');
-            let timeout;
-
-            editor?.addEventListener('input', () => {
-                clearTimeout(timeout);
-                timeout = setTimeout(() => {
-                    try {
-                        const data = JSON.parse(editor.value);
-                        exercises[currentIndex].core = data;
-                        updatePreview(exercises[currentIndex]);
-                    } catch (e) {
-                        // Invalid JSON, ignore
-                    }
-                }, 500);
-            });
-        });
     </script>
 </body>
 </html>
