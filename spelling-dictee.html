@@ -20,15 +20,16 @@
         }
 
         .spelling-quiz-container {
-            max-width: 900px;
+            max-width: 760px;
             margin: 0 auto;
             padding: 20px;
+            position: relative;
         }
 
         /* Top Bar */
         .quiz-topbar-wrapper {
             width: 100%;
-            max-width: 900px;
+            max-width: 760px;
             margin: 0 auto 24px;
             background: white;
             border-radius: 16px;
@@ -53,7 +54,7 @@
         }
 
         .quiz-breadcrumb a:hover {
-            color: #60A5FA;
+            color: #32C4A0;
         }
 
         .quiz-progress-section {
@@ -79,7 +80,7 @@
         .quiz-progress-track {
             width: 100%;
             height: 8px;
-            background: #E0F2FE;
+            background: #E6F7F3;
             border-radius: 999px;
             overflow: hidden;
             position: relative;
@@ -87,23 +88,35 @@
 
         .quiz-progress-fill {
             height: 100%;
-            background: #60A5FA;
+            background: #32C4A0;
             border-radius: 999px;
             transition: width 0.4s ease;
         }
 
         .quiz-points-pill {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 6px;
-            padding: 6px 14px;
-            background: #E0F2FE;
+            background: linear-gradient(135deg, #FFF4E6 0%, #FFE8D1 100%);
+            color: #FF8A34;
+            padding: 8px 16px;
             border-radius: 999px;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 600;
-            color: #1E40AF;
             white-space: nowrap;
             flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(255, 138, 52, 0.15);
+            border: 1.5px solid #FFD4A8;
+        }
+
+        .quiz-points-pill span:first-child {
+            font-size: 18px;
+            animation: twinkle 2s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.15); opacity: 0.85; }
         }
 
         .quiz-topbar-bottom {
@@ -118,18 +131,24 @@
         }
 
         .quiz-control-btn {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 6px;
-            padding: 8px 16px;
-            border: 1.5px solid;
+            height: 32px;
+            padding: 0 12px;
             border-radius: 999px;
-            font-size: 14px;
-            font-weight: 600;
+            border: 1.5px solid;
+            background: white;
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 500;
             cursor: pointer;
             transition: all 0.2s ease;
-            background: white;
-            height: 36px;
+            opacity: 0.75;
+        }
+
+        .quiz-control-btn:hover {
+            opacity: 1;
         }
 
         .quiz-control-btn.hulp {
@@ -139,35 +158,48 @@
 
         .quiz-control-btn.hulp:hover {
             background: rgba(59, 130, 246, 0.05);
-            border-color: rgba(59, 130, 246, 0.4);
-        }
-
-        .quiz-control-btn.hint {
-            border-color: rgba(245, 158, 11, 0.25);
-            color: #F59E0B;
-        }
-
-        .quiz-control-btn.hint:hover {
-            background: rgba(245, 158, 11, 0.05);
-            border-color: rgba(245, 158, 11, 0.4);
         }
 
         .quiz-control-btn.pauze {
-            border-color: #CFCFCF;
-            color: #666;
-        }
-
-        .quiz-control-btn.pauze:hover {
-            background: rgba(0, 0, 0, 0.03);
+            display: none; /* Hidden - too confusing for kids */
         }
 
         .quiz-control-btn.stoppen {
-            border-color: rgba(249, 115, 115, 0.4);
-            color: #F97373;
+            display: none; /* Hidden - replaced by top-right X button */
         }
 
-        .quiz-control-btn.stoppen:hover {
-            background: rgba(249, 115, 115, 0.05);
+        /* Top-right close button - app-style X */
+        .quiz-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1.5px solid #E5E5E5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            z-index: 1001;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            font-size: 20px;
+            color: #666;
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        .quiz-close-btn:hover {
+            background: #F5F5F5;
+            border-color: #999;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .quiz-close-btn:active {
+            transform: scale(0.95);
         }
 
         /* Spelling Question Card */
@@ -348,10 +380,10 @@
             box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
         }
 
-        /* Feedback Card - Aligned with Getal & Bewerking */
+        /* Feedback Card - Aligned with other quiz pages */
         .feedback-card {
             width: 100%;
-            max-width: 640px;
+            max-width: 760px;
             margin: 24px auto;
             background: white;
             border-radius: 20px;
@@ -476,6 +508,42 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
+            .quiz-close-btn {
+                top: 16px;
+                right: 16px;
+                width: 36px;
+                height: 36px;
+                font-size: 18px;
+            }
+
+            .quiz-topbar-wrapper {
+                padding: 16px;
+                margin-bottom: 16px;
+            }
+
+            .quiz-progress-section {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+
+            .quiz-progress-text {
+                font-size: 14px;
+                text-align: center;
+            }
+
+            .quiz-progress-track-wrapper {
+                order: 2;
+                width: 100%;
+            }
+
+            .quiz-points-pill {
+                order: 3;
+                font-size: 14px;
+                padding: 6px 12px;
+                align-self: center;
+            }
+
             .spelling-question-card {
                 padding: 24px;
             }
@@ -496,11 +564,20 @@
             .correct-answer-display {
                 font-size: 24px;
             }
+
+            .feedback-card {
+                padding: 20px 24px;
+                margin-left: 16px;
+                margin-right: 16px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="spelling-quiz-container" id="quizContainer">
+        <!-- App-style close button (top-right X) -->
+        <button class="quiz-close-btn" onclick="stopQuiz()" title="Sluiten">✕</button>
+
         <!-- Top Bar with Progress -->
         <div class="quiz-topbar-wrapper">
             <nav class="quiz-breadcrumb">
@@ -519,8 +596,8 @@
                     </div>
                 </div>
                 <div class="quiz-points-pill">
-                    <span>✓</span>
-                    <span><span id="totalCorrect">0</span> goed</span>
+                    <span>⭐</span>
+                    <span><span id="totalCorrect">0</span> punten</span>
                 </div>
             </div>
 
@@ -566,7 +643,7 @@
             </div>
 
             <!-- Check Answer Button -->
-            <button class="btn btn-primary-action" id="checkButton" onclick="checkAnswer()">
+            <button class="btn-primary" id="checkButton" onclick="checkAnswer()">
                 <i class="material-icons">check_circle</i> Check mijn antwoord!
             </button>
 
@@ -599,7 +676,7 @@
                     </div>
                 </div>
 
-                <button class="btn btn-primary-action hidden" id="nextButton" onclick="nextQuestion()">
+                <button class="btn-next hidden" id="nextButton" onclick="nextQuestion()">
                     Volgende! <i class="material-icons">arrow_forward</i>
                 </button>
             </div>
