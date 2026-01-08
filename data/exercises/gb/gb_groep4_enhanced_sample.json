@@ -1,0 +1,158 @@
+[
+  {
+    "id": 201,
+    "title": "Optellen met overstappen",
+    "theme": "basis-rekenen",
+    "content": "Bereken:",
+    "metadata": {
+      "schema_version": "2.0.0",
+      "enhanced": true,
+      "cognitive_level": "apply",
+      "difficulty": {
+        "complexity_score": 2.5,
+        "grade_level": 4
+      }
+    },
+    "questions": [
+      {
+        "question": "$47 + 28 = ?$",
+        "skill": "optellen",
+        "strategy": "getalsplitsing",
+        "hint": "Tel eerst de tientallen bij elkaar op.",
+        "hints": {
+          "tier1_procedural": {
+            "text": "Begin met het optellen van de tientallen.",
+            "reveal_percentage": 0.2,
+            "type": "procedural"
+          },
+          "tier2_conceptual": {
+            "text": "Splits de getallen in tientallen en eenheden: $47 = 40 + 7$ en $28 = 20 + 8$",
+            "reveal_percentage": 0.5,
+            "type": "conceptual"
+          },
+          "tier3_worked_example": {
+            "text": "$40 + 20 = 60$, dan $7 + 8 = 15$, dus $60 + 15 = 75$",
+            "reveal_percentage": 0.9,
+            "type": "worked_example"
+          }
+        },
+        "options": ["65", "67", "75", "77"],
+        "correct": 2,
+        "feedback": {
+          "correct": {
+            "explanation": "Helemaal goed! Je hebt de getallen slim gesplitst: $40 + 20 = 60$, en $7 + 8 = 15$, dus $60 + 15 = 75$.",
+            "skill_reinforcement": "Je beheerst het optellen met overstappen prima! Deze strategie van getalsplitsing helpt je bij grotere sommen."
+          },
+          "incorrect": {
+            "by_option": {
+              "0": {
+                "explanation": "Let op: $7 + 8 = 15$, niet $5$. Je bent vergeten de $1$ van de $15$ bij de tientallen op te tellen.",
+                "hint": "Bij $7 + 8$ krijg je $15$. Dat is $1$ tiental en $5$ eenheden.",
+                "misconception": "Vergeten om over te stappen bij de eenheden",
+                "error_type": "rekenfout_basis"
+              },
+              "1": {
+                "explanation": "Bijna! Je hebt misschien $40 + 20 = 60$ gedaan, en $7 + 8 = 15$, maar dan moet je $60 + 15$ uitrekenen, niet $60 + 7$.",
+                "hint": "$7 + 8 = 15$, dus je moet $60 + 15$ berekenen.",
+                "misconception": "Fout bij het samenvoegen van tientallen en eenheden",
+                "error_type": "conceptfout"
+              },
+              "3": {
+                "explanation": "Let op: $40 + 20 = 60$, niet $70$. Begin opnieuw met het optellen van de tientallen.",
+                "hint": "Check je rekenwerk: $4$ tientallen $+ 2$ tientallen $= 6$ tientallen.",
+                "misconception": "Fout in basis optelling van tientallen",
+                "error_type": "rekenfout_basis"
+              }
+            },
+            "workedExample": {
+              "steps": [
+                "Stap 1: Split beide getallen → $47 = 40 + 7$ en $28 = 20 + 8$",
+                "Stap 2: Tel de tientallen op → $40 + 20 = 60$",
+                "Stap 3: Tel de eenheden op → $7 + 8 = 15$",
+                "Stap 4: Tel alles samen → $60 + 15 = 75$",
+                "Antwoord: $75$"
+              ]
+            }
+          }
+        },
+        "extra_info": {
+          "tips": [
+            "Tel eerst de tientallen: 40 + 20 = 60",
+            "Tel daarna de eenheden: 7 + 8 = 15",
+            "60 + 15 = 75"
+          ]
+        }
+      },
+      {
+        "question": "$83 - 47 = ?$",
+        "skill": "aftrekken",
+        "strategy": "lenen",
+        "hint": "Je moet lenen van de tientallen.",
+        "hints": {
+          "tier1_procedural": {
+            "text": "Begin met de eenheden. Kun je $7$ van $3$ afhalen?",
+            "reveal_percentage": 0.2,
+            "type": "procedural"
+          },
+          "tier2_conceptual": {
+            "text": "Omdat $3 < 7$, moet je $1$ tiental lenen. Dan wordt $3$ eigenlijk $13$.",
+            "reveal_percentage": 0.5,
+            "type": "conceptual"
+          },
+          "tier3_worked_example": {
+            "text": "Leen $1$ tiental: $13 - 7 = 6$ (eenheden). Dan: $70 - 40 = 30$ (tientallen). Samen: $36$",
+            "reveal_percentage": 0.9,
+            "type": "worked_example"
+          }
+        },
+        "options": ["36", "44", "46", "54"],
+        "correct": 0,
+        "feedback": {
+          "correct": {
+            "explanation": "Uitstekend! Je hebt correct geleend: eerst $13 - 7 = 6$, dan $70 - 40 = 30$, dus $30 + 6 = 36$.",
+            "skill_reinforcement": "Je begrijpt het lenen bij aftrekken goed! Dit is een belangrijke vaardigheid voor moeilijkere sommen."
+          },
+          "incorrect": {
+            "by_option": {
+              "1": {
+                "explanation": "Je hebt waarschijnlijk $40 - 7$ gedaan in plaats van $13 - 7$. Vergeet niet te lenen!",
+                "hint": "Omdat $3 < 7$, moet je eerst $1$ tiental lenen voordat je aftrekt.",
+                "misconception": "Niet geleerd van de tientallen",
+                "error_type": "conceptfout"
+              },
+              "2": {
+                "explanation": "Let op je rekenwerk bij de eenheden. $13 - 7 = 6$, niet $16 - 7$.",
+                "hint": "Als je $1$ tiental leent bij $3$, krijg je $13$, niet $16$.",
+                "misconception": "Fout bij het lenen - verkeerde waarde gebruikt",
+                "error_type": "rekenfout_basis"
+              },
+              "3": {
+                "explanation": "Dit antwoord lijkt op het verschil tussen de tientallen zonder de eenheden correct te verwerken.",
+                "hint": "Doe eerst de eenheden: $13 - 7$. Dan de tientallen: $70 - 40$.",
+                "misconception": "Verkeerde volgorde of stappen overgeslagen",
+                "error_type": "conceptfout"
+              }
+            },
+            "workedExample": {
+              "steps": [
+                "Stap 1: Kijk naar de eenheden → $3 - 7$ kan niet",
+                "Stap 2: Leen $1$ tiental → $83$ wordt $70 + 13$",
+                "Stap 3: Trek eenheden af → $13 - 7 = 6$",
+                "Stap 4: Trek tientallen af → $70 - 40 = 30$",
+                "Stap 5: Voeg samen → $30 + 6 = 36$",
+                "Antwoord: $36$"
+              ]
+            }
+          }
+        },
+        "extra_info": {
+          "tips": [
+            "Leen 1 tiental: 13 - 7 = 6",
+            "70 - 40 = 30",
+            "Antwoord: 36"
+          ]
+        }
+      }
+    ]
+  }
+]

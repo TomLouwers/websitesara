@@ -1,0 +1,183 @@
+[
+  {
+    "id": 1,
+    "title": "De nieuwe hamster",
+    "theme": "Dieren / gezin",
+    "text_type": "verhalend",
+    "text": "Sofie krijgt op een zaterdag een nieuwe hamster. Ze noemt hem Nibbel, omdat hij graag op zonnebloempitten kauwt. Sofie maakt een klein huisje van karton en legt er zachte wol in. Nibbel rent meteen naar binnen om te slapen. Later die middag wil Sofie hem leren lopen in een klein wiel. Maar Nibbel begrijpt het nog niet goed en loopt de verkeerde kant op. Sofie moet lachen en zet voorzichtig wat zaadjes in het wiel. Dan begint Nibbel eindelijk te rennen. Aan het einde van de dag schrijft Sofie in haar dagboek dat ze blij is met haar nieuwe huisdier.",
+    "metadata": {
+      "word_count": 134,
+      "sentence_count": 9,
+      "schema_version": "2.0.0",
+      "enhanced": true
+    },
+    "questions": [
+      {
+        "item_id": "1a",
+        "skill": "letterlijk",
+        "strategy": "informatie_zoeken",
+        "question": "Waarom noemt Sofie de hamster Nibbel?",
+        "hint": "Lees waarom de hamster die naam krijgt.",
+        "hints": {
+          "tier1_procedural": {
+            "text": "Kijk naar de zin waar Nibbel voor het eerst genoemd wordt.",
+            "reveal_percentage": 0.2,
+            "type": "procedural"
+          },
+          "tier2_conceptual": {
+            "text": "Let op het woord 'omdat' - dat geeft altijd een reden.",
+            "reveal_percentage": 0.5,
+            "type": "conceptual"
+          },
+          "tier3_worked_example": {
+            "text": "De zin is: 'Ze noemt hem Nibbel, omdat hij graag op zonnebloempitten kauwt.' Het woord 'nibbelen' betekent knabbelen.",
+            "reveal_percentage": 0.9,
+            "type": "worked_example"
+          }
+        },
+        "options": [
+          {
+            "label": "A",
+            "text": "Hij slaapt veel.",
+            "is_correct": false
+          },
+          {
+            "label": "B",
+            "text": "Hij knabbelt graag aan pitten.",
+            "is_correct": true
+          },
+          {
+            "label": "C",
+            "text": "Hij rent heel snel.",
+            "is_correct": false
+          },
+          {
+            "label": "D",
+            "text": "Hij is geel van kleur.",
+            "is_correct": false
+          }
+        ],
+        "feedback": {
+          "correct": {
+            "explanation": "Goed gevonden! In de tekst staat: 'omdat hij graag op zonnebloempitten kauwt'. Je hebt de belangrijke informatie goed gelezen.",
+            "skill_reinforcement": "Je kunt letterlijke informatie goed vinden in de tekst! Deze vaardigheid is heel belangrijk bij het begrijpen van wat je leest."
+          },
+          "incorrect": {
+            "by_option": {
+              "A": {
+                "explanation": "Nibbel slaapt wel in het huisje, maar dat is niet de reden voor zijn naam.",
+                "hint": "Zoek in de tekst naar het woord 'omdat' na de naam Nibbel.",
+                "misconception": "Verwarring tussen gebeurtenissen in het verhaal",
+                "error_type": "letterlijk_gemist"
+              },
+              "C": {
+                "explanation": "Nibbel rent inderdaad, maar dat gebeurt pas later in het verhaal en is niet de reden voor zijn naam.",
+                "hint": "De naam wordt uitgelegd in de eerste zin over Nibbel.",
+                "misconception": "Focus op latere gebeurtenissen in plaats van de directe verklaring",
+                "error_type": "letterlijk_gemist"
+              },
+              "D": {
+                "explanation": "Er staat niets in de tekst over de kleur van Nibbel.",
+                "hint": "Zoek naar informatie die in de tekst staat, niet wat je denkt.",
+                "misconception": "Informatie toevoegen die niet in de tekst staat",
+                "error_type": "letterlijk_gemist"
+              }
+            },
+            "workedExample": {
+              "steps": [
+                "Stap 1: Lees de zin: 'Ze noemt hem Nibbel, omdat...'",
+                "Stap 2: Het woord 'omdat' geeft de reden voor iets",
+                "Stap 3: Wat staat er na 'omdat'? → 'hij graag op zonnebloempitten kauwt'",
+                "Stap 4: Knabbelen = nibbelen → daarom heet hij Nibbel!",
+                "Antwoord: B - Hij knabbelt graag aan pitten."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "item_id": "1b",
+        "skill": "inferentieel",
+        "strategy": "conclusies_trekken",
+        "question": "Waarom legt Sofie zachte wol in het huisje?",
+        "hint": "Waar ligt een dier graag?",
+        "hints": {
+          "tier1_procedural": {
+            "text": "Denk na over waarom je zachte dingen in een bed legt.",
+            "reveal_percentage": 0.2,
+            "type": "procedural"
+          },
+          "tier2_conceptual": {
+            "text": "Zachte dingen gebruiken we voor comfort. Wat zou een hamster comfortabel vinden?",
+            "reveal_percentage": 0.5,
+            "type": "conceptual"
+          },
+          "tier3_worked_example": {
+            "text": "Wol is zacht en warm. Net zoals wij een zacht kussen gebruiken, maakt Sofie het bed van Nibbel comfortabel.",
+            "reveal_percentage": 0.9,
+            "type": "worked_example"
+          }
+        },
+        "options": [
+          {
+            "label": "A",
+            "text": "Om het huisje te versieren.",
+            "is_correct": false
+          },
+          {
+            "label": "B",
+            "text": "Om het warm en zacht te maken.",
+            "is_correct": true
+          },
+          {
+            "label": "C",
+            "text": "Omdat hamsters wol eten.",
+            "is_correct": false
+          },
+          {
+            "label": "D",
+            "text": "Omdat het anders te zwaar is.",
+            "is_correct": false
+          }
+        ],
+        "feedback": {
+          "correct": {
+            "explanation": "Heel goed! Je hebt goed nagedacht. Zachte wol maakt het huisje comfortabel voor Nibbel om te slapen, net zoals jij graag op een zacht kussen slaapt.",
+            "skill_reinforcement": "Je kunt goed conclusies trekken uit wat er staat! Dit heet inferentieel lezen en dat doe je prima."
+          },
+          "incorrect": {
+            "by_option": {
+              "A": {
+                "explanation": "Versieren zou kunnen, maar denk eens aan waarom Sofie het huisje maakt: voor het comfort van Nibbel, niet om het mooi te maken.",
+                "hint": "Waarom leg je iets zachts in een bed?",
+                "misconception": "Focus op uiterlijk in plaats van functie",
+                "error_type": "inferentie_fout"
+              },
+              "C": {
+                "explanation": "Hamsters eten geen wol! Ze eten zaadjes en pitten, zoals in de tekst staat.",
+                "hint": "Wat staat er in de tekst over wat Nibbel eet?",
+                "misconception": "Onjuiste kennis over hamsters toevoegen",
+                "error_type": "inferentie_fout"
+              },
+              "D": {
+                "explanation": "Het gewicht van het huisje speelt geen rol in dit verhaal. Denk aan het comfort.",
+                "hint": "Waar gebruikt Nibbel het huisje voor?",
+                "misconception": "Irrelevante factor uit de tekst",
+                "error_type": "inferentie_fout"
+              }
+            },
+            "workedExample": {
+              "steps": [
+                "Stap 1: Wat doet Nibbel in het huisje? → Hij gaat slapen",
+                "Stap 2: Waar slaap je prettig op? → Op iets zachts",
+                "Stap 3: Wat is wol? → Zacht en warm materiaal",
+                "Stap 4: Waarom legt Sofie wol in het huisje? → Om het warm en zacht te maken!",
+                "Antwoord: B - Om het warm en zacht te maken."
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+]
