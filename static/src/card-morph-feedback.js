@@ -21,13 +21,15 @@ class CardMorphFeedback {
    *
    * @param {object} params - Configuration object
    * @param {boolean} params.isCorrect - Whether answer was correct
-   * @param {string} params.insight - The ONE Insight sentence
-   * @param {string} params.confirmation - Answer confirmation text
+   * @param {string} params.insight - The ONE Insight sentence (legacy)
+   * @param {string} params.confirmation - Answer confirmation text (legacy)
+   * @param {object} params.question - The full question object (NEW - for enhanced feedback)
+   * @param {object} params.selectedOption - The selected option object (NEW - for per-option feedback)
    * @param {HTMLElement} params.questionCard - The question card element to morph
    * @param {HTMLElement} params.nextButton - The "Volgende" button
    * @param {Function} params.onProceed - Callback when user can proceed
    */
-  morph({ isCorrect, insight, confirmation, questionCard, nextButton, onProceed }) {
+  morph({ isCorrect, insight, confirmation, question, selectedOption, questionCard, nextButton, onProceed }) {
     this.feedbackState = isCorrect ? 'correct' : 'incorrect';
     this.canProceed = isCorrect; // Correct answers can proceed immediately
 
@@ -41,11 +43,21 @@ class CardMorphFeedback {
 
     // Step 2: After 125ms (half of 250ms), swap content
     setTimeout(() => {
-      this.renderFeedbackContent(questionCard, {
-        isCorrect,
-        insight,
-        confirmation
-      });
+      // Check if enhanced feedback schema exists
+      if (question && question.feedback) {
+        this.renderEnhancedFeedback(questionCard, {
+          isCorrect,
+          question,
+          selectedOption
+        });
+      } else {
+        // Fallback to legacy rendering
+        this.renderFeedbackContent(questionCard, {
+          isCorrect,
+          insight,
+          confirmation
+        });
+      }
 
       // Add flip-in animation
       questionCard.classList.remove('card-flip-out');
@@ -63,7 +75,7 @@ class CardMorphFeedback {
   }
 
   /**
-   * Renders feedback content inside the card
+   * Renders feedback content inside the card (LEGACY)
    *
    * @param {HTMLElement} card - The card element
    * @param {object} content - Feedback content
@@ -93,6 +105,125 @@ class CardMorphFeedback {
         </div>
       </div>
     `;
+  }
+
+  /**
+   * Renders ENHANCED feedback with detailed explanations and worked examples (Schema V2.0)
+   *
+   * @param {HTMLElement} card - The card element
+   * @param {object} params - Enhanced feedback parameters
+   * @param {boolean} params.isCorrect - Whether answer was correct
+   * @param {object} params.question - The question object with feedback field
+   * @param {object} params.selectedOption - The selected option object
+   */
+  renderEnhancedFeedback(card, { isCorrect, question, selectedOption }) {
+    const stateClass = isCorrect ? 'feedback-correct' : 'feedback-incorrect';
+    const emoji = isCorrect ? '✨' : '🤔';
+    const header = isCorrect ? 'Helemaal goed!' : 'Laten we het samen bekijken';
+    const bgColor = isCorrect ? '#E8F5E9' : '#FFF3E0';
+
+    let explanationHTML = '';
+    let reinforcementHTML = '';
+    let workedExampleHTML = '';
+
+    if (isCorrect && question.feedback.correct) {
+      // Correct answer feedback
+      explanationHTML = `
+        <div class="feedback-morph-insight">
+          <p class="feedback-morph-insight-text">
+            ${this.renderWithMath(question.feedback.correct.explanation || 'Goed gedaan!')}
+          </p>
+        </div>
+      `;
+
+      if (question.feedback.correct.skill_reinforcement) {
+        reinforcementHTML = `
+          <div class="feedback-morph-reinforcement">
+            <p class="feedback-morph-reinforcement-text">
+              <strong>💪 Wat je goed doet:</strong> ${this.renderWithMath(question.feedback.correct.skill_reinforcement)}
+            </p>
+          </div>
+        `;
+      }
+    } else if (!isCorrect && question.feedback.incorrect) {
+      // Incorrect answer feedback
+      const optionKey = selectedOption ? selectedOption.label : null;
+      const optionFeedback = optionKey && question.feedback.incorrect.by_option ?
+                             question.feedback.incorrect.by_option[optionKey] : null;
+
+      if (optionFeedback) {
+        explanationHTML = `
+          <div class="feedback-morph-insight feedback-incorrect-insight">
+            <p class="feedback-morph-insight-text">
+              ${this.renderWithMath(optionFeedback.explanation)}
+            </p>
+            ${optionFeedback.hint ? `
+              <p class="feedback-morph-hint">
+                <strong>💡 Tip:</strong> ${this.renderWithMath(optionFeedback.hint)}
+              </p>
+            ` : ''}
+          </div>
+        `;
+      }
+
+      // Worked example (for incorrect answers)
+      if (question.feedback.incorrect.workedExample &&
+          question.feedback.incorrect.workedExample.steps) {
+        const steps = question.feedback.incorrect.workedExample.steps;
+        workedExampleHTML = `
+          <div class="feedback-morph-worked-example">
+            <h4 class="feedback-morph-worked-example-title">
+              📝 Zo los je het op:
+            </h4>
+            <ol class="feedback-morph-steps">
+              ${steps.map(step => `
+                <li class="feedback-morph-step">${this.renderWithMath(step)}</li>
+              `).join('')}
+            </ol>
+          </div>
+        `;
+      }
+    }
+
+    card.innerHTML = `
+      <div class="feedback-morph-container ${stateClass}" style="background-color: ${bgColor};">
+        <!-- Header -->
+        <div class="feedback-morph-header">
+          <span class="feedback-morph-emoji">${emoji}</span>
+          <h3 class="feedback-morph-title">${header}</h3>
+        </div>
+
+        <!-- Explanation -->
+        ${explanationHTML}
+
+        <!-- Skill Reinforcement (correct answers) -->
+        ${reinforcementHTML}
+
+        <!-- Worked Example (incorrect answers) -->
+        ${workedExampleHTML}
+      </div>
+    `;
+  }
+
+  /**
+   * Renders text with KaTeX math notation if available
+   * Falls back to plain text if KaTeX is not loaded
+   *
+   * @param {string} text - Text that may contain math notation ($...$ or $$...$$)
+   * @returns {string} HTML with rendered math
+   */
+  renderWithMath(text) {
+    if (!text) return '';
+
+    // Check if KaTeX is loaded and renderMathInText function exists
+    if (typeof renderMathInText === 'function') {
+      return renderMathInText(text);
+    }
+
+    // Fallback: return escaped text
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
   }
 
   /**
@@ -342,6 +473,71 @@ const CARD_MORPH_STYLES = `
   font-style: italic;
 }
 
+/* Skill Reinforcement (for correct answers) */
+.feedback-morph-reinforcement {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(129, 199, 132, 0.15);
+  border-radius: 6px;
+  border-left: 3px solid #81C784;
+}
+
+.feedback-morph-reinforcement-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #2c3e50;
+}
+
+/* Worked Example (for incorrect answers) */
+.feedback-morph-worked-example {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: white;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+}
+
+.feedback-morph-worked-example-title {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3498db;
+}
+
+.feedback-morph-steps {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style: decimal;
+}
+
+.feedback-morph-step {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.feedback-morph-step:last-child {
+  margin-bottom: 0;
+}
+
+/* Hint within incorrect feedback */
+.feedback-morph-hint {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(255, 235, 59, 0.2);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Incorrect insight styling */
+.feedback-incorrect-insight {
+  border-left-color: #FFB74D;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .feedback-morph-container {
@@ -360,6 +556,18 @@ const CARD_MORPH_STYLES = `
     font-size: 1.5rem;
     width: 2rem;
     height: 2rem;
+  }
+
+  .feedback-morph-worked-example {
+    padding: 1rem;
+  }
+
+  .feedback-morph-steps {
+    padding-left: 1.25rem;
+  }
+
+  .feedback-morph-step {
+    font-size: 0.9rem;
   }
 }
 `;
