@@ -220,16 +220,18 @@ const CONFIG = {
     // Enhanced Format Configuration (Schema 2.0.0 with split core/support files)
     enhancedFormat: {
         enabled: {
-            wereldorientatie: true,  // Enable enhanced format for WO
-            begrijpendlezen: false,
-            basisvaardigheden: false,
-            woordenschat: false,
-            werkwoordspelling: false,
-            breuken: true,  // Enable enhanced format for Breuken & Procenten
-            meetkunde: true,  // Enable enhanced format for Meetkunde
-            studievaardigheden: true  // Enable enhanced format for Studievaardigheden
+            wereldorientatie: true,
+            begrijpendlezen: true,
+            basisvaardigheden: true,
+            woordenschat: true,
+            werkwoordspelling: true,
+            breuken: true,
+            meetkunde: true,
+            studievaardigheden: true,
+            verhaaltjessommen: true,
+            dmt: true
         },
-        // Support file source: 'v2' uses data-v2, 'enhanced' uses data-v2-enhanced
+        // Support file source: 'v2' uses data-v2 (enhanced files now co-located)
         supportSource: 'v2'
     },
 
@@ -237,54 +239,150 @@ const CONFIG = {
     subjectFilePaths: {
         begrijpendlezen: {
             groep3: {
-                m3: 'data/exercises/bl/bl_groep3_m3_1.json',
-                e3: 'data/exercises/bl/bl_groep3_e3_1.json'
+                m3: {
+                    core: 'data-v2/exercises/bl/bl_groep3_m3_1_core.json',
+                    support: 'data-v2/exercises/bl/bl_groep3_m3_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/bl/bl_groep3_m3_1_support.json'
+                },
+                e3: {
+                    core: 'data-v2/exercises/bl/bl_groep3_e3_1_core.json',
+                    support: 'data-v2/exercises/bl/bl_groep3_e3_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/bl/bl_groep3_e3_1_support.json'
+                }
             },
             groep4: {
-                m4: 'data/exercises/bl/bl_groep4_m4_1.json',
-                e4: 'data/exercises/bl/bl_groep4_e4_1.json'
+                m4: {
+                    core: 'data-v2/exercises/bl/bl_groep4_m4_1_core.json',
+                    support: 'data-v2/exercises/bl/bl_groep4_m4_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/bl/bl_groep4_m4_1_support.json'
+                },
+                e4: {
+                    core: 'data-v2/exercises/bl/bl_groep4_e4_1_core.json',
+                    support: 'data-v2/exercises/bl/bl_groep4_e4_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/bl/bl_groep4_e4_1_support.json'
+                }
             },
             groep5: {
-                m5: 'data/exercises/bl/bl_groep5_m5_1.json',
-                e5: 'data/exercises/bl/bl_groep5_e5_1.json'
+                m5: {
+                    core: 'data-v2/exercises/bl/bl_groep5_m5_1_core.json',
+                    support: 'data-v2/exercises/bl/bl_groep5_m5_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/bl/bl_groep5_m5_1_support.json'
+                },
+                e5: {
+                    core: 'data-v2/exercises/bl/bl_groep5_e5_1_core.json',
+                    support: 'data-v2/exercises/bl/bl_groep5_e5_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/bl/bl_groep5_e5_1_support.json'
+                }
             },
             groep6: {
-                m6: 'data/exercises/bl/bl_groep6_m6_1.json',
-                e6: 'data/exercises/bl/bl_groep6_e6_1.json'
+                m6: {
+                    core: 'data-v2/exercises/bl/bl_groep6_m6_1_core.json',
+                    support: 'data-v2/exercises/bl/bl_groep6_m6_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/bl/bl_groep6_m6_1_support.json'
+                },
+                e6: {
+                    core: 'data-v2/exercises/bl/bl_groep6_e6_1_core.json',
+                    support: 'data-v2/exercises/bl/bl_groep6_e6_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/bl/bl_groep6_e6_1_support.json'
+                }
             },
             groep7: {
-                m7: 'data/exercises/bl/bl_groep7_m7_1.json',
-                e7: 'data/exercises/bl/bl_groep7_e7_1.json'
+                m7: {
+                    core: 'data-v2/exercises/bl/bl_groep7_m7_1_core.json',
+                    support: 'data-v2/exercises/bl/bl_groep7_m7_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/bl/bl_groep7_m7_1_support.json'
+                },
+                e7: {
+                    core: 'data-v2/exercises/bl/bl_groep7_e7_1_core.json',
+                    support: 'data-v2/exercises/bl/bl_groep7_e7_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/bl/bl_groep7_e7_1_support.json'
+                }
             },
             groep8: {
-                m8: 'data/exercises/bl/bl_groep8_m8_1.json',
-                e8: 'data/exercises/bl/bl_groep8_e8_1.json'
+                m8: {
+                    core: 'data-v2/exercises/bl/bl_groep8_m8_1_core.json',
+                    support: 'data-v2/exercises/bl/bl_groep8_m8_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/bl/bl_groep8_m8_1_support.json'
+                },
+                e8: {
+                    core: 'data-v2/exercises/bl/bl_groep8_e8_1_core.json',
+                    support: 'data-v2/exercises/bl/bl_groep8_e8_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/bl/bl_groep8_e8_1_support.json'
+                }
             }
         },
         basisvaardigheden: {
             groep3: {
-                m3: 'data/exercises/gb/gb_groep3_m3.json',
-                e3: 'data/exercises/gb/gb_groep3_e3.json'
+                m3: {
+                    core: 'data-v2/exercises/gb/gb_groep3_m3_core.json',
+                    support: 'data-v2/exercises/gb/gb_groep3_m3_support.json',
+                    supportEnhanced: 'data-v2/exercises/gb/gb_groep3_m3_support.json'
+                },
+                e3: {
+                    core: 'data-v2/exercises/gb/gb_groep3_e3_core.json',
+                    support: 'data-v2/exercises/gb/gb_groep3_e3_support.json',
+                    supportEnhanced: 'data-v2/exercises/gb/gb_groep3_e3_support.json'
+                }
             },
             groep4: {
-                m4: 'data/exercises/gb/gb_groep4_m4.json',
-                e4: 'data/exercises/gb/gb_groep4_e4.json'
+                m4: {
+                    core: 'data-v2/exercises/gb/gb_groep4_m4_core.json',
+                    support: 'data-v2/exercises/gb/gb_groep4_m4_support.json',
+                    supportEnhanced: 'data-v2/exercises/gb/gb_groep4_m4_support.json'
+                },
+                e4: {
+                    core: 'data-v2/exercises/gb/gb_groep4_e4_core.json',
+                    support: 'data-v2/exercises/gb/gb_groep4_e4_support.json',
+                    supportEnhanced: 'data-v2/exercises/gb/gb_groep4_e4_support.json'
+                }
             },
             groep5: {
-                m5: 'data/exercises/gb/gb_groep5_m5.json',
-                e5: 'data/exercises/gb/gb_groep5_e5.json'
+                m5: {
+                    core: 'data-v2/exercises/gb/gb_groep5_m5_core.json',
+                    support: 'data-v2/exercises/gb/gb_groep5_m5_support.json',
+                    supportEnhanced: 'data-v2/exercises/gb/gb_groep5_m5_support.json'
+                },
+                e5: {
+                    core: 'data-v2/exercises/gb/gb_groep5_e5_core.json',
+                    support: 'data-v2/exercises/gb/gb_groep5_e5_support.json',
+                    supportEnhanced: 'data-v2/exercises/gb/gb_groep5_e5_support.json'
+                }
             },
             groep6: {
-                m6: 'data/exercises/gb/gb_groep6_m6.json',
-                e6: 'data/exercises/gb/gb_groep6_e6.json'
+                m6: {
+                    core: 'data-v2/exercises/gb/gb_groep6_m6_core.json',
+                    support: 'data-v2/exercises/gb/gb_groep6_m6_support.json',
+                    supportEnhanced: 'data-v2/exercises/gb/gb_groep6_m6_support.json'
+                },
+                e6: {
+                    core: 'data-v2/exercises/gb/gb_groep6_e6_core.json',
+                    support: 'data-v2/exercises/gb/gb_groep6_e6_support.json',
+                    supportEnhanced: 'data-v2/exercises/gb/gb_groep6_e6_support.json'
+                }
             },
             groep7: {
-                m7: 'data/exercises/gb/gb_groep7_m7.json',
-                e7: 'data/exercises/gb/gb_groep7_e7.json'
+                m7: {
+                    core: 'data-v2/exercises/gb/gb_groep7_m7_core.json',
+                    support: 'data-v2/exercises/gb/gb_groep7_m7_support.json',
+                    supportEnhanced: 'data-v2/exercises/gb/gb_groep7_m7_support.json'
+                },
+                e7: {
+                    core: 'data-v2/exercises/gb/gb_groep7_e7_core.json',
+                    support: 'data-v2/exercises/gb/gb_groep7_e7_support.json',
+                    supportEnhanced: 'data-v2/exercises/gb/gb_groep7_e7_support.json'
+                }
             },
             groep8: {
-                m8: 'data/exercises/gb/gb_groep8_e8.json',
-                e8: 'data/exercises/gb/gb_groep8_e8.json'
+                m8: {
+                    core: 'data-v2/exercises/gb/gb_groep8_m8_core.json',
+                    support: 'data-v2/exercises/gb/gb_groep8_m8_support.json',
+                    supportEnhanced: 'data-v2/exercises/gb/gb_groep8_m8_support.json'
+                },
+                e8: {
+                    core: 'data-v2/exercises/gb/gb_groep8_e8_core.json',
+                    support: 'data-v2/exercises/gb/gb_groep8_e8_support.json',
+                    supportEnhanced: 'data-v2/exercises/gb/gb_groep8_e8_support.json'
+                }
             }
         },
         wereldorientatie: {
@@ -293,13 +391,13 @@ const CONFIG = {
                     legacy: 'data/exercises/wo/groep3_wo_150.json',
                     core: 'data-v2/exercises/wo/groep3_wo_150_core.json',
                     support: 'data-v2/exercises/wo/groep3_wo_150_support.json',
-                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep3_wo_150_support.json'
+                    supportEnhanced: 'data-v2/exercises/wo/groep3_wo_150_support.json'
                 },
                 e3: {
                     legacy: 'data/exercises/wo/groep3_wo_150.json',
                     core: 'data-v2/exercises/wo/groep3_wo_150_core.json',
                     support: 'data-v2/exercises/wo/groep3_wo_150_support.json',
-                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep3_wo_150_support.json'
+                    supportEnhanced: 'data-v2/exercises/wo/groep3_wo_150_support.json'
                 }
             },
             groep4: {
@@ -307,13 +405,13 @@ const CONFIG = {
                     legacy: 'data/exercises/wo/groep4_wo_150.json',
                     core: 'data-v2/exercises/wo/groep4_wo_150_core.json',
                     support: 'data-v2/exercises/wo/groep4_wo_150_support.json',
-                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep4_wo_150_support.json'
+                    supportEnhanced: 'data-v2/exercises/wo/groep4_wo_150_support.json'
                 },
                 e4: {
                     legacy: 'data/exercises/wo/groep4_wo_150.json',
                     core: 'data-v2/exercises/wo/groep4_wo_150_core.json',
                     support: 'data-v2/exercises/wo/groep4_wo_150_support.json',
-                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep4_wo_150_support.json'
+                    supportEnhanced: 'data-v2/exercises/wo/groep4_wo_150_support.json'
                 }
             },
             groep5: {
@@ -321,13 +419,13 @@ const CONFIG = {
                     legacy: 'data/exercises/wo/groep5_wo_150.json',
                     core: 'data-v2/exercises/wo/groep5_wo_150_core.json',
                     support: 'data-v2/exercises/wo/groep5_wo_150_support.json',
-                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep5_wo_150_support.json'
+                    supportEnhanced: 'data-v2/exercises/wo/groep5_wo_150_support.json'
                 },
                 e5: {
                     legacy: 'data/exercises/wo/groep5_wo_150.json',
                     core: 'data-v2/exercises/wo/groep5_wo_150_core.json',
                     support: 'data-v2/exercises/wo/groep5_wo_150_support.json',
-                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep5_wo_150_support.json'
+                    supportEnhanced: 'data-v2/exercises/wo/groep5_wo_150_support.json'
                 }
             },
             groep6: {
@@ -335,13 +433,13 @@ const CONFIG = {
                     legacy: 'data/exercises/wo/groep6_wo_150.json',
                     core: 'data-v2/exercises/wo/groep6_wo_150_core.json',
                     support: 'data-v2/exercises/wo/groep6_wo_150_support.json',
-                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep6_wo_150_support.json'
+                    supportEnhanced: 'data-v2/exercises/wo/groep6_wo_150_support.json'
                 },
                 e6: {
                     legacy: 'data/exercises/wo/groep6_wo_150.json',
                     core: 'data-v2/exercises/wo/groep6_wo_150_core.json',
                     support: 'data-v2/exercises/wo/groep6_wo_150_support.json',
-                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep6_wo_150_support.json'
+                    supportEnhanced: 'data-v2/exercises/wo/groep6_wo_150_support.json'
                 }
             },
             groep7: {
@@ -349,13 +447,13 @@ const CONFIG = {
                     legacy: 'data/exercises/wo/groep7_wo_150.json',
                     core: 'data-v2/exercises/wo/groep7_wo_150_core.json',
                     support: 'data-v2/exercises/wo/groep7_wo_150_support.json',
-                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep7_wo_150_support.json'
+                    supportEnhanced: 'data-v2/exercises/wo/groep7_wo_150_support.json'
                 },
                 e7: {
                     legacy: 'data/exercises/wo/groep7_wo_150.json',
                     core: 'data-v2/exercises/wo/groep7_wo_150_core.json',
                     support: 'data-v2/exercises/wo/groep7_wo_150_support.json',
-                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep7_wo_150_support.json'
+                    supportEnhanced: 'data-v2/exercises/wo/groep7_wo_150_support.json'
                 }
             },
             groep8: {
@@ -363,58 +461,384 @@ const CONFIG = {
                     legacy: 'data/exercises/wo/groep8_wo_150.json',
                     core: 'data-v2/exercises/wo/groep8_wo_150_core.json',
                     support: 'data-v2/exercises/wo/groep8_wo_150_support.json',
-                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep8_wo_150_support.json'
+                    supportEnhanced: 'data-v2/exercises/wo/groep8_wo_150_support.json'
                 },
                 e8: {
                     legacy: 'data/exercises/wo/groep8_wo_150.json',
                     core: 'data-v2/exercises/wo/groep8_wo_150_core.json',
                     support: 'data-v2/exercises/wo/groep8_wo_150_support.json',
-                    supportEnhanced: 'data-v2-enhanced/exercises/wo/groep8_wo_150_support.json'
+                    supportEnhanced: 'data-v2/exercises/wo/groep8_wo_150_support.json'
                 }
             }
         },
         woordenschat: {
             groep4: {
-                m4: 'data/exercises/ws/groep4_wo_m4_webapp_1.json',
-                e4: 'data/exercises/ws/groep4_wo_e4_webapp_1.json'
+                m4: {
+                    core: 'data-v2/exercises/ws/groep4_wo_m4_webapp_1_core.json',
+                    support: 'data-v2/exercises/ws/groep4_wo_m4_webapp_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/ws/groep4_wo_m4_webapp_1_support.json'
+                },
+                e4: {
+                    core: 'data-v2/exercises/ws/groep4_wo_e4_webapp_1_core.json',
+                    support: 'data-v2/exercises/ws/groep4_wo_e4_webapp_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/ws/groep4_wo_e4_webapp_1_support.json'
+                }
             },
             groep5: {
-                m5: 'data/exercises/ws/groep5_wo_m5_webapp_1.json',
-                e5: 'data/exercises/ws/groep5_wo_e5_webapp_1.json'
+                m5: {
+                    core: 'data-v2/exercises/ws/groep5_wo_m5_webapp_1_core.json',
+                    support: 'data-v2/exercises/ws/groep5_wo_m5_webapp_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/ws/groep5_wo_m5_webapp_1_support.json'
+                },
+                e5: {
+                    core: 'data-v2/exercises/ws/groep5_wo_e5_webapp_1_core.json',
+                    support: 'data-v2/exercises/ws/groep5_wo_e5_webapp_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/ws/groep5_wo_e5_webapp_1_support.json'
+                }
             },
             groep6: {
-                m6: 'data/exercises/ws/groep6_wo_m6_webapp_1.json',
-                e6: 'data/exercises/ws/groep6_wo_e6_webapp_1.json'
+                m6: {
+                    core: 'data-v2/exercises/ws/groep6_wo_m6_webapp_1_core.json',
+                    support: 'data-v2/exercises/ws/groep6_wo_m6_webapp_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/ws/groep6_wo_m6_webapp_1_support.json'
+                },
+                e6: {
+                    core: 'data-v2/exercises/ws/groep6_wo_e6_webapp_1_core.json',
+                    support: 'data-v2/exercises/ws/groep6_wo_e6_webapp_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/ws/groep6_wo_e6_webapp_1_support.json'
+                }
             },
             groep7: {
-                m7: 'data/exercises/ws/groep7_wo_m7_webapp_1.json',
-                e7: 'data/exercises/ws/groep7_wo_e7_webapp_1.json'
+                m7: {
+                    core: 'data-v2/exercises/ws/groep7_wo_m7_webapp_1_core.json',
+                    support: 'data-v2/exercises/ws/groep7_wo_m7_webapp_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/ws/groep7_wo_m7_webapp_1_support.json'
+                },
+                e7: {
+                    core: 'data-v2/exercises/ws/groep7_wo_e7_webapp_1_core.json',
+                    support: 'data-v2/exercises/ws/groep7_wo_e7_webapp_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/ws/groep7_wo_e7_webapp_1_support.json'
+                }
             },
             groep8: {
-                m8: 'data/exercises/ws/groep8_wo_m8_webapp_1.json',
-                e8: 'data/exercises/ws/groep8_wo_e8_webapp_1.json'
+                m8: {
+                    core: 'data-v2/exercises/ws/groep8_wo_m8_webapp_1_core.json',
+                    support: 'data-v2/exercises/ws/groep8_wo_m8_webapp_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/ws/groep8_wo_m8_webapp_1_support.json'
+                },
+                e8: {
+                    core: 'data-v2/exercises/ws/groep8_wo_e8_webapp_1_core.json',
+                    support: 'data-v2/exercises/ws/groep8_wo_e8_webapp_1_support.json',
+                    supportEnhanced: 'data-v2/exercises/ws/groep8_wo_e8_webapp_1_support.json'
+                }
             }
         },
         werkwoordspelling: {
             groep3: {
-                m3: 'data/exercises/sp/sp_groep3_m3_set_v4_audio.json',
-                e3: 'data/exercises/sp/sp_groep3_e3_set_v4_audio.json'
+                m3: {
+                    core: 'data-v2/exercises/sp/sp_groep3_m3_set_v4_audio_core.json',
+                    support: 'data-v2/exercises/sp/sp_groep3_m3_set_v4_audio_support.json',
+                    supportEnhanced: 'data-v2/exercises/sp/sp_groep3_m3_set_v4_audio_support.json'
+                },
+                e3: {
+                    core: 'data-v2/exercises/sp/sp_groep3_e3_set_v4_audio_core.json',
+                    support: 'data-v2/exercises/sp/sp_groep3_e3_set_v4_audio_support.json',
+                    supportEnhanced: 'data-v2/exercises/sp/sp_groep3_e3_set_v4_audio_support.json'
+                }
             },
             groep4: {
-                m4: 'data/exercises/sp/sp_groep4_m4_set_v4_audio.json',
-                e4: 'data/exercises/sp/sp_groep4_e4_set_v4_audio.json'
+                m4: {
+                    core: 'data-v2/exercises/sp/sp_groep4_m4_set_v4_audio_core.json',
+                    support: 'data-v2/exercises/sp/sp_groep4_m4_set_v4_audio_support.json',
+                    supportEnhanced: 'data-v2/exercises/sp/sp_groep4_m4_set_v4_audio_support.json'
+                },
+                e4: {
+                    core: 'data-v2/exercises/sp/sp_groep4_e4_set_v4_audio_core.json',
+                    support: 'data-v2/exercises/sp/sp_groep4_e4_set_v4_audio_support.json',
+                    supportEnhanced: 'data-v2/exercises/sp/sp_groep4_e4_set_v4_audio_support.json'
+                }
             },
             groep5: {
-                m5: 'data/exercises/sp/sp_groep5_m5_set_v4_audio.json',
-                e5: 'data/exercises/sp/sp_groep5_e5_set_v4_audio.json'
+                m5: {
+                    core: 'data-v2/exercises/sp/sp_groep5_m5_set_v4_audio_core.json',
+                    support: 'data-v2/exercises/sp/sp_groep5_m5_set_v4_audio_support.json',
+                    supportEnhanced: 'data-v2/exercises/sp/sp_groep5_m5_set_v4_audio_support.json'
+                },
+                e5: {
+                    core: 'data-v2/exercises/sp/sp_groep5_e5_set_v4_audio_core.json',
+                    support: 'data-v2/exercises/sp/sp_groep5_e5_set_v4_audio_support.json',
+                    supportEnhanced: 'data-v2/exercises/sp/sp_groep5_e5_set_v4_audio_support.json'
+                }
             },
             groep6: {
-                m6: 'data/exercises/sp/sp_groep6_m6_set_v4_audio.json',
-                e6: 'data/exercises/sp/sp_groep6_e6_set_v4_audio.json'
+                m6: {
+                    core: 'data-v2/exercises/sp/sp_groep6_m6_set_v4_audio_core.json',
+                    support: 'data-v2/exercises/sp/sp_groep6_m6_set_v4_audio_support.json',
+                    supportEnhanced: 'data-v2/exercises/sp/sp_groep6_m6_set_v4_audio_support.json'
+                },
+                e6: {
+                    core: 'data-v2/exercises/sp/sp_groep6_e6_set_v4_audio_core.json',
+                    support: 'data-v2/exercises/sp/sp_groep6_e6_set_v4_audio_support.json',
+                    supportEnhanced: 'data-v2/exercises/sp/sp_groep6_e6_set_v4_audio_support.json'
+                }
             },
             groep7: {
-                m7: 'data/exercises/sp/sp_groep7_m7_set_v4_audio.json',
-                e7: 'data/exercises/sp/sp_groep7_e7_set_v4_audio.json'
+                m7: {
+                    core: 'data-v2/exercises/sp/sp_groep7_m7_set_v4_audio_core.json',
+                    support: 'data-v2/exercises/sp/sp_groep7_m7_set_v4_audio_support.json',
+                    supportEnhanced: 'data-v2/exercises/sp/sp_groep7_m7_set_v4_audio_support.json'
+                },
+                e7: {
+                    core: 'data-v2/exercises/sp/sp_groep7_e7_set_v4_audio_core.json',
+                    support: 'data-v2/exercises/sp/sp_groep7_e7_set_v4_audio_support.json',
+                    supportEnhanced: 'data-v2/exercises/sp/sp_groep7_e7_set_v4_audio_support.json'
+                }
+            }
+        },
+        breuken: {
+            groep3: {
+                m3: {
+                    core: 'data-v2/exercises/vh/gb_groep3_verhoudingen_m3_core.json',
+                    support: 'data-v2/exercises/vh/gb_groep3_verhoudingen_m3_support.json',
+                    supportEnhanced: 'data-v2/exercises/vh/gb_groep3_verhoudingen_m3_support.json'
+                },
+                e3: {
+                    core: 'data-v2/exercises/vh/gb_groep3_verhoudingen_e3_core.json',
+                    support: 'data-v2/exercises/vh/gb_groep3_verhoudingen_e3_support.json',
+                    supportEnhanced: 'data-v2/exercises/vh/gb_groep3_verhoudingen_e3_support.json'
+                }
+            },
+            groep4: {
+                m4: {
+                    core: 'data-v2/exercises/vh/gb_groep4_verhoudingen_m4_core.json',
+                    support: 'data-v2/exercises/vh/gb_groep4_verhoudingen_m4_support.json',
+                    supportEnhanced: 'data-v2/exercises/vh/gb_groep4_verhoudingen_m4_support.json'
+                },
+                e4: {
+                    core: 'data-v2/exercises/vh/gb_groep4_verhoudingen_e4_core.json',
+                    support: 'data-v2/exercises/vh/gb_groep4_verhoudingen_e4_support.json',
+                    supportEnhanced: 'data-v2/exercises/vh/gb_groep4_verhoudingen_e4_support.json'
+                }
+            },
+            groep5: {
+                m5: {
+                    core: 'data-v2/exercises/vh/gb_groep5_verhoudingen_m5_core.json',
+                    support: 'data-v2/exercises/vh/gb_groep5_verhoudingen_m5_support.json',
+                    supportEnhanced: 'data-v2/exercises/vh/gb_groep5_verhoudingen_m5_support.json'
+                },
+                e5: {
+                    core: 'data-v2/exercises/vh/gb_groep5_verhoudingen_e5_core.json',
+                    support: 'data-v2/exercises/vh/gb_groep5_verhoudingen_e5_support.json',
+                    supportEnhanced: 'data-v2/exercises/vh/gb_groep5_verhoudingen_e5_support.json'
+                }
+            },
+            groep6: {
+                m6: {
+                    core: 'data-v2/exercises/vh/gb_groep6_verhoudingen_m6_core.json',
+                    support: 'data-v2/exercises/vh/gb_groep6_verhoudingen_m6_support.json',
+                    supportEnhanced: 'data-v2/exercises/vh/gb_groep6_verhoudingen_m6_support.json'
+                },
+                e6: {
+                    core: 'data-v2/exercises/vh/gb_groep6_verhoudingen_e6_core.json',
+                    support: 'data-v2/exercises/vh/gb_groep6_verhoudingen_e6_support.json',
+                    supportEnhanced: 'data-v2/exercises/vh/gb_groep6_verhoudingen_e6_support.json'
+                }
+            },
+            groep7: {
+                m7: {
+                    core: 'data-v2/exercises/vh/gb_groep7_verhoudingen_m7_core.json',
+                    support: 'data-v2/exercises/vh/gb_groep7_verhoudingen_m7_support.json',
+                    supportEnhanced: 'data-v2/exercises/vh/gb_groep7_verhoudingen_m7_support.json'
+                },
+                e7: {
+                    core: 'data-v2/exercises/vh/gb_groep7_verhoudingen_e7_core.json',
+                    support: 'data-v2/exercises/vh/gb_groep7_verhoudingen_e7_support.json',
+                    supportEnhanced: 'data-v2/exercises/vh/gb_groep7_verhoudingen_e7_support.json'
+                }
+            },
+            groep8: {
+                m8: {
+                    core: 'data-v2/exercises/vh/gb_groep8_verhoudingen_m8_core.json',
+                    support: 'data-v2/exercises/vh/gb_groep8_verhoudingen_m8_support.json',
+                    supportEnhanced: 'data-v2/exercises/vh/gb_groep8_verhoudingen_m8_support.json'
+                },
+                e8: {
+                    core: 'data-v2/exercises/vh/gb_groep8_verhoudingen_e8_core.json',
+                    support: 'data-v2/exercises/vh/gb_groep8_verhoudingen_e8_support.json',
+                    supportEnhanced: 'data-v2/exercises/vh/gb_groep8_verhoudingen_e8_support.json'
+                }
+            }
+        },
+        meetkunde: {
+            groep3: {
+                m3: {
+                    core: 'data-v2/exercises/mk/gb_groep3_meetkunde_m3_core.json',
+                    support: 'data-v2/exercises/mk/gb_groep3_meetkunde_m3_support.json',
+                    supportEnhanced: 'data-v2/exercises/mk/gb_groep3_meetkunde_m3_support.json'
+                },
+                e3: {
+                    core: 'data-v2/exercises/mk/gb_groep3_meetkunde_e3_core.json',
+                    support: 'data-v2/exercises/mk/gb_groep3_meetkunde_e3_support.json',
+                    supportEnhanced: 'data-v2/exercises/mk/gb_groep3_meetkunde_e3_support.json'
+                }
+            },
+            groep4: {
+                m4: {
+                    core: 'data-v2/exercises/mk/gb_groep4_meetkunde_m4_core.json',
+                    support: 'data-v2/exercises/mk/gb_groep4_meetkunde_m4_support.json',
+                    supportEnhanced: 'data-v2/exercises/mk/gb_groep4_meetkunde_m4_support.json'
+                },
+                e4: {
+                    core: 'data-v2/exercises/mk/gb_groep4_meetkunde_e4_core.json',
+                    support: 'data-v2/exercises/mk/gb_groep4_meetkunde_e4_support.json',
+                    supportEnhanced: 'data-v2/exercises/mk/gb_groep4_meetkunde_e4_support.json'
+                }
+            },
+            groep5: {
+                m5: {
+                    core: 'data-v2/exercises/mk/gb_groep5_meetkunde_m5_core.json',
+                    support: 'data-v2/exercises/mk/gb_groep5_meetkunde_m5_support.json',
+                    supportEnhanced: 'data-v2/exercises/mk/gb_groep5_meetkunde_m5_support.json'
+                },
+                e5: {
+                    core: 'data-v2/exercises/mk/gb_groep5_meetkunde_e5_core.json',
+                    support: 'data-v2/exercises/mk/gb_groep5_meetkunde_e5_support.json',
+                    supportEnhanced: 'data-v2/exercises/mk/gb_groep5_meetkunde_e5_support.json'
+                }
+            },
+            groep6: {
+                m6: {
+                    core: 'data-v2/exercises/mk/gb_groep6_meetkunde_m6_core.json',
+                    support: 'data-v2/exercises/mk/gb_groep6_meetkunde_m6_support.json',
+                    supportEnhanced: 'data-v2/exercises/mk/gb_groep6_meetkunde_m6_support.json'
+                },
+                e6: {
+                    core: 'data-v2/exercises/mk/gb_groep6_meetkunde_e6_core.json',
+                    support: 'data-v2/exercises/mk/gb_groep6_meetkunde_e6_support.json',
+                    supportEnhanced: 'data-v2/exercises/mk/gb_groep6_meetkunde_e6_support.json'
+                }
+            },
+            groep7: {
+                m7: {
+                    core: 'data-v2/exercises/mk/gb_groep7_meetkunde_m7_core.json',
+                    support: 'data-v2/exercises/mk/gb_groep7_meetkunde_m7_support.json',
+                    supportEnhanced: 'data-v2/exercises/mk/gb_groep7_meetkunde_m7_support.json'
+                },
+                e7: {
+                    core: 'data-v2/exercises/mk/gb_groep7_meetkunde_e7_core.json',
+                    support: 'data-v2/exercises/mk/gb_groep7_meetkunde_e7_support.json',
+                    supportEnhanced: 'data-v2/exercises/mk/gb_groep7_meetkunde_e7_support.json'
+                }
+            },
+            groep8: {
+                m8: {
+                    core: 'data-v2/exercises/mk/gb_groep8_meetkunde_m8_core.json',
+                    support: 'data-v2/exercises/mk/gb_groep8_meetkunde_m8_support.json',
+                    supportEnhanced: 'data-v2/exercises/mk/gb_groep8_meetkunde_m8_support.json'
+                },
+                e8: {
+                    core: 'data-v2/exercises/mk/gb_groep8_meetkunde_e8_core.json',
+                    support: 'data-v2/exercises/mk/gb_groep8_meetkunde_e8_support.json',
+                    supportEnhanced: 'data-v2/exercises/mk/gb_groep8_meetkunde_e8_support.json'
+                }
+            }
+        },
+        studievaardigheden: {
+            groep3: {
+                m3: {
+                    core: 'data-v2/exercises/sv/sv_groep3_m3_core.json',
+                    support: 'data-v2/exercises/sv/sv_groep3_m3_support.json',
+                    supportEnhanced: 'data-v2/exercises/sv/sv_groep3_m3_support.json'
+                },
+                e3: {
+                    core: 'data-v2/exercises/sv/sv_groep3_e3_core.json',
+                    support: 'data-v2/exercises/sv/sv_groep3_e3_support.json',
+                    supportEnhanced: 'data-v2/exercises/sv/sv_groep3_e3_support.json'
+                }
+            },
+            groep4: {
+                m4: {
+                    core: 'data-v2/exercises/sv/sv_groep4_m4_core.json',
+                    support: 'data-v2/exercises/sv/sv_groep4_m4_support.json',
+                    supportEnhanced: 'data-v2/exercises/sv/sv_groep4_m4_support.json'
+                },
+                e4: {
+                    core: 'data-v2/exercises/sv/sv_groep4_e4_core.json',
+                    support: 'data-v2/exercises/sv/sv_groep4_e4_support.json',
+                    supportEnhanced: 'data-v2/exercises/sv/sv_groep4_e4_support.json'
+                }
+            },
+            groep5: {
+                m5: {
+                    core: 'data-v2/exercises/sv/sv_groep5_m5_core.json',
+                    support: 'data-v2/exercises/sv/sv_groep5_m5_support.json',
+                    supportEnhanced: 'data-v2/exercises/sv/sv_groep5_m5_support.json'
+                },
+                e5: {
+                    core: 'data-v2/exercises/sv/sv_groep5_e5_core.json',
+                    support: 'data-v2/exercises/sv/sv_groep5_e5_support.json',
+                    supportEnhanced: 'data-v2/exercises/sv/sv_groep5_e5_support.json'
+                }
+            },
+            groep6: {
+                m6: {
+                    core: 'data-v2/exercises/sv/sv_groep6_m6_core.json',
+                    support: 'data-v2/exercises/sv/sv_groep6_m6_support.json',
+                    supportEnhanced: 'data-v2/exercises/sv/sv_groep6_m6_support.json'
+                },
+                e6: {
+                    core: 'data-v2/exercises/sv/sv_groep6_e6_core.json',
+                    support: 'data-v2/exercises/sv/sv_groep6_e6_support.json',
+                    supportEnhanced: 'data-v2/exercises/sv/sv_groep6_e6_support.json'
+                }
+            },
+            groep7: {
+                m7: {
+                    core: 'data-v2/exercises/sv/sv_groep7_m7_core.json',
+                    support: 'data-v2/exercises/sv/sv_groep7_m7_support.json',
+                    supportEnhanced: 'data-v2/exercises/sv/sv_groep7_m7_support.json'
+                },
+                e7: {
+                    core: 'data-v2/exercises/sv/sv_groep7_e7_core.json',
+                    support: 'data-v2/exercises/sv/sv_groep7_e7_support.json',
+                    supportEnhanced: 'data-v2/exercises/sv/sv_groep7_e7_support.json'
+                }
+            },
+            groep8: {
+                m8: {
+                    core: 'data-v2/exercises/sv/sv_groep8_m8_core.json',
+                    support: 'data-v2/exercises/sv/sv_groep8_m8_support.json',
+                    supportEnhanced: 'data-v2/exercises/sv/sv_groep8_m8_support.json'
+                },
+                e8: {
+                    core: 'data-v2/exercises/sv/sv_groep8_e8_core.json',
+                    support: 'data-v2/exercises/sv/sv_groep8_e8_support.json',
+                    supportEnhanced: 'data-v2/exercises/sv/sv_groep8_e8_support.json'
+                }
+            }
+        },
+        verhaaltjessommen: {
+            default: {
+                core: 'data-v2/exercises/vs/verhaaltjessommen_cito_core.json',
+                support: 'data-v2/exercises/vs/verhaaltjessommen_cito_support.json',
+                supportEnhanced: 'data-v2/exercises/vs/verhaaltjessommen_cito_support.json'
+            }
+        },
+        dmt: {
+            listA: {
+                core: 'data-v2/exercises/tl/dmt_list_A_v1_core.json',
+                support: 'data-v2/exercises/tl/dmt_list_A_v1_support.json',
+                supportEnhanced: 'data-v2/exercises/tl/dmt_list_A_v1_support.json'
+            },
+            listB: {
+                core: 'data-v2/exercises/tl/dmt_list_B_v1_core.json',
+                support: 'data-v2/exercises/tl/dmt_list_B_v1_support.json',
+                supportEnhanced: 'data-v2/exercises/tl/dmt_list_B_v1_support.json'
+            },
+            listC: {
+                core: 'data-v2/exercises/tl/dmt_list_C_v1_core.json',
+                support: 'data-v2/exercises/tl/dmt_list_C_v1_support.json',
+                supportEnhanced: 'data-v2/exercises/tl/dmt_list_C_v1_support.json'
             }
         }
     }

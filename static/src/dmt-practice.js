@@ -92,21 +92,36 @@ class DMTPractice {
 
     async loadData() {
         try {
-            // Load word lists
-            const [listA, listB, listC, norming] = await Promise.all([
-                fetch('data/exercises/tl/dmt_list_A_v1.json').then(r => r.json()),
-                fetch('data/exercises/tl/dmt_list_B_v1.json').then(r => r.json()),
-                fetch('data/exercises/tl/dmt_list_C_v1.json').then(r => r.json()),
-                fetch('data/exercises/tl/dmt_norming_v1.json').then(r => r.json())
-            ]);
+            const dmtPaths = CONFIG.subjectFilePaths?.dmt;
+
+            const listConfigs = [
+                { key: 'A', config: dmtPaths?.listA },
+                { key: 'B', config: dmtPaths?.listB },
+                { key: 'C', config: dmtPaths?.listC }
+            ];
+
+            if (!dmtPaths || listConfigs.some(item => !item.config)) {
+                throw new Error('DMT paden niet gevonden in configuratie');
+            }
+
+            const coreResponses = await Promise.all(
+                listConfigs.map(({ config }) => fetch(config.core))
+            );
+            const supportResponses = await Promise.all(
+                listConfigs.map(({ config }) => fetch(config.support))
+            );
+
+            const coreData = await Promise.all(coreResponses.map(r => r.json()));
+            const supportData = await Promise.all(supportResponses.map(r => r.json()));
 
             this.wordLists = {
-                A: listA.list.words,
-                B: listB.list.words,
-                C: listC.list.words
+                A: this.transformDmtList(coreData[0], supportData[0]),
+                B: this.transformDmtList(coreData[1], supportData[1]),
+                C: this.transformDmtList(coreData[2], supportData[2])
             };
 
-            this.normingData = norming;
+            // Norming data is not part of the split format; keep it null to disable norm lookup gracefully
+            this.normingData = null;
 
             console.log('DMT data loaded:', {
                 A: this.wordLists.A.length,
@@ -117,6 +132,23 @@ class DMTPractice {
             console.error('Error loading DMT data:', error);
             alert('Er is een fout opgetreden bij het laden van de woordenlijsten.');
         }
+    }
+
+    transformDmtList(coreData, supportData) {
+        const mergedItems = (coreData.items || []).map(item => {
+            const supportItem = supportData?.items?.find(s => s.item_id === item.id || s.id === item.id);
+            return {
+                ...item,
+                feedback: supportItem?.feedback ?? item.feedback,
+                adaptive: supportItem?.adaptive ?? item.adaptive,
+                hints: supportItem?.hints ?? item.hints
+            };
+        });
+
+        return mergedItems.map(entry => {
+            const question = entry.question;
+            return typeof question === 'string' ? question : (question?.text || '');
+        });
     }
 
     setupEventListeners() {

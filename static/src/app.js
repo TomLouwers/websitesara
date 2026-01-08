@@ -471,98 +471,25 @@ function getFilePath(subject) {
     if (CONFIG.subjectFilePaths && CONFIG.subjectFilePaths[baseSubject]) {
         const subjectPaths = CONFIG.subjectFilePaths[baseSubject];
 
+        // Full subject lookup (e.g., verhaaltjessommen-emma)
+        if (subjectPaths[subject]) {
+            return subjectPaths[subject];
+        }
+
         // Determine groep from level (e.g., "m4" -> "groep4", "e5" -> "groep5")
         if (level && level.length >= 2) {
-            const groepNumber = level.substring(1); // Extract number from "m4" -> "4"
+            const groepNumber = level.replace(/\D/g, '') || level.substring(1);
             const groepKey = `groep${groepNumber}`;
 
             if (subjectPaths[groepKey] && subjectPaths[groepKey][level]) {
                 return subjectPaths[groepKey][level];
             }
         }
-    }
 
-    // LEGACY: Map basisvaardigheden subjects to data/exercises/gb/ directory (backwards compatibility)
-    const gbMapping = {
-        'basisvaardigheden-m3': 'data/exercises/gb/gb_groep3_m3.json',
-        'basisvaardigheden-e3': 'data/exercises/gb/gb_groep3_e3.json',
-        'basisvaardigheden-m4': 'data/exercises/gb/gb_groep4_m4.json',
-        'basisvaardigheden-e4': 'data/exercises/gb/gb_groep4_e4.json',
-        'basisvaardigheden-m5': 'data/exercises/gb/gb_groep5_m5.json',
-        'basisvaardigheden-e5': 'data/exercises/gb/gb_groep5_e5.json',
-        'basisvaardigheden-m6': 'data/exercises/gb/gb_groep6_m6.json',
-        'basisvaardigheden-e6': 'data/exercises/gb/gb_groep6_e6.json',
-        'basisvaardigheden-m7': 'data/exercises/gb/gb_groep7_m7.json',
-        'basisvaardigheden-e7': 'data/exercises/gb/gb_groep7_e7.json',
-        'basisvaardigheden-e8': 'data/exercises/gb/gb_groep8_e8.json'
-    };
-
-    // Check if this is a GB subject
-    if (gbMapping[subject]) {
-        return gbMapping[subject];
-    }
-
-    // NEW: Map breuken (verhoudingen) subjects to data-v2/exercises/vh/ directory (schema 2.0.0)
-    const breukenMapping = {
-        'breuken-m3': { core: 'data-v2/exercises/vh/gb_groep3_verhoudingen_m3_core.json', support: 'data-v2/exercises/vh/gb_groep3_verhoudingen_m3_support.json' },
-        'breuken-e3': { core: 'data-v2/exercises/vh/gb_groep3_verhoudingen_e3_core.json', support: 'data-v2/exercises/vh/gb_groep3_verhoudingen_e3_support.json' },
-        'breuken-m4': { core: 'data-v2/exercises/vh/gb_groep4_verhoudingen_m4_core.json', support: 'data-v2/exercises/vh/gb_groep4_verhoudingen_m4_support.json' },
-        'breuken-e4': { core: 'data-v2/exercises/vh/gb_groep4_verhoudingen_e4_core.json', support: 'data-v2/exercises/vh/gb_groep4_verhoudingen_e4_support.json' },
-        'breuken-m5': { core: 'data-v2/exercises/vh/gb_groep5_verhoudingen_m5_core.json', support: 'data-v2/exercises/vh/gb_groep5_verhoudingen_m5_support.json' },
-        'breuken-e5': { core: 'data-v2/exercises/vh/gb_groep5_verhoudingen_e5_core.json', support: 'data-v2/exercises/vh/gb_groep5_verhoudingen_e5_support.json' },
-        'breuken-m6': { core: 'data-v2/exercises/vh/gb_groep6_verhoudingen_m6_core.json', support: 'data-v2/exercises/vh/gb_groep6_verhoudingen_m6_support.json' },
-        'breuken-e6': { core: 'data-v2/exercises/vh/gb_groep6_verhoudingen_e6_core.json', support: 'data-v2/exercises/vh/gb_groep6_verhoudingen_e6_support.json' },
-        'breuken-m7': { core: 'data-v2/exercises/vh/gb_groep7_verhoudingen_m7_core.json', support: 'data-v2/exercises/vh/gb_groep7_verhoudingen_m7_support.json' },
-        'breuken-e7': { core: 'data-v2/exercises/vh/gb_groep7_verhoudingen_e7_core.json', support: 'data-v2/exercises/vh/gb_groep7_verhoudingen_e7_support.json' },
-        'breuken-m8': { core: 'data-v2/exercises/vh/gb_groep8_verhoudingen_m8_core.json', support: 'data-v2/exercises/vh/gb_groep8_verhoudingen_m8_support.json' },
-        'breuken-e8': { core: 'data-v2/exercises/vh/gb_groep8_verhoudingen_e8_core.json', support: 'data-v2/exercises/vh/gb_groep8_verhoudingen_e8_support.json' }
-    };
-
-    // Check if this is a breuken subject
-    if (breukenMapping[subject]) {
-        return breukenMapping[subject];
-    }
-
-    // NEW: Map meetkunde subjects to data-v2/exercises/mk/ directory (schema 2.0.0)
-    const meetkundeMapping = {
-        'meetkunde-m3': { core: 'data-v2/exercises/mk/gb_groep3_meetkunde_m3_core.json', support: 'data-v2/exercises/mk/gb_groep3_meetkunde_m3_support.json' },
-        'meetkunde-e3': { core: 'data-v2/exercises/mk/gb_groep3_meetkunde_e3_core.json', support: 'data-v2/exercises/mk/gb_groep3_meetkunde_e3_support.json' },
-        'meetkunde-m4': { core: 'data-v2/exercises/mk/gb_groep4_meetkunde_m4_core.json', support: 'data-v2/exercises/mk/gb_groep4_meetkunde_m4_support.json' },
-        'meetkunde-e4': { core: 'data-v2/exercises/mk/gb_groep4_meetkunde_e4_core.json', support: 'data-v2/exercises/mk/gb_groep4_meetkunde_e4_support.json' },
-        'meetkunde-m5': { core: 'data-v2/exercises/mk/gb_groep5_meetkunde_m5_core.json', support: 'data-v2/exercises/mk/gb_groep5_meetkunde_m5_support.json' },
-        'meetkunde-e5': { core: 'data-v2/exercises/mk/gb_groep5_meetkunde_e5_core.json', support: 'data-v2/exercises/mk/gb_groep5_meetkunde_e5_support.json' },
-        'meetkunde-m6': { core: 'data-v2/exercises/mk/gb_groep6_meetkunde_m6_core.json', support: 'data-v2/exercises/mk/gb_groep6_meetkunde_m6_support.json' },
-        'meetkunde-e6': { core: 'data-v2/exercises/mk/gb_groep6_meetkunde_e6_core.json', support: 'data-v2/exercises/mk/gb_groep6_meetkunde_e6_support.json' },
-        'meetkunde-m7': { core: 'data-v2/exercises/mk/gb_groep7_meetkunde_m7_core.json', support: 'data-v2/exercises/mk/gb_groep7_meetkunde_m7_support.json' },
-        'meetkunde-e7': { core: 'data-v2/exercises/mk/gb_groep7_meetkunde_e7_core.json', support: 'data-v2/exercises/mk/gb_groep7_meetkunde_e7_support.json' },
-        'meetkunde-m8': { core: 'data-v2/exercises/mk/gb_groep8_meetkunde_m8_core.json', support: 'data-v2/exercises/mk/gb_groep8_meetkunde_m8_support.json' },
-        'meetkunde-e8': { core: 'data-v2/exercises/mk/gb_groep8_meetkunde_e8_core.json', support: 'data-v2/exercises/mk/gb_groep8_meetkunde_e8_support.json' }
-    };
-
-    // Check if this is a meetkunde subject
-    if (meetkundeMapping[subject]) {
-        return meetkundeMapping[subject];
-    }
-
-    // NEW: Map studievaardigheden subjects to data-v2/exercises/sv/ directory (schema 2.0.0)
-    const studievaardighedenMapping = {
-        'studievaardigheden-m3': { core: 'data-v2/exercises/sv/sv_groep3_m3_core.json', support: 'data-v2/exercises/sv/sv_groep3_m3_support.json' },
-        'studievaardigheden-e3': { core: 'data-v2/exercises/sv/sv_groep3_e3_core.json', support: 'data-v2/exercises/sv/sv_groep3_e3_support.json' },
-        'studievaardigheden-m4': { core: 'data-v2/exercises/sv/sv_groep4_m4_core.json', support: 'data-v2/exercises/sv/sv_groep4_m4_support.json' },
-        'studievaardigheden-e4': { core: 'data-v2/exercises/sv/sv_groep4_e4_core.json', support: 'data-v2/exercises/sv/sv_groep4_e4_support.json' },
-        'studievaardigheden-m5': { core: 'data-v2/exercises/sv/sv_groep5_m5_core.json', support: 'data-v2/exercises/sv/sv_groep5_m5_support.json' },
-        'studievaardigheden-e5': { core: 'data-v2/exercises/sv/sv_groep5_e5_core.json', support: 'data-v2/exercises/sv/sv_groep5_e5_support.json' },
-        'studievaardigheden-m6': { core: 'data-v2/exercises/sv/sv_groep6_m6_core.json', support: 'data-v2/exercises/sv/sv_groep6_m6_support.json' },
-        'studievaardigheden-e6': { core: 'data-v2/exercises/sv/sv_groep6_e6_core.json', support: 'data-v2/exercises/sv/sv_groep6_e6_support.json' },
-        'studievaardigheden-m7': { core: 'data-v2/exercises/sv/sv_groep7_m7_core.json', support: 'data-v2/exercises/sv/sv_groep7_m7_support.json' },
-        'studievaardigheden-e7': { core: 'data-v2/exercises/sv/sv_groep7_e7_core.json', support: 'data-v2/exercises/sv/sv_groep7_e7_support.json' },
-        'studievaardigheden-m8': { core: 'data-v2/exercises/sv/sv_groep8_m8_core.json', support: 'data-v2/exercises/sv/sv_groep8_m8_support.json' },
-        'studievaardigheden-e8': { core: 'data-v2/exercises/sv/sv_groep8_e8_core.json', support: 'data-v2/exercises/sv/sv_groep8_e8_support.json' }
-    };
-
-    // Check if this is a studievaardigheden subject
-    if (studievaardighedenMapping[subject]) {
-        return studievaardighedenMapping[subject];
+        // Fallback to default mapping per subject
+        if (subjectPaths.default) {
+            return subjectPaths.default;
+        }
     }
 
     // Default: use subject + Template suffix with data/templates/ prefix
@@ -576,92 +503,235 @@ function mergeCoreAndSupport(coreData, supportData) {
         return coreData; // Fallback to core-only
     }
 
-    // Create merged structure
-    const merged = {
-        ...coreData,
-        items: coreData.items.map(coreItem => {
-            // Find matching support item by ID
-            const supportItem = supportData.items.find(s => s.item_id === coreItem.id);
+    const merged = { ...coreData };
 
+    // Merge reading comprehension structure (exercises array)
+    if (coreData.exercises && supportData.exercises) {
+        merged.exercises = coreData.exercises.map(coreExercise => {
+            const supportExercise = supportData.exercises.find(s => s.id === coreExercise.id);
+            const mergedItems = (coreExercise.items || []).map(coreItem => {
+                const supportItem = supportExercise?.items?.find(s =>
+                    s.item_id === coreItem.id || s.id === coreItem.id || s.item_id === coreItem.item_id
+                );
+
+                if (!supportItem) {
+                    return coreItem;
+                }
+
+                return {
+                    ...coreItem,
+                    feedback: supportItem.feedback ?? coreItem.feedback,
+                    adaptive: supportItem.adaptive ?? coreItem.adaptive,
+                    hints: supportItem.hints ?? coreItem.hints,
+                    learning: supportItem.learning ?? coreItem.learning
+                };
+            });
+
+            return { ...coreExercise, items: mergedItems };
+        });
+        return merged;
+    }
+
+    // Merge word problems (problems array)
+    if (coreData.problems && supportData.problems) {
+        merged.problems = coreData.problems.map(coreProblem => {
+            const supportProblem = supportData.problems.find(p => p.id === coreProblem.id);
+            const mergedItems = (coreProblem.items || []).map(coreItem => {
+                const supportItem = supportProblem?.items?.find(s =>
+                    s.item_id === coreItem.id || s.id === coreItem.id
+                );
+
+                if (!supportItem) {
+                    return coreItem;
+                }
+
+                return {
+                    ...coreItem,
+                    feedback: supportItem.feedback ?? coreItem.feedback,
+                    adaptive: supportItem.adaptive ?? coreItem.adaptive,
+                    hints: supportItem.hints ?? coreItem.hints
+                };
+            });
+            return { ...coreProblem, items: mergedItems };
+        });
+        return merged;
+    }
+
+    // Default: merge flat items array
+    if (coreData.items && supportData.items) {
+        merged.items = coreData.items.map(coreItem => {
+            const supportItem = supportData.items.find(s => s.item_id === coreItem.id);
             if (!supportItem) {
                 console.warn(`No support data found for item ${coreItem.id}`);
                 return coreItem;
             }
 
-            // Merge core item with support data
             return {
                 ...coreItem,
                 feedback: supportItem.feedback,
                 adaptive: supportItem.adaptive,
                 hints: supportItem.hints
             };
-        })
-    };
+        });
+    }
 
     return merged;
 }
 
 // Transform schema 2.0.0 format to legacy format expected by the app
-function transformToLegacyFormat(schemaV2Data) {
-    if (!schemaV2Data || !schemaV2Data.schema_version || schemaV2Data.schema_version !== '2.0.0') {
+function transformToLegacyFormat(schemaV2Data, subjectHint = '') {
+    if (!schemaV2Data || schemaV2Data.schema_version !== '2.0.0') {
         // Already in legacy format or invalid data
         return schemaV2Data;
     }
 
-    console.log('Transforming schema 2.0.0 to legacy format');
+    const baseSubject = subjectHint ? subjectHint.split('-')[0] : '';
+    console.log('Transforming schema 2.0.0 to legacy format for subject:', baseSubject || 'unknown');
 
-    // Transform items to legacy format
-    const legacyItems = schemaV2Data.items.map(item => {
-        // Extract question text (handle both string and object formats)
-        const questionText = typeof item.question === 'string' ? item.question :
-                           (item.question?.text || '');
+    if (schemaV2Data.exercises) {
+        return transformReadingComprehension(schemaV2Data);
+    }
 
-        // Extract options text (handle both string and object formats)
-        const options = item.options.map(opt =>
-            typeof opt === 'string' ? opt : opt.text
-        );
+    if (schemaV2Data.problems) {
+        return transformWordProblems(schemaV2Data);
+    }
 
-        // Build legacy item
+    if (schemaV2Data.metadata?.category === 'tl' || baseSubject === 'dmt') {
+        return transformDmtWordList(schemaV2Data);
+    }
+
+    return transformMultipleChoice(schemaV2Data);
+}
+
+// Transform generic multiple choice exercises (most subjects)
+function transformMultipleChoice(schemaV2Data) {
+    return (schemaV2Data.items || []).map(item => {
+        const correctIndex = item.answer?.correct_index ?? 0;
+
+        const options = (item.options || []).map((opt, idx) => {
+            if (typeof opt === 'string') {
+                return opt;
+            }
+            return {
+                ...opt,
+                text: opt.text || opt.label || '',
+                is_correct: opt.is_correct !== undefined ? opt.is_correct : idx === correctIndex
+            };
+        });
+
         const legacyItem = {
             id: item.id,
-            question: questionText,
+            question: typeof item.question === 'string' ? item.question : (item.question?.text || ''),
             options: options,
             theme: item.theme || 'algemene kennis',
-            correct: item.answer?.correct_index ?? 0,
-            extra_info: item.feedback?.explanation || ''
+            correct: correctIndex,
+            extra_info: item.feedback?.explanation || item.feedback?.correct?.default || '',
+            feedback: item.feedback,
+            adaptive: item.adaptive,
+            hints: item.hints
         };
 
-        // Add enhanced feedback if available
-        if (item.feedback) {
-            legacyItem.feedback_enhanced = {
-                correct: item.feedback.correct,
-                incorrect: item.feedback.incorrect
-            };
-        }
-
-        // Add adaptive behavior if available
-        if (item.adaptive) {
-            legacyItem.adaptive = item.adaptive;
-        }
-
-        // Add hints if available
-        if (item.hints) {
-            legacyItem.hints = item.hints;
-        }
-
-        // Preserve other fields
         if (item.content) legacyItem.content = item.content;
         if (item.visual) legacyItem.visual = item.visual;
         if (item.lova) legacyItem.lova = item.lova;
 
         return legacyItem;
     });
+}
+
+// Transform reading comprehension (exercises with grouped questions)
+function transformReadingComprehension(schemaV2Data) {
+    return (schemaV2Data.exercises || []).map(exercise => {
+        const questions = (exercise.items || []).map(question => {
+            const correctIndex = question.answer?.correct_index ?? 0;
+
+            const options = (question.options || []).map((opt, idx) => {
+                const optionObj = typeof opt === 'object' ? opt : { text: opt };
+                return {
+                    ...optionObj,
+                    text: optionObj.text || optionObj.label || '',
+                    is_correct: optionObj.is_correct !== undefined ? optionObj.is_correct : idx === correctIndex
+                };
+            });
+
+            return {
+                item_id: question.id || question.item_id,
+                skill: question.skill || question.learning?.skill,
+                strategy: question.strategy || question.learning?.reading_strategies?.[0],
+                question: typeof question.question === 'string' ? question.question : question.question?.text,
+                hint: question.hint || (Array.isArray(question.hints) ? question.hints[0]?.text : undefined),
+                options,
+                correct: correctIndex,
+                extra_info: question.feedback?.explanation || question.extra_info,
+                lova: question.lova,
+                feedback: question.feedback,
+                adaptive: question.adaptive,
+                hints: question.hints,
+                learning: question.learning
+            };
+        });
+
+        return {
+            id: exercise.id,
+            title: exercise.title,
+            theme: exercise.theme,
+            text_type: exercise.content?.text_type || exercise.text_type,
+            text: exercise.content?.text || exercise.text,
+            metadata: exercise.metadata || exercise.content?.metadata,
+            questions
+        };
+    });
+}
+
+// Transform word problems (verhaaltjessommen)
+function transformWordProblems(schemaV2Data) {
+    const legacyItems = [];
+
+    (schemaV2Data.problems || []).forEach(problem => {
+        (problem.items || []).forEach(item => {
+            const correctIndex = item.answer?.correct_index ?? 0;
+            const options = (item.options || []).map((opt, idx) => {
+                const optionObj = typeof opt === 'object' ? opt : { text: opt };
+                return {
+                    ...optionObj,
+                    text: optionObj.text || optionObj.label || '',
+                    is_correct: optionObj.is_correct !== undefined ? optionObj.is_correct : idx === correctIndex
+                };
+            });
+
+            legacyItems.push({
+                id: item.id,
+                question: typeof item.question === 'string' ? item.question : item.question?.text,
+                options,
+                correct: correctIndex,
+                theme: problem.theme,
+                content: problem.content?.story,
+                extra_info: item.feedback?.explanation || problem.content?.context,
+                feedback: item.feedback,
+                adaptive: item.adaptive,
+                hints: item.hints
+            });
+        });
+    });
 
     return legacyItems;
 }
 
+// Transform DMT word lists to legacy shape expected by the practice tool
+function transformDmtWordList(schemaV2Data) {
+    const words = (schemaV2Data.items || []).map(item =>
+        typeof item.question === 'string' ? item.question : (item.question?.text || '')
+    );
+
+    return {
+        list: {
+            words: words.map((word, idx) => ({ id: idx + 1, word }))
+        }
+    };
+}
+
 // Load split format exercise (schema 2.0.0 with separate core and support files)
-async function loadSplitFormatExercise(pathConfig) {
+async function loadSplitFormatExercise(pathConfig, subjectHint = null) {
     try {
         // Determine which support file to use based on config
         const supportSource = CONFIG.enhancedFormat.supportSource || 'enhanced';
@@ -683,7 +753,7 @@ async function loadSplitFormatExercise(pathConfig) {
         const mergedData = mergeCoreAndSupport(coreData, supportData);
 
         // Transform to legacy format for compatibility with existing app logic
-        const legacyFormatData = transformToLegacyFormat(mergedData);
+        const legacyFormatData = transformToLegacyFormat(mergedData, subjectHint);
 
         console.log(`Successfully loaded and merged split format exercise: ${coreData.metadata?.id}`);
         return legacyFormatData;
@@ -713,7 +783,7 @@ async function loadJsonFile(filename, subjectHint = null) {
 
         if (CONFIG.enhancedFormat && CONFIG.enhancedFormat.enabled[baseSubject]) {
             // Use split format loading
-            return await loadSplitFormatExercise(filename);
+            return await loadSplitFormatExercise(filename, subject);
         } else {
             // Use legacy format
             filename = filename.legacy;

@@ -47,10 +47,10 @@ const STATIC_ASSETS = [
 
 // Exercise files to cache (most commonly used)
 const EXERCISE_CACHE = [
-  '/data/exercises/bl/bl_groep4_m4_1.json',
-  '/data/exercises/bl/bl_groep4_enhanced_sample.json',
-  '/data/exercises/gb/gb_groep4_m4.json',
-  '/data/exercises/gb/gb_groep4_enhanced_sample.json'
+  '/data-v2/exercises/bl/bl_groep4_m4_1_core.json',
+  '/data-v2/exercises/bl/bl_groep4_m4_1_support.json',
+  '/data-v2/exercises/gb/gb_groep4_m4_core.json',
+  '/data-v2/exercises/gb/gb_groep4_m4_support.json'
 ];
 
 // ============================================================================
@@ -129,7 +129,7 @@ self.addEventListener('fetch', (event) => {
   }
 
   // Different strategies for different resource types
-  if (request.url.includes('/data/exercises/')) {
+  if (request.url.includes('/data-v2/exercises/')) {
     // Exercise files: Cache-first (fast), network fallback
     event.respondWith(cacheFirstStrategy(request));
   } else if (request.url.endsWith('.json')) {

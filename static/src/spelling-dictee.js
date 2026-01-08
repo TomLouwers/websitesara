@@ -14,6 +14,7 @@ class SpellingDictee extends BaseQuizModule {
         this.quizData = null;
         this.tagStats = {};
         this.isPlayingAudio = false;
+        this.audioBasePath = 'data/exercises/sp/';
     }
 
     /**
@@ -88,20 +89,35 @@ class SpellingDictee extends BaseQuizModule {
             }
 
             // Get file path from config
-            const filePath = CONFIG.subjectFilePaths?.werkwoordspelling?.[selectedGroep]?.[selectedMoment];
+            const pathConfig = CONFIG.subjectFilePaths?.werkwoordspelling?.[selectedGroep]?.[selectedMoment];
 
-            if (!filePath) {
+            if (!pathConfig) {
                 throw new Error(`Geen data beschikbaar voor ${selectedGroep} ${selectedMoment}`);
             }
 
-            // Load JSON data
-            const response = await fetch(filePath);
+            const corePath = typeof pathConfig === 'string' ? pathConfig : pathConfig.core;
+            const supportPath = typeof pathConfig === 'object' ? pathConfig.support : null;
 
-            if (!response.ok) {
-                throw new Error(`Could not load ${filePath}`);
+            // Always keep audio pointing to the original audio folder
+            this.audioBasePath = 'data/exercises/sp/';
+
+            const coreResponse = await fetch(corePath);
+            if (!coreResponse.ok) {
+                throw new Error(`Could not load ${corePath}`);
+            }
+            const coreData = await coreResponse.json();
+
+            let supportData = null;
+            if (supportPath) {
+                const supportResponse = await fetch(supportPath);
+                if (!supportResponse.ok) {
+                    throw new Error(`Could not load ${supportPath}`);
+                }
+                supportData = await supportResponse.json();
             }
 
-            this.quizData = await response.json();
+            const merged = this.mergeSpellingData(coreData, supportData);
+            this.quizData = this.transformSpellingToLegacy(merged);
 
             // Validate data structure
             if (!this.quizData.set || !this.quizData.items || this.quizData.items.length === 0) {
@@ -118,6 +134,85 @@ class SpellingDictee extends BaseQuizModule {
             console.error('Error loading quiz data:', error);
             throw error;
         }
+    }
+
+    /**
+     * Merge core and support data (schema v2 split format)
+     * @private
+     */
+    mergeSpellingData(coreData, supportData) {
+        if (!supportData) {
+            return coreData;
+        }
+
+        const mergedItems = (coreData.items || []).map(item => {
+            const supportItem = supportData.items?.find(s => s.item_id === item.id || s.id === item.id);
+            return {
+                ...item,
+                feedback: supportItem?.feedback ?? item.feedback,
+                adaptive: supportItem?.adaptive ?? item.adaptive,
+                hints: supportItem?.hints ?? item.hints
+            };
+        });
+
+        return {
+            ...coreData,
+            items: mergedItems,
+            feedback: supportData.feedback || coreData.feedback
+        };
+    }
+
+    /**
+     * Convert schema v2 spelling data to legacy shape expected by the module
+     * @private
+     */
+    transformSpellingToLegacy(data) {
+        const firstAnswer = data.items?.[0]?.answer || {};
+        const feedbackTemplates = data.feedback?.templates || {};
+        const instructionText = data.items?.[0]?.question?.text || 'Schrijf op: {answer}.';
+
+        const legacyItems = (data.items || []).map(item => {
+            const answer = item.answer || {};
+            return {
+                id: item.id,
+                difficulty: item.difficulty,
+                tags: item.theme ? [item.theme] : [],
+                audio: item.audio,
+                prompt: {
+                    sentence: item.prompt?.sentence || '',
+                    instruction: item.question?.text || item.prompt?.instruction || 'Schrijf op: {answer}.'
+                },
+                target: {
+                    answer: answer.correct_value || answer.value || '',
+                    accept: answer.accepted_values || answer.accept || (answer.correct_value ? [answer.correct_value] : []),
+                    case_sensitive: answer.case_sensitive,
+                    trim: answer.trim_whitespace
+                },
+                extra_info: item.extra_info || (item.feedback?.explanation?.text ? { rule: item.feedback.explanation.text } : undefined),
+                feedback: item.feedback,
+                adaptive: item.adaptive,
+                hints: item.hints
+            };
+        });
+
+        return {
+            set: {
+                grade: data.metadata?.grade,
+                level: data.metadata?.level,
+                mode: 'dictee',
+                category: data.metadata?.category || 'woordspelling',
+                flags: {
+                    case_sensitive: firstAnswer.case_sensitive === true,
+                    trim: firstAnswer.trim_whitespace !== false
+                },
+                feedback_templates: {
+                    correct: feedbackTemplates.correct?.default || feedbackTemplates.correct || 'Goed gedaan!',
+                    incorrect: feedbackTemplates.incorrect?.first_attempt || feedbackTemplates.incorrect || 'Nog niet. Luister nog eens en probeer opnieuw.',
+                    instruction: instructionText
+                }
+            },
+            items: legacyItems
+        };
     }
 
     /**
@@ -288,7 +383,7 @@ class SpellingDictee extends BaseQuizModule {
 
         try {
             // Play sentence audio
-            const sentenceAudioPath = 'data/exercises/sp/' + currentItem.audio.sentence;
+            const sentenceAudioPath = this.audioBasePath + currentItem.audio.sentence;
             await this.playAudioFile(sentenceAudioPath, currentItem.prompt.sentence);
 
             // Small pause between sentence and instruction
@@ -299,7 +394,7 @@ class SpellingDictee extends BaseQuizModule {
                 '{answer}',
                 currentItem.target.answer
             );
-            const instructionAudioPath = 'data/exercises/sp/' + currentItem.audio.instruction;
+            const instructionAudioPath = this.audioBasePath + currentItem.audio.instruction;
             await this.playAudioFile(instructionAudioPath, instructionText);
 
         } catch (error) {
