@@ -40,10 +40,10 @@ class GamificationUI {
             <div class="player-profile">
                 <div class="profile-header">
                     <div class="avatar-container">
-                        <img src="/static/assets/avatars/${this.gm.profile.currentAvatar}.svg"
+                        <img src="static/assets/avatars/${this.gm.profile.currentAvatar}.svg"
                              alt="Avatar"
                              class="player-avatar"
-                             onerror="this.src='/static/assets/avatars/student.svg'">
+                             onerror="this.src='static/assets/avatars/student.svg'">
                         <div class="level-badge">${profile.level}</div>
                     </div>
                     <div class="profile-info">
@@ -452,9 +452,9 @@ class GamificationUI {
         container.innerHTML = `
             <div class="mini-profile">
                 <div class="mini-avatar">
-                    <img src="/static/assets/avatars/${this.gm.profile.currentAvatar}.svg"
+                    <img src="static/assets/avatars/${this.gm.profile.currentAvatar}.svg"
                          alt="Avatar"
-                         onerror="this.src='/static/assets/avatars/student.svg'">
+                         onerror="this.src='static/assets/avatars/student.svg'">
                     <span class="mini-level">${profile.level}</span>
                 </div>
                 <div class="mini-stats">

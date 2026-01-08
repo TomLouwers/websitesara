@@ -386,6 +386,39 @@ class GamificationManager {
     }
 
     /**
+     * Public helper to refresh and return the current daily streak info.
+     */
+    updateDailyStreak() {
+        if (!this.storageAvailable) {
+            return {
+                currentStreak: 0,
+                longestStreak: 0,
+                totalDaysActive: 0,
+                lastActiveDate: null,
+                dayChanged: false,
+                increased: false
+            };
+        }
+
+        const previousDate = this.dailyStreak.lastActiveDate;
+        const previousStreak = this.dailyStreak.currentStreak;
+
+        this._checkNewDay();
+
+        const dayChanged = this.dailyStreak.lastActiveDate !== previousDate;
+        const increased = this.dailyStreak.currentStreak > previousStreak;
+
+        return {
+            currentStreak: this.dailyStreak.currentStreak,
+            longestStreak: this.dailyStreak.longestStreak,
+            totalDaysActive: this.dailyStreak.totalDaysActive,
+            lastActiveDate: this.dailyStreak.lastActiveDate,
+            dayChanged,
+            increased
+        };
+    }
+
+    /**
      * Process completed exercise
      */
     completeExercise(results) {
