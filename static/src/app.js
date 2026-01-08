@@ -3771,7 +3771,8 @@ function resetMilestones() {
 // =============================================================================
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
+        // Use relative path so GitHub Pages under /websitesara/ can resolve the worker
+        navigator.serviceWorker.register('sw.js')
             .then((registration) => {
                 console.log('[App] Service Worker registered:', registration.scope);
             })
