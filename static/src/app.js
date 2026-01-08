@@ -2143,10 +2143,13 @@ function showCardMorphFeedback(isCorrect, currentQuestion, selectedOption = null
     }
 
     // Morph the card
+    // Phase 1: Pass question and selectedOption for enhanced feedback (Schema V2.0)
     window.cardMorphFeedbackInstance.morph({
         isCorrect: isCorrect,
         insight: insight,
         confirmation: confirmation,
+        question: currentQuestion,  // NEW: Pass full question object for Schema V2.0
+        selectedOption: selectedOption,  // NEW: Pass selected option for per-option feedback
         questionCard: questionCard,
         nextButton: nextButton,
         onProceed: () => {
@@ -3693,8 +3696,61 @@ function resetMilestones() {
     lastMilestone = 0;
 }
 
+// =============================================================================
+// SERVICE WORKER REGISTRATION (Phase 1: Offline Support)
+// =============================================================================
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+                console.log('[App] Service Worker registered:', registration.scope);
+            })
+            .catch((error) => {
+                console.log('[App] Service Worker registration failed:', error);
+            });
+    });
+}
+
+// =============================================================================
+// MOBILE INTERACTIONS INITIALIZATION (Phase 1: Swipe Navigation)
+// =============================================================================
+let mobileInteractionsInstance = null;
+
+function initializeMobileInteractions() {
+    // Only initialize once
+    if (mobileInteractionsInstance) return;
+
+    // Check if MobileInteractions class is available
+    if (typeof MobileInteractions === 'undefined') {
+        console.warn('[App] MobileInteractions class not loaded');
+        return;
+    }
+
+    mobileInteractionsInstance = new MobileInteractions({
+        onSwipeNext: () => {
+            // Only allow swipe to next if answer has been submitted
+            if (hasAnswered && currentQuestionIndex < totalQuestions - 1) {
+                console.log('[App] Swipe next detected');
+                nextQuestion();
+            }
+        },
+        onSwipePrevious: () => {
+            // Optional: implement going back to previous question
+            // For now, we'll disable this to maintain quiz integrity
+            console.log('[App] Swipe previous detected (disabled)');
+        }
+    });
+
+    console.log('[App] Mobile interactions initialized');
+}
+
 // Initialize app when page loads
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize mobile interactions for quiz page
+    if (window.location.pathname.endsWith('quiz.html')) {
+        initializeMobileInteractions();
+    }
+
     // Check if we're on quiz.html and need to restore state
     if (window.location.pathname.endsWith('quiz.html')) {
         const quizStateStr = sessionStorage.getItem('quizState');
