@@ -11,33 +11,34 @@
  * @date 2026-01-07
  */
 
-const CACHE_VERSION = 'sara-v1.0.0-phase1';
+const CACHE_VERSION = 'sara-v1.0.1-phase1';
 const CACHE_NAME = `sara-exercises-${CACHE_VERSION}`;
 
 // Static assets to cache on install
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/quiz.html',
-  '/level-selector.html',
+  'index.html',
+  'quiz.html',
+  'level-selector.html',
 
   // CSS
-  '/static/css/styles.min.css',
-  '/static/css/rewards.css',
-  '/static/css/gamification.css',
-  '/static/css/verhoudingstabel-widget.min.css',
+  'static/css/styles.min.css',
+  'static/css/rewards.css',
+  'static/css/gamification.css',
+  'static/css/verhoudingstabel-widget.min.css',
 
   // JavaScript - Core
-  '/static/js/app.min.js',
-  '/static/js/config.min.js',
-  '/static/js/utils.min.js',
+  'static/js/app.min.js',
+  'static/js/config.min.js',
+  'static/js/utils.min.js',
 
   // JavaScript - Features
-  '/static/js/gamification.min.js',
-  '/static/js/session-rewards.min.js',
-  '/static/js/card-morph-feedback.min.js',
-  '/static/js/accessibility.min.js',
-  '/static/js/streak-animations.min.js',
+  // (using source files for gamification; no minified bundle present)
+  'static/src/gamification.js',
+  'static/src/gamification-ui.js',
+  'static/js/session-rewards.min.js',
+  'static/js/card-morph-feedback.min.js',
+  'static/js/accessibility.min.js',
+  'static/js/streak-animations.min.js',
 
   // Fonts (Google Fonts - will be cached when loaded)
   'https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap',
@@ -47,10 +48,10 @@ const STATIC_ASSETS = [
 
 // Exercise files to cache (most commonly used)
 const EXERCISE_CACHE = [
-  '/data-v2/exercises/bl/bl_groep4_m4_1_core.json',
-  '/data-v2/exercises/bl/bl_groep4_m4_1_support.json',
-  '/data-v2/exercises/gb/gb_groep4_m4_core.json',
-  '/data-v2/exercises/gb/gb_groep4_m4_support.json'
+  'data-v2/exercises/bl/bl_groep4_m4_1_core.json',
+  'data-v2/exercises/bl/bl_groep4_m4_1_support.json',
+  'data-v2/exercises/gb/gb_groep4_m4_core.json',
+  'data-v2/exercises/gb/gb_groep4_m4_support.json'
 ];
 
 // ============================================================================
