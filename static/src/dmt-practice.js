@@ -92,7 +92,12 @@ class DMTPractice {
 
     async loadData() {
         try {
+            console.log('[DMT] Starting data load...');
+            console.log('[DMT] CONFIG available:', typeof CONFIG !== 'undefined');
+            console.log('[DMT] CONFIG.subjectFilePaths:', CONFIG?.subjectFilePaths ? 'exists' : 'missing');
+
             const dmtPaths = CONFIG.subjectFilePaths?.dmt;
+            console.log('[DMT] DMT paths:', dmtPaths);
 
             const listConfigs = [
                 { key: 'A', config: dmtPaths?.listA },
@@ -101,6 +106,7 @@ class DMTPractice {
             ];
 
             if (!dmtPaths || listConfigs.some(item => !item.config)) {
+                console.error('[DMT] Missing paths or configs');
                 throw new Error('DMT paden niet gevonden in configuratie');
             }
 
@@ -130,11 +136,12 @@ class DMTPractice {
             // Norming data is not part of the split format; keep it null to disable norm lookup gracefully
             this.normingData = null;
 
-            console.log('DMT data loaded:', {
+            console.log('[DMT] Data loaded successfully:', {
                 A: this.wordLists.A.length,
                 B: this.wordLists.B.length,
                 C: this.wordLists.C.length
             });
+            console.log('[DMT] Sample words from List A:', this.wordLists.A.slice(0, 5));
         } catch (error) {
             console.error('Error loading DMT data:', error);
             alert('Er is een fout opgetreden bij het laden van de woordenlijsten.');
@@ -366,7 +373,10 @@ class DMTPractice {
 
     showPracticeScreen() {
         // Load words for selected list (but don't start yet)
+        console.log('[DMT] showPracticeScreen - selected list:', this.state.selectedList);
+        console.log('[DMT] wordLists available:', Object.keys(this.wordLists));
         this.state.words = [...this.wordLists[this.state.selectedList]];
+        console.log('[DMT] Loaded', this.state.words.length, 'words for practice');
         this.state.currentIndex = 0;
         this.state.totalWordsSeen = 0;
         this.state.timeRemaining = 60;
@@ -456,11 +466,13 @@ class DMTPractice {
     showNextWord() {
         if (this.state.currentIndex >= this.state.words.length) {
             // All words shown, go to results
+            console.log('[DMT] All words shown, showing results');
             this.showResults();
             return;
         }
 
         const word = this.state.words[this.state.currentIndex];
+        console.log('[DMT] Showing word', this.state.currentIndex + 1, ':', word, '(type:', typeof word, ')');
         document.getElementById('wordDisplay').textContent = word;
         this.state.totalWordsSeen++;
         document.getElementById('wordCount').textContent = this.state.totalWordsSeen;
