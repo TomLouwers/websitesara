@@ -454,7 +454,7 @@ class DMTPractice {
         }
 
         const word = this.state.words[this.state.currentIndex];
-        document.getElementById('wordDisplay').textContent = word.word;
+        document.getElementById('wordDisplay').textContent = word;
         this.state.totalWordsSeen++;
         document.getElementById('wordCount').textContent = this.state.totalWordsSeen;
     }
@@ -495,7 +495,7 @@ class DMTPractice {
 
         // 3. Apply length-based adjustments
         const word = this.state.words[wordIndex];
-        const wordLength = word.word.length;
+        const wordLength = word.length;
 
         if (wordLength >= this.config.lengthAdjustments.long.minLength) {
             interval += this.config.lengthAdjustments.long.adjustment;
