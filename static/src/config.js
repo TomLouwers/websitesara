@@ -844,7 +844,12 @@ const CONFIG = {
     }
 };
 
-// Make CONFIG available globally
+// Make CONFIG available globally for browser
+if (typeof window !== 'undefined') {
+    window.CONFIG = CONFIG;
+}
+
+// Make CONFIG available for Node.js modules (for build scripts)
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = CONFIG;
 }
