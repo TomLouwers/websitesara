@@ -111,6 +111,13 @@ class DMTPractice {
                 listConfigs.map(({ config }) => fetch(config.support))
             );
 
+            // Check if all responses are OK
+            const allResponses = [...coreResponses, ...supportResponses];
+            const failedResponse = allResponses.find(r => !r.ok);
+            if (failedResponse) {
+                throw new Error(`Failed to load file: ${failedResponse.url} (${failedResponse.status})`);
+            }
+
             const coreData = await Promise.all(coreResponses.map(r => r.json()));
             const supportData = await Promise.all(supportResponses.map(r => r.json()));
 
