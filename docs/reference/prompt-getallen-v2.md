@@ -29,58 +29,352 @@ Op basis hiervan bepaal jij **AUTOMATISCH**:
 
 ### **GROEP 3**
 
-#### **M3 - MIDDEN GROEP 3**
+> **🎓 PEDAGOGISCHE CONTEXT GROEP 3**
+>
+> Groep 3 leerlingen (6-7 jaar) bevinden zich in de **concreet-operationele fase** (Piaget):
+> - Denken is sterk gebonden aan **concrete objecten** en handelingen
+> - Abstracte concepten zoals "getal" zijn in ontwikkeling
+> - Leren gebeurt door **manipuleren, visualiseren en ervaren**
+> - Geheugenspan beperkt: 3-5 items tegelijk
+>
+> **Getalsbegrip ontwikkeling (Van den Heuvel-Panhuizen):**
+> 1. **Tellend niveau** (begin G3): Tellen van 1-voor-1 objecten
+> 2. **Structurerend niveau** (midden G3): Getalbeelden herkennen
+> 3. **Verkort rekenen** (eind G3): Rekenfeiten tot 10 geautomatiseerd
+>
+> **Taalvaardigheid:**
+> - AVI niveau: Start M3 tot E3
+> - Zinslengte: Maximaal 6-8 woorden per zin
+> - Vocabulaire: Eenvoudig, alledaags
+> - **VERMIJD**: Samengestelde zinnen, bijzinnen, abstracte begrippen
+
+#### **M3 - MIDDEN GROEP 3** (oktober - december)
+
+**Ontwikkelingsfase:**
+- Overgang van **pre-numeriek** naar **numeriek**
+- Begrip "evenveel", "meer/minder" ontwikkelt zich
+- **Concreet materiaal essentieel**: blokjes, kralen, vingers, rekenrek
+
 **Getallenruimte:**
-- Getallen: 0-20
-- Telrij: vooruit en achteruit tot 20
-- Getalbeeld herkennen tot 10 (dobbelsteenbeeld, vingers)
+- **Getallen: 0-20**
+- Telrij: Vooruit tot 20, achteruit vanaf 10
+- **Getalbeelden tot 10 (VERPLICHT):**
+  - Dobbelsteenpatronen (4 = ⚂, 5 = ⚄, 6 = ⚅)
+  - Vingerbeelden (7 = 5 vingers + 2 vingers)
+  - Rekenrekpatronen (5-structuur)
+  - Gestructureerde hoeveelheden (eierdoos: 10 vakjes)
 
 **Bewerkingen:**
-- Optellen: Som tot 10 (5+3, 2+7)
-- Aftrekken: Verschil binnen 10 (8-3, 10-4)
-- Vermenigvuldigen: GEEN
-- Delen: GEEN
-- Strategieën: Tellen (1 voor 1), getalbeelden, splitsen tot 10
+
+**OPTELLEN TOT 10** (4 ontwikkelingsniveaus):
+1. **Tellen met objecten**: 3 blokjes + 2 blokjes = 5 blokjes tellen
+2. **Tellen op vingers**: Optellen door vingers te gebruiken
+3. **Splitsingen kennen**: 5 = 3+2 = 4+1 = 2+3
+4. **Geautomatiseerd**: 5+3 = 8 zonder tellen (DOEL eind M3)
+
+Strategieën:
+- Doortellen (6... 7, 8)
+- Erbij denken (6 en nog 2 is 8)
+- Splitsing (6+2 = 6+1+1 = 7+1 = 8)
+
+**AFTREKKEN TOT 10** (3 ontwikkelingsniveaus):
+1. **Weghalen met objecten**: 5 blokjes, 2 weghalen = 3 blijven
+2. **Terugdenken**: Van 8 naar 5 is 3 stappen terug
+3. **Verschil zien**: Tussen 3 en 7 zit 4
+
+Strategieën:
+- Terugtellen (8... 7, 6)
+- Verschil (tussen 5 en 8 zit 3)
+- Aanvullen (5 + ? = 8, dus 8-5 = 3)
+
+**Vermenigvuldigen & Delen: GEEN**
+- Te abstract voor M3
+- WEL: Verdubbelen als "nog een keer" (4+4 = 8) - maar presenteer als optellen
+- WEL: Eerlijk verdelen (6 snoepjes voor 2 kinderen = elk 3) - maar GEEN formele ÷ notatie
 
 **Tafels:** GEEN
 
-**Hoofdrekenen:** Verplicht (alles hoofdrekenen, geen cijferen)
+**Hoofdrekenen:** VERPLICHT (alles hoofdrekenen, geen cijferen)
 
 **Stappen:** Maximaal 1 stap
 
-**Context:** Speelgoed tellen, vingers, dobbelstenen, snoep, eenvoudige tel situaties
+**Context (toegestaan):**
+- ✅ Speelgoed tellen (blokjes, auto's, poppen)
+- ✅ Snoep, fruit, koekjes (eten)
+- ✅ Kinderen, dieren (levend)
+- ✅ Vingers (lichaam)
+- ✅ Dobbelstenen, kaarten (spel)
 
-**Taalcomplexiteit:** 1-2 zinnen, zeer eenvoudig
+**Concreet materiaal (bij instructie vermelden):**
+- Rekenrek (2 rijen van 10 kralen)
+- MAB-blokjes (losse eenheden)
+- Telraam
+- Getallenkaarten
+- **Vingers!**
 
-**Afleiders M3:**
-1. ±1 fout (7 i.p.v. 8)
-2. ±2 fout (6 i.p.v. 8)
-3. Omgekeerde bewerking (3 i.p.v. 5 bij 8-3)
-4. Tellfout (dubbel geteld of overgeslagen)
+**Visualisatie:**
+- **VERPLICHT bij elke opgave**: Plaatje of schematische voorstelling
+- **GEEN "kale sommen"** (alleen getallen zonder context/beeld)
+- Kinderen moeten de situatie kunnen "zien"
 
-#### **E3 - EIND GROEP 3**
+**Taalcomplexiteit:**
+- Maximaal 1-2 zinnen
+- Enkelvoudige zinnen (geen bijzinnen)
+- Concreet, hier-en-nu
+- Vocabulaire: "erbij", "krijgen", "komen bij" (optellen), "wegdoen", "opgegeten", "verdwijnen" (aftrekken)
+
+**Voorbeelden GOED:**
+- ✅ "Lisa heeft 3 appels. Ze krijgt er 2 bij. Hoeveel heeft Lisa nu?"
+- ✅ "Er liggen 5 auto's. Er komen 3 auto's bij. Hoeveel zijn er nu?"
+
+**Voorbeelden FOUT:**
+- ❌ "Als Lisa 2 appels meer zou krijgen, zou ze er 5 hebben" (te complex!)
+- ❌ "De som van 3 en 4 bedraagt..." (te formeel!)
+
+**Afleiders M3** (strategisch, gebaseerd op empirische fouten):
+
+1. **±1 fout** (meest voorkomend - vergeten 1 te tellen):
+   - Vraag: 5 + 3 = ? → Correct: 8
+   - Afleider: 7 (vergeten 1 te tellen)
+   - Afleider: 9 (1 te veel geteld)
+
+2. **±2 fout** (2 keer mis geteld):
+   - Correct: 8
+   - Afleider: 6 (2 te weinig)
+   - Afleider: 10 (2 te veel)
+
+3. **Omgekeerde bewerking** (+ en - verwisseld):
+   - Vraag: 8 - 3 = ? → Correct: 5
+   - Afleider: 11 (8+3, verkeerde bewerking)
+   - Afleider: 3 (aftrekker als antwoord genomen)
+
+4. **Tellfout** (kinderen slaan cijfers over bij tellen):
+   - Vraag: Tel verder: 5, 6, 7, 8, ? → Correct: 9
+   - Afleider: 10 (overgeslagen)
+   - Afleider: 8 (herhaald)
+
+**Veelvoorkomende Misconcepties M3:**
+
+1. **"Optellen is altijd groter maken"**
+   - Kind denkt: 5-2 moet 7 zijn (want rekenen = groter)
+   - Remediëring: Concreet materiaal weghalen laten zien
+
+2. **"De grootste getal komt eerst"**
+   - Kind schrijft automatisch 3+7 als 7+3
+   - Is correct (commutativiteit) maar kind begrijpt niet waarom
+
+3. **"Aftrekken = kleinste van grootste"**
+   - Bij 3-5 denkt kind: kan niet, of maakt 5-3=2
+   - Negatieve getallen zijn te abstract voor G3
+
+4. **"Tellen zonder 1-1 correspondentie"**
+   - Kind telt te snel, telt dubbel, slaat objecten over
+   - Remediëring: Objecten verschuiven tijdens tellen
+
+**Differentiatie M3:**
+
+**Voor zwakkere leerlingen:**
+- Getallenruimte beperken tot 10
+- Alleen splitsingen tot 5
+- Veel concreet materiaal (blijf langer in fase 1-2)
+- Meer herhaling (10× dezelfde structuur)
+- Visuele ondersteuning maximaal
+
+**Voor sterkere leerlingen:**
+- Getallenruimte uitbreiden tot 20
+- Eenvoudige tientalovergangen (9+2)
+- Verdubbelen introduceren (4+4, 5+5)
+- Minder visuele ondersteuning (naar fase 4)
+- Maak het speels: "Hoeveel manieren kun je 10 maken?"
+
+---
+
+#### **E3 - EIND GROEP 3** (april - juni)
+
+**Ontwikkelingsfase:**
+- Overgang naar **verkort rekenen**
+- Rekenfeiten tot 10 beginnen te automatiseren
+- Begrip van **tientalstructuur** ontwikkelt zich
+- Nog steeds veel behoefte aan visuele ondersteuning
+
 **Getallenruimte:**
-- Getallen: 0-50
-- Tientalovergangen: 9+3, 12-5
-- Getalbeeld herkennen tot 20
+- **Getallen: 0-50**
+- Telrij: Vooruit tot 50, achteruit vanaf 20
+- Tientallen: 10, 20, 30, 40, 50 als "ronde getallen"
+- **Getalbeelden tot 20:**
+  - Twee dobbelstenen (6+5=11)
+  - Twee handen (8+3=11)
+  - Rekenrek (10 rode + 1 witte kraal = 11)
+
+**Tientalstructuur (CRUCIAAL voor E3):**
+```
+11 = 10 + 1
+15 = 10 + 5
+20 = 10 + 10
+23 = 20 + 3 = 10 + 10 + 3
+```
+
+**Pedagogisch materiaal:**
+- Rekenrek (eerste rij = 10, tweede rij = eenheden)
+- MAB-materiaal (1 tientalstaaf + 3 losse blokjes = 13)
+- Getallenkaarten met tientallen (10, 20) en eenheden (3) apart
 
 **Bewerkingen:**
-- Optellen: Tot 20 met tientalovergang (9+4=13)
-- Aftrekken: Tot 20 met terugrekenen (13-5=8)
-- Vermenigvuldigen: ×2, ×5, ×10 als verdubbelen/groepjes (geen formele tafels)
-- Delen: Delen door 2 (verdelen in 2 gelijke delen)
 
-**Strategieën:** Bruggetje van 10 (9+4 = 9+1+3), splitsen, verdubbelen
+**OPTELLEN MET TIENTALOVERGANG:**
+
+**KERNSTRATEGIE: Bruggetje van 10**
+
+Voorbeeld: 9 + 4 = ?
+- Stap 1: Splits 4 in "1 + 3" (naar 10 toe)
+- Stap 2: 9 + 1 = 10 (eerst naar 10)
+- Stap 3: 10 + 3 = 13 (dan verder)
+
+Andere voorbeelden:
+- 8 + 5 = 8 + 2 + 3 = 10 + 3 = 13
+- 7 + 6 = 7 + 3 + 3 = 10 + 3 = 13
+
+Visueel (beschrijf in opgave):
+- Rekenrek: 9 kralen + 4 kralen
+- Schuif 1 kraal naar eerste rij (maakt 10)
+- Blijven 3 kralen over
+- 10 + 3 = 13
+
+**AFTREKKEN MET TERUGREKENEN:**
+
+Voorbeeld: 13 - 5 = ?
+- Stap 1: Splits 5 in "3 + 2"
+- Stap 2: 13 - 3 = 10 (eerst naar 10 terug)
+- Stap 3: 10 - 2 = 8 (dan verder)
+
+Andere voorbeelden:
+- 12 - 5 = 12 - 2 - 3 = 10 - 3 = 7
+- 15 - 7 = 15 - 5 - 2 = 10 - 2 = 8
+
+**VERMENIGVULDIGEN als herhaald optellen (introductie):**
+
+**GEEN formele tafels**, WEL:
+- Verdubbelen: 5 + 5 = 10, 8 + 8 = 16
+- ×2 in context: "2 zakjes met elk 4 snoepjes = 8 snoepjes"
+- ×5 in context: "5 kinderen, elk 2 koekjes = 10 koekjes"
+- ×10 in context: "10 munten van 1 cent = 10 cent"
+
+Notatie bij E3:
+- Schrijf "3 + 3 + 3 = 9" OF "3 × 3 = 9" (beide OK)
+- Focus op begrip, niet op symbool
+
+Visualisatie (verplicht):
+- Groepjes tekenen: ●● ●● ●● = 3 groepjes van 2 = 6
+- Arrays (rijen × kolommen): 2×3 = 6 objecten in rechthoek
+
+**DELEN als eerlijk verdelen (introductie):**
+
+**GEEN formele deling**, WEL:
+- Verdelen: 8 snoepjes voor 2 kinderen = elk 4
+- In groepjes: 12 kinderen in groepjes van 3 = 4 groepjes
+
+Strategieën:
+- Uitdelen (1 voor jou, 1 voor mij, ...)
+- Groepjes maken (concreet)
+
+Notatie bij E3:
+- Schrijf "12 : 3 = 4" OF "12 gedeeld door 3 is 4" (beide OK)
+
+**Strategieën:** Bruggetje van 10, splitsen, verdubbelen, tientalstructuur
 
 **Stappen:** Maximaal 2
 
-**Context:** Geld (tot €10), speelgoed, groepjes kinderen, snoep verdelen
+**Context (toegestaan):**
+- ✅ Geld (tot €10): munten, briefjes, wisselgeld
+- ✅ Tijd: hele en halve uren, digitale klok
+- ✅ Speelgoed, school, sport
+- ✅ Winkeltje spelen (prijsjes, betalen)
+- ✅ Groepjes kinderen (verjaardagen, sport)
 
-**Afleiders E3:**
-1. Tiental vergeten (13 i.p.v. 23 bij 18+5)
-2. Verkeerde splitsting (9+4=12 i.p.v. 13)
-3. Bewerking omgedraaid (3 i.p.v. 5 bij 8-3)
-4. Eentalfout (9+4=14 i.p.v. 13)
+**Nieuwe materialen:**
+- Speelgeld (munten tot €2, briefje €5)
+- Speelgoedklok (analoog en digitaal)
+- Honderdveld (100 vakjes, voor overzicht tot 100)
+- Getallenlijnen (sprongen zichtbaar maken)
+
+**Taalcomplexiteit:**
+- Maximaal 2-3 zinnen
+- Enkelvoudige zinnen, af en toe 1 voegwoord ("en", "maar")
+- Iets meer abstractie toegestaan
+- Vocabulaire uitbreiding: "samen", "totaal", "bij elkaar" (optellen), "overblijven", "verschil", "minder dan" (aftrekken), "groepjes van", "keer", "per" (vermenigvuldigen), "eerlijk verdelen", "elk", "per persoon" (delen)
+
+**Voorbeelden GOED:**
+- ✅ "Lisa heeft 8 kralen. Haar vriendin geeft haar er nog 5. Hoeveel kralen heeft Lisa nu?"
+- ✅ "In de klas zijn 12 kinderen. 5 kinderen gaan naar buiten. Hoeveel blijven er in de klas?"
+- ✅ "Een zakje snoep kost €2. Je koopt 3 zakjes. Hoeveel betaal je?"
+
+**Voorbeelden FOUT:**
+- ❌ "Als ze 3 zakjes zou kopen, terwijl elk zakje €2 kost..." (te complex)
+
+**Afleiders E3** (verfijnder dan M3):
+
+1. **Tiental vergeten** (alleen eenheden opgeteld):
+   - Vraag: 18 + 5 = ? → Correct: 23
+   - Afleider: 13 (alleen 8+5=13, tiental vergeten)
+   - Afleider: 113 (cijfers achter elkaar geplakt)
+
+2. **Verkeerde splitsing bij bruggetje**:
+   - Vraag: 9 + 4 = ? → Correct: 13 (9+1=10, 10+3=13)
+   - Afleider: 12 (9+2=11, 11+1=12, verkeerd gesplitst)
+   - Afleider: 14 (9+1=10, 10+4=14, vergeten dat 1 al gebruikt is)
+
+3. **Bewerking omgedraaid**:
+   - Vraag: 15 - 7 = ? → Correct: 8
+   - Afleider: 22 (15+7, + i.p.v. -)
+   - Afleider: 7 (aftrekker als antwoord, verwarring)
+
+4. **Eental fout bij tientalovergang**:
+   - Vraag: 9 + 4 = ? → Correct: 13
+   - Afleider: 14 (weet dat tiental omhoog gaat, maar eental fout)
+   - Afleider: 12 (weet dat in de 10-en, maar verkeerd gerekend)
+
+5. **Verdubbel/vermenigvuldig fout**:
+   - Vraag: 3 zakjes met elk 4 snoepjes, hoeveel totaal? → Correct: 12 (3×4 of 4+4+4)
+   - Afleider: 7 (3+4, vergeet herhaald optellen)
+   - Afleider: 10 (schatting, maar verkeerd)
+   - Afleider: 16 (4×4, verkeerde hoeveelheid zakjes)
+
+**Veelvoorkomende Misconcepties E3:**
+
+1. **"Bruggetje fout splitsen"**
+   - Verschillende splitsingen kunnen correct zijn, maar kind maakt 9+5=14 door fout te splitsen
+   - Remediëring: Oefen splitsingen expliciet (4 = 1+3 = 2+2)
+
+2. **"Tientallen en eenheden door elkaar"**
+   - Bij 23 denkt kind: "2 en 3, dus 2+3=5" (plaatswaarde niet begrepen)
+   - Remediëring: MAB-materiaal, tientallen fysiek groter maken
+
+3. **"Aftrekken over tientalgrens te moeilijk"**
+   - Kind kan 13-5 niet, want "3-5 kan niet"
+   - Begrijpt niet: eerst 13→10 (min 3), dan 10→8 (min 2)
+   - Remediëring: Rekenrek, terug springen visualiseren
+
+4. **"Vermenigvuldigen = optellen"**
+   - Kind ziet 3×4 en doet 3+4=7
+   - Begrijpt herhaald optellen concept niet
+   - Remediëring: Concreet groepjes maken, visueel arrays
+
+**Differentiatie E3:**
+
+**Voor zwakkere leerlingen:**
+- Blijf langer oefenen met bruggetje van 10
+- Getallenruimte beperken tot 20
+- Tientallen apart oefenen (10, 20, 30)
+- Geen ×/÷ (te vroeg)
+- Extra visuele ondersteuning (rekenrek altijd beschikbaar)
+
+**Voor sterkere leerlingen:**
+- Getallenruimte tot 100
+- Splitsingen flexibel (9+4 op meerdere manieren)
+- ×2, ×5, ×10 automatiseren
+- Aftrekken over meerdere tientallen (32-15)
+- Patronen ontdekken (2, 4, 6, 8, ...)
+- Maak het uitdagend: "Vind alle splitsingen van 15"
 
 ---
 
