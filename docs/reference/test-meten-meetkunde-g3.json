@@ -1,0 +1,66 @@
+[
+  {
+    "id": "MM_G3_M_001",
+    "groep": 3,
+    "niveau": "M",
+    "subdomein": "METEN",
+    "hoofdvraag": "Dit potlood is 12 cm lang (zie liniaal op plaatje). Hoeveel cm is dat?",
+    "correct_antwoord": "12 cm",
+    "afleiders": ["11 cm", "13 cm", "12 m"],
+    "toelichting": "Meten met liniaal vanaf 0. Kind moet vanaf 0 beginnen met tellen, niet vanaf 1. Let op: streepjes tellen geeft 13 (fout), tussenruimtes is correct.",
+    "context": "lengte meten",
+    "moeilijkheidsgraad": 0.30,
+    "geschatte_tijd_sec": 30
+  },
+  {
+    "id": "MM_G3_E_001",
+    "groep": 3,
+    "niveau": "E",
+    "subdomein": "METEN",
+    "hoofdvraag": "De analoge klok wijst half 4. Hoe laat is het op de digitale klok? (zie beide klokken op plaatje)",
+    "correct_antwoord": "3:30",
+    "afleiders": ["4:30", "3:00", "2:30"],
+    "toelichting": "KRITISCH: Half 4 = 3:30 (niet 4:30!). Halverwege naar 4 uur. Grote wijzer naar beneden (6), kleine wijzer tussen 3 en 4. Veelvoorkomende fout: kind denkt 4:30.",
+    "context": "tijd aflezen",
+    "moeilijkheidsgraad": 0.45,
+    "geschatte_tijd_sec": 40
+  },
+  {
+    "id": "MM_G3_E_002",
+    "groep": 3,
+    "niveau": "E",
+    "subdomein": "MEETKUNDE",
+    "hoofdvraag": "Hoeveel hoeken heeft een vierkant? (zie figuur op plaatje)",
+    "correct_antwoord": "4",
+    "afleiders": ["3", "5", "6"],
+    "toelichting": "Eigenschappen tellen is toegestaan bij E3. Kind wijst 4 hoeken aan op de tekening. Gebruik fysiek blokje om hoeken te voelen.",
+    "context": "figuren eigenschappen",
+    "moeilijkheidsgraad": 0.30,
+    "geschatte_tijd_sec": 25
+  },
+  {
+    "id": "MM_G3_M_ERROR",
+    "groep": 3,
+    "niveau": "M",
+    "subdomein": "METEN",
+    "hoofdvraag": "Deze tafel is 1,5 meter lang. Hoeveel cm is dat?",
+    "correct_antwoord": "150 cm",
+    "afleiders": ["15 cm", "1500 cm", "50 cm"],
+    "toelichting": "FOUT: M3 mag geen meter en geen decimalen",
+    "moeilijkheidsgraad": 0.60,
+    "geschatte_tijd_sec": 45
+  },
+  {
+    "id": "MM_G3_E_ERROR_HALF4",
+    "groep": 3,
+    "niveau": "E",
+    "subdomein": "METEN",
+    "hoofdvraag": "De klok wijst half 4. Hoe laat is het?",
+    "correct_antwoord": "4:30",
+    "afleiders": ["3:30", "3:00", "4:00"],
+    "toelichting": "KRITIEKE FOUT: Correct antwoord is FOUT! Half 4 = 3:30, niet 4:30",
+    "context": "tijd",
+    "moeilijkheidsgraad": 0.40,
+    "geschatte_tijd_sec": 35
+  }
+]
