@@ -1,6 +1,13 @@
 """
-GETALLEN VALIDATOR v5.0 - IMPROVED PRODUCTION VERSION
+GETALLEN VALIDATOR v5.1 - PRODUCTION VERSION WITH SUPPORT FILE INTEGRATION
 Verbeterde validatie voor GETALLEN EN BEWERKINGEN domein (G3-G8)
+
+Belangrijke wijzigingen t.o.v. v5.0:
+- ✅ Automatische support file detectie (*_core.json → *_support.json)
+- ✅ Merge explanation uit support file als toelichting
+- ✅ Graceful degradation: warning ipv error bij ontbrekende support file
+- ✅ Fixed: dubbele punt detectie ("plaatje: 9" niet meer als delen)
+- ✅ Fixed: emoji-blokken niet meer meegeteld als zinnen
 
 Belangrijke wijzigingen t.o.v. v4:
 - ✅ Breuken uitgesloten (aparte oefening)
@@ -15,7 +22,6 @@ Belangrijke wijzigingen t.o.v. v4:
 - ✅ Hoofdrekenen "handig" met concrete voorbeelden
 - ✅ Uitgebreide didactische kwaliteitscheck
 - ✅ Betere regex voor bewerkingen (ook tekstueel)
-- ✅ Legacy conversie met None voor onbekende waarden
 """
 
 import json
@@ -1007,13 +1013,13 @@ class GetallenValidatorImproved:
         """
         toelichting = item.get('toelichting', '').lower()
 
-        # NIEUW: Check of dit een auto-converted item is
-        is_auto_converted = 'auto-convert' in toelichting or 'auto-conversie' in toelichting
-
-        if is_auto_converted:
-            self.errors.append(
-                "❌ Item is auto-converted uit legacy formaat. "
-                "Vul een volledige toelichting met strategie en misconceptie-uitleg."
+        # AANGEPAST: Check of dit een item zonder support file is
+        is_missing_support = 'geen support file' in toelichting
+        
+        if is_missing_support:
+            self.warnings.append(
+                "⚠️  Geen support file gevonden. Voeg een support file toe met explanation, "
+                "of vul handmatig een toelichting met strategie en misconceptie-uitleg."
             )
             return
 
@@ -1093,7 +1099,7 @@ class GetallenValidatorImproved:
         )
 
 
-def _convert_legacy_structure(data: Any) -> Optional[List[Dict[str, Any]]]:
+def _convert_legacy_structure(data: Any, support_data: Optional[Any] = None) -> Optional[List[Dict[str, Any]]]:
     """
     AANGEPAST: Legacy conversie met verbeterde context extractie en visual detectie
     
@@ -1102,6 +1108,7 @@ def _convert_legacy_structure(data: Any) -> Optional[List[Dict[str, Any]]]:
     - Items met question/options/answer.correct_index
     - Detecteer visuele elementen automatisch
     - Extract concrete context uit vraagtext
+    - NIEUW: Merge support file met explanation/feedback
     """
     if not isinstance(data, dict) or "items" not in data:
         return None
@@ -1114,6 +1121,16 @@ def _convert_legacy_structure(data: Any) -> Optional[List[Dict[str, Any]]]:
         niveau = niveau_raw[0].upper()
 
     legacy_items = data.get("items", [])
+    
+    # NIEUW: Parse support file als die beschikbaar is
+    support_items_dict = {}
+    if support_data and isinstance(support_data, dict):
+        support_items_list = support_data.get("items", [])
+        for support_item in support_items_list:
+            item_id = support_item.get("item_id")
+            if item_id:
+                support_items_dict[item_id] = support_item
+    
     converted: List[Dict[str, Any]] = []
     
     for legacy in legacy_items:
@@ -1169,8 +1186,26 @@ def _convert_legacy_structure(data: Any) -> Optional[List[Dict[str, Any]]]:
         # Legacy theme als fallback
         theme = legacy.get("theme", "nvt")
         
-        # AANGEPAST: Minimale toelichting, zodat gebruiker gedwongen wordt deze aan te vullen
-        toelichting_basis = f"[AUTO-CONVERTED - VEREIST HANDMATIGE AANVULLING]\nOrigineel thema: {theme}."
+        # NIEUW: Probeer explanation uit support file te halen
+        toelichting_basis = None
+        support_item = support_items_dict.get(legacy_id)
+        
+        if support_item:
+            # Extract explanation uit support file
+            feedback = support_item.get("feedback", {})
+            explanation = feedback.get("explanation", "")
+            if explanation:
+                # Verwijder de "Het juiste antwoord is: X." prefix als die er is
+                explanation_clean = re.sub(r'^Het juiste antwoord is:?\s*\d+\.?\s*', '', explanation, flags=re.IGNORECASE)
+                explanation_clean = re.sub(r'^\s*Thema:.*$', '', explanation_clean, flags=re.MULTILINE | re.IGNORECASE)
+                explanation_clean = explanation_clean.strip()
+                
+                if explanation_clean and len(explanation_clean) > 10:
+                    toelichting_basis = explanation_clean
+        
+        # Fallback als geen support data
+        if not toelichting_basis:
+            toelichting_basis = f"[GEEN SUPPORT FILE - VEREIST HANDMATIGE AANVULLING]\nOrigineel thema: {theme}."
 
         converted.append(
             {
@@ -1180,7 +1215,7 @@ def _convert_legacy_structure(data: Any) -> Optional[List[Dict[str, Any]]]:
                 "hoofdvraag": question_text,
                 "correct_antwoord": correct_text,
                 "afleiders": afleiders,
-                "toelichting": toelichting_basis,  # Minimaal, dwingt handmatige check
+                "toelichting": toelichting_basis,  # Nu uit support file of fallback
                 "context": theme,  # Originele theme behouden
                 "has_visual": has_visual,  # AANGEPAST: Automatisch gedetecteerd
                 "assets": [] if not has_visual else ["embedded_visual"],  # Placeholder
@@ -1200,12 +1235,25 @@ def valideer_bestand(filepath: str) -> List[ValidationResult]:
     with open(filepath, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
+    # NIEUW: Probeer automatisch het bijbehorende support file te vinden
+    support_data = None
+    if filepath.endswith('_core.json'):
+        support_filepath = filepath.replace('_core.json', '_support.json')
+        try:
+            with open(support_filepath, 'r', encoding='utf-8') as sf:
+                support_data = json.load(sf)
+                print(f"✅ Support file gevonden: {support_filepath}")
+        except FileNotFoundError:
+            print(f"ℹ️  Geen support file gevonden op: {support_filepath}")
+        except Exception as e:
+            print(f"⚠️  Kon support file niet laden: {e}")
+
     # Ondersteun zowel lijst, enkel item, als legacy structuur
     items: List[Dict[str, Any]]
     if isinstance(data, list):
         items = data
     elif isinstance(data, dict) and "items" in data:
-        converted = _convert_legacy_structure(data)
+        converted = _convert_legacy_structure(data, support_data)  # AANGEPAST: support_data meegeven
         items = converted if converted is not None else [data]
     else:
         items = [data]
