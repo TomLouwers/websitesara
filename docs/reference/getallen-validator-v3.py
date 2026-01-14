@@ -1,28 +1,28 @@
 """
-GETALLEN VALIDATOR v3.0 - ENHANCED
-Uitgebreid validatiescript met diepgaande kwaliteitscontroles voor GETALLEN domein
+GETALLEN VALIDATOR v5.0 - IMPROVED PRODUCTION VERSION
+Verbeterde validatie voor GETALLEN EN BEWERKINGEN domein (G3-G8)
 
-Features:
-- ✅ Volledige G3-G8 ondersteuning (inclusief M3 en E3)
-- ✅ Getallenruimte validatie per groep/niveau
-- ✅ Bewerkingen validatie (+, -, ×, ÷)
-- ✅ Tafels controle per niveau
-- ✅ Strategieën validatie (bruggetje, splitsen, etc.)
-- ✅ G3-specifieke pedagogische controles
-- ✅ Taalcomplexiteit (zinnen, woordlengte)
-- ✅ Visualisatie vereisten (VERPLICHT voor G3)
-- ✅ Context geschiktheid per leeftijdsgroep
-- ✅ Afleider kwaliteit (strategisch, empirisch)
-- ✅ Misconceptie detectie
-- ✅ Numerieke correctheidscontroles
-- ✅ Didactische kwaliteit (LOVA, feedback)
-- ✅ Cross-validatie (moeilijkheid vs stappen vs tijd)
+Belangrijke wijzigingen t.o.v. v4:
+- ✅ Breuken uitgesloten (aparte oefening)
+- ✅ Tafelkennis G4-M uitgebreid (nu incl. 3 en 4)
+- ✅ Visualisatie G3-E: sterk aanbevolen ipv verplicht
+- ✅ Negatieve getallen vanaf G6-E (was G7)
+- ✅ Semantische context-bewerking validatie
+- ✅ Uitkomst binnen getallenruimte check
+- ✅ Verbeterde afleider kwaliteitscontrole
+- ✅ Talige complexiteit (bijzinnen G3)
+- ✅ Distractorverdeling clustering check
+- ✅ Hoofdrekenen "handig" met concrete voorbeelden
+- ✅ Uitgebreide didactische kwaliteitscheck
+- ✅ Betere regex voor bewerkingen (ook tekstueel)
+- ✅ Legacy conversie met None voor onbekende waarden
 """
 
 import json
 import re
-from typing import Dict, List, Any, Optional, Tuple
+from typing import Dict, List, Any, Optional, Tuple, Set
 from dataclasses import dataclass, field
+import math
 
 
 @dataclass
@@ -36,631 +36,958 @@ class ValidationResult:
     quality_breakdown: Dict[str, float] = field(default_factory=dict)
 
 
-class GetallenValidatorEnhanced:
-    """Uitgebreide validator voor GETALLEN domein items (G3-G8)"""
+class GetallenValidatorImproved:
+    """
+    Verbeterde validator voor GETALLEN EN BEWERKINGEN domein (G3-G8)
+    
+    Exclusies:
+    - Breuken (aparte oefening)
+    - Kommagetallen uitgebreid (alleen basis decimalen in hogere groepen)
+    - Verhoudingen (aparte oefening)
+    """
 
-    # Niveauregels per groep/niveau
+    # =====================================================================
+    # NIVEAU REGELS PER GROEP/NIVEAU
+    # =====================================================================
     NIVEAU_REGELS = {
-        # GROEP 3
+        # GROEP 3 MIDDEN (M3)
         (3, 'M'): {
             'getallenruimte': (0, 20),
             'bewerkingen': ['optellen_tot_10', 'aftrekken_tot_10'],
-            'verboden_bewerkingen': ['vermenigvuldigen', 'delen'],
-            'tafels': None,  # GEEN tafels
-            'strategieen': ['tellen', 'getalbeelden', 'splitsen_tot_10'],
+            'verboden_bewerkingen': ['vermenigvuldigen', 'delen', 'tientalovergang'],
+            'tafels': None,
+            'strategieen': ['tellen', 'getalbeelden', 'splitsen_tot_10', 'vingers_gebruiken'],
             'hoofdrekenen': 'verplicht',
             'cijferend': 'verboden',
             'max_stappen': 1,
             'visualisatie': 'verplicht',
-            'materialen': ['rekenrek', 'mab_blokjes', 'vingers', 'dobbelstenen'],
-            'context_types': ['speelgoed', 'snoep', 'fruit', 'vingers', 'dobbelstenen'],
+            'materialen': ['rekenrek', 'mab_blokjes', 'vingers', 'dobbelstenen', 'telraam'],
+            'context_types': ['speelgoed', 'snoep', 'fruit', 'dieren', 'vingers', 'dobbelstenen'],
             'max_zinnen': 2,
             'max_woorden_per_zin': 8,
+            'bijzinnen_toegestaan': False,  # NIEUW: Geen "die", "dat", "omdat" etc.
             'min_tijd_sec': 15,
             'max_tijd_sec': 40,
             'moeilijkheid_range': (0.10, 0.35),
             'afleider_types': ['plus_min_1', 'plus_min_2', 'omgekeerde_bewerking', 'tellfout'],
+            'vraagwoorden': ['hoeveel', 'tel', 'bereken'],  # NIEUW: Toegestane vraagwoorden
         },
+        
+        # GROEP 3 EIND (E3)
         (3, 'E'): {
             'getallenruimte': (0, 50),
-            'bewerkingen': ['optellen_tot_20_tientalovergang', 'aftrekken_tot_20_terugrekenen'],
-            'vermenigvuldig_intro': ['x2', 'x5', 'x10'],  # Als verdubbelen/groepjes, geen formeel
-            'deel_intro': ['delen_door_2'],  # Als eerlijk verdelen, geen formeel
+            'bewerkingen': [
+                'optellen_tot_20_tientalovergang',
+                'aftrekken_tot_20_tientalovergang',  # AANGEPAST: Expliciet tientalovergang
+                'aftrekken_tot_20_terugrekenen',  # Invulopgaven: 14 - ? = 7
+            ],
+            'vermenigvuldig_intro': ['x2_verdubbelen', 'x5_groepjes', 'x10_groepjes'],
+            'deel_intro': ['delen_door_2_halveren', 'delen_eerlijk_verdelen'],
             'tafels': None,  # Nog geen formele tafels
-            'strategieen': ['bruggetje_van_10', 'splitsen', 'verdubbelen', 'tientalstructuur'],
+            'strategieen': [
+                'bruggetje_van_10',
+                'splitsen',
+                'verdubbelen',
+                'halveren',
+                'tientalstructuur',
+                'getallenlijnen',
+            ],
             'hoofdrekenen': 'verplicht',
             'cijferend': 'verboden',
             'max_stappen': 2,
-            'visualisatie': 'verplicht',
+            'visualisatie': 'sterk_aanbevolen',  # AANGEPAST: Was 'verplicht'
             'materialen': ['rekenrek', 'mab_materiaal', 'honderdveld', 'getallenlijnen', 'speelgeld'],
             'context_types': ['geld_tot_10_euro', 'speelgoed', 'groepjes_kinderen', 'tijd_hele_halve_uren'],
             'max_zinnen': 3,
             'max_woorden_per_zin': 10,
+            'bijzinnen_toegestaan': False,
             'min_tijd_sec': 20,
             'max_tijd_sec': 50,
             'moeilijkheid_range': (0.25, 0.50),
-            'afleider_types': ['tiental_vergeten', 'verkeerde_splitsing', 'bewerking_omgedraaid', 'eental_fout'],
+            'afleider_types': [
+                'tiental_vergeten',
+                'verkeerde_splitsing',
+                'bewerking_omgedraaid',
+                'eental_fout',
+            ],
+            'vraagwoorden': ['hoeveel', 'bereken', 'wat is', 'tel'],
         },
-        # GROEP 4
+        
+        # GROEP 4 MIDDEN (M4)
         (4, 'M'): {
             'getallenruimte': (0, 100),
             'bewerkingen': ['optellen_100', 'aftrekken_100', 'vermenigvuldigen', 'delen'],
-            'tafels': ['1', '2', '5', '10'],  # Verplicht
-            'tafels_verrijking': ['3', '4'],
-            'verboden_tafels': ['6', '7', '8', '9'],
+            'tafels': ['1', '2', '3', '4', '5', '10'],  # AANGEPAST: 3 en 4 toegevoegd
+            'tafels_verrijking': ['6', '7', '8', '9'],
+            'tafel_tijd_sec': 5,  # Max 5 seconden per tafelsom G4-M
             'hoofdrekenen': 'verplicht',
             'cijferend': 'verboden',
             'max_stappen': 2,
             'visualisatie': 'aanbevolen',
-            'context_types': ['geld_tot_20_euro', 'tijd', 'lengtes_cm', 'gewichten_kg'],
+            'strategieen': [
+                'kolomsgewijs_optellen',
+                'kolomsgewijs_aftrekken',
+                'tafels_automatisch',
+                'groepsgewijze_vermenigvuldiging',
+            ],
+            'context_types': ['geld_tot_20_euro', 'tijd_uren', 'lengtes_cm_m', 'gewichten_kg'],
             'max_zinnen': 3,
+            'max_woorden_per_zin': 12,
+            'bijzinnen_toegestaan': True,  # Vanaf G4 wel toegestaan
             'min_tijd_sec': 25,
             'max_tijd_sec': 60,
             'moeilijkheid_range': (0.30, 0.55),
+            'afleider_types': [
+                'tafel_verwisseling',
+                'tiental_vergeten',
+                'verkeerde_kolom',
+                'bewerkingsverwarring',
+            ],
         },
+        
+        # GROEP 4 EIND (E4)
         (4, 'E'): {
             'getallenruimte': (0, 1000),
-            'bewerkingen': ['optellen_1000', 'aftrekken_1000', 'vermenigvuldigen', 'staartdeling_eenvoudig'],
+            'bewerkingen': [
+                'optellen_1000',
+                'aftrekken_1000',
+                'vermenigvuldigen',
+                'staartdeling_eenvoudig',
+            ],
             'tafels': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],  # Alle tafels
-            'tafel_tijd_sec': 3,  # Max 3 seconden per tafelsom
+            'tafel_tijd_sec': 3,  # Max 3 seconden per tafelsom G4-E
             'hoofdrekenen': 'tot_100',
-            'cijferend': 'vanaf_1000',
+            'cijferend': 'vanaf_100',  # AANGEPAST: Was 'vanaf_1000'
             'max_stappen': 3,
             'visualisatie': 'optioneel',
-            'context_types': ['geld_tot_50_euro', 'tijd_kwartieren', 'meetkunde_omtrek', 'weekplanning'],
+            'strategieen': [
+                'kolomsgewijs_met_lenen',
+                'staartdeling',
+                'tafels_automatisch',
+                'schatten_afronden',
+            ],
+            'context_types': [
+                'geld_tot_50_euro',
+                'tijd_kwartieren',
+                'meetkunde_omtrek',
+                'weekplanning',
+            ],
             'max_zinnen': 4,
+            'max_woorden_per_zin': 14,
+            'bijzinnen_toegestaan': True,
             'min_tijd_sec': 35,
             'max_tijd_sec': 75,
             'moeilijkheid_range': (0.40, 0.65),
         },
-        # GROEP 5
+        
+        # GROEP 5 MIDDEN (M5)
         (5, 'M'): {
             'getallenruimte': (0, 10000),
-            'bewerkingen': ['optellen_10000', 'aftrekken_10000', 'vermenigvuldigen_10_100', 'staartdeling'],
+            'bewerkingen': [
+                'optellen_10000',
+                'aftrekken_10000',
+                'vermenigvuldigen_meercijferig',
+                'staartdeling',
+            ],
             'tafels': 'automatisch',
-            'hoofdrekenen': 'handig',  # 3×25, 4×50, etc.
+            'handig_rekenen': [  # NIEUW: Expliciete lijst
+                'vermenigvuldigen_met_10_100_1000',
+                'delen_door_10_100',
+                'vermenigvuldigen_met_25',  # 4×25=100
+                'vermenigvuldigen_met_50',  # 2×50=100
+                'verdubbelen_halveren_strategie',
+            ],
+            'hoofdrekenen': 'handig',
             'cijferend': 'kolomsgewijs',
             'max_stappen': 3,
-            'context_types': ['grote_aantallen', 'geld_tot_100_euro', 'tijd_uren_minuten', 'gewichten_g_kg'],
+            'context_types': [
+                'grote_aantallen',
+                'geld_tot_100_euro',
+                'tijd_uren_minuten',
+                'gewichten_g_kg',
+                'afstanden_m_km',
+            ],
             'max_zinnen': 4,
+            'max_woorden_per_zin': 15,
+            'bijzinnen_toegestaan': True,
             'min_tijd_sec': 40,
             'max_tijd_sec': 90,
             'moeilijkheid_range': (0.45, 0.70),
         },
+        
+        # GROEP 5 EIND (E5)
         (5, 'E'): {
             'getallenruimte': (0, 100000),
-            'decimalen': {'max_cijfers': 1, 'bewerkingen': ['optellen', 'aftrekken']},
-            'bewerkingen': ['optellen_100000', 'aftrekken_100000', 'vermenigvuldigen_tiental', 'staartdeling_2cijferig'],
+            'decimalen': {  # BEPERKT: Alleen basis
+                'max_cijfers': 1,
+                'bewerkingen': ['optellen', 'aftrekken'],
+                'context': ['geld_centen', 'lengtes_dm'],
+            },
+            'bewerkingen': [
+                'optellen_100000',
+                'aftrekken_100000',
+                'vermenigvuldigen_tiental',
+                'staartdeling_2cijferig',
+            ],
+            'handig_rekenen': [
+                'vermenigvuldigen_met_10_100_1000',
+                'delen_door_10_100',
+                'vermenigvuldigen_met_25_50',
+                'verdubbelen_halveren',
+            ],
             'max_stappen': 3,
-            'context_types': ['grote_getallen', 'afstanden', 'inwoners', 'decimalen_metingen'],
+            'context_types': [
+                'grote_getallen',
+                'afstanden_km',
+                'inwoners',
+                'decimalen_basis',
+            ],
             'max_zinnen': 4,
+            'max_woorden_per_zin': 16,
+            'bijzinnen_toegestaan': True,
             'min_tijd_sec': 50,
             'max_tijd_sec': 100,
             'moeilijkheid_range': (0.50, 0.75),
         },
-        # GROEP 6
+        
+        # GROEP 6 MIDDEN (M6)
         (6, 'M'): {
             'getallenruimte': (0, 1000000),
-            'decimalen': {'max_cijfers': 2, 'bewerkingen': ['optellen', 'aftrekken', 'vermenigvuldigen']},
-            'breuken': ['optellen_zelfde_noemer', 'aftrekken_zelfde_noemer'],
+            'decimalen': {
+                'max_cijfers': 2,
+                'bewerkingen': ['optellen', 'aftrekken', 'vermenigvuldigen'],
+                'context': ['geld', 'lengtes', 'gewichten'],
+            },
+            'bewerkingen': [
+                'alle_bewerkingen_binnen_miljoen',
+                'decimalen_optellen_aftrekken',
+                'decimalen_vermenigvuldigen',
+            ],
+            'handig_rekenen': [
+                'procent_eenvoudig',  # 10%, 50%, 25%
+                'vermenigvuldigen_decimalen',
+            ],
             'max_stappen': 4,
-            'context_types': ['miljoenen', 'decimalen', 'breuken', 'verhoudingen'],
+            'context_types': ['miljoenen', 'decimalen', 'procenten_basis', 'verhoudingen_basis'],
             'max_zinnen': 5,
+            'max_woorden_per_zin': 18,
+            'bijzinnen_toegestaan': True,
             'min_tijd_sec': 60,
             'max_tijd_sec': 120,
             'moeilijkheid_range': (0.55, 0.80),
         },
+        
+        # GROEP 6 EIND (E6)
         (6, 'E'): {
             'getallenruimte': (0, 10000000),
-            'decimalen': {'max_cijfers': 3, 'bewerkingen': ['optellen', 'aftrekken', 'vermenigvuldigen', 'delen']},
-            'breuken': ['optellen_andere_noemer', 'vermenigvuldigen', 'delen'],
-            'negatieve_getallen': 'introductie',
+            'decimalen': {
+                'max_cijfers': 3,
+                'bewerkingen': ['optellen', 'aftrekken', 'vermenigvuldigen', 'delen'],
+                'context': ['geld', 'lengtes', 'gewichten', 'inhoud'],
+            },
+            'negatieve_getallen': 'introductie_context',  # NIEUW: Was G7
+            'negatieve_context': ['temperatuur', 'schuld', 'onder_zeespiegel'],
+            'bewerkingen': [
+                'alle_bewerkingen_binnen_10_miljoen',
+                'decimalen_alle_bewerkingen',
+                'negatieve_getallen_optellen_aftrekken',
+            ],
             'max_stappen': 4,
+            'context_types': [
+                'grote_getallen',
+                'decimalen',
+                'negatieve_context',
+                'procenten',
+            ],
+            'max_zinnen': 5,
+            'max_woorden_per_zin': 18,
+            'bijzinnen_toegestaan': True,
             'min_tijd_sec': 70,
             'max_tijd_sec': 140,
             'moeilijkheid_range': (0.60, 0.85),
         },
-        # GROEP 7
+        
+        # GROEP 7 MIDDEN (M7)
         (7, 'M'): {
             'getallenruimte': (-1000000, 10000000),
-            'decimalen': {'max_cijfers': 4, 'alle_bewerkingen': True},
-            'breuken': 'alle_bewerkingen',
+            'decimalen': {
+                'max_cijfers': 4,
+                'alle_bewerkingen': True,
+            },
             'negatieve_getallen': 'alle_bewerkingen',
             'machten': ['kwadraten', 'derdemachten'],
+            'wortels': ['vierkantswortels_basis'],
+            'bewerkingen': [
+                'alle_bewerkingen',
+                'negatieve_getallen_alle_bewerkingen',
+                'machten_kwadraten',
+            ],
             'max_stappen': 5,
+            'context_types': [
+                'negatieve_getallen',
+                'decimalen_complex',
+                'machten',
+                'grote_berekeningen',
+            ],
+            'max_zinnen': 6,
+            'max_woorden_per_zin': 20,
+            'bijzinnen_toegestaan': True,
             'min_tijd_sec': 80,
             'max_tijd_sec': 160,
             'moeilijkheid_range': (0.65, 0.90),
         },
+        
+        # GROEP 7 EIND (E7)
         (7, 'E'): {
             'getallenruimte': 'onbeperkt',
             'wetenschappelijke_notatie': True,
-            'wortels': True,
+            'wortels': ['vierkantswortels', 'derdemachtswortels'],
             'machten': 'alle',
+            'bewerkingen': [
+                'alle_bewerkingen',
+                'wetenschappelijke_notatie',
+                'complexe_berekeningen',
+            ],
             'max_stappen': 5,
+            'context_types': [
+                'wetenschappelijk',
+                'grote_kleine_getallen',
+                'machten_wortels',
+            ],
+            'max_zinnen': 6,
+            'max_woorden_per_zin': 22,
+            'bijzinnen_toegestaan': True,
             'min_tijd_sec': 90,
             'max_tijd_sec': 180,
             'moeilijkheid_range': (0.70, 0.95),
         },
-        # GROEP 8
+        
+        # GROEP 8 MIDDEN (M8)
         (8, 'M'): {
             'getallenruimte': 'onbeperkt',
             'alle_bewerkingen': True,
             'referentieniveau': '1F',
+            'bewerkingen': ['alle_bewerkingen', 'complexe_samengestelde_opgaven'],
             'max_stappen': 6,
+            'context_types': ['alle', 'praktijkgericht', 'abstract'],
+            'max_zinnen': 6,
+            'max_woorden_per_zin': 22,
+            'bijzinnen_toegestaan': True,
             'min_tijd_sec': 90,
             'max_tijd_sec': 180,
             'moeilijkheid_range': (0.70, 0.95),
         },
+        
+        # GROEP 8 EIND (E8)
         (8, 'E'): {
             'getallenruimte': 'onbeperkt',
             'alle_bewerkingen': True,
             'referentieniveau': '1S',
+            'bewerkingen': ['alle_bewerkingen', 'havo_vwo_niveau'],
             'max_stappen': 6,
+            'context_types': ['alle', 'wetenschappelijk', 'abstract'],
+            'max_zinnen': 7,
+            'max_woorden_per_zin': 25,
+            'bijzinnen_toegestaan': True,
             'min_tijd_sec': 100,
             'max_tijd_sec': 200,
             'moeilijkheid_range': (0.75, 1.0),
         },
     }
 
-    # Strategische afleider patronen per niveau
-    AFLEIDER_PATRONEN = {
-        (3, 'M'): {
-            'plus_min_1': {'beschrijving': 'Antwoord ±1 (tellfout)', 'frequency': 0.35},
-            'plus_min_2': {'beschrijving': 'Antwoord ±2 (dubbel tellfout)', 'frequency': 0.25},
-            'omgekeerde_bewerking': {'beschrijving': '+ i.p.v. -, of andersom', 'frequency': 0.25},
-            'tellfout': {'beschrijving': 'Cijfer overgeslagen bij tellen', 'frequency': 0.15},
-        },
-        (3, 'E'): {
-            'tiental_vergeten': {'beschrijving': 'Alleen eenheden opgeteld (18+5=13)', 'frequency': 0.30},
-            'verkeerde_splitsing': {'beschrijving': 'Bruggetje fout (9+4=12)', 'frequency': 0.25},
-            'bewerking_omgedraaid': {'beschrijving': '15-7=22 (+ i.p.v. -)', 'frequency': 0.25},
-            'eental_fout': {'beschrijving': 'Tiental OK, eental fout (9+4=14)', 'frequency': 0.20},
-        },
-        (4, 'M'): {
-            'tiental_eental_fout': {'beschrijving': 'Tiental of eental fout', 'frequency': 0.30},
-            'verkeerde_tafel': {'beschrijving': 'Verkeerde tafel gebruikt', 'frequency': 0.30},
-            'compensatie_vergeten': {'beschrijving': 'Bij +29 niet -1 gedaan', 'frequency': 0.20},
-            'bewerking_verwisseld': {'beschrijving': '+ en - verwisseld', 'frequency': 0.20},
-        },
+    # =====================================================================
+    # AFLEIDER TAXONOMIE (Cito-aligned)
+    # =====================================================================
+    AFLEIDER_CATEGORIEN = {
+        'strategisch': [
+            'plus_min_1',
+            'plus_min_2',
+            'tiental_vergeten',
+            'verkeerde_splitsing',
+            'bewerkingsverwarring',
+            'tafel_verwisseling',
+            'cijfer_omgedraaid',
+        ],
+        'empirisch': [
+            'tellfout',
+            'afrondfout',
+            'verkeerde_kolom',
+            'leesfout',
+        ],
+        'misconceptie': [
+            'omgekeerde_bewerking',
+            'bewerking_omgedraaid',
+            'negatief_altijd_kleiner',  # -5 < -10 (fout!)
+            'decimaal_vergroot',  # 3.4 > 3.12 (fout!)
+            'vermenigvuldigen_vergroot_altijd',  # ×0.5 vergroot niet
+        ],
     }
 
-    # Veelvoorkomende misconcepties
-    MISCONCEPTIES = {
-        (3, 'M'): [
-            {'naam': 'optellen_is_groter_maken', 'beschrijving': 'Kind denkt aftrekken moet ook groter getal opleveren'},
-            {'naam': 'grootste_eerst', 'beschrijving': 'Kind schrijft automatisch grootste getal eerst'},
-            {'naam': 'aftrekken_kleinste_van_grootste', 'beschrijving': 'Bij 3-5 maakt kind 5-3=2'},
-            {'naam': 'geen_1_1_correspondentie', 'beschrijving': 'Telt te snel, dubbel, of slaat over'},
+    # =====================================================================
+    # CONTEXT-BEWERKING MAPPING (NIEUW)
+    # =====================================================================
+    CONTEXT_BEWERKING_MAP = {
+        'optellen': [
+            'bij elkaar',
+            'erbij',
+            'meer',
+            'totaal',
+            'samen',
+            'in totaal',
+            'krijgt erbij',
         ],
-        (3, 'E'): [
-            {'naam': 'bruggetje_fout_splitsen', 'beschrijving': 'Splitst verkeerd bij bruggetje van 10'},
-            {'naam': 'tientallen_eenheden_door_elkaar', 'beschrijving': 'Bij 23: 2+3=5 (plaatswaarde niet begrepen)'},
-            {'naam': 'aftrekken_over_tiental_te_moeilijk', 'beschrijving': '13-5: denkt 3-5 kan niet'},
-            {'naam': 'vermenigvuldigen_is_optellen', 'beschrijving': '3×4 wordt 3+4=7'},
+        'aftrekken': [
+            'kwijt',
+            'weggegeven',
+            'minder',
+            'over',
+            'blijft over',
+            'verliest',
+            'geeft weg',
+        ],
+        'vermenigvuldigen': [
+            'groepjes',
+            'keer',
+            'per stuk',
+            'prijs per',
+            'elk',
+            'ieder',
+            'verdubbelen',
+        ],
+        'delen': [
+            'verdelen',
+            'eerlijk verdelen',
+            'groepen maken',
+            'per persoon',
+            'halveren',
         ],
     }
+
+    # =====================================================================
+    # STRATEGIE KEYWORDS (NIEUW)
+    # =====================================================================
+    STRATEGIE_KEYWORDS = [
+        'bruggetje',
+        'splitsen',
+        'verdubbelen',
+        'halveren',
+        'tientalovergang',
+        'kolomsgewijs',
+        'staartdeling',
+        'schatten',
+        'afronden',
+        'handig rekenen',
+        'tafels',
+        'groepjes',
+        'getalbeeld',
+        'getallenlijn',
+        'rekenrek',
+    ]
+
+    # =====================================================================
+    # MISCONCEPTIE KEYWORDS (NIEUW)
+    # =====================================================================
+    MISCONCEPTIE_KEYWORDS = [
+        'misconceptie',
+        'denkfout',
+        'vergeet',
+        'verwisselt',
+        'verkeerde volgorde',
+        'omgedraaid',
+        'fout omdat',
+    ]
 
     def __init__(self):
-        self.errors = []
-        self.warnings = []
-        self.info = []
+        """Initialiseer validator"""
+        self.errors: List[str] = []
+        self.warnings: List[str] = []
+        self.info: List[str] = []
 
     def valideer_item(self, item: Dict[str, Any]) -> ValidationResult:
-        """Hoofdvalidatie functie"""
+        """Valideer een enkel item volledig"""
+        # Reset
         self.errors = []
         self.warnings = []
         self.info = []
 
-        # Basis structuur check
-        self._check_basis_structuur(item)
+        # Basis structuur
+        self._check_required_fields(item)
         if self.errors:
             return self._build_result()
 
-        # Niveau regels check
-        self._check_niveau_regels(item)
+        # Groep/niveau validatie
+        groep = item.get('groep')
+        niveau = item.get('niveau', 'M')
+        regels = self.NIVEAU_REGELS.get((groep, niveau))
 
-        # Domein-specifieke checks
-        self._check_getallenruimte(item)
-        self._check_bewerkingen(item)
-        self._check_tafels(item)
-        self._check_strategieen(item)
+        if not regels:
+            self.errors.append(f"❌ Onbekende combinatie G{groep}-{niveau}")
+            return self._build_result()
 
-        # G3-specifieke checks
-        if item.get('groep') == 3:
-            self._check_g3_specifiek(item)
-
-        # Kwaliteitscontroles
-        self._check_taal(item)
-        self._check_context(item)
-        self._check_visualisatie(item)
-        self._check_afleiders(item)
-        self._check_numerieke_correctheid(item)
-        self._check_metadata(item)
-        self._check_didactic_quality(item)
+        # Voer alle checks uit
+        self._check_getallenruimte(item, regels)
+        self._check_bewerkingen(item, regels)
+        self._check_tafels(item, regels)
+        self._check_strategieen(item, regels)
+        self._check_visualisatie(item, regels)
+        self._check_context(item, regels)
+        self._check_taal_complexiteit(item, regels)
+        self._check_afleiders(item, regels)
+        self._check_numerical_correctness(item)
+        self._check_uitkomst_binnen_bereik(item, regels)  # NIEUW
+        self._check_afleider_duplicaten(item)  # NIEUW
+        self._check_afleider_clustering(item)  # NIEUW
+        self._check_context_semantiek(item, regels)  # NIEUW
+        self._check_moeilijkheid_tijd(item, regels)
+        self._check_didactic_quality_enhanced(item, regels)  # VERBETERD
         self._check_cross_validation(item)
 
         return self._build_result()
 
-    def _check_basis_structuur(self, item: Dict[str, Any]):
-        """Controleer basis vereiste velden"""
-        vereiste_velden = [
-            'id', 'groep', 'niveau', 'hoofdvraag', 'correct_antwoord',
-            'afleiders', 'toelichting', 'moeilijkheidsgraad', 'geschatte_tijd_sec'
-        ]
-
-        for veld in vereiste_velden:
-            if veld not in item:
-                self.errors.append(f"❌ Verplicht veld '{veld}' ontbreekt")
-
-        # Check groep/niveau combinatie
-        groep = item.get('groep')
-        niveau = item.get('niveau')
-
-        if groep not in [3, 4, 5, 6, 7, 8]:
-            self.errors.append(f"❌ Ongeldige groep: {groep} (moet 3-8 zijn)")
-
-        if niveau not in ['M', 'E']:
-            self.errors.append(f"❌ Ongeldig niveau: {niveau} (moet M of E zijn)")
+    def _check_required_fields(self, item: Dict[str, Any]):
+        """Controleer verplichte velden"""
+        required = ['id', 'groep', 'hoofdvraag', 'correct_antwoord', 'afleiders', 'toelichting']
+        for field in required:
+            if field not in item or not item[field]:
+                self.errors.append(f"❌ Verplicht veld '{field}' ontbreekt of is leeg")
 
         # Check ID format
-        if 'id' in item:
-            # Expected format: G_G[3-8]_[ME]_###
-            if not re.match(r'^G_G[3-8]_[ME]_\d{3}$', item['id']):
-                self.warnings.append(f"⚠️  ID '{item['id']}' volgt niet standaard format G_G[3-8]_[ME]_###")
+        item_id = item.get('id', '')
+        if not re.match(r'^G_G\d_[ME]_\d{3}$', item_id):
+            self.warnings.append(
+                f"⚠️  ID '{item_id}' volgt niet het verwachte patroon: G_G#_M/E_###"
+            )
 
-    def _check_niveau_regels(self, item: Dict[str, Any]):
-        """Check of item binnen niveauregels valt"""
-        groep = item.get('groep')
-        niveau = item.get('niveau')
-
-        if (groep, niveau) not in self.NIVEAU_REGELS:
-            self.errors.append(f"❌ Geen regels gedefinieerd voor groep {groep} niveau {niveau}")
-            return
-
-        self.info.append(f"ℹ️  Valideer voor G{groep}-{niveau}")
-
-    def _check_getallenruimte(self, item: Dict[str, Any]):
-        """Controleer of getallen binnen toegestane ruimte vallen"""
-        groep = item.get('groep')
-        niveau = item.get('niveau')
-        regels = self.NIVEAU_REGELS.get((groep, niveau), {})
-
+    def _check_getallenruimte(self, item: Dict[str, Any], regels: Dict[str, Any]):
+        """Controleer getallenruimte per niveau"""
+        hoofdvraag = item.get('hoofdvraag', '')
         getallenruimte = regels.get('getallenruimte')
-        if not getallenruimte:
-            return
 
         if getallenruimte == 'onbeperkt':
             return
 
-        min_getal, max_getal = getallenruimte
-
-        # Extract getallen from hoofdvraag en afleiders
-        tekst = item.get('hoofdvraag', '') + ' ' + ' '.join(item.get('afleiders', []))
-        getallen = re.findall(r'\d+', tekst)
+        min_val, max_val = getallenruimte
+        getallen = re.findall(r'\b\d+\b', hoofdvraag)
 
         for getal_str in getallen:
             getal = int(getal_str)
-            if getal < min_getal or getal > max_getal:
+            if not (min_val <= getal <= max_val):
                 self.errors.append(
-                    f"❌ Getal {getal} valt buiten toegestane getallenruimte [{min_getal}, {max_getal}] "
-                    f"voor G{groep}-{niveau}"
+                    f"❌ Getal {getal} valt buiten getallenruimte [{min_val}, {max_val}]"
                 )
 
-    def _check_bewerkingen(self, item: Dict[str, Any]):
-        """Controleer of bewerkingen toegestaan zijn"""
-        groep = item.get('groep')
-        niveau = item.get('niveau')
-        regels = self.NIVEAU_REGELS.get((groep, niveau), {})
-
+    def _check_bewerkingen(self, item: Dict[str, Any], regels: Dict[str, Any]):
+        """Controleer bewerkingen in hoofdvraag"""
         hoofdvraag = item.get('hoofdvraag', '').lower()
 
         # Check verboden bewerkingen
         verboden = regels.get('verboden_bewerkingen', [])
         for bewerking in verboden:
-            if bewerking == 'vermenigvuldigen' and any(x in hoofdvraag for x in ['×', '*', 'keer', 'groepjes van']):
-                self.errors.append(f"❌ Vermenigvuldigen is VERBODEN voor G{groep}-{niveau}")
-            elif bewerking == 'delen':
-                # Check for division operator (only when used between numbers, not as punctuation)
-                if re.search(r'\d+\s*:\s*\d+', hoofdvraag) or '÷' in hoofdvraag or 'gedeeld door' in hoofdvraag or 'delen door' in hoofdvraag:
-                    self.errors.append(f"❌ Delen is VERBODEN voor G{groep}-{niveau}")
-
-        # G3-E: check intro bewerkingen (alleen als groepjes/verdelen, niet formeel)
-        if groep == 3 and niveau == 'E':
-            if '×' in hoofdvraag or '*' in hoofdvraag:
-                self.warnings.append(
-                    "⚠️  G3-E: Gebruik '× symbool' alleen met context (groepjes). "
-                    "Bij voorkeur: 'herhaald optellen' (3+3+3)"
-                )
-            if ':' in hoofdvraag or '÷' in hoofdvraag:
-                self.warnings.append(
-                    "⚠️  G3-E: Gebruik ': symbool' alleen met context (verdelen). "
-                    "Bij voorkeur: beschrijvend ('eerlijk verdelen')"
-                )
-
-    def _check_tafels(self, item: Dict[str, Any]):
-        """Controleer tafels vereisten"""
-        groep = item.get('groep')
-        niveau = item.get('niveau')
-        regels = self.NIVEAU_REGELS.get((groep, niveau), {})
-
-        tafels = regels.get('tafels')
-
-        # G3: GEEN tafels
-        if groep == 3 and tafels is None:
-            hoofdvraag = item.get('hoofdvraag', '')
-            # Check for formal tafel sommen (3×4, 5×6, etc)
-            tafel_pattern = r'\d+\s*[×*]\s*\d+'
-            if re.search(tafel_pattern, hoofdvraag):
-                # Check if it's intro context (allowed)
-                if not any(woord in hoofdvraag.lower() for woord in ['zakjes', 'groepjes', 'kinderen', 'per']):
-                    self.errors.append(f"❌ G3: GEEN formele tafels toegestaan (gebruik context: groepjes, zakjes)")
-
-        # G4-M: Check tafels beperking
-        if groep == 4 and niveau == 'M':
-            verboden_tafels = regels.get('verboden_tafels', [])
-            hoofdvraag = item.get('hoofdvraag', '')
-
-            # Extract vermenigvuldiging
-            matches = re.findall(r'(\d+)\s*[×*]\s*(\d+)', hoofdvraag)
-            for a, b in matches:
-                if a in verboden_tafels or b in verboden_tafels:
-                    self.errors.append(
-                        f"❌ G4-M: Tafels {a} of {b} zijn VERBODEN (alleen 1,2,5,10 + optioneel 3,4)"
-                    )
-
-    def _check_strategieen(self, item: Dict[str, Any]):
-        """Controleer of strategieën passen bij niveau"""
-        groep = item.get('groep')
-        niveau = item.get('niveau')
-        regels = self.NIVEAU_REGELS.get((groep, niveau), {})
-
-        strategieen = regels.get('strategieen', [])
-        toelichting = item.get('toelichting', '').lower()
-
-        # G3-E: Check voor bruggetje van 10
-        if groep == 3 and niveau == 'E' and 'bruggetje_van_10' in strategieen:
-            hoofdvraag = item.get('hoofdvraag', '')
-            getallen = [int(x) for x in re.findall(r'\d+', hoofdvraag)]
-
-            # Check if there's a tientalovergang (crossing 10)
-            if len(getallen) >= 2:
-                som = getallen[0] + getallen[1] if '+' in hoofdvraag else None
-                if som and getallen[0] < 10 < som:
-                    # Tientalovergang detected
-                    if 'bruggetje' not in toelichting and 'splitsen' not in toelichting:
-                        self.warnings.append(
-                            "⚠️  G3-E: Tientalovergang gedetecteerd. "
-                            "Vermeld 'bruggetje van 10' strategie in toelichting"
-                        )
-
-    def _check_g3_specifiek(self, item: Dict[str, Any]):
-        """Extra controles specifiek voor Groep 3"""
-        niveau = item.get('niveau')
-        regels = self.NIVEAU_REGELS.get((3, niveau), {})
-
-        # 1. Visualisatie VERPLICHT
-        visualisatie = regels.get('visualisatie')
-        if visualisatie == 'verplicht':
-            hoofdvraag = item.get('hoofdvraag', '').lower()
-            # Check for visual cues
-            visual_keywords = ['plaatje', 'tekening', 'zie', 'afbeelding', 'figuur', 'blokjes', 'kralen', 'vingers']
-            if not any(keyword in hoofdvraag for keyword in visual_keywords):
+            if any(pattern in hoofdvraag for pattern in self._get_bewerking_patterns(bewerking)):
                 self.errors.append(
-                    "❌ G3: Visualisatie is VERPLICHT. "
-                    "Vermeld 'zie plaatje', 'blokjes', 'vingers', etc."
+                    f"❌ Verboden bewerking '{bewerking}' gedetecteerd in hoofdvraag"
                 )
 
-        # 2. Geen abstracte sommen (moet context hebben)
-        hoofdvraag = item.get('hoofdvraag', '')
-        # Check if it's just a bare calculation (3+5=?)
-        if re.match(r'^\s*\d+\s*[+\-]\s*\d+\s*=?\s*\??\s*$', hoofdvraag):
-            self.errors.append(
-                "❌ G3: GEEN abstracte sommen zonder context. "
-                "Gebruik context: Lisa heeft 3 appels, krijgt er 2 bij..."
+        # Check toegestane bewerkingen
+        bewerkingen = regels.get('bewerkingen', [])
+        if bewerkingen and not any(
+            any(pattern in hoofdvraag for pattern in self._get_bewerking_patterns(bew))
+            for bew in bewerkingen
+        ):
+            self.info.append(
+                f"ℹ️  Geen duidelijke bewerking uit lijst {bewerkingen} herkend"
             )
 
-        # 3. Materialen check
-        materialen = regels.get('materialen', [])
-        if materialen:
-            toelichting = item.get('toelichting', '').lower()
-            if not any(mat in toelichting for mat in materialen):
-                self.warnings.append(
-                    f"⚠️  G3: Overweeg concreet materiaal te vermelden in toelichting: "
-                    f"{', '.join(materialen)}"
-                )
+    def _get_bewerking_patterns(self, bewerking: str) -> List[str]:
+        """
+        VERBETERD: Geef tekstuele patronen voor een bewerking
+        """
+        patterns = {
+            'optellen_tot_10': ['+', 'plus', 'erbij', 'bij elkaar', 'samen', 'totaal'],
+            'aftrekken_tot_10': ['-', 'min', 'af', 'kwijt', 'over', 'minder'],
+            'vermenigvuldigen': ['×', '*', 'x', 'keer', 'maal', 'groepjes van'],
+            'delen': [':', '÷', 'gedeeld door', 'verdelen', 'per'],
+            'tientalovergang': ['10', 'tien', 'tiental'],
+        }
+        return patterns.get(bewerking, [bewerking])
 
-        # 4. Cijferend rekenen VERBODEN
-        if regels.get('cijferend') == 'verboden':
-            if any(woord in hoofdvraag.lower() for woord in ['cijferend', 'kolomsgewijs', 'onder elkaar']):
-                self.errors.append("❌ G3: Cijferend rekenen is VERBODEN (alleen hoofdrekenen)")
+    def _check_tafels(self, item: Dict[str, Any], regels: Dict[str, Any]):
+        """Controleer tafels per niveau"""
+        hoofdvraag = item.get('hoofdvraag', '').lower()
+        tafels_config = regels.get('tafels')
 
-    def _check_taal(self, item: Dict[str, Any]):
-        """Controleer taalcomplexiteit"""
-        groep = item.get('groep')
-        niveau = item.get('niveau')
-        regels = self.NIVEAU_REGELS.get((groep, niveau), {})
-
-        hoofdvraag = item.get('hoofdvraag', '')
-
-        # Remove newlines and normalize whitespace for sentence counting
-        hoofdvraag_normalized = ' '.join(hoofdvraag.split())
-
-        # Check aantal zinnen
-        max_zinnen = regels.get('max_zinnen')
-        zinnen = []
-        if max_zinnen:
-            zinnen = re.split(r'[.!?]+', hoofdvraag_normalized)
-            # Filter out empty strings and visual-only content (emoji blocks, symbols)
-            zinnen = [z.strip() for z in zinnen if z.strip()]
-            # Count only sentences that contain actual words (not just emojis/symbols)
-            # Also filter out single-word fragments that are likely visual labels
-            zinnen_met_woorden = []
-            for z in zinnen:
-                if re.search(r'[a-zA-Z]', z):
-                    # Check if it's a real sentence (more than just a single word surrounded by emojis)
-                    words = re.findall(r'\b[a-zA-Z]+\b', z)
-                    if len(words) > 1:  # More than one word = real sentence
-                        zinnen_met_woorden.append(z)
-            if len(zinnen_met_woorden) > max_zinnen:
-                self.errors.append(
-                    f"❌ Te veel zinnen: {len(zinnen_met_woorden)} (max {max_zinnen} voor G{groep}-{niveau})"
-                )
-
-        # G3: Check woordlengte per zin
-        max_woorden = regels.get('max_woorden_per_zin')
-        if max_woorden:
-            zinnen_to_check = zinnen_met_woorden if 'zinnen_met_woorden' in locals() else zinnen
-            for zin in zinnen_to_check:
-                woorden = zin.split()
-                if len(woorden) > max_woorden:
-                    self.errors.append(
-                        f"❌ G3: Zin te lang ({len(woorden)} woorden): '{zin[:50]}...'. "
-                        f"Max {max_woorden} woorden per zin"
-                    )
-
-        # Check voor complexe woorden bij G3
-        if groep == 3:
-            complexe_woorden = [
-                'omdat', 'terwijl', 'waardoor', 'indien', 'alhoewel',
-                'desalniettemin', 'bijvoorbeeld', 'namelijk'
-            ]
-            for woord in complexe_woorden:
-                if woord in hoofdvraag.lower():
+        if tafels_config is None:
+            # Tafels niet toegestaan
+            if any(sym in hoofdvraag for sym in ['×', '*', 'x', 'keer', 'maal']):
+                # Check of het echt een tafel is
+                numbers = re.findall(r'\b(\d+)\s*[×*x]\s*(\d+)\b', hoofdvraag)
+                if numbers:
                     self.warnings.append(
-                        f"⚠️  G3: Complex woord '{woord}' - te moeilijk voor G3. Gebruik eenvoudiger taal"
+                        "⚠️  Vermenigvuldiging gedetecteerd, maar tafels zijn nog niet ingevoerd op dit niveau"
+                    )
+        elif isinstance(tafels_config, list):
+            # Specifieke tafels toegestaan
+            numbers = re.findall(r'\b(\d+)\s*[×*x]\s*(\d+)\b', hoofdvraag)
+            for num1, num2 in numbers:
+                if num1 not in tafels_config and num2 not in tafels_config:
+                    self.errors.append(
+                        f"❌ Tafel van {num1}×{num2} niet toegestaan. Alleen tafels: {tafels_config}"
                     )
 
-    def _check_context(self, item: Dict[str, Any]):
-        """Controleer of context geschikt is voor leeftijd"""
-        groep = item.get('groep')
-        niveau = item.get('niveau')
-        regels = self.NIVEAU_REGELS.get((groep, niveau), {})
+            # Check tafel snelheid
+            tafel_tijd = regels.get('tafel_tijd_sec')
+            if tafel_tijd and item.get('geschatte_tijd_sec'):
+                if item['geschatte_tijd_sec'] < tafel_tijd:
+                    self.warnings.append(
+                        f"⚠️  Geschatte tijd {item['geschatte_tijd_sec']}s is korter dan "
+                        f"minimale tafel-tijd {tafel_tijd}s"
+                    )
 
+    def _check_strategieen(self, item: Dict[str, Any], regels: Dict[str, Any]):
+        """Controleer of juiste strategieën worden toegepast"""
+        toelichting = item.get('toelichting', '').lower()
+        strategieen = regels.get('strategieen', [])
+
+        if not strategieen:
+            return
+
+        # Check of minstens één strategie wordt genoemd
+        gevonden_strategieen = [
+            strat
+            for strat in strategieen
+            if any(keyword in toelichting for keyword in strat.split('_'))
+        ]
+
+        if not gevonden_strategieen:
+            self.warnings.append(
+                f"⚠️  Geen van de aanbevolen strategieën {strategieen} genoemd in toelichting"
+            )
+
+    def _check_visualisatie(self, item: Dict[str, Any], regels: Dict[str, Any]):
+        """Controleer visualisatie vereisten"""
+        vis_requirement = regels.get('visualisatie')
+        has_visual = item.get('has_visual', False)
+        assets = item.get('assets', [])
+
+        if vis_requirement == 'verplicht' and not has_visual and not assets:
+            self.errors.append(
+                "❌ Visualisatie is VERPLICHT voor dit niveau maar ontbreekt"
+            )
+        elif vis_requirement == 'sterk_aanbevolen' and not has_visual and not assets:
+            self.warnings.append(
+                "⚠️  Visualisatie is sterk aanbevolen voor dit niveau"
+            )
+        elif vis_requirement == 'aanbevolen' and not has_visual and not assets:
+            self.info.append(
+                "ℹ️  Overweeg een visualisatie toe te voegen (aanbevolen voor dit niveau)"
+            )
+
+    def _check_context(self, item: Dict[str, Any], regels: Dict[str, Any]):
+        """Controleer context geschiktheid"""
+        context = item.get('context', '').lower()
+        context_tag = item.get('context_tag', '').lower()
         context_types = regels.get('context_types', [])
+
         if not context_types:
             return
 
-        hoofdvraag = item.get('hoofdvraag', '').lower()
-        context = item.get('context', '').lower()
+        # Check of context past bij toegestane types
+        match_found = any(
+            ctx_type in context or ctx_type in context_tag
+            for ctx_type in context_types
+        )
 
-        # Check if ANY context type is present
-        context_found = any(ctx_type in hoofdvraag or ctx_type in context for ctx_type in context_types)
-
-        if not context_found:
+        if not match_found:
             self.warnings.append(
-                f"⚠️  Aanbevolen context types voor G{groep}-{niveau}: {', '.join(context_types)}"
+                f"⚠️  Context '{context}' past mogelijk niet bij toegestane types: {context_types}"
             )
 
-    def _check_visualisatie(self, item: Dict[str, Any]):
-        """Controleer visualisatie vereisten"""
-        groep = item.get('groep')
-        niveau = item.get('niveau')
-        regels = self.NIVEAU_REGELS.get((groep, niveau), {})
+        # Speciale checks voor geld context
+        if 'geld' in context or 'euro' in context:
+            groep = item.get('groep', 0)
+            hoofdvraag = item.get('hoofdvraag', '')
+            bedragen = re.findall(r'€?\s*(\d+(?:[.,]\d{1,2})?)\s*(?:euro|cent)?', hoofdvraag)
 
-        visualisatie_req = regels.get('visualisatie')
-
-        if visualisatie_req == 'verplicht':
-            # Already checked in g3_specifiek, but double-check
-            hoofdvraag = item.get('hoofdvraag', '').lower()
-            if not any(kw in hoofdvraag for kw in ['plaatje', 'tekening', 'zie', 'afbeelding']):
-                self.errors.append(f"❌ Visualisatie is VERPLICHT voor G{groep}-{niveau}")
-
-    def _check_afleiders(self, item: Dict[str, Any]):
-        """Controleer afleiders kwaliteit"""
-        groep = item.get('groep')
-        niveau = item.get('niveau')
-
-        afleiders = item.get('afleiders', [])
-        correct = item.get('correct_antwoord')
-
-        if len(afleiders) < 3:
-            self.errors.append(f"❌ Te weinig afleiders: {len(afleiders)} (minimaal 3)")
-
-        if len(afleiders) > 4:
-            self.warnings.append(f"⚠️  Veel afleiders: {len(afleiders)} (gebruikelijk 3-4)")
-
-        # Check if correct antwoord niet in afleiders zit
-        if correct in afleiders:
-            self.errors.append(f"❌ Correct antwoord '{correct}' staat ook in afleiders!")
-
-        # Check voor strategische afleiders (G3)
-        if (groep, niveau) in self.AFLEIDER_PATRONEN:
-            patronen = self.AFLEIDER_PATRONEN[(groep, niveau)]
-            self.info.append(
-                f"ℹ️  Aanbevolen afleider types voor G{groep}-{niveau}: {', '.join(patronen.keys())}"
-            )
-
-    def _check_numerieke_correctheid(self, item: Dict[str, Any]):
-        """Basis numerieke correctheidscheck"""
-        hoofdvraag = item.get('hoofdvraag', '')
-        correct = item.get('correct_antwoord')
-
-        # Try to extract and verify calculation
-        # Pattern: X + Y of X - Y of X × Y of X : Y
-        match = re.search(r'(\d+)\s*([+\-×*:])\s*(\d+)', hoofdvraag)
-        if match:
-            a, op, b = int(match.group(1)), match.group(2), int(match.group(3))
-
-            expected = None
-            if op == '+':
-                expected = a + b
-            elif op == '-':
-                expected = a - b
-            elif op in ['×', '*']:
-                expected = a * b
-            elif op == ':':
-                expected = a // b if b != 0 else None
-
-            if expected is not None:
-                try:
-                    correct_num = int(str(correct).replace(' ', ''))
-                    if correct_num != expected:
-                        self.errors.append(
-                            f"❌ NUMERIEKE FOUT: {a} {op} {b} = {expected}, "
-                            f"maar correct_antwoord is '{correct}'"
+            if groep == 3:
+                for bedrag_str in bedragen:
+                    bedrag = float(bedrag_str.replace(',', '.'))
+                    if bedrag > 10:
+                        self.warnings.append(
+                            f"⚠️  Bedrag €{bedrag} te hoog voor G3 (max €10)"
                         )
-                except:
-                    self.warnings.append(f"⚠️  Kan correct_antwoord niet valideren: '{correct}'")
 
-    def _check_metadata(self, item: Dict[str, Any]):
-        """Controleer metadata velden"""
-        groep = item.get('groep')
-        niveau = item.get('niveau')
-        regels = self.NIVEAU_REGELS.get((groep, niveau), {})
+    def _check_taal_complexiteit(self, item: Dict[str, Any], regels: Dict[str, Any]):
+        """
+        VERBETERD: Controleer talige complexiteit inclusief bijzinnen
+        """
+        hoofdvraag = item.get('hoofdvraag', '')
 
-        # Check moeilijkheidsgraad
-        moeilijkheid = item.get('moeilijkheidsgraad')
-        if moeilijkheid is not None:
-            moeilijkheid_range = regels.get('moeilijkheid_range', (0.0, 1.0))
-            if not (moeilijkheid_range[0] <= moeilijkheid <= moeilijkheid_range[1]):
+        # Tel zinnen
+        zinnen = [z.strip() for z in re.split(r'[.!?]+', hoofdvraag) if z.strip()]
+        max_zinnen = regels.get('max_zinnen', 10)
+
+        if len(zinnen) > max_zinnen:
+            self.warnings.append(
+                f"⚠️  Te veel zinnen: {len(zinnen)} (max {max_zinnen})"
+            )
+
+        # Tel woorden per zin
+        max_woorden = regels.get('max_woorden_per_zin', 20)
+        for idx, zin in enumerate(zinnen, 1):
+            woorden = zin.split()
+            if len(woorden) > max_woorden:
                 self.warnings.append(
-                    f"⚠️  Moeilijkheidsgraad {moeilijkheid} buiten verwachte range "
-                    f"{moeilijkheid_range} voor G{groep}-{niveau}"
+                    f"⚠️  Zin {idx} heeft {len(woorden)} woorden (max {max_woorden})"
                 )
 
-        # Check geschatte_tijd_sec
+        # NIEUW: Check op bijzinnen voor G3
+        bijzinnen_toegestaan = regels.get('bijzinnen_toegestaan', True)
+        if not bijzinnen_toegestaan:
+            bijzin_indicatoren = [
+                'die',
+                'dat',
+                'omdat',
+                'terwijl',
+                'toen',
+                'nadat',
+                'voordat',
+                'als',
+                'wanneer',
+            ]
+            gevonden_bijzinnen = [
+                indicator for indicator in bijzin_indicatoren if indicator in hoofdvraag.lower()
+            ]
+            if gevonden_bijzinnen:
+                self.errors.append(
+                    f"❌ Bijzinnen niet toegestaan voor dit niveau. Gevonden: {gevonden_bijzinnen}"
+                )
+
+        # NIEUW: Check vraagwoorden voor G3
+        vraagwoorden = regels.get('vraagwoorden', [])
+        if vraagwoorden:
+            hoofdvraag_lower = hoofdvraag.lower()
+            if not any(vw in hoofdvraag_lower for vw in vraagwoorden):
+                self.warnings.append(
+                    f"⚠️  Vraag gebruikt geen duidelijk vraagwoord uit: {vraagwoorden}"
+                )
+
+    def _check_afleiders(self, item: Dict[str, Any], regels: Dict[str, Any]):
+        """Controleer afleiders kwaliteit"""
+        afleiders = item.get('afleiders', [])
+        correct = item.get('correct_antwoord', '')
+
+        if not afleiders:
+            self.errors.append("❌ Geen afleiders gedefinieerd")
+            return
+
+        if len(afleiders) < 3:
+            self.warnings.append(
+                f"⚠️  Slechts {len(afleiders)} afleiders (aanbevolen: 3-4)"
+            )
+
+        # Check afleider types
+        afleider_types = regels.get('afleider_types', [])
+        if afleider_types:
+            self.info.append(
+                f"ℹ️  Aanbevolen afleider types voor dit niveau: {afleider_types}"
+            )
+
+    def _check_numerical_correctness(self, item: Dict[str, Any]):
+        """Controleer numerieke correctheid van berekeningen"""
+        hoofdvraag = item.get('hoofdvraag', '')
+        correct_antwoord = str(item.get('correct_antwoord', '')).strip()
+
+        # Probeer simpele berekeningen te evalueren
+        # Bijvoorbeeld: "12 + 5 = ?" → check of correct_antwoord = 17
+        patterns = [
+            (r'(\d+)\s*\+\s*(\d+)', lambda a, b: a + b, 'optellen'),
+            (r'(\d+)\s*-\s*(\d+)', lambda a, b: a - b, 'aftrekken'),
+            (r'(\d+)\s*[×*x]\s*(\d+)', lambda a, b: a * b, 'vermenigvuldigen'),
+            (r'(\d+)\s*[:÷/]\s*(\d+)', lambda a, b: a / b if b != 0 else None, 'delen'),
+        ]
+
+        for pattern, calc, naam in patterns:
+            matches = re.findall(pattern, hoofdvraag)
+            if matches:
+                for num1_str, num2_str in matches:
+                    num1, num2 = int(num1_str), int(num2_str)
+                    verwacht = calc(num1, num2)
+
+                    if verwacht is not None:
+                        # Check verschillende formats
+                        try:
+                            gegeven = float(correct_antwoord.replace(',', '.'))
+                            if abs(gegeven - verwacht) > 0.01:
+                                self.errors.append(
+                                    f"❌ Berekening {num1} {naam} {num2} = {verwacht}, "
+                                    f"maar correct_antwoord is {correct_antwoord}"
+                                )
+                        except ValueError:
+                            self.warnings.append(
+                                f"⚠️  Kan correct_antwoord '{correct_antwoord}' niet als getal interpreteren"
+                            )
+
+    def _check_uitkomst_binnen_bereik(self, item: Dict[str, Any], regels: Dict[str, Any]):
+        """
+        NIEUW: Controleer of uitkomst van berekening binnen getallenruimte blijft
+        """
+        getallenruimte = regels.get('getallenruimte')
+        if getallenruimte == 'onbeperkt':
+            return
+
+        min_val, max_val = getallenruimte
+        correct_antwoord = item.get('correct_antwoord', '')
+
+        try:
+            uitkomst = float(str(correct_antwoord).replace(',', '.'))
+            if not (min_val <= uitkomst <= max_val):
+                self.errors.append(
+                    f"❌ Uitkomst {uitkomst} valt buiten getallenruimte [{min_val}, {max_val}]"
+                )
+        except (ValueError, TypeError):
+            # Antwoord is geen getal (bijv. tekst), skip deze check
+            pass
+
+    def _check_afleider_duplicaten(self, item: Dict[str, Any]):
+        """
+        NIEUW: Controleer dat afleiders uniek zijn en niet gelijk aan correct antwoord
+        """
+        correct = str(item.get('correct_antwoord', '')).strip()
+        afleiders = item.get('afleiders', [])
+
+        # Check duplicaten in afleiders
+        afleiders_str = [str(a).strip() for a in afleiders]
+        if len(afleiders_str) != len(set(afleiders_str)):
+            self.errors.append("❌ Er zijn dubbele afleiders")
+
+        # Check of afleider gelijk is aan correct antwoord
+        if correct in afleiders_str:
+            self.errors.append(
+                f"❌ Afleider '{correct}' is gelijk aan het correcte antwoord"
+            )
+
+    def _check_afleider_clustering(self, item: Dict[str, Any]):
+        """
+        NIEUW: Controleer of afleiders niet te dicht bij elkaar of bij correct antwoord liggen
+        """
+        try:
+            correct = float(str(item.get('correct_antwoord', '')).replace(',', '.'))
+            afleiders = [
+                float(str(a).replace(',', '.'))
+                for a in item.get('afleiders', [])
+                if str(a).replace(',', '.').replace('-', '').replace('.', '').isdigit()
+            ]
+
+            if not afleiders:
+                return  # Geen numerieke afleiders
+
+            # Alle waarden (correct + afleiders)
+            alle_waarden = sorted([correct] + afleiders)
+
+            # Check op clustering (3+ waarden binnen range van 5)
+            for i in range(len(alle_waarden) - 2):
+                window = alle_waarden[i : i + 3]
+                if max(window) - min(window) <= 5:
+                    self.warnings.append(
+                        f"⚠️  Afleiders clusteren: {window} liggen dicht bij elkaar (range ≤ 5)"
+                    )
+                    break
+
+        except (ValueError, TypeError):
+            # Niet-numerieke antwoorden, skip
+            pass
+
+    def _check_context_semantiek(self, item: Dict[str, Any], regels: Dict[str, Any]):
+        """
+        NIEUW: Controleer of context-verhaal past bij de bewerking
+        """
+        hoofdvraag = item.get('hoofdvraag', '').lower()
+
+        # Detecteer bewerking
+        bewerking_type = None
+        if any(sym in hoofdvraag for sym in ['+', 'plus', 'erbij', 'bij elkaar']):
+            bewerking_type = 'optellen'
+        elif any(sym in hoofdvraag for sym in ['-', 'min', 'kwijt', 'minder']):
+            bewerking_type = 'aftrekken'
+        elif any(sym in hoofdvraag for sym in ['×', '*', 'keer', 'groepjes']):
+            bewerking_type = 'vermenigvuldigen'
+        elif any(sym in hoofdvraag for sym in [':', '÷', 'verdelen', 'delen']):
+            bewerking_type = 'delen'
+
+        if not bewerking_type:
+            return
+
+        # Check of context woorden passen bij bewerking
+        context_woorden = self.CONTEXT_BEWERKING_MAP.get(bewerking_type, [])
+        if context_woorden:
+            match = any(woord in hoofdvraag for woord in context_woorden)
+            if not match:
+                self.warnings.append(
+                    f"⚠️  Context-verhaal suggereert mogelijk niet de bewerking '{bewerking_type}'. "
+                    f"Overweeg woorden als: {context_woorden}"
+                )
+
+    def _check_moeilijkheid_tijd(self, item: Dict[str, Any], regels: Dict[str, Any]):
+        """Controleer moeilijkheid en tijd"""
+        moeilijkheid = item.get('moeilijkheidsgraad')
         tijd = item.get('geschatte_tijd_sec')
-        if tijd is not None:
+
+        if moeilijkheid:
+            moeilijkheid_range = regels.get('moeilijkheid_range')
+            if moeilijkheid_range:
+                min_m, max_m = moeilijkheid_range
+                if not (min_m <= moeilijkheid <= max_m):
+                    self.warnings.append(
+                        f"⚠️  Moeilijkheid {moeilijkheid} buiten verwachte range [{min_m}, {max_m}]"
+                    )
+
+        if tijd:
             min_tijd = regels.get('min_tijd_sec', 0)
             max_tijd = regels.get('max_tijd_sec', 300)
             if not (min_tijd <= tijd <= max_tijd):
                 self.warnings.append(
-                    f"⚠️  Geschatte tijd {tijd}s buiten verwachte range [{min_tijd}, {max_tijd}] "
-                    f"voor G{groep}-{niveau}"
+                    f"⚠️  Geschatte tijd {tijd}s buiten verwachte range [{min_tijd}, {max_tijd}]"
                 )
 
-    def _check_didactic_quality(self, item: Dict[str, Any]):
-        """Controleer didactische kwaliteit"""
-        toelichting = item.get('toelichting', '')
+    def _check_didactic_quality_enhanced(self, item: Dict[str, Any], regels: Dict[str, Any]):
+        """
+        VERBETERD: Uitgebreidere didactische kwaliteitscheck
+        """
+        toelichting = item.get('toelichting', '').lower()
 
-        if not toelichting or len(toelichting) < 20:
-            self.warnings.append("⚠️  Toelichting is erg kort of ontbreekt")
+        # Check minimale lengte
+        if not toelichting or len(toelichting) < 30:
+            self.warnings.append(
+                "⚠️  Toelichting is erg kort (<30 karakters)"
+            )
+            return
 
-        # Check for LOVA elements (Lezen, Ordenen, Vormen antwoord, Antwoorden)
+        # NIEUW: Check op strategie-vermelding
+        gevonden_strategieen = [
+            kw for kw in self.STRATEGIE_KEYWORDS if kw in toelichting
+        ]
+        if not gevonden_strategieen:
+            self.warnings.append(
+                "⚠️  Geen duidelijke strategie genoemd in toelichting (bijv. splitsen, bruggetje)"
+            )
+
+        # NIEUW: Check op misconceptie-uitleg bij afleiders
+        afleiders = item.get('afleiders', [])
+        if afleiders:
+            heeft_misconceptie_uitleg = any(
+                kw in toelichting for kw in self.MISCONCEPTIE_KEYWORDS
+            )
+            if not heeft_misconceptie_uitleg:
+                self.info.append(
+                    "ℹ️  Overweeg in toelichting uit te leggen waarom afleiders fout zijn (misconcepties)"
+                )
+
+        # Check LOVA-elementen
         lova_keywords = ['lezen', 'ordenen', 'strategie', 'stappen', 'methode', 'aanpak']
-        if not any(kw in toelichting.lower() for kw in lova_keywords):
-            self.info.append("ℹ️  Overweeg LOVA-elementen toe te voegen aan toelichting")
+        if not any(kw in toelichting for kw in lova_keywords):
+            self.info.append(
+                "ℹ️  Overweeg LOVA-elementen toe te voegen aan toelichting"
+            )
 
     def _check_cross_validation(self, item: Dict[str, Any]):
         """Cross-validatie tussen moeilijkheid, stappen en tijd"""
@@ -668,12 +995,11 @@ class GetallenValidatorEnhanced:
         tijd = item.get('geschatte_tijd_sec')
         hoofdvraag = item.get('hoofdvraag', '')
 
-        # Count stappen (rough estimate based on operations)
-        operations = len(re.findall(r'[+\-×*:]', hoofdvraag))
+        # Tel stappen (geschat op basis van bewerkingen)
+        operations = len(re.findall(r'[+\-×*:÷]', hoofdvraag))
 
         # Consistency checks
         if moeilijkheid and tijd:
-            # High difficulty should correlate with longer time
             if moeilijkheid > 0.7 and tijd < 30:
                 self.warnings.append(
                     "⚠️  Inconsistentie: hoge moeilijkheid (>0.7) maar korte tijd (<30s)"
@@ -683,6 +1009,12 @@ class GetallenValidatorEnhanced:
                 self.warnings.append(
                     "⚠️  Inconsistentie: lage moeilijkheid (<0.3) maar lange tijd (>90s)"
                 )
+
+        # Check stappen vs tijd
+        if operations >= 3 and tijd and tijd < 40:
+            self.warnings.append(
+                f"⚠️  {operations} bewerkingen maar slechts {tijd}s tijd (mogelijk te weinig)"
+            )
 
     def _build_result(self) -> ValidationResult:
         """Bouw validatie resultaat"""
@@ -695,20 +1027,17 @@ class GetallenValidatorEnhanced:
         score = max(0.0, min(1.0, score))
 
         return ValidationResult(
-            valid=valid,
-            errors=self.errors,
-            warnings=self.warnings,
-            info=self.info,
-            score=score
+            valid=valid, errors=self.errors, warnings=self.warnings, info=self.info, score=score
         )
 
 
 def _convert_legacy_structure(data: Any) -> Optional[List[Dict[str, Any]]]:
     """
-    Ondersteun legacy MC-bestanden zoals gb_groep3_m3_core.json:
+    AANGEPAST: Legacy conversie met None voor onbekende waarden
+    
+    Ondersteun legacy MC-bestanden:
     - Top-level met schema_version/metadata/items
     - Items met question/options/answer.correct_index
-    Converteer naar het getallen-validator formaat.
     """
     if not isinstance(data, dict) or "items" not in data:
         return None
@@ -722,11 +1051,13 @@ def _convert_legacy_structure(data: Any) -> Optional[List[Dict[str, Any]]]:
 
     legacy_items = data.get("items", [])
     converted: List[Dict[str, Any]] = []
+    
     for legacy in legacy_items:
         q = legacy.get("question", {})
         opts = legacy.get("options", [])
         answer = legacy.get("answer", {})
         correct_index = answer.get("correct_index", 0)
+        
         correct_text = ""
         afleiders: List[str] = []
         if opts and isinstance(opts, list):
@@ -745,31 +1076,42 @@ def _convert_legacy_structure(data: Any) -> Optional[List[Dict[str, Any]]]:
 
         new_id = f"G_G{groep}_{niveau}_{legacy_id_str}" if groep and niveau else str(legacy_id_str)
 
-        converted.append({
-            "id": new_id,
-            "groep": groep,
-            "niveau": niveau,
-            "hoofdvraag": q.get("text", ""),
-            "correct_antwoord": correct_text,
-            "afleiders": afleiders,
-            "toelichting": f"Auto-conversie legacy item (thema: {legacy.get('theme', 'nvt')}).",
-            "context": legacy.get("theme", "nvt"),
-            # Basale defaults binnen G3-M bereik
-            "moeilijkheidsgraad": 0.2,
-            "geschatte_tijd_sec": 25
-        })
+        converted.append(
+            {
+                "id": new_id,
+                "groep": groep,
+                "niveau": niveau,
+                "hoofdvraag": q.get("text", ""),
+                "correct_antwoord": correct_text,
+                "afleiders": afleiders,
+                "toelichting": f"Auto-conversie legacy item (thema: {legacy.get('theme', 'nvt')}).",
+                "context": legacy.get("theme", "nvt"),
+                "has_visual": False,
+                "assets": [],
+                "context_tag": (
+                    "geld"
+                    if "geld" in str(legacy.get("theme", "")).lower()
+                    else "tijd"
+                    if "tijd" in str(legacy.get("theme", "")).lower()
+                    else "algemeen"
+                ),
+                # AANGEPAST: None ipv hardcoded defaults
+                "moeilijkheidsgraad": None,
+                "geschatte_tijd_sec": None,
+            }
+        )
 
     return converted
 
 
 def valideer_bestand(filepath: str) -> List[ValidationResult]:
     """Valideer een JSON bestand met items"""
-    validator = GetallenValidatorEnhanced()
+    validator = GetallenValidatorImproved()
 
     with open(filepath, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    # Ondersteun zowel lijst, enkel item, als legacy core-structuur met items[]
+    # Ondersteun zowel lijst, enkel item, als legacy structuur
     items: List[Dict[str, Any]]
     if isinstance(data, list):
         items = data
@@ -781,9 +1123,9 @@ def valideer_bestand(filepath: str) -> List[ValidationResult]:
 
     resultaten = []
     for idx, item in enumerate(items, 1):
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 70}")
         print(f"Valideer item {idx}/{len(items)}: {item.get('id', 'GEEN_ID')}")
-        print(f"{'='*60}")
+        print(f"{'=' * 70}")
 
         result = validator.valideer_item(item)
         resultaten.append(result)
@@ -808,9 +1150,9 @@ def valideer_bestand(filepath: str) -> List[ValidationResult]:
         print(f"📊 Score: {result.score:.2f}")
 
     # Summary
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 70}")
     print("SAMENVATTING")
-    print(f"{'='*60}")
+    print(f"{'=' * 70}")
     valid_count = sum(1 for r in resultaten if r.valid)
     print(f"✅ Valide items: {valid_count}/{len(resultaten)}")
     print(f"❌ Invalide items: {len(resultaten) - valid_count}/{len(resultaten)}")
@@ -824,20 +1166,29 @@ if __name__ == "__main__":
     import sys
 
     if len(sys.argv) < 2:
-        print("Gebruik: python getallen-validator-v3.py <json_bestand>")
+        print("Gebruik: python getallen-validator-v5-improved.py <json_bestand>")
         print("\nVoorbeeld JSON format:")
-        print(json.dumps({
-            "id": "G_G3_M_001",
-            "groep": 3,
-            "niveau": "M",
-            "hoofdvraag": "Lisa heeft 3 appels. Ze krijgt er 2 bij. Hoeveel appels heeft Lisa nu?",
-            "correct_antwoord": "5",
-            "afleiders": ["4", "6", "7"],
-            "toelichting": "Optellen tot 10. Gebruik vingers of blokjes. 3 + 2 = 5",
-            "context": "fruit tellen",
-            "moeilijkheidsgraad": 0.25,
-            "geschatte_tijd_sec": 25
-        }, indent=2, ensure_ascii=False))
+        print(
+            json.dumps(
+                {
+                    "id": "G_G3_M_001",
+                    "groep": 3,
+                    "niveau": "M",
+                    "hoofdvraag": "Lisa heeft 3 appels. Ze krijgt er 2 bij. Hoeveel appels heeft Lisa nu?",
+                    "correct_antwoord": "5",
+                    "afleiders": ["4", "6", "7"],
+                    "toelichting": "Optellen tot 10 met splitsen strategie. 3 + 2 = 5. Gebruik vingers of blokjes om te tellen.",
+                    "context": "fruit tellen",
+                    "context_tag": "speelgoed",
+                    "has_visual": True,
+                    "assets": ["appels_plaatje.png"],
+                    "moeilijkheidsgraad": 0.25,
+                    "geschatte_tijd_sec": 25,
+                },
+                indent=2,
+                ensure_ascii=False,
+            )
+        )
         sys.exit(1)
 
     valideer_bestand(sys.argv[1])
