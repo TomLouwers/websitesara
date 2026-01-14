@@ -583,7 +583,8 @@ class GetallenValidatorImproved:
         # Check verboden bewerkingen
         verboden = regels.get('verboden_bewerkingen', [])
         for bewerking in verboden:
-            if any(pattern in hoofdvraag for pattern in self._get_bewerking_patterns(bewerking)):
+            # AANGEPAST: Gebruik meer specifieke detectie voor bewerkingscontext
+            if self._detect_bewerking_in_context(hoofdvraag, bewerking):
                 self.errors.append(
                     f"❌ Verboden bewerking '{bewerking}' gedetecteerd in hoofdvraag"
                 )
@@ -591,12 +592,56 @@ class GetallenValidatorImproved:
         # Check toegestane bewerkingen
         bewerkingen = regels.get('bewerkingen', [])
         if bewerkingen and not any(
-            any(pattern in hoofdvraag for pattern in self._get_bewerking_patterns(bew))
-            for bew in bewerkingen
+            self._detect_bewerking_in_context(hoofdvraag, bew) for bew in bewerkingen
         ):
             self.info.append(
                 f"ℹ️  Geen duidelijke bewerking uit lijst {bewerkingen} herkend"
             )
+
+    def _detect_bewerking_in_context(self, tekst: str, bewerking: str) -> bool:
+        """
+        NIEUW: Detecteer of een bewerking daadwerkelijk in een rekenkundige context gebruikt wordt
+        Voorkomt false positives zoals het woord "delen" in gewone zinnen
+        """
+        tekst_lower = tekst.lower()
+        
+        # Specifieke checks per bewerking
+        if 'delen' in bewerking:
+            # Check voor deelsymbolen of specifieke deelcontexten
+            # AANGEPAST: alleen getal-dubbele punt-getal voor echte deelsom (niet "plaatje: 9")
+            deelpatronen = [
+                r'\d+\s*:\s*\d+',  # AANGEPAST: getal : getal (bijv. 12:4)
+                r'\d+\s*÷\s*\d+',  # getal ÷ getal
+                r'÷',  # deelsymbool op zichzelf
+                r'gedeeld\s+door\s+\d',
+                r'\d+\s+gedeeld\s+door',
+                r'delen\s+door\s+\d',
+                r'\d+\s+delen\s+door',
+                r'verdeel\w*\s+\d+\s+door',
+                r'\d+\s+verdeel',
+            ]
+            return any(re.search(patroon, tekst_lower) for patroon in deelpatronen)
+        
+        elif 'tientalovergang' in bewerking:
+            # Check of er daadwerkelijk tientalovergang is (bijv. 7+5, 14-6)
+            # Zoek naar optelling/aftrekking die over 10 gaat
+            getallen = re.findall(r'\b(\d+)\s*([+\-])\s*(\d+)\b', tekst_lower)
+            for num1_str, op, num2_str in getallen:
+                num1, num2 = int(num1_str), int(num2_str)
+                if op == '+':
+                    # Tientalovergang bij optellen: eentallen > 10
+                    if (num1 % 10) + (num2 % 10) >= 10 and num1 < 20 and num2 < 20:
+                        return True
+                elif op == '-':
+                    # Tientalovergang bij aftrekken: gaan terug over 10
+                    if num1 >= 10 and (num1 - num2) < 10:
+                        return True
+            return False
+        
+        else:
+            # Gebruik standaard patronen voor andere bewerkingen
+            patterns = self._get_bewerking_patterns(bewerking)
+            return any(pattern in tekst_lower for pattern in patterns)
 
     def _get_bewerking_patterns(self, bewerking: str) -> List[str]:
         """
@@ -722,8 +767,15 @@ class GetallenValidatorImproved:
         """
         hoofdvraag = item.get('hoofdvraag', '')
 
-        # Tel zinnen
-        zinnen = [z.strip() for z in re.split(r'[.!?]+', hoofdvraag) if z.strip()]
+        # NIEUW: Filter visuele elementen (emoji blokken, symbolen) voordat zinnen tellen
+        # Verwijder emoji blocks, box drawing characters, en andere visuele elementen
+        hoofdvraag_clean = re.sub(r'[🟦🟧🟨🟩🟪🟫⬛⬜▪▫■□●○◆◇★☆♦♥♠♣]', '', hoofdvraag)
+        hoofdvraag_clean = re.sub(r'[\u2500-\u257F]', '', hoofdvraag_clean)  # Box drawing
+        hoofdvraag_clean = re.sub(r'\n+', ' ', hoofdvraag_clean)  # Newlines naar spaties
+        hoofdvraag_clean = hoofdvraag_clean.strip()
+
+        # Tel zinnen (nu zonder visuele elementen)
+        zinnen = [z.strip() for z in re.split(r'[.!?]+', hoofdvraag_clean) if z.strip()]
         max_zinnen = regels.get('max_zinnen', 10)
 
         if len(zinnen) > max_zinnen:
@@ -955,6 +1007,16 @@ class GetallenValidatorImproved:
         """
         toelichting = item.get('toelichting', '').lower()
 
+        # NIEUW: Check of dit een auto-converted item is
+        is_auto_converted = 'auto-convert' in toelichting or 'auto-conversie' in toelichting
+
+        if is_auto_converted:
+            self.errors.append(
+                "❌ Item is auto-converted uit legacy formaat. "
+                "Vul een volledige toelichting met strategie en misconceptie-uitleg."
+            )
+            return
+
         # Check minimale lengte
         if not toelichting or len(toelichting) < 30:
             self.warnings.append(
@@ -1033,11 +1095,13 @@ class GetallenValidatorImproved:
 
 def _convert_legacy_structure(data: Any) -> Optional[List[Dict[str, Any]]]:
     """
-    AANGEPAST: Legacy conversie met None voor onbekende waarden
+    AANGEPAST: Legacy conversie met verbeterde context extractie en visual detectie
     
     Ondersteun legacy MC-bestanden:
     - Top-level met schema_version/metadata/items
     - Items met question/options/answer.correct_index
+    - Detecteer visuele elementen automatisch
+    - Extract concrete context uit vraagtext
     """
     if not isinstance(data, dict) or "items" not in data:
         return None
@@ -1076,28 +1140,53 @@ def _convert_legacy_structure(data: Any) -> Optional[List[Dict[str, Any]]]:
 
         new_id = f"G_G{groep}_{niveau}_{legacy_id_str}" if groep and niveau else str(legacy_id_str)
 
+        # NIEUW: Detecteer visuele elementen in vraagtext
+        question_text = q.get("text", "")
+        has_visual = bool(re.search(r'[🟦🟧🟨🟩🟪🟫⬛⬜▪▫■□●○◆◇★☆♦♥♠♣]', question_text))
+        has_visual = has_visual or bool(re.search(r'[\u2500-\u257F]', question_text))  # Box drawing
+        has_visual = has_visual or 'plaatje' in question_text.lower() or 'afbeelding' in question_text.lower()
+        
+        # NIEUW: Extract concrete context uit vraagtext
+        context_mapping = {
+            'snoep': ['snoep', 'lolly', 'snoepje', 'drop', 'kauwgom'],
+            'fruit': ['appel', 'peer', 'banaan', 'sinaasappel', 'kers', 'druif', 'fruit'],
+            'speelgoed': ['auto', 'pop', 'blok', 'lego', 'knuffel', 'bal', 'knikker'],
+            'dieren': ['hond', 'kat', 'vogel', 'vis', 'konijn', 'paard', 'kip', 'dier'],
+            'vingers': ['vinger', 'hand'],
+            'dobbelstenen': ['dobbelsteen', 'dobbel', 'steen'],
+            'geld': ['euro', 'cent', 'geld', 'munten', 'briefje'],
+            'tijd': ['uur', 'minuut', 'tijd', 'klok'],
+            'groepjes': ['groep', 'kind', 'leerling', 'kinderen'],
+        }
+        
+        detected_context = "algemeen"
+        question_lower = question_text.lower()
+        for context_key, keywords in context_mapping.items():
+            if any(keyword in question_lower for keyword in keywords):
+                detected_context = context_key
+                break
+        
+        # Legacy theme als fallback
+        theme = legacy.get("theme", "nvt")
+        
+        # AANGEPAST: Minimale toelichting, zodat gebruiker gedwongen wordt deze aan te vullen
+        toelichting_basis = f"[AUTO-CONVERTED - VEREIST HANDMATIGE AANVULLING]\nOrigineel thema: {theme}."
+
         converted.append(
             {
                 "id": new_id,
                 "groep": groep,
                 "niveau": niveau,
-                "hoofdvraag": q.get("text", ""),
+                "hoofdvraag": question_text,
                 "correct_antwoord": correct_text,
                 "afleiders": afleiders,
-                "toelichting": f"Auto-conversie legacy item (thema: {legacy.get('theme', 'nvt')}).",
-                "context": legacy.get("theme", "nvt"),
-                "has_visual": False,
-                "assets": [],
-                "context_tag": (
-                    "geld"
-                    if "geld" in str(legacy.get("theme", "")).lower()
-                    else "tijd"
-                    if "tijd" in str(legacy.get("theme", "")).lower()
-                    else "algemeen"
-                ),
-                # AANGEPAST: None ipv hardcoded defaults
-                "moeilijkheidsgraad": None,
-                "geschatte_tijd_sec": None,
+                "toelichting": toelichting_basis,  # Minimaal, dwingt handmatige check
+                "context": theme,  # Originele theme behouden
+                "has_visual": has_visual,  # AANGEPAST: Automatisch gedetecteerd
+                "assets": [] if not has_visual else ["embedded_visual"],  # Placeholder
+                "context_tag": detected_context,  # NIEUW: Gedetecteerde concrete context
+                "moeilijkheidsgraad": None,  # Moet handmatig ingevuld
+                "geschatte_tijd_sec": None,  # Moet handmatig ingevuld
             }
         )
 
