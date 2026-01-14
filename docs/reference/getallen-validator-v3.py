@@ -686,6 +686,65 @@ class GetallenValidatorEnhanced:
         )
 
 
+def _convert_legacy_structure(data: Any) -> Optional[List[Dict[str, Any]]]:
+    """
+    Ondersteun legacy MC-bestanden zoals gb_groep3_m3_core.json:
+    - Top-level met schema_version/metadata/items
+    - Items met question/options/answer.correct_index
+    Converteer naar het getallen-validator formaat.
+    """
+    if not isinstance(data, dict) or "items" not in data:
+        return None
+
+    meta = data.get("metadata", {})
+    groep = meta.get("grade")
+    niveau_raw = meta.get("level")
+    niveau = None
+    if isinstance(niveau_raw, str) and len(niveau_raw) > 0:
+        niveau = niveau_raw[0].upper()
+
+    legacy_items = data.get("items", [])
+    converted: List[Dict[str, Any]] = []
+    for legacy in legacy_items:
+        q = legacy.get("question", {})
+        opts = legacy.get("options", [])
+        answer = legacy.get("answer", {})
+        correct_index = answer.get("correct_index", 0)
+        correct_text = ""
+        afleiders: List[str] = []
+        if opts and isinstance(opts, list):
+            for idx, opt in enumerate(opts):
+                text = opt.get("text") if isinstance(opt, dict) else str(opt)
+                if idx == correct_index:
+                    correct_text = str(text)
+                else:
+                    afleiders.append(str(text))
+
+        legacy_id = legacy.get("id", "000")
+        if isinstance(legacy_id, int):
+            legacy_id_str = f"{legacy_id:03d}"
+        else:
+            legacy_id_str = str(legacy_id).zfill(3)
+
+        new_id = f"G_G{groep}_{niveau}_{legacy_id_str}" if groep and niveau else str(legacy_id_str)
+
+        converted.append({
+            "id": new_id,
+            "groep": groep,
+            "niveau": niveau,
+            "hoofdvraag": q.get("text", ""),
+            "correct_antwoord": correct_text,
+            "afleiders": afleiders,
+            "toelichting": f"Auto-conversie legacy item (thema: {legacy.get('theme', 'nvt')}).",
+            "context": legacy.get("theme", "nvt"),
+            # Basale defaults binnen G3-M bereik
+            "moeilijkheidsgraad": 0.2,
+            "geschatte_tijd_sec": 25
+        })
+
+    return converted
+
+
 def valideer_bestand(filepath: str) -> List[ValidationResult]:
     """Valideer een JSON bestand met items"""
     validator = GetallenValidatorEnhanced()
@@ -693,7 +752,15 @@ def valideer_bestand(filepath: str) -> List[ValidationResult]:
     with open(filepath, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    items = data if isinstance(data, list) else [data]
+    # Ondersteun zowel lijst, enkel item, als legacy core-structuur met items[]
+    items: List[Dict[str, Any]]
+    if isinstance(data, list):
+        items = data
+    elif isinstance(data, dict) and "items" in data:
+        converted = _convert_legacy_structure(data)
+        items = converted if converted is not None else [data]
+    else:
+        items = [data]
 
     resultaten = []
     for idx, item in enumerate(items, 1):
