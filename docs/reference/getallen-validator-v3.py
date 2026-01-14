@@ -360,8 +360,10 @@ class GetallenValidatorEnhanced:
         for bewerking in verboden:
             if bewerking == 'vermenigvuldigen' and any(x in hoofdvraag for x in ['×', '*', 'keer', 'groepjes van']):
                 self.errors.append(f"❌ Vermenigvuldigen is VERBODEN voor G{groep}-{niveau}")
-            elif bewerking == 'delen' and any(x in hoofdvraag for x in [':', '÷', 'gedeeld door', 'delen door']):
-                self.errors.append(f"❌ Delen is VERBODEN voor G{groep}-{niveau}")
+            elif bewerking == 'delen':
+                # Check for division operator (only when used between numbers, not as punctuation)
+                if re.search(r'\d+\s*:\s*\d+', hoofdvraag) or '÷' in hoofdvraag or 'gedeeld door' in hoofdvraag or 'delen door' in hoofdvraag:
+                    self.errors.append(f"❌ Delen is VERBODEN voor G{groep}-{niveau}")
 
         # G3-E: check intro bewerkingen (alleen als groepjes/verdelen, niet formeel)
         if groep == 3 and niveau == 'E':
@@ -481,20 +483,35 @@ class GetallenValidatorEnhanced:
 
         hoofdvraag = item.get('hoofdvraag', '')
 
+        # Remove newlines and normalize whitespace for sentence counting
+        hoofdvraag_normalized = ' '.join(hoofdvraag.split())
+
         # Check aantal zinnen
         max_zinnen = regels.get('max_zinnen')
+        zinnen = []
         if max_zinnen:
-            zinnen = re.split(r'[.!?]+', hoofdvraag)
+            zinnen = re.split(r'[.!?]+', hoofdvraag_normalized)
+            # Filter out empty strings and visual-only content (emoji blocks, symbols)
             zinnen = [z.strip() for z in zinnen if z.strip()]
-            if len(zinnen) > max_zinnen:
+            # Count only sentences that contain actual words (not just emojis/symbols)
+            # Also filter out single-word fragments that are likely visual labels
+            zinnen_met_woorden = []
+            for z in zinnen:
+                if re.search(r'[a-zA-Z]', z):
+                    # Check if it's a real sentence (more than just a single word surrounded by emojis)
+                    words = re.findall(r'\b[a-zA-Z]+\b', z)
+                    if len(words) > 1:  # More than one word = real sentence
+                        zinnen_met_woorden.append(z)
+            if len(zinnen_met_woorden) > max_zinnen:
                 self.errors.append(
-                    f"❌ Te veel zinnen: {len(zinnen)} (max {max_zinnen} voor G{groep}-{niveau})"
+                    f"❌ Te veel zinnen: {len(zinnen_met_woorden)} (max {max_zinnen} voor G{groep}-{niveau})"
                 )
 
         # G3: Check woordlengte per zin
         max_woorden = regels.get('max_woorden_per_zin')
         if max_woorden:
-            for zin in zinnen:
+            zinnen_to_check = zinnen_met_woorden if 'zinnen_met_woorden' in locals() else zinnen
+            for zin in zinnen_to_check:
                 woorden = zin.split()
                 if len(woorden) > max_woorden:
                     self.errors.append(
