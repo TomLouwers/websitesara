@@ -147,6 +147,9 @@ function renderMathInText(text) {
             }
         });
 
+        // Convert newlines to <br> tags for HTML rendering
+        result = result.replace(/\n/g, '<br>');
+
         return result;
     } catch (e) {
         console.error('Error rendering math:', e);
