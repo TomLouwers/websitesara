@@ -2190,6 +2190,8 @@ body::before {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
 }
 
 #questionText {
@@ -3219,7 +3221,9 @@ body::before {
         line-height: 1.5;
         margin-bottom: 0;
         color: var(--text-color-dark);
-        max-width: 35ch;
+        max-width: 100%;
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
     }
 
     .option {
