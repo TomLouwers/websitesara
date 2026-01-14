@@ -1615,12 +1615,12 @@ function loadCurrentQuestion() {
     }
 
     // Load question
-    document.getElementById('questionText').textContent = currentQuestion.question;
+    document.getElementById('questionText').innerHTML = renderMathInText(currentQuestion.question);
 
     // Sync to new question card
     const questionTextNew = document.getElementById('questionTextNew');
     if (questionTextNew) {
-        questionTextNew.textContent = currentQuestion.question;
+        questionTextNew.innerHTML = renderMathInText(currentQuestion.question);
     }
 
     // Check if question has L.O.V.A. data
@@ -3152,7 +3152,7 @@ function populateQuestionAccordion() {
         }
 
         // Question
-        contentHTML += `<div class="question-text-review"><strong>Vraag:</strong> ${item.question.question}</div>`;
+        contentHTML += `<div class="question-text-review"><strong>Vraag:</strong> ${renderMathInText(item.question.question)}</div>`;
 
         // Your answer vs Correct answer
         // wrongAnswers stores the actual text, not the index
@@ -3540,7 +3540,7 @@ function showReviewPage(questionsAnswered) {
         reviewItem.innerHTML = `
             <div class="review-item-header">Vraag ${index + 1}</div>
             ${contentHtml}
-            <div class="review-question">${item.question.question}</div>
+            <div class="review-question">${renderMathInText(item.question.question)}</div>
 
             <div class="review-answer-section">
                 <span class="review-label">Jouw antwoord:</span>
