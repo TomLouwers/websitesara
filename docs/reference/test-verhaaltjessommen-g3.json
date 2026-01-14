@@ -1,0 +1,94 @@
+[
+  {
+    "id": "VT_G3_M_001",
+    "groep": 3,
+    "niveau": "M",
+    "domein": "GETALLEN",
+    "avi_niveau": "M3",
+    "context_type": "fruit",
+    "verhaal_tekst": "Lisa heeft 3 appels. Mama geeft haar 2 appels. Hoeveel appels heeft Lisa nu?",
+    "tekst_lengte_woorden": 14,
+    "visualisatie": "verplicht",
+    "hoofdvraag": "Hoeveel appels heeft Lisa nu?",
+    "correct_antwoord": "5 appels",
+    "afleiders": ["3 appels", "2 appels", "6 appels"],
+    "toelichting_lova": {
+      "lezen": "Lisa heeft 3 appels. Mama geeft er 2 bij.",
+      "ordenen": "Gegeven: Lisa heeft 3 appels, krijgt 2 appels bij. Gevraagd: Hoeveel appels heeft Lisa nu?",
+      "vormen": "Erbij krijgen = optellen. 3 + 2",
+      "antwoorden": "3 + 2 = 5 appels. Lisa heeft nu 5 appels."
+    },
+    "stappenstructuur": [
+      {
+        "stap": 1,
+        "actie": "Tel de appels bij elkaar op",
+        "berekening": "3 + 2",
+        "resultaat": "5 appels"
+      }
+    ],
+    "taal_complexiteit": "eenvoudig",
+    "reken_complexiteit": "1_stap",
+    "moeilijkheidsgraad": 0.20,
+    "geschatte_tijd_sec": 60,
+    "keywords": ["optellen", "fruit", "erbij"]
+  },
+  {
+    "id": "VT_G3_E_001",
+    "groep": 3,
+    "niveau": "E",
+    "domein": "METEN",
+    "avi_niveau": "E3",
+    "context_type": "winkel",
+    "verhaal_tekst": "Tom heeft 8 euro. Hij koopt een boek. Het boek kost 5 euro. Hoeveel euro heeft Tom nu nog?",
+    "tekst_lengte_woorden": 21,
+    "visualisatie": "aanbevolen",
+    "hoofdvraag": "Hoeveel euro heeft Tom nu nog?",
+    "correct_antwoord": "3 euro",
+    "afleiders": ["5 euro", "8 euro", "13 euro"],
+    "toelichting_lova": {
+      "lezen": "Tom heeft 8 euro. Hij koopt een boek van 5 euro.",
+      "ordenen": "Gegeven: Tom heeft 8 euro, het boek kost 5 euro. Gevraagd: Hoeveel euro blijft er over?",
+      "vormen": "Geld uitgeven = aftrekken. 8 - 5",
+      "antwoorden": "8 - 5 = 3 euro. Tom heeft nog 3 euro over."
+    },
+    "stappenstructuur": [
+      {
+        "stap": 1,
+        "actie": "Trek de kosten van het boek af van het geld dat Tom heeft",
+        "berekening": "8 - 5",
+        "resultaat": "3 euro"
+      }
+    ],
+    "taal_complexiteit": "eenvoudig",
+    "reken_complexiteit": "1_stap",
+    "moeilijkheidsgraad": 0.38,
+    "geschatte_tijd_sec": 90,
+    "keywords": ["aftrekken", "geld", "winkel"]
+  },
+  {
+    "id": "VT_G3_M_ERROR",
+    "groep": 3,
+    "niveau": "M",
+    "domein": "GETALLEN",
+    "avi_niveau": "M3",
+    "context_type": "abstract",
+    "verhaal_tekst": "Een projectontwikkelaar evalueert de kosten-batenanalyse van een grootschalige infrastructurele investering. De netto contante waarde bedraagt €247.850, waarbij de disconteringsvoet is gesteld op 4,3% per annum. Bereken de terugverdientijd rekening houdend met inflatie en opportuniteitskosten.",
+    "tekst_lengte_woorden": 35,
+    "visualisatie": "optioneel",
+    "hoofdvraag": "Wat is de terugverdientijd?",
+    "correct_antwoord": "Onbepaald",
+    "afleiders": ["5 jaar", "10 jaar", "247850"],
+    "toelichting_lova": {
+      "lezen": "FOUT: Tekst is absoluut ongeschikt voor G3-M",
+      "ordenen": "FOUT: Woordenschat is academisch/professioneel niveau",
+      "vormen": "FOUT: Rekencomplexiteit ver boven G3-M (procenten, contante waarde, discontering)",
+      "antwoorden": "FOUT: G3-M moet werken met getallen tot 20, concrete contexten (speelgoed, snoep), en 1-staps berekeningen"
+    },
+    "stappenstructuur": [],
+    "taal_complexiteit": "complex",
+    "reken_complexiteit": "meerstaps",
+    "moeilijkheidsgraad": 0.98,
+    "geschatte_tijd_sec": 600,
+    "keywords": ["FOUT", "te_moeilijk", "abstract"]
+  }
+]
