@@ -27,40 +27,55 @@ class StrategieGenerator:
         # GROEP 3
         (3, 'M'): {
             'optellen': [
-                "Tel stap voor stap: {num1} {teken} {num2}. Gebruik je vingers of blokjes.",
-                "Gebruik getalbeelden: eerst {num1}, dan nog {num2} erbij.",
+                "Tel de getallen bij elkaar op: {num1} en {num2}. Je kunt je vingers of blokjes gebruiken om te tellen.",
+                "Begin bij {num1}, tel dan nog {num2} erbij. Zo kom je op {answer}.",
             ],
             'aftrekken': [
-                "Tel terug vanaf {num1}: haal {num2} weg.",
-                "Gebruik blokjes: begin met {num1}, pak er {num2} af.",
+                "Begin bij {num1} en tel {num2} terug. Dan houd je {answer} over.",
+                "Je hebt {num1}, nu haal je er {num2} af. Dat is {answer}.",
             ],
         },
         (3, 'E'): {
             'optellen_bruggetje': [
-                "Gebruik het bruggetje van 10: {num1} + {split1} = 10, dan nog {split2} erbij = {answer}.",
-                "Maak eerst 10: {num1} + {split1} = 10, en dan + {split2} = {answer}.",
+                "Gebruik het bruggetje van 10: eerst {num1} + {split1} = 10, dan nog {split2} erbij. Zo kom je op {answer}.",
+                "Maak eerst 10: {num1} + {split1} = 10. Dan tel je nog {split2} erbij. Dat wordt {answer}.",
             ],
             'optellen_splitsen': [
-                "Splits de {num2} in {split1} en {split2}: {num1} + {split1} = {round10}, dan nog + {split2} = {answer}.",
+                "Splits de {num2} in {split1} en {split2}. Eerst reken je {num1} + {split1} = {round10}, dan nog + {split2} = {answer}.",
             ],
             'aftrekken_bruggetje': [
-                "Trek via 10 af: {num1} - {split1} = 10, dan nog - {split2} = {answer}.",
+                "Trek af via 10: {num1} - {split1} = 10, dan nog - {split2} = {answer}.",
             ],
         },
         # GROEP 4
         (4, 'M'): {
             'optellen': [
-                "Tel kolomsgewijs op: eerst de eentallen, dan de tientallen.",
+                "Tel de getallen op, eerst de eentallen dan de tientallen.",
             ],
             'aftrekken': [
-                "Trek kolomsgewijs af, let op lenen als het nodig is.",
+                "Trek af, eerst de eentallen dan de tientallen. Let op of je moet lenen!",
             ],
             'vermenigvuldigen': [
-                "Dit is de tafel van {num1}: {num1} × {num2} = {answer}.",
-                "Gebruik de tafel van {num2}: {num2} keer {num1} = {answer}.",
+                "Dit is de tafel van {num2}: {num1} × {num2} = {answer}. Dat is {num1} keer de {num2}.",
+                "Je moet de tafel van {num1} gebruiken: {num1} × {num2} = {answer}.",
             ],
             'delen': [
-                "Deel {num1} door {num2}: hoeveel keer past {num2} in {num1}? Antwoord: {answer} keer.",
+                "Hoeveel keer past {num2} in {num1}? Dat is {answer} keer. Je kunt de tafel van {num2} gebruiken om dit te controleren.",
+            ],
+        },
+        # GROEP 5
+        (5, 'M'): {
+            'optellen': [
+                "Tel de getallen bij elkaar op. Werk van rechts naar links: eerst eentallen, dan tientallen, dan honderdtallen.",
+            ],
+            'aftrekken': [
+                "Trek af van rechts naar links. Onthoud: als het niet kan, moet je eerst lenen!",
+            ],
+            'vermenigvuldigen': [
+                "Dit is de tafel van {num2}: {num1} × {num2} = {answer}.",
+            ],
+            'staartdeling': [
+                "{num1} delen door {num2} geeft {answer}. Je kunt de tafel van {num2} gebruiken om te helpen.",
             ],
         },
     }
@@ -83,8 +98,34 @@ class StrategieGenerator:
     def analyseer_vraag(self, vraag_text: str) -> Optional[Dict[str, Any]]:
         """Analyseer de vraag en detecteer bewerking + getallen"""
         
-        # Detecteer optelling
-        match = re.search(r'(\d+)\s*\+\s*(\d+)', vraag_text)
+        # NIEUW: Filter visuele elementen (emoji blokken) voordat analyseren
+        vraag_clean = re.sub(r'[🟦🟧🟨🟩🟪🟫⬛⬜▪▫■□●○◆◇★☆♦♥♠♣]', '', vraag_text)
+        vraag_clean = re.sub(r'[\u2500-\u257F]', '', vraag_clean)  # Box drawing
+        vraag_clean = re.sub(r'\n+', ' ', vraag_clean)  # Newlines naar spaties
+        vraag_clean = vraag_clean.strip()
+        
+        # NIEUW: Detecteer tekstuele optelling patronen
+        # "9 snoepjes, 4 erbij" of "8 appels, 5 erbij"
+        text_patterns_plus = [
+            r'(\d+)[^,\d]*,?\s*(\d+)\s*(?:erbij|er\s*bij)',
+            r'(\d+)[^,\d]*\s+(?:krijgt?|kreeg)\s+(?:er\s*)?(\d+)\s+(?:bij|erbij)',
+            r'(\d+)[^,\d]*\s+en\s+(?:nog\s*)?(\d+)',
+        ]
+        
+        for pattern in text_patterns_plus:
+            match = re.search(pattern, vraag_clean.lower())
+            if match:
+                num1, num2 = int(match.group(1)), int(match.group(2))
+                return {
+                    'bewerking': 'optellen',
+                    'num1': num1,
+                    'num2': num2,
+                    'teken': '+',
+                    'answer': num1 + num2,
+                }
+        
+        # Detecteer expliciete optelling met +
+        match = re.search(r'(\d+)\s*\+\s*(\d+)', vraag_clean)
         if match:
             num1, num2 = int(match.group(1)), int(match.group(2))
             return {
@@ -95,8 +136,28 @@ class StrategieGenerator:
                 'answer': num1 + num2,
             }
         
-        # Detecteer aftrekking
-        match = re.search(r'(\d+)\s*-\s*(\d+)', vraag_text)
+        # NIEUW: Detecteer tekstuele aftrekking patronen
+        # "12 appels, 4 kwijt" of "10 snoepjes, 3 weggegeven"
+        text_patterns_minus = [
+            r'(\d+)[^,\d]*,?\s*(\d+)\s*(?:kwijt|weg|weggegeven|afgegeven|verloren)',
+            r'(\d+)[^,\d]*\s+(?:geeft?|gaf)\s+(\d+)\s+(?:weg|af)',
+            r'(\d+)[^,\d]*\s+(?:verliest?|verloor)\s+(\d+)',
+        ]
+        
+        for pattern in text_patterns_minus:
+            match = re.search(pattern, vraag_clean.lower())
+            if match:
+                num1, num2 = int(match.group(1)), int(match.group(2))
+                return {
+                    'bewerking': 'aftrekken',
+                    'num1': num1,
+                    'num2': num2,
+                    'teken': '-',
+                    'answer': num1 - num2,
+                }
+        
+        # Detecteer expliciete aftrekking met -
+        match = re.search(r'(\d+)\s*-\s*(\d+)', vraag_clean)
         if match:
             num1, num2 = int(match.group(1)), int(match.group(2))
             return {
@@ -108,7 +169,7 @@ class StrategieGenerator:
             }
         
         # Detecteer vermenigvuldiging
-        match = re.search(r'(\d+)\s*[×*x]\s*(\d+)', vraag_text)
+        match = re.search(r'(\d+)\s*[×*x]\s*(\d+)', vraag_clean)
         if match:
             num1, num2 = int(match.group(1)), int(match.group(2))
             return {
@@ -120,7 +181,7 @@ class StrategieGenerator:
             }
         
         # Detecteer deling
-        match = re.search(r'(\d+)\s*[:÷]\s*(\d+)', vraag_text)
+        match = re.search(r'(\d+)\s*[:÷]\s*(\d+)', vraag_clean)
         if match:
             num1, num2 = int(match.group(1)), int(match.group(2))
             if num2 != 0:
@@ -318,6 +379,10 @@ class SupportFileEnhancer:
             item_id = core_item.get('id')
             question_text = core_item.get('question', {}).get('text', '')
             
+            # DEBUG: Print vraag
+            vraag_preview = question_text[:60].replace('\n', ' ') + ('...' if len(question_text) > 60 else '')
+            print(f"\n  📝 Item {item_id}: {vraag_preview}")
+            
             # Vind correct antwoord
             options = core_item.get('options', [])
             answer_data = core_item.get('answer', {})
@@ -336,9 +401,39 @@ class SupportFileEnhancer:
             # Analyseer vraag
             analyse = generator.analyseer_vraag(question_text)
             
+            # DEBUG: Laat zien wat gedetecteerd is
+            if analyse:
+                print(f"     → Gedetecteerd: {analyse['num1']} {analyse['teken']} {analyse['num2']} = {analyse['answer']}")
+            else:
+                print(f"     → Geen bewerking gedetecteerd")
+            
             if not analyse:
-                print(f"  ⏭️  Item {item_id}: Kan vraag niet analyseren")
-                self.stats['skipped'] += 1
+                # NIEUW: Fallback voor niet-analyseerbare vragen
+                # Maak een minimale verbetering van de explanation
+                oude_explanation = ""
+                support_item = support_dict.get(item_id)
+                if support_item:
+                    oude_explanation = support_item.get('feedback', {}).get('explanation', '')
+                
+                # Als de oude explanation erg kort is, voeg minimale verbetering toe
+                if len(oude_explanation) < 50:
+                    nieuwe_explanation = (
+                        f"Het juiste antwoord is: {correct_answer}. "
+                        f"Lees de vraag zorgvuldig en kies het goede antwoord."
+                    )
+                    
+                    if support_item:
+                        if 'feedback' not in support_item:
+                            support_item['feedback'] = {}
+                        support_item['feedback']['explanation'] = nieuwe_explanation
+                        print(f"  ⚡ Item {item_id}: Basis-enhancement (vraag niet analyseerbaar)")
+                        enhanced_count += 1
+                    else:
+                        print(f"  ⚠️  Item {item_id}: Niet gevonden in support file")
+                        self.stats['skipped'] += 1
+                else:
+                    print(f"  ⏭️  Item {item_id}: Kan vraag niet analyseren (al content aanwezig)")
+                    self.stats['skipped'] += 1
                 continue
             
             # Genereer strategie-uitleg
