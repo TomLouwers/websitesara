@@ -76,6 +76,22 @@ class KindvriendelijkeUitlegGenerator:
                 "{num1} verdelen in groepjes van {num2}. Hoeveel groepjes kun je maken? Precies, {answer} groepjes! Je kunt ook denken: {answer} keer {num2} is {num1}.",
             ],
         },
+        (4, 'E'): {
+            'optellen': [
+                "Bij grotere getallen werk je kolomsgewijs. Zet {num1} en {num2} netjes onder elkaar. Tel op van rechts naar links: eerst eentallen, dan tientallen, dan honderdtallen. Onthoud goed wat je moet doorgeven! Het antwoord is {answer}.",
+                "Optellen tot 1000: {num1} + {num2}. Werk systematisch van rechts naar links. Als de eentallen samen meer dan 10 zijn, geef je 1 door naar de tientallen. Zo kom je op {answer}!",
+            ],
+            'aftrekken': [
+                "Aftrekken met grotere getallen: {num1} − {num2} = {answer}. Zet ze onder elkaar en werk van rechts naar links. Als je moet lenen, haal je 1 van de positie links en maak je er 10 bij de huidige positie.",
+                "Trek kolomsgewijs af: {num1} min {num2}. Let goed op bij het lenen! Als je 5 − 8 moet doen, leen je 1 van de tientallen. Dan wordt het 15 − 8. Het antwoord is {answer}.",
+            ],
+            'vermenigvuldigen': [
+                "Vermenigvuldigen: {num1} × {num2} = {answer}. Als je de tafels goed kent, kun je dit snel uitrekenen. Anders kun je het doen met kolomsgewijs vermenigvuldigen.",
+            ],
+            'delen': [
+                "Delen: {num1} : {num2} = {answer}. Denk aan de tafels: hoeveel keer {num2} heb je nodig voor {num1}? Controleer je antwoord door te vermenigvuldigen: {answer} × {num2} = {num1}.",
+            ],
+        },
         # GROEP 5
         (5, 'M'): {
             'optellen': [
@@ -93,6 +109,113 @@ class KindvriendelijkeUitlegGenerator:
             'staartdeling': [
                 "We gaan staartdelen! {num1} : {num2} = {answer}. Hoeveel keer past {num2} in {num1}? Dat is {answer} keer. Je kunt het controleren: {answer} × {num2} = {num1}!",
                 "Staartdeling: {num1} gedeeld door {num2}. Denk aan de tafel van {num2}. Hoeveel keer {num2} heb je nodig om {num1} te maken? {answer} keer!",
+            ],
+        },
+        (5, 'E'): {
+            'optellen': [
+                "Bij zeer grote getallen werk je kolomsgewijs. Zet {num1} en {num2} netjes onder elkaar met alle cijfers op de juiste plaats. Begin rechts en werk naar links. Het antwoord is {answer}.",
+                "Optellen tot 100.000: zet de getallen onder elkaar en let goed op de plaatswaarde. Eentallen, tientallen, honderdtallen, duizendtallen, tienduizendtallen - allemaal netjes onder elkaar. Reken van rechts naar links: {num1} + {num2} = {answer}.",
+            ],
+            'aftrekken': [
+                "Aftrekken met grote getallen: {num1} − {num2} = {answer}. Zet ze kolomsgewijs onder elkaar. Werk systematisch van rechts naar links en leen waar nodig.",
+                "Trek af: {num1} min {num2}. Let goed op de plaatswaarde van elk cijfer. Begin rechts en werk naar links, leen bij je linkerbuur als het nodig is. Het antwoord is {answer}.",
+            ],
+            'vermenigvuldigen': [
+                "Vermenigvuldigen: {num1} × {num2} = {answer}. Gebruik kolomsgewijs vermenigvuldigen of splits het getal in handige delen.",
+            ],
+            'delen': [
+                "Delen: {num1} : {num2} = {answer}. Gebruik staartdeling: hoeveel keer past {num2} in elk deel van {num1}?",
+            ],
+        },
+        # GROEP 6
+        (6, 'M'): {
+            'optellen': [
+                "Rekenen met getallen in de miljoenen: {num1} + {num2} = {answer}. Zet de getallen kolomsgewijs onder elkaar, let goed op de plaatswaarde. Werk systematisch van rechts naar links.",
+                "Optellen: {num1} + {num2}. Controleer eerst hoeveel cijfers elk getal heeft. Zet ze netjes onder elkaar en tel op. Vergeet niet om door te geven naar de volgende kolom! Het antwoord is {answer}.",
+            ],
+            'aftrekken': [
+                "Aftrekken: {num1} − {num2} = {answer}. Zet de getallen onder elkaar, let op de plaatswaarde van miljoenen, honderdduizenden, tienduizenden, etc. Trek af van rechts naar links.",
+                "Bij grote getallen is het extra belangrijk om netjes te werken. Zet {num1} en {num2} onder elkaar, en trek kolomsgewijs af. Leen indien nodig. Het antwoord is {answer}.",
+            ],
+            'vermenigvuldigen': [
+                "Vermenigvuldigen: {num1} × {num2} = {answer}. Bij grote getallen kun je vaak handig werken met ronde getallen of het getal splitsen.",
+            ],
+            'delen': [
+                "Delen: {num1} : {num2} = {answer}. Gebruik staartdeling en werk systematisch. Schat eerst ongeveer wat het antwoord zou kunnen zijn.",
+            ],
+        },
+        (6, 'E'): {
+            'optellen': [
+                "Optellen tot 2 miljoen: {num1} + {num2} = {answer}. Werk kolomsgewijs, let op alle plaatswaarden. Een goede tip: schat eerst het antwoord globaal, dan kun je checken of je uitkomst logisch is.",
+            ],
+            'aftrekken': [
+                "Aftrekken: {num1} − {num2} = {answer}. Bij hele grote getallen is het verstandig om eerst te schatten. Werk dan kolomsgewijs, let goed op bij het lenen.",
+            ],
+            'vermenigvuldigen': [
+                "Vermenigvuldigen: {num1} × {num2} = {answer}. Gebruik een slimme strategie: verdeel het probleem in kleinere stukken of werk met afronding.",
+            ],
+            'delen': [
+                "Delen: {num1} : {num2} = {answer}. Schat eerst globaal, gebruik dan staartdeling. Controleer je antwoord door te vermenigvuldigen.",
+            ],
+        },
+        # GROEP 7
+        (7, 'M'): {
+            'optellen': [
+                "Rekenen met grote getallen (tot 5 miljoen): {num1} + {num2} = {answer}. Let goed op bij negatieve getallen! Een negatief getal optellen is hetzelfde als aftrekken.",
+                "Optellen: {num1} + {num2} = {answer}. Bij hele grote getallen is schatten eerst een goede strategie. Werk daarna kolomsgewijs uit en controleer of je schatting klopt.",
+            ],
+            'aftrekken': [
+                "Aftrekken: {num1} − {num2} = {answer}. Let op: als je een negatief getal aftrekt, tel je eigenlijk op! Bijvoorbeeld: 5 − (−3) = 5 + 3 = 8.",
+                "Bij aftrekken met negatieve getallen: twee negatieve tekens naast elkaar worden een plus! {num1} − {num2} = {answer}.",
+            ],
+            'vermenigvuldigen': [
+                "Vermenigvuldigen: {num1} × {num2} = {answer}. Let op de tekens: negatief × positief = negatief, negatief × negatief = positief.",
+            ],
+            'delen': [
+                "Delen: {num1} : {num2} = {answer}. Bij negatieve getallen: let op het teken van je antwoord. Negatief gedeeld door positief geeft negatief.",
+            ],
+        },
+        (7, 'E'): {
+            'optellen': [
+                "Rekenen tot 5 miljoen: {num1} + {num2} = {answer}. Werk systematisch, let goed op de tekens bij negatieve getallen.",
+            ],
+            'aftrekken': [
+                "Aftrekken: {num1} − {num2} = {answer}. Bij negatieve getallen: min en min wordt plus! Werk de bewerking stap voor stap uit.",
+            ],
+            'vermenigvuldigen': [
+                "Vermenigvuldigen: {num1} × {num2} = {answer}. Onthoud de tekenregels: + × + = +, − × − = +, + × − = −.",
+            ],
+            'delen': [
+                "Delen: {num1} : {num2} = {answer}. Pas de tekenregels toe: twee gelijke tekens geeft +, twee verschillende tekens geeft −.",
+            ],
+        },
+        # GROEP 8
+        (8, 'M'): {
+            'optellen': [
+                "Rekenen met zeer grote getallen (tot 18 miljoen): {num1} + {num2} = {answer}. Schat eerst globaal, werk dan precies uit. Let goed op de tekens!",
+            ],
+            'aftrekken': [
+                "Aftrekken: {num1} − {num2} = {answer}. Bij deze grote getallen is het belangrijk om netjes te werken. Schat eerst, reken dan precies uit.",
+            ],
+            'vermenigvuldigen': [
+                "Vermenigvuldigen: {num1} × {num2} = {answer}. Werk systematisch en let op de tekenregels bij negatieve getallen.",
+            ],
+            'delen': [
+                "Delen: {num1} : {num2} = {answer}. Gebruik efficiënte strategieën en controleer je antwoord door te vermenigvuldigen.",
+            ],
+        },
+        (8, 'E'): {
+            'optellen': [
+                "Optellen tot 18 miljoen: {num1} + {num2} = {answer}. Bij deze getallen is een goede strategie essentieel. Schat globaal, werk netjes uit, controleer je antwoord.",
+            ],
+            'aftrekken': [
+                "Aftrekken: {num1} − {num2} = {answer}. Werk systematisch, let op negatieve getallen en controleer of je antwoord logisch is.",
+            ],
+            'vermenigvuldigen': [
+                "Vermenigvuldigen: {num1} × {num2} = {answer}. Gebruik slimme rekenstrategieën en let goed op de tekens.",
+            ],
+            'delen': [
+                "Delen: {num1} : {num2} = {answer}. Gebruik staartdeling of splits het probleem in kleinere stappen. Controleer je antwoord!",
             ],
         },
     }
@@ -131,8 +254,8 @@ class KindvriendelijkeUitlegGenerator:
                     'answer': num1 + num2,
                 }
 
-        # Detecteer expliciete optelling met +
-        match = re.search(r'(\d+)\s*\+\s*(\d+)', vraag_clean)
+        # Detecteer expliciete optelling met + (inclusief negatieve getallen voor groep 7-8)
+        match = re.search(r'(-?\d+)\s*\+\s*(-?\d+)', vraag_clean)
         if match:
             num1, num2 = int(match.group(1)), int(match.group(2))
             return {
@@ -163,8 +286,8 @@ class KindvriendelijkeUitlegGenerator:
                     'answer': num1 - num2,
                 }
 
-        # Detecteer expliciete aftrekking met -
-        match = re.search(r'(\d+)\s*-\s*(\d+)', vraag_clean)
+        # Detecteer expliciete aftrekking met - (inclusief negatieve getallen)
+        match = re.search(r'(-?\d+)\s*-\s*(-?\d+)', vraag_clean)
         if match:
             num1, num2 = int(match.group(1)), int(match.group(2))
             return {
@@ -175,8 +298,8 @@ class KindvriendelijkeUitlegGenerator:
                 'answer': num1 - num2,
             }
 
-        # Detecteer vermenigvuldiging
-        match = re.search(r'(\d+)\s*[×*x]\s*(\d+)', vraag_clean)
+        # Detecteer vermenigvuldiging (inclusief negatieve getallen)
+        match = re.search(r'(-?\d+)\s*[×*x]\s*(-?\d+)', vraag_clean)
         if match:
             num1, num2 = int(match.group(1)), int(match.group(2))
             return {
@@ -187,8 +310,8 @@ class KindvriendelijkeUitlegGenerator:
                 'answer': num1 * num2,
             }
 
-        # Detecteer deling
-        match = re.search(r'(\d+)\s*[:÷]\s*(\d+)', vraag_clean)
+        # Detecteer deling (inclusief negatieve getallen)
+        match = re.search(r'(-?\d+)\s*[:÷]\s*(-?\d+)', vraag_clean)
         if match:
             num1, num2 = int(match.group(1)), int(match.group(2))
             if num2 != 0:
@@ -326,12 +449,30 @@ class KindvriendelijkeUitlegGenerator:
             if fout_num < correct and fout_num > 0:
                 return f"Hmm, {fout_num} is niet helemaal goed. Het lijkt erop dat je misschien vergeten bent te lenen bij het aftrekken. Check je som nog eens goed! Het goede antwoord is {correct}."
 
+        # NEGATIEVE GETALLEN (groep 7-8)
+        if self.groep >= 7:
+            # Fout met tekens bij negatieve getallen
+            # Bijvoorbeeld: -5 + 3 = 8 (had -2 moeten zijn)
+            if (num1 < 0 or num2 < 0) and fout_num == abs(num1) + abs(num2):
+                return f"Let op de mintekens! Als een getal negatief is, moet je daar rekening mee houden. Het goede antwoord is {correct}, niet {fout_num}."
+
+            # Fout bij dubbel minteken: -5 - (-3) moet -2 zijn, niet -8
+            if bewerking == 'aftrekken' and num2 < 0 and fout_num == num1 - abs(num2):
+                return f"Vergeet niet: min en min wordt plus! Je hebt {num1} − ({num2}), dus twee mintekens naast elkaar. Dat wordt: {num1} + {abs(num2)} = {correct}."
+
+            # Teken vergeten bij vermenigvuldigen/delen
+            if bewerking == 'vermenigvuldigen' and fout_num == abs(correct):
+                return f"Je hebt de berekening goed gedaan, maar het teken vergeten! Negatief × positief = negatief (of andersom). Het antwoord is {correct}, niet {fout_num}."
+
         # ALGEMENE REKENFOUTEN
         if verschil <= 10:
             return f"Je antwoord {fout_num} is bijna goed, maar niet helemaal. Reken de som nog een keer rustig na: {num1} {teken} {num2} = {correct}."
 
-        # GROTE AFWIJKING
-        return f"Het antwoord {fout_num} klopt niet. Kijk nog eens goed naar de som en reken het stap voor stap uit. Het goede antwoord is {correct}."
+        # GROTE AFWIJKING - maar wel bemoedigend!
+        if verschil < 100:
+            return f"Het antwoord {fout_num} klopt niet. Kijk nog eens goed naar de som en reken het stap voor stap uit. Het goede antwoord is {correct}."
+        else:
+            return f"Het antwoord {fout_num} is helaas niet juist. Het goede antwoord is {correct}. Reken de som nog eens rustig na!"
 
     def bouw_volledige_uitleg(self, analyse: Dict[str, Any], foute_antwoorden: List[str]) -> str:
         """
