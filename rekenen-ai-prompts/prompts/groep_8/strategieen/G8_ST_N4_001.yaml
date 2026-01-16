@@ -1,0 +1,93 @@
+PROMPT_ID: G8_ST_N4_001
+
+METADATA:
+  domein: "Getal & Bewerkingen"
+  groep: 8
+  inhoudslijn: "Strategieën"
+  niveau: "N4"
+  referentie: "1S-kenmerken - Optimaliseren en generaliseren"
+
+OPDRACHT: |
+  Genereer opgaven waarbij leerlingen strategieën optimaliseren, vergelijken en generaliseren.
+
+CONTEXT: |
+  Leerlingen redeneren op meta-niveau over strategiekeuzes en efficiëntie.
+
+SPECIFICATIES:
+  denkniveau:
+    - "meerdere oplossingsroutes vergelijken op efficiëntie"
+    - "generaliseren: wanneer welke strategie"
+    - "fouten in strategietoepassing analyseren"
+    - "optimale strategie beargumenteren"
+
+OPGAVETYPEN:
+  - "Bereken 17% van € 450 op drie manieren. Welke is meest efficiënt? Waarom?"
+  - "Wanneer is het handiger om procent via breuk te berekenen dan via decimaal?"
+  - "Deze strategie is fout: (-3)² = -9. Leg uit wat er mis gaat."
+  - "Leg uit: waarom werkt (a+b)² = a² + 2ab + b²? Geef een voorbeeld."
+
+VOORBEELDEN:
+  - vraag: |
+      Bereken 35% van 240 op drie manieren:
+      1) ...
+      2) ...
+      3) ...
+      Welke is het efficiëntst? Waarom?
+    routes:
+      - "Route 1: 10% = 24; 30% = 72; 5% = 12; totaal 84"
+      - "Route 2: 0,35 × 240 = 84"
+      - "Route 3: 240 : 100 × 35 = 84"
+    analyse: "Route 2 is snelst: 1 bewerking. Route 1 heeft meeste stappen."
+    verwacht: "Argumentatie op basis van aantal stappen/complexiteit"
+
+  - vraag: |
+      Tim zegt: "20% + 30% korting = 50% korting"
+      Klopt dit? Leg uit met een voorbeeld.
+    fout: "Nee, 20% eerst, dan 30% van restant"
+    voorbeeld: "€ 100: eerst -20 = 80; dan -24 = 56. Totaal 44% korting, niet 50%"
+    verwacht: "Inzicht dat percentages niet zomaar optellen"
+
+BEOORDELINGSCRITERIA:
+  basis:
+    - "Meerdere strategieën correct uitgevoerd"
+    - "Keuze gemaakt"
+  goed:
+    - "+ Vergelijking op efficiency"
+    - "+ Argumentatie gegeven"
+  uitstekend:
+    - "+ Generaliseert naar andere situaties"
+    - "+ Meerdere criteria gebruikt (snelheid, foutgevoeligheid, inzicht)"
+
+MOEILIJKHEIDSGRADERING:
+  makkelijk: "vergelijk twee strategieën met hulp"
+  gemiddeld: "zelf strategieën bedenken en vergelijken"
+  moeilijk: "generaliseren, abstracte redenering"
+
+FOUTTYPES:
+  - "Geen vergelijking gemaakt"
+  - "Argumentatie ontbreekt"
+  - "Fout niet herkend of niet verklaard"
+
+FEEDBACK_TRIGGERS:
+  als_geen_vergelijking: "Vergelijk op: aantal stappen, kans op fout, snelheid"
+  als_geen_argumentatie: "Leg uit: waarom is deze beter?"
+  als_fout_niet_gezien: "Test met een concreet getal"
+
+OUTPUT_FORMAT:
+  type: "JSON"
+  structuur: |
+    {
+      "vraag_id": "G8_ST_N4_[nummer]",
+      "vraag_tekst": "string",
+      "type_opdracht": "vergelijk|analyseer|generaliseer|optimaliseer",
+      "verwachte_strategieën": ["array"],
+      "verwachte_redenering": "string",
+      "beoordelingscriteria": {
+        "basis": "string",
+        "goed": "string",
+        "uitstekend": "string"
+      },
+      "niveau": "N4"
+    }
+
+GENEREER: 15

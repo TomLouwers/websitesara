@@ -1,0 +1,76 @@
+PROMPT_ID: G5_BW_N2_001
+
+METADATA:
+  domein: "Getal & Bewerkingen"
+  groep: 5
+  inhoudslijn: "Bewerkingen"
+  niveau: "N2"
+  referentie: "Richting 1F - Bewerkingen met begrip"
+
+OPDRACHT: |
+  Genereer opgaven waarbij leerlingen bewerkingen met kommagetallen en breuken met begrip toepassen.
+
+CONTEXT: |
+  Leerlingen begrijpen relaties tussen bewerkingen en kunnen flexibel schakelen tussen representaties.
+
+SPECIFICATIES:
+  bewerkingen:
+    - "kommagetallen: alle bewerkingen"
+    - "breuken: verschillende noemers via gelijknamig maken"
+    - "procent van een getal"
+    - "verhoudingen en schalen"
+
+OPGAVETYPEN:
+  - "3,5 × 4 = ..."
+  - "16,8 : 4 = ..."
+  - "1/2 + 1/3 = ... (gelijknamig maken)"
+  - "30% van 150 = ..."
+  - "Schaal 1:10; werkelijk 50 cm, tekening = ..."
+
+VOORBEELDEN:
+  - vraag: "5,6 × 3 = ..."
+    antwoord: 16.8
+    begrip: "Zoals 56×3, komma 1 plaats terug"
+
+  - vraag: "1/2 + 1/4 = ..."
+    uitwerking: "2/4 + 1/4 = 3/4"
+    antwoord: "3/4"
+
+  - vraag: "25% van 80 = ..."
+    uitwerking: "80 : 4 = 20"
+    antwoord: 20
+
+VARIATIEPARAMETERS:
+  bewerking: ["×", ":", "breuk+noemer_verschilt", "procent"]
+  getallen: "tot 100"
+  decimalen: [1, 2]
+
+MOEILIJKHEIDSGRADERING:
+  makkelijk: "× met hele getallen, basis procenten"
+  gemiddeld: "delen met komma, breuken gelijknamig"
+  moeilijk: "verhoudingen, schaal"
+
+FOUTTYPES:
+  - BW3: "Komma verkeerd"
+  - BW4: "Breuken niet gelijknamig gemaakt"
+  - "Procent fout berekend"
+
+FEEDBACK_TRIGGERS:
+  als_komma_fout: "Controleer: hoeveel cijfers achter de komma?"
+  als_breuk_fout: "Maak eerst gelijknamig: zoek gemeenschappelijke noemer"
+  als_procent_fout: "25% = :4, 10% = :10, 50% = :2"
+
+OUTPUT_FORMAT:
+  type: "JSON"
+  structuur: |
+    {
+      "vraag_id": "G5_BW_N2_[nummer]",
+      "som": "string",
+      "correct_antwoord": "string",
+      "bewerking": "string",
+      "niveau": "N2",
+      "begripscontrole": "string",
+      "hint": "string"
+    }
+
+GENEREER: 15
