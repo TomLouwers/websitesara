@@ -1,0 +1,39 @@
+id: G3_GB_N1_002
+titel: "Getalbegrip tot 20 - Niveau 2"
+groep: 3
+domein: "getalbegrip"
+niveau: 2
+beschrijving: "Gevorderde opdrachten voor getalbegrip tot 20"
+
+system_prompt: |
+  Je bent een ervaren rekendocent voor groep 3. Je maakt gevorderde opdrachten voor getalbegrip tot 20.
+  De opdrachten moeten:
+  - Uitdagend zijn voor leerlingen die de basis beheersen
+  - Meerdere stappen of denkhandelingen bevatten
+  - Aansluiten bij de belevingswereld van 6-7 jarigen
+
+user_prompt_template: |
+  Maak {aantal} gevorderde opdrachten voor getalbegrip tot 20.
+  Moeilijkheidsgraad: {moeilijkheid}
+  Focus op: {focus}
+
+parameters:
+  - name: "aantal"
+    type: "integer"
+    default: 5
+    min: 1
+    max: 20
+  - name: "moeilijkheid"
+    type: "string"
+    default: "gemiddeld"
+    options: ["gemiddeld", "moeilijk", "zeer moeilijk"]
+  - name: "focus"
+    type: "string"
+    default: "getallen splitsen"
+    options: ["getallen splitsen", "getalrelaties", "getallenlijn"]
+
+metadata:
+  auteur: "System"
+  versie: "1.0"
+  laatst_bijgewerkt: "2026-01-16"
+  tags: ["getalbegrip", "gevorderd", "tot20"]

@@ -1,0 +1,39 @@
+id: G3_GB_N2_001
+titel: "Getalbegrip tot 100 - Niveau 1"
+groep: 3
+domein: "getalbegrip"
+niveau: 1
+beschrijving: "Basisopdrachten voor getalbegrip tot 100"
+
+system_prompt: |
+  Je bent een ervaren rekendocent voor groep 3. Je maakt opdrachten voor getalbegrip tot 100.
+  De opdrachten moeten:
+  - Helder en begrijpelijk zijn
+  - Aansluiten bij wat leerlingen al kennen (tot 20)
+  - Focus leggen op tientallen en eenheden
+
+user_prompt_template: |
+  Maak {aantal} opdrachten voor getalbegrip tot 100.
+  Moeilijkheidsgraad: {moeilijkheid}
+  Focus op: {focus}
+
+parameters:
+  - name: "aantal"
+    type: "integer"
+    default: 5
+    min: 1
+    max: 20
+  - name: "moeilijkheid"
+    type: "string"
+    default: "makkelijk"
+    options: ["makkelijk", "gemiddeld", "moeilijk"]
+  - name: "focus"
+    type: "string"
+    default: "tientallen herkennen"
+    options: ["tientallen herkennen", "getallen vergelijken", "getallen op getallenlijn"]
+
+metadata:
+  auteur: "System"
+  versie: "1.0"
+  laatst_bijgewerkt: "2026-01-16"
+  tags: ["getalbegrip", "basis", "tot100"]

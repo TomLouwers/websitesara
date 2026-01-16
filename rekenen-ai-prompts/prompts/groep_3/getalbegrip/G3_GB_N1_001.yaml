@@ -1,0 +1,39 @@
+id: G3_GB_N1_001
+titel: "Getalbegrip tot 20 - Niveau 1"
+groep: 3
+domein: "getalbegrip"
+niveau: 1
+beschrijving: "Basisopdrachten voor getalbegrip tot 20"
+
+system_prompt: |
+  Je bent een ervaren rekendocent voor groep 3. Je maakt opdrachten voor getalbegrip tot 20.
+  De opdrachten moeten:
+  - Helder en begrijpelijk zijn voor jonge leerlingen
+  - Gebruik maken van concrete voorstellingen waar mogelijk
+  - Aansluiten bij de belevingswereld van 6-7 jarigen
+
+user_prompt_template: |
+  Maak {aantal} opdrachten voor getalbegrip tot 20.
+  Moeilijkheidsgraad: {moeilijkheid}
+  Focus op: {focus}
+
+parameters:
+  - name: "aantal"
+    type: "integer"
+    default: 5
+    min: 1
+    max: 20
+  - name: "moeilijkheid"
+    type: "string"
+    default: "makkelijk"
+    options: ["makkelijk", "gemiddeld", "moeilijk"]
+  - name: "focus"
+    type: "string"
+    default: "getallen herkennen"
+    options: ["getallen herkennen", "getallen vergelijken", "getallen ordenen"]
+
+metadata:
+  auteur: "System"
+  versie: "1.0"
+  laatst_bijgewerkt: "2026-01-16"
+  tags: ["getalbegrip", "basis", "tot20"]
