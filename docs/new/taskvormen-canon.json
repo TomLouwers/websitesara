@@ -1,0 +1,110 @@
+{
+  "version": "1.0.0",
+  "source": "SLO-inhoudslijnen-rekenen-po",
+  "description": "Bindende canon van toegestane taskvormen per niveau (n1–n4) voor rekenen-wiskunde in het primair onderwijs.",
+  "levels": {
+    "n1": {
+      "label": "Kennismaken / reproductie",
+      "cognitiveFocus": [
+        "herkennen",
+        "nadoen",
+        "uitvoeren zonder keuzes"
+      ],
+      "allowedTaskForms": [
+        "numeric_simple",
+        "select_single",
+        "order_numbers",
+        "fill_single_step"
+      ],
+      "disallowedTaskForms": [
+        "error_analysis",
+        "strategy_comparison",
+        "explain_why",
+        "multi_step_problem",
+        "reflection"
+      ]
+    },
+    "n2": {
+      "label": "Toepassen (standaardniveau PO)",
+      "cognitiveFocus": [
+        "uitvoeren bekende strategie",
+        "standaardcontext",
+        "gerichte aandacht zonder verklaring"
+      ],
+      "allowedTaskForms": [
+        "numeric_simple",
+        "context_single_step",
+        "guided_focus"
+      ],
+      "disallowedTaskForms": [
+        "error_analysis",
+        "strategy_comparison",
+        "multiple_strategies",
+        "explain_why",
+        "reflection",
+        "meta_cognitive_choice"
+      ],
+      "notes": [
+        "Leerling hoeft niet te verklaren, alleen uit te voeren.",
+        "Fouten mogen gemaakt worden, maar niet zelfstandig gediagnosticeerd."
+      ]
+    },
+    "n3": {
+      "label": "Verdiepen / vergelijken",
+      "cognitiveFocus": [
+        "vergelijken",
+        "keuzes maken",
+        "inzicht expliciteren"
+      ],
+      "allowedTaskForms": [
+        "numeric_simple",
+        "context_single_step",
+        "error_analysis",
+        "strategy_comparison",
+        "explain_what_happens"
+      ],
+      "disallowedTaskForms": [
+        "formal_proof",
+        "abstract_generalization"
+      ],
+      "notes": [
+        "In PO beperkt toepassen.",
+        "Meestal vanaf groep 5, selectief."
+      ]
+    },
+    "n4": {
+      "label": "Transfer / redeneren",
+      "cognitiveFocus": [
+        "toepassen in nieuwe context",
+        "redeneren",
+        "combineren van domeinen"
+      ],
+      "allowedTaskForms": [
+        "multi_step_context_problem",
+        "data_interpretation",
+        "reasoned_explanation"
+      ],
+      "disallowedTaskForms": [
+        "formal_proof",
+        "algebraic_notation",
+        "vo_terminology"
+      ],
+      "notes": [
+        "Alleen eindbouw (groep 7–8).",
+        "Spaarzaam inzetten."
+      ]
+    }
+  },
+  "taskFormDefinitions": {
+    "numeric_simple": "Leerling berekent een uitkomst door één bekende bewerking uit te voeren.",
+    "context_single_step": "Eén context, één bewerking, directe vertaling naar een som.",
+    "guided_focus": "Numeric of contextopgave met een gerichte aandachtszin (bijv. 'Let op de eenheden').",
+    "error_analysis": "Leerling analyseert een gemaakte fout en benoemt wat er misging.",
+    "strategy_comparison": "Leerling vergelijkt twee oplossingsstrategieën.",
+    "explain_what_happens": "Leerling beschrijft wat er gebeurt tijdens een rekenstap.",
+    "multi_step_context_problem": "Contextopgave met meerdere stappen of beslissingen.",
+    "data_interpretation": "Lezen en interpreteren van tabellen, grafieken of gegevens.",
+    "reasoned_explanation": "Leerling onderbouwt een oplossing met redenering."
+  },
+  "hardRule": "De moeilijkheid van een oefening wordt bepaald door de taskvorm, niet door de som."
+}
