@@ -1,98 +1,212 @@
 [
   {
     "schemaVersion": "1.0.0",
-    "id": "VH5-BV-001",
+    "id": "VH5-BV-T01",
     "domain": "verhoudingen",
     "grade": 5,
     "level": "n2",
     "topic": "breuken-vergelijken",
-    "interaction": {
-      "type": "numeric"
-    },
-    "prompt": "Twee kinderen delen dezelfde pizza.\n\nDe eerste eet 1/2 van de pizza.\nDe tweede eet 1/4 van de pizza.\n\nWie eet het meeste?",
-    "solution": {
-      "value": "1/2"
-    },
+    "interaction": { "type": "mcq" },
+    "prompt": "Welke is groter?\n\n1/2 of 1/4",
+    "options": ["1/2", "1/4"],
+    "solution": { "index": 0 },
     "feedback": {
-      "correct": "Goed. De helft is groter dan een kwart van dezelfde pizza.",
-      "incorrect": "Denk aan het hele stuk pizza. In hoeveel gelijke delen is het verdeeld?"
+      "correct": "Goed. Een halve is groter dan een kwart van hetzelfde geheel.",
+      "incorrect": "Denk aan het hele geheel: in hoeveel gelijke delen is het verdeeld?"
     },
     "metadata": {
       "strategy": "betekenis van breuken vergelijken",
-      "taskForm": "context_single_step",
+      "taskForm": "select_single",
       "misconceptKeys": ["VH-FRACT-COMP-03"]
     }
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH5-BV-002",
+    "id": "VH5-BV-T02",
     "domain": "verhoudingen",
     "grade": 5,
     "level": "n2",
     "topic": "breuken-vergelijken",
-    "interaction": {
-      "type": "numeric"
-    },
-    "prompt": "Lisa eet 3/4 van een taart.\nTom eet 1/2 van dezelfde taart.\n\nWie eet het meeste?",
-    "solution": {
-      "value": "3/4"
-    },
+    "interaction": { "type": "mcq" },
+    "prompt": "Welke is groter?\n\n3/4 of 1/2",
+    "options": ["3/4", "1/2"],
+    "solution": { "index": 0 },
     "feedback": {
-      "correct": "Goed. Drie van de vier gelijke stukken is meer dan de helft.",
-      "incorrect": "Vergelijk de delen van dezelfde taart. Hoeveel stukken zijn het?"
+      "correct": "Goed. Drie van de vier gelijke delen is meer dan de helft.",
+      "incorrect": "Vergelijk beide breuken als deel van hetzelfde geheel."
     },
     "metadata": {
       "strategy": "delen van hetzelfde geheel vergelijken",
-      "taskForm": "context_single_step",
+      "taskForm": "select_single",
       "misconceptKeys": ["VH-FRACT-COMP-01"]
     }
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH5-BV-003",
+    "id": "VH5-BV-T03",
     "domain": "verhoudingen",
     "grade": 5,
     "level": "n2",
     "topic": "breuken-vergelijken",
-    "interaction": {
-      "type": "numeric"
-    },
-    "prompt": "Welke is groter?\n\n1/4 of 1/2\n\nLet op: beide breuken horen bij hetzelfde geheel.",
-    "solution": {
-      "value": "1/2"
-    },
+    "interaction": { "type": "mcq" },
+    "prompt": "Welke is groter?\n\n1/4 of 1/2",
+    "options": ["1/4", "1/2"],
+    "solution": { "index": 1 },
     "feedback": {
       "correct": "Goed. Een halve is groter dan een kwart.",
-      "incorrect": "Denk aan het hele geheel. In hoeveel stukken is het verdeeld?"
+      "incorrect": "Kijk naar het hele geheel: bij welke breuk zijn de stukken groter?"
     },
     "metadata": {
-      "strategy": "visueel vergelijken van breuken",
-      "taskForm": "guided_focus",
+      "strategy": "betekenis van breuken vergelijken",
+      "taskForm": "select_single",
       "misconceptKeys": ["VH-FRACT-COMP-03"]
     }
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH5-BV-004",
+    "id": "VH5-BV-T04",
     "domain": "verhoudingen",
     "grade": 5,
     "level": "n2",
     "topic": "breuken-vergelijken",
-    "interaction": {
-      "type": "numeric"
-    },
-    "prompt": "Sam eet 2/4 van een reep chocolade.\n\nHoeveel van de reep is dat?\n\nGeef je antwoord als breuk.",
-    "solution": {
-      "value": "1/2"
-    },
+    "interaction": { "type": "mcq" },
+    "prompt": "Welke is groter?\n\n2/4 of 1/2",
+    "options": ["2/4", "1/2"],
+    "solution": { "index": 0 },
     "feedback": {
-      "correct": "Goed. Twee van de vier stukken is hetzelfde als de helft.",
-      "incorrect": "Bekijk of 2 van de 4 gelijke stukken samen de helft vormen."
+      "correct": "Goed. Twee van de vier gelijke delen is hetzelfde als de helft.",
+      "incorrect": "Bekijk of 2 van de 4 stukken samen precies de helft vormen."
     },
     "metadata": {
       "strategy": "gelijke delen herkennen",
-      "taskForm": "context_single_step",
+      "taskForm": "select_single",
       "misconceptKeys": ["VH-FRACT-COMP-02"]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BV-T05",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-vergelijken",
+    "interaction": { "type": "mcq" },
+    "prompt": "Welke is groter?\n\n3/4 of 2/4",
+    "options": ["3/4", "2/4"],
+    "solution": { "index": 0 },
+    "feedback": {
+      "correct": "Goed. Drie van de vier gelijke delen is meer dan twee van de vier.",
+      "incorrect": "Vergelijk hoeveel gelijke delen worden genomen."
+    },
+    "metadata": {
+      "strategy": "delen van hetzelfde geheel vergelijken",
+      "taskForm": "select_single",
+      "misconceptKeys": ["VH-FRACT-COMP-01"]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BV-T06",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-vergelijken",
+    "interaction": { "type": "mcq" },
+    "prompt": "Welke is groter?\n\n1/2 of 2/4",
+    "options": ["1/2", "2/4"],
+    "solution": { "index": 0 },
+    "feedback": {
+      "correct": "Goed. Dit is even groot: 1/2 en 2/4 zijn hetzelfde deel.",
+      "incorrect": "Denk aan hetzelfde geheel. Kunnen 2 van de 4 stukken samen een halve zijn?"
+    },
+    "metadata": {
+      "strategy": "equivalentie herkennen",
+      "taskForm": "select_single",
+      "misconceptKeys": ["VH-FRACT-COMP-02"]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BV-T07",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-vergelijken",
+    "interaction": { "type": "mcq" },
+    "prompt": "Welke is groter?\n\n1/4 of 3/4",
+    "options": ["1/4", "3/4"],
+    "solution": { "index": 1 },
+    "feedback": {
+      "correct": "Goed. Drie van de vier gelijke delen is meer dan één van de vier.",
+      "incorrect": "Vergelijk hoeveel stukken van hetzelfde geheel worden genomen."
+    },
+    "metadata": {
+      "strategy": "delen van hetzelfde geheel vergelijken",
+      "taskForm": "select_single",
+      "misconceptKeys": ["VH-FRACT-COMP-01"]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BV-T08",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-vergelijken",
+    "interaction": { "type": "mcq" },
+    "prompt": "Welke is groter?\n\n1/2 of 3/4",
+    "options": ["1/2", "3/4"],
+    "solution": { "index": 1 },
+    "feedback": {
+      "correct": "Goed. 3/4 is groter dan 1/2.",
+      "incorrect": "Denk aan een hele taart. Welke breuk pakt meer stukken?"
+    },
+    "metadata": {
+      "strategy": "betekenis van breuken vergelijken",
+      "taskForm": "select_single",
+      "misconceptKeys": ["VH-FRACT-COMP-03"]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BV-T09",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-vergelijken",
+    "interaction": { "type": "mcq" },
+    "prompt": "Welke is groter?\n\n2/4 of 1/4",
+    "options": ["2/4", "1/4"],
+    "solution": { "index": 0 },
+    "feedback": {
+      "correct": "Goed. Twee van de vier gelijke delen is meer dan één van de vier.",
+      "incorrect": "Vergelijk hoeveel gelijke delen worden genomen."
+    },
+    "metadata": {
+      "strategy": "gelijke delen vergelijken",
+      "taskForm": "select_single",
+      "misconceptKeys": ["VH-FRACT-COMP-01"]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BV-T10",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-vergelijken",
+    "interaction": { "type": "mcq" },
+    "prompt": "Welke is groter?\n\n1/2 of 3/4",
+    "options": ["1/2", "3/4"],
+    "solution": { "index": 1 },
+    "feedback": {
+      "correct": "Goed. 3/4 is groter dan 1/2.",
+      "incorrect": "Vergelijk de delen van hetzelfde geheel. Welke pakt meer stukken?"
+    },
+    "metadata": {
+      "strategy": "delen van hetzelfde geheel vergelijken",
+      "taskForm": "select_single",
+      "misconceptKeys": ["VH-FRACT-COMP-03"]
     }
   }
 ]

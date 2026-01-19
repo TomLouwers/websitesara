@@ -17,11 +17,18 @@
         "fill_single_step"
       ],
       "disallowedTaskForms": [
+        "context_single_step",
+        "guided_focus",
         "error_analysis",
         "strategy_comparison",
-        "explain_why",
-        "multi_step_problem",
-        "reflection"
+        "explain_what_happens",
+        "multi_step_context_problem",
+        "data_interpretation",
+        "reasoned_explanation"
+      ],
+      "notes": [
+        "Geen contextopgaven; focus op herkennen en routinehandelingen.",
+        "Geen reflectie- of analysetaken."
       ]
     },
     "n2": {
@@ -34,15 +41,16 @@
       "allowedTaskForms": [
         "numeric_simple",
         "context_single_step",
-        "guided_focus"
+        "guided_focus",
+        "select_single"
       ],
       "disallowedTaskForms": [
         "error_analysis",
         "strategy_comparison",
-        "multiple_strategies",
-        "explain_why",
-        "reflection",
-        "meta_cognitive_choice"
+        "explain_what_happens",
+        "multi_step_context_problem",
+        "data_interpretation",
+        "reasoned_explanation"
       ],
       "notes": [
         "Leerling hoeft niet te verklaren, alleen uit te voeren.",
@@ -64,12 +72,12 @@
         "explain_what_happens"
       ],
       "disallowedTaskForms": [
-        "formal_proof",
-        "abstract_generalization"
+        "data_interpretation",
+        "reasoned_explanation"
       ],
       "notes": [
-        "In PO beperkt toepassen.",
-        "Meestal vanaf groep 5, selectief."
+        "In PO beperkt toepassen, selectief.",
+        "Meestal vanaf groep 5, afhankelijk van onderwerp en groep."
       ]
     },
     "n4": {
@@ -85,13 +93,13 @@
         "reasoned_explanation"
       ],
       "disallowedTaskForms": [
-        "formal_proof",
-        "algebraic_notation",
-        "vo_terminology"
+        "error_analysis",
+        "strategy_comparison",
+        "explain_what_happens"
       ],
       "notes": [
-        "Alleen eindbouw (groep 7–8).",
-        "Spaarzaam inzetten."
+        "Alleen eindbouw (groep 7–8) en spaarzaam inzetten.",
+        "Geen formele bewijzen of VO-terminologie; blijf in leerlingtaal."
       ]
     }
   },
@@ -99,6 +107,9 @@
     "numeric_simple": "Leerling berekent een uitkomst door één bekende bewerking uit te voeren.",
     "context_single_step": "Eén context, één bewerking, directe vertaling naar een som.",
     "guided_focus": "Numeric of contextopgave met een gerichte aandachtszin (bijv. 'Let op de eenheden').",
+    "select_single": "Meerkeuze: leerling kiest één correct antwoord. In n2 alleen voor eenvoudige keuzevragen (geen foutanalyse, geen 'waarom/leg uit').",
+    "fill_single_step": "Invuloefening met één duidelijke stap (bijv. ontbrekend getal in een som of getallenrij).",
+    "order_numbers": "Leerling zet getallen in de juiste volgorde (bijv. van klein naar groot).",
     "error_analysis": "Leerling analyseert een gemaakte fout en benoemt wat er misging.",
     "strategy_comparison": "Leerling vergelijkt twee oplossingsstrategieën.",
     "explain_what_happens": "Leerling beschrijft wat er gebeurt tijdens een rekenstap.",

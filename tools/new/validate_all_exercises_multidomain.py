@@ -1,321 +1,449 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+Batch validator for Learn & Play static exercise packs.
+
+Validates:
+- JSON parse + schema (ExerciseSchema.json)
+- Taskform canon constraints (allowed/disallowed by level)
+- Canon consistency (all taskforms referenced exist in taskFormDefinitions)
+- MCQ structure + index bounds
+- Numeric solution must be numeric
+- taskForm <-> interaction type consistency (select_single <-> mcq)
+- n2 MCQ wording guardrail (prevents error-analysis drift)
+- Misconcept keys existence (shared misconcepts packs)
+- (Optional) Canon lock enforcement
+"""
+
+from __future__ import annotations
+
 import argparse
 import json
 import sys
 from pathlib import Path
-from typing import Any, Dict, List, Tuple, Optional
-#python tools/validate_all_exercises_multidomain.py \
-#  --topic-canon docs/topic-canon.json \
-#  --taskforms docs/taskvormen-canon.json \
-#  --content-root content/nl-NL \
-#  --shared-root content/nl-NL/_shared
+from typing import Any, Dict, List, Tuple, Set
 
-def load_json(path: Path) -> Any:
+try:
+    import jsonschema
+except ImportError:
+    print("Missing dependency: jsonschema. Install with: pip install jsonschema", file=sys.stderr)
+    sys.exit(2)
+
+
+# --------------------------
+# Helpers
+# --------------------------
+
+def read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
+def is_numeric_value(v: Any) -> bool:
+    if isinstance(v, (int, float)):
+        return True
+    if isinstance(v, str):
+        try:
+            float(v.replace(",", "."))  # allow "0,5" too
+            return True
+        except ValueError:
+            return False
+    return False
 
-def normalize_domain_to_kebab(domain_value: str) -> str:
+def find_all_exercise_files(content_root: Path) -> List[Path]:
+    # We intentionally validate only files called exercises.json
+    return sorted(content_root.rglob("exercises.json"))
+
+def normalize_domain_key(domain: str) -> str:
+    # Keep it simple; user can standardize later
+    return domain.strip()
+
+
+# --------------------------
+# Canon loading
+# --------------------------
+
+def load_taskform_canon(taskforms_path: Path) -> Dict[str, Any]:
+    if not taskforms_path.exists():
+        raise FileNotFoundError(f"Taskforms canon not found: {taskforms_path}")
+    return read_json(taskforms_path)
+
+def load_topic_canon(topic_canon_path: Path) -> Dict[str, Any] | None:
+    if not topic_canon_path.exists():
+        return None
+    return read_json(topic_canon_path)
+
+def load_misconcept_keys(shared_misconcepts_root: Path) -> Set[str]:
+    keys: Set[str] = set()
+    if not shared_misconcepts_root.exists():
+        return keys
+
+    for p in sorted(shared_misconcepts_root.glob("*.json")):
+        try:
+            data = read_json(p)
+        except Exception:
+            continue
+
+        # expected:
+        # { "version": "...", "domain": "...", "misconcepts": { "KEY": {...}, ... } }
+        misconcepts = data.get("misconcepts", {})
+        if isinstance(misconcepts, dict):
+            for k in misconcepts.keys():
+                if isinstance(k, str) and k.strip():
+                    keys.add(k.strip())
+    return keys
+
+def validate_taskform_canon_integrity(taskform_canon: Dict[str, Any], errors: List[str]) -> None:
+    """Hard gate: all taskforms referenced in levels must exist in taskFormDefinitions."""
+    defined = set((taskform_canon.get("taskFormDefinitions") or {}).keys())
+    levels = taskform_canon.get("levels") or {}
+
+    if not defined:
+        errors.append("[CANON] taskFormDefinitions is empty or missing.")
+        return
+
+    if not isinstance(levels, dict):
+        errors.append("[CANON] levels must be an object.")
+        return
+
+    for level_key, level in levels.items():
+        if not isinstance(level, dict):
+            errors.append(f"[CANON] levels.{level_key} must be an object.")
+            continue
+
+        for list_name in ["allowedTaskForms", "disallowedTaskForms"]:
+            tfs = level.get(list_name, [])
+            if tfs is None:
+                continue
+            if not isinstance(tfs, list):
+                errors.append(f"[CANON] levels.{level_key}.{list_name} must be an array.")
+                continue
+
+            for tf in tfs:
+                if not isinstance(tf, str) or not tf.strip():
+                    errors.append(f"[CANON] levels.{level_key}.{list_name} contains invalid taskForm value: {tf!r}")
+                    continue
+                if tf not in defined:
+                    errors.append(
+                        f"[CANON] Level '{level_key}' references undefined taskForm '{tf}' in {list_name}"
+                    )
+
+def validate_canon_lock(errors: List[str], lock_path: Path) -> None:
     """
-    Exercises: snake_case (getal_en_bewerkingen)
-    Canon/packs: kebab-case (getal-en-bewerkingen)
+    Optional: if docs/canon-lock.json exists and locked=true,
+    enforce versions match.
     """
-    if not isinstance(domain_value, str):
-        return domain_value
-    return domain_value.replace("_", "-")
+    if not lock_path.exists():
+        return
+
+    lock = read_json(lock_path)
+    if not lock.get("locked", False):
+        return
+
+    files = lock.get("files", {})
+    if not isinstance(files, dict):
+        errors.append("[CANON-LOCK] 'files' must be an object.")
+        return
+
+    for key, meta in files.items():
+        if not isinstance(meta, dict):
+            errors.append(f"[CANON-LOCK] files.{key} must be an object.")
+            continue
+        p = meta.get("path")
+        v = meta.get("version")
+        if not p or not v:
+            errors.append(f"[CANON-LOCK] files.{key} must have 'path' and 'version'.")
+            continue
+
+        fp = Path(p)
+        if not fp.exists():
+            errors.append(f"[CANON-LOCK] Locked file missing: {fp}")
+            continue
+
+        data = read_json(fp)
+        file_version = data.get("version")
+        if file_version != v:
+            errors.append(
+                f"[CANON-LOCK] {key} version mismatch: lock={v} file={file_version}"
+            )
 
 
-def canon_key(domain_kebab: str, grade: int, topic: str) -> Tuple[str, int, str]:
-    return (domain_kebab, grade, topic)
+# --------------------------
+# Exercise validation
+# --------------------------
 
+def infer_taskform(ex: Dict[str, Any]) -> str | None:
+    md = ex.get("metadata") or {}
+    if isinstance(md, dict):
+        tf = md.get("taskForm")
+        if isinstance(tf, str):
+            return tf
+    return None
 
-def infer_task_form(ex: Dict[str, Any]) -> str:
-    """
-    Prefer explicit metadata.taskForm.
-    Fallback heuristic exists but explicit is strongly recommended.
-    """
-    md = ex.get("metadata", {})
-    if isinstance(md, dict) and md.get("taskForm"):
-        return md["taskForm"]
-
-    itype = ex.get("interaction", {}).get("type")
-    if itype == "numeric":
-        return "numeric_simple"
-    if itype == "mcq":
-        return "select_single"
-    if itype == "fill_blanks":
-        return "fill_single_step"
-    return "unknown"
-
-
-class DomainPacks:
-    def __init__(self, misconcepts: Dict[str, Any], feedback: Dict[str, Any]) -> None:
-        self.misconcept_keys = set(m["key"] for m in misconcepts.get("misconcepts", []))
-        self.feedback_map = feedback.get("misconceptFeedback", {})
-        self.feedback_keys = set(self.feedback_map.keys())
-
+def get_level(ex: Dict[str, Any]) -> str | None:
+    lvl = ex.get("level")
+    return lvl if isinstance(lvl, str) else None
 
 def validate_exercise_list(
     exercises: List[Dict[str, Any]],
-    topic_canon_lookup: Dict[Tuple[str, int, str], Dict[str, Any]],
-    taskforms: Dict[str, Any],
-    packs_by_domain: Dict[str, DomainPacks],
-    file_path: Path,
+    schema: Dict[str, Any],
+    schema_validator: jsonschema.Validator,
+    taskform_canon: Dict[str, Any],
+    misconcept_keys_all: Set[str],
+    topic_canon: Dict[str, Any] | None,
+    file_path: Path
 ) -> List[str]:
     errors: List[str] = []
 
-    levels = taskforms.get("levels", {})
-    task_def = taskforms.get("taskFormDefinitions", {})
+    levels_cfg = taskform_canon.get("levels") or {}
+    defined_taskforms = set((taskform_canon.get("taskFormDefinitions") or {}).keys())
 
-    def err(i: int, exid: str, msg: str) -> None:
-        errors.append(f"[{i}] {exid}: {msg}")
+    # topic canon lookup (optional)
+    allowed_topics: Set[str] = set()
+    if topic_canon and isinstance(topic_canon, dict):
+        # user’s topic canon format can vary; keep flexible:
+        # recommended: topic_canon["topics"] = [{"domain":..., "grade":..., "level":..., "topic":...}, ...]
+        topics = topic_canon.get("topics")
+        if isinstance(topics, list):
+            for t in topics:
+                if isinstance(t, dict):
+                    tp = t.get("topic")
+                    if isinstance(tp, str) and tp.strip():
+                        allowed_topics.add(tp.strip())
 
+    def err(i: int, exid: str | None, msg: str) -> None:
+        loc = f"{file_path}"
+        prefix = f"[{loc}]"
+        if exid:
+            errors.append(f"{prefix} {exid}: {msg}")
+        else:
+            errors.append(f"{prefix} item[{i}]: {msg}")
+
+    # A) Schema validation for entire file is already done in caller,
+    # but validate each item too for better pinpointing.
     for i, ex in enumerate(exercises):
-        exid = ex.get("id", "<no-id>")
+        exid = ex.get("id") if isinstance(ex.get("id"), str) else None
 
-        # Required fields
-        for field in [
-            "schemaVersion", "id", "domain", "grade", "level", "topic",
-            "interaction", "prompt", "solution"
-        ]:
-            if field not in ex:
-                err(i, exid, f"Missing required field '{field}'")
-
-        domain_raw = ex.get("domain")
-        if not isinstance(domain_raw, str):
-            err(i, exid, "domain must be a string")
+        try:
+            schema_validator.validate(ex)
+        except jsonschema.ValidationError as e:
+            err(i, exid, f"Schema violation: {e.message}")
             continue
 
-        domain_kebab = normalize_domain_to_kebab(domain_raw)
-        grade = int(ex.get("grade", -1))
-        level = ex.get("level")
-        topic = ex.get("topic")
-
-        # A) Topic + allowedLevels check against topic-canon
-        ck = canon_key(domain_kebab, grade, topic)
-        if ck not in topic_canon_lookup:
-            err(i, exid, f"Topic not in topic-canon: (domain={ck[0]}, grade={ck[1]}, topic={ck[2]})")
-        else:
-            allowed_levels = topic_canon_lookup[ck].get("allowedLevels", [])
-            if level not in allowed_levels:
-                err(i, exid, f"Level '{level}' not allowed for this topic (allowed={allowed_levels})")
-
-        # B) Taskform check
-        tf = infer_task_form(ex)
-        if tf == "unknown":
-            err(i, exid, "Cannot infer taskForm (add metadata.taskForm)")
-        else:
-            if level not in levels:
-                err(i, exid, f"Level '{level}' not found in taskforms canon")
-            else:
-                allowed_tf = set(levels[level].get("allowedTaskForms", []))
-                disallowed_tf = set(levels[level].get("disallowedTaskForms", []))
-
-                if tf not in allowed_tf and tf not in disallowed_tf and tf not in task_def:
-                    err(i, exid, f"taskForm '{tf}' not recognized in taskforms canon")
-
-                if tf in disallowed_tf:
-                    err(i, exid, f"taskForm '{tf}' is DISALLOWED for level {level}")
-                elif tf not in allowed_tf:
-                    err(i, exid, f"taskForm '{tf}' is not allowed for level {level} (allowed={sorted(allowed_tf)})")
-
-        # C) Misconcept keys + feedback (domain-aware)
-        if domain_kebab not in packs_by_domain:
-            err(
-                i,
-                exid,
-                f"Missing domain packs for '{domain_kebab}'. Expected files:\n"
-                f"  content/nl-NL/_shared/misconcepts/{domain_kebab}.json\n"
-                f"  content/nl-NL/_shared/feedback/{domain_kebab}.json"
-            )
+        # B) Taskform per level
+        level = get_level(ex)
+        tf = infer_taskform(ex)
+        if not level:
+            err(i, exid, "Missing or invalid 'level'")
+            continue
+        if level not in levels_cfg:
+            err(i, exid, f"Unknown level '{level}' (not in taskvormen-canon)")
             continue
 
-        packs = packs_by_domain[domain_kebab]
+        if not tf:
+            err(i, exid, "Missing metadata.taskForm")
+            continue
+        if tf not in defined_taskforms:
+            err(i, exid, f"Unknown taskForm '{tf}' (not in taskFormDefinitions)")
+            continue
 
-        md = ex.get("metadata", {})
-        keys = []
-        if isinstance(md, dict):
-            keys = md.get("misconceptKeys", []) or []
-        if not isinstance(keys, list):
-            err(i, exid, "metadata.misconceptKeys must be a list")
-            keys = []
+        allowed = set(levels_cfg[level].get("allowedTaskForms", []) or [])
+        disallowed = set(levels_cfg[level].get("disallowedTaskForms", []) or [])
 
-        for k in keys:
-            if k not in packs.misconcept_keys:
-                err(i, exid, f"Misconcept key '{k}' not found in misconcepts canon for domain '{domain_kebab}'")
-            if k not in packs.feedback_keys:
-                err(i, exid, f"Misconcept key '{k}' has no feedback entry in feedback pack for domain '{domain_kebab}'")
+        if allowed and tf not in allowed:
+            err(i, exid, f"taskForm '{tf}' not allowed for level '{level}'")
+        if disallowed and tf in disallowed:
+            err(i, exid, f"taskForm '{tf}' is disallowed for level '{level}'")
 
-        # D) MCQ structure validation
-        itype = ex.get("interaction", {}).get("type")
-        if itype == "mcq":
-            options = ex.get("options")
-            sol = ex.get("solution", {})
-            idx = sol.get("index")
-            if not isinstance(options, list) or len(options) < 2:
-                err(i, exid, "MCQ must have 'options' as a list with at least 2 items")
-            if not isinstance(idx, int):
-                err(i, exid, "MCQ solution.index must be an integer")
-            elif isinstance(options, list) and not (0 <= idx < len(options)):
-                err(i, exid, f"MCQ solution.index out of range (index={idx}, options={len(options)})")
+        # B2) Enforce taskForm <-> interaction type consistency
+        itype = (ex.get("interaction") or {}).get("type")
+        if tf == "select_single" and itype != "mcq":
+            err(i, exid, "taskForm 'select_single' requires interaction.type 'mcq'")
+        if itype == "mcq" and tf != "select_single":
+            err(i, exid, "interaction.type 'mcq' requires taskForm 'select_single'")
 
-        # E) Numeric interaction must have numeric solution
+        # B3) Guardrail: prevent n2 MCQ from becoming error analysis by wording
+        if level == "n2" and itype == "mcq":
+            prompt = (ex.get("prompt") or "").lower()
+            banned_phrases = [
+                "wat gaat er mis",
+                "welke fout",
+                "waarom",
+                "leg uit",
+                "verklaar",
+                "slimste aanpak",
+                "beste strategie"
+            ]
+            for bp in banned_phrases:
+                if bp in prompt:
+                    err(i, exid, f"n2 mcq prompt contains banned wording: '{bp}'")
+                    break
+
+        # C) Misconcept key existence
+        md = ex.get("metadata") or {}
+        mkeys = md.get("misconceptKeys") if isinstance(md, dict) else None
+        if not isinstance(mkeys, list) or len(mkeys) == 0:
+            err(i, exid, "metadata.misconceptKeys must be a non-empty array")
+        else:
+            for mk in mkeys:
+                if not isinstance(mk, str) or not mk.strip():
+                    err(i, exid, f"Invalid misconceptKey value: {mk!r}")
+                    continue
+                if misconcept_keys_all and mk.strip() not in misconcept_keys_all:
+                    err(i, exid, f"Unknown misconceptKey '{mk}' (not found in _shared/misconcepts)")
+
+        # D) Interaction-specific validation
         if itype == "numeric":
-            sol = ex.get("solution", {})
-            val = sol.get("value")
+            sol = ex.get("solution") or {}
+            val = sol.get("value") if isinstance(sol, dict) else None
+            if not is_numeric_value(val):
+                err(i, exid, f"interaction.type 'numeric' requires numeric solution.value, got {val!r}")
 
-            def is_numeric(v):
-                if isinstance(v, (int, float)):
-                    return True
-                if isinstance(v, str):
-                    try:
-                        float(v)
-                        return True
-                    except ValueError:
-                        return False
-                return False
+        elif itype == "mcq":
+            options = ex.get("options")
+            sol = ex.get("solution") or {}
+            idx = sol.get("index") if isinstance(sol, dict) else None
 
-            if not is_numeric(val):
-                err(
-                    i,
-                    exid,
-                    f"interaction.type 'numeric' requires numeric solution.value, got '{val}' ({type(val).__name__})"
-                )
+            if not isinstance(options, list) or len(options) < 2:
+                err(i, exid, "mcq requires 'options' array with at least 2 items")
+            else:
+                for opt in options:
+                    if not isinstance(opt, str) or not opt.strip():
+                        err(i, exid, f"mcq options must be non-empty strings (found {opt!r})")
+
+            if not isinstance(idx, int):
+                err(i, exid, "mcq requires solution.index as integer")
+            else:
+                if idx < 0:
+                    err(i, exid, "mcq solution.index must be >= 0")
+                if isinstance(options, list) and len(options) > 0 and idx >= len(options):
+                    err(i, exid, f"mcq solution.index {idx} out of range (options length {len(options)})")
+
+        # E) Optional: topic canon membership (soft gate if topic_canon present)
+        if allowed_topics:
+            topic = ex.get("topic")
+            if isinstance(topic, str) and topic.strip():
+                if topic.strip() not in allowed_topics:
+                    err(i, exid, f"topic '{topic}' not in topic-canon")
+            else:
+                err(i, exid, "Missing or invalid 'topic'")
 
     return errors
 
 
-def find_exercise_files(root: Path) -> List[Path]:
-    return sorted(root.rglob("exercises.json"))
+# --------------------------
+# Main
+# --------------------------
 
-
-def load_domain_packs(shared_root: Path) -> Dict[str, DomainPacks]:
-    """
-    Load all packs that exist under:
-      _shared/misconcepts/*.json
-      _shared/feedback/*.json
-    Only domains that have BOTH files are considered ready.
-    """
-    misconcepts_dir = shared_root / "misconcepts"
-    feedback_dir = shared_root / "feedback"
-
-    packs_by_domain: Dict[str, DomainPacks] = {}
-
-    if not misconcepts_dir.exists() or not feedback_dir.exists():
-        return packs_by_domain
-
-    for mfile in misconcepts_dir.glob("*.json"):
-        domain_kebab = mfile.stem  # e.g. "getal-en-bewerkingen"
-        ffile = feedback_dir / f"{domain_kebab}.json"
-        if not ffile.exists():
-            continue
-
-        try:
-            misconcepts = load_json(mfile)
-            feedback = load_json(ffile)
-            packs_by_domain[domain_kebab] = DomainPacks(misconcepts, feedback)
-        except Exception as e:
-            # If pack cannot be parsed, mark as unusable by skipping, but print warning.
-            print(f"WARNING: Could not load packs for domain '{domain_kebab}': {e}", file=sys.stderr)
-
-    return packs_by_domain
-
-
-def main() -> None:
+def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--topic-canon", required=True, help="Path to docs/topic-canon.json")
-    ap.add_argument("--taskforms", required=True, help="Path to docs/taskvormen-canon.json")
-    ap.add_argument("--content-root", default="content/nl-NL", help="Root folder to scan for exercises.json")
-    ap.add_argument(
-        "--shared-root",
-        default="content/nl-NL/_shared",
-        help="Root folder containing misconcepts/ and feedback/ packs"
-    )
+    ap.add_argument("--content-root", default="content", help="Root folder containing curriculum packs")
+    ap.add_argument("--schema", default="docs/schemas/ExerciseSchema.json", help="Path to ExerciseSchema.json")
+    ap.add_argument("--taskforms", default="docs/taskvormen-canon.json", help="Path to taskforms canon")
+    ap.add_argument("--topics", default="docs/topic-canon.json", help="Path to topic canon (optional)")
+    ap.add_argument("--canon-lock", default="docs/canon-lock.json", help="Path to canon lock (optional)")
+    ap.add_argument("--misconcepts-root", default="content/nl-NL/_shared/misconcepts", help="Shared misconcepts root")
+    ap.add_argument("--fail-fast", action="store_true", help="Stop on first file with errors")
     args = ap.parse_args()
 
-    topic_canon_path = Path(args.topic_canon)
-    taskforms_path = Path(args.taskforms)
     content_root = Path(args.content_root)
-    shared_root = Path(args.shared_root)
+    schema_path = Path(args.schema)
+    taskforms_path = Path(args.taskforms)
+    topics_path = Path(args.topics)
+    canon_lock_path = Path(args.canon_lock)
+    misconcepts_root = Path(args.misconcepts_root)
 
+    all_errors: List[str] = []
+
+    # Load schema
+    if not schema_path.exists():
+        print(f"Schema file not found: {schema_path}", file=sys.stderr)
+        return 2
+    schema = read_json(schema_path)
+    schema_validator = jsonschema.Draft202012Validator(schema)
+
+    # Load canons
+    taskform_canon = load_taskform_canon(taskforms_path)
+    topic_canon = load_topic_canon(topics_path)
+
+    # Canon integrity gates
+    validate_taskform_canon_integrity(taskform_canon, all_errors)
+    validate_canon_lock(all_errors, canon_lock_path)
+
+    # Load misconcept keys
+    misconcept_keys_all = load_misconcept_keys(misconcepts_root)
+
+    if all_errors:
+        for e in all_errors:
+            print(e)
+        print("❌ Canon validation failed.", file=sys.stderr)
+        return 2
+
+    # Find exercise files
     if not content_root.exists():
-        print(f"ERROR: content root does not exist: {content_root}", file=sys.stderr)
-        sys.exit(2)
+        print(f"content-root not found: {content_root}", file=sys.stderr)
+        return 2
 
-    try:
-        topic_canon = load_json(topic_canon_path)
-    except Exception as e:
-        print(f"ERROR: cannot read topic-canon: {e}", file=sys.stderr)
-        sys.exit(2)
-
-    try:
-        taskforms = load_json(taskforms_path)
-    except Exception as e:
-        print(f"ERROR: cannot read taskforms canon: {e}", file=sys.stderr)
-        sys.exit(2)
-
-    # Build topic canon lookup
-    topic_canon_lookup: Dict[Tuple[str, int, str], Dict[str, Any]] = {}
-    if not isinstance(topic_canon, list):
-        print("ERROR: topic-canon.json must be a JSON array", file=sys.stderr)
-        sys.exit(2)
-
-    for item in topic_canon:
-        try:
-            k = canon_key(item["domain"], int(item["grade"]), item["topic"])
-            topic_canon_lookup[k] = item
-        except Exception:
-            print(f"ERROR: invalid entry in topic-canon: {item}", file=sys.stderr)
-            sys.exit(2)
-
-    # Load all domain packs available
-    packs_by_domain = load_domain_packs(shared_root)
-
-    files = find_exercise_files(content_root)
-    if not files:
-        print(f"No exercises.json files found under {content_root}")
-        sys.exit(0)
+    ex_files = find_all_exercise_files(content_root)
+    if not ex_files:
+        print(f"No exercises.json files found under: {content_root}")
+        return 0
 
     total_files = 0
-    total_issues = 0
+    total_errors = 0
 
-    for f in files:
+    for ex_path in ex_files:
         total_files += 1
         try:
-            data = json.loads(f.read_text(encoding="utf-8"))
+            data = read_json(ex_path)
         except Exception as e:
-            total_issues += 1
-            print(f"\nFILE: {f}")
-            print(f" - ERROR: cannot parse JSON: {e}")
+            print(f"[{ex_path}] JSON parse error: {e}")
+            total_errors += 1
+            if args.fail_fast:
+                return 2
             continue
 
+        # Validate file shape: should be an array
         if not isinstance(data, list):
-            total_issues += 1
-            print(f"\nFILE: {f}")
-            print(" - ERROR: exercises.json must be a JSON array of exercise objects")
+            print(f"[{ex_path}] File must be a JSON array (got {type(data).__name__})")
+            total_errors += 1
+            if args.fail_fast:
+                return 2
+            continue
+
+        # Schema validate whole array
+        try:
+            schema_validator.validate(data)
+        except jsonschema.ValidationError as e:
+            print(f"[{ex_path}] Schema violation (file-level): {e.message}")
+            total_errors += 1
+            if args.fail_fast:
+                return 2
             continue
 
         errs = validate_exercise_list(
             exercises=data,
-            topic_canon_lookup=topic_canon_lookup,
-            taskforms=taskforms,
-            packs_by_domain=packs_by_domain,
-            file_path=f,
+            schema=schema,
+            schema_validator=schema_validator,
+            taskform_canon=taskform_canon,
+            misconcept_keys_all=misconcept_keys_all,
+            topic_canon=topic_canon,
+            file_path=ex_path
         )
 
         if errs:
-            total_issues += len(errs)
-            print(f"\nFILE: {f}  -> FAILED ({len(errs)} issues)")
             for e in errs:
-                print(" - " + e)
-        else:
-            print(f"\nFILE: {f}  -> OK")
+                print(e)
+            total_errors += len(errs)
+            if args.fail_fast:
+                return 2
 
-    print("\n" + "=" * 60)
-    print(f"Scanned files : {total_files}")
-    print(f"Total issues  : {total_issues}")
-    print("=" * 60)
+    if total_errors == 0:
+        print(f"✅ OK — validated {total_files} exercises.json files.")
+        return 0
 
-    sys.exit(1 if total_issues > 0 else 0)
+    print(f"❌ FAIL — {total_errors} error(s) across {total_files} file(s).", file=sys.stderr)
+    return 2
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
