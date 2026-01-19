@@ -1,0 +1,98 @@
+[
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BV-001",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-vergelijken",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Twee kinderen delen dezelfde pizza.\n\nDe eerste eet 1/2 van de pizza.\nDe tweede eet 1/4 van de pizza.\n\nWie eet het meeste?",
+    "solution": {
+      "value": "1/2"
+    },
+    "feedback": {
+      "correct": "Goed. De helft is groter dan een kwart van dezelfde pizza.",
+      "incorrect": "Denk aan het hele stuk pizza. In hoeveel gelijke delen is het verdeeld?"
+    },
+    "metadata": {
+      "strategy": "betekenis van breuken vergelijken",
+      "taskForm": "context_single_step",
+      "misconceptKeys": ["VH-FRACT-COMP-03"]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BV-002",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-vergelijken",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Lisa eet 3/4 van een taart.\nTom eet 1/2 van dezelfde taart.\n\nWie eet het meeste?",
+    "solution": {
+      "value": "3/4"
+    },
+    "feedback": {
+      "correct": "Goed. Drie van de vier gelijke stukken is meer dan de helft.",
+      "incorrect": "Vergelijk de delen van dezelfde taart. Hoeveel stukken zijn het?"
+    },
+    "metadata": {
+      "strategy": "delen van hetzelfde geheel vergelijken",
+      "taskForm": "context_single_step",
+      "misconceptKeys": ["VH-FRACT-COMP-01"]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BV-003",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-vergelijken",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Welke is groter?\n\n1/4 of 1/2\n\nLet op: beide breuken horen bij hetzelfde geheel.",
+    "solution": {
+      "value": "1/2"
+    },
+    "feedback": {
+      "correct": "Goed. Een halve is groter dan een kwart.",
+      "incorrect": "Denk aan het hele geheel. In hoeveel stukken is het verdeeld?"
+    },
+    "metadata": {
+      "strategy": "visueel vergelijken van breuken",
+      "taskForm": "guided_focus",
+      "misconceptKeys": ["VH-FRACT-COMP-03"]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BV-004",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-vergelijken",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Sam eet 2/4 van een reep chocolade.\n\nHoeveel van de reep is dat?\n\nGeef je antwoord als breuk.",
+    "solution": {
+      "value": "1/2"
+    },
+    "feedback": {
+      "correct": "Goed. Twee van de vier stukken is hetzelfde als de helft.",
+      "incorrect": "Bekijk of 2 van de 4 gelijke stukken samen de helft vormen."
+    },
+    "metadata": {
+      "strategy": "gelijke delen herkennen",
+      "taskForm": "context_single_step",
+      "misconceptKeys": ["VH-FRACT-COMP-02"]
+    }
+  }
+]

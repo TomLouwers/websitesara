@@ -157,6 +157,29 @@ def validate_exercise_list(
             elif isinstance(options, list) and not (0 <= idx < len(options)):
                 err(i, exid, f"MCQ solution.index out of range (index={idx}, options={len(options)})")
 
+        # E) Numeric interaction must have numeric solution
+        if itype == "numeric":
+            sol = ex.get("solution", {})
+            val = sol.get("value")
+
+            def is_numeric(v):
+                if isinstance(v, (int, float)):
+                    return True
+                if isinstance(v, str):
+                    try:
+                        float(v)
+                        return True
+                    except ValueError:
+                        return False
+                return False
+
+            if not is_numeric(val):
+                err(
+                    i,
+                    exid,
+                    f"interaction.type 'numeric' requires numeric solution.value, got '{val}' ({type(val).__name__})"
+                )
+
     return errors
 
 

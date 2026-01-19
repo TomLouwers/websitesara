@@ -1,0 +1,98 @@
+[
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-001",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Er zijn 12 appels. De helft daarvan wordt verdeeld.\n\nHoeveel appels zijn dat?",
+    "solution": {
+      "value": 6
+    },
+    "feedback": {
+      "correct": "Goed. De helft betekent dat je 12 eerlijk in twee gelijke delen verdeelt.",
+      "incorrect": "De helft betekent verdelen in twee gelijke delen. Probeer 12 eerst te splitsen."
+    },
+    "metadata": {
+      "strategy": "deel van een hoeveelheid bepalen",
+      "taskForm": "context_single_step",
+      "misconceptKeys": ["VH-FRACT-PART-01"]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-002",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "In een doos zitten 20 knikkers.\n\nEen kwart daarvan is rood.\n\nHoeveel rode knikkers zijn er?",
+    "solution": {
+      "value": 5
+    },
+    "feedback": {
+      "correct": "Goed. Een kwart betekent dat je de hoeveelheid in vier gelijke delen verdeelt.",
+      "incorrect": "Een kwart is één van vier gelijke delen. Deel 20 eerst door 4."
+    },
+    "metadata": {
+      "strategy": "breuk als deel van hoeveelheid",
+      "taskForm": "context_single_step",
+      "misconceptKeys": ["VH-FRACT-PART-02"]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-003",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Van de 16 stoelen in de klas is 3/4 bezet.\n\nHoeveel stoelen zijn bezet?\n\nLet op: bepaal eerst wat 1/4 is.",
+    "solution": {
+      "value": 12
+    },
+    "feedback": {
+      "correct": "Goed. Eerst 1/4 bepalen en daarna vermenigvuldigen werkt hier goed.",
+      "incorrect": "Bepaal eerst hoeveel 1/4 van 16 is. Gebruik dat om verder te rekenen."
+    },
+    "metadata": {
+      "strategy": "stapsgewijs breuk bepalen",
+      "taskForm": "guided_focus",
+      "misconceptKeys": ["VH-FRACT-PART-03"]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-004",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Er zijn 20 koekjes.\n\nDe helft daarvan wordt opgegeten.\n\nHoeveel koekjes zijn dat?",
+    "solution": {
+      "value": 10
+    },
+    "feedback": {
+      "correct": "Goed. De helft betekent verdelen in twee gelijke delen.",
+      "incorrect": "De helft is één van twee gelijke delen. Probeer 20 eerst te splitsen."
+    },
+    "metadata": {
+      "strategy": "breuk als deel van hoeveelheid",
+      "taskForm": "context_single_step",
+      "misconceptKeys": ["VH-FRACT-PART-01"]
+    }
+  }
+]
