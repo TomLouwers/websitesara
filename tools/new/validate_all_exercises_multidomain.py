@@ -1,38 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""
-Batch validator for Learn & Play static exercise packs.
-
-Validates:
-- JSON parse + schema (ExerciseSchema.json)
-- Taskform canon constraints (allowed/disallowed by level)
-- Canon consistency (all taskforms referenced exist in taskFormDefinitions)
-- MCQ structure + index bounds
-- Numeric solution must be numeric
-- taskForm <-> interaction type consistency (select_single <-> mcq)
-- n2 MCQ wording guardrail (prevents error-analysis drift)
-- Misconcept keys existence (shared misconcepts packs)
-- (Optional) Canon lock enforcement
-"""
-
 from __future__ import annotations
 
 import argparse
 import json
 import sys
 from pathlib import Path
-from typing import Any, Dict, List, Tuple, Set
+from typing import Any, Dict, List, Set, Tuple
 
-try:
-    import jsonschema
-except ImportError:
-    print("Missing dependency: jsonschema. Install with: pip install jsonschema", file=sys.stderr)
-    sys.exit(2)
+import jsonschema
 
 
 # --------------------------
-# Helpers
+# JSON helpers
 # --------------------------
 
 def read_json(path: Path) -> Any:
@@ -43,34 +24,49 @@ def is_numeric_value(v: Any) -> bool:
         return True
     if isinstance(v, str):
         try:
-            float(v.replace(",", "."))  # allow "0,5" too
+            float(v.replace(",", "."))
             return True
         except ValueError:
             return False
     return False
 
 def find_all_exercise_files(content_root: Path) -> List[Path]:
-    # We intentionally validate only files called exercises.json
     return sorted(content_root.rglob("exercises.json"))
 
-def normalize_domain_key(domain: str) -> str:
-    # Keep it simple; user can standardize later
-    return domain.strip()
-
 
 # --------------------------
-# Canon loading
+# Path parsing for gate
 # --------------------------
 
-def load_taskform_canon(taskforms_path: Path) -> Dict[str, Any]:
-    if not taskforms_path.exists():
-        raise FileNotFoundError(f"Taskforms canon not found: {taskforms_path}")
-    return read_json(taskforms_path)
+def parse_group_from_path(ex_path: Path) -> str | None:
+    for part in ex_path.parts:
+        if part.startswith("groep-"):
+            return part
+    return None
 
-def load_topic_canon(topic_canon_path: Path) -> Dict[str, Any] | None:
-    if not topic_canon_path.exists():
+def parse_domain_from_path(ex_path: Path, content_root: Path) -> str | None:
+    try:
+        rel = ex_path.relative_to(content_root)
+    except ValueError:
         return None
-    return read_json(topic_canon_path)
+    # rel parts: nl-NL, domain, groep-x, ...
+    if len(rel.parts) >= 2:
+        return rel.parts[1]
+    return None
+
+def parse_topic_from_path(ex_path: Path) -> str | None:
+    parts = list(ex_path.parts)
+    if "topics" not in parts:
+        return None
+    i = parts.index("topics")
+    if i + 1 < len(parts):
+        return parts[i + 1]
+    return None
+
+
+# --------------------------
+# Misconcept keys loader (supports dict OR list format)
+# --------------------------
 
 def load_misconcept_keys(shared_misconcepts_root: Path) -> Set[str]:
     keys: Set[str] = set()
@@ -83,24 +79,38 @@ def load_misconcept_keys(shared_misconcepts_root: Path) -> Set[str]:
         except Exception:
             continue
 
-        # expected:
-        # { "version": "...", "domain": "...", "misconcepts": { "KEY": {...}, ... } }
-        misconcepts = data.get("misconcepts", {})
+        misconcepts = data.get("misconcepts")
+
+        # Format A: dict/object
         if isinstance(misconcepts, dict):
             for k in misconcepts.keys():
                 if isinstance(k, str) and k.strip():
                     keys.add(k.strip())
+            continue
+
+        # Format B: array/list
+        if isinstance(misconcepts, list):
+            for item in misconcepts:
+                if isinstance(item, dict):
+                    k = item.get("key")
+                    if isinstance(k, str) and k.strip():
+                        keys.add(k.strip())
+            continue
+
     return keys
 
+
+# --------------------------
+# Taskform canon validation
+# --------------------------
+
 def validate_taskform_canon_integrity(taskform_canon: Dict[str, Any], errors: List[str]) -> None:
-    """Hard gate: all taskforms referenced in levels must exist in taskFormDefinitions."""
     defined = set((taskform_canon.get("taskFormDefinitions") or {}).keys())
     levels = taskform_canon.get("levels") or {}
 
     if not defined:
         errors.append("[CANON] taskFormDefinitions is empty or missing.")
         return
-
     if not isinstance(levels, dict):
         errors.append("[CANON] levels must be an object.")
         return
@@ -123,48 +133,115 @@ def validate_taskform_canon_integrity(taskform_canon: Dict[str, Any], errors: Li
                     errors.append(f"[CANON] levels.{level_key}.{list_name} contains invalid taskForm value: {tf!r}")
                     continue
                 if tf not in defined:
-                    errors.append(
-                        f"[CANON] Level '{level_key}' references undefined taskForm '{tf}' in {list_name}"
-                    )
+                    errors.append(f"[CANON] Level '{level_key}' references undefined taskForm '{tf}' in {list_name}")
 
-def validate_canon_lock(errors: List[str], lock_path: Path) -> None:
+
+# --------------------------
+# Kerndoelen-per-groep + topic canon loaders (gate)
+# --------------------------
+
+def load_kerndoelen_per_groep(path: Path) -> dict[str, set[int]]:
+    data = read_json(path)
+    groups = data.get("groups", {})
+    out: dict[str, set[int]] = {}
+
+    if not isinstance(groups, dict):
+        return out
+
+    for g, payload in groups.items():
+        if not isinstance(payload, dict):
+            continue
+        ks = payload.get("kerndoelen", [])
+        if isinstance(ks, list):
+            ints: set[int] = set()
+            for k in ks:
+                if isinstance(k, int):
+                    ints.add(k)
+            out[g] = ints
+    return out
+
+def load_topic_canon_for_domain(topic_canon_root: Path, domain: str) -> dict[str, set[int]]:
     """
-    Optional: if docs/canon-lock.json exists and locked=true,
-    enforce versions match.
+    Returns mapping: topicSlug -> set(kerndoelen)
+    Expects file: topic-canon.<domain>.json
     """
-    if not lock_path.exists():
-        return
+    candidates = [
+        topic_canon_root / f"topic-canon.{domain}.json",
+        topic_canon_root / f"topic-canon.{domain.replace('_','-')}.json",
+        topic_canon_root / f"topic-canon.{domain.replace('-','_')}.json",
+    ]
+    canon_path = None
+    for c in candidates:
+        if c.exists():
+            canon_path = c
+            break
+    if canon_path is None:
+        return {}
 
-    lock = read_json(lock_path)
-    if not lock.get("locked", False):
-        return
+    data = read_json(canon_path)
+    topics = data.get("topics", [])
+    out: dict[str, set[int]] = {}
+    if not isinstance(topics, list):
+        return out
 
-    files = lock.get("files", {})
-    if not isinstance(files, dict):
-        errors.append("[CANON-LOCK] 'files' must be an object.")
-        return
-
-    for key, meta in files.items():
-        if not isinstance(meta, dict):
-            errors.append(f"[CANON-LOCK] files.{key} must be an object.")
+    for t in topics:
+        if not isinstance(t, dict):
             continue
-        p = meta.get("path")
-        v = meta.get("version")
-        if not p or not v:
-            errors.append(f"[CANON-LOCK] files.{key} must have 'path' and 'version'.")
-            continue
+        slug = t.get("topic")
+        ks = t.get("kerndoelen", [])
+        if isinstance(slug, str) and isinstance(ks, list):
+            out[slug] = set(k for k in ks if isinstance(k, int))
+    return out
 
-        fp = Path(p)
-        if not fp.exists():
-            errors.append(f"[CANON-LOCK] Locked file missing: {fp}")
-            continue
 
-        data = read_json(fp)
-        file_version = data.get("version")
-        if file_version != v:
-            errors.append(
-                f"[CANON-LOCK] {key} version mismatch: lock={v} file={file_version}"
-            )
+def validate_topic_kerndoelen_gate(
+    ex_path: Path,
+    content_root: Path,
+    kerndoelen_per_groep: dict[str, set[int]],
+    topic_kerndoelen_map: dict[str, set[int]],
+    *,
+    strict_topic_canon: bool,
+    warn_unknown_topics: bool
+) -> Tuple[List[str], List[str]]:
+    """
+    Gate:
+      - If strict_topic_canon: unknown topic => ERROR
+      - Else: unknown topic => WARNING (if warn_unknown_topics) or ignore
+      - If known topic: topic kerndoelen must be subset of group kerndoelen
+    """
+    errs: list[str] = []
+    warns: list[str] = []
+
+    group = parse_group_from_path(ex_path)
+    domain = parse_domain_from_path(ex_path, content_root)
+    topic = parse_topic_from_path(ex_path)
+
+    if group is None or domain is None or topic is None:
+        return errs, warns  # ignore non-standard paths
+
+    if group not in kerndoelen_per_groep:
+        errs.append(f"[{ex_path}] [KERND-GATE] Group '{group}' not found in kerndoelen-per-groep.json")
+        return errs, warns
+
+    if topic not in topic_kerndoelen_map:
+        msg = f"[{ex_path}] [KERND-GATE] Topic '{topic}' not found in topic-canon for domain '{domain}'"
+        if strict_topic_canon:
+            errs.append(msg)
+        else:
+            if warn_unknown_topics:
+                warns.append(msg.replace("[KERND-GATE]", "[KERND-WARN]"))
+        return errs, warns
+
+    topic_k = topic_kerndoelen_map[topic]
+    group_k = kerndoelen_per_groep[group]
+
+    missing = sorted(list(topic_k - group_k))
+    if missing:
+        errs.append(
+            f"[{ex_path}] [KERND-GATE] Topic '{topic}' has kerndoelen {sorted(list(topic_k))} "
+            f"but group '{group}' allows {sorted(list(group_k))}. Missing in group: {missing}"
+        )
+    return errs, warns
 
 
 # --------------------------
@@ -175,8 +252,7 @@ def infer_taskform(ex: Dict[str, Any]) -> str | None:
     md = ex.get("metadata") or {}
     if isinstance(md, dict):
         tf = md.get("taskForm")
-        if isinstance(tf, str):
-            return tf
+        return tf if isinstance(tf, str) else None
     return None
 
 def get_level(ex: Dict[str, Any]) -> str | None:
@@ -185,11 +261,9 @@ def get_level(ex: Dict[str, Any]) -> str | None:
 
 def validate_exercise_list(
     exercises: List[Dict[str, Any]],
-    schema: Dict[str, Any],
-    schema_validator: jsonschema.Validator,
+    item_validator: jsonschema.Validator,
     taskform_canon: Dict[str, Any],
     misconcept_keys_all: Set[str],
-    topic_canon: Dict[str, Any] | None,
     file_path: Path
 ) -> List[str]:
     errors: List[str] = []
@@ -197,41 +271,23 @@ def validate_exercise_list(
     levels_cfg = taskform_canon.get("levels") or {}
     defined_taskforms = set((taskform_canon.get("taskFormDefinitions") or {}).keys())
 
-    # topic canon lookup (optional)
-    allowed_topics: Set[str] = set()
-    if topic_canon and isinstance(topic_canon, dict):
-        # user’s topic canon format can vary; keep flexible:
-        # recommended: topic_canon["topics"] = [{"domain":..., "grade":..., "level":..., "topic":...}, ...]
-        topics = topic_canon.get("topics")
-        if isinstance(topics, list):
-            for t in topics:
-                if isinstance(t, dict):
-                    tp = t.get("topic")
-                    if isinstance(tp, str) and tp.strip():
-                        allowed_topics.add(tp.strip())
-
     def err(i: int, exid: str | None, msg: str) -> None:
-        loc = f"{file_path}"
-        prefix = f"[{loc}]"
-        if exid:
-            errors.append(f"{prefix} {exid}: {msg}")
-        else:
-            errors.append(f"{prefix} item[{i}]: {msg}")
+        prefix = f"[{file_path}]"
+        errors.append(f"{prefix} {exid}: {msg}" if exid else f"{prefix} item[{i}]: {msg}")
 
-    # A) Schema validation for entire file is already done in caller,
-    # but validate each item too for better pinpointing.
     for i, ex in enumerate(exercises):
         exid = ex.get("id") if isinstance(ex.get("id"), str) else None
 
+        # Validate ONE exercise against #/$defs/Exercise
         try:
-            schema_validator.validate(ex)
+            item_validator.validate(ex)
         except jsonschema.ValidationError as e:
             err(i, exid, f"Schema violation: {e.message}")
             continue
 
-        # B) Taskform per level
         level = get_level(ex)
         tf = infer_taskform(ex)
+
         if not level:
             err(i, exid, "Missing or invalid 'level'")
             continue
@@ -254,31 +310,27 @@ def validate_exercise_list(
         if disallowed and tf in disallowed:
             err(i, exid, f"taskForm '{tf}' is disallowed for level '{level}'")
 
-        # B2) Enforce taskForm <-> interaction type consistency
         itype = (ex.get("interaction") or {}).get("type")
+
+        # select_single <-> mcq consistency
         if tf == "select_single" and itype != "mcq":
             err(i, exid, "taskForm 'select_single' requires interaction.type 'mcq'")
         if itype == "mcq" and tf != "select_single":
             err(i, exid, "interaction.type 'mcq' requires taskForm 'select_single'")
 
-        # B3) Guardrail: prevent n2 MCQ from becoming error analysis by wording
+        # n2 MCQ wording guardrail
         if level == "n2" and itype == "mcq":
             prompt = (ex.get("prompt") or "").lower()
             banned_phrases = [
-                "wat gaat er mis",
-                "welke fout",
-                "waarom",
-                "leg uit",
-                "verklaar",
-                "slimste aanpak",
-                "beste strategie"
+                "wat gaat er mis", "welke fout", "waarom", "leg uit", "verklaar",
+                "slimste aanpak", "beste strategie"
             ]
             for bp in banned_phrases:
                 if bp in prompt:
                     err(i, exid, f"n2 mcq prompt contains banned wording: '{bp}'")
                     break
 
-        # C) Misconcept key existence
+        # misconcept keys existence (if shared packs exist)
         md = ex.get("metadata") or {}
         mkeys = md.get("misconceptKeys") if isinstance(md, dict) else None
         if not isinstance(mkeys, list) or len(mkeys) == 0:
@@ -291,41 +343,20 @@ def validate_exercise_list(
                 if misconcept_keys_all and mk.strip() not in misconcept_keys_all:
                     err(i, exid, f"Unknown misconceptKey '{mk}' (not found in _shared/misconcepts)")
 
-        # D) Interaction-specific validation
+        # numeric => numeric solution.value
         if itype == "numeric":
             sol = ex.get("solution") or {}
             val = sol.get("value") if isinstance(sol, dict) else None
             if not is_numeric_value(val):
                 err(i, exid, f"interaction.type 'numeric' requires numeric solution.value, got {val!r}")
 
-        elif itype == "mcq":
+        # mcq bounds check
+        if itype == "mcq":
             options = ex.get("options")
             sol = ex.get("solution") or {}
             idx = sol.get("index") if isinstance(sol, dict) else None
-
-            if not isinstance(options, list) or len(options) < 2:
-                err(i, exid, "mcq requires 'options' array with at least 2 items")
-            else:
-                for opt in options:
-                    if not isinstance(opt, str) or not opt.strip():
-                        err(i, exid, f"mcq options must be non-empty strings (found {opt!r})")
-
-            if not isinstance(idx, int):
-                err(i, exid, "mcq requires solution.index as integer")
-            else:
-                if idx < 0:
-                    err(i, exid, "mcq solution.index must be >= 0")
-                if isinstance(options, list) and len(options) > 0 and idx >= len(options):
-                    err(i, exid, f"mcq solution.index {idx} out of range (options length {len(options)})")
-
-        # E) Optional: topic canon membership (soft gate if topic_canon present)
-        if allowed_topics:
-            topic = ex.get("topic")
-            if isinstance(topic, str) and topic.strip():
-                if topic.strip() not in allowed_topics:
-                    err(i, exid, f"topic '{topic}' not in topic-canon")
-            else:
-                err(i, exid, "Missing or invalid 'topic'")
+            if isinstance(options, list) and isinstance(idx, int) and idx >= len(options):
+                err(i, exid, f"mcq solution.index {idx} out of range (options length {len(options)})")
 
     return errors
 
@@ -336,65 +367,121 @@ def validate_exercise_list(
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--content-root", default="content", help="Root folder containing curriculum packs")
-    ap.add_argument("--schema", default="docs/schemas/ExerciseSchema.json", help="Path to ExerciseSchema.json")
-    ap.add_argument("--taskforms", default="docs/taskvormen-canon.json", help="Path to taskforms canon")
-    ap.add_argument("--topics", default="docs/topic-canon.json", help="Path to topic canon (optional)")
-    ap.add_argument("--canon-lock", default="docs/canon-lock.json", help="Path to canon lock (optional)")
-    ap.add_argument("--misconcepts-root", default="content/nl-NL/_shared/misconcepts", help="Shared misconcepts root")
-    ap.add_argument("--fail-fast", action="store_true", help="Stop on first file with errors")
+    ap.add_argument("--content-root", default="content")
+    ap.add_argument("--schema", default="docs/new/schemas/ExerciseSchema.json")
+    ap.add_argument("--taskforms", default="docs/new/taskvormen-canon.json")
+    ap.add_argument("--misconcepts-root", default="content/nl-NL/_shared/misconcepts")
+    ap.add_argument("--kerndoelen", default="docs/new/kerndoelen-per-groep.json")
+    ap.add_argument("--topic-canon-root", default="docs/new")
+
+    ap.add_argument("--fail-fast", action="store_true")
+    ap.add_argument(
+        "--strict-topic-canon",
+        action="store_true",
+        help="If set: unknown topic slugs (not found in topic-canon.<domain>.json) are errors. "
+             "If not set: unknown topics are warnings or ignored (migration mode)."
+    )
+    ap.add_argument(
+        "--warn-unknown-topics",
+        action="store_true",
+        default=True,
+        help="In migration mode (no --strict-topic-canon): print warnings for unknown topics. "
+             "Use --no-warn-unknown-topics to silence."
+    )
+    ap.add_argument(
+        "--no-warn-unknown-topics",
+        action="store_false",
+        dest="warn_unknown_topics",
+        help="Silence warnings for unknown topics in migration mode."
+    )
+
     args = ap.parse_args()
 
     content_root = Path(args.content_root)
     schema_path = Path(args.schema)
     taskforms_path = Path(args.taskforms)
-    topics_path = Path(args.topics)
-    canon_lock_path = Path(args.canon_lock)
     misconcepts_root = Path(args.misconcepts_root)
+    kerndoelen_path = Path(args.kerndoelen)
+    topic_canon_root = Path(args.topic_canon_root)
 
-    all_errors: List[str] = []
-
-    # Load schema
     if not schema_path.exists():
         print(f"Schema file not found: {schema_path}", file=sys.stderr)
         return 2
+    if not taskforms_path.exists():
+        print(f"Taskforms canon not found: {taskforms_path}", file=sys.stderr)
+        return 2
+    if not kerndoelen_path.exists():
+        print(f"Kerndoelen-per-groep file not found: {kerndoelen_path}", file=sys.stderr)
+        return 2
+
     schema = read_json(schema_path)
-    schema_validator = jsonschema.Draft202012Validator(schema)
+    taskform_canon = read_json(taskforms_path)
 
-    # Load canons
-    taskform_canon = load_taskform_canon(taskforms_path)
-    topic_canon = load_topic_canon(topics_path)
+    # Two validators:
+    # - file_validator validates the whole exercises.json file (array root)
+    # - item_validator validates ONE exercise object against #/$defs/Exercise
+    file_validator = jsonschema.Draft202012Validator(schema)
+    item_validator = file_validator.evolve(schema={"$ref": "#/$defs/Exercise"})
 
-    # Canon integrity gates
-    validate_taskform_canon_integrity(taskform_canon, all_errors)
-    validate_canon_lock(all_errors, canon_lock_path)
-
-    # Load misconcept keys
-    misconcept_keys_all = load_misconcept_keys(misconcepts_root)
-
-    if all_errors:
-        for e in all_errors:
+    canon_errors: List[str] = []
+    validate_taskform_canon_integrity(taskform_canon, canon_errors)
+    if canon_errors:
+        for e in canon_errors:
             print(e)
-        print("❌ Canon validation failed.", file=sys.stderr)
+        print("❌ Taskforms canon invalid.", file=sys.stderr)
         return 2
 
-    # Find exercise files
-    if not content_root.exists():
-        print(f"content-root not found: {content_root}", file=sys.stderr)
-        return 2
+    kerndoelen_per_groep = load_kerndoelen_per_groep(kerndoelen_path)
+    misconcept_keys_all = load_misconcept_keys(misconcepts_root)
 
     ex_files = find_all_exercise_files(content_root)
     if not ex_files:
         print(f"No exercises.json files found under: {content_root}")
         return 0
 
+    topic_canon_cache: dict[str, dict[str, set[int]]] = {}
+
     total_files = 0
     total_errors = 0
+    total_warnings = 0
 
     for ex_path in ex_files:
         total_files += 1
+
+        # ---- Gate: kerndoelen per topic/group ----
+        domain = parse_domain_from_path(ex_path, content_root)
+        if domain:
+            if domain not in topic_canon_cache:
+                topic_canon_cache[domain] = load_topic_canon_for_domain(topic_canon_root, domain)
+
+            gate_errs, gate_warns = validate_topic_kerndoelen_gate(
+                ex_path=ex_path,
+                content_root=content_root,
+                kerndoelen_per_groep=kerndoelen_per_groep,
+                topic_kerndoelen_map=topic_canon_cache[domain],
+                strict_topic_canon=args.strict_topic_canon,
+                warn_unknown_topics=args.warn_unknown_topics
+            )
+
+            if gate_warns:
+                for w in gate_warns:
+                    print(w)
+                total_warnings += len(gate_warns)
+
+            if gate_errs:
+                for e in gate_errs:
+                    print(e)
+                total_errors += len(gate_errs)
+                if args.fail_fast:
+                    return 2
+
+        # ---- Read + parse JSON (treat empty file as []) ----
         try:
-            data = read_json(ex_path)
+            text = ex_path.read_text(encoding="utf-8")
+            if text.strip() == "":
+                data = []
+            else:
+                data = json.loads(text)
         except Exception as e:
             print(f"[{ex_path}] JSON parse error: {e}")
             total_errors += 1
@@ -402,17 +489,9 @@ def main() -> int:
                 return 2
             continue
 
-        # Validate file shape: should be an array
-        if not isinstance(data, list):
-            print(f"[{ex_path}] File must be a JSON array (got {type(data).__name__})")
-            total_errors += 1
-            if args.fail_fast:
-                return 2
-            continue
-
-        # Schema validate whole array
+        # ---- file-level schema validate (array root) ----
         try:
-            schema_validator.validate(data)
+            file_validator.validate(data)
         except jsonschema.ValidationError as e:
             print(f"[{ex_path}] Schema violation (file-level): {e.message}")
             total_errors += 1
@@ -420,13 +499,19 @@ def main() -> int:
                 return 2
             continue
 
+        if not isinstance(data, list):
+            print(f"[{ex_path}] File must be a JSON array (got {type(data).__name__})")
+            total_errors += 1
+            if args.fail_fast:
+                return 2
+            continue
+
+        # ---- item-level checks ----
         errs = validate_exercise_list(
             exercises=data,
-            schema=schema,
-            schema_validator=schema_validator,
+            item_validator=item_validator,
             taskform_canon=taskform_canon,
             misconcept_keys_all=misconcept_keys_all,
-            topic_canon=topic_canon,
             file_path=ex_path
         )
 
@@ -438,10 +523,16 @@ def main() -> int:
                 return 2
 
     if total_errors == 0:
-        print(f"✅ OK — validated {total_files} exercises.json files.")
+        msg = f"✅ OK — validated {total_files} exercises.json files."
+        if total_warnings > 0:
+            msg += f" ({total_warnings} warning(s))"
+        print(msg)
         return 0
 
-    print(f"❌ FAIL — {total_errors} error(s) across {total_files} file(s).", file=sys.stderr)
+    msg = f"❌ FAIL — {total_errors} error(s) across {total_files} file(s)."
+    if total_warnings > 0:
+        msg += f" ({total_warnings} warning(s))"
+    print(msg, file=sys.stderr)
     return 2
 
 

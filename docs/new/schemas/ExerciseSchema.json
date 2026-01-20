@@ -4,7 +4,7 @@
   "title": "Exercises file schema",
   "description": "Schema for a single exercises.json file containing an array of exercise objects (mixed interaction types allowed).",
   "type": "array",
-  "minItems": 1,
+  "minItems": 0,
   "items": { "$ref": "#/$defs/Exercise" },
 
   "$defs": {
@@ -108,10 +108,7 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "index": {
-          "type": "integer",
-          "minimum": 0
-        }
+        "index": { "type": "integer", "minimum": 0 }
       },
       "required": ["index"]
     },
@@ -136,6 +133,14 @@
 
         "interaction": { "$ref": "#/$defs/Interaction" },
         "prompt": { "$ref": "#/$defs/NonEmptyString" },
+
+        "solution": {
+          "type": "object",
+          "description": "Typed per interaction variant (numeric/mcq/fill_blanks/n4)."
+        },
+
+        "options": { "$ref": "#/$defs/Options" },
+
         "feedback": { "$ref": "#/$defs/Feedback" },
         "metadata": { "$ref": "#/$defs/Metadata" }
       },

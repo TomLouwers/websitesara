@@ -1,0 +1,30 @@
+{
+  "domain": "meten-en-meetkunde",
+  "version": "1.0.0",
+  "misconcepts": [
+    {
+      "key": "MM-PERIM-SIDES-01",
+      "description": "Telt niet alle zijden mee voor de omtrek (bijv. alleen lengte + breedte i.p.v. 2x lengte en 2x breedte).",
+      "typicalIn": ["omtrek rechthoek", "omtrek veelhoek op rooster"],
+      "gradeNotes": "Komt vaak voor bij eerste kennismaking met omtrek (groep 4)."
+    },
+    {
+      "key": "MM-PERIM-DOUBLE-01",
+      "description": "Verdubbelt slechts een zijde of telt lengte en breedte samen en verdubbelt eenmaal (2 x (l+b) wordt l+b of 2l+b).",
+      "typicalIn": ["omtrek rechthoek", "formulegebruik omtrek"],
+      "gradeNotes": "Typisch wanneer formule 2 x (l+b) nog niet geautomatiseerd is (groep 4)."
+    },
+    {
+      "key": "MM-PERIM-UNIT-01",
+      "description": "Gebruikt verkeerde eenheid of vergeet eenheden om te zetten (cm vs m).",
+      "typicalIn": ["omtrek meten en berekenen", "vergelijken van maten"],
+      "gradeNotes": "Treedt op bij overschakelen tussen meetinstrumenten of eenheden (groep 4)."
+    },
+    {
+      "key": "MM-PERIM-COUNT-01",
+      "description": "Telt hokjes/diagonalen in plaats van zijden of verhaspelt het aantal stapjes op een rooster.",
+      "typicalIn": ["omtrek veelhoek op rooster", "perimeter langs roosterpad"],
+      "gradeNotes": "Komt voor bij roosterfiguren en informele perimeteropgaven (groep 4)."
+    }
+  ]
+}
