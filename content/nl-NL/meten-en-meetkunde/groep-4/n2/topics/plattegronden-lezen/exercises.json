@@ -7,21 +7,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "Op de plattegrond is 1 cm 5 m. Een pad is 3 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Op deze plattegrond ligt de wc rechts van de klas. Wat ligt links van de klas?",
+    "options": [
+      "gang",
+      "wc",
+      "trap",
+      "plein"
+    ],
     "solution": {
-      "value": 15
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Links/rechts aflezen",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-UNIT-01"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -33,21 +39,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "Volgens de schaal is 1 cm 4 m. Een pad is 6 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Wat ligt tussen de ingang en de klas op de plattegrond?",
+    "options": [
+      "gang",
+      "trap",
+      "wc",
+      "fietsenhok"
+    ],
     "solution": {
-      "value": 24
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Tussenliggende plek vinden",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-COUNT-01"
+        "MM-PLAN-02"
       ]
     }
   },
@@ -59,21 +71,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "In het kaartje is 1 cm 2 m. Een pad is 8 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Welke plek ligt boven de bibliotheek in het overzicht?",
+    "options": [
+      "klas",
+      "gang",
+      "kantoor",
+      "plein"
+    ],
     "solution": {
-      "value": 16
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Boven/onder onderscheiden",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-SIDES-01"
+        "MM-PLAN-02"
       ]
     }
   },
@@ -85,21 +103,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "Op de kaart is 1 cm 10 m. Een pad is 9 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Op het kaartje ligt de trap boven de gang. Wat ligt onder de trap?",
+    "options": [
+      "fietsenhok",
+      "wc",
+      "bibliotheek",
+      "kantoor"
+    ],
     "solution": {
-      "value": 90
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Onderliggende plek kiezen",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-DOUBLE-01"
+        "MM-PLAN-02"
       ]
     }
   },
@@ -111,21 +135,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "In de tekening is 1 cm 3 m. Een pad is 7 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "In de tekening ligt de gymzaal links van de trap. Wat ligt rechts van de trap?",
+    "options": [
+      "bibliotheek",
+      "gymzaal",
+      "kantoor",
+      "plein"
+    ],
     "solution": {
-      "value": 21
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Links/rechts vergelijken",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-UNIT-01"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -137,21 +167,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "Op de plattegrond is 1 cm 5 m. Een pad is 4 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Welke plek ligt direct naast de wc op de plattegrond?",
+    "options": [
+      "gang",
+      "plein",
+      "fietsenhok",
+      "kantoor"
+    ],
     "solution": {
-      "value": 20
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Aangrenzende ruimte herkennen",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-COUNT-01"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -163,21 +199,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "Volgens de schaal is 1 cm 4 m. Een pad is 9 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Wat ligt tegenover de ingang aan de overkant van de gang?",
+    "options": [
+      "klas",
+      "wc",
+      "trap",
+      "kantoor"
+    ],
     "solution": {
-      "value": 36
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Tegenover positie bepalen",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-SIDES-01"
+        "MM-PLAN-02"
       ]
     }
   },
@@ -189,21 +231,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "In het kaartje is 1 cm 2 m. Een pad is 6 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Op deze plattegrond ligt de bibliotheek naast het kantoor. Welke plek ligt aan de andere kant naast de bibliotheek?",
+    "options": [
+      "trap",
+      "kantoor",
+      "plein",
+      "wc"
+    ],
     "solution": {
-      "value": 12
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Buren links en rechts lezen",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-DOUBLE-01"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -215,21 +263,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "Op de kaart is 1 cm 10 m. Een pad is 5 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Het plein ligt voor de ingang. Wat ligt direct achter de ingang in het overzicht?",
+    "options": [
+      "gang",
+      "fietsenhok",
+      "wc",
+      "gymzaal"
+    ],
     "solution": {
-      "value": 50
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Voor/achter herkennen",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-UNIT-01"
+        "MM-PLAN-02"
       ]
     }
   },
@@ -241,21 +295,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "In de tekening is 1 cm 3 m. Een pad is 8 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Welke plek ligt tussen de trap en de wc op de tekening?",
+    "options": [
+      "gang",
+      "klas",
+      "plein",
+      "fietsenhok"
+    ],
     "solution": {
-      "value": 24
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Tussenliggende ruimte vinden",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-COUNT-01"
+        "MM-PLAN-02"
       ]
     }
   },
@@ -267,21 +327,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "Op de plattegrond is 1 cm 5 m. Een pad is 2 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Je loopt van de ingang via de gang naar de klas. Daarna ga je door naar welke plek om bij de wc te komen?",
+    "options": [
+      "wc",
+      "plein",
+      "fietsenhok",
+      "gymzaal"
+    ],
     "solution": {
-      "value": 10
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Route vervolgen",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-SIDES-01"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -293,21 +359,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "Volgens de schaal is 1 cm 4 m. Een pad is 5 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Route: plein ? ingang ? gang ? ____ ? gymzaal. Wat hoort op de lege plek?",
+    "options": [
+      "trap",
+      "klas",
+      "wc",
+      "kantoor"
+    ],
     "solution": {
-      "value": 20
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Volgorde aanvullen",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-DOUBLE-01"
+        "MM-PLAN-02"
       ]
     }
   },
@@ -319,21 +391,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "In het kaartje is 1 cm 2 m. Een pad is 9 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Welke volgorde klopt om van de ingang naar de bibliotheek te gaan?",
+    "options": [
+      "ingang ? gang ? trap ? bibliotheek",
+      "ingang ? plein ? bibliotheek",
+      "ingang ? wc ? trap ? bibliotheek",
+      "ingang ? kantoor ? bibliotheek"
+    ],
     "solution": {
-      "value": 18
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Correcte route kiezen",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-UNIT-01"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -345,21 +423,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "Op de kaart is 1 cm 10 m. Een pad is 7 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Je gaat van het fietsenhok naar de klas: plein over, door de ingang, via de gang en dan naar _____.",
+    "options": [
+      "klas",
+      "wc",
+      "trap",
+      "kantoor"
+    ],
     "solution": {
-      "value": 70
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Route afronden",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-COUNT-01"
+        "MM-PLAN-02"
       ]
     }
   },
@@ -371,21 +455,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "In de tekening is 1 cm 3 m. Een pad is 6 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Van de wc naar de gymzaal: welke stap komt direct na de gang?",
+    "options": [
+      "trap",
+      "kantoor",
+      "fietsenhok",
+      "plein"
+    ],
     "solution": {
-      "value": 18
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Volgende stap kiezen",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-SIDES-01"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -397,21 +487,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "Op de plattegrond is 1 cm 5 m. Een pad is 8 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Welke routezin past: van de klas naar het plein?",
+    "options": [
+      "Klas ? gang ? ingang ? plein",
+      "Klas ? trap ? wc ? plein",
+      "Klas ? bibliotheek ? trap ? plein",
+      "Klas ? kantoor ? wc ? plein"
+    ],
     "solution": {
-      "value": 40
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Routezin controleren",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-DOUBLE-01"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -423,21 +519,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "Volgens de schaal is 1 cm 4 m. Een pad is 3 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Van de bibliotheek naar het fietsenhok: welke volgorde klopt?",
+    "options": [
+      "Bibliotheek ? trap ? gang ? ingang ? plein ? fietsenhok",
+      "Bibliotheek ? gang ? wc ? plein ? fietsenhok",
+      "Bibliotheek ? trap ? plein ? fietsenhok",
+      "Bibliotheek ? kantoor ? ingang ? fietsenhok"
+    ],
     "solution": {
-      "value": 12
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Lange route ordenen",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-UNIT-01"
+        "MM-PLAN-02"
       ]
     }
   },
@@ -449,21 +551,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "In het kaartje is 1 cm 2 m. Een pad is 5 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Je start in het kantoor en wilt naar de gymzaal. Welke route past?",
+    "options": [
+      "Kantoor ? bibliotheek ? trap ? gymzaal",
+      "Kantoor ? gang ? plein ? gymzaal",
+      "Kantoor ? wc ? trap ? gymzaal",
+      "Kantoor ? klas ? plein ? gymzaal"
+    ],
     "solution": {
-      "value": 10
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Juiste route bepalen",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-COUNT-01"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -475,21 +583,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "Op de kaart is 1 cm 10 m. Een pad is 4 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Je gaat van de ingang naar de gang. Welke richting ga je eerst?",
+    "options": [
+      "rechtdoor",
+      "linksaf",
+      "rechtsaf",
+      "omhoog"
+    ],
     "solution": {
-      "value": 40
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Eerste stap kiezen",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-SIDES-01"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -501,21 +615,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "In de tekening is 1 cm 3 m. Een pad is 9 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Bij de trap in de gang wil je naar de bibliotheek. Welke kant ga je eerst?",
+    "options": [
+      "linksaf",
+      "rechtsaf",
+      "rechtdoor",
+      "terug"
+    ],
     "solution": {
-      "value": 27
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Links/rechts beslissing",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-DOUBLE-01"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -527,21 +647,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "Op de plattegrond is 1 cm 5 m. Een pad is 7 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Je staat in de klas en wilt naar het kantoor. Welke richting neem je eerst?",
+    "options": [
+      "rechtsaf de gang in",
+      "linksaf de gang in",
+      "rechtdoor naar buiten",
+      "omhoog"
+    ],
     "solution": {
-      "value": 35
+      "index": 1
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Eerste draai bepalen",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-UNIT-01"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -553,21 +679,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "Volgens de schaal is 1 cm 4 m. Een pad is 2 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Je verlaat de bibliotheek en wilt naar het plein. Welke eerste richting past?",
+    "options": [
+      "rechtsaf naar de trap",
+      "linksaf naar kantoor",
+      "rechtdoor naar wc",
+      "omhoog"
+    ],
     "solution": {
-      "value": 8
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Eerste stap naar uitgang",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-COUNT-01"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -579,21 +711,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "In het kaartje is 1 cm 2 m. Een pad is 4 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Je staat bij de wc en moet naar het kantoor. Welke richting ga je eerst?",
+    "options": [
+      "linksaf de gang op",
+      "rechtsaf de gang op",
+      "rechtdoor naar trap",
+      "omlaag"
+    ],
     "solution": {
-      "value": 8
+      "index": 1
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Links/rechts vanaf wc",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-SIDES-01"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -605,21 +743,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "Op de kaart is 1 cm 10 m. Een pad is 6 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Je wilt van het plein naar de gymzaal. Welke richting neem je eerst vanaf de ingang?",
+    "options": [
+      "rechtdoor de gang in",
+      "linksaf naar kantoor",
+      "rechtsaf naar wc",
+      "omhoog buiten"
+    ],
     "solution": {
-      "value": 60
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Startstap bij ingang",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-DOUBLE-01"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -631,151 +775,27 @@
     "level": "n2",
     "topic": "plattegronden-lezen",
     "interaction": {
-      "type": "numeric"
+      "type": "mcq"
     },
-    "prompt": "In de tekening is 1 cm 3 m. Een pad is 5 cm op de kaart. Hoe lang is het echt (m)?",
+    "prompt": "Je verlaat het kantoor en wilt naar het fietsenhok. Welke eerste stap klopt?",
+    "options": [
+      "rechtsaf naar de gang",
+      "linksaf naar de trap",
+      "rechtdoor naar bibliotheek",
+      "omhoog de trap op"
+    ],
     "solution": {
-      "value": 15
+      "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
+      "correct": "Goed!",
+      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
     },
     "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
+      "strategy": "Eerste richting naar buiten",
+      "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PERIM-UNIT-01"
-      ]
-    }
-  },
-  {
-    "schemaVersion": "1.0.0",
-    "id": "MM4-PL-026",
-    "domain": "meten-en-meetkunde",
-    "grade": 4,
-    "level": "n2",
-    "topic": "plattegronden-lezen",
-    "interaction": {
-      "type": "numeric"
-    },
-    "prompt": "Op de plattegrond is 1 cm 5 m. Een pad is 9 cm op de kaart. Hoe lang is het echt (m)?",
-    "solution": {
-      "value": 45
-    },
-    "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
-    },
-    "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
-      "misconceptKeys": [
-        "MM-PERIM-COUNT-01"
-      ]
-    }
-  },
-  {
-    "schemaVersion": "1.0.0",
-    "id": "MM4-PL-027",
-    "domain": "meten-en-meetkunde",
-    "grade": 4,
-    "level": "n2",
-    "topic": "plattegronden-lezen",
-    "interaction": {
-      "type": "numeric"
-    },
-    "prompt": "Volgens de schaal is 1 cm 4 m. Een pad is 8 cm op de kaart. Hoe lang is het echt (m)?",
-    "solution": {
-      "value": 32
-    },
-    "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
-    },
-    "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
-      "misconceptKeys": [
-        "MM-PERIM-SIDES-01"
-      ]
-    }
-  },
-  {
-    "schemaVersion": "1.0.0",
-    "id": "MM4-PL-028",
-    "domain": "meten-en-meetkunde",
-    "grade": 4,
-    "level": "n2",
-    "topic": "plattegronden-lezen",
-    "interaction": {
-      "type": "numeric"
-    },
-    "prompt": "In het kaartje is 1 cm 2 m. Een pad is 7 cm op de kaart. Hoe lang is het echt (m)?",
-    "solution": {
-      "value": 14
-    },
-    "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
-    },
-    "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
-      "misconceptKeys": [
-        "MM-PERIM-DOUBLE-01"
-      ]
-    }
-  },
-  {
-    "schemaVersion": "1.0.0",
-    "id": "MM4-PL-029",
-    "domain": "meten-en-meetkunde",
-    "grade": 4,
-    "level": "n2",
-    "topic": "plattegronden-lezen",
-    "interaction": {
-      "type": "numeric"
-    },
-    "prompt": "Op de kaart is 1 cm 10 m. Een pad is 8 cm op de kaart. Hoe lang is het echt (m)?",
-    "solution": {
-      "value": 80
-    },
-    "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
-    },
-    "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
-      "misconceptKeys": [
-        "MM-PERIM-UNIT-01"
-      ]
-    }
-  },
-  {
-    "schemaVersion": "1.0.0",
-    "id": "MM4-PL-030",
-    "domain": "meten-en-meetkunde",
-    "grade": 4,
-    "level": "n2",
-    "topic": "plattegronden-lezen",
-    "interaction": {
-      "type": "numeric"
-    },
-    "prompt": "In de tekening is 1 cm 3 m. Een pad is 4 cm op de kaart. Hoe lang is het echt (m)?",
-    "solution": {
-      "value": 12
-    },
-    "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Check je stappen en probeer opnieuw."
-    },
-    "metadata": {
-      "strategy": "gebruik schaalsprong",
-      "taskForm": "numeric_simple",
-      "misconceptKeys": [
-        "MM-PERIM-COUNT-01"
+        "MM-PLAN-01"
       ]
     }
   }

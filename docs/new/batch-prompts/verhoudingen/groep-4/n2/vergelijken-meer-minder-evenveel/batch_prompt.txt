@@ -25,6 +25,18 @@ ANTI-DUPLICATIE REGELS (HARD)
 3) MCQ: minimaal 3 optie-banken, geen identieke opties+antwoord.
 4) Contextvariatie: één contextwoord niet >40%.
 
+OPTIE-FORMATS (HARD, EXACT 10 PER FORMAT)
+Format A (woorden):
+["meer", "minder", "evenveel", "weet ik niet"]
+Format B (zinnen):
+["Het is meer.", "Het is minder.", "Het is evenveel.", "Dat kun je niet zien."]
+Format C (symbolisch):
+["meer ↑", "minder ↓", "evenveel =", "onzeker ?"]
+
+MCQ HARD RULE
+- Nooit hetzelfde option-format 2× achter elkaar.
+- Prompt + option-format combinatie is uniek.
+
 NIVEAU-SPECIFIEK
 - n2: geen 'waarom/leg uit', geen foutanalyse, geen strategie-vergelijking.
 - n3: geen antwoord lekt uit prompt; geen strategie-woord letterlijk in opties.

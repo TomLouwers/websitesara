@@ -55,12 +55,31 @@ B) strategy_comparison (mcq)
 C) explain_what_happens (mcq — ZONDER STRATEGIETAAL)  
 "Sam eet 2/4 van een pizza.\nEva eet 1/2 van dezelfde pizza.\n\nWat kun je hierover zeggen?"
 
+MCQ HARD RULE (ANTI-DUPLICATE)
+- Options representeren ALTIJD verschillende denkfouten of strategieën.
+- Options mogen NIET:
+  - alleen herformuleringen zijn
+  - alleen “goed/fout/afronden/iets anders”
+- Elke MCQ gebruikt EXACT 1 van deze option-rollen:
+  A) correcte strategie
+  B) typische misconcept
+  C) andere valide maar onjuiste strategie
+  D) irrelevante of niet-toepasbare actie
+- Elke oefening gebruikt een ANDERE combinatie van rollen.
+
 OPTIES VOOR explain_what_happens (HARD)
 Gebruik uitsluitend:
 - "Ze eten evenveel."
 - "Sam eet meer dan Eva."
 - "Eva eet meer dan Sam."
 - "Dat kun je niet vergelijken."
+
+VRAAGTYPE-ROTATIE (HARD)
+Genereer EXACT 40 MCQ’s:
+- 10× "Welke breuk is groter?"
+- 10× "Welke breuk is kleiner?"
+- 10× "Welke twee zijn even groot?"
+- 10× "Zet deze breuken op volgorde"
 
 VARIATIE & OPBOUW (HARD)
 Maak EXACT 40 items:
@@ -78,6 +97,10 @@ MISCONCEPT-LOGICA (HARD)
 - Alleen naar teller kijken → "VH-FRACT-COMP-01"
 - Alleen naar noemer kijken → "VH-FRACT-COMP-02"
 - Equivalentie niet herkennen → "VH-FRACT-COMP-03"
+
+ANTI-DUPLICATE NUMERIC RULE
+- Dezelfde breukencombinatie mag max 2× voorkomen.
+- Equivalenties (1/2 = 2/4) tellen als DUPLICAAT.
 
 CONTROLE (HARD)
 Voor je output:

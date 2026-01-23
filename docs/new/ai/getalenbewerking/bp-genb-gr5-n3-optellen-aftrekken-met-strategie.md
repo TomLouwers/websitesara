@@ -64,6 +64,18 @@ Let op:
 - De juiste optie mag NIET systematisch A of B zijn.
 - De juiste optie mag NIET de langste zijn.
 
+MCQ HARD RULE (ANTI-DUPLICATE)
+- Options representeren ALTIJD verschillende denkfouten of strategieën.
+- Options mogen NIET:
+  - alleen herformuleringen zijn
+  - alleen “goed/fout/afronden/iets anders”
+- Elke MCQ gebruikt EXACT 1 van deze option-rollen:
+  A) correcte strategie
+  B) typische misconcept
+  C) andere valide maar onjuiste strategie
+  D) irrelevante of niet-toepasbare actie
+- Elke oefening gebruikt een ANDERE combinatie van rollen.
+
 ----------------------------------------------------------------
 MISCONCEPT-LOGICA (HARD)
 ----------------------------------------------------------------
