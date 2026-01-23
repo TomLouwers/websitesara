@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "createdAt": "2026-01-22",
+  "notes": [
+    "Baseline of known duplicate issues in legacy content.",
+    "Hard duplicate gate applies only to NEW or CHANGED packs after this baseline."
+  ],
+  "packs": {
+    "content/nl-NL/getal-en-bewerkingen/groep-4/n2/topics/delen-en-deeltafels/exercises.json": {
+      "allow_numeric_duplicates": true,
+      "allow_context_dominance": true,
+      "allow_mcq_duplicates": false
+    },
+    "content/nl-NL/getal-en-bewerkingen/groep-4/n2/topics/tafels-2-5-10/exercises.json": {
+      "allow_numeric_duplicates": true
+    }
+  }
+}

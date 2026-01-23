@@ -9,18 +9,20 @@
     "interaction": {
       "type": "numeric"
     },
-    "prompt": "Er zijn 12 appels. De helft daarvan wordt verdeeld.\n\nHoeveel appels zijn dat?",
+    "prompt": "Bereken:\n\n3/4 van 16 =",
     "solution": {
-      "value": 6
+      "value": 12
     },
     "feedback": {
-      "correct": "Goed. De helft betekent dat je 12 eerlijk in twee gelijke delen verdeelt.",
-      "incorrect": "De helft betekent verdelen in twee gelijke delen. Probeer 12 eerst te splitsen."
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
     },
     "metadata": {
-      "strategy": "deel van een hoeveelheid bepalen",
-      "taskForm": "context_single_step",
-      "misconceptKeys": ["VH-FRACT-PART-01"]
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
     }
   },
   {
@@ -33,18 +35,20 @@
     "interaction": {
       "type": "numeric"
     },
-    "prompt": "In een doos zitten 20 knikkers.\n\nEen kwart daarvan is rood.\n\nHoeveel rode knikkers zijn er?",
+    "prompt": "Bereken:\n\n2/3 van 24 =",
     "solution": {
-      "value": 5
+      "value": 16
     },
     "feedback": {
-      "correct": "Goed. Een kwart betekent dat je de hoeveelheid in vier gelijke delen verdeelt.",
-      "incorrect": "Een kwart is één van vier gelijke delen. Deel 20 eerst door 4."
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
     },
     "metadata": {
-      "strategy": "breuk als deel van hoeveelheid",
-      "taskForm": "context_single_step",
-      "misconceptKeys": ["VH-FRACT-PART-02"]
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
     }
   },
   {
@@ -57,18 +61,20 @@
     "interaction": {
       "type": "numeric"
     },
-    "prompt": "Van de 16 stoelen in de klas is 3/4 bezet.\n\nHoeveel stoelen zijn bezet?\n\nLet op: bepaal eerst wat 1/4 is.",
+    "prompt": "Bereken:\n\n1/2 van 30 =",
     "solution": {
-      "value": 12
+      "value": 15
     },
     "feedback": {
-      "correct": "Goed. Eerst 1/4 bepalen en daarna vermenigvuldigen werkt hier goed.",
-      "incorrect": "Bepaal eerst hoeveel 1/4 van 16 is. Gebruik dat om verder te rekenen."
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
     },
     "metadata": {
-      "strategy": "stapsgewijs breuk bepalen",
-      "taskForm": "guided_focus",
-      "misconceptKeys": ["VH-FRACT-PART-03"]
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
     }
   },
   {
@@ -81,18 +87,1216 @@
     "interaction": {
       "type": "numeric"
     },
-    "prompt": "Er zijn 20 koekjes.\n\nDe helft daarvan wordt opgegeten.\n\nHoeveel koekjes zijn dat?",
+    "prompt": "Bereken:\n\n3/5 van 25 =",
     "solution": {
-      "value": 10
+      "value": 15
     },
     "feedback": {
-      "correct": "Goed. De helft betekent verdelen in twee gelijke delen.",
-      "incorrect": "De helft is één van twee gelijke delen. Probeer 20 eerst te splitsen."
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
     },
     "metadata": {
-      "strategy": "breuk als deel van hoeveelheid",
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-005",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n5/8 van 32 =",
+    "solution": {
+      "value": 20
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-006",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n3/8 van 40 =",
+    "solution": {
+      "value": 15
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-007",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n1/4 van 28 =",
+    "solution": {
+      "value": 7
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-008",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n3/4 van 20 =",
+    "solution": {
+      "value": 15
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-009",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n2/5 van 50 =",
+    "solution": {
+      "value": 20
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-010",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n3/10 van 70 =",
+    "solution": {
+      "value": 21
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-011",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n4/5 van 45 =",
+    "solution": {
+      "value": 36
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-012",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n3/6 van 42 =",
+    "solution": {
+      "value": 21
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-013",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n2/8 van 48 =",
+    "solution": {
+      "value": 12
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-014",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n5/6 van 60 =",
+    "solution": {
+      "value": 50
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-015",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n3/4 van 32 =",
+    "solution": {
+      "value": 24
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-016",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n2/3 van 18 =",
+    "solution": {
+      "value": 12
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-017",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n1/5 van 35 =",
+    "solution": {
+      "value": 7
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-018",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n3/8 van 56 =",
+    "solution": {
+      "value": 21
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-019",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n5/10 van 80 =",
+    "solution": {
+      "value": 40
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-020",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n3/5 van 40 =",
+    "solution": {
+      "value": 24
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "deel de hoeveelheid in gelijke delen",
+      "taskForm": "numeric_simple",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-021",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n3/8 van 24 =\n\nLet op: bepaal eerst wat 1/8 is.",
+    "solution": {
+      "value": 9
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "eerst 1/deel bepalen",
+      "taskForm": "guided_focus",
+      "misconceptKeys": [
+        "VH-FRACT-PART-03"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-022",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n5/6 van 36 =\n\nLet op: bepaal eerst wat 1/6 is.",
+    "solution": {
+      "value": 30
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "eerst 1/deel bepalen",
+      "taskForm": "guided_focus",
+      "misconceptKeys": [
+        "VH-FRACT-PART-03"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-023",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n2/5 van 45 =\n\nLet op: bepaal eerst wat 1/5 is.",
+    "solution": {
+      "value": 18
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "eerst 1/deel bepalen",
+      "taskForm": "guided_focus",
+      "misconceptKeys": [
+        "VH-FRACT-PART-03"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-024",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n3/4 van 28 =\n\nLet op: bepaal eerst wat 1/4 is.",
+    "solution": {
+      "value": 21
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "eerst 1/deel bepalen",
+      "taskForm": "guided_focus",
+      "misconceptKeys": [
+        "VH-FRACT-PART-03"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-025",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n5/8 van 40 =\n\nLet op: bepaal eerst wat 1/8 is.",
+    "solution": {
+      "value": 25
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "eerst 1/deel bepalen",
+      "taskForm": "guided_focus",
+      "misconceptKeys": [
+        "VH-FRACT-PART-03"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-026",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n3/10 van 60 =\n\nLet op: bepaal eerst wat 1/10 is.",
+    "solution": {
+      "value": 18
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "eerst 1/deel bepalen",
+      "taskForm": "guided_focus",
+      "misconceptKeys": [
+        "VH-FRACT-PART-03"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-027",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n4/5 van 50 =\n\nLet op: bepaal eerst wat 1/5 is.",
+    "solution": {
+      "value": 40
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "eerst 1/deel bepalen",
+      "taskForm": "guided_focus",
+      "misconceptKeys": [
+        "VH-FRACT-PART-03"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-028",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n3/6 van 54 =\n\nLet op: bepaal eerst wat 1/6 is.",
+    "solution": {
+      "value": 27
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "eerst 1/deel bepalen",
+      "taskForm": "guided_focus",
+      "misconceptKeys": [
+        "VH-FRACT-PART-03"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-029",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n1/8 van 32 =\n\nLet op: bepaal eerst wat 1/8 is.",
+    "solution": {
+      "value": 4
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "eerst 1/deel bepalen",
+      "taskForm": "guided_focus",
+      "misconceptKeys": [
+        "VH-FRACT-PART-03"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-030",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n2/3 van 27 =\n\nLet op: bepaal eerst wat 1/3 is.",
+    "solution": {
+      "value": 18
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "eerst 1/deel bepalen",
+      "taskForm": "guided_focus",
+      "misconceptKeys": [
+        "VH-FRACT-PART-03"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-031",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n3/5 van 55 =\n\nLet op: bepaal eerst wat 1/5 is.",
+    "solution": {
+      "value": 33
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "eerst 1/deel bepalen",
+      "taskForm": "guided_focus",
+      "misconceptKeys": [
+        "VH-FRACT-PART-03"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-032",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n5/10 van 70 =\n\nLet op: bepaal eerst wat 1/10 is.",
+    "solution": {
+      "value": 35
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "eerst 1/deel bepalen",
+      "taskForm": "guided_focus",
+      "misconceptKeys": [
+        "VH-FRACT-PART-03"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-033",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n3/8 van 48 =\n\nLet op: bepaal eerst wat 1/8 is.",
+    "solution": {
+      "value": 18
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "eerst 1/deel bepalen",
+      "taskForm": "guided_focus",
+      "misconceptKeys": [
+        "VH-FRACT-PART-03"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-034",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n2/4 van 44 =\n\nLet op: bepaal eerst wat 1/4 is.",
+    "solution": {
+      "value": 22
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "eerst 1/deel bepalen",
+      "taskForm": "guided_focus",
+      "misconceptKeys": [
+        "VH-FRACT-PART-03"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-035",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Bereken:\n\n3/6 van 66 =\n\nLet op: bepaal eerst wat 1/6 is.",
+    "solution": {
+      "value": 33
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "eerst 1/deel bepalen",
+      "taskForm": "guided_focus",
+      "misconceptKeys": [
+        "VH-FRACT-PART-03"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-036",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Er zijn 20 appels.\n\n1/5 daarvan is rood.\n\nHoeveel is dat?",
+    "solution": {
+      "value": 4
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "zoek deel van het geheel",
       "taskForm": "context_single_step",
-      "misconceptKeys": ["VH-FRACT-PART-01"]
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-037",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Er liggen 32 koekjes.\n\n3/8 daarvan is chocolade.\n\nHoeveel is dat?",
+    "solution": {
+      "value": 12
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "zoek deel van het geheel",
+      "taskForm": "context_single_step",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-038",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "In een bak zitten 24 knikkers.\n\n1/3 daarvan is groen.\n\nHoeveel is dat?",
+    "solution": {
+      "value": 8
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "zoek deel van het geheel",
+      "taskForm": "context_single_step",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-039",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Er staan 30 stoelen klaar.\n\n1/2 wordt gebruikt.\n\nHoeveel is dat?",
+    "solution": {
+      "value": 15
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "zoek deel van het geheel",
+      "taskForm": "context_single_step",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-040",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Op 40 stickers staat een smiley.\n\n2/5 daarvan is geel.\n\nHoeveel is dat?",
+    "solution": {
+      "value": 16
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "zoek deel van het geheel",
+      "taskForm": "context_single_step",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-041",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Er zijn 48 kaarten.\n\n3/6 daarvan is blauw.\n\nHoeveel is dat?",
+    "solution": {
+      "value": 24
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "zoek deel van het geheel",
+      "taskForm": "context_single_step",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-042",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Er liggen 56 kralen.\n\n3/8 daarvan is rood.\n\nHoeveel is dat?",
+    "solution": {
+      "value": 21
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "zoek deel van het geheel",
+      "taskForm": "context_single_step",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-043",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Er zijn 25 notities.\n\n4/5 daarvan is al nagekeken.\n\nHoeveel is dat?",
+    "solution": {
+      "value": 20
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "zoek deel van het geheel",
+      "taskForm": "context_single_step",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-044",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Er zijn 45 stickers.\n\n3/5 daarvan gaat naar groep A.\n\nHoeveel is dat?",
+    "solution": {
+      "value": 27
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "zoek deel van het geheel",
+      "taskForm": "context_single_step",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-045",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Er liggen 60 kaartjes.\n\n3/10 daarvan is groen.\n\nHoeveel is dat?",
+    "solution": {
+      "value": 18
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "zoek deel van het geheel",
+      "taskForm": "context_single_step",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-046",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Er zijn 28 appels.\n\n1/4 is groen.\n\nHoeveel is dat?",
+    "solution": {
+      "value": 7
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "zoek deel van het geheel",
+      "taskForm": "context_single_step",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-047",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Er staan 70 bekers.\n\n5/10 wordt gevuld.\n\nHoeveel is dat?",
+    "solution": {
+      "value": 35
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "zoek deel van het geheel",
+      "taskForm": "context_single_step",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-048",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Er zijn 36 stoelen.\n\n2/3 wordt gebruikt.\n\nHoeveel is dat?",
+    "solution": {
+      "value": 24
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "zoek deel van het geheel",
+      "taskForm": "context_single_step",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-049",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Er liggen 40 muntjes.\n\n3/5 is van koper.\n\nHoeveel is dat?",
+    "solution": {
+      "value": 24
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "zoek deel van het geheel",
+      "taskForm": "context_single_step",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "VH5-BDH-050",
+    "domain": "verhoudingen",
+    "grade": 5,
+    "level": "n2",
+    "topic": "breuken-als-deel-van-hoeveelheid",
+    "interaction": {
+      "type": "numeric"
+    },
+    "prompt": "Er zijn 64 stickers.\n\n1/8 daarvan heeft een ster.\n\nHoeveel is dat?",
+    "solution": {
+      "value": 8
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Verdeel eerst eerlijk in gelijke delen en probeer opnieuw."
+    },
+    "metadata": {
+      "strategy": "zoek deel van het geheel",
+      "taskForm": "context_single_step",
+      "misconceptKeys": [
+        "VH-FRACT-PART-02"
+      ]
     }
   }
 ]

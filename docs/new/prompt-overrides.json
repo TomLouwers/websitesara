@@ -1,0 +1,298 @@
+{
+  "version": "1.0.0",
+  "notes": [
+    "Overrides for batch prompt generation. Use to force interaction, taskForm, IDs, solution format and allowed misconcept keys.",
+    "Added n3 overrides for strategy MCQ and written addition/subtraction error analysis packs."
+  ],
+  "overrides": [
+    {
+      "match": {
+        "domain": "getal-en-bewerkingen",
+        "grade": 5,
+        "level": "n2",
+        "topic": "delen-met-rest"
+      },
+      "settings": {
+        "n_items": 50,
+        "interaction_type": "numeric",
+        "taskForm_allowed": ["numeric_simple", "guided_focus", "context_single_step"],
+        "taskForm_distribution": {
+          "numeric_simple": 20,
+          "guided_focus": 15,
+          "context_single_step": 15
+        },
+        "id_pattern": "GB5-DMR-###",
+        "solution_format_rules": [
+          "solution.value MUST be a string in format: '<q> rest <r>' (example: '7 rest 2')",
+          "q and r are integers",
+          "r < divisor"
+        ],
+        "misconceptKeys_allowed": ["GB-OA-PLACE-01", "GB-OA-BORROW-01"],
+        "forbidden_phrases": [
+          "hoeveel dozen heb je nodig",
+          "afronden",
+          "leg uit",
+          "waarom",
+          "foutanalyse"
+        ],
+        "prompt_forms": [
+          "A) numeric_simple: 'Bereken:\\n\\n29 ÷ 4 =\\n\\nSchrijf als: q rest r'",
+          "B) guided_focus: 'Bereken:\\n\\n47 ÷ 6 =\\n\\nLet op: de rest is kleiner dan 6.'",
+          "C) context_single_step: 'Er zijn 23 knikkers. Je verdeelt ze eerlijk over 5 kinderen.\\n\\nHoeveel krijgt ieder kind en hoeveel blijven er over?\\nSchrijf als: q rest r'"
+        ]
+      }
+    },
+
+    {
+      "match": {
+        "domain": "verhoudingen",
+        "grade": 5,
+        "level": "n2",
+        "topic": "breuken-vergelijken"
+      },
+      "settings": {
+        "n_items": 50,
+        "interaction_type": "mcq",
+        "taskForm_allowed": ["select_single"],
+        "id_pattern": "VH5-BV-###",
+        "allowed_fractions": ["1/2", "1/4", "2/4", "3/4", "1/3", "2/3"],
+        "mcq_options_rules": [
+          "options MUST contain exactly the two fractions from the prompt",
+          "solution.index must match the correct option"
+        ],
+        "misconceptKeys_allowed": ["VH-FRACT-COMP-01", "VH-FRACT-COMP-02", "VH-FRACT-COMP-03"],
+        "forbidden_phrases": ["leg uit", "waarom", "reken uit", "zet om"],
+        "prompt_starters": [
+          "Welke breuk is groter?",
+          "Welke is het grootste deel?",
+          "Welke breuk stelt meer voor?",
+          "Welke is kleiner?"
+        ],
+        "anti_dup_rules": [
+          "No identical fraction pairs",
+          "Each pair max 1× in the whole pack"
+        ]
+      }
+    },
+
+    {
+      "match": {
+        "domain": "verhoudingen",
+        "grade": 6,
+        "level": "n2",
+        "topic": "percentages-herkennen-in-context"
+      },
+      "settings": {
+        "n_items": 50,
+        "interaction_type": "mcq",
+        "taskForm_allowed": ["select_single"],
+        "id_pattern": "VH6-PHIC-###",
+        "allowed_percentages": ["10%", "25%", "50%", "75%"],
+        "misconceptKeys_allowed": ["VH-PERC-MEAN-01", "VH-PERC-WHOLE-01"],
+        "forbidden_phrases": ["bereken", "hoeveel is", "reken uit", "waarom", "leg uit"],
+        "option_banks": [
+          ["Een kwart van het geheel.", "Een tiende van het geheel.", "Drie kwart van het geheel.", "Het hele geheel."],
+          ["De helft van het geheel.", "Een kwart van het geheel.", "Een klein deel.", "Bijna alles."],
+          ["Een klein deel van alles samen.", "Het grootste deel.", "Precies alles.", "Meer dan de helft."]
+        ]
+      }
+    },
+
+    {
+      "match": {
+        "domain": "verhoudingen",
+        "grade": 6,
+        "level": "n2",
+        "topic": "verhoudingstabellen-basis"
+      },
+      "settings": {
+        "n_items": 50,
+        "interaction_type": "numeric",
+        "taskForm_allowed": ["numeric_simple", "guided_focus", "context_single_step"],
+        "id_pattern": "VH6-VTB-###",
+        "allowed_scale_factors": [2, 3, 4, 5],
+        "constraints": [
+          "No decimals",
+          "No fractions",
+          "Results < 100",
+          "Exactly one missing value"
+        ],
+        "misconceptKeys_allowed": ["VH-RATIO-SCALE-01", "VH-RATIO-STEP-01"]
+      }
+    },
+
+    {
+      "match": {
+        "domain": "verhoudingen",
+        "grade": 5,
+        "level": "n2",
+        "topic": "omrekenen-binnen-grootheden"
+      },
+      "settings": {
+        "n_items": 30,
+        "interaction_type": "numeric",
+        "taskForm_allowed": ["guided_focus", "numeric_simple", "context_single_step"],
+        "id_pattern": "VH5-OBG-###",
+        "constraints": [
+          "Exactly one conversion per item",
+          "No multi-step conversions",
+          "Use common metric units only"
+        ],
+        "misconceptKeys_allowed": ["MM-UNIT-PLACE-01", "MM-UNIT-STEP-01"]
+      }
+    },
+
+    {
+      "match": {
+        "domain": "getal-en-bewerkingen",
+        "grade": 5,
+        "level": "n3",
+        "topic": "optellen-aftrekken-met-strategie"
+      },
+      "settings": {
+        "n_items": 50,
+        "interaction_type": "mcq",
+        "taskForm_allowed": ["select_single"],
+        "id_pattern": "GB5-OAMS-###",
+        "forbidden_phrases": [
+          "handig",
+          "handiger",
+          "makkelijker",
+          "strategie",
+          "afronden",
+          "splitsen",
+          "compensatie",
+          "aanvullen",
+          "hier",
+          "wat gebeurt"
+        ],
+        "constraints": [
+          "Do NOT ask for the final answer / no calculating the result",
+          "Prompt must not contain any wording that appears verbatim in the correct option"
+        ],
+        "option_banks": [
+          [
+            "Eerst een rond getal maken en later corrigeren",
+            "Eerst het verschil tot een rond getal bepalen",
+            "De som onder elkaar zetten",
+            "De getallen opsplitsen in honderdtallen en tientallen"
+          ],
+          [
+            "Stap voor stap vanaf een bekend getal verder rekenen",
+            "Eerst globaal schatten en daarna controleren",
+            "De som onder elkaar zetten",
+            "Eerst een rond getal maken en later corrigeren"
+          ],
+          [
+            "De getallen opsplitsen in honderdtallen en tientallen",
+            "Stap voor stap vanaf een bekend getal verder rekenen",
+            "Eerst het verschil tot een rond getal bepalen",
+            "Eerst globaal schatten en daarna controleren"
+          ],
+          [
+            "Eerst het verschil tot een rond getal bepalen",
+            "De getallen opsplitsen in honderdtallen en tientallen",
+            "Eerst globaal schatten en daarna controleren",
+            "De som onder elkaar zetten"
+          ]
+        ],
+        "misconceptKeys_allowed": ["GB-OA-STRAT-01", "GB-OA-STRAT-02", "GB-OA-STRAT-03"],
+        "prompt_starters": [
+          "Welke tussenstap past het best bij:",
+          "Welke aanpak helpt om deze som eenvoudiger te maken:",
+          "Welke stap ligt het meest voor de hand bij:",
+          "Welke keuze helpt om deze som overzichtelijk te houden:",
+          "Welke denkwijze past bij deze som:",
+          "Welke bewerking past het best vóórdat je rekent:"
+        ],
+        "anti_dup_rules": [
+          "No identical sums",
+          "Correct option index must vary (not always 0/1)",
+          "Do not reuse an identical option set with the same correct index"
+        ]
+      }
+    },
+
+    {
+      "match": {
+        "domain": "getal-en-bewerkingen",
+        "grade": 5,
+        "level": "n3",
+        "topic": "schriftelijk-optellen-aftrekken-uitgebreid"
+      },
+      "settings": {
+        "n_items": 50,
+        "interaction_type": "mcq",
+        "taskForm_allowed": ["error_analysis"],
+        "id_pattern": "GB5-SAU-###",
+        "constraints": [
+          "Do NOT ask for full explanation; only ask 'Wat gaat er mis?'",
+          "Do NOT ask to recompute the correct answer",
+          "Use 3–4 digit numbers, realistic wrong answers"
+        ],
+        "misconceptKeys_allowed": ["GB-OA-CARRY-02", "GB-OA-BORROW-02", "GB-OA-ZERO-01", "GB-OA-PLACE-01"],
+        "taskForm_distribution": {
+          "carry_forget": 13,
+          "borrow_forget": 13,
+          "zero_borrow": 12,
+          "place_value": 12
+        },
+        "option_banks": [
+          [
+            "Het tiental is niet onthouden.",
+            "De getallen staan niet goed onder elkaar.",
+            "Er is afgerond.",
+            "De som is verkeerd afgelezen."
+          ],
+          [
+            "Er is niet goed geleend.",
+            "Bij 0 is niet eerst verder geleend.",
+            "De honderdtallen zijn verwisseld.",
+            "Er is verkeerd opgeteld."
+          ],
+          [
+            "De plaatswaarde klopt niet.",
+            "Het onthouden is vergeten.",
+            "Er is te weinig afgetrokken.",
+            "De som is verkeerd genoteerd."
+          ]
+        ],
+        "prompt_starters": [
+          "Sanne rekent:",
+          "Bekijk deze berekening:",
+          "Noah schrijft:",
+          "Bij deze som staat een fout antwoord:",
+          "In deze berekening zit een fout:"
+        ],
+        "anti_dup_rules": [
+          "No identical written sums",
+          "Rotate option banks; avoid identical bank+correct index repetitions",
+          "Rotate verbs: rekent/schrijft/berekent/noteert/komt uit op"
+        ]
+      }
+    }
+  ],
+  "domain_defaults": [
+    {
+      "match": { "domain": "getal-en-bewerkingen" },
+      "settings": {
+        "default_taskForm_n2": "numeric_simple",
+        "default_taskForm_n3": "select_single"
+      }
+    },
+    {
+      "match": { "domain": "verhoudingen" },
+      "settings": {
+        "default_taskForm_n2": "context_single_step",
+        "default_taskForm_n3": "select_single"
+      }
+    },
+    {
+      "match": { "domain": "meten-en-meetkunde" },
+      "settings": {
+        "default_taskForm_n2": "guided_focus",
+        "default_taskForm_n3": "context_single_step"
+      }
+    }
+  ]
+}
