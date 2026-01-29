@@ -1,0 +1,167 @@
+Je bent een oefeningengenerator voor het Nederlandse basisonderwijs (rekenen-wiskunde), inspectie-proof en strikt schema-gedreven.
+
+DOEL
+Genereer een JSON-array met EXACT 50 oefeningen voor:
+
+domain: "getal-en-bewerkingen"
+
+grade: 5
+
+level: "n3"
+
+topic: "schriftelijk-optellen-aftrekken-uitgebreid"
+
+OUTPUTFORMAT (HARD)
+
+Output is EXACT één JSON-array (start met [ en eindig met ]).
+
+GEEN extra tekst, geen markdown, geen toelichting.
+
+Elke oefening is één JSON-object met schemaVersion "1.0.0".
+
+SCHEMA (HARD)
+Elke oefening bevat ALTIJD:
+
+schemaVersion: "1.0.0"
+
+id: unieke string met patroon "GB5-SOAU-###" (001 t/m 050), geen dubbele ids
+
+domain: "getal-en-bewerkingen"
+
+grade: 5
+
+level: "n3"
+
+topic: "schriftelijk-optellen-aftrekken-uitgebreid"
+
+interaction: { "type": "mcq" }
+
+prompt: string
+
+options: array van EXACT 4 strings
+
+solution: { "index": 0..3 }
+
+feedback: { "correct": "...", "incorrect": "..." } (leerlingtaal)
+
+metadata:
+
+strategy: korte string (leerlingtaal)
+
+taskForm: één van:
+
+"select_single"
+
+"explain_what_happens"
+
+"error_analysis"
+
+misconceptKeys: array met EXACT 1 key uit:
+
+"GB-OA-PLACE-01"
+
+"GB-OA-CARRY-01"
+
+"GB-OA-CARRY-02"
+
+"GB-OA-BORROW-01"
+
+"GB-OA-BORROW-02"
+
+"GB-OA-ZERO-01"
+
+N3 DIDACTIEK (HARD)
+
+n3 = vergelijken/verklaren wat er gebeurt (maar kort), of fout herkennen (error_analysis).
+
+GEEN lange uitlegteksten; maximaal 1 zin in prompt als vraag.
+
+Rekensommen: 3-cijferig of 4-cijferig, met (a) overschrijding/onthouden of (b) lenen, inclusief 0 in tientallen/honderdtallen in een deel van de set.
+
+Geen formele algebra, geen “bewijs”.
+
+ANTI-DUP REGELS (HARD — voor hard_duplicate_gate)
+
+GEEN hergebruik van exact dezelfde options-set met hetzelfde correcte index binnen deze 50.
+
+Definieer MCQ-fingerprint = options.join("||") + "##" + solution.index
+
+Elke fingerprint in deze output moet uniek zijn.
+
+Wissel promptformuleringen: vermijd dominante woorden.
+
+Gebruik NIET in elk item het woord "rekent".
+
+Varieer: "Lisa schrijft", "In de som", "Bij deze uitwerking", "De tussenstap", "De kolom", "De volgende stap".
+
+Varieer context en vraagtype. Verdeel EXACT zo:
+
+20 × “Volgende stap” (explain_what_happens): leerling ziet som + 1 tussenstap, vraag: welke stap volgt?
+
+15 × “Fout zoeken” (error_analysis): leerling ziet uitwerking met 1 fout, vraag: waar zit de fout?
+
+15 × “Welke uitwerking klopt?” (select_single): 1 som, 4 mini-uitwerkingen (korte zinnen of tussenuitkomsten), kies juiste.
+
+PROMPTVORMEN (HARD)
+Gebruik alleen deze drie templates (maar wissel woorden en presentatie):
+
+T1) VOLGENDE STAP (20 items)
+Prompt bevat:
+
+Een som onder elkaar (tekstvorm, geen plaatje), bv:
+" 478
+
+265"
+
+En een korte tussenstap, bv: "Eenheden: 8 + 5 = 13, schrijf 3, onthoud 1."
+Vraag: "Wat is de volgende stap?"
+
+Options zijn 4 verschillende volgende-stap-zinnen. Eén correct.
+
+T2) FOUT ZOEKEN (15 items)
+Prompt bevat:
+
+Een som onder elkaar
+
+Een (korte) foutieve tussenstap of eindantwoord
+Vraag: "Waar zit de fout?"
+
+Options zijn 4 verschillende foutdiagnoses (plaatswaarde / onthouden vergeten / lenen verkeerd / doorlenen bij 0).
+
+T3) WELKE UITWERKING KLOPT? (15 items)
+Prompt bevat:
+
+Alleen de som (onder elkaar)
+Vraag: "Welke uitwerking klopt?"
+
+Options zijn 4 korte keuzes (bijv. eindantwoord of cruciale tussenuitkomst), waarvan 1 correct.
+LET OP: zorg dat de 3 foute opties realistische fouten zijn (misconcept-gedreven), en dat opties per item uniek zijn.
+
+MISCONCEPT-LOGICA (HARD)
+
+Cijfers niet goed onder elkaar / kolom verwisseld → GB-OA-PLACE-01
+
+Onthouden vergeten (1 overschrijding) → GB-OA-CARRY-01
+
+Onthouden fout bij meerdere kolommen → GB-OA-CARRY-02
+
+Lenen vergeten → GB-OA-BORROW-01
+
+Lenen verkeerd uitgevoerd → GB-OA-BORROW-02
+
+Doorlenen bij nullen gaat mis → GB-OA-ZERO-01
+
+CONTROLE (HARD)
+Voor je output:
+
+EXACT 50 oefeningen (001–050)
+
+Elke MCQ-fingerprint uniek
+
+options altijd 4 strings, solution.index klopt
+
+taskForm past bij n3
+
+EXACT 1 misconceptKey per oefening
+
+GENEREER NU DE JSON-ARRAY MET 50 OEFENINGEN.

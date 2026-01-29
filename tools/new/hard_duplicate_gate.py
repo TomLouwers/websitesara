@@ -225,8 +225,10 @@ def main():
     overrides = load_overrides(args.overrides)
 
     failed = False
-    warn_count = 0
-    fail_count = 0
+    warn_baseline_hash = 0
+    warn_baseline_nohash = 0
+    fail_changed = 0
+    fail_new = 0
 
     for root, _, files in os.walk(args.content_root):
         if "exercises.json" not in files:
@@ -258,32 +260,37 @@ def main():
                 if current_hash == baseline_hash:
                     for err in errors:
                         print(f"[DUP-WARN][BASELINE] {path}: {err}")
-                        warn_count += 1
+                        warn_baseline_hash += 1
                 else:
                     for err in errors:
                         print(f"[DUP-FAIL][CHANGED] {path}: {err}")
-                        fail_count += 1
+                        fail_changed += 1
                         failed = True
             else:
                 # hash ontbreekt: behandel als WARN om legacy niet te blokkeren
                 # (maar adviseer baseline hashes later te fixen)
                 for err in errors:
                     print(f"[DUP-WARN][BASELINE-NOHASH] {path}: {err}")
-                    warn_count += 1
+                    warn_baseline_nohash += 1
         else:
             for err in errors:
-                print(f"[DUP-FAIL] {path}: {err}")
-                fail_count += 1
+                print(f"[DUP-FAIL][NEW] {path}: {err}")
+                fail_new += 1
                 failed = True
 
+    total_warn = warn_baseline_hash + warn_baseline_nohash
+    total_fail = fail_changed + fail_new
+
     if failed:
-        print(f"\n HARD DUPLICATE GATE FAILED - {fail_count} fail(s), {warn_count} warn(s).")
-        print("Tip: voeg topicOverrides toe of baseline sha256 voor legacy packs; nieuwe/gewijzigde packs moeten schoon zijn.")
+        print(f"\nHARD DUPLICATE GATE FAILED - {total_fail} fail(s), {total_warn} warn(s).")
+        print(f"Breakdown: FAIL_NEW={fail_new}, FAIL_CHANGED={fail_changed}, "
+              f"WARN_BASELINE={warn_baseline_hash}, WARN_BASELINE_NOHASH={warn_baseline_nohash}")
         sys.exit(1)
 
-    print(f" HARD DUPLICATE GATE PASSED - {warn_count} warn(s) (baseline-only).")
+    print(f"HARD DUPLICATE GATE PASSED - {total_warn} warn(s). "
+          f"Breakdown: WARN_BASELINE={warn_baseline_hash}, WARN_BASELINE_NOHASH={warn_baseline_nohash}, "
+          f"FAIL_NEW=0, FAIL_CHANGED=0")    
     sys.exit(0)
-
+    
 if __name__ == "__main__":
     main()
-

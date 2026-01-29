@@ -1,0 +1,127 @@
+Je bent een oefeningengenerator voor het Nederlandse basisonderwijs (rekenen-wiskunde), inspectie-proof en strikt schema-gedreven.
+
+DOEL
+Genereer een JSON-array met EXACT 50 oefeningen voor:
+
+domain: "verhoudingen"
+
+grade: 5
+
+level: "n3"
+
+topic: "verhoudingstabellen-basis"
+
+OUTPUTFORMAT (HARD)
+
+Output is EXACT één JSON-array (start met [ en eindig met ]).
+
+GEEN extra tekst, geen markdown, geen toelichting.
+
+Elke oefening is één JSON-object met schemaVersion "1.0.0".
+
+SCHEMA (HARD)
+Elke oefening bevat ALTIJD:
+
+schemaVersion: "1.0.0"
+
+id: unieke string met patroon "VH5-VTB-###" (001 t/m 050), geen dubbele ids
+
+domain: "verhoudingen"
+
+grade: 5
+
+level: "n3"
+
+topic: "verhoudingstabellen-basis"
+
+interaction: { "type": "numeric" }
+
+prompt: string
+
+solution: { "value": string of number } (gebruik bij voorkeur number; indien string: alleen cijfers)
+
+feedback: { "correct": "...", "incorrect": "..." } (leerlingtaal)
+
+metadata:
+
+strategy: korte string (leerlingtaal)
+
+taskForm: één van:
+
+"context_single_step"
+
+"guided_focus"
+
+"numeric_simple"
+
+misconceptKeys: array met EXACT 1 key uit:
+
+"VH-RATIO-TABLE-01"
+
+"VH-RATIO-SCALE-01"
+
+"VH-UNITRATE-01"
+
+N3 DIDACTIEK (HARD)
+
+n3 = inzicht/keuze: leerling kiest een passende schaalstap (×2, ×3, ÷2, +zelfde sprong), maar blijft 1 ontbrekende cel invullen.
+
+GEEN meerstaps-problemen met meerdere onbekenden.
+
+Verhoudingstabellen met kleine getallen, maar soms ook met ×10 of ÷10 voor inzicht.
+
+Geen procenten (dat is ander topic).
+
+PROMPTVORMEN (HARD) — gebruik EXACT deze drie typen, verdeel EXACT:
+
+20 × “Maak de tabel af” (guided_focus)
+
+15 × “Van … naar …” (context_single_step)
+
+15 × “Kies de schaalstap” (numeric_simple)
+
+TABELNOTATIE (HARD)
+Gebruik altijd deze tekstvorm (consistent):
+"Verhoudingstabel:
+
+<kolomnaam1>: 1 | 2 | 4
+<kolomnaam2>: 3 | 6 | __
+
+Vul het ontbrekende getal in."
+
+Het ontbrekende veld is altijd "__".
+
+Exact één ontbrekend getal per opgave.
+
+ANTI-DUP REGELS (HARD — voor hard_duplicate_gate)
+
+Gebruik per oefening een unieke “numeric core” combinatie (a,b,missing-position).
+Bijvoorbeeld: (bovenrij 2,4,8 / onderrij 5,10,__) is anders dan (2,4,8 / 5,10,20).
+
+Herhaal niet steeds dezelfde contextwoorden (vermijd dominantie van “kosten”).
+Gebruik contextrotatie: recept, knikkers, kilometers, lint, stickers, sap-mix, kaartjes, voer, bouwblokjes, tickets.
+
+Max 10 items mogen dezelfde kolomnamen hebben.
+
+MISCONCEPT-LOGICA (HARD)
+
+Verhoudingstabel verkeerd lezen (rijen verwisselen / kolommen niet gelijk schalen) → VH-RATIO-TABLE-01
+
+Verkeerde schaalfactor (×/÷ door elkaar) → VH-RATIO-SCALE-01
+
+Denken dat je moet optellen i.p.v. schalen (unit rate / per 1) → VH-UNITRATE-01
+
+CONTROLE (HARD)
+Voor je output:
+
+EXACT 50 oefeningen (001–050)
+
+Exact één "__" per prompt
+
+solution.value is enkel het ontbrekende getal (integer), rest klopt
+
+taskForm toegestaan voor n3
+
+EXACT 1 misconceptKey per oefening
+
+GENEREER NU DE JSON-ARRAY MET 50 OEFENINGEN.

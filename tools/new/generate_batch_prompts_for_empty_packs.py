@@ -214,7 +214,8 @@ def render_override_addendum(settings: Dict[str, Any], fallback_id_prefix: str, 
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--content-root", required=True)
-    ap.add_argument("--out-root", default="docs/new/batch-prompts")
+    # default now matches the new prompt pack structure under prompts/packs/nl-NL
+    ap.add_argument("--out-root", default="prompts/packs/nl-NL")
     ap.add_argument("--min-items", type=int, default=30)
     ap.add_argument("--groups", default="4,5,6")
     ap.add_argument("--levels", default="n2,n3")
