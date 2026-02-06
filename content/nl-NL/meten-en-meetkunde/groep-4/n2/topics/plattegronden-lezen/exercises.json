@@ -9,22 +9,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Op deze plattegrond ligt de wc rechts van de klas. Wat ligt links van de klas?",
+    "prompt": "Wat ligt rechts van de ingang?",
     "options": [
-      "gang",
-      "wc",
-      "trap",
-      "plein"
+      "de klas",
+      "de wc",
+      "de gymzaal",
+      "de bibliotheek"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Goed zo!",
+      "incorrect": "Probeer het nog eens."
     },
     "metadata": {
-      "strategy": "Links/rechts aflezen",
+      "strategy": "Kijk goed naar de plattegrond.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-PLAN-01"
@@ -41,22 +41,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Wat ligt tussen de ingang en de klas op de plattegrond?",
+    "prompt": "Op deze tekening ligt de wc ____ van de klas. Wat klopt?",
     "options": [
-      "gang",
-      "trap",
-      "wc",
-      "fietsenhok"
+      "onder",
+      "boven",
+      "tussen",
+      "rechts"
     ],
     "solution": {
-      "index": 0
+      "index": 1
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat is juist!",
+      "incorrect": "Dat klopt niet."
     },
     "metadata": {
-      "strategy": "Tussenliggende plek vinden",
+      "strategy": "Denk na over de positie.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-PLAN-02"
@@ -73,25 +73,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Welke plek ligt boven de bibliotheek in het overzicht?",
+    "prompt": "Welke plek ligt boven de gymzaal?",
     "options": [
-      "klas",
-      "gang",
-      "kantoor",
-      "plein"
+      "de wc",
+      "de klas",
+      "de bibliotheek",
+      "het fietsenhok"
     ],
     "solution": {
-      "index": 0
+      "index": 2
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Goed gedaan!",
+      "incorrect": "Dat is niet correct."
     },
     "metadata": {
-      "strategy": "Boven/onder onderscheiden",
+      "strategy": "Zoek de juiste plek.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PLAN-02"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -105,22 +105,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Op het kaartje ligt de trap boven de gang. Wat ligt onder de trap?",
+    "prompt": "Wat ligt tussen de trap en de bibliotheek?",
     "options": [
-      "fietsenhok",
-      "wc",
-      "bibliotheek",
-      "kantoor"
+      "de wc",
+      "de klas",
+      "de ingang",
+      "de gymzaal"
     ],
     "solution": {
-      "index": 0
+      "index": 3
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat klopt!",
+      "incorrect": "Probeer het nog eens."
     },
     "metadata": {
-      "strategy": "Onderliggende plek kiezen",
+      "strategy": "Kijk goed naar de posities.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-PLAN-02"
@@ -137,22 +137,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "In de tekening ligt de gymzaal links van de trap. Wat ligt rechts van de trap?",
+    "prompt": "Je gaat van de klas naar de wc. Welke richting ga je eerst?",
     "options": [
-      "bibliotheek",
-      "gymzaal",
-      "kantoor",
-      "plein"
+      "rechts",
+      "links",
+      "rechtdoor",
+      "omhoog"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat is goed!",
+      "incorrect": "Dat klopt niet."
     },
     "metadata": {
-      "strategy": "Links/rechts vergelijken",
+      "strategy": "Denk aan de route.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-PLAN-01"
@@ -169,25 +169,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Welke plek ligt direct naast de wc op de plattegrond?",
+    "prompt": "Wat is de juiste volgorde om van het plein naar de gymzaal te lopen?",
     "options": [
-      "gang",
-      "plein",
-      "fietsenhok",
-      "kantoor"
+      "Eerst naar de ingang, daarna naar de gymzaal",
+      "Eerst naar de wc, daarna naar de gymzaal",
+      "Eerst naar de klas, daarna naar de gymzaal",
+      "Eerst naar de bibliotheek, daarna naar de gymzaal"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Juist!",
+      "incorrect": "Dat klopt niet."
     },
     "metadata": {
-      "strategy": "Aangrenzende ruimte herkennen",
+      "strategy": "Volg de stappen.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PLAN-01"
+        "MM-PLAN-02"
       ]
     }
   },
@@ -201,25 +201,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Wat ligt tegenover de ingang aan de overkant van de gang?",
+    "prompt": "Je loopt van de ingang naar de klas. Eerst ga je naar de gang, daarna naar _____. Wat past?",
     "options": [
-      "klas",
-      "wc",
-      "trap",
-      "kantoor"
+      "de wc",
+      "de gymzaal",
+      "de bibliotheek",
+      "de trap"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat is juist!",
+      "incorrect": "Probeer het nog eens."
     },
     "metadata": {
-      "strategy": "Tegenover positie bepalen",
+      "strategy": "Denk aan de volgorde.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PLAN-02"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -233,25 +233,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Op deze plattegrond ligt de bibliotheek naast het kantoor. Welke plek ligt aan de andere kant naast de bibliotheek?",
+    "prompt": "Van de ingang naar de bibliotheek: wat doe je eerst?",
     "options": [
-      "trap",
-      "kantoor",
-      "plein",
-      "wc"
+      "links",
+      "rechtdoor",
+      "rechts",
+      "omhoog"
     ],
     "solution": {
-      "index": 0
+      "index": 1
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Goed zo!",
+      "incorrect": "Dat klopt niet."
     },
     "metadata": {
-      "strategy": "Buren links en rechts lezen",
+      "strategy": "Denk aan de richting.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PLAN-01"
+        "MM-PLAN-02"
       ]
     }
   },
@@ -265,25 +265,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Het plein ligt voor de ingang. Wat ligt direct achter de ingang in het overzicht?",
+    "prompt": "Wat ligt boven de wc?",
     "options": [
-      "gang",
-      "fietsenhok",
-      "wc",
-      "gymzaal"
+      "de klas",
+      "de gang",
+      "de bibliotheek",
+      "de gymzaal"
     ],
     "solution": {
-      "index": 0
+      "index": 1
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat is goed!",
+      "incorrect": "Probeer het nog eens."
     },
     "metadata": {
-      "strategy": "Voor/achter herkennen",
+      "strategy": "Zoek de juiste plek.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PLAN-02"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -297,22 +297,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Welke plek ligt tussen de trap en de wc op de tekening?",
+    "prompt": "Wat ligt tussen de gymzaal en de wc?",
     "options": [
-      "gang",
-      "klas",
-      "plein",
-      "fietsenhok"
+      "de klas",
+      "de ingang",
+      "de trap",
+      "de bibliotheek"
     ],
     "solution": {
-      "index": 0
+      "index": 3
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat klopt!",
+      "incorrect": "Dat is niet juist."
     },
     "metadata": {
-      "strategy": "Tussenliggende ruimte vinden",
+      "strategy": "Kijk goed naar de posities.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-PLAN-02"
@@ -329,22 +329,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Je loopt van de ingang via de gang naar de klas. Daarna ga je door naar welke plek om bij de wc te komen?",
+    "prompt": "Je gaat van de gymzaal naar de klas. Welke richting ga je eerst?",
     "options": [
-      "wc",
-      "plein",
-      "fietsenhok",
-      "gymzaal"
+      "links",
+      "rechtdoor",
+      "rechts",
+      "omhoog"
     ],
     "solution": {
-      "index": 0
+      "index": 2
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat is goed!",
+      "incorrect": "Probeer het nog eens."
     },
     "metadata": {
-      "strategy": "Route vervolgen",
+      "strategy": "Denk aan de route.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-PLAN-01"
@@ -361,22 +361,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Route: plein ? ingang ? gang ? ____ ? gymzaal. Wat hoort op de lege plek?",
+    "prompt": "Welke plek ligt onder de trap?",
     "options": [
-      "trap",
-      "klas",
-      "wc",
-      "kantoor"
+      "de wc",
+      "de klas",
+      "de ingang",
+      "de gymzaal"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat klopt!",
+      "incorrect": "Dat is niet juist."
     },
     "metadata": {
-      "strategy": "Volgorde aanvullen",
+      "strategy": "Zoek de juiste plek.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-PLAN-02"
@@ -393,22 +393,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Welke volgorde klopt om van de ingang naar de bibliotheek te gaan?",
+    "prompt": "Je loopt van de wc naar de ingang. Eerst ga je naar de gang, daarna naar _____. Wat past?",
     "options": [
-      "ingang ? gang ? trap ? bibliotheek",
-      "ingang ? plein ? bibliotheek",
-      "ingang ? wc ? trap ? bibliotheek",
-      "ingang ? kantoor ? bibliotheek"
+      "de klas",
+      "de gymzaal",
+      "de bibliotheek",
+      "de trap"
     ],
     "solution": {
-      "index": 0
+      "index": 2
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat is juist!",
+      "incorrect": "Probeer het nog eens."
     },
     "metadata": {
-      "strategy": "Correcte route kiezen",
+      "strategy": "Denk aan de volgorde.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-PLAN-01"
@@ -425,22 +425,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Je gaat van het fietsenhok naar de klas: plein over, door de ingang, via de gang en dan naar _____.",
+    "prompt": "Wat ligt rechts van de gymzaal?",
     "options": [
-      "klas",
-      "wc",
-      "trap",
-      "kantoor"
+      "de wc",
+      "de klas",
+      "de ingang",
+      "de trap"
     ],
     "solution": {
-      "index": 0
+      "index": 1
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Goed zo!",
+      "incorrect": "Dat klopt niet."
     },
     "metadata": {
-      "strategy": "Route afronden",
+      "strategy": "Zoek de juiste plek.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-PLAN-02"
@@ -457,22 +457,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Van de wc naar de gymzaal: welke stap komt direct na de gang?",
+    "prompt": "Welke plek ligt boven de ingang?",
     "options": [
-      "trap",
-      "kantoor",
-      "fietsenhok",
-      "plein"
+      "de wc",
+      "de gymzaal",
+      "de klas",
+      "de bibliotheek"
     ],
     "solution": {
-      "index": 0
+      "index": 3
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat is goed!",
+      "incorrect": "Probeer het nog eens."
     },
     "metadata": {
-      "strategy": "Volgende stap kiezen",
+      "strategy": "Denk aan de positie.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-PLAN-01"
@@ -489,25 +489,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Welke routezin past: van de klas naar het plein?",
+    "prompt": "Wat ligt tussen de klas en de wc?",
     "options": [
-      "Klas ? gang ? ingang ? plein",
-      "Klas ? trap ? wc ? plein",
-      "Klas ? bibliotheek ? trap ? plein",
-      "Klas ? kantoor ? wc ? plein"
+      "de gang",
+      "de gymzaal",
+      "de bibliotheek",
+      "de ingang"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat klopt!",
+      "incorrect": "Dat is niet juist."
     },
     "metadata": {
-      "strategy": "Routezin controleren",
+      "strategy": "Kijk goed naar de posities.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PLAN-01"
+        "MM-PLAN-02"
       ]
     }
   },
@@ -521,25 +521,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Van de bibliotheek naar het fietsenhok: welke volgorde klopt?",
+    "prompt": "Je gaat van de bibliotheek naar de gymzaal. Welke richting ga je eerst?",
     "options": [
-      "Bibliotheek ? trap ? gang ? ingang ? plein ? fietsenhok",
-      "Bibliotheek ? gang ? wc ? plein ? fietsenhok",
-      "Bibliotheek ? trap ? plein ? fietsenhok",
-      "Bibliotheek ? kantoor ? ingang ? fietsenhok"
+      "links",
+      "rechtdoor",
+      "rechts",
+      "omhoog"
     ],
     "solution": {
-      "index": 0
+      "index": 1
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat is goed!",
+      "incorrect": "Probeer het nog eens."
     },
     "metadata": {
-      "strategy": "Lange route ordenen",
+      "strategy": "Denk aan de route.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PLAN-02"
+        "MM-PLAN-01"
       ]
     }
   },
@@ -553,25 +553,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Je start in het kantoor en wilt naar de gymzaal. Welke route past?",
+    "prompt": "Wat ligt boven de trap?",
     "options": [
-      "Kantoor ? bibliotheek ? trap ? gymzaal",
-      "Kantoor ? gang ? plein ? gymzaal",
-      "Kantoor ? wc ? trap ? gymzaal",
-      "Kantoor ? klas ? plein ? gymzaal"
+      "de wc",
+      "de klas",
+      "de gymzaal",
+      "de ingang"
     ],
     "solution": {
-      "index": 0
+      "index": 2
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat klopt!",
+      "incorrect": "Dat is niet juist."
     },
     "metadata": {
-      "strategy": "Juiste route bepalen",
+      "strategy": "Zoek de juiste plek.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PLAN-01"
+        "MM-PLAN-02"
       ]
     }
   },
@@ -585,22 +585,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Je gaat van de ingang naar de gang. Welke richting ga je eerst?",
+    "prompt": "Je loopt van de gymzaal naar de wc. Eerst ga je naar de ingang, daarna naar _____. Wat past?",
     "options": [
-      "rechtdoor",
-      "linksaf",
-      "rechtsaf",
-      "omhoog"
+      "de klas",
+      "de gang",
+      "de bibliotheek",
+      "de trap"
     ],
     "solution": {
-      "index": 0
+      "index": 1
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat is juist!",
+      "incorrect": "Probeer het nog eens."
     },
     "metadata": {
-      "strategy": "Eerste stap kiezen",
+      "strategy": "Denk aan de volgorde.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-PLAN-01"
@@ -617,25 +617,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Bij de trap in de gang wil je naar de bibliotheek. Welke kant ga je eerst?",
+    "prompt": "Wat ligt tussen de ingang en de gymzaal?",
     "options": [
-      "linksaf",
-      "rechtsaf",
-      "rechtdoor",
-      "terug"
+      "de wc",
+      "de klas",
+      "de trap",
+      "de bibliotheek"
     ],
     "solution": {
-      "index": 0
+      "index": 3
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat klopt!",
+      "incorrect": "Dat is niet juist."
     },
     "metadata": {
-      "strategy": "Links/rechts beslissing",
+      "strategy": "Kijk goed naar de posities.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PLAN-01"
+        "MM-PLAN-02"
       ]
     }
   },
@@ -649,22 +649,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Je staat in de klas en wilt naar het kantoor. Welke richting neem je eerst?",
+    "prompt": "Welke plek ligt onder de bibliotheek?",
     "options": [
-      "rechtsaf de gang in",
-      "linksaf de gang in",
-      "rechtdoor naar buiten",
-      "omhoog"
+      "de wc",
+      "de klas",
+      "de gang",
+      "de gymzaal"
     ],
     "solution": {
-      "index": 1
+      "index": 3
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat is goed!",
+      "incorrect": "Probeer het nog eens."
     },
     "metadata": {
-      "strategy": "Eerste draai bepalen",
+      "strategy": "Zoek de juiste plek.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-PLAN-01"
@@ -681,25 +681,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Je verlaat de bibliotheek en wilt naar het plein. Welke eerste richting past?",
+    "prompt": "Wat ligt rechts van de wc?",
     "options": [
-      "rechtsaf naar de trap",
-      "linksaf naar kantoor",
-      "rechtdoor naar wc",
-      "omhoog"
+      "de klas",
+      "de gang",
+      "de gymzaal",
+      "de ingang"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat klopt!",
+      "incorrect": "Dat is niet juist."
     },
     "metadata": {
-      "strategy": "Eerste stap naar uitgang",
+      "strategy": "Kijk goed naar de posities.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PLAN-01"
+        "MM-PLAN-02"
       ]
     }
   },
@@ -713,22 +713,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Je staat bij de wc en moet naar het kantoor. Welke richting ga je eerst?",
+    "prompt": "Je gaat van de klas naar de gymzaal. Welke richting ga je eerst?",
     "options": [
-      "linksaf de gang op",
-      "rechtsaf de gang op",
-      "rechtdoor naar trap",
-      "omlaag"
+      "links",
+      "rechtdoor",
+      "rechts",
+      "omhoog"
     ],
     "solution": {
-      "index": 1
+      "index": 2
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat is goed!",
+      "incorrect": "Probeer het nog eens."
     },
     "metadata": {
-      "strategy": "Links/rechts vanaf wc",
+      "strategy": "Denk aan de route.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-PLAN-01"
@@ -745,25 +745,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Je wilt van het plein naar de gymzaal. Welke richting neem je eerst vanaf de ingang?",
+    "prompt": "Wat ligt tussen de gymzaal en de ingang?",
     "options": [
-      "rechtdoor de gang in",
-      "linksaf naar kantoor",
-      "rechtsaf naar wc",
-      "omhoog buiten"
+      "de wc",
+      "de klas",
+      "de trap",
+      "de bibliotheek"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat klopt!",
+      "incorrect": "Dat is niet juist."
     },
     "metadata": {
-      "strategy": "Startstap bij ingang",
+      "strategy": "Kijk goed naar de posities.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-PLAN-01"
+        "MM-PLAN-02"
       ]
     }
   },
@@ -777,22 +777,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Je verlaat het kantoor en wilt naar het fietsenhok. Welke eerste stap klopt?",
+    "prompt": "Welke plek ligt boven de klas?",
     "options": [
-      "rechtsaf naar de gang",
-      "linksaf naar de trap",
-      "rechtdoor naar bibliotheek",
-      "omhoog de trap op"
+      "de wc",
+      "de gang",
+      "de gymzaal",
+      "de bibliotheek"
     ],
     "solution": {
-      "index": 0
+      "index": 3
     },
     "feedback": {
-      "correct": "Goed!",
-      "incorrect": "Kijk nog eens naar de plattegrond voor de juiste plek."
+      "correct": "Dat is goed!",
+      "incorrect": "Probeer het nog eens."
     },
     "metadata": {
-      "strategy": "Eerste richting naar buiten",
+      "strategy": "Zoek de juiste plek.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-PLAN-01"

@@ -6,12 +6,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Welk hulpmiddel gebruik je om een lang touw op te meten zonder dat het rekt?",
-    "options": ["meetlint", "weegschaal", "klok", "thermometer"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Klopt, een meetlint ligt vlak en rekt niet mee.", "incorrect": "Gebruik een meetlint; de andere opties meten iets anders." },
-    "metadata": { "strategy": "Kies passend meetinstrument", "taskForm": "select_single", "misconceptKeys": ["MM-MET-COMP-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een deur is ongeveer zo hoog als:\n\nWat is het meest logisch?",
+    "options": [
+      "2 meter",
+      "2 centimeter",
+      "2 liter",
+      "2 kilo"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Probeer het nog eens."
+    },
+    "metadata": {
+      "strategy": "logisch nadenken",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-COMP-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -20,12 +38,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Je weegt een zak appels. Welke eenheid hoort op het display?",
-    "options": ["kilogram", "liter", "meter", "seconde"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Goed, massa druk je uit in kilogram.", "incorrect": "Kies kilogram; de andere eenheden horen bij tijd, lengte of inhoud." },
-    "metadata": { "strategy": "Koppel grootheid aan eenheid", "taskForm": "select_single", "misconceptKeys": ["MM-MET-UNIT-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een fles frisdrank.\n\nWelke uitspraak klopt?",
+    "options": [
+      "Bevat 1 liter.",
+      "Is 1 meter lang.",
+      "Weegt 1 minuut.",
+      "Is 1 uur zwaar."
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Dat klopt!",
+      "incorrect": "Dat is niet juist."
+    },
+    "metadata": {
+      "strategy": "feiten herkennen",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -34,12 +70,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Hoe beschrijf je een comfortabele binnentemperatuur?",
-    "options": ["rond 20 graden", "onder nul", "100 graden", "min 30"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Ja, ongeveer 20 graden is prettig binnen.", "incorrect": "Binnentemperatuur ligt rond 20 graden, niet extreem koud of heet." },
-    "metadata": { "strategy": "Herken realistische waarde", "taskForm": "select_single", "misconceptKeys": ["MM-MET-COMP-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je meet hoe lang een tafel is.\n\nWelke eenheid hoort erbij?",
+    "options": [
+      "centimeter",
+      "liter",
+      "kilogram",
+      "minuut"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Precies!",
+      "incorrect": "Dat is niet de juiste eenheid."
+    },
+    "metadata": {
+      "strategy": "eenheid kiezen",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -48,12 +102,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Je wilt weten hoeveel water er in een beker zit. Wat gebruik je?",
-    "options": ["maatbeker", "liniaal", "weegschaal", "kompas"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Juist, met een maatbeker lees je het volume af.", "incorrect": "Kies een maatbeker; lengte, massa of richting zijn hier niet nodig." },
-    "metadata": { "strategy": "Kies meetinstrument bij volume", "taskForm": "select_single", "misconceptKeys": ["MM-MET-UNIT-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je wilt meten hoe zwaar een tas is.\n\nWat gebruik je om te meten?",
+    "options": [
+      "weegschaal",
+      "maatbeker",
+      "meetlint",
+      "klok"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed gekozen!",
+      "incorrect": "Dat is niet het juiste meetinstrument."
+    },
+    "metadata": {
+      "strategy": "meetinstrument kiezen",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -62,12 +134,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Welke eenheid past bij de lengte van een potlood?",
-    "options": ["centimeter", "meter", "kilogram", "liter"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Klopt, kleine lengtes geef je aan in centimeter.", "incorrect": "Gebruik centimeter; meter is grover en de andere horen niet bij lengte." },
-    "metadata": { "strategy": "Kies passende lengte-eenheid", "taskForm": "select_single", "misconceptKeys": ["MM-MET-UNIT-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een pen weegt ongeveer:\n\nWat is het meest logisch?",
+    "options": [
+      "10 gram",
+      "10 liter",
+      "10 centimeter",
+      "10 uur"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Dat klopt!",
+      "incorrect": "Probeer het nog eens."
+    },
+    "metadata": {
+      "strategy": "logisch nadenken",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -76,12 +166,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Touw A is 3 meter, touw B is 3 meter. Wat klopt?",
-    "options": ["Touw A is langer", "Touw B is langer", "Ze zijn even lang", "Dat zie je niet"],
-    "solution": { "index": 2 },
-    "feedback": { "correct": "Goed, beide touwen hebben dezelfde lengte.", "incorrect": "Beide touwen zijn 3 meter; er is geen verschil." },
-    "metadata": { "strategy": "Vergelijk gegeven lengtes", "taskForm": "select_single", "misconceptKeys": ["MM-MET-COMP-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een emmer kan ongeveer:\n\nWelke uitspraak klopt?",
+    "options": [
+      "Bevat 10 liter.",
+      "Is 10 meter lang.",
+      "Weegt 10 minuten.",
+      "Is 10 uur zwaar."
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed zo!",
+      "incorrect": "Dat klopt niet."
+    },
+    "metadata": {
+      "strategy": "feiten herkennen",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -90,12 +198,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Je meet hoe lang een sprint duurt. Welk apparaat neem je mee?",
-    "options": ["stopwatch", "weegschaal", "thermometer", "maatbeker"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Precies, een stopwatch meet tijd.", "incorrect": "Voor tijd gebruik je een stopwatch, niet een weegschaal of maatbeker." },
-    "metadata": { "strategy": "Koppel apparaat aan tijd", "taskForm": "select_single", "misconceptKeys": ["MM-MET-UNIT-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je meet hoe lang een schrift is.\n\nWelke eenheid hoort erbij?",
+    "options": [
+      "centimeter",
+      "liter",
+      "kilogram",
+      "uur"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Precies!",
+      "incorrect": "Dat is niet de juiste eenheid."
+    },
+    "metadata": {
+      "strategy": "eenheid kiezen",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -104,12 +230,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Welke schatting past bij de hoogte van een schooltas?",
-    "options": ["50 cm", "2 m", "5 mm", "5 m"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Juist, een tas is ongeveer een halve meter hoog.", "incorrect": "Kies een realistische waarde: rond 50 cm." },
-    "metadata": { "strategy": "Schatting controleren", "taskForm": "select_single", "misconceptKeys": ["MM-MET-COMP-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een klaslokaal is ongeveer:\n\nWat is het meest logisch?",
+    "options": [
+      "6 meter",
+      "6 liter",
+      "6 kilo",
+      "6 minuten"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Probeer het nog eens."
+    },
+    "metadata": {
+      "strategy": "logisch nadenken",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-COMP-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -118,12 +262,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Je vult een pak sap. In welke eenheid noteer je de hoeveelheid?",
-    "options": ["milliliter", "kilogram", "meter", "graad"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Goed, vloeistoffen geef je in milliliters of liters aan.", "incorrect": "Gebruik milliliter; de andere eenheden passen bij massa, lengte of temperatuur." },
-    "metadata": { "strategy": "Kies juiste inhoudseenheid", "taskForm": "select_single", "misconceptKeys": ["MM-MET-UNIT-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je wilt weten hoe zwaar een persoon is.\n\nWat gebruik je om te meten?",
+    "options": [
+      "weegschaal",
+      "maatbeker",
+      "meetlint",
+      "klok"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Dat klopt!",
+      "incorrect": "Dat is niet het juiste meetinstrument."
+    },
+    "metadata": {
+      "strategy": "meetinstrument kiezen",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -132,12 +294,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Je wilt de omtrek van een tegelpad meten. Wat pak je?",
-    "options": ["meetlint", "maatbeker", "stopwatch", "thermometer"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Klopt, een meetlint volgt de randen van het pad.", "incorrect": "Gebruik een meetlint; de andere instrumenten meten geen lengte." },
-    "metadata": { "strategy": "Meetinstrument voor omtrek kiezen", "taskForm": "select_single", "misconceptKeys": ["MM-MET-COMP-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een fiets weegt ongeveer:\n\nWat is het meest logisch?",
+    "options": [
+      "15 kilo",
+      "15 liter",
+      "15 centimeter",
+      "15 minuten"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Dat klopt niet."
+    },
+    "metadata": {
+      "strategy": "logisch nadenken",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -146,12 +326,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Hoe vergelijk je het gewicht van twee broden het best?",
-    "options": ["keukenweegschaal", "meetlint", "maatbeker", "klok"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Juist, wegen geeft een eerlijk verschil in massa.", "incorrect": "Gebruik een weegschaal; lengte, inhoud of tijd helpen hier niet." },
-    "metadata": { "strategy": "Kies instrument voor massa", "taskForm": "select_single", "misconceptKeys": ["MM-MET-UNIT-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je meet hoeveel water er in een fles zit.\n\nWelke eenheid hoort erbij?",
+    "options": [
+      "liter",
+      "kilogram",
+      "centimeter",
+      "minuut"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Precies!",
+      "incorrect": "Dat is niet de juiste eenheid."
+    },
+    "metadata": {
+      "strategy": "eenheid kiezen",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -160,12 +358,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Welke waarde past bij een koele koelkast?",
-    "options": ["4 graden", "40 graden", "90 graden", "-50 graden"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Goed, een koelkast staat rond 4 graden.", "incorrect": "Kies 4 graden; de andere zijn veel te warm of te koud." },
-    "metadata": { "strategy": "Herken realistische temperatuur", "taskForm": "select_single", "misconceptKeys": ["MM-MET-COMP-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een brood weegt ongeveer:\n\nWat is het meest logisch?",
+    "options": [
+      "500 gram",
+      "500 liter",
+      "500 centimeter",
+      "500 minuten"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Dat klopt!",
+      "incorrect": "Probeer het nog eens."
+    },
+    "metadata": {
+      "strategy": "logisch nadenken",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -174,12 +390,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Hoe noteer je handig de afstand tussen twee tafels in een klas?",
-    "options": ["meter", "centimeter", "gram", "seconde"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Ja, in een lokaal gebruik je meters voor afstanden tussen meubels.", "incorrect": "Gebruik meter; gram en seconde horen bij andere grootheden." },
-    "metadata": { "strategy": "Kies praktische lengte-eenheid", "taskForm": "select_single", "misconceptKeys": ["MM-MET-UNIT-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een klok geeft de tijd aan.\n\nWelke uitspraak klopt?",
+    "options": [
+      "Geeft uren aan.",
+      "Meet gewicht.",
+      "Meet lengte.",
+      "Geeft liters aan."
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed zo!",
+      "incorrect": "Dat klopt niet."
+    },
+    "metadata": {
+      "strategy": "feiten herkennen",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -188,12 +422,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Welke zin gaat over de inhoud van een doos?",
-    "options": ["Er past 12 liter in", "Hij is 30 cm lang", "Hij weegt 4 kg", "Hij is 50 cm hoog"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Juist, liter beschrijft hoeveel erin kan.", "incorrect": "Let op: inhoud gaat over hoeveel erin past, niet over lengte of massa." },
-    "metadata": { "strategy": "Herken grootheid in beschrijving", "taskForm": "select_single", "misconceptKeys": ["MM-MET-COMP-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je wilt weten hoe lang een pen is.\n\nWat gebruik je om te meten?",
+    "options": [
+      "meetlint",
+      "weegschaal",
+      "maatbeker",
+      "klok"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Dat klopt!",
+      "incorrect": "Dat is niet het juiste meetinstrument."
+    },
+    "metadata": {
+      "strategy": "meetinstrument kiezen",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -202,12 +454,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Welke eenheid past bij de dikte van een boekkaft?",
-    "options": ["millimeter", "liter", "graad", "kilogram"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Goed, diktes geef je klein weer in millimeter.", "incorrect": "Gebruik millimeter; de andere eenheden horen bij andere grootheden." },
-    "metadata": { "strategy": "Kies fijne lengte-eenheid", "taskForm": "select_single", "misconceptKeys": ["MM-MET-UNIT-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een uur is gelijk aan:\n\nWat is het meest logisch?",
+    "options": [
+      "60 minuten",
+      "60 seconden",
+      "60 centimeter",
+      "60 kilo"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Probeer het nog eens."
+    },
+    "metadata": {
+      "strategy": "logisch nadenken",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-COMP-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -216,12 +486,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Wanneer is een meetlint geen handig hulpmiddel?",
-    "options": ["temperatuur in de oven", "lengte van een tuinslang", "hoogte van een deur", "afstand tussen twee palen"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Juist, temperatuur meet je met een thermometer, niet met een lint.", "incorrect": "Een meetlint is prima voor lengtes; temperatuur vraagt een thermometer." },
-    "metadata": { "strategy": "Koppel instrument aan grootheid", "taskForm": "select_single", "misconceptKeys": ["MM-MET-COMP-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een liter melk is ongeveer:\n\nWelke uitspraak klopt?",
+    "options": [
+      "Bevat 1 liter.",
+      "Is 1 meter lang.",
+      "Weegt 1 minuut.",
+      "Is 1 uur zwaar."
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Dat klopt!",
+      "incorrect": "Dat is niet juist."
+    },
+    "metadata": {
+      "strategy": "feiten herkennen",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -230,12 +518,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Hoe meet je de omtrek van een boomstam het best?",
-    "options": ["meetlint", "maatbeker", "weegschaal", "stopwatch"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Klopt, een meetlint kan rond de stam.", "incorrect": "Gebruik een meetlint; de andere instrumenten passen niet bij omtrek." },
-    "metadata": { "strategy": "Kies flexibel meetmiddel", "taskForm": "select_single", "misconceptKeys": ["MM-MET-UNIT-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je meet hoe zwaar een emmer is.\n\nWat gebruik je om te meten?",
+    "options": [
+      "weegschaal",
+      "maatbeker",
+      "meetlint",
+      "klok"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed gekozen!",
+      "incorrect": "Dat is niet het juiste meetinstrument."
+    },
+    "metadata": {
+      "strategy": "meetinstrument kiezen",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -244,12 +550,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Welke schatting past bij het gewicht van een heel brood?",
-    "options": ["800 gram", "8 liter", "8 meter", "80 graden"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Ja, een brood weegt rond 800 gram.", "incorrect": "Kies een massa: rond 800 gram is logisch." },
-    "metadata": { "strategy": "Schat realistisch gewicht", "taskForm": "select_single", "misconceptKeys": ["MM-MET-COMP-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een klaslokaal is ongeveer:\n\nWat is het meest logisch?",
+    "options": [
+      "6 meter",
+      "6 liter",
+      "6 kilo",
+      "6 minuten"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Probeer het nog eens."
+    },
+    "metadata": {
+      "strategy": "logisch nadenken",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-COMP-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -258,12 +582,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "In welke eenheid noteer je de tijd die je over een som doet?",
-    "options": ["seconden", "meter", "liter", "gram"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Goed, tijdsduur noteer je in seconden of minuten.", "incorrect": "Gebruik seconden; meter, liter en gram horen bij andere grootheden." },
-    "metadata": { "strategy": "Kies tijdseenheid", "taskForm": "select_single", "misconceptKeys": ["MM-MET-UNIT-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je wilt meten hoe lang een tafel is.\n\nWat gebruik je om te meten?",
+    "options": [
+      "meetlint",
+      "weegschaal",
+      "maatbeker",
+      "klok"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Dat klopt!",
+      "incorrect": "Dat is niet het juiste meetinstrument."
+    },
+    "metadata": {
+      "strategy": "meetinstrument kiezen",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -272,12 +614,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Wat gebruik je om de buitentemperatuur te controleren?",
-    "options": ["thermometer", "meetlint", "weegschaal", "maatbeker"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Juist, een thermometer laat de temperatuur zien.", "incorrect": "Kies een thermometer; de andere instrumenten meten iets anders." },
-    "metadata": { "strategy": "Koppel instrument aan temperatuur", "taskForm": "select_single", "misconceptKeys": ["MM-MET-UNIT-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een liter water is ongeveer:\n\nWat is het meest logisch?",
+    "options": [
+      "1 liter",
+      "1 meter",
+      "1 kilo",
+      "1 minuut"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Probeer het nog eens."
+    },
+    "metadata": {
+      "strategy": "logisch nadenken",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -286,12 +646,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Zet de lengtematen van klein naar groot.",
-    "options": ["millimeter - centimeter - meter", "meter - kilometer - centimeter", "centimeter - millimeter - meter", "meter - centimeter - milliliter"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Klopt, zo groeit de maat telkens tien keer.", "incorrect": "De juiste volgorde is millimeter, centimeter, meter." },
-    "metadata": { "strategy": "Orden maten logisch", "taskForm": "select_single", "misconceptKeys": ["MM-MET-COMP-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een fiets is ongeveer:\n\nWat is het meest logisch?",
+    "options": [
+      "15 kilo",
+      "15 liter",
+      "15 centimeter",
+      "15 minuten"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Dat klopt!",
+      "incorrect": "Dat is niet juist."
+    },
+    "metadata": {
+      "strategy": "logisch nadenken",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -300,12 +678,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Welke eenheid gebruik je voor de inhoud van een emmer water?",
-    "options": ["liter", "graad", "kilogram", "meter"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Goed, een emmerinhoud druk je uit in liters.", "incorrect": "Gebruik liter; graad, kilogram en meter horen bij andere grootheden." },
-    "metadata": { "strategy": "Kies inhoudseenheid", "taskForm": "select_single", "misconceptKeys": ["MM-MET-UNIT-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je wilt weten hoe zwaar een boek is.\n\nWat gebruik je om te meten?",
+    "options": [
+      "weegschaal",
+      "maatbeker",
+      "meetlint",
+      "klok"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed gekozen!",
+      "incorrect": "Dat is niet het juiste meetinstrument."
+    },
+    "metadata": {
+      "strategy": "meetinstrument kiezen",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -314,12 +710,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Je wilt de tijd meten tussen twee bushaltes. Wat pak je?",
-    "options": ["stopwatch", "thermometer", "maatbeker", "kompas"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Ja, een stopwatch meet de tijd nauwkeurig.", "incorrect": "Gebruik een stopwatch; de andere meten iets anders dan tijd." },
-    "metadata": { "strategy": "Kies tijdinstrument", "taskForm": "select_single", "misconceptKeys": ["MM-MET-UNIT-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een uur is gelijk aan:\n\nWat is het meest logisch?",
+    "options": [
+      "60 minuten",
+      "60 seconden",
+      "60 centimeter",
+      "60 kilo"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed gedaan!",
+      "incorrect": "Probeer het nog eens."
+    },
+    "metadata": {
+      "strategy": "logisch nadenken",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-COMP-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -328,12 +742,30 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Welke zin gaat over lengte?",
-    "options": ["De planklengte in meter en centimeter", "Het gewicht in kilo", "De inhoud in liter", "De tijd in minuten"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Goed, meter en centimeter geven een lengte aan.", "incorrect": "Let op: lengte beschrijf je met meter of centimeter." },
-    "metadata": { "strategy": "Herken lengte-informatie", "taskForm": "select_single", "misconceptKeys": ["MM-MET-COMP-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je meet hoeveel melk er in een fles zit.\n\nWelke eenheid hoort erbij?",
+    "options": [
+      "liter",
+      "kilogram",
+      "centimeter",
+      "minuut"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Precies!",
+      "incorrect": "Dat is niet de juiste eenheid."
+    },
+    "metadata": {
+      "strategy": "eenheid kiezen",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   },
   {
     "schemaVersion": "1.0.0",
@@ -342,11 +774,29 @@
     "grade": 4,
     "level": "n2",
     "topic": "meten-beschrijven",
-    "interaction": { "type": "mcq" },
-    "prompt": "Welke eenheid is handig voor de breedte van een stiftpunt?",
-    "options": ["millimeter", "kilogram", "meter", "liter"],
-    "solution": { "index": 0 },
-    "feedback": { "correct": "Juist, millimeter past bij zeer kleine breedtes.", "incorrect": "Gebruik millimeter; de andere eenheden horen niet bij zo'n kleine lengte." },
-    "metadata": { "strategy": "Kies kleinste lengte-eenheid", "taskForm": "select_single", "misconceptKeys": ["MM-MET-UNIT-01"] }
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een tas weegt ongeveer:\n\nWat is het meest logisch?",
+    "options": [
+      "1 kilo",
+      "1 liter",
+      "1 centimeter",
+      "1 minuut"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Dat klopt!",
+      "incorrect": "Probeer het nog eens."
+    },
+    "metadata": {
+      "strategy": "logisch nadenken",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
   }
 ]

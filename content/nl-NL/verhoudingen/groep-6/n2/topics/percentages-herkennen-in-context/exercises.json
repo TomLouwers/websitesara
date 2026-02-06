@@ -1,1282 +1,738 @@
 [
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-001",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "In een klas is 25% van de stoelen bezet.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Op een poster staat: 50% van de stoelen is bezet.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "Een kwart van het geheel."
+      },
+      {
+        "B": "Een tiende van het geheel."
+      },
+      {
+        "C": "Drie kwart van het geheel."
+      },
+      {
+        "D": "Het hele geheel."
+      }
     ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-WHOLE-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-002",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "Op een bord staat: ‘50% korting’.\nWat zegt dit over de prijs?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "In een grafiek staat: 50% van de leerlingen kiest rood.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "De helft van het geheel."
+      },
+      {
+        "B": "Een kwart van het geheel."
+      },
+      {
+        "C": "Een klein deel."
+      },
+      {
+        "D": "Bijna alles."
+      }
     ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-MEAN-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-003",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "Van alle leerlingen heeft 10% een rode jas.\nWat betekent dit?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Een bioscoop meldt: 50% van de plaatsen is verkocht.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "Een klein deel van alles samen."
+      },
+      {
+        "B": "Het grootste deel."
+      },
+      {
+        "C": "Precies alles."
+      },
+      {
+        "D": "Meer dan de helft."
+      }
     ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-WHOLE-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-004",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "Een fles is voor 75% gevuld.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "In de klas draagt 50% blauwe shirts.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "Een kwart van het geheel."
+      },
+      {
+        "B": "Een tiende van het geheel."
+      },
+      {
+        "C": "Drie kwart van het geheel."
+      },
+      {
+        "D": "Het hele geheel."
+      }
     ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-MEAN-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-005",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "Op een grafiek staat 25% aangegeven.\nWat zegt dit over het geheel?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Van de knikkers is 50% groen.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "De helft van het geheel."
+      },
+      {
+        "B": "Een kwart van het geheel."
+      },
+      {
+        "C": "Een klein deel."
+      },
+      {
+        "D": "Bijna alles."
+      }
     ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-WHOLE-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-006",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "In een school heeft 50% van de leerlingen een laptop.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Een vakje is voor 50% gekleurd.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "De helft van het geheel."
+      },
+      {
+        "B": "Een kwart van het geheel."
+      },
+      {
+        "C": "Een klein deel."
+      },
+      {
+        "D": "Bijna alles."
+      }
     ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-MEAN-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-007",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "Bij een sportevenement is 10% van de bezoekers een kind.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Op een festival is 50% van de tickets verkocht.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "Een klein deel van alles samen."
+      },
+      {
+        "B": "Het grootste deel."
+      },
+      {
+        "C": "Precies alles."
+      },
+      {
+        "D": "Meer dan de helft."
+      }
     ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-WHOLE-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-008",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "Een pizza is voor 75% opgegeten.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "In een bus is 50% van de stoelen bezet.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "Een kwart van het geheel."
+      },
+      {
+        "B": "Een tiende van het geheel."
+      },
+      {
+        "C": "Drie kwart van het geheel."
+      },
+      {
+        "D": "Het hele geheel."
+      }
     ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-MEAN-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-009",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "In een klas heeft 25% van de leerlingen een huisdier.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Bij een enqu?te antwoordt 50% ja.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "De helft van het geheel."
+      },
+      {
+        "B": "Een kwart van het geheel."
+      },
+      {
+        "C": "Een klein deel."
+      },
+      {
+        "D": "Bijna alles."
+      }
     ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-WHOLE-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-010",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "Bij een filmvertoning is 50% van de stoelen bezet.\nWat zegt dit over de zaal?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Op een veld is 50% gemaaid.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "De helft van het geheel."
+      },
+      {
+        "B": "Een kwart van het geheel."
+      },
+      {
+        "C": "Een klein deel."
+      },
+      {
+        "D": "Bijna alles."
+      }
     ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-MEAN-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-011",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "In een winkel is 10% van de producten in de aanbieding.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Een sportclub zegt: 50% van de leden komt.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "Een klein deel van alles samen."
+      },
+      {
+        "B": "Het grootste deel."
+      },
+      {
+        "C": "Precies alles."
+      },
+      {
+        "D": "Meer dan de helft."
+      }
     ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-WHOLE-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-012",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "Een zwembad is voor 75% gevuld met water.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "In een doos koekjes is 50% chocolade.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "Een kwart van het geheel."
+      },
+      {
+        "B": "Een tiende van het geheel."
+      },
+      {
+        "C": "Drie kwart van het geheel."
+      },
+      {
+        "D": "Het hele geheel."
+      }
     ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-MEAN-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-013",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "In een klas is 25% van de leerlingen geslaagd.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Op een kaartje staat: korting 50% van de prijs.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "De helft van het geheel."
+      },
+      {
+        "B": "Een kwart van het geheel."
+      },
+      {
+        "C": "Een klein deel."
+      },
+      {
+        "D": "Bijna alles."
+      }
     ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-WHOLE-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-014",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "Bij een concert is 50% van de tickets verkocht.\nWat zegt dit over de verkoop?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Een voorraadkast is 50% gevuld.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "De helft van het geheel."
+      },
+      {
+        "B": "Een kwart van het geheel."
+      },
+      {
+        "C": "Een klein deel."
+      },
+      {
+        "D": "Bijna alles."
+      }
     ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-MEAN-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-015",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "In een klas heeft 10% van de leerlingen een smartphone.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Op een camping is 50% van de plaatsen bezet.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "Een klein deel van alles samen."
+      },
+      {
+        "B": "Het grootste deel."
+      },
+      {
+        "C": "Precies alles."
+      },
+      {
+        "D": "Meer dan de helft."
+      }
     ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-WHOLE-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-016",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "Een boek is voor 75% gelezen.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Op een kaart staat: 25% van de stoelen is bezet.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "Een kwart van het geheel."
+      },
+      {
+        "B": "Een tiende van het geheel."
+      },
+      {
+        "C": "Drie kwart van het geheel."
+      },
+      {
+        "D": "Het hele geheel."
+      }
     ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-MEAN-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-017",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "In een klas is 25% van de leerlingen een jongen.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "In de klas is 25% van de leerlingen absent.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "De helft van het geheel."
+      },
+      {
+        "B": "Een kwart van het geheel."
+      },
+      {
+        "C": "Een klein deel."
+      },
+      {
+        "D": "Bijna alles."
+      }
     ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-WHOLE-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-018",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "Bij een tentoonstelling is 50% van de kunstwerken verkocht.\nWat zegt dit over de tentoonstelling?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Van de knikkers is 25% rood.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "De helft van het geheel."
+      },
+      {
+        "B": "Een kwart van het geheel."
+      },
+      {
+        "C": "Een klein deel."
+      },
+      {
+        "D": "Bijna alles."
+      }
     ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-MEAN-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-019",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "In een park is 10% van de bezoekers een kind.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Een taart is 25% opgegeten.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "Een klein deel van alles samen."
+      },
+      {
+        "B": "Het grootste deel."
+      },
+      {
+        "C": "Precies alles."
+      },
+      {
+        "D": "Meer dan de helft."
+      }
     ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-WHOLE-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-020",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "Een glas is voor 75% gevuld met sap.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Een grafiek toont: 25% kiest optie A.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "Een kwart van het geheel."
+      },
+      {
+        "B": "Een tiende van het geheel."
+      },
+      {
+        "C": "Drie kwart van het geheel."
+      },
+      {
+        "D": "Het hele geheel."
+      }
     ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-MEAN-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-021",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "In een klas heeft 25% van de leerlingen een fiets.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Een zaal meldt: 25% van de plaatsen is gevuld.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "De helft van het geheel."
+      },
+      {
+        "B": "Een kwart van het geheel."
+      },
+      {
+        "C": "Een klein deel."
+      },
+      {
+        "D": "Bijna alles."
+      }
     ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-WHOLE-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-022",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "Bij een sportwedstrijd is 50% van de teams gewonnen.\nWat zegt dit over de wedstrijd?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Een bos bloemen: 25% is geel.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "De helft van het geheel."
+      },
+      {
+        "B": "Een kwart van het geheel."
+      },
+      {
+        "C": "Een klein deel."
+      },
+      {
+        "D": "Bijna alles."
+      }
     ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-MEAN-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-023",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "In een winkel is 10% van de klanten een volwassene.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Een bak snoep: 25% is zuur.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "Een klein deel van alles samen."
+      },
+      {
+        "B": "Het grootste deel."
+      },
+      {
+        "C": "Precies alles."
+      },
+      {
+        "D": "Meer dan de helft."
+      }
     ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-WHOLE-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-024",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "Een taart is voor 75% opgegeten.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Een korting is 25% van de prijs.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "Een kwart van het geheel."
+      },
+      {
+        "B": "Een tiende van het geheel."
+      },
+      {
+        "C": "Drie kwart van het geheel."
+      },
+      {
+        "D": "Het hele geheel."
+      }
     ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-MEAN-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-025",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "In een klas is 25% van de leerlingen geslaagd voor de toets.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Een trap is 25% geschilderd.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "De helft van het geheel."
+      },
+      {
+        "B": "Een kwart van het geheel."
+      },
+      {
+        "C": "Een klein deel."
+      },
+      {
+        "D": "Bijna alles."
+      }
     ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-WHOLE-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-026",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "Bij een festival is 50% van de bezoekers tevreden.\nWat zegt dit over het festival?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Een doos is 25% vol.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "De helft van het geheel."
+      },
+      {
+        "B": "Een kwart van het geheel."
+      },
+      {
+        "C": "Een klein deel."
+      },
+      {
+        "D": "Bijna alles."
+      }
     ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-MEAN-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-027",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "In een bibliotheek is 10% van de boeken nieuw.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Een klas leest 25% van het boek.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "Een klein deel van alles samen."
+      },
+      {
+        "B": "Het grootste deel."
+      },
+      {
+        "C": "Precies alles."
+      },
+      {
+        "D": "Meer dan de helft."
+      }
     ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-WHOLE-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-028",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "Een fles is voor 75% gevuld met frisdrank.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Een stadion is 25% gevuld.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "Een kwart van het geheel."
+      },
+      {
+        "B": "Een tiende van het geheel."
+      },
+      {
+        "C": "Drie kwart van het geheel."
+      },
+      {
+        "D": "Het hele geheel."
+      }
     ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-MEAN-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-029",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "In een klas heeft 25% van de leerlingen een laptop.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Een poster zegt: 25% kiest fietsen.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "De helft van het geheel."
+      },
+      {
+        "B": "Een kwart van het geheel."
+      },
+      {
+        "C": "Een klein deel."
+      },
+      {
+        "D": "Bijna alles."
+      }
     ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-WHOLE-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-030",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "Bij een tentoonstelling is 50% van de bezoekers geïnteresseerd.\nWat zegt dit over de tentoonstelling?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Een grafiek toont: 25% stemt ja.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "De helft van het geheel."
+      },
+      {
+        "B": "Een kwart van het geheel."
+      },
+      {
+        "C": "Een klein deel."
+      },
+      {
+        "D": "Bijna alles."
+      }
     ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-02"
-      ]
-    }
+    "misconceptKey": "VH-PERC-MEAN-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-031",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "In een park is 10% van de bezoekers een volwassene.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Op een bord staat: 10% korting op alle boeken.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "Een klein deel van alles samen."
+      },
+      {
+        "B": "Het grootste deel."
+      },
+      {
+        "C": "Precies alles."
+      },
+      {
+        "D": "Meer dan de helft."
+      }
     ],
-    "solution": {
-      "index": 3
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-01"
-      ]
-    }
+    "misconceptKey": "VH-PERC-WHOLE-01"
   },
   {
     "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-032",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
+    "prompt": "Een glas is voor 75% gevuld met water.\nWat betekent dat?",
     "interaction": {
-      "type": "mcq"
+      "type": "mcq",
+      "taskForm": "select_single"
     },
-    "prompt": "Een winkel meldt: 10% van de rekken is leeg.\n\nWat betekent dit?",
     "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
+      {
+        "A": "Een kwart van het geheel."
+      },
+      {
+        "B": "Een tiende van het geheel."
+      },
+      {
+        "C": "Drie kwart van het geheel."
+      },
+      {
+        "D": "Het hele geheel."
+      }
     ],
-    "solution": {
-      "index": 3
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-01"
-      ]
-    }
-  },
-  {
-    "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-033",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
-    "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Een enqu?te: 10% antwoordt nee.\n\nWat betekent dit?",
-    "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
-    ],
-    "solution": {
-      "index": 3
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-01"
-      ]
-    }
-  },
-  {
-    "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-034",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
-    "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Een stadion: 10% van de stoelen is bezet.\n\nWat betekent dit?",
-    "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
-    ],
-    "solution": {
-      "index": 3
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-01"
-      ]
-    }
-  },
-  {
-    "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-035",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
-    "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Een grafiek: 10% kiest optie B.\n\nWat betekent dit?",
-    "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
-    ],
-    "solution": {
-      "index": 3
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-01"
-      ]
-    }
-  },
-  {
-    "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-036",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
-    "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Een voorraad: 10% is op.\n\nWat betekent dit?",
-    "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
-    ],
-    "solution": {
-      "index": 3
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-01"
-      ]
-    }
-  },
-  {
-    "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-037",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
-    "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Een club: 10% van de leden is ziek.\n\nWat betekent dit?",
-    "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
-    ],
-    "solution": {
-      "index": 3
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-01"
-      ]
-    }
-  },
-  {
-    "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-038",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
-    "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Een bak met 100 knikkers: 10% is blauw.\n\nWat betekent dit?",
-    "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
-    ],
-    "solution": {
-      "index": 3
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-01"
-      ]
-    }
-  },
-  {
-    "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-039",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
-    "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Een speeltuin: 10% van de toestellen is gesloten.\n\nWat betekent dit?",
-    "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
-    ],
-    "solution": {
-      "index": 3
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-01"
-      ]
-    }
-  },
-  {
-    "schemaVersion": "1.0.0",
-    "id": "VH6-PHC-040",
-    "domain": "verhoudingen",
-    "grade": 6,
-    "level": "n2",
-    "topic": "percentages-herkennen-in-context",
-    "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Een app: 10% van de badges is behaald.\n\nWat betekent dit?",
-    "options": [
-      "De helft van de stoelen is bezet.",
-      "Alle stoelen zijn bezet.",
-      "Een kwart van de stoelen is bezet.",
-      "Tien van de stoelen zijn bezet."
-    ],
-    "solution": {
-      "index": 3
-    },
-    "feedback": {
-      "correct": "Goed gezien wat het percentage betekent.",
-      "incorrect": "Lees het percentage als deel van het geheel, niet als vast aantal."
-    },
-    "metadata": {
-      "strategy": "percentage interpreteren",
-      "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-PERC-MEAN-01"
-      ]
-    }
+    "misconceptKey": "VH-PERC-MEAN-01"
   }
 ]

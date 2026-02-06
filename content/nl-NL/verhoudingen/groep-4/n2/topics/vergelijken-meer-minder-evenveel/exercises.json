@@ -1,962 +1,512 @@
 [
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-001",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft meer appels, Jan of Piet?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Mand A heeft 5 appels en mand B 3 appels.",
-    "options": [
-      "meer",
-      "evenveel",
-      "weet ik niet",
-      "minder"
-    ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-02"
-      ]
-    }
+      "options": [
+        "meer",
+        "minder",
+        "evenveel",
+        "weet ik niet"
+      ],
+      "correctOption": "meer"
+    },
+    "misconceptKey": "misconcept1"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-002",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Vergelijk het aantal boeken van Lisa en Tom.",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Doos A bevat 4 stiften en doos B 5 stiften.",
-    "options": [
-      "Het is minder.",
-      "Dat kun je niet zien.",
-      "Het is evenveel.",
-      "Het is meer."
-    ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-03"
-      ]
-    }
+      "options": [
+        "Het is meer.",
+        "Het is minder.",
+        "Het is evenveel.",
+        "Dat kun je niet zien."
+      ],
+      "correctOption": "Het is minder."
+    },
+    "misconceptKey": "misconcept2"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-003",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft minder knikkers, Sara of Noor?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Team A scoort 6 punten en team B 6 punten.",
-    "options": [
-      "onzeker ?",
-      "minder ?",
-      "meer ?",
-      "evenveel ="
-    ],
-    "solution": {
-      "index": 3
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-01"
-      ]
-    }
+      "options": [
+        "meer ↑",
+        "minder ↓",
+        "evenveel =",
+        "onzeker ?"
+      ],
+      "correctOption": "minder ↓"
+    },
+    "misconceptKey": "misconcept3"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-004",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft evenveel snoepjes, Emma of Levi?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Tas A weegt 8 kg en tas B 7 kg.",
-    "options": [
-      "minder",
-      "meer",
-      "evenveel",
-      "weet ik niet"
-    ],
-    "solution": {
-      "index": 1
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-02"
-      ]
-    }
+      "options": [
+        "meer",
+        "minder",
+        "evenveel",
+        "weet ik niet"
+      ],
+      "correctOption": "evenveel"
+    },
+    "misconceptKey": "misconcept4"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-005",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Vergelijk het aantal ballonnen van Anna en Sam.",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Pot A heeft 3 knikkers en pot B 3 knikkers.",
-    "options": [
-      "Dat kun je niet zien.",
-      "Het is minder.",
-      "Het is meer.",
-      "Het is evenveel."
-    ],
-    "solution": {
-      "index": 3
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-03"
-      ]
-    }
+      "options": [
+        "Het is meer.",
+        "Het is minder.",
+        "Het is evenveel.",
+        "Dat kun je niet zien."
+      ],
+      "correctOption": "Het is meer."
+    },
+    "misconceptKey": "misconcept1"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-006",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft meer stickers, Max of Julia?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Mand A heeft 9 appels en mand B 5 appels.",
-    "options": [
-      "meer ?",
-      "evenveel =",
-      "minder ?",
-      "onzeker ?"
-    ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-01"
-      ]
-    }
+      "options": [
+        "meer ↑",
+        "minder ↓",
+        "evenveel =",
+        "onzeker ?"
+      ],
+      "correctOption": "meer ↑"
+    },
+    "misconceptKey": "misconcept2"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-007",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft minder potloden, Tim of Eva?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Doos A bevat 2 stiften en doos B 4 stiften.",
-    "options": [
-      "weet ik niet",
-      "minder",
-      "meer",
-      "evenveel"
-    ],
-    "solution": {
-      "index": 1
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-02"
-      ]
-    }
+      "options": [
+        "meer",
+        "minder",
+        "evenveel",
+        "weet ik niet"
+      ],
+      "correctOption": "minder"
+    },
+    "misconceptKey": "misconcept3"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-008",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Vergelijk het aantal pennen van Roos en Bas.",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Team A scoort 7 punten en team B 9 punten.",
-    "options": [
-      "Het is meer.",
-      "Dat kun je niet zien.",
-      "Het is evenveel.",
-      "Het is minder."
-    ],
-    "solution": {
-      "index": 3
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-03"
-      ]
-    }
+      "options": [
+        "Het is meer.",
+        "Het is minder.",
+        "Het is evenveel.",
+        "Dat kun je niet zien."
+      ],
+      "correctOption": "Het is evenveel."
+    },
+    "misconceptKey": "misconcept4"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-009",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft meer koekjes, Noor of Daan?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Tas A weegt 10 kg en tas B 10 kg.",
-    "options": [
-      "evenveel =",
-      "minder ?",
-      "onzeker ?",
-      "meer ?"
-    ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-01"
-      ]
-    }
+      "options": [
+        "meer ↑",
+        "minder ↓",
+        "evenveel =",
+        "onzeker ?"
+      ],
+      "correctOption": "onzeker ?"
+    },
+    "misconceptKey": "misconcept1"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-010",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft evenveel boeken, Lisa of Tom?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Pot A heeft 6 knikkers en pot B 8 knikkers.",
-    "options": [
-      "evenveel",
-      "meer",
-      "minder",
-      "weet ik niet"
-    ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-02"
-      ]
-    }
+      "options": [
+        "meer",
+        "minder",
+        "evenveel",
+        "weet ik niet"
+      ],
+      "correctOption": "evenveel"
+    },
+    "misconceptKey": "misconcept2"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-011",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Vergelijk het aantal appels van Jan en Piet.",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Mand A heeft 3 appels en mand B 5 appels.",
-    "options": [
-      "Het is evenveel.",
-      "Het is minder.",
-      "Dat kun je niet zien.",
-      "Het is meer."
-    ],
-    "solution": {
-      "index": 1
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-03"
-      ]
-    }
+      "options": [
+        "Het is meer.",
+        "Het is minder.",
+        "Het is evenveel.",
+        "Dat kun je niet zien."
+      ],
+      "correctOption": "Het is minder."
+    },
+    "misconceptKey": "misconcept3"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-012",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft minder knikkers, Sara of Noor?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Doos A bevat 5 stiften en doos B 5 stiften.",
-    "options": [
-      "evenveel =",
-      "minder ?",
-      "meer ?",
-      "onzeker ?"
-    ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-01"
-      ]
-    }
+      "options": [
+        "meer ↑",
+        "minder ↓",
+        "evenveel =",
+        "onzeker ?"
+      ],
+      "correctOption": "minder ↓"
+    },
+    "misconceptKey": "misconcept4"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-013",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft meer snoepjes, Emma of Levi?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Team A scoort 4 punten en team B 2 punten.",
-    "options": [
-      "weet ik niet",
-      "meer",
-      "evenveel",
-      "minder"
-    ],
-    "solution": {
-      "index": 1
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-02"
-      ]
-    }
+      "options": [
+        "meer",
+        "minder",
+        "evenveel",
+        "weet ik niet"
+      ],
+      "correctOption": "meer"
+    },
+    "misconceptKey": "misconcept1"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-014",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Vergelijk het aantal ballonnen van Anna en Sam.",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Tas A weegt 7 kg en tas B 6 kg.",
-    "options": [
-      "Het is meer.",
-      "Het is minder.",
-      "Het is evenveel.",
-      "Dat kun je niet zien."
-    ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-03"
-      ]
-    }
+      "options": [
+        "Het is meer.",
+        "Het is minder.",
+        "Het is evenveel.",
+        "Dat kun je niet zien."
+      ],
+      "correctOption": "Dat kun je niet zien."
+    },
+    "misconceptKey": "misconcept2"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-015",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft minder stickers, Max of Julia?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Pot A heeft 8 knikkers en pot B 8 knikkers.",
-    "options": [
-      "minder ?",
-      "onzeker ?",
-      "evenveel =",
-      "meer ?"
-    ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-01"
-      ]
-    }
+      "options": [
+        "meer ↑",
+        "minder ↓",
+        "evenveel =",
+        "onzeker ?"
+      ],
+      "correctOption": "minder ↓"
+    },
+    "misconceptKey": "misconcept3"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-016",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft evenveel potloden, Tim of Eva?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Mand A heeft 2 appels en mand B 3 appels.",
-    "options": [
-      "meer",
-      "weet ik niet",
-      "evenveel",
-      "minder"
-    ],
-    "solution": {
-      "index": 3
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-02"
-      ]
-    }
+      "options": [
+        "meer",
+        "minder",
+        "evenveel",
+        "weet ik niet"
+      ],
+      "correctOption": "evenveel"
+    },
+    "misconceptKey": "misconcept4"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-017",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Vergelijk het aantal pennen van Roos en Bas.",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Doos A bevat 9 stiften en doos B 7 stiften.",
-    "options": [
-      "Het is minder.",
-      "Het is meer.",
-      "Dat kun je niet zien.",
-      "Het is evenveel."
-    ],
-    "solution": {
-      "index": 1
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-03"
-      ]
-    }
+      "options": [
+        "Het is meer.",
+        "Het is minder.",
+        "Het is evenveel.",
+        "Dat kun je niet zien."
+      ],
+      "correctOption": "Het is meer."
+    },
+    "misconceptKey": "misconcept1"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-018",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft meer koekjes, Noor of Daan?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Team A scoort 5 punten en team B 4 punten.",
-    "options": [
-      "evenveel =",
-      "meer ?",
-      "onzeker ?",
-      "minder ?"
-    ],
-    "solution": {
-      "index": 1
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-01"
-      ]
-    }
+      "options": [
+        "meer ↑",
+        "minder ↓",
+        "evenveel =",
+        "onzeker ?"
+      ],
+      "correctOption": "meer ↑"
+    },
+    "misconceptKey": "misconcept2"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-019",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft minder boeken, Lisa of Tom?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Tas A weegt 6 kg en tas B 9 kg.",
-    "options": [
-      "minder",
-      "weet ik niet",
-      "meer",
-      "evenveel"
-    ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-02"
-      ]
-    }
+      "options": [
+        "meer",
+        "minder",
+        "evenveel",
+        "weet ik niet"
+      ],
+      "correctOption": "minder"
+    },
+    "misconceptKey": "misconcept3"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-020",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Vergelijk het aantal appels van Jan en Piet.",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Pot A heeft 7 knikkers en pot B 7 knikkers.",
-    "options": [
-      "Dat kun je niet zien.",
-      "Het is evenveel.",
-      "Het is minder.",
-      "Het is meer."
-    ],
-    "solution": {
-      "index": 1
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-03"
-      ]
-    }
+      "options": [
+        "Het is meer.",
+        "Het is minder.",
+        "Het is evenveel.",
+        "Dat kun je niet zien."
+      ],
+      "correctOption": "Het is evenveel."
+    },
+    "misconceptKey": "misconcept4"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-021",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft meer knikkers, Sara of Noor?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Mand A heeft 8 appels en mand B 5 appels.",
-    "options": [
-      "minder ?",
-      "evenveel =",
-      "meer ?",
-      "onzeker ?"
-    ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-01"
-      ]
-    }
+      "options": [
+        "meer ↑",
+        "minder ↓",
+        "evenveel =",
+        "onzeker ?"
+      ],
+      "correctOption": "onzeker ?"
+    },
+    "misconceptKey": "misconcept1"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-022",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft evenveel snoepjes, Emma of Levi?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Doos A bevat 6 stiften en doos B 4 stiften.",
-    "options": [
-      "meer",
-      "weet ik niet",
-      "minder",
-      "evenveel"
-    ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-02"
-      ]
-    }
+      "options": [
+        "meer",
+        "minder",
+        "evenveel",
+        "weet ik niet"
+      ],
+      "correctOption": "evenveel"
+    },
+    "misconceptKey": "misconcept2"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-023",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Vergelijk het aantal ballonnen van Anna en Sam.",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Team A scoort 5 punten en team B 6 punten.",
-    "options": [
-      "Het is evenveel.",
-      "Het is minder.",
-      "Het is meer.",
-      "Dat kun je niet zien."
-    ],
-    "solution": {
-      "index": 1
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-03"
-      ]
-    }
+      "options": [
+        "Het is meer.",
+        "Het is minder.",
+        "Het is evenveel.",
+        "Dat kun je niet zien."
+      ],
+      "correctOption": "Het is minder."
+    },
+    "misconceptKey": "misconcept3"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-024",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft minder stickers, Max of Julia?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Tas A weegt 9 kg en tas B 9 kg.",
-    "options": [
-      "evenveel =",
-      "meer ?",
-      "minder ?",
-      "onzeker ?"
-    ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-01"
-      ]
-    }
+      "options": [
+        "meer ↑",
+        "minder ↓",
+        "evenveel =",
+        "onzeker ?"
+      ],
+      "correctOption": "minder ↓"
+    },
+    "misconceptKey": "misconcept4"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-025",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft meer potloden, Tim of Eva?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Pot A heeft 10 knikkers en pot B 8 knikkers.",
-    "options": [
-      "evenveel",
-      "minder",
-      "weet ik niet",
-      "meer"
-    ],
-    "solution": {
-      "index": 3
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-02"
-      ]
-    }
+      "options": [
+        "meer",
+        "minder",
+        "evenveel",
+        "weet ik niet"
+      ],
+      "correctOption": "meer"
+    },
+    "misconceptKey": "misconcept1"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-026",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Vergelijk het aantal pennen van Roos en Bas.",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Mand A heeft 3 appels en mand B 4 appels.",
-    "options": [
-      "Het is minder.",
-      "Het is evenveel.",
-      "Het is meer.",
-      "Dat kun je niet zien."
-    ],
-    "solution": {
-      "index": 0
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-03"
-      ]
-    }
+      "options": [
+        "Het is meer.",
+        "Het is minder.",
+        "Het is evenveel.",
+        "Dat kun je niet zien."
+      ],
+      "correctOption": "Dat kun je niet zien."
+    },
+    "misconceptKey": "misconcept2"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-027",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft minder koekjes, Noor of Daan?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Doos A bevat 4 stiften en doos B 4 stiften.",
-    "options": [
-      "meer ?",
-      "evenveel =",
-      "onzeker ?",
-      "minder ?"
-    ],
-    "solution": {
-      "index": 1
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-01"
-      ]
-    }
+      "options": [
+        "meer ↑",
+        "minder ↓",
+        "evenveel =",
+        "onzeker ?"
+      ],
+      "correctOption": "minder ↓"
+    },
+    "misconceptKey": "misconcept3"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-028",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft evenveel boeken, Lisa of Tom?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Team A scoort 2 punten en team B 2 punten.",
-    "options": [
-      "weet ik niet",
-      "evenveel",
-      "minder",
-      "meer"
-    ],
-    "solution": {
-      "index": 1
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-02"
-      ]
-    }
+      "options": [
+        "meer",
+        "minder",
+        "evenveel",
+        "weet ik niet"
+      ],
+      "correctOption": "evenveel"
+    },
+    "misconceptKey": "misconcept4"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-029",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Vergelijk het aantal appels van Jan en Piet.",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Tas A weegt 7 kg en tas B 5 kg.",
-    "options": [
-      "Dat kun je niet zien.",
-      "Het is evenveel.",
-      "Het is meer.",
-      "Het is minder."
-    ],
-    "solution": {
-      "index": 2
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-03"
-      ]
-    }
+      "options": [
+        "Het is meer.",
+        "Het is minder.",
+        "Het is evenveel.",
+        "Dat kun je niet zien."
+      ],
+      "correctOption": "Het is meer."
+    },
+    "misconceptKey": "misconcept1"
   },
   {
-    "schemaVersion": "1.0.0",
     "id": "VH4-VMM-030",
-    "domain": "verhoudingen",
-    "grade": 4,
-    "level": "n2",
-    "topic": "vergelijken-meer-minder-evenveel",
+    "schemaVersion": "1.0.0",
+    "prompt": "Wie heeft meer knikkers, Sara of Noor?",
     "interaction": {
-      "type": "mcq"
-    },
-    "prompt": "Pot A heeft 6 knikkers en pot B 10 knikkers.",
-    "options": [
-      "meer ?",
-      "evenveel =",
-      "onzeker ?",
-      "minder ?"
-    ],
-    "solution": {
-      "index": 3
-    },
-    "feedback": {
-      "correct": "Goed gezien.",
-      "incorrect": "Vergelijk de aantallen nog eens."
-    },
-    "metadata": {
-      "strategy": "Meer minder of gelijk vaststellen",
+      "type": "mcq",
       "taskForm": "select_single",
-      "misconceptKeys": [
-        "VH-VMM-01"
-      ]
-    }
+      "options": [
+        "meer ↑",
+        "minder ↓",
+        "evenveel =",
+        "onzeker ?"
+      ],
+      "correctOption": "meer ↑"
+    },
+    "misconceptKey": "misconcept2"
   }
 ]

@@ -1,0 +1,246 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://learn-and-play.local/schemas/exercises.schema.json",
+  "title": "Exercises file schema",
+  "description": "Schema for a single exercises.json file containing an array of exercise objects (mixed interaction types allowed).",
+  "type": "array",
+  "minItems": 0,
+  "items": { "$ref": "#/$defs/Exercise" },
+
+  "$defs": {
+    "NonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "SchemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+
+    "Level": {
+      "type": "string",
+      "enum": ["n1", "n2", "n3", "n4"]
+    },
+
+    "InteractionType": {
+      "type": "string",
+      "enum": ["numeric", "mcq", "fill_blanks", "n4"]
+    },
+
+    "TaskForm": {
+      "type": "string",
+      "description": "Must align with docs/taskvormen-canon.json (enforced by validator).",
+      "enum": [
+        "numeric_simple",
+        "context_single_step",
+        "guided_focus",
+        "select_single",
+        "order_numbers",
+        "fill_single_step",
+        "error_analysis",
+        "strategy_comparison",
+        "explain_what_happens",
+        "multi_step_context_problem",
+        "data_interpretation",
+        "reasoned_explanation"
+      ]
+    },
+
+    "Metadata": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "strategy": { "$ref": "#/$defs/NonEmptyString" },
+        "taskForm": { "$ref": "#/$defs/TaskForm" },
+        "misconceptKeys": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/NonEmptyString" },
+          "default": []
+        },
+        "tags": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/NonEmptyString" },
+          "default": []
+        }
+      },
+      "required": ["strategy", "taskForm", "misconceptKeys"]
+    },
+
+    "Feedback": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "correct": { "$ref": "#/$defs/NonEmptyString" },
+        "incorrect": { "$ref": "#/$defs/NonEmptyString" }
+      },
+      "required": ["correct", "incorrect"]
+    },
+
+    "Interaction": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": { "$ref": "#/$defs/InteractionType" }
+      },
+      "required": ["type"]
+    },
+
+    "SolutionNumeric": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "description": "For numeric interactions: number OR numeric string.",
+          "oneOf": [
+            { "type": "number" },
+            {
+              "type": "string",
+              "pattern": "^[+-]?(?:\\d+)(?:[\\.,]\\d+)?$"
+            }
+          ]
+        }
+      },
+      "required": ["value"]
+    },
+
+    "SolutionMCQ": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "index": { "type": "integer", "minimum": 0 }
+      },
+      "required": ["index"]
+    },
+
+    "Options": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "$ref": "#/$defs/NonEmptyString" }
+    },
+
+    "ExerciseBase": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schemaVersion": { "$ref": "#/$defs/SchemaVersion" },
+        "id": { "$ref": "#/$defs/NonEmptyString" },
+
+        "domain": { "$ref": "#/$defs/NonEmptyString" },
+        "grade": { "type": "integer", "minimum": 1, "maximum": 8 },
+        "level": { "$ref": "#/$defs/Level" },
+        "topic": { "$ref": "#/$defs/NonEmptyString" },
+
+        "interaction": { "$ref": "#/$defs/Interaction" },
+        "prompt": { "$ref": "#/$defs/NonEmptyString" },
+
+        "solution": {
+          "type": "object",
+          "description": "Typed per interaction variant (numeric/mcq/fill_blanks/n4)."
+        },
+
+        "options": { "$ref": "#/$defs/Options" },
+
+        "feedback": { "$ref": "#/$defs/Feedback" },
+        "metadata": { "$ref": "#/$defs/Metadata" }
+      },
+      "required": [
+        "schemaVersion",
+        "id",
+        "domain",
+        "grade",
+        "level",
+        "topic",
+        "interaction",
+        "prompt",
+        "solution",
+        "feedback",
+        "metadata"
+      ]
+    },
+
+    "ExerciseNumeric": {
+      "allOf": [
+        { "$ref": "#/$defs/ExerciseBase" },
+        {
+          "properties": {
+            "interaction": {
+              "properties": { "type": { "const": "numeric" } },
+              "required": ["type"]
+            },
+            "solution": { "$ref": "#/$defs/SolutionNumeric" }
+          }
+        }
+      ]
+    },
+
+    "ExerciseMCQ": {
+      "allOf": [
+        { "$ref": "#/$defs/ExerciseBase" },
+        {
+          "properties": {
+            "interaction": {
+              "properties": { "type": { "const": "mcq" } },
+              "required": ["type"]
+            },
+            "options": { "$ref": "#/$defs/Options" },
+            "solution": { "$ref": "#/$defs/SolutionMCQ" }
+          },
+          "required": ["options"]
+        }
+      ]
+    },
+
+    "ExerciseFillBlanks": {
+      "allOf": [
+        { "$ref": "#/$defs/ExerciseBase" },
+        {
+          "properties": {
+            "interaction": {
+              "properties": { "type": { "const": "fill_blanks" } },
+              "required": ["type"]
+            },
+            "solution": {
+              "type": "object",
+              "description": "Fill blanks can be represented in multiple ways. Keep flexible but require 'value'.",
+              "properties": {
+                "value": {}
+              },
+              "required": ["value"],
+              "additionalProperties": true
+            }
+          }
+        }
+      ]
+    },
+
+    "ExerciseN4": {
+      "allOf": [
+        { "$ref": "#/$defs/ExerciseBase" },
+        {
+          "properties": {
+            "interaction": {
+              "properties": { "type": { "const": "n4" } },
+              "required": ["type"]
+            },
+            "solution": {
+              "type": "object",
+              "description": "N4 tasks may have structured solutions. Keep flexible but require at least one field.",
+              "minProperties": 1,
+              "additionalProperties": true
+            }
+          }
+        }
+      ]
+    },
+
+    "Exercise": {
+      "oneOf": [
+        { "$ref": "#/$defs/ExerciseNumeric" },
+        { "$ref": "#/$defs/ExerciseMCQ" },
+        { "$ref": "#/$defs/ExerciseFillBlanks" },
+        { "$ref": "#/$defs/ExerciseN4" }
+      ]
+    }
+  }
+}
