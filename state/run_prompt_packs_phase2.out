@@ -1,0 +1,1071 @@
+[resume] Loaded 2 pack(s) from state\phase2.state.json
+PHASE 2 — Found 46 prompt pack(s).
+[1/46] prompts\packs\nl-NL\getal-en-bewerkingen\groep-4\n2\GB4-delen-en-deeltafels.numeric.v1.0.txt
+  -> SKIP (already ok in state) -> content\nl-NL\getal-en-bewerkingen\groep-4\n2\topics\delen-en-deeltafels\exercises.json
+[2/46] prompts\packs\nl-NL\getal-en-bewerkingen\groep-4\n2\GB4-tafels-2-5-10.numeric.v1.0.txt
+  -> OK: PHASE2 OK after rewrite 1 (model=gpt-4o)
+[3/46] prompts\packs\nl-NL\getal-en-bewerkingen\groep-4\n2\GB4-tafels-automatiseren.mcq.v1.0.txt
+  -> FAIL: PHASE2 failed after rewrites. Last issues:
+PHASE2 rewrite validation failed:
+[ITEM 0] id='GB4-TA-001'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-001', 'schemaVersion': '1.0.0', 'prompt': 'Wat krijg je als je 9 met 3 vermenigvuldigt?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 27}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-001", "schemaVersion": "1.0.0", "prompt": "Wat krijg je als je 9 met 3 vermenigvuldigt?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution...(truncated)
+
+[ITEM 1] id='GB4-TA-002'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-002', 'schemaVersion': '1.0.0', 'prompt': 'Hoeveel is 7 keer 4?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 28}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-002", "schemaVersion": "1.0.0", "prompt": "Hoeveel is 7 keer 4?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 28}, "misco...(truncated)
+
+[ITEM 2] id='GB4-TA-003'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-003', 'schemaVersion': '1.0.0', 'prompt': 'Bereken het product van 5 en 6.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 30}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-003", "schemaVersion": "1.0.0", "prompt": "Bereken het product van 5 en 6.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": ...(truncated)
+
+[ITEM 3] id='GB4-TA-004'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-004', 'schemaVersion': '1.0.0', 'prompt': 'Wat is 8 maal 3?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 24}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-004", "schemaVersion": "1.0.0", "prompt": "Wat is 8 maal 3?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 24}, "misconcep...(truncated)
+
+[ITEM 4] id='GB4-TA-005'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-005', 'schemaVersion': '1.0.0', 'prompt': 'Wat krijg je als je 4 keer 9 doet?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 36}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-005", "schemaVersion": "1.0.0", "prompt": "Wat krijg je als je 4 keer 9 doet?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value...(truncated)
+
+[ITEM 5] id='GB4-TA-006'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-006', 'schemaVersion': '1.0.0', 'prompt': 'Hoeveel is 6 keer 6?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 36}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-006", "schemaVersion": "1.0.0", "prompt": "Hoeveel is 6 keer 6?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 36}, "misco...(truncated)
+
+[ITEM 6] id='GB4-TA-007'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-007', 'schemaVersion': '1.0.0', 'prompt': 'Bereken het product van 7 en 5.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 35}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-007", "schemaVersion": "1.0.0", "prompt": "Bereken het product van 7 en 5.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": ...(truncated)
+
+[ITEM 7] id='GB4-TA-008'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-008', 'schemaVersion': '1.0.0', 'prompt': 'Wat is 3 maal 8?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 24}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-008", "schemaVersion": "1.0.0", "prompt": "Wat is 3 maal 8?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 24}, "misconcep...(truncated)
+
+[ITEM 8] id='GB4-TA-009'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-009', 'schemaVersion': '1.0.0', 'prompt': 'Wat krijg je als je 5 keer 9 doet?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 45}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-009", "schemaVersion": "1.0.0", "prompt": "Wat krijg je als je 5 keer 9 doet?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value...(truncated)
+
+[ITEM 9] id='GB4-TA-010'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-010', 'schemaVersion': '1.0.0', 'prompt': 'Hoeveel is 4 keer 7?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 28}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-010", "schemaVersion": "1.0.0", "prompt": "Hoeveel is 4 keer 7?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 28}, "misco...(truncated)
+
+[ITEM 10] id='GB4-TA-011'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-011', 'schemaVersion': '1.0.0', 'prompt': 'Bereken het product van 6 en 8.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 48}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-011", "schemaVersion": "1.0.0", "prompt": "Bereken het product van 6 en 8.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": ...(truncated)
+
+[ITEM 11] id='GB4-TA-012'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-012', 'schemaVersion': '1.0.0', 'prompt': 'Wat is 9 maal 2?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 18}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-012", "schemaVersion": "1.0.0", "prompt": "Wat is 9 maal 2?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 18}, "misconcep...(truncated)
+
+[ITEM 12] id='GB4-TA-013'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-013', 'schemaVersion': '1.0.0', 'prompt': 'Wat krijg je als je 7 keer 3 doet?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 21}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-013", "schemaVersion": "1.0.0", "prompt": "Wat krijg je als je 7 keer 3 doet?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value...(truncated)
+
+[ITEM 13] id='GB4-TA-014'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-014', 'schemaVersion': '1.0.0', 'prompt': 'Hoeveel is 8 keer 6?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 48}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-014", "schemaVersion": "1.0.0", "prompt": "Hoeveel is 8 keer 6?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 48}, "misco...(truncated)
+
+[ITEM 14] id='GB4-TA-015'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-015', 'schemaVersion': '1.0.0', 'prompt': 'Bereken het product van 5 en 7.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 35}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-015", "schemaVersion": "1.0.0", "prompt": "Bereken het product van 5 en 7.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": ...(truncated)
+
+[ITEM 15] id='GB4-TA-016'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-016', 'schemaVersion': '1.0.0', 'prompt': 'Wat is 6 maal 9?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 54}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-016", "schemaVersion": "1.0.0", "prompt": "Wat is 6 maal 9?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 54}, "misconcep...(truncated)
+
+[ITEM 16] id='GB4-TA-017'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-017', 'schemaVersion': '1.0.0', 'prompt': 'Wat krijg je als je 4 keer 8 doet?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 32}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-017", "schemaVersion": "1.0.0", "prompt": "Wat krijg je als je 4 keer 8 doet?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value...(truncated)
+
+[ITEM 17] id='GB4-TA-018'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-018', 'schemaVersion': '1.0.0', 'prompt': 'Hoeveel is 7 keer 6?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 42}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-018", "schemaVersion": "1.0.0", "prompt": "Hoeveel is 7 keer 6?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 42}, "misco...(truncated)
+
+[ITEM 18] id='GB4-TA-019'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-019', 'schemaVersion': '1.0.0', 'prompt': 'Bereken het product van 3 en 9.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 27}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-019", "schemaVersion": "1.0.0", "prompt": "Bereken het product van 3 en 9.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": ...(truncated)
+
+[ITEM 19] id='GB4-TA-020'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-020', 'schemaVersion': '1.0.0', 'prompt': 'Wat is 8 maal 5?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 40}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-020", "schemaVersion": "1.0.0", "prompt": "Wat is 8 maal 5?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 40}, "misconcep...(truncated)
+
+[ITEM 20] id='GB4-TA-021'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-021', 'schemaVersion': '1.0.0', 'prompt': 'Wat krijg je als je 9 keer 4 doet?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 36}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-021", "schemaVersion": "1.0.0", "prompt": "Wat krijg je als je 9 keer 4 doet?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value...(truncated)
+
+[ITEM 21] id='GB4-TA-022'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-022', 'schemaVersion': '1.0.0', 'prompt': 'Hoeveel is 5 keer 8?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 40}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-022", "schemaVersion": "1.0.0", "prompt": "Hoeveel is 5 keer 8?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 40}, "misco...(truncated)
+
+[ITEM 22] id='GB4-TA-023'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-023', 'schemaVersion': '1.0.0', 'prompt': 'Bereken het product van 6 en 7.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 42}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-023", "schemaVersion": "1.0.0", "prompt": "Bereken het product van 6 en 7.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": ...(truncated)
+
+[ITEM 23] id='GB4-TA-024'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-024', 'schemaVersion': '1.0.0', 'prompt': 'Wat is 4 maal 6?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 24}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-024", "schemaVersion": "1.0.0", "prompt": "Wat is 4 maal 6?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 24}, "misconcep...(truncated)
+
+[ITEM 24] id='GB4-TA-025'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-025', 'schemaVersion': '1.0.0', 'prompt': 'Wat krijg je als je 7 keer 9 doet?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 63}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-025", "schemaVersion": "1.0.0", "prompt": "Wat krijg je als je 7 keer 9 doet?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value...(truncated)
+
+[ITEM 25] id='GB4-TA-026'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-026', 'schemaVersion': '1.0.0', 'prompt': 'Hoeveel is 8 keer 7?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 56}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-026", "schemaVersion": "1.0.0", "prompt": "Hoeveel is 8 keer 7?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 56}, "misco...(truncated)
+
+[ITEM 26] id='GB4-TA-027'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-027', 'schemaVersion': '1.0.0', 'prompt': 'Bereken het product van 9 en 5.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 45}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-027", "schemaVersion": "1.0.0", "prompt": "Bereken het product van 9 en 5.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": ...(truncated)
+
+[ITEM 27] id='GB4-TA-028'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-028', 'schemaVersion': '1.0.0', 'prompt': 'Wat is 6 maal 4?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 24}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-028", "schemaVersion": "1.0.0", "prompt": "Wat is 6 maal 4?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 24}, "misconcep...(truncated)
+
+[ITEM 28] id='GB4-TA-029'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-029', 'schemaVersion': '1.0.0', 'prompt': 'Wat krijg je als je 5 keer 6 doet?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 30}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-029", "schemaVersion": "1.0.0", "prompt": "Wat krijg je als je 5 keer 6 doet?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value...(truncated)
+
+[ITEM 29] id='GB4-TA-030'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-030', 'schemaVersion': '1.0.0', 'prompt': 'Hoeveel is 7 keer 8?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 56}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-030", "schemaVersion": "1.0.0", "prompt": "Hoeveel is 7 keer 8?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 56}, "misco...(truncated)
+
+[ITEM 30] id='GB4-TA-031'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-031', 'schemaVersion': '1.0.0', 'prompt': 'Bereken het product van 8 en 9.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 72}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-031", "schemaVersion": "1.0.0", "prompt": "Bereken het product van 8 en 9.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": ...(truncated)
+
+[ITEM 31] id='GB4-TA-032'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-032', 'schemaVersion': '1.0.0', 'prompt': 'Wat is 3 maal 7?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 21}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-032", "schemaVersion": "1.0.0", "prompt": "Wat is 3 maal 7?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 21}, "misconcep...(truncated)
+
+[ITEM 32] id='GB4-TA-033'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-033', 'schemaVersion': '1.0.0', 'prompt': 'Wat krijg je als je 6 keer 5 doet?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 30}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-033", "schemaVersion": "1.0.0", "prompt": "Wat krijg je als je 6 keer 5 doet?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value...(truncated)
+
+[ITEM 33] id='GB4-TA-034'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-034', 'schemaVersion': '1.0.0', 'prompt': 'Hoeveel is 9 keer 7?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 63}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-034", "schemaVersion": "1.0.0", "prompt": "Hoeveel is 9 keer 7?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 63}, "misco...(truncated)
+
+[ITEM 34] id='GB4-TA-035'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-035', 'schemaVersion': '1.0.0', 'prompt': 'Bereken het product van 4 en 5.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 20}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-035", "schemaVersion": "1.0.0", "prompt": "Bereken het product van 4 en 5.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": ...(truncated)
+
+[ITEM 35] id='GB4-TA-036'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-036', 'schemaVersion': '1.0.0', 'prompt': 'Wat is 7 maal 2?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 14}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-036", "schemaVersion": "1.0.0", "prompt": "Wat is 7 maal 2?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 14}, "misconcep...(truncated)
+
+[ITEM 36] id='GB4-TA-037'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-037', 'schemaVersion': '1.0.0', 'prompt': 'Wat krijg je als je 8 keer 4 doet?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 32}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-037", "schemaVersion": "1.0.0", "prompt": "Wat krijg je als je 8 keer 4 doet?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value...(truncated)
+
+[ITEM 37] id='GB4-TA-038'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-038', 'schemaVersion': '1.0.0', 'prompt': 'Hoeveel is 5 keer 9?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 45}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-038", "schemaVersion": "1.0.0", "prompt": "Hoeveel is 5 keer 9?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 45}, "misco...(truncated)
+
+[ITEM 38] id='GB4-TA-039'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-039', 'schemaVersion': '1.0.0', 'prompt': 'Bereken het product van 6 en 3.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 18}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-039", "schemaVersion": "1.0.0", "prompt": "Bereken het product van 6 en 3.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": ...(truncated)
+
+[ITEM 39] id='GB4-TA-040'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-040', 'schemaVersion': '1.0.0', 'prompt': 'Wat is 9 maal 5?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 45}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-040", "schemaVersion": "1.0.0", "prompt": "Wat is 9 maal 5?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 45}, "misconcep...(truncated)
+
+[ITEM 40] id='GB4-TA-041'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-041', 'schemaVersion': '1.0.0', 'prompt': 'Wat krijg je als je 7 keer 4 doet?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 28}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-041", "schemaVersion": "1.0.0", "prompt": "Wat krijg je als je 7 keer 4 doet?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value...(truncated)
+
+[ITEM 41] id='GB4-TA-042'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-042', 'schemaVersion': '1.0.0', 'prompt': 'Hoeveel is 8 keer 2?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 16}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-042", "schemaVersion": "1.0.0", "prompt": "Hoeveel is 8 keer 2?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 16}, "misco...(truncated)
+
+[ITEM 42] id='GB4-TA-043'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-043', 'schemaVersion': '1.0.0', 'prompt': 'Bereken het product van 5 en 3.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 15}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-043", "schemaVersion": "1.0.0", "prompt": "Bereken het product van 5 en 3.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": ...(truncated)
+
+[ITEM 43] id='GB4-TA-044'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-044', 'schemaVersion': '1.0.0', 'prompt': 'Wat is 6 maal 7?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 42}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-044", "schemaVersion": "1.0.0", "prompt": "Wat is 6 maal 7?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 42}, "misconcep...(truncated)
+
+[ITEM 44] id='GB4-TA-045'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-045', 'schemaVersion': '1.0.0', 'prompt': 'Wat krijg je als je 9 keer 6 doet?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 54}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-045", "schemaVersion": "1.0.0", "prompt": "Wat krijg je als je 9 keer 6 doet?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value...(truncated)
+
+[ITEM 45] id='GB4-TA-046'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-046', 'schemaVersion': '1.0.0', 'prompt': 'Hoeveel is 7 keer 5?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 35}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-046", "schemaVersion": "1.0.0", "prompt": "Hoeveel is 7 keer 5?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 35}, "misco...(truncated)
+
+[ITEM 46] id='GB4-TA-047'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-047', 'schemaVersion': '1.0.0', 'prompt': 'Bereken het product van 8 en 4.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 32}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-047", "schemaVersion": "1.0.0", "prompt": "Bereken het product van 8 en 4.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": ...(truncated)
+
+[ITEM 47] id='GB4-TA-048'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-048', 'schemaVersion': '1.0.0', 'prompt': 'Wat is 5 maal 6?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 30}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-048", "schemaVersion": "1.0.0", "prompt": "Wat is 5 maal 6?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 30}, "misconcep...(truncated)
+
+[ITEM 48] id='GB4-TA-049'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-049', 'schemaVersion': '1.0.0', 'prompt': 'Wat krijg je als je 4 keer 7 doet?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 28}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-049", "schemaVersion": "1.0.0", "prompt": "Wat krijg je als je 4 keer 7 doet?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value...(truncated)
+
+[ITEM 49] id='GB4-TA-050'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-TA-050', 'schemaVersion': '1.0.0', 'prompt': 'Hoeveel is 9 keer 8?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': {'value': 72}, 'misconceptKey': 'multiplication_error'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-TA-050", "schemaVersion": "1.0.0", "prompt": "Hoeveel is 9 keer 8?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": {"value": 72}, "misco...(truncated)
+
+FAIL: 50 item(s) invalid in staging\nl-NL\getal-en-bewerkingen\groep-4\n2\topics\tafels-automatiseren\exercises.quality.json (showing up to 50)
+[4/46] prompts\packs\nl-NL\getal-en-bewerkingen\groep-4\n2\GB4-werken-op-de-getallenlijn.mcq.v1.0.txt
+  -> FAIL: PHASE2 failed after rewrites. Last issues:
+PHASE2 rewrite validation failed:
+[ITEM 0] id='GB4-WOD-001'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-001', 'schemaVersion': '1.0.0', 'prompt': 'Plaats het getal 45 op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 45, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-001", "schemaVersion": "1.0.0", "prompt": "Plaats het getal 45 op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": 4...(truncated)
+
+[ITEM 1] id='GB4-WOD-002'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-002', 'schemaVersion': '1.0.0', 'prompt': 'Waar ligt het getal 78 op de getallenlijn?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 78, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-002", "schemaVersion": "1.0.0", "prompt": "Waar ligt het getal 78 op de getallenlijn?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution"...(truncated)
+
+[ITEM 2] id='GB4-WOD-003'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-003', 'schemaVersion': '1.0.0', 'prompt': 'Zet het getal 32 op de juiste plek op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 32, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-003", "schemaVersion": "1.0.0", "prompt": "Zet het getal 32 op de juiste plek op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}...(truncated)
+
+[ITEM 3] id='GB4-WOD-004'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-004', 'schemaVersion': '1.0.0', 'prompt': 'Plaats het getal 56 op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 56, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-004", "schemaVersion": "1.0.0", "prompt": "Plaats het getal 56 op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": 5...(truncated)
+
+[ITEM 4] id='GB4-WOD-005'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-005', 'schemaVersion': '1.0.0', 'prompt': 'Waar ligt het getal 90 op de getallenlijn?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 90, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-005", "schemaVersion": "1.0.0", "prompt": "Waar ligt het getal 90 op de getallenlijn?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution"...(truncated)
+
+[ITEM 5] id='GB4-WOD-006'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-006', 'schemaVersion': '1.0.0', 'prompt': 'Zet het getal 15 op de juiste plek op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 15, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-006", "schemaVersion": "1.0.0", "prompt": "Zet het getal 15 op de juiste plek op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}...(truncated)
+
+[ITEM 6] id='GB4-WOD-007'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-007', 'schemaVersion': '1.0.0', 'prompt': 'Plaats het getal 67 op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 67, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-007", "schemaVersion": "1.0.0", "prompt": "Plaats het getal 67 op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": 6...(truncated)
+
+[ITEM 7] id='GB4-WOD-008'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-008', 'schemaVersion': '1.0.0', 'prompt': 'Waar ligt het getal 23 op de getallenlijn?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 23, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-008", "schemaVersion": "1.0.0", "prompt": "Waar ligt het getal 23 op de getallenlijn?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution"...(truncated)
+
+[ITEM 8] id='GB4-WOD-009'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-009', 'schemaVersion': '1.0.0', 'prompt': 'Zet het getal 89 op de juiste plek op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 89, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-009", "schemaVersion": "1.0.0", "prompt": "Zet het getal 89 op de juiste plek op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}...(truncated)
+
+[ITEM 9] id='GB4-WOD-010'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-010', 'schemaVersion': '1.0.0', 'prompt': 'Plaats het getal 34 op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 34, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-010", "schemaVersion": "1.0.0", "prompt": "Plaats het getal 34 op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": 3...(truncated)
+
+[ITEM 10] id='GB4-WOD-011'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-011', 'schemaVersion': '1.0.0', 'prompt': 'Waar ligt het getal 76 op de getallenlijn?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 76, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-011", "schemaVersion": "1.0.0", "prompt": "Waar ligt het getal 76 op de getallenlijn?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution"...(truncated)
+
+[ITEM 11] id='GB4-WOD-012'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-012', 'schemaVersion': '1.0.0', 'prompt': 'Zet het getal 48 op de juiste plek op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 48, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-012", "schemaVersion": "1.0.0", "prompt": "Zet het getal 48 op de juiste plek op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}...(truncated)
+
+[ITEM 12] id='GB4-WOD-013'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-013', 'schemaVersion': '1.0.0', 'prompt': 'Plaats het getal 59 op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 59, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-013", "schemaVersion": "1.0.0", "prompt": "Plaats het getal 59 op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": 5...(truncated)
+
+[ITEM 13] id='GB4-WOD-014'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-014', 'schemaVersion': '1.0.0', 'prompt': 'Waar ligt het getal 12 op de getallenlijn?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 12, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-014", "schemaVersion": "1.0.0", "prompt": "Waar ligt het getal 12 op de getallenlijn?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution"...(truncated)
+
+[ITEM 14] id='GB4-WOD-015'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-015', 'schemaVersion': '1.0.0', 'prompt': 'Zet het getal 81 op de juiste plek op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 81, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-015", "schemaVersion": "1.0.0", "prompt": "Zet het getal 81 op de juiste plek op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}...(truncated)
+
+[ITEM 15] id='GB4-WOD-016'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-016', 'schemaVersion': '1.0.0', 'prompt': 'Plaats het getal 27 op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 27, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-016", "schemaVersion": "1.0.0", "prompt": "Plaats het getal 27 op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": 2...(truncated)
+
+[ITEM 16] id='GB4-WOD-017'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-017', 'schemaVersion': '1.0.0', 'prompt': 'Waar ligt het getal 65 op de getallenlijn?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 65, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-017", "schemaVersion": "1.0.0", "prompt": "Waar ligt het getal 65 op de getallenlijn?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution"...(truncated)
+
+[ITEM 17] id='GB4-WOD-018'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-018', 'schemaVersion': '1.0.0', 'prompt': 'Zet het getal 39 op de juiste plek op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 39, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-018", "schemaVersion": "1.0.0", "prompt": "Zet het getal 39 op de juiste plek op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}...(truncated)
+
+[ITEM 18] id='GB4-WOD-019'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-019', 'schemaVersion': '1.0.0', 'prompt': 'Plaats het getal 72 op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 72, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-019", "schemaVersion": "1.0.0", "prompt": "Plaats het getal 72 op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": 7...(truncated)
+
+[ITEM 19] id='GB4-WOD-020'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-020', 'schemaVersion': '1.0.0', 'prompt': 'Waar ligt het getal 18 op de getallenlijn?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 18, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-020", "schemaVersion": "1.0.0", "prompt": "Waar ligt het getal 18 op de getallenlijn?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution"...(truncated)
+
+[ITEM 20] id='GB4-WOD-021'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-021', 'schemaVersion': '1.0.0', 'prompt': 'Zet het getal 54 op de juiste plek op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 54, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-021", "schemaVersion": "1.0.0", "prompt": "Zet het getal 54 op de juiste plek op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}...(truncated)
+
+[ITEM 21] id='GB4-WOD-022'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-022', 'schemaVersion': '1.0.0', 'prompt': 'Plaats het getal 91 op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 91, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-022", "schemaVersion": "1.0.0", "prompt": "Plaats het getal 91 op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": 9...(truncated)
+
+[ITEM 22] id='GB4-WOD-023'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-023', 'schemaVersion': '1.0.0', 'prompt': 'Waar ligt het getal 29 op de getallenlijn?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 29, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-023", "schemaVersion": "1.0.0", "prompt": "Waar ligt het getal 29 op de getallenlijn?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution"...(truncated)
+
+[ITEM 23] id='GB4-WOD-024'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-024', 'schemaVersion': '1.0.0', 'prompt': 'Zet het getal 63 op de juiste plek op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 63, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-024", "schemaVersion": "1.0.0", "prompt": "Zet het getal 63 op de juiste plek op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}...(truncated)
+
+[ITEM 24] id='GB4-WOD-025'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-025', 'schemaVersion': '1.0.0', 'prompt': 'Plaats het getal 47 op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 47, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-025", "schemaVersion": "1.0.0", "prompt": "Plaats het getal 47 op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": 4...(truncated)
+
+[ITEM 25] id='GB4-WOD-026'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-026', 'schemaVersion': '1.0.0', 'prompt': 'Waar ligt het getal 84 op de getallenlijn?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 84, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-026", "schemaVersion": "1.0.0", "prompt": "Waar ligt het getal 84 op de getallenlijn?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution"...(truncated)
+
+[ITEM 26] id='GB4-WOD-027'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-027', 'schemaVersion': '1.0.0', 'prompt': 'Zet het getal 36 op de juiste plek op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 36, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-027", "schemaVersion": "1.0.0", "prompt": "Zet het getal 36 op de juiste plek op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}...(truncated)
+
+[ITEM 27] id='GB4-WOD-028'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-028', 'schemaVersion': '1.0.0', 'prompt': 'Plaats het getal 58 op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 58, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-028", "schemaVersion": "1.0.0", "prompt": "Plaats het getal 58 op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": 5...(truncated)
+
+[ITEM 28] id='GB4-WOD-029'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-029', 'schemaVersion': '1.0.0', 'prompt': 'Waar ligt het getal 11 op de getallenlijn?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 11, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-029", "schemaVersion": "1.0.0", "prompt": "Waar ligt het getal 11 op de getallenlijn?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution"...(truncated)
+
+[ITEM 29] id='GB4-WOD-030'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-030', 'schemaVersion': '1.0.0', 'prompt': 'Zet het getal 79 op de juiste plek op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 79, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-030", "schemaVersion": "1.0.0", "prompt": "Zet het getal 79 op de juiste plek op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}...(truncated)
+
+[ITEM 30] id='GB4-WOD-031'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-031', 'schemaVersion': '1.0.0', 'prompt': 'Plaats het getal 22 op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 22, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-031", "schemaVersion": "1.0.0", "prompt": "Plaats het getal 22 op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": 2...(truncated)
+
+[ITEM 31] id='GB4-WOD-032'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-032', 'schemaVersion': '1.0.0', 'prompt': 'Waar ligt het getal 66 op de getallenlijn?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 66, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-032", "schemaVersion": "1.0.0", "prompt": "Waar ligt het getal 66 op de getallenlijn?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution"...(truncated)
+
+[ITEM 32] id='GB4-WOD-033'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-033', 'schemaVersion': '1.0.0', 'prompt': 'Zet het getal 43 op de juiste plek op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 43, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-033", "schemaVersion": "1.0.0", "prompt": "Zet het getal 43 op de juiste plek op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}...(truncated)
+
+[ITEM 33] id='GB4-WOD-034'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-034', 'schemaVersion': '1.0.0', 'prompt': 'Plaats het getal 88 op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 88, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-034", "schemaVersion": "1.0.0", "prompt": "Plaats het getal 88 op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": 8...(truncated)
+
+[ITEM 34] id='GB4-WOD-035'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-035', 'schemaVersion': '1.0.0', 'prompt': 'Waar ligt het getal 31 op de getallenlijn?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 31, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-035", "schemaVersion": "1.0.0", "prompt": "Waar ligt het getal 31 op de getallenlijn?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution"...(truncated)
+
+[ITEM 35] id='GB4-WOD-036'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-036', 'schemaVersion': '1.0.0', 'prompt': 'Zet het getal 73 op de juiste plek op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 73, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-036", "schemaVersion": "1.0.0", "prompt": "Zet het getal 73 op de juiste plek op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}...(truncated)
+
+[ITEM 36] id='GB4-WOD-037'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-037', 'schemaVersion': '1.0.0', 'prompt': 'Plaats het getal 52 op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 52, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-037", "schemaVersion": "1.0.0", "prompt": "Plaats het getal 52 op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": 5...(truncated)
+
+[ITEM 37] id='GB4-WOD-038'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-038', 'schemaVersion': '1.0.0', 'prompt': 'Waar ligt het getal 95 op de getallenlijn?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 95, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-038", "schemaVersion": "1.0.0", "prompt": "Waar ligt het getal 95 op de getallenlijn?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution"...(truncated)
+
+[ITEM 38] id='GB4-WOD-039'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-039', 'schemaVersion': '1.0.0', 'prompt': 'Zet het getal 40 op de juiste plek op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 40, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-039", "schemaVersion": "1.0.0", "prompt": "Zet het getal 40 op de juiste plek op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}...(truncated)
+
+[ITEM 39] id='GB4-WOD-040'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-040', 'schemaVersion': '1.0.0', 'prompt': 'Plaats het getal 62 op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 62, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-040", "schemaVersion": "1.0.0", "prompt": "Plaats het getal 62 op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": 6...(truncated)
+
+[ITEM 40] id='GB4-WOD-041'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-041', 'schemaVersion': '1.0.0', 'prompt': 'Waar ligt het getal 19 op de getallenlijn?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 19, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-041", "schemaVersion": "1.0.0", "prompt": "Waar ligt het getal 19 op de getallenlijn?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution"...(truncated)
+
+[ITEM 41] id='GB4-WOD-042'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-042', 'schemaVersion': '1.0.0', 'prompt': 'Zet het getal 57 op de juiste plek op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 57, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-042", "schemaVersion": "1.0.0", "prompt": "Zet het getal 57 op de juiste plek op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}...(truncated)
+
+[ITEM 42] id='GB4-WOD-043'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-043', 'schemaVersion': '1.0.0', 'prompt': 'Plaats het getal 85 op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 85, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-043", "schemaVersion": "1.0.0", "prompt": "Plaats het getal 85 op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": 8...(truncated)
+
+[ITEM 43] id='GB4-WOD-044'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-044', 'schemaVersion': '1.0.0', 'prompt': 'Waar ligt het getal 26 op de getallenlijn?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 26, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-044", "schemaVersion": "1.0.0", "prompt": "Waar ligt het getal 26 op de getallenlijn?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution"...(truncated)
+
+[ITEM 44] id='GB4-WOD-045'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-045', 'schemaVersion': '1.0.0', 'prompt': 'Zet het getal 74 op de juiste plek op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 74, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-045", "schemaVersion": "1.0.0", "prompt": "Zet het getal 74 op de juiste plek op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}...(truncated)
+
+[ITEM 45] id='GB4-WOD-046'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-046', 'schemaVersion': '1.0.0', 'prompt': 'Plaats het getal 33 op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 33, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-046", "schemaVersion": "1.0.0", "prompt": "Plaats het getal 33 op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": 3...(truncated)
+
+[ITEM 46] id='GB4-WOD-047'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-047', 'schemaVersion': '1.0.0', 'prompt': 'Waar ligt het getal 92 op de getallenlijn?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 92, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-047", "schemaVersion": "1.0.0", "prompt": "Waar ligt het getal 92 op de getallenlijn?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution"...(truncated)
+
+[ITEM 47] id='GB4-WOD-048'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-048', 'schemaVersion': '1.0.0', 'prompt': 'Zet het getal 41 op de juiste plek op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 41, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-048", "schemaVersion": "1.0.0", "prompt": "Zet het getal 41 op de juiste plek op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}...(truncated)
+
+[ITEM 48] id='GB4-WOD-049'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-049', 'schemaVersion': '1.0.0', 'prompt': 'Plaats het getal 53 op de getallenlijn.', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 53, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-049", "schemaVersion": "1.0.0", "prompt": "Plaats het getal 53 op de getallenlijn.", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution": 5...(truncated)
+
+[ITEM 49] id='GB4-WOD-050'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-WOD-050', 'schemaVersion': '1.0.0', 'prompt': 'Waar ligt het getal 99 op de getallenlijn?', 'interaction': {'type': 'numeric', 'taskForm': 'numeric_simple'}, 'solution': 99, 'misconceptKey': 'incorrect_placement'} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-WOD-050", "schemaVersion": "1.0.0", "prompt": "Waar ligt het getal 99 op de getallenlijn?", "interaction": {"type": "numeric", "taskForm": "numeric_simple"}, "solution"...(truncated)
+
+FAIL: 50 item(s) invalid in staging\nl-NL\getal-en-bewerkingen\groep-4\n2\topics\werken-op-de-getallenlijn\exercises.quality.json (showing up to 50)
+[5/46] prompts\packs\nl-NL\getal-en-bewerkingen\groep-4\n3\GB4-rekenstappen-benoemen.numeric.v1.0.txt
+  -> FAIL: PHASE2 failed after rewrites. Last issues:
+PHASE2 rewrite validation failed:
+[ITEM 0] id='GB4-RSB-001'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-001', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt het getal rond en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-001", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt het getal rond en past het later aan."}, "metadata": {"taskForm...(truncated)
+
+[ITEM 1] id='GB4-RSB-002'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-002', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze splitst het getal in tientallen en eenheden.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-002", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze splitst het getal in tientallen en eenheden."}, "metadata": {"taskFor...(truncated)
+
+[ITEM 2] id='GB4-RSB-003'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-003', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze voegt eerst een groter getal toe en haalt het verschil eraf.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-003", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze voegt eerst een groter getal toe en haalt het verschil eraf."}, "meta...(truncated)
+
+[ITEM 3] id='GB4-RSB-004'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-004', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt een tussenstap met een rond getal.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-004", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt een tussenstap met een rond getal."}, "metadata": {"taskForm": ...(truncated)
+
+[ITEM 4] id='GB4-RSB-005'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-005', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze rekent eerst met een makkelijk getal.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-005", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze rekent eerst met een makkelijk getal."}, "metadata": {"taskForm": "ex...(truncated)
+
+[ITEM 5] id='GB4-RSB-006'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-006', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze verandert de volgorde van de getallen.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-006", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze verandert de volgorde van de getallen."}, "metadata": {"taskForm": "e...(truncated)
+
+[ITEM 6] id='GB4-RSB-007'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-007', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt een som met een rond getal.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-007", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt een som met een rond getal."}, "metadata": {"taskForm": "explai...(truncated)
+
+[ITEM 7] id='GB4-RSB-008'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-008', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze rekent eerst met een kleiner getal.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-008", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze rekent eerst met een kleiner getal."}, "metadata": {"taskForm": "expl...(truncated)
+
+[ITEM 8] id='GB4-RSB-009'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-009', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt het getal eerst groter en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-009", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt het getal eerst groter en past het later aan."}, "metadata": {"...(truncated)
+
+[ITEM 9] id='GB4-RSB-010'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-010', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze verandert de volgorde van de bewerking.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-010", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze verandert de volgorde van de bewerking."}, "metadata": {"taskForm": "...(truncated)
+
+[ITEM 10] id='GB4-RSB-011'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-011', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt een tussenstap met een kleiner getal.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-011", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt een tussenstap met een kleiner getal."}, "metadata": {"taskForm...(truncated)
+
+[ITEM 11] id='GB4-RSB-012'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-012', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze rekent eerst met een makkelijk getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-012", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze rekent eerst met een makkelijk getal en past het later aan."}, "metad...(truncated)
+
+[ITEM 12] id='GB4-RSB-013'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-013', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt een som met een kleiner getal.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-013", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt een som met een kleiner getal."}, "metadata": {"taskForm": "exp...(truncated)
+
+[ITEM 13] id='GB4-RSB-014'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-014', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze verandert de volgorde van de getallen en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-014", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze verandert de volgorde van de getallen en past het later aan."}, "meta...(truncated)
+
+[ITEM 14] id='GB4-RSB-015'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-015', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt een tussenstap met een rond getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-015", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt een tussenstap met een rond getal en past het later aan."}, "me...(truncated)
+
+[ITEM 15] id='GB4-RSB-016'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-016', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze rekent eerst met een groter getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-016", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze rekent eerst met een groter getal en past het later aan."}, "metadata...(truncated)
+
+[ITEM 16] id='GB4-RSB-017'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-017', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt het getal eerst kleiner en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-017", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt het getal eerst kleiner en past het later aan."}, "metadata": {...(truncated)
+
+[ITEM 17] id='GB4-RSB-018'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-018', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze verandert de volgorde van de bewerking en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-018", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze verandert de volgorde van de bewerking en past het later aan."}, "met...(truncated)
+
+[ITEM 18] id='GB4-RSB-019'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-019', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt een tussenstap met een kleiner getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-019", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt een tussenstap met een kleiner getal en past het later aan."}, ...(truncated)
+
+[ITEM 19] id='GB4-RSB-020'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-020', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze rekent eerst met een makkelijk getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-020", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze rekent eerst met een makkelijk getal en past het later aan."}, "metad...(truncated)
+
+[ITEM 20] id='GB4-RSB-021'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-021', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt een som met een rond getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-021", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt een som met een rond getal en past het later aan."}, "metadata"...(truncated)
+
+[ITEM 21] id='GB4-RSB-022'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-022', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze verandert de volgorde van de getallen en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-022", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze verandert de volgorde van de getallen en past het later aan."}, "meta...(truncated)
+
+[ITEM 22] id='GB4-RSB-023'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-023', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt een tussenstap met een groter getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-023", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt een tussenstap met een groter getal en past het later aan."}, "...(truncated)
+
+[ITEM 23] id='GB4-RSB-024'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-024', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze rekent eerst met een kleiner getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-024", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze rekent eerst met een kleiner getal en past het later aan."}, "metadat...(truncated)
+
+[ITEM 24] id='GB4-RSB-025'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-025', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt het getal eerst groter en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-025", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt het getal eerst groter en past het later aan."}, "metadata": {"...(truncated)
+
+[ITEM 25] id='GB4-RSB-026'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-026', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze verandert de volgorde van de bewerking en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-026", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze verandert de volgorde van de bewerking en past het later aan."}, "met...(truncated)
+
+[ITEM 26] id='GB4-RSB-027'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-027', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt een tussenstap met een rond getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-027", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt een tussenstap met een rond getal en past het later aan."}, "me...(truncated)
+
+[ITEM 27] id='GB4-RSB-028'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-028', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze rekent eerst met een groter getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-028", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze rekent eerst met een groter getal en past het later aan."}, "metadata...(truncated)
+
+[ITEM 28] id='GB4-RSB-029'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-029', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt het getal eerst kleiner en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-029", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt het getal eerst kleiner en past het later aan."}, "metadata": {...(truncated)
+
+[ITEM 29] id='GB4-RSB-030'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-030', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze verandert de volgorde van de bewerking en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-030", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze verandert de volgorde van de bewerking en past het later aan."}, "met...(truncated)
+
+[ITEM 30] id='GB4-RSB-031'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-031', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt een tussenstap met een kleiner getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-031", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt een tussenstap met een kleiner getal en past het later aan."}, ...(truncated)
+
+[ITEM 31] id='GB4-RSB-032'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-032', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze rekent eerst met een makkelijk getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-032", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze rekent eerst met een makkelijk getal en past het later aan."}, "metad...(truncated)
+
+[ITEM 32] id='GB4-RSB-033'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-033', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt een som met een rond getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-033", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt een som met een rond getal en past het later aan."}, "metadata"...(truncated)
+
+[ITEM 33] id='GB4-RSB-034'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-034', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze verandert de volgorde van de getallen en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-034", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze verandert de volgorde van de getallen en past het later aan."}, "meta...(truncated)
+
+[ITEM 34] id='GB4-RSB-035'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-035', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt een tussenstap met een groter getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-035", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt een tussenstap met een groter getal en past het later aan."}, "...(truncated)
+
+[ITEM 35] id='GB4-RSB-036'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-036', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze rekent eerst met een kleiner getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-036", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze rekent eerst met een kleiner getal en past het later aan."}, "metadat...(truncated)
+
+[ITEM 36] id='GB4-RSB-037'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-037', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt het getal eerst groter en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-037", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt het getal eerst groter en past het later aan."}, "metadata": {"...(truncated)
+
+[ITEM 37] id='GB4-RSB-038'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-038', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze verandert de volgorde van de bewerking en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-038", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze verandert de volgorde van de bewerking en past het later aan."}, "met...(truncated)
+
+[ITEM 38] id='GB4-RSB-039'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-039', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt een tussenstap met een rond getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-039", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt een tussenstap met een rond getal en past het later aan."}, "me...(truncated)
+
+[ITEM 39] id='GB4-RSB-040'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-040', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze rekent eerst met een groter getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-040", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze rekent eerst met een groter getal en past het later aan."}, "metadata...(truncated)
+
+[ITEM 40] id='GB4-RSB-041'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-041', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt het getal eerst kleiner en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-041", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt het getal eerst kleiner en past het later aan."}, "metadata": {...(truncated)
+
+[ITEM 41] id='GB4-RSB-042'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-042', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze verandert de volgorde van de bewerking en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-042", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze verandert de volgorde van de bewerking en past het later aan."}, "met...(truncated)
+
+[ITEM 42] id='GB4-RSB-043'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-043', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt een tussenstap met een kleiner getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-043", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt een tussenstap met een kleiner getal en past het later aan."}, ...(truncated)
+
+[ITEM 43] id='GB4-RSB-044'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-044', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze rekent eerst met een makkelijk getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-044", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze rekent eerst met een makkelijk getal en past het later aan."}, "metad...(truncated)
+
+[ITEM 44] id='GB4-RSB-045'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-045', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt een som met een rond getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-045", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt een som met een rond getal en past het later aan."}, "metadata"...(truncated)
+
+[ITEM 45] id='GB4-RSB-046'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-046', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze verandert de volgorde van de getallen en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-046", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze verandert de volgorde van de getallen en past het later aan."}, "meta...(truncated)
+
+[ITEM 46] id='GB4-RSB-047'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-047', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt een tussenstap met een groter getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-047", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt een tussenstap met een groter getal en past het later aan."}, "...(truncated)
+
+[ITEM 47] id='GB4-RSB-048'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-048', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze rekent eerst met een kleiner getal en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-048", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze rekent eerst met een kleiner getal en past het later aan."}, "metadat...(truncated)
+
+[ITEM 48] id='GB4-RSB-049'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-049', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze maakt het getal eerst groter en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'plaatswaarde'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-049", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze maakt het getal eerst groter en past het later aan."}, "metadata": {"...(truncated)
+
+[ITEM 49] id='GB4-RSB-050'
+  path:     /
+  schema:   /oneOf
+  message:  {'id': 'GB4-RSB-050', 'schemaVersion': '1.0.0', 'interaction': {'type': 'n4'}, 'solution': {'description': 'Ze verandert de volgorde van de bewerking en past het later aan.'}, 'metadata': {'taskForm': 'explain_what_happens', 'misconceptKeys': 'onthouden'}} is not valid under any of the given schemas
+  expected: oneOf: [{'$ref': '#/$defs/ExerciseNumeric'}, {'$ref': '#/$defs/ExerciseMCQ'}, {'$ref': '#/$defs/ExerciseFillBlanks'}, {'$ref': '#/$defs/ExerciseN4'}]
+  actual:   {"id": "GB4-RSB-050", "schemaVersion": "1.0.0", "interaction": {"type": "n4"}, "solution": {"description": "Ze verandert de volgorde van de bewerking en past het later aan."}, "met...(truncated)
+
+FAIL: 50 item(s) invalid in staging\nl-NL\getal-en-bewerkingen\groep-4\n3\topics\rekenstappen-benoemen\exercises.quality.json (showing up to 50)
+[6/46] prompts\packs\nl-NL\getal-en-bewerkingen\groep-5\n2\GB5-10-100-1000.numeric.v1.0.txt
+  -> OK: PHASE2 OK after rewrite 2 (model=gpt-4o)
+[7/46] prompts\packs\nl-NL\getal-en-bewerkingen\groep-5\n2\GB5-delen-met-res.numeric.v1.0.txt

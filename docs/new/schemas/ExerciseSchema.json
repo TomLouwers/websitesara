@@ -86,6 +86,13 @@
       "required": ["type"]
     },
 
+    "OptionsMCQ4": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": { "$ref": "#/$defs/NonEmptyString" }
+    },
+
     "SolutionNumeric": {
       "type": "object",
       "additionalProperties": false,
@@ -108,15 +115,26 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "index": { "type": "integer", "minimum": 0 }
+        "index": { "type": "integer", "minimum": 0, "maximum": 3 }
       },
       "required": ["index"]
     },
 
-    "Options": {
-      "type": "array",
-      "minItems": 2,
-      "items": { "$ref": "#/$defs/NonEmptyString" }
+    "SolutionFillBlanks": {
+      "type": "object",
+      "description": "Fill blanks can be represented in multiple ways. Keep flexible but require 'value'.",
+      "properties": {
+        "value": {}
+      },
+      "required": ["value"],
+      "additionalProperties": true
+    },
+
+    "SolutionN4": {
+      "type": "object",
+      "description": "N4 tasks may have structured solutions. Keep flexible but require at least one field.",
+      "minProperties": 1,
+      "additionalProperties": true
     },
 
     "ExerciseBase": {
@@ -134,12 +152,9 @@
         "interaction": { "$ref": "#/$defs/Interaction" },
         "prompt": { "$ref": "#/$defs/NonEmptyString" },
 
-        "solution": {
-          "type": "object",
-          "description": "Typed per interaction variant (numeric/mcq/fill_blanks/n4)."
-        },
+        "solution": { "type": "object" },
 
-        "options": { "$ref": "#/$defs/Options" },
+        "options": { "type": "array" },
 
         "feedback": { "$ref": "#/$defs/Feedback" },
         "metadata": { "$ref": "#/$defs/Metadata" }
@@ -166,7 +181,8 @@
           "properties": {
             "interaction": {
               "properties": { "type": { "const": "numeric" } },
-              "required": ["type"]
+              "required": ["type"],
+              "additionalProperties": false
             },
             "solution": { "$ref": "#/$defs/SolutionNumeric" }
           }
@@ -181,9 +197,10 @@
           "properties": {
             "interaction": {
               "properties": { "type": { "const": "mcq" } },
-              "required": ["type"]
+              "required": ["type"],
+              "additionalProperties": false
             },
-            "options": { "$ref": "#/$defs/Options" },
+            "options": { "$ref": "#/$defs/OptionsMCQ4" },
             "solution": { "$ref": "#/$defs/SolutionMCQ" }
           },
           "required": ["options"]
@@ -198,17 +215,10 @@
           "properties": {
             "interaction": {
               "properties": { "type": { "const": "fill_blanks" } },
-              "required": ["type"]
+              "required": ["type"],
+              "additionalProperties": false
             },
-            "solution": {
-              "type": "object",
-              "description": "Fill blanks can be represented in multiple ways. Keep flexible but require 'value'.",
-              "properties": {
-                "value": {}
-              },
-              "required": ["value"],
-              "additionalProperties": true
-            }
+            "solution": { "$ref": "#/$defs/SolutionFillBlanks" }
           }
         }
       ]
@@ -221,14 +231,10 @@
           "properties": {
             "interaction": {
               "properties": { "type": { "const": "n4" } },
-              "required": ["type"]
+              "required": ["type"],
+              "additionalProperties": false
             },
-            "solution": {
-              "type": "object",
-              "description": "N4 tasks may have structured solutions. Keep flexible but require at least one field.",
-              "minProperties": 1,
-              "additionalProperties": true
-            }
+            "solution": { "$ref": "#/$defs/SolutionN4" }
           }
         }
       ]

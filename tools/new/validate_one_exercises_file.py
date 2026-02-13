@@ -1,284 +1,406 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+validate_one_exercises_file.py
+
+Validate a single exercises.json file:
+- JSON Schema (Draft 2020-12) validation
+- taskForm validation against taskvormen-canon.json (best-effort)
+- Report ONE clear "diff-style" error per invalid item (instead of a wall of errors)
+
+Usage:
+  py -3.13 tools/new/validate_one_exercises_file.py path/to/exercises.json --schema path/to/ExerciseSchema.json --taskforms docs/new/taskvormen-canon.json
+
+Exit codes:
+  0 = OK
+  1 = validation failed (one or more items invalid)
+  2 = CLI / IO / parse error
+"""
+
+from __future__ import annotations
 
 import argparse
 import json
 import os
 import sys
-from dataclasses import dataclass
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
-from jsonschema import Draft202012Validator
+try:
+    from jsonschema import Draft202012Validator
+    from jsonschema.exceptions import best_match
+except Exception as e:
+    print("ERROR: jsonschema package missing or incompatible:", e)
+    sys.exit(2)
+
+# NEW (no deprecated resolver)
+try:
+    from referencing import Registry, Resource
+    from referencing.jsonschema import DRAFT202012
+except Exception as e:
+    print("ERROR: referencing package missing or incompatible:", e)
+    print("Install/upgrade: pip install 'jsonschema[format]' referencing")
+    sys.exit(2)
 
 
-# -----------------------------
-# Helpers
-# -----------------------------
+# ----------------------------
+# IO helpers
+# ----------------------------
 
-@dataclass
-class Issue:
-    kind: str   # "ERROR" or "WARN"
-    code: str   # e.g. "CONTENT-FAIL"
-    message: str
-
-def _read_json(path: str) -> Any:
+def read_json(path: str) -> Any:
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def _load_schema(schema_path: str) -> Draft202012Validator:
-    schema = _read_json(schema_path)
-    return Draft202012Validator(schema)
 
-def _load_taskforms(taskforms_path: str) -> Dict[str, Any]:
+def safe_print(s: str) -> None:
     """
-    Expected format like:
-    {
-      "levels": {
-        "n2": {"allowedTaskForms":[...], "disallowedTaskForms":[...]},
-        ...
-      },
-      "taskFormDefinitions": {...}
-    }
+    Avoid UnicodeEncodeError on Windows consoles.
     """
-    return _read_json(taskforms_path)
-
-def _format_schema_error(e) -> str:
-    loc = "/".join([str(p) for p in e.absolute_path]) if e.absolute_path else "(root)"
-    return f"{loc}: {e.message}"
-
-def _is_explain_what_happens(taskform: str) -> bool:
-    return taskform == "explain_what_happens"
-
-def _normalize_text(s: str) -> str:
-    return (s or "").lower()
-
-def _path_guess_topic_and_level(file_path: str) -> Tuple[str, str]:
-    """
-    Best-effort: extract topic slug and level folder from content/... path.
-    Example:
-      content/nl-NL/verhoudingen/groep-5/n2/topics/breuken-vergelijken/exercises.json
-    """
-    parts = file_path.replace("\\", "/").split("/")
-    topic = ""
-    level = ""
-    for i, p in enumerate(parts):
-        if p in ("n1", "n2", "n3", "n4"):
-            level = p
-        if p == "topics" and i + 1 < len(parts):
-            topic = parts[i + 1]
-    return topic, level
-
-
-# -----------------------------
-# NEW: Content rules
-# -----------------------------
-
-FORBIDDEN_BY_LEVEL = {
-    "n2": ["waarom", "leg uit", "verklaar", "beargumenteer", "onderbouw"],
-}
-
-FORBIDDEN_BY_TASKFORM_WARN = {
-    # Warnings: stylistic guidance (not always fatal)
-    "explain_what_happens": ["strategie", "handig", "handiger", "makkelijker"],
-}
-
-HINT_LEAK_FATAL_EXPLAIN = [
-    # Fatal in explain_what_happens: it gives away the answer
-    "afronden",
-    "splitsen",
-    "aanvullen",
-    "compens",
-]
-
-def run_content_rules(ex: Dict[str, Any], file_path: str) -> List[Issue]:
-    issues: List[Issue] = []
-
-    level = ex.get("level") or ""
-    topic = ex.get("topic") or ""
-    taskform = (ex.get("metadata") or {}).get("taskForm") or ""
-    prompt = _normalize_text(ex.get("prompt") or "")
-    interaction_type = ((ex.get("interaction") or {}).get("type")) or ""
-    solution = ex.get("solution") or {}
-
-    # ---- Rule A: forbidden phrases in n2 prompts (FAIL)
-    if level in FORBIDDEN_BY_LEVEL:
-        for phrase in FORBIDDEN_BY_LEVEL[level]:
-            if phrase in prompt:
-                issues.append(Issue(
-                    kind="ERROR",
-                    code="CONTENT-FAIL",
-                    message=f"Forbidden phrase '{phrase}' in n2 prompt."
-                ))
-
-    # ---- Rule B: explain_what_happens hint leakage (FAIL)
-    if _is_explain_what_happens(taskform):
-        for phrase in HINT_LEAK_FATAL_EXPLAIN:
-            if phrase in prompt:
-                issues.append(Issue(
-                    kind="ERROR",
-                    code="CONTENT-FAIL",
-                    message=f"Hint leakage in explain_what_happens: prompt contains '{phrase}'."
-                ))
-        # Soft warnings too
-        for phrase in FORBIDDEN_BY_TASKFORM_WARN.get(taskform, []):
-            if phrase in prompt:
-                issues.append(Issue(
-                    kind="WARN",
-                    code="CONTENT-WARN",
-                    message=f"Discouraged word in explain_what_happens prompt: '{phrase}'."
-                ))
-
-    # ---- Rule C: numeric interaction must not have non-numeric string answers
-    # (You previously had 'evenveel' with numeric. We'll enforce.)
-    if interaction_type == "numeric":
-        v = solution.get("value")
-        if isinstance(v, str):
-            # allow numeric strings like "7 rest 2" or "12" or "3,5"
-            # - if it contains letters other than 'rest' => fail
-            vv = v.strip().lower()
-            if "rest" in vv:
-                # ok (handled below for specific topics as well)
-                pass
-            else:
-                # numeric string should be parseable-ish; if alpha present -> fail
-                has_alpha = any(ch.isalpha() for ch in vv)
-                if has_alpha:
-                    issues.append(Issue(
-                        kind="ERROR",
-                        code="CONTENT-FAIL",
-                        message=f"numeric interaction has non-numeric string solution.value: '{v}'."
-                    ))
-
-    # ---- Rule D: topic-specific: delen-met-rest format
-    # Your n2 pack used solution.value string "q rest r". Enforce for this topic.
-    if topic == "delen-met-rest":
-        v = solution.get("value")
-        if not isinstance(v, str):
-            issues.append(Issue(
-                kind="ERROR",
-                code="CONTENT-FAIL",
-                message="delen-met-rest requires solution.value as string 'q rest r'."
-            ))
-        else:
-            vv = v.strip().lower()
-            if " rest " not in vv:
-                issues.append(Issue(
-                    kind="ERROR",
-                    code="CONTENT-FAIL",
-                    message=f"delen-met-rest requires format '<q> rest <r>', got '{v}'."
-                ))
-
-    # ---- Rule E: percentages-herkennen-in-context should not be numeric
-    if topic == "percentages-herkennen-in-context":
-        if interaction_type == "numeric":
-            issues.append(Issue(
-                kind="ERROR",
-                code="CONTENT-FAIL",
-                message="percentages-herkennen-in-context must not use numeric interaction (use mcq/select_single)."
-            ))
-
-    return issues
-
-
-# -----------------------------
-# Taskform canon checks
-# -----------------------------
-
-def validate_taskform_allowed(ex: Dict[str, Any], taskforms_canon: Dict[str, Any]) -> List[Issue]:
-    issues: List[Issue] = []
-    level = ex.get("level")
-    taskform = (ex.get("metadata") or {}).get("taskForm")
-
-    levels = (taskforms_canon or {}).get("levels") or {}
-    if level not in levels:
-        issues.append(Issue("ERROR", "TASKFORM-FAIL", f"Unknown level '{level}' in taskforms canon."))
-        return issues
-
-    allowed = set(levels[level].get("allowedTaskForms") or [])
-    disallowed = set(levels[level].get("disallowedTaskForms") or [])
-
-    if taskform in disallowed:
-        issues.append(Issue("ERROR", "TASKFORM-FAIL", f"taskForm '{taskform}' is disallowed for level '{level}'."))
-
-    if allowed and taskform not in allowed:
-        issues.append(Issue("ERROR", "TASKFORM-FAIL", f"taskForm '{taskform}' not in allowedTaskForms for level '{level}'."))
-
-    return issues
-
-
-# -----------------------------
-# Main validation
-# -----------------------------
-
-def validate_one_file(exercises_path: str, schema_path: str, taskforms_path: str) -> Tuple[bool, List[Issue]]:
-    issues: List[Issue] = []
-
-    # parse JSON file
     try:
-        data = _read_json(exercises_path)
-    except Exception as e:
-        issues.append(Issue("ERROR", "PARSE-FAIL", f"JSON parse error: {e}"))
-        return False, issues
-
-    # schema validation (file expected to be an array)
-    validator = _load_schema(schema_path)
-    schema_errors = sorted(validator.iter_errors(data), key=lambda e: list(e.absolute_path))
-    for e in schema_errors:
-        issues.append(Issue("ERROR", "SCHEMA-FAIL", _format_schema_error(e)))
-
-    if any(i.kind == "ERROR" and i.code == "SCHEMA-FAIL" for i in issues):
-        return False, issues
-
-    taskforms_canon = _load_taskforms(taskforms_path)
-
-    # per-exercise checks
-    if not isinstance(data, list):
-        issues.append(Issue("ERROR", "SCHEMA-FAIL", "Top-level JSON must be an array of exercises."))
-        return False, issues
-
-    for idx, ex in enumerate(data):
-        if not isinstance(ex, dict):
-            issues.append(Issue("ERROR", "SCHEMA-FAIL", f"Item[{idx}] is not an object."))
-            continue
-
-        # taskForm canon gate
-        issues.extend(validate_taskform_allowed(ex, taskforms_canon))
-
-        # NEW: content rules
-        issues.extend(run_content_rules(ex, exercises_path))
-
-    ok = not any(i.kind == "ERROR" for i in issues)
-    return ok, issues
+        print(s)
+    except UnicodeEncodeError:
+        print(s.encode("utf-8", errors="replace").decode("utf-8"))
 
 
-def main():
+# ----------------------------
+# JSON pointer helpers
+# ----------------------------
+
+def join_json_pointer(parts: List[str]) -> str:
+    if not parts:
+        return "/"
+    esc = []
+    for p in parts:
+        p = str(p).replace("~", "~0").replace("/", "~1")
+        esc.append(p)
+    return "/" + "/".join(esc)
+
+
+def get_at_path(obj: Any, path: List[Any]) -> Any:
+    cur = obj
+    for p in path:
+        try:
+            if isinstance(cur, list):
+                cur = cur[int(p)]
+            elif isinstance(cur, dict):
+                cur = cur[p]
+            else:
+                return None
+        except Exception:
+            return None
+    return cur
+
+
+def format_value(v: Any, max_len: int = 180) -> str:
+    try:
+        s = json.dumps(v, ensure_ascii=False)
+    except Exception:
+        s = repr(v)
+    if len(s) > max_len:
+        return s[:max_len] + "...(truncated)"
+    return s
+
+
+# ----------------------------
+# taskForm canon parsing (best effort)
+# ----------------------------
+
+def extract_taskforms_from_canon(canon: Any) -> Tuple[Optional[set], Optional[Dict[str, set]]]:
+    all_taskforms: set = set()
+    by_level: Dict[str, set] = {}
+
+    if isinstance(canon, list):
+        for it in canon:
+            if isinstance(it, str):
+                all_taskforms.add(it)
+            elif isinstance(it, dict):
+                tf = it.get("taskForm") or it.get("id") or it.get("name")
+                if isinstance(tf, str):
+                    all_taskforms.add(tf)
+                lvl = it.get("level")
+                if isinstance(lvl, str) and isinstance(tf, str):
+                    by_level.setdefault(lvl, set()).add(tf)
+
+    elif isinstance(canon, dict):
+        if isinstance(canon.get("taskForms"), list):
+            for it in canon["taskForms"]:
+                if isinstance(it, str):
+                    all_taskforms.add(it)
+                elif isinstance(it, dict):
+                    tf = it.get("taskForm") or it.get("id") or it.get("name")
+                    if isinstance(tf, str):
+                        all_taskforms.add(tf)
+                    lvl = it.get("level")
+                    if isinstance(lvl, str) and isinstance(tf, str):
+                        by_level.setdefault(lvl, set()).add(tf)
+
+        levels = canon.get("levels") or canon.get("byLevel") or canon.get("levelTaskForms")
+        if isinstance(levels, dict):
+            for lvl, arr in levels.items():
+                if not isinstance(lvl, str) or not isinstance(arr, list):
+                    continue
+                for it in arr:
+                    if isinstance(it, str):
+                        all_taskforms.add(it)
+                        by_level.setdefault(lvl, set()).add(it)
+                    elif isinstance(it, dict):
+                        tf = it.get("taskForm") or it.get("id") or it.get("name")
+                        if isinstance(tf, str):
+                            all_taskforms.add(tf)
+                            by_level.setdefault(lvl, set()).add(tf)
+
+        if isinstance(canon.get("items"), list):
+            for it in canon["items"]:
+                if not isinstance(it, dict):
+                    continue
+                tf = it.get("taskForm") or it.get("id") or it.get("name")
+                if isinstance(tf, str):
+                    all_taskforms.add(tf)
+                lvl = it.get("level")
+                if isinstance(lvl, str) and isinstance(tf, str):
+                    by_level.setdefault(lvl, set()).add(tf)
+
+    all_taskforms_out = all_taskforms if all_taskforms else None
+    by_level_out = by_level if by_level else None
+    return all_taskforms_out, by_level_out
+
+
+def taskform_error(ex: Dict[str, Any], all_taskforms: Optional[set], by_level: Optional[Dict[str, set]]) -> Optional[Dict[str, Any]]:
+    md = ex.get("metadata") if isinstance(ex.get("metadata"), dict) else {}
+    tf = md.get("taskForm")
+    lvl = ex.get("level")
+
+    if not isinstance(tf, str) or not tf.strip():
+        return {
+            "path": "/metadata/taskForm",
+            "message": "metadata.taskForm missing/empty",
+            "expected": "non-empty string (must exist in taskvormen-canon.json)",
+            "actual": format_value(tf),
+        }
+
+    # If canon unavailable, don't hard-fail here (schema likely enforces enum anyway)
+    if all_taskforms is None and by_level is None:
+        return None
+
+    if isinstance(lvl, str) and by_level and lvl in by_level:
+        allowed = by_level[lvl]
+        if tf not in allowed:
+            return {
+                "path": "/metadata/taskForm",
+                "message": f"taskForm not allowed for level {lvl}",
+                "expected": f"one of: {sorted(list(allowed))[:40]}",
+                "actual": format_value(tf),
+            }
+
+    if all_taskforms and tf not in all_taskforms:
+        return {
+            "path": "/metadata/taskForm",
+            "message": "taskForm not found in canon",
+            "expected": f"one of: {sorted(list(all_taskforms))[:60]}",
+            "actual": format_value(tf),
+        }
+
+    return None
+
+
+# ----------------------------
+# Error formatting
+# ----------------------------
+
+def describe_expected(err) -> str:
+    v = getattr(err, "validator", "")
+    val = getattr(err, "validator_value", None)
+
+    if v == "required":
+        if isinstance(val, list):
+            return f"required fields include: {val}"
+        return "missing required field(s)"
+
+    if v == "type":
+        return f"type: {val}"
+
+    if v == "enum":
+        if isinstance(val, list):
+            show = val[:40]
+            return f"one of: {show}" + (" ...(truncated)" if len(val) > 40 else "")
+        return "one of enum values"
+
+    if v == "minItems":
+        return f"minItems >= {val}"
+    if v == "maxItems":
+        return f"maxItems <= {val}"
+    if v == "minLength":
+        return f"minLength >= {val}"
+    if v == "pattern":
+        return f"pattern: {val}"
+    if v == "additionalProperties":
+        return "no additional properties allowed"
+
+    if val is not None:
+        return f"{v}: {val}"
+    return str(v) if v else "schema requirement"
+
+
+def schema_error_for_item(validator: Draft202012Validator, item: Any) -> Optional[Dict[str, Any]]:
+    errors = list(validator.iter_errors(item))
+    if not errors:
+        return None
+
+    bm = best_match(errors) or errors[0]
+
+    path_list = list(getattr(bm, "absolute_path", []))
+    schema_path_list = list(getattr(bm, "absolute_schema_path", []))
+
+    instance_path = join_json_pointer([str(p) for p in path_list])
+    actual = get_at_path(item, path_list)
+    expected = describe_expected(bm)
+
+    return {
+        "path": instance_path,
+        "schemaPath": join_json_pointer([str(p) for p in schema_path_list]),
+        "message": bm.message,
+        "expected": expected,
+        "actual": format_value(actual),
+    }
+
+
+# ----------------------------
+# Registry-based schema setup (no deprecated resolver)
+# ----------------------------
+
+def _file_uri(path: str) -> str:
+    # Minimal file:// URI that works on Windows + *nix
+    ap = os.path.abspath(path)
+    ap = ap.replace("\\", "/")
+    if not ap.startswith("/"):
+        # Windows drive letter "C:/..."
+        return "file:///" + ap
+    return "file://" + ap
+
+
+def build_item_validator(schema: Dict[str, Any], schema_path: str) -> Draft202012Validator:
+    """
+    Build an item-level validator that can still resolve $ref to the root schema.
+    Uses referencing.Registry (jsonschema>=4.18+ recommended approach).
+    """
+    item_schema = schema.get("items")
+    if not isinstance(item_schema, dict):
+        raise ValueError("Schema has no top-level 'items' object to validate array elements.")
+
+    schema_id = schema.get("$id")
+    if not isinstance(schema_id, str) or not schema_id.strip():
+        schema_id = _file_uri(schema_path)
+        schema["$id"] = schema_id
+
+    registry = Registry().with_resource(
+        schema_id,
+        Resource.from_contents(schema, default_specification=DRAFT202012),
+    )
+
+    # CRITICAL FIX:
+    # If items is a fragment-only $ref (e.g. "#/$defs/Exercise"),
+    # make it absolute against the root schema id so it resolves in the full schema.
+    if isinstance(item_schema.get("$ref"), str) and item_schema["$ref"].startswith("#"):
+        item_schema = {"$ref": f"{schema_id}{item_schema['$ref']}"}
+
+    # Safety: embed $defs locally so $ref fragments resolve even if registry lookup fails
+    if "$defs" in schema and "$defs" not in item_schema:
+        # copy to avoid mutating the original schema dict
+        item_schema = dict(item_schema)
+        item_schema["$defs"] = schema["$defs"]
+
+    return Draft202012Validator(item_schema, registry=registry)
+
+# ----------------------------
+# Main
+# ----------------------------
+
+def parse_args() -> argparse.Namespace:
     ap = argparse.ArgumentParser()
-    ap.add_argument("exercises_json", help="Path to exercises.json")
+    ap.add_argument("file", help="Path to exercises.json")
     ap.add_argument("--schema", required=True, help="Path to ExerciseSchema.json")
     ap.add_argument("--taskforms", required=True, help="Path to taskvormen-canon.json")
-    args = ap.parse_args()
+    ap.add_argument("--max-errors", type=int, default=50, help="Max items to report (default 50)")
+    return ap.parse_args()
 
-    ok, issues = validate_one_file(args.exercises_json, args.schema, args.taskforms)
 
-    if ok:
-        print("Result: ✅ OK.")
-        # still print warnings (if any)
-        warns = [i for i in issues if i.kind == "WARN"]
-        if warns:
-            for w in warns:
-                print(f"[{args.exercises_json}] [{w.code}] {w.message}")
-        sys.exit(0)
+def main() -> int:
+    args = parse_args()
 
-    # Print all issues
-    for i in issues:
-        print(f"[{args.exercises_json}] [{i.code}] {i.message}")
+    if not os.path.exists(args.file):
+        safe_print(f"ERROR: file not found: {args.file}")
+        return 2
+    if not os.path.exists(args.schema):
+        safe_print(f"ERROR: schema not found: {args.schema}")
+        return 2
+    if not os.path.exists(args.taskforms):
+        safe_print(f"ERROR: taskforms file not found: {args.taskforms}")
+        return 2
 
-    # Summary
-    err_count = sum(1 for i in issues if i.kind == "ERROR")
-    warn_count = sum(1 for i in issues if i.kind == "WARN")
-    print(f"Result: ❌ FAIL — {err_count} error(s), {warn_count} warning(s).")
-    sys.exit(1)
+    try:
+        data = read_json(args.file)
+    except Exception as e:
+        safe_print(f"ERROR: cannot parse JSON file: {args.file}\n  {e}")
+        return 2
+
+    if not isinstance(data, list):
+        safe_print(f"FAIL: root must be a JSON array, got {type(data).__name__}")
+        return 1
+
+    try:
+        schema = read_json(args.schema)
+    except Exception as e:
+        safe_print(f"ERROR: cannot parse schema JSON: {args.schema}\n  {e}")
+        return 2
+
+    try:
+        item_validator = build_item_validator(schema, args.schema)
+    except Exception as e:
+        safe_print(f"ERROR: cannot build validator:\n  {e}")
+        return 2
+
+    # Load canon (best-effort)
+    try:
+        canon = read_json(args.taskforms)
+        all_taskforms, by_level = extract_taskforms_from_canon(canon)
+    except Exception:
+        all_taskforms, by_level = None, None
+
+    invalid_count = 0
+    reported = 0
+
+    for idx, ex in enumerate(data):
+        if reported >= args.max_errors:
+            break
+
+        ex_id = ex.get("id") if isinstance(ex, dict) else None
+
+        schema_err = schema_error_for_item(item_validator, ex)
+        tf_err = None
+        if isinstance(ex, dict):
+            tf_err = taskform_error(ex, all_taskforms, by_level)
+
+        chosen = schema_err or tf_err
+        if chosen:
+            invalid_count += 1
+            reported += 1
+
+            header = f"[ITEM {idx}] id={ex_id!r}" if ex_id is not None else f"[ITEM {idx}]"
+            safe_print(header)
+            safe_print(f"  path:     {chosen.get('path')}")
+            if chosen.get("schemaPath"):
+                safe_print(f"  schema:   {chosen.get('schemaPath')}")
+            safe_print(f"  message:  {chosen.get('message')}")
+            safe_print(f"  expected: {chosen.get('expected')}")
+            safe_print(f"  actual:   {chosen.get('actual')}")
+            safe_print("")
+
+    if invalid_count == 0:
+        safe_print(f"OK: validated {args.file} ({len(data)} item(s))")
+        return 0
+
+    safe_print(f"FAIL: {invalid_count} item(s) invalid in {args.file} (showing up to {args.max_errors})")
+    return 1
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

@@ -20,11 +20,11 @@
       "index": 0
     },
     "feedback": {
-      "correct": "Goed gedaan!",
-      "incorrect": "Probeer het nog eens."
+      "correct": "Goed gedaan! Een deur is meestal een paar meter hoog.",
+      "incorrect": "Probeer het nog eens. Denk aan hoe hoog een deur normaal is."
     },
     "metadata": {
-      "strategy": "logisch nadenken",
+      "strategy": "Vergelijk de hoogte van een deur.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-MET-COMP-01"
@@ -52,11 +52,11 @@
       "index": 0
     },
     "feedback": {
-      "correct": "Dat klopt!",
-      "incorrect": "Dat is niet juist."
+      "correct": "Precies! Een fles frisdrank bevat vaak 1 liter.",
+      "incorrect": "Dat klopt niet. Denk aan hoeveel vloeistof er in een fles past."
     },
     "metadata": {
-      "strategy": "feiten herkennen",
+      "strategy": "Herken de inhoud van een fles.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-MET-UNIT-01"
@@ -84,11 +84,11 @@
       "index": 0
     },
     "feedback": {
-      "correct": "Precies!",
-      "incorrect": "Dat is niet de juiste eenheid."
+      "correct": "Juist! Lengte meet je in centimeters of meters.",
+      "incorrect": "Dat is niet juist. Denk aan hoe je de lengte van een tafel meet."
     },
     "metadata": {
-      "strategy": "eenheid kiezen",
+      "strategy": "Kies de juiste eenheid voor lengte.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-MET-UNIT-01"
@@ -116,11 +116,11 @@
       "index": 0
     },
     "feedback": {
-      "correct": "Goed gekozen!",
-      "incorrect": "Dat is niet het juiste meetinstrument."
+      "correct": "Goed zo! Een weegschaal gebruik je om gewicht te meten.",
+      "incorrect": "Dat klopt niet. Denk aan wat je gebruikt om gewicht te meten."
     },
     "metadata": {
-      "strategy": "meetinstrument kiezen",
+      "strategy": "Kies het juiste meetinstrument voor gewicht.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-MET-UNIT-01"
@@ -137,25 +137,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Een pen weegt ongeveer:\n\nWat is het meest logisch?",
+    "prompt": "Een fiets is ongeveer zo lang als:\n\nWat is het meest logisch?",
     "options": [
-      "10 gram",
-      "10 liter",
-      "10 centimeter",
-      "10 uur"
+      "2 meter",
+      "2 centimeter",
+      "2 liter",
+      "2 kilo"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Dat klopt!",
-      "incorrect": "Probeer het nog eens."
+      "correct": "Klopt! Een fiets is meestal een paar meter lang.",
+      "incorrect": "Probeer het nog eens. Denk aan hoe lang een fiets normaal is."
     },
     "metadata": {
-      "strategy": "logisch nadenken",
+      "strategy": "Vergelijk de lengte van een fiets.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-MET-UNIT-01"
+        "MM-MET-COMP-01"
       ]
     }
   },
@@ -169,10 +169,10 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Een emmer kan ongeveer:\n\nWelke uitspraak klopt?",
+    "prompt": "Een emmer water.\n\nWelke uitspraak klopt?",
     "options": [
       "Bevat 10 liter.",
-      "Is 10 meter lang.",
+      "Is 10 meter hoog.",
       "Weegt 10 minuten.",
       "Is 10 uur zwaar."
     ],
@@ -180,11 +180,11 @@
       "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Dat klopt niet."
+      "correct": "Juist! Een emmer kan ongeveer 10 liter bevatten.",
+      "incorrect": "Dat is niet juist. Denk aan hoeveel water er in een emmer past."
     },
     "metadata": {
-      "strategy": "feiten herkennen",
+      "strategy": "Herken de inhoud van een emmer.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-MET-UNIT-01"
@@ -201,22 +201,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Je meet hoe lang een schrift is.\n\nWelke eenheid hoort erbij?",
+    "prompt": "Je meet hoe zwaar een persoon is.\n\nWelke eenheid hoort erbij?",
     "options": [
-      "centimeter",
-      "liter",
       "kilogram",
-      "uur"
+      "liter",
+      "centimeter",
+      "minuut"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Precies!",
-      "incorrect": "Dat is niet de juiste eenheid."
+      "correct": "Goed gedaan! Gewicht meet je in kilogrammen.",
+      "incorrect": "Dat klopt niet. Denk aan hoe je het gewicht van een persoon meet."
     },
     "metadata": {
-      "strategy": "eenheid kiezen",
+      "strategy": "Kies de juiste eenheid voor gewicht.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-MET-UNIT-01"
@@ -233,25 +233,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Een klaslokaal is ongeveer:\n\nWat is het meest logisch?",
+    "prompt": "Je wilt meten hoe lang een klaslokaal is.\n\nWat gebruik je om te meten?",
     "options": [
-      "6 meter",
-      "6 liter",
-      "6 kilo",
-      "6 minuten"
+      "meetlint",
+      "weegschaal",
+      "maatbeker",
+      "klok"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Goed gedaan!",
-      "incorrect": "Probeer het nog eens."
+      "correct": "Juist! Een meetlint gebruik je om lengte te meten.",
+      "incorrect": "Dat is niet juist. Denk aan wat je gebruikt om lengte te meten."
     },
     "metadata": {
-      "strategy": "logisch nadenken",
+      "strategy": "Kies het juiste meetinstrument voor lengte.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-MET-COMP-01"
+        "MM-MET-UNIT-01"
       ]
     }
   },
@@ -265,25 +265,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Je wilt weten hoe zwaar een persoon is.\n\nWat gebruik je om te meten?",
+    "prompt": "Een brood is ongeveer zo zwaar als:\n\nWat is het meest logisch?",
     "options": [
-      "weegschaal",
-      "maatbeker",
-      "meetlint",
-      "klok"
+      "1 kilogram",
+      "1 liter",
+      "1 meter",
+      "1 minuut"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Dat klopt!",
-      "incorrect": "Dat is niet het juiste meetinstrument."
+      "correct": "Precies! Een brood weegt ongeveer 1 kilogram.",
+      "incorrect": "Probeer het nog eens. Denk aan hoe zwaar een brood normaal is."
     },
     "metadata": {
-      "strategy": "meetinstrument kiezen",
+      "strategy": "Vergelijk het gewicht van een brood.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-MET-UNIT-01"
+        "MM-MET-COMP-01"
       ]
     }
   },
@@ -297,22 +297,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Een fiets weegt ongeveer:\n\nWat is het meest logisch?",
+    "prompt": "Een tv.\n\nWelke uitspraak klopt?",
     "options": [
-      "15 kilo",
-      "15 liter",
-      "15 centimeter",
-      "15 minuten"
+      "Is 1 meter breed.",
+      "Bevat 1 liter.",
+      "Weegt 1 minuut.",
+      "Is 1 uur hoog."
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Goed gedaan!",
-      "incorrect": "Dat klopt niet."
+      "correct": "Goed zo! Een tv is vaak ongeveer 1 meter breed.",
+      "incorrect": "Dat klopt niet. Denk aan de breedte van een tv."
     },
     "metadata": {
-      "strategy": "logisch nadenken",
+      "strategy": "Herken de breedte van een tv.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-MET-UNIT-01"
@@ -329,22 +329,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Je meet hoeveel water er in een fles zit.\n\nWelke eenheid hoort erbij?",
+    "prompt": "Je meet hoe lang een pen is.\n\nWelke eenheid hoort erbij?",
     "options": [
+      "centimeter",
       "liter",
       "kilogram",
-      "centimeter",
       "minuut"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Precies!",
-      "incorrect": "Dat is niet de juiste eenheid."
+      "correct": "Juist! Lengte meet je in centimeters of meters.",
+      "incorrect": "Dat is niet juist. Denk aan hoe je de lengte van een pen meet."
     },
     "metadata": {
-      "strategy": "eenheid kiezen",
+      "strategy": "Kies de juiste eenheid voor lengte.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-MET-UNIT-01"
@@ -361,22 +361,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Een brood weegt ongeveer:\n\nWat is het meest logisch?",
+    "prompt": "Je wilt meten hoe lang een fiets is.\n\nWat gebruik je om te meten?",
     "options": [
-      "500 gram",
-      "500 liter",
-      "500 centimeter",
-      "500 minuten"
+      "meetlint",
+      "weegschaal",
+      "maatbeker",
+      "klok"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Dat klopt!",
-      "incorrect": "Probeer het nog eens."
+      "correct": "Goed gedaan! Een meetlint gebruik je om lengte te meten.",
+      "incorrect": "Dat klopt niet. Denk aan wat je gebruikt om lengte te meten."
     },
     "metadata": {
-      "strategy": "logisch nadenken",
+      "strategy": "Kies het juiste meetinstrument voor lengte.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-MET-UNIT-01"
@@ -393,25 +393,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Een klok geeft de tijd aan.\n\nWelke uitspraak klopt?",
+    "prompt": "Een tas is ongeveer zo zwaar als:\n\nWat is het meest logisch?",
     "options": [
-      "Geeft uren aan.",
-      "Meet gewicht.",
-      "Meet lengte.",
-      "Geeft liters aan."
+      "2 kilogram",
+      "2 liter",
+      "2 meter",
+      "2 minuut"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Goed zo!",
-      "incorrect": "Dat klopt niet."
+      "correct": "Klopt! Een tas kan ongeveer 2 kilogram wegen.",
+      "incorrect": "Probeer het nog eens. Denk aan hoe zwaar een tas normaal is."
     },
     "metadata": {
-      "strategy": "feiten herkennen",
+      "strategy": "Vergelijk het gewicht van een tas.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-MET-UNIT-01"
+        "MM-MET-COMP-01"
       ]
     }
   },
@@ -425,22 +425,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Je wilt weten hoe lang een pen is.\n\nWat gebruik je om te meten?",
+    "prompt": "Een fles water.\n\nWelke uitspraak klopt?",
     "options": [
-      "meetlint",
-      "weegschaal",
-      "maatbeker",
-      "klok"
+      "Bevat 1 liter.",
+      "Is 1 meter lang.",
+      "Weegt 1 minuut.",
+      "Is 1 uur zwaar."
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Dat klopt!",
-      "incorrect": "Dat is niet het juiste meetinstrument."
+      "correct": "Precies! Een fles water bevat vaak 1 liter.",
+      "incorrect": "Dat klopt niet. Denk aan hoeveel vloeistof er in een fles past."
     },
     "metadata": {
-      "strategy": "meetinstrument kiezen",
+      "strategy": "Herken de inhoud van een fles.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-MET-UNIT-01"
@@ -457,25 +457,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Een uur is gelijk aan:\n\nWat is het meest logisch?",
+    "prompt": "Je meet hoe zwaar een emmer is.\n\nWelke eenheid hoort erbij?",
     "options": [
-      "60 minuten",
-      "60 seconden",
-      "60 centimeter",
-      "60 kilo"
+      "kilogram",
+      "liter",
+      "centimeter",
+      "minuut"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Goed gedaan!",
-      "incorrect": "Probeer het nog eens."
+      "correct": "Goed gedaan! Gewicht meet je in kilogrammen.",
+      "incorrect": "Dat klopt niet. Denk aan hoe je het gewicht van een emmer meet."
     },
     "metadata": {
-      "strategy": "logisch nadenken",
+      "strategy": "Kies de juiste eenheid voor gewicht.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-MET-COMP-01"
+        "MM-MET-UNIT-01"
       ]
     }
   },
@@ -489,22 +489,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Een liter melk is ongeveer:\n\nWelke uitspraak klopt?",
+    "prompt": "Je wilt meten hoe lang een tv is.\n\nWat gebruik je om te meten?",
     "options": [
-      "Bevat 1 liter.",
-      "Is 1 meter lang.",
-      "Weegt 1 minuut.",
-      "Is 1 uur zwaar."
+      "meetlint",
+      "weegschaal",
+      "maatbeker",
+      "klok"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Dat klopt!",
-      "incorrect": "Dat is niet juist."
+      "correct": "Juist! Een meetlint gebruik je om lengte te meten.",
+      "incorrect": "Dat is niet juist. Denk aan wat je gebruikt om lengte te meten."
     },
     "metadata": {
-      "strategy": "feiten herkennen",
+      "strategy": "Kies het juiste meetinstrument voor lengte.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-MET-UNIT-01"
@@ -521,25 +521,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Je meet hoe zwaar een emmer is.\n\nWat gebruik je om te meten?",
+    "prompt": "Een schrift is ongeveer zo lang als:\n\nWat is het meest logisch?",
     "options": [
-      "weegschaal",
-      "maatbeker",
-      "meetlint",
-      "klok"
+      "30 centimeter",
+      "30 liter",
+      "30 kilogram",
+      "30 minuut"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Goed gekozen!",
-      "incorrect": "Dat is niet het juiste meetinstrument."
+      "correct": "Klopt! Een schrift is meestal ongeveer 30 centimeter lang.",
+      "incorrect": "Probeer het nog eens. Denk aan hoe lang een schrift normaal is."
     },
     "metadata": {
-      "strategy": "meetinstrument kiezen",
+      "strategy": "Vergelijk de lengte van een schrift.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-MET-UNIT-01"
+        "MM-MET-COMP-01"
       ]
     }
   },
@@ -553,25 +553,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Een klaslokaal is ongeveer:\n\nWat is het meest logisch?",
+    "prompt": "Een persoon.\n\nWelke uitspraak klopt?",
     "options": [
-      "6 meter",
-      "6 liter",
-      "6 kilo",
-      "6 minuten"
+      "Weegt 70 kilogram.",
+      "Is 70 liter groot.",
+      "Is 70 meter lang.",
+      "Weegt 70 minuten."
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Goed gedaan!",
-      "incorrect": "Probeer het nog eens."
+      "correct": "Juist! Een persoon weegt vaak rond de 70 kilogram.",
+      "incorrect": "Dat is niet juist. Denk aan het gewicht van een persoon."
     },
     "metadata": {
-      "strategy": "logisch nadenken",
+      "strategy": "Herken het gewicht van een persoon.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-MET-COMP-01"
+        "MM-MET-UNIT-01"
       ]
     }
   },
@@ -585,22 +585,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Je wilt meten hoe lang een tafel is.\n\nWat gebruik je om te meten?",
+    "prompt": "Je meet hoe lang een deur is.\n\nWelke eenheid hoort erbij?",
     "options": [
-      "meetlint",
-      "weegschaal",
-      "maatbeker",
-      "klok"
+      "meter",
+      "liter",
+      "kilogram",
+      "minuut"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Dat klopt!",
-      "incorrect": "Dat is niet het juiste meetinstrument."
+      "correct": "Goed gedaan! Lengte meet je in meters of centimeters.",
+      "incorrect": "Dat klopt niet. Denk aan hoe je de lengte van een deur meet."
     },
     "metadata": {
-      "strategy": "meetinstrument kiezen",
+      "strategy": "Kies de juiste eenheid voor lengte.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-MET-UNIT-01"
@@ -617,22 +617,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Een liter water is ongeveer:\n\nWat is het meest logisch?",
+    "prompt": "Je wilt meten hoe zwaar een fiets is.\n\nWat gebruik je om te meten?",
     "options": [
-      "1 liter",
-      "1 meter",
-      "1 kilo",
-      "1 minuut"
+      "weegschaal",
+      "meetlint",
+      "maatbeker",
+      "klok"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Goed gedaan!",
-      "incorrect": "Probeer het nog eens."
+      "correct": "Goed zo! Een weegschaal gebruik je om gewicht te meten.",
+      "incorrect": "Dat klopt niet. Denk aan wat je gebruikt om gewicht te meten."
     },
     "metadata": {
-      "strategy": "logisch nadenken",
+      "strategy": "Kies het juiste meetinstrument voor gewicht.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-MET-UNIT-01"
@@ -649,25 +649,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Een fiets is ongeveer:\n\nWat is het meest logisch?",
+    "prompt": "Een tafel is ongeveer zo lang als:\n\nWat is het meest logisch?",
     "options": [
-      "15 kilo",
-      "15 liter",
-      "15 centimeter",
-      "15 minuten"
+      "1 meter",
+      "1 liter",
+      "1 kilogram",
+      "1 minuut"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Dat klopt!",
-      "incorrect": "Dat is niet juist."
+      "correct": "Klopt! Een tafel is meestal ongeveer 1 meter lang.",
+      "incorrect": "Probeer het nog eens. Denk aan hoe lang een tafel normaal is."
     },
     "metadata": {
-      "strategy": "logisch nadenken",
+      "strategy": "Vergelijk de lengte van een tafel.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-MET-UNIT-01"
+        "MM-MET-COMP-01"
       ]
     }
   },
@@ -681,22 +681,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Je wilt weten hoe zwaar een boek is.\n\nWat gebruik je om te meten?",
+    "prompt": "Een fles melk.\n\nWelke uitspraak klopt?",
     "options": [
-      "weegschaal",
-      "maatbeker",
-      "meetlint",
-      "klok"
+      "Bevat 1 liter.",
+      "Is 1 meter lang.",
+      "Weegt 1 minuut.",
+      "Is 1 uur zwaar."
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Goed gekozen!",
-      "incorrect": "Dat is niet het juiste meetinstrument."
+      "correct": "Precies! Een fles melk bevat vaak 1 liter.",
+      "incorrect": "Dat klopt niet. Denk aan hoeveel vloeistof er in een fles past."
     },
     "metadata": {
-      "strategy": "meetinstrument kiezen",
+      "strategy": "Herken de inhoud van een fles.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-MET-UNIT-01"
@@ -713,25 +713,25 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Een uur is gelijk aan:\n\nWat is het meest logisch?",
+    "prompt": "Je meet hoe zwaar een brood is.\n\nWelke eenheid hoort erbij?",
     "options": [
-      "60 minuten",
-      "60 seconden",
-      "60 centimeter",
-      "60 kilo"
+      "kilogram",
+      "liter",
+      "centimeter",
+      "minuut"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Goed gedaan!",
-      "incorrect": "Probeer het nog eens."
+      "correct": "Goed gedaan! Gewicht meet je in kilogrammen.",
+      "incorrect": "Dat klopt niet. Denk aan hoe je het gewicht van een brood meet."
     },
     "metadata": {
-      "strategy": "logisch nadenken",
+      "strategy": "Kies de juiste eenheid voor gewicht.",
       "taskForm": "select_single",
       "misconceptKeys": [
-        "MM-MET-COMP-01"
+        "MM-MET-UNIT-01"
       ]
     }
   },
@@ -745,22 +745,22 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Je meet hoeveel melk er in een fles zit.\n\nWelke eenheid hoort erbij?",
+    "prompt": "Je wilt meten hoe lang een persoon is.\n\nWat gebruik je om te meten?",
     "options": [
-      "liter",
-      "kilogram",
-      "centimeter",
-      "minuut"
+      "meetlint",
+      "weegschaal",
+      "maatbeker",
+      "klok"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Precies!",
-      "incorrect": "Dat is niet de juiste eenheid."
+      "correct": "Juist! Een meetlint gebruik je om lengte te meten.",
+      "incorrect": "Dat is niet juist. Denk aan wat je gebruikt om lengte te meten."
     },
     "metadata": {
-      "strategy": "eenheid kiezen",
+      "strategy": "Kies het juiste meetinstrument voor lengte.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-MET-UNIT-01"
@@ -777,22 +777,822 @@
     "interaction": {
       "type": "mcq"
     },
-    "prompt": "Een tas weegt ongeveer:\n\nWat is het meest logisch?",
+    "prompt": "Een deur is ongeveer zo breed als:\n\nWat is het meest logisch?",
     "options": [
-      "1 kilo",
-      "1 liter",
+      "1 meter",
       "1 centimeter",
-      "1 minuut"
+      "1 liter",
+      "1 kilo"
     ],
     "solution": {
       "index": 0
     },
     "feedback": {
-      "correct": "Dat klopt!",
-      "incorrect": "Probeer het nog eens."
+      "correct": "Goed gedaan! Een deur is meestal ongeveer 1 meter breed.",
+      "incorrect": "Probeer het nog eens. Denk aan hoe breed een deur normaal is."
     },
     "metadata": {
-      "strategy": "logisch nadenken",
+      "strategy": "Vergelijk de breedte van een deur.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-COMP-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-026",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een fles sap.\n\nWelke uitspraak klopt?",
+    "options": [
+      "Bevat 1 liter.",
+      "Is 1 meter lang.",
+      "Weegt 1 minuut.",
+      "Is 1 uur zwaar."
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Precies! Een fles sap bevat vaak 1 liter.",
+      "incorrect": "Dat klopt niet. Denk aan hoeveel vloeistof er in een fles past."
+    },
+    "metadata": {
+      "strategy": "Herken de inhoud van een fles.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-027",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je meet hoe zwaar een tv is.\n\nWelke eenheid hoort erbij?",
+    "options": [
+      "kilogram",
+      "liter",
+      "centimeter",
+      "minuut"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed gedaan! Gewicht meet je in kilogrammen.",
+      "incorrect": "Dat klopt niet. Denk aan hoe je het gewicht van een tv meet."
+    },
+    "metadata": {
+      "strategy": "Kies de juiste eenheid voor gewicht.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-028",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je wilt meten hoe lang een schrift is.\n\nWat gebruik je om te meten?",
+    "options": [
+      "meetlint",
+      "weegschaal",
+      "maatbeker",
+      "klok"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Juist! Een meetlint gebruik je om lengte te meten.",
+      "incorrect": "Dat is niet juist. Denk aan wat je gebruikt om lengte te meten."
+    },
+    "metadata": {
+      "strategy": "Kies het juiste meetinstrument voor lengte.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-029",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een persoon is ongeveer zo lang als:\n\nWat is het meest logisch?",
+    "options": [
+      "1.7 meter",
+      "1.7 liter",
+      "1.7 kilogram",
+      "1.7 minuut"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Klopt! Een persoon is meestal ongeveer 1.7 meter lang.",
+      "incorrect": "Probeer het nog eens. Denk aan hoe lang een persoon normaal is."
+    },
+    "metadata": {
+      "strategy": "Vergelijk de lengte van een persoon.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-COMP-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-030",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een fles olie.\n\nWelke uitspraak klopt?",
+    "options": [
+      "Bevat 1 liter.",
+      "Is 1 meter lang.",
+      "Weegt 1 minuut.",
+      "Is 1 uur zwaar."
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Precies! Een fles olie bevat vaak 1 liter.",
+      "incorrect": "Dat klopt niet. Denk aan hoeveel vloeistof er in een fles past."
+    },
+    "metadata": {
+      "strategy": "Herken de inhoud van een fles.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-031",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je meet hoe zwaar een fles is.\n\nWelke eenheid hoort erbij?",
+    "options": [
+      "kilogram",
+      "liter",
+      "centimeter",
+      "minuut"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed gedaan! Gewicht meet je in kilogrammen.",
+      "incorrect": "Dat klopt niet. Denk aan hoe je het gewicht van een fles meet."
+    },
+    "metadata": {
+      "strategy": "Kies de juiste eenheid voor gewicht.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-032",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je wilt meten hoe lang een emmer is.\n\nWat gebruik je om te meten?",
+    "options": [
+      "meetlint",
+      "weegschaal",
+      "maatbeker",
+      "klok"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Juist! Een meetlint gebruik je om lengte te meten.",
+      "incorrect": "Dat is niet juist. Denk aan wat je gebruikt om lengte te meten."
+    },
+    "metadata": {
+      "strategy": "Kies het juiste meetinstrument voor lengte.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-033",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een fiets is ongeveer zo zwaar als:\n\nWat is het meest logisch?",
+    "options": [
+      "15 kilogram",
+      "15 liter",
+      "15 meter",
+      "15 minuut"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Klopt! Een fiets weegt meestal ongeveer 15 kilogram.",
+      "incorrect": "Probeer het nog eens. Denk aan hoe zwaar een fiets normaal is."
+    },
+    "metadata": {
+      "strategy": "Vergelijk het gewicht van een fiets.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-COMP-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-034",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een tas.\n\nWelke uitspraak klopt?",
+    "options": [
+      "Weegt 2 kilogram.",
+      "Is 2 liter groot.",
+      "Is 2 meter lang.",
+      "Weegt 2 minuten."
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Juist! Een tas weegt vaak rond de 2 kilogram.",
+      "incorrect": "Dat is niet juist. Denk aan het gewicht van een tas."
+    },
+    "metadata": {
+      "strategy": "Herken het gewicht van een tas.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-035",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je meet hoe lang een klaslokaal is.\n\nWelke eenheid hoort erbij?",
+    "options": [
+      "meter",
+      "liter",
+      "kilogram",
+      "minuut"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed gedaan! Lengte meet je in meters of centimeters.",
+      "incorrect": "Dat klopt niet. Denk aan hoe je de lengte van een klaslokaal meet."
+    },
+    "metadata": {
+      "strategy": "Kies de juiste eenheid voor lengte.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-036",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je wilt meten hoe zwaar een persoon is.\n\nWat gebruik je om te meten?",
+    "options": [
+      "weegschaal",
+      "meetlint",
+      "maatbeker",
+      "klok"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed zo! Een weegschaal gebruik je om gewicht te meten.",
+      "incorrect": "Dat klopt niet. Denk aan wat je gebruikt om gewicht te meten."
+    },
+    "metadata": {
+      "strategy": "Kies het juiste meetinstrument voor gewicht.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-037",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een tafel is ongeveer zo breed als:\n\nWat is het meest logisch?",
+    "options": [
+      "1 meter",
+      "1 centimeter",
+      "1 liter",
+      "1 kilo"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed gedaan! Een tafel is meestal ongeveer 1 meter breed.",
+      "incorrect": "Probeer het nog eens. Denk aan hoe breed een tafel normaal is."
+    },
+    "metadata": {
+      "strategy": "Vergelijk de breedte van een tafel.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-COMP-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-038",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een fles cola.\n\nWelke uitspraak klopt?",
+    "options": [
+      "Bevat 1 liter.",
+      "Is 1 meter lang.",
+      "Weegt 1 minuut.",
+      "Is 1 uur zwaar."
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Precies! Een fles cola bevat vaak 1 liter.",
+      "incorrect": "Dat klopt niet. Denk aan hoeveel vloeistof er in een fles past."
+    },
+    "metadata": {
+      "strategy": "Herken de inhoud van een fles.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-039",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je meet hoe zwaar een fiets is.\n\nWelke eenheid hoort erbij?",
+    "options": [
+      "kilogram",
+      "liter",
+      "centimeter",
+      "minuut"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed gedaan! Gewicht meet je in kilogrammen.",
+      "incorrect": "Dat klopt niet. Denk aan hoe je het gewicht van een fiets meet."
+    },
+    "metadata": {
+      "strategy": "Kies de juiste eenheid voor gewicht.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-040",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je wilt meten hoe lang een brood is.\n\nWat gebruik je om te meten?",
+    "options": [
+      "meetlint",
+      "weegschaal",
+      "maatbeker",
+      "klok"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Juist! Een meetlint gebruik je om lengte te meten.",
+      "incorrect": "Dat is niet juist. Denk aan wat je gebruikt om lengte te meten."
+    },
+    "metadata": {
+      "strategy": "Kies het juiste meetinstrument voor lengte.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-041",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een klaslokaal is ongeveer zo lang als:\n\nWat is het meest logisch?",
+    "options": [
+      "10 meter",
+      "10 liter",
+      "10 kilogram",
+      "10 minuut"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Klopt! Een klaslokaal is meestal ongeveer 10 meter lang.",
+      "incorrect": "Probeer het nog eens. Denk aan hoe lang een klaslokaal normaal is."
+    },
+    "metadata": {
+      "strategy": "Vergelijk de lengte van een klaslokaal.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-COMP-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-042",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een fles water.\n\nWelke uitspraak klopt?",
+    "options": [
+      "Bevat 1 liter.",
+      "Is 1 meter lang.",
+      "Weegt 1 minuut.",
+      "Is 1 uur zwaar."
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Precies! Een fles water bevat vaak 1 liter.",
+      "incorrect": "Dat klopt niet. Denk aan hoeveel vloeistof er in een fles past."
+    },
+    "metadata": {
+      "strategy": "Herken de inhoud van een fles.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-043",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je meet hoe zwaar een tas is.\n\nWelke eenheid hoort erbij?",
+    "options": [
+      "kilogram",
+      "liter",
+      "centimeter",
+      "minuut"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed gedaan! Gewicht meet je in kilogrammen.",
+      "incorrect": "Dat klopt niet. Denk aan hoe je het gewicht van een tas meet."
+    },
+    "metadata": {
+      "strategy": "Kies de juiste eenheid voor gewicht.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-044",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je wilt meten hoe lang een deur is.\n\nWat gebruik je om te meten?",
+    "options": [
+      "meetlint",
+      "weegschaal",
+      "maatbeker",
+      "klok"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Juist! Een meetlint gebruik je om lengte te meten.",
+      "incorrect": "Dat is niet juist. Denk aan wat je gebruikt om lengte te meten."
+    },
+    "metadata": {
+      "strategy": "Kies het juiste meetinstrument voor lengte.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-045",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een fiets is ongeveer zo breed als:\n\nWat is het meest logisch?",
+    "options": [
+      "60 centimeter",
+      "60 liter",
+      "60 kilogram",
+      "60 minuut"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Klopt! Een fiets is meestal ongeveer 60 centimeter breed.",
+      "incorrect": "Probeer het nog eens. Denk aan hoe breed een fiets normaal is."
+    },
+    "metadata": {
+      "strategy": "Vergelijk de breedte van een fiets.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-COMP-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-046",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een fles melk.\n\nWelke uitspraak klopt?",
+    "options": [
+      "Bevat 1 liter.",
+      "Is 1 meter lang.",
+      "Weegt 1 minuut.",
+      "Is 1 uur zwaar."
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Precies! Een fles melk bevat vaak 1 liter.",
+      "incorrect": "Dat klopt niet. Denk aan hoeveel vloeistof er in een fles past."
+    },
+    "metadata": {
+      "strategy": "Herken de inhoud van een fles.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-047",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je meet hoe zwaar een persoon is.\n\nWelke eenheid hoort erbij?",
+    "options": [
+      "kilogram",
+      "liter",
+      "centimeter",
+      "minuut"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed gedaan! Gewicht meet je in kilogrammen.",
+      "incorrect": "Dat klopt niet. Denk aan hoe je het gewicht van een persoon meet."
+    },
+    "metadata": {
+      "strategy": "Kies de juiste eenheid voor gewicht.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-048",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Je wilt meten hoe lang een tv is.\n\nWat gebruik je om te meten?",
+    "options": [
+      "meetlint",
+      "weegschaal",
+      "maatbeker",
+      "klok"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Juist! Een meetlint gebruik je om lengte te meten.",
+      "incorrect": "Dat is niet juist. Denk aan wat je gebruikt om lengte te meten."
+    },
+    "metadata": {
+      "strategy": "Kies het juiste meetinstrument voor lengte.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-UNIT-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-049",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een fiets is ongeveer zo hoog als:\n\nWat is het meest logisch?",
+    "options": [
+      "1 meter",
+      "1 centimeter",
+      "1 liter",
+      "1 kilo"
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Goed gedaan! Een fiets is meestal ongeveer 1 meter hoog.",
+      "incorrect": "Probeer het nog eens. Denk aan hoe hoog een fiets normaal is."
+    },
+    "metadata": {
+      "strategy": "Vergelijk de hoogte van een fiets.",
+      "taskForm": "select_single",
+      "misconceptKeys": [
+        "MM-MET-COMP-01"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "id": "MM4-MB-050",
+    "domain": "meten-en-meetkunde",
+    "grade": 4,
+    "level": "n2",
+    "topic": "meten-beschrijven",
+    "interaction": {
+      "type": "mcq"
+    },
+    "prompt": "Een fles frisdrank.\n\nWelke uitspraak klopt?",
+    "options": [
+      "Bevat 1 liter.",
+      "Is 1 meter lang.",
+      "Weegt 1 minuut.",
+      "Is 1 uur zwaar."
+    ],
+    "solution": {
+      "index": 0
+    },
+    "feedback": {
+      "correct": "Precies! Een fles frisdrank bevat vaak 1 liter.",
+      "incorrect": "Dat klopt niet. Denk aan hoeveel vloeistof er in een fles past."
+    },
+    "metadata": {
+      "strategy": "Herken de inhoud van een fles.",
       "taskForm": "select_single",
       "misconceptKeys": [
         "MM-MET-UNIT-01"
